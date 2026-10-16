@@ -1,0 +1,29 @@
+check	Run set -o pipefail	﻿2026-10-16T16:45:31.4777217Z ##[group]Run set -o pipefail
+check	Run set -o pipefail	2026-10-16T16:45:31.4777543Z ^[[36;1mset -o pipefail^[[0m
+check	Run set -o pipefail	2026-10-16T16:45:31.4777911Z ^[[36;1mnode scripts/test-isolation.mjs | tee evidence/phase-3/isolation.log^[[0m
+check	Run set -o pipefail	2026-10-16T16:45:31.4830448Z shell: /usr/bin/bash -e {0}
+check	Run set -o pipefail	2026-10-16T16:45:31.4830756Z env:
+check	Run set -o pipefail	2026-10-16T16:45:31.4830978Z   NEXT_TELEMETRY_DISABLED: 1
+check	Run set -o pipefail	2026-10-16T16:45:31.4831242Z ##[endgroup]
+check	Run set -o pipefail	2026-10-16T16:45:31.7131873Z PASS rutas privadas y cuenta sin sesión bloqueadas
+check	Run set -o pipefail	2026-10-16T16:45:31.7508229Z node:internal/modules/run_main:107
+check	Run set -o pipefail	2026-10-16T16:45:31.7510661Z     triggerUncaughtException(
+check	Run set -o pipefail	2026-10-16T16:45:31.7511027Z     ^
+check	Run set -o pipefail	2026-10-16T16:45:31.7511183Z 
+check	Run set -o pipefail	2026-10-16T16:45:31.7511470Z AssertionError [ERR_ASSERTION]: /api/auth/signup: unavailable
+check	Run set -o pipefail	2026-10-16T16:45:31.7511801Z 
+check	Run set -o pipefail	2026-10-16T16:45:31.7511929Z 503 !== 200
+check	Run set -o pipefail	2026-10-16T16:45:31.7512072Z 
+check	Run set -o pipefail	2026-10-16T16:45:31.7512449Z     at json (file:///home/runner/work/BoletinExpress/BoletinExpress/scripts/test-isolation.mjs:68:12)
+check	Run set -o pipefail	2026-10-16T16:45:31.7513093Z     at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+check	Run set -o pipefail	2026-10-16T16:45:31.7513822Z     at async file:///home/runner/work/BoletinExpress/BoletinExpress/scripts/test-isolation.mjs:114:3 {
+check	Run set -o pipefail	2026-10-16T16:45:31.7514294Z   generatedMessage: false,
+check	Run set -o pipefail	2026-10-16T16:45:31.7514573Z   code: 'ERR_ASSERTION',
+check	Run set -o pipefail	2026-10-16T16:45:31.7514845Z   actual: 503,
+check	Run set -o pipefail	2026-10-16T16:45:31.7515080Z   expected: 200,
+check	Run set -o pipefail	2026-10-16T16:45:31.7515327Z   operator: 'strictEqual',
+check	Run set -o pipefail	2026-10-16T16:45:31.7515601Z   diff: 'simple'
+check	Run set -o pipefail	2026-10-16T16:45:31.7515833Z }
+check	Run set -o pipefail	2026-10-16T16:45:31.7516039Z 
+check	Run set -o pipefail	2026-10-16T16:45:31.7516170Z Node.js v24.22.0
+check	Run set -o pipefail	2026-10-16T16:45:31.7537007Z ##[error]Process completed with exit code 1.

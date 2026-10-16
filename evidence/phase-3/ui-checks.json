@@ -53,7 +53,52 @@
       "lang": "es",
       "scrollWidth": 1425,
       "width": 1440
+    },
+    {
+      "test": "desktop-es-access",
+      "pass": true,
+      "heading": "Acceder a mi cuenta",
+      "height": 900,
+      "lang": "es",
+      "scrollWidth": 1440,
+      "width": 1440
+    },
+    {
+      "test": "desktop-es-signup",
+      "pass": true,
+      "heading": "Crear cuenta",
+      "height": 900,
+      "lang": "es",
+      "scrollWidth": 1425,
+      "width": 1440
+    },
+    {
+      "test": "final-mobile-ca-access",
+      "pass": true,
+      "heading": "Accedeix al meu compte",
+      "height": 740,
+      "lang": "ca",
+      "scrollWidth": 305,
+      "width": 320
+    },
+    {
+      "test": "final-mobile-ca-signup",
+      "pass": true,
+      "heading": "Crea un compte",
+      "height": 740,
+      "lang": "ca",
+      "scrollWidth": 305,
+      "width": 320
+    },
+    {
+      "test": "desktop-es-signup",
+      "pass": true,
+      "heading": "Crear cuenta",
+      "height": 900,
+      "lang": "es",
+      "scrollWidth": 1425,
+      "width": 1440
     }
   ],
-  "scope": "Interfaz sin backend local disponible; pruebas de integración en CI"
+  "scope": "Interfaz de acceso; backend completo verificado por integración en CI cuando supere sus comprobaciones"
 }

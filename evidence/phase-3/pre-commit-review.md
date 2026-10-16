@@ -1,15 +1,24 @@
-# Revisión previa a integración de fase 3
+# Revisión de fase 3
 
-Alcance: acceso, cookies, rutas documentales, RLS, Storage, migración y entorno exclusivo. Aplicada la skill pre-commit-security-review.
+Alcance: implementación de acceso y aislamiento, esquema/RLS, Storage, contenedores y cambios de integración. Aplicada la skill pre-commit-security-review. Este informe evalúa el conjunto para su cierre y promoción; los commits privados de diagnóstico y corrección no constituyen una aprobación de despliegue.
 
-No se han identificado hallazgos altos o críticos en la revisión estática. Se han comprobado propiedad y estado en rutas y políticas, ausencia de service_role en web, validación remota de usuario, rechazo de sesiones revocadas y comprobación de origen en escrituras. Los tokens de recuperación no permiten cambiar la contraseña de otra sesión. La aplicación no registra contenidos ni credenciales.
+## Hallazgos
 
-Correcciones: validación de cuerpos JSON, rechazo de campos sensibles, límites de carga por lectura del cuerpo, cookies HttpOnly y no-store, enlaces de correo consumidos solo con POST y sin referrer, secretos excluidos de Git. El detector permite únicamente referencias completas a variables de entorno en URI, con pruebas de regresión para valores literales.
+- **Alto, Auth:** el análisis de la imagen corregida conserva CVE-2026-32286 en `github.com/jackc/pgproto3/v2 v2.3.3`. El registro oficial de Go indica que no hay una versión corregida conocida. Requiere respuestas de un PostgreSQL malicioso o comprometido; mantenerlo en red privada reduce exposición, pero no resuelve el aviso. El plan aceptado impide cerrar la fase con avisos altos/críticos.
+- **PostgreSQL corregido:** retirado el helper Go heredado y sustituido por su-exec 0.3-r0 mediante un script compatible. La eliminación se separa en una capa propia. La auditoría final ya no muestra las 23 entradas anteriores.
+- **Integración superada:** corregida una llamada de la batería que pasaba texto a assert.match en lugar de RegExp. Los 12 grupos de integración han pasado en CI 38948859820.
+- **Limitación local:** Docker Desktop no arranca el disco virtual del Mac. La interfaz funciona con Node y la integración se comprueba en Linux temporal; no se han borrado datos ni volúmenes para eludir el fallo.
 
-Riesgo: integración de evaluación en repositorio privado, sin despliegue; su cierre y cualquier promoción quedan condicionados a las pruebas reales de migración/aislamiento y auditoría de imágenes en CI. La revisión de esta preparación no certifica todavía el cierre de fase.
+## Comprobaciones de la revisión
 
-APTO PARA COMMIT
+Las operaciones comprueban identidad confirmada, sesión activa, propietario y estado. RLS restringe tablas y objetos; no se permite al usuario asignar propietario, estado o saldo. Las rutas de vista y descarga están autenticadas, sin enlaces públicos/firmados. El permiso de recuperación está firmado, caduca y está vinculado a usuario y sesión. Se comprueban origen, formato JSON y límites de cuerpo. Las cookies son HttpOnly/SameSite y las respuestas privadas no se almacenan en caché.
 
-## Preparación de imágenes corregidas
+La aplicación no utiliza service_role ni credenciales de base de datos. Secretos excluidos de Git y del contexto de construcción; los diagnósticos no incluyen correos, contraseñas ni documentos. La migración se ejecuta por consola administrativa y se registra para evitar su repetición. Las imágenes se construyen fuera del VPS. Los límites conjuntos configurados son 3008 MiB y 1 CPU; falta medir capacidad en fase 10.
 
-Se actualizan dependencias compatibles de Storage mediante manifiesto y lockfile, se sustituye el helper gosu de PostgreSQL por su-exec 0.3-r0 y se prepara Auth desde su fuente oficial v2.197.0, con archivo fuente verificado por SHA-256, Go 1.27.2 fijado por digest y actualizaciones fijadas de x/net y grpc. Se conservan sus pruebas de crypto/conf y la batería funcional de dos cuentas. No se modifica el código funcional del proveedor. Las imágenes no se publican ni despliegan; su promoción y el cierre siguen bloqueados hasta completar la auditoría y resolver los avisos altos pendientes.
+## Correcciones recomendadas
+
+La auditoría final de las nueve imágenes está completa: ocho sin altos/críticos y Auth con un alto. Resolver el aviso residual mediante una actualización mantenida de Auth o evaluar por separado una alternativa; no introducir automáticamente una bifurcación del protocolo PostgreSQL ni una exclusión del escáner. Mantener la fase abierta y sin despliegue con el criterio actual.
+
+Riesgo: el acceso está implementado, pero el conjunto conserva un aviso alto conocido y no está aprobado para promoción.
+
+NO APTO PARA COMMIT

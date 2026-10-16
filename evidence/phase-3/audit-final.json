@@ -1,0 +1,94 @@
+{
+  "ci": "https://github.com/FranMore68/BoletinExpress/actions/runs/38948859820",
+  "complete": true,
+  "results": [
+    {
+      "service": "auth",
+      "imageId": "sha256:6bf43924730a3922833a371dd1c5c3d91adf265c2007ec5095463e6652ec0ad2",
+      "counts": {
+        "HIGH": 1
+      },
+      "vulnerabilities": [
+        {
+          "VulnerabilityID": "CVE-2026-32286",
+          "PkgName": "github.com/jackc/pgproto3/v2",
+          "InstalledVersion": "v2.3.3",
+          "FixedVersion": null,
+          "Severity": "HIGH",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-32286"
+        }
+      ],
+      "createdAt": "2026-10-16T18:48:54.334169015Z",
+      "artifactName": "/tmp/image.tar"
+    },
+    {
+      "service": "gateway",
+      "imageId": "sha256:9d5b987134b42998f517d69aed565b7913d3dce0d5be2f8060a9085cb8311058",
+      "counts": {},
+      "vulnerabilities": [],
+      "createdAt": "2026-10-16T18:48:06.90450883Z",
+      "artifactName": "/tmp/image.tar"
+    },
+    {
+      "service": "mail",
+      "imageId": "sha256:978742ab0aca1fb510b407aa54d3cc9fb1d51ca4988ce0bc6fbdb1fdc6afbc4c",
+      "counts": {},
+      "vulnerabilities": [],
+      "createdAt": "2026-10-16T18:49:40.409964758Z",
+      "artifactName": "/tmp/image.tar"
+    },
+    {
+      "service": "postgres",
+      "imageId": "sha256:d4abd61354baddddfa9af80fa6703d22fba74857a746c3644e234ef4d7484a58",
+      "counts": {},
+      "vulnerabilities": [],
+      "createdAt": "2026-10-16T18:48:51.064619549Z",
+      "artifactName": "/tmp/image.tar"
+    },
+    {
+      "service": "rest",
+      "imageId": "sha256:fc3d286fec899d5a5bebbb98eac771ced1ccaa44deac8ce2fc23fe5d262eb3d9",
+      "counts": {},
+      "vulnerabilities": [],
+      "createdAt": "2026-10-16T18:48:55.02123573Z",
+      "artifactName": "/tmp/image.tar"
+    },
+    {
+      "service": "storage",
+      "imageId": "sha256:b33a26c6cb82af46ff1b291eabb9ed385de853b95235c5d1c90de7b8fe8adec4",
+      "counts": {},
+      "vulnerabilities": [],
+      "createdAt": "2026-10-16T18:49:39.107867169Z",
+      "artifactName": "/tmp/image.tar"
+    },
+    {
+      "service": "templates",
+      "imageId": "sha256:a1bbbe6d6edfaccd1d1331c856ed4a4011723851405cac5eb7221f39f5f88f19",
+      "counts": {},
+      "vulnerabilities": [],
+      "createdAt": "2026-10-16T18:48:11.210488067Z",
+      "artifactName": "/tmp/image.tar"
+    },
+    {
+      "service": "web",
+      "imageId": "sha256:3f955a6c8e4ffb9017784d79ef0b46fabc1d793b060f1390b7d2f99cb196c3b8",
+      "counts": {},
+      "vulnerabilities": [],
+      "createdAt": "2026-10-16T18:47:58.215963261Z",
+      "artifactName": "/tmp/image.tar"
+    },
+    {
+      "service": "worker",
+      "imageId": "sha256:0ac2c43b208743098e6e8811210951e4b73a0880b801e97c25d4613c36571e64",
+      "counts": {},
+      "vulnerabilities": [],
+      "createdAt": "2026-10-16T18:48:02.633192125Z",
+      "artifactName": "/tmp/image.tar"
+    }
+  ],
+  "scanner": "aquasec/trivy@sha256:2416d1f74045b57274df1a340eee6b510cacd73c66a6ccb8da092b117eb7d222",
+  "severities": [
+    "HIGH",
+    "CRITICAL"
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "phase": 3,
+  "status": "ABIERTA_BLOQUEADA_POR_SEGURIDAD",
+  "functionalTests": {
+    "pass": true,
+    "groups": 12,
+    "evidence": "isolation.json"
+  },
+  "unitAndPdfTests": 56,
+  "imagesScanned": 9,
+  "high": 1,
+  "critical": 0,
+  "blockedBy": [
+    "CVE-2026-32286 en Auth: github.com/jackc/pgproto3/v2 v2.3.3; sin version corregida conocida"
+  ],
+  "localLimitation": "Docker Desktop no puede arrancar el disco virtual; interfaz disponible con Node, integracion completa verificada en Linux de CI",
+  "ci": "https://github.com/FranMore68/BoletinExpress/actions/runs/38948859820",
+  "testedCommit": "dfe0ae45f8b3b3fde34e19c4008b1fb72c84ac1a",
+  "userAcceptance": false,
+  "nextPhaseStarted": false,
+  "vpsModified": false
+}

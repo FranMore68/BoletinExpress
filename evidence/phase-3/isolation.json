@@ -1,0 +1,68 @@
+{
+  "pass": true,
+  "complete": true,
+  "accounts": "dos cuentas ficticias distintas; credenciales no conservadas",
+  "pdfSha256": "de7272f5de3c4f994cdc10dec144f177ce82f87d82c5fdd3f387b1394f15fbe6",
+  "results": [
+    {
+      "test": "rutas privadas y cuenta sin sesión bloqueadas",
+      "pass": true,
+      "evidence": "401 en API y redirección en cuenta"
+    },
+    {
+      "test": "registro, confirmación explícita y enlace de un uso",
+      "pass": true,
+      "evidence": "sin acceso antes de confirmar; cookies HttpOnly/SameSite"
+    },
+    {
+      "test": "listas y documento ajeno aislados en BFF",
+      "pass": true,
+      "evidence": "A y B solo ven sus filas; ID de A devuelve 404 a B"
+    },
+    {
+      "test": "origen, propietario, estado y saldo manipulados bloqueados",
+      "pass": true,
+      "evidence": "403/400/405/404 según operación"
+    },
+    {
+      "test": "PDF privado, vista y descarga autenticadas",
+      "pass": true,
+      "evidence": "bytes idénticos; misma URL denegada a B y anónimo; tipo/tamaño controlados"
+    },
+    {
+      "test": "RLS directa y Storage rechazan acceso y cambios cruzados",
+      "pass": true,
+      "evidence": "sin depender de la aplicación; bucket privado y firmas/publicaciones bloqueadas"
+    },
+    {
+      "test": "límite de tres borradores concurrentes",
+      "pass": true,
+      "evidence": "dos aceptados y dos rechazados partiendo de un borrador"
+    },
+    {
+      "test": "recuperación restringida y cierre de sesiones anteriores",
+      "pass": true,
+      "evidence": "sin prueba recovery no cambia; contraseña anterior y cookies previas dejan de servir"
+    },
+    {
+      "test": "JWT revocado bloqueado por RLS durante su vigencia",
+      "pass": true,
+      "evidence": "sesión eliminada ya no permite leer filas"
+    },
+    {
+      "test": "cookies manipuladas y JWT caducado rechazados",
+      "pass": true,
+      "evidence": "401; el JWT de prueba tiene firma correcta pero exp vencido"
+    },
+    {
+      "test": "cierre de sesión y acceso posterior bloqueado",
+      "pass": true,
+      "evidence": "cookies retiradas y sesión revocada"
+    },
+    {
+      "test": "intentos de acceso limitados en servidor",
+      "pass": true,
+      "evidence": "el sexto intento repetido queda limitado por cuota persistente"
+    }
+  ]
+}
