@@ -1,0 +1,30 @@
+[
+  {
+    "source": "ofl/inter/Inter[opsz,wght].ttf",
+    "commit": "1d0e46c7933245c8180fe83e47917961c913bbdb",
+    "file": "public/fonts/inter.ttf",
+    "sha256": "29160a80ff49ddcab2c97711247e08b1fab27a484a329ce8b813d820dc559031",
+    "bytes": 876576
+  },
+  {
+    "source": "ofl/inter/OFL.txt",
+    "commit": "1d0e46c7933245c8180fe83e47917961c913bbdb",
+    "file": "public/fonts/Inter-OFL.txt",
+    "sha256": "5b9321a4298cfeb6b34354164a1c3afc3db114569984c502b9b35d988fd58c57",
+    "bytes": 4377
+  },
+  {
+    "source": "ofl/plusjakartasans/PlusJakartaSans[wght].ttf",
+    "commit": "1d0e46c7933245c8180fe83e47917961c913bbdb",
+    "file": "public/fonts/jakarta.ttf",
+    "sha256": "89b3fb38aa0d275d7a731d0d817a4f1622b316b4d7fbdedcf02ee9099ff68bc8",
+    "bytes": 176288
+  },
+  {
+    "source": "ofl/plusjakartasans/OFL.txt",
+    "commit": "1d0e46c7933245c8180fe83e47917961c913bbdb",
+    "file": "public/fonts/Jakarta-OFL.txt",
+    "sha256": "995c7199cab65954f545996326755daee7b63cc6b42b06c13da1f9502ab08a99",
+    "bytes": 4402
+  }
+]

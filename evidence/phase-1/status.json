@@ -1,6 +1,6 @@
 {
   "phase": 1,
-  "status": "PENDIENTE_ACEPTACION_USUARIO",
+  "status": "ACEPTADA",
   "codeCommit": "3c8943e62591749814e461e00279fbedf1f65b93",
   "ci": "https://github.com/FranMore68/BoletinExpress/actions/runs/38855942045",
   "checks": {
@@ -16,5 +16,6 @@
     "secretsPatternScan": true,
     "containersRestricted": true
   },
-  "scope": "Base tecnica de evaluacion. Sin Supabase operativo, acceso, cola de trabajos, pagos, IA, correo ni despliegue VPS."
+  "scope": "Base tecnica de evaluacion. Sin Supabase operativo, acceso, cola de trabajos, pagos, IA, correo ni despliegue VPS.",
+  "acceptanceFile": "acceptance.json"
 }

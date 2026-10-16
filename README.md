@@ -2,8 +2,9 @@
 
 Aplicación prevista para preparar BRIE y CIE ELEC-1 con revisión humana, interfaz ES/CA y datos ficticios durante la evaluación.
 
-**Estado actual: fase 0 aceptada; fase 1 con comprobaciones superadas, pendiente de aceptación.** Base Next.js, worker, contenedores y CI preparados. La interfaz ES/CA y el recorrido guiado corresponden a la fase 2.
+**Estado actual: fases 0 y 1 aceptadas; fase 2 implementada y en verificación final.** Interfaz ES/CA y recorrido con datos ficticios disponibles en localhost. Autenticación, documentos de cuentas y servicios externos corresponden a las fases siguientes.
 
+- [Interfaz ES/CA y pruebas de fase 2](docs/fase-2.md)
 - [Base técnica y pruebas de fase 1](docs/fase-1.md)
 - [Reproducir los contenedores](infra/README.md)
 - [Cierre técnico de fase 0 y evidencias actuales](docs/fase-0-cierre.md)

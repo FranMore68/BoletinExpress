@@ -1,0 +1,440 @@
+{
+  "phase": 2,
+  "checks": [
+    {
+      "test": "mobile-ca-landing",
+      "pass": true,
+      "documentWidth": 375,
+      "heading": "Els teus butlletins, amb tot al seu lloc.",
+      "height": 844,
+      "lang": "ca",
+      "overflow": false,
+      "width": 390
+    },
+    {
+      "test": "ca-intro",
+      "pass": true
+    },
+    {
+      "test": "mobile-ca-intro",
+      "pass": true,
+      "documentWidth": 375,
+      "heading": "El teu primer document comença aquí.",
+      "height": 844,
+      "lang": "ca",
+      "overflow": false,
+      "width": 390
+    },
+    {
+      "test": "mobile-ca-editor",
+      "pass": true,
+      "documentWidth": 375,
+      "heading": "Completem el teu CIE ELEC-1.",
+      "height": 844,
+      "lang": "ca",
+      "overflow": false,
+      "width": 390
+    },
+    {
+      "test": "campos-obligatorios-y-foco",
+      "pass": true,
+      "evidence": {
+        "focus": "field-holder",
+        "invalid": 3
+      }
+    },
+    {
+      "test": "propuestas-respetan-correccion-manual",
+      "pass": true
+    },
+    {
+      "test": "mobile-ca-review",
+      "pass": true,
+      "documentWidth": 375,
+      "heading": "Revisa abans de validar.",
+      "height": 844,
+      "lang": "ca",
+      "overflow": false,
+      "width": 390
+    },
+    {
+      "test": "dialogo-ciclo-tab",
+      "pass": true,
+      "evidence": {
+        "inside": true,
+        "label": "Tanca"
+      }
+    },
+    {
+      "test": "escape-devuelve-foco",
+      "pass": true,
+      "evidence": {
+        "dialogs": 0,
+        "focus": "Valida l’exemple · 5 KC"
+      }
+    },
+    {
+      "test": "cie-validado-saldo-demo-5",
+      "pass": true
+    },
+    {
+      "test": "mobile-ca-done",
+      "pass": true,
+      "documentWidth": 375,
+      "heading": "El teu exemple està llest.",
+      "height": 844,
+      "lang": "ca",
+      "overflow": false,
+      "width": 390
+    },
+    {
+      "test": "descarga-cie-ejemplo",
+      "pass": true,
+      "sha256": "225400629a464062729551a7e699b596050757fb504099a790ee2cba9aa5a2e0"
+    },
+    {
+      "test": "correo-explicitamente-simulado",
+      "pass": true
+    },
+    {
+      "test": "mobile-ca-documents",
+      "pass": true,
+      "documentWidth": 375,
+      "heading": "Els teus documents, a mà.",
+      "height": 844,
+      "lang": "ca",
+      "overflow": false,
+      "width": 390
+    },
+    {
+      "test": "tablet-ca-documents",
+      "pass": true,
+      "documentWidth": 753,
+      "heading": "Els teus documents, a mà.",
+      "height": 1024,
+      "lang": "ca",
+      "overflow": false,
+      "width": 768
+    },
+    {
+      "test": "tablet-ca-credits",
+      "pass": true,
+      "documentWidth": 753,
+      "heading": "Els teus KiloCrèdits.",
+      "height": 1024,
+      "lang": "ca",
+      "overflow": false,
+      "width": 768
+    },
+    {
+      "test": "recarga-ca-dialogo-simulado",
+      "pass": true
+    },
+    {
+      "test": "recarga-ca-saldo-demo-15",
+      "pass": true
+    },
+    {
+      "test": "cambio-idioma-conserva-saldo",
+      "pass": true
+    },
+    {
+      "test": "desktop-es-credits",
+      "pass": true,
+      "documentWidth": 1425,
+      "heading": "Tus KiloCréditos.",
+      "height": 900,
+      "lang": "es",
+      "overflow": false,
+      "width": 1440
+    },
+    {
+      "test": "filtro-vacio-localizado",
+      "pass": true
+    },
+    {
+      "test": "desktop-es-choose",
+      "pass": true,
+      "documentWidth": 1425,
+      "heading": "¿Qué documento necesitas?",
+      "height": 900,
+      "lang": "es",
+      "overflow": false,
+      "width": 1440
+    },
+    {
+      "test": "foto-ejemplo-respeta-correccion",
+      "pass": true
+    },
+    {
+      "test": "desktop-es-editor",
+      "pass": true,
+      "documentWidth": 1425,
+      "heading": "Vamos a completar tu BRIE.",
+      "height": 900,
+      "lang": "es",
+      "overflow": false,
+      "width": 1440
+    },
+    {
+      "test": "reanudar-conserva-datos",
+      "pass": true
+    },
+    {
+      "test": "error-potencia-descrito",
+      "pass": true,
+      "evidence": {
+        "description": "error-power",
+        "focus": "field-power"
+      }
+    },
+    {
+      "test": "desktop-es-review",
+      "pass": true,
+      "documentWidth": 1425,
+      "heading": "Revisa antes de validar.",
+      "height": 900,
+      "lang": "es",
+      "overflow": false,
+      "width": 1440
+    },
+    {
+      "test": "pdf-dos-paginas",
+      "pass": true
+    },
+    {
+      "test": "ampliar-pdf",
+      "pass": true
+    },
+    {
+      "test": "brie-validado-saldo-demo-13",
+      "pass": true
+    },
+    {
+      "test": "desktop-es-done",
+      "pass": true,
+      "documentWidth": 1425,
+      "heading": "Tu ejemplo está listo.",
+      "height": 900,
+      "lang": "es",
+      "overflow": false,
+      "width": 1440
+    },
+    {
+      "test": "atras-no-reabre-documento-cerrado",
+      "pass": true
+    },
+    {
+      "test": "small-mobile-es-done",
+      "pass": true,
+      "documentWidth": 305,
+      "heading": "Tu ejemplo está listo.",
+      "height": 740,
+      "lang": "es",
+      "overflow": false,
+      "width": 320
+    },
+    {
+      "test": "small-mobile-ca-done",
+      "pass": true,
+      "documentWidth": 305,
+      "heading": "El teu exemple està llest.",
+      "height": 740,
+      "lang": "ca",
+      "overflow": false,
+      "width": 320
+    },
+    {
+      "test": "small-mobile-ca-landing",
+      "pass": true,
+      "documentWidth": 305,
+      "heading": "Els teus butlletins, amb tot al seu lloc.",
+      "height": 740,
+      "lang": "ca",
+      "overflow": false,
+      "width": 320
+    },
+    {
+      "test": "tablet-ca-landing",
+      "pass": true,
+      "documentWidth": 753,
+      "heading": "Els teus butlletins, amb tot al seu lloc.",
+      "height": 1024,
+      "lang": "ca",
+      "overflow": false,
+      "width": 768
+    },
+    {
+      "test": "desktop-es-landing",
+      "pass": true,
+      "documentWidth": 1425,
+      "heading": "Tus boletines, con todo en su sitio.",
+      "height": 900,
+      "lang": "es",
+      "overflow": false,
+      "width": 1440
+    },
+    {
+      "test": "formulario-fijo-y-fondo-rotatorio",
+      "pass": true,
+      "evidence": {
+        "before": {
+          "form": 157,
+          "wheel": "matrix(1, 0, 0, 1, 0, 0)"
+        },
+        "after": {
+          "form": 128,
+          "position": "sticky",
+          "scroll": 722,
+          "wheel": "matrix(0.843485, 0.537152, -0.537152, 0.843485, 0, 0)"
+        }
+      }
+    },
+    {
+      "test": "pie-alcanzable",
+      "pass": true,
+      "evidence": {
+        "height": 900,
+        "top": 808.203125
+      }
+    },
+    {
+      "test": "movimiento-reducido-reglas-servidas",
+      "pass": true,
+      "evidence": {
+        "method": "Inspección de CSS servido; preferencia del sistema sin modificar",
+        "active": false,
+        "rules": [
+          "@media (prefers-reduced-motion: reduce) {\n  html { scroll-behavior: auto; }\n  .hero-wheel { transform: none; }\n  .button { transition: none; }\n  .button-primary:not(:disabled):hover { transform: none; }\n}"
+        ]
+      }
+    },
+    {
+      "test": "fuentes-y-recursos-locales",
+      "pass": true,
+      "evidence": {
+        "external": [],
+        "fonts": "loaded"
+      }
+    },
+    {
+      "test": "tab-desde-titulo-a-vista-previa",
+      "pass": true,
+      "evidence": {
+        "label": "Página siguiente",
+        "tag": "BUTTON"
+      }
+    },
+    {
+      "test": "recorrido-teclado-enter-espacio",
+      "pass": true
+    },
+    {
+      "test": "cancelar-eliminacion-conserva-borrador",
+      "pass": true
+    },
+    {
+      "test": "eliminar-borrador-solo-demo",
+      "pass": true
+    },
+    {
+      "test": "formulario-no-fijo-en-pantalla-baja",
+      "pass": true,
+      "evidence": {
+        "documentWidth": 1425,
+        "position": "static",
+        "width": 1440
+      }
+    },
+    {
+      "test": "desktop-ca-landing",
+      "pass": true,
+      "documentWidth": 1425,
+      "heading": "Els teus butlletins, amb tot al seu lloc.",
+      "height": 900,
+      "lang": "ca",
+      "overflow": false,
+      "width": 1440
+    },
+    {
+      "test": "desktop-es-landing",
+      "pass": true,
+      "documentWidth": 1425,
+      "heading": "Tus boletines, con todo en su sitio.",
+      "height": 900,
+      "lang": "es",
+      "overflow": false,
+      "width": 1440
+    },
+    {
+      "test": "final-desktop-es-landing",
+      "pass": true,
+      "documentWidth": 1425,
+      "heading": "Tus boletines, con todo en su sitio.",
+      "height": 900,
+      "lang": "es",
+      "overflow": false,
+      "width": 1440
+    },
+    {
+      "test": "final-small-mobile-es-landing",
+      "pass": true,
+      "documentWidth": 305,
+      "heading": "Tus boletines, con todo en su sitio.",
+      "height": 740,
+      "lang": "es",
+      "overflow": false,
+      "width": 320
+    },
+    {
+      "test": "final-small-mobile-es-editor",
+      "pass": true,
+      "documentWidth": 305,
+      "heading": "Vamos a completar tu BRIE.",
+      "height": 740,
+      "lang": "es",
+      "overflow": false,
+      "width": 320
+    },
+    {
+      "test": "final-small-mobile-es-review",
+      "pass": true,
+      "documentWidth": 305,
+      "heading": "Revisa antes de validar.",
+      "height": 740,
+      "lang": "es",
+      "overflow": false,
+      "width": 320
+    },
+    {
+      "test": "final-tablet-ca-review",
+      "pass": true,
+      "documentWidth": 753,
+      "heading": "Revisa abans de validar.",
+      "height": 1024,
+      "lang": "ca",
+      "overflow": false,
+      "width": 768
+    },
+    {
+      "test": "final-tablet-ca-credits",
+      "pass": true,
+      "documentWidth": 753,
+      "heading": "Els teus KiloCrèdits.",
+      "height": 1024,
+      "lang": "ca",
+      "overflow": false,
+      "width": 768
+    },
+    {
+      "test": "final-small-mobile-ca-credits",
+      "pass": true,
+      "documentWidth": 305,
+      "heading": "Els teus KiloCrèdits.",
+      "height": 740,
+      "lang": "ca",
+      "overflow": false,
+      "width": 320
+    }
+  ]
+}

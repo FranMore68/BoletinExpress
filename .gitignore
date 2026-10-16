@@ -18,3 +18,5 @@ credentials*.json
 .secrets/
 
 !evidence/phase-1/*.log
+
+!evidence/phase-2/*.log

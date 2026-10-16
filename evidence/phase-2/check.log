@@ -1,0 +1,39 @@
+
+> boletinexpress@0.1.0 check
+> npm run lint && npm run typecheck && npm test && npm run check:secrets
+
+
+> boletinexpress@0.1.0 lint
+> biome check .
+
+Checked 36 files in 50ms. No fixes applied.
+
+> boletinexpress@0.1.0 typecheck
+> next typegen && tsc --noEmit
+
+Generating route types...
+✓ Types generated successfully
+
+> boletinexpress@0.1.0 test
+> node --test tests/*.test.ts
+
+✔ las propuestas de ejemplo conservan cambios manuales, incluidos campos vaciados (0.657125ms)
+✔ el cierre de la demo es idempotente y bloquea cambios del ejemplo (0.106708ms)
+✔ la demo impide validar sin datos o con saldo simulado insuficiente (0.17875ms)
+✔ tres borradores activos y sus identificadores se mantienen coherentes al eliminar uno (0.140208ms)
+✔ cada mensaje dispone de ES y CA y conserva sus variables de interpolación (0.358542ms)
+✔ bloquea secretos y entornos privados antes de publicar (0.87475ms)
+✔ worker arranca sin credenciales, expone solo liveness y se detiene (54.087417ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 7
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 133.073875
+
+> boletinexpress@0.1.0 check:secrets
+> node scripts/check-secrets.mjs
+
+Sin patrones de secretos detectados en 421 archivos versionables.

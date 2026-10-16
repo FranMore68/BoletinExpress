@@ -34,5 +34,6 @@ jobs:
       - run: sh scripts/scan-images.sh
       - run: docker compose up --detach --wait
       - run: node scripts/smoke.mjs
+      - run: node scripts/check-demo-assets.mjs
       - if: always()
         run: docker compose down

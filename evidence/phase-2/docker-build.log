@@ -1,0 +1,108 @@
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 968B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/node:24-alpine@sha256:44fce696f38ba8c987c4db89954051000bbd05ffd8d8659ba15ed4a8602e937f
+#2 DONE 0.1s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 198B done
+#3 DONE 0.0s
+
+#4 [base 1/2] FROM docker.io/library/node:24-alpine@sha256:44fce696f38ba8c987c4db89954051000bbd05ffd8d8659ba15ed4a8602e937f
+#4 resolve docker.io/library/node:24-alpine@sha256:44fce696f38ba8c987c4db89954051000bbd05ffd8d8659ba15ed4a8602e937f done
+#4 DONE 0.0s
+
+#5 [internal] load build context
+#5 transferring context: 3.10MB 0.0s done
+#5 DONE 0.0s
+
+#6 [base 2/2] WORKDIR /app
+#6 CACHED
+
+#7 [dependencies 1/2] COPY package.json package-lock.json ./
+#7 DONE 0.0s
+
+#8 [dependencies 2/2] RUN npm ci --ignore-scripts
+#8 5.789 
+#8 5.789 added 56 packages, and audited 57 packages in 6s
+#8 5.789 
+#8 5.789 15 packages are looking for funding
+#8 5.789   run `npm fund` for details
+#8 5.789 
+#8 5.789 found 0 vulnerabilities
+#8 5.790 npm notice
+#8 5.790 npm notice New major version of npm available! 11.19.1 -> 12.2.0
+#8 5.790 npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.0
+#8 5.790 npm notice To update run: npm install -g npm@12.2.0
+#8 5.790 npm notice
+#8 DONE 6.1s
+
+#9 [build 1/4] COPY next.config.ts tsconfig.json next-env.d.ts postcss.config.mjs ./
+#9 DONE 0.0s
+
+#10 [build 2/4] COPY src ./src
+#10 DONE 0.0s
+
+#11 [build 3/4] COPY public ./public
+#11 DONE 0.0s
+
+#12 [build 4/4] RUN npm run build
+#12 0.122 
+#12 0.122 > boletinexpress@0.1.0 build
+#12 0.122 > next build
+#12 0.122 
+#12 0.287 ▲ Next.js 16.4.2 (Turbopack)
+#12 0.305 ✓ Running next.config.ts took 17ms
+#12 0.310 
+#12 0.322   Creating an optimized production build ...
+#12 1.632 ✓ Compiled successfully in 1307ms
+#12 1.637   Running TypeScript ...
+#12 1.916   Finished TypeScript in 280ms ...
+#12 1.917   Collecting page data using 6 workers ...
+#12 2.198   Generating static pages using 6 workers (0/5) ...
+#12 2.339   Generating static pages using 6 workers (1/5) 
+#12 2.377   Generating static pages using 6 workers (2/5) 
+#12 2.391   Generating static pages using 6 workers (3/5) 
+#12 2.391 ✓ Generating static pages using 6 workers (5/5) in 193ms
+#12 2.393   Finalizing page optimization ...
+#12 2.457 
+#12 2.458 Route (app)
+#12 2.458 ┌ ○ /
+#12 2.458 ├ ○ /_not-found
+#12 2.458 ├ ƒ /api/health
+#12 2.458 └ ○ /icon.svg
+#12 2.458 
+#12 2.458 
+#12 2.458 ○  (Static)   prerendered as static content
+#12 2.458 ƒ  (Dynamic)  server-rendered on demand
+#12 2.458 
+#12 DONE 2.7s
+
+#13 [runtime 1/1] RUN rm -rf /usr/local/lib/node_modules/npm /usr/local/bin/npm /usr/local/bin/npx /opt/yarn* /usr/local/bin/yarn*
+#13 CACHED
+
+#14 [web 1/3] COPY --from=build --chown=node:node /app/.next/standalone ./
+#14 DONE 0.2s
+
+#15 [web 2/3] COPY --from=build --chown=node:node /app/.next/static ./.next/static
+#15 DONE 0.0s
+
+#16 [web 3/3] COPY --from=build --chown=node:node /app/public ./public
+#16 DONE 0.0s
+
+#17 exporting to image
+#17 exporting layers
+#17 exporting layers 0.9s done
+#17 exporting manifest sha256:146b3b4c27b37430c0db3f682be64c838a0a5f36710142f7984c3df11eb1d8b3 done
+#17 exporting config sha256:f00429ac941c06d04f7713d95e167a5aa1a577ef2dd60ab74af42f555cffa246 done
+#17 exporting attestation manifest sha256:b1860782086bdf98dbb18d74171f78dcfc42b03881fbfe3543bf9d5835730440 done
+#17 exporting manifest list sha256:2574c4e2f2e8c922739cc147ff09f39340443a44aabff93d698d15fbd0a0d622 done
+#17 naming to docker.io/library/boletinexpress-web:phase1 done
+#17 unpacking to docker.io/library/boletinexpress-web:phase1
+#17 unpacking to docker.io/library/boletinexpress-web:phase1 0.2s done
+#17 DONE 1.3s
+
+View build details: docker-desktop://dashboard/build/default/default/5sbhbrlhcoiip1ctibw8c0e47

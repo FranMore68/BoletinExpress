@@ -1,6 +1,6 @@
 # Fase 1: base técnica
 
-Fecha: 16/10/2026. Estado: **comprobaciones superadas; pendiente de aceptación del usuario**. La fase 0 fue aceptada mediante «Ok» y la fase 2 no ha comenzado.
+Fecha: 16/10/2026. Estado: **aceptada por el usuario mediante «Ok» el 16/10/2026**. La fase 2 queda autorizada.
 
 Se han creado Next.js con TypeScript y Tailwind, módulos de documentos/créditos/extracción/pagos/conservación, un worker separado, imágenes de contenedor, Compose y comprobaciones de CI. El prototipo PDF de la fase 0 se conserva separado.
 
@@ -29,7 +29,7 @@ Se sustituyó Docker Scout por Trivy local después de que la revisión automát
 
 [Comandos y límites de contenedores](../infra/README.md). El presupuesto configurado de esta fase es 768 MiB y 0,75 CPU. No es una medición de capacidad del VPS; la prueba conjunta con Supabase y Control-Contracts-ATC sigue prevista antes del despliegue.
 
-No quedan fallos detectados en las comprobaciones de esta fase. Falta la aceptación del usuario para cerrarla e iniciar la fase 2.
+No quedan fallos detectados en las comprobaciones de esta fase. Aceptación recibida; se inicia la fase 2.
 
 El commit de código comprobado en GitHub es `3c8943e62591749814e461e00279fbedf1f65b93`. Las actualizaciones posteriores de este informe y las evidencias no modifican ese código. [Estado resumido](../evidence/phase-1/status.json).
 
