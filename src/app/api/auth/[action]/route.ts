@@ -7,9 +7,9 @@ import {
   jsonBody,
   passwordValue,
   recoveryProof,
-  sameProof,
   stringValue,
   validEmailHash,
+  validRecoveryProof,
 } from "@/modules/auth/security";
 import { api, requireUser, throttle } from "@/modules/auth/server";
 export const dynamic = "force-dynamic";
@@ -131,7 +131,7 @@ export async function POST(
         ).toString(),
       );
       const proof = request.cookies.get("be-recovery")?.value || "";
-      if (!sameProof(proof, recoveryProof(user.id, payload.session_id)))
+      if (!validRecoveryProof(proof, user.id, payload.session_id))
         throw new AccessError(403, "link");
       const result = await ctx.client.auth.updateUser({
         password: passwordValue(body),

@@ -90,8 +90,30 @@ function proofSecret() {
 export function hashAttempt(value: string) {
   return createHmac("sha256", proofSecret()).update(value).digest("hex");
 }
-export function recoveryProof(userId: string, sessionId: string) {
-  return hashAttempt(`recovery:${userId}:${sessionId}`);
+export function recoveryProof(
+  userId: string,
+  sessionId: string,
+  now = Date.now(),
+) {
+  const expires = Math.floor(now / 1000) + 600;
+  return `${expires}.${hashAttempt(`recovery:${userId}:${sessionId}:${expires}`)}`;
+}
+export function validRecoveryProof(
+  proof: string,
+  userId: string,
+  sessionId: string,
+  now = Date.now(),
+) {
+  const [expiry, signature] = proof.split(".");
+  if (!/^\d{10}$/.test(expiry || "") || !/^[a-f0-9]{64}$/.test(signature || ""))
+    return false;
+  const expires = Number(expiry);
+  const current = Math.floor(now / 1000);
+  if (expires <= current || expires > current + 600) return false;
+  return sameProof(
+    signature,
+    hashAttempt(`recovery:${userId}:${sessionId}:${expires}`),
+  );
 }
 export function sameProof(a: string, b: string) {
   const x = Buffer.from(a);

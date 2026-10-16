@@ -29,10 +29,9 @@ export async function POST(request: NextRequest) {
     const title = stringValue(body, "title", 100).trim();
     if (!["BRIE", "CIE"].includes(type) || !title)
       throw new AccessError(400, "input");
-    const { data, error } = await ctx.client.rpc("create_document", {
-      p_type: type,
-      p_title: title,
-    });
+    const { data, error } = await ctx.client
+      .rpc("create_document", { p_type: type, p_title: title })
+      .single();
     if (error)
       throw new AccessError(
         error.code === "23514" ? 409 : 503,

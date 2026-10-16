@@ -8,9 +8,9 @@ import {
   jsonBody,
   passwordValue,
   recoveryProof,
-  sameProof,
   uuid,
   validEmailHash,
+  validRecoveryProof,
 } from "../src/modules/auth/security.ts";
 
 test("las mutaciones requieren el origen propio y rechazan peticiones cruzadas", () => {
@@ -66,11 +66,21 @@ test("validación de credenciales, identificadores y tamaño del cuerpo", async 
 });
 test("el permiso de recuperación se vincula a usuario y sesión", () => {
   process.env.AUTH_PROOF_SECRET = "a".repeat(64);
-  const proof = recoveryProof("usuarioA", "sesionA");
-  assert.ok(sameProof(proof, recoveryProof("usuarioA", "sesionA")));
-  assert.ok(!sameProof(proof, recoveryProof("usuarioB", "sesionA")));
-  assert.ok(!sameProof(proof, recoveryProof("usuarioA", "sesionB")));
-  assert.ok(!sameProof(proof, ""));
+  const now = Date.now();
+  const proof = recoveryProof("usuarioA", "sesionA", now);
+  assert.ok(validRecoveryProof(proof, "usuarioA", "sesionA", now));
+  assert.ok(!validRecoveryProof(proof, "usuarioB", "sesionA", now));
+  assert.ok(!validRecoveryProof(proof, "usuarioA", "sesionB", now));
+  assert.ok(!validRecoveryProof(proof, "usuarioA", "sesionA", now + 601000));
+  assert.ok(
+    !validRecoveryProof(
+      proof.replace(/^\d+/, "9999999999"),
+      "usuarioA",
+      "sesionA",
+      now,
+    ),
+  );
+  assert.ok(!validRecoveryProof("", "usuarioA", "sesionA", now));
 });
 test("el acceso y almacenamiento tienen mensajes completos en ES y CA", () => {
   for (const pair of Object.values(authCopy)) {

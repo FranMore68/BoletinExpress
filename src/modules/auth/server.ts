@@ -46,7 +46,13 @@ export async function requireUser(ctx: AuthContext) {
   if (error || !data.user?.email_confirmed_at)
     throw new AccessError(401, "session");
   const active = await ctx.client.rpc("session_active");
-  if (active.error) throw new AccessError(503, "unavailable");
+  if (active.error) {
+    console.error("session_check_failed", {
+      code: active.error.code,
+      message: active.error.message,
+    });
+    throw new AccessError(503, "unavailable");
+  }
   if (active.data !== true) throw new AccessError(401, "session");
   return data.user;
 }

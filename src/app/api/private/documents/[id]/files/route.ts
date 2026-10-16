@@ -13,9 +13,9 @@ export async function POST(
     const doc = await ownedDocument(ctx, (await params).id);
     if (doc.status !== "draft") throw new AccessError(409, "closed");
     const bytes = await pdfBody(request);
-    const reservation = await ctx.client.rpc("reserve_file", {
-      p_document: doc.id,
-    });
+    const reservation = await ctx.client
+      .rpc("reserve_file", { p_document: doc.id })
+      .single();
     if (reservation.error)
       throw new AccessError(
         reservation.error.code === "23514" ? 409 : 404,

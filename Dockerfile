@@ -39,5 +39,9 @@ COPY --chown=node:node infra/supabase/templates.mjs infra/supabase/confirmation.
 EXPOSE 8080
 CMD ["node", "templates.mjs"]
 
-FROM supabase/postgres:17.6.1.136 AS database
+FROM supabase/postgres:17.11.0.004 AS database
 COPY infra/supabase/roles.sql /docker-entrypoint-initdb.d/init-scripts/99-roles.sql
+
+FROM supabase/storage-api:v1.83.5 AS storage
+USER root
+RUN rm -rf /usr/local/lib/node_modules/npm /usr/local/bin/npm /usr/local/bin/npx /opt/yarn* /usr/local/bin/yarn*
