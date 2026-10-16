@@ -1,0 +1,35 @@
+postgres-1  | ALTER TABLE
+postgres-1  | /docker-entrypoint-initdb.d/migrate.sh: running /docker-entrypoint-initdb.d/init-scripts/00000000000002-storage-schema.sql
+postgres-1  | CREATE SCHEMA
+postgres-1  | CREATE ROLE
+postgres-1  | ALTER ROLE
+postgres-1  | GRANT
+postgres-1  | DO
+postgres-1  | /docker-entrypoint-initdb.d/migrate.sh: running /docker-entrypoint-initdb.d/init-scripts/00000000000003-post-setup.sql
+postgres-1  | ALTER ROLE
+postgres-1  | ALTER ROLE
+postgres-1  | CREATE FUNCTION
+postgres-1  | CREATE EVENT TRIGGER
+postgres-1  | COMMENT
+postgres-1  | CREATE FUNCTION
+postgres-1  | COMMENT
+postgres-1  | DO
+postgres-1  | CREATE ROLE
+postgres-1  | GRANT
+postgres-1  | GRANT
+postgres-1  | GRANT
+postgres-1  | GRANT
+postgres-1  | GRANT
+postgres-1  | GRANT
+postgres-1  | GRANT
+postgres-1  | GRANT
+postgres-1  | GRANT
+postgres-1  | DO
+postgres-1  | /docker-entrypoint-initdb.d/migrate.sh: running /docker-entrypoint-initdb.d/init-scripts/99-roles.sql
+postgres-1  | ALTER ROLE
+postgres-1  | ALTER ROLE
+postgres-1  | ALTER ROLE
+postgres-1  | psql:/docker-entrypoint-initdb.d/init-scripts/99-roles.sql:7: ERROR:  role "supabase_functions_admin" does not exist
+postgres-1  | 
+postgres-1  | PostgreSQL Database directory appears to contain a database; Skipping initialization
+postgres-1  | 
