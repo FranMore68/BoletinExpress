@@ -9,3 +9,7 @@ Correcciones: validación de cuerpos JSON, rechazo de campos sensibles, límites
 Riesgo: integración de evaluación en repositorio privado, sin despliegue; su cierre y cualquier promoción quedan condicionados a las pruebas reales de migración/aislamiento y auditoría de imágenes en CI. La revisión de esta preparación no certifica todavía el cierre de fase.
 
 APTO PARA COMMIT
+
+## Preparación de imágenes corregidas
+
+Se actualizan dependencias compatibles de Storage mediante manifiesto y lockfile, se sustituye el helper gosu de PostgreSQL por su-exec 0.3-r0 y se prepara Auth desde su fuente oficial v2.197.0, con archivo fuente verificado por SHA-256, Go 1.27.2 fijado por digest y actualizaciones fijadas de x/net y grpc. Se conservan sus pruebas de crypto/conf y la batería funcional de dos cuentas. No se modifica el código funcional del proveedor. Las imágenes no se publican ni despliegan; su promoción y el cierre siguen bloqueados hasta completar la auditoría y resolver los avisos altos pendientes.

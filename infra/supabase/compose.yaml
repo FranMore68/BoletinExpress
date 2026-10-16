@@ -26,7 +26,7 @@ services:
     logging: {driver: json-file, options: {max-size: "5m", max-file: "2"}}
   auth:
     <<: *runtime
-    image: supabase/gotrue:v2.197.0
+    image: boletinexpress-auth:phase3
     mem_limit: 128m
     cpus: 0.04
     depends_on: {postgres: {condition: service_healthy}, mail: {condition: service_started}}
@@ -82,7 +82,7 @@ services:
   storage:
     <<: *runtime
     image: boletinexpress-storage:phase3
-    mem_limit: 384m
+    mem_limit: 512m
     cpus: 0.04
     depends_on: {postgres: {condition: service_healthy}, rest: {condition: service_started}}
     environment:
@@ -99,7 +99,13 @@ services:
       GLOBAL_S3_BUCKET: boletinexpress
       REGION: local
       ENABLE_IMAGE_TRANSFORMATION: "false"
-      LOG_LEVEL: fatal
+      LOG_LEVEL: error
+    healthcheck:
+      test: [CMD, node, -e, "fetch('http://127.0.0.1:5000/status').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"]
+      interval: 10s
+      timeout: 5s
+      start_period: 120s
+      retries: 12
     volumes: [files:/var/lib/storage]
   gateway:
     <<: *runtime
@@ -111,7 +117,7 @@ services:
       ANON_KEY: ${ANON_KEY}
       SERVICE_ROLE_KEY: ${SERVICE_ROLE_KEY}
     ports: ["127.0.0.1:54321:8000"]
-    depends_on: [auth, rest, storage]
+    depends_on: {auth: {condition: service_started}, rest: {condition: service_started}, storage: {condition: service_healthy}}
   templates:
     <<: *runtime
     image: boletinexpress-templates:phase3

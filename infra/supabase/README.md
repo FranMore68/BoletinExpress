@@ -12,6 +12,7 @@ Desde la raíz, con Node 24 y Docker en funcionamiento:
 node scripts/init-local-auth.mjs
 docker build --target database -t boletinexpress-postgres:phase3 .
 docker build --target storage -t boletinexpress-storage:phase3 .
+docker build --target auth -t boletinexpress-auth:phase3 .
 docker build --target gateway -t boletinexpress-gateway:phase3 .
 docker build --target templates -t boletinexpress-templates:phase3 .
 docker compose --env-file .secrets/supabase.env -f infra/supabase/compose.yaml up --detach
@@ -28,7 +29,7 @@ Acceso: http://127.0.0.1:3000/acceso. Buzón de evaluación: http://127.0.0.1:54
 
 ## Recursos y datos
 
-Los límites del conjunto de datos suman 2112 MiB y 0,25 CPU, incluidos pasarela, plantillas y buzón. Junto con web/worker: 2880 MiB y 1 CPU. Son límites configurados; no sustituyen la prueba del VPS de fase 10. Los volúmenes tienen nombres exclusivos `boletinexpress-*`. `docker compose down` detiene los servicios conservando los volúmenes. No ejecutar `down -v` ni borrar los volúmenes para resolver un fallo de arranque: eliminaría datos de evaluación.
+Los límites del conjunto de datos suman 2240 MiB y 0,25 CPU, incluidos pasarela, plantillas y buzón. Junto con web/worker: 3008 MiB y 1 CPU. Son límites configurados; no sustituyen la prueba del VPS de fase 10. Los volúmenes tienen nombres exclusivos `boletinexpress-*`. `docker compose down` detiene los servicios conservando los volúmenes. No ejecutar `down -v` ni borrar los volúmenes para resolver un fallo de arranque: eliminaría datos de evaluación.
 
 La retención, limpieza de reservas incompletas, créditos y formularios completos se incorporarán en sus fases. Las rutas documentales de fase 3 admiten borradores privados y PDF ficticios de prueba, con cinco archivos de hasta 2 MB. El contenido no se envía a IA.
 

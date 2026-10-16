@@ -18,3 +18,6 @@
 !infra/supabase/confirmation.html
 !infra/supabase/recovery.html
 !infra/supabase/roles.sql
+!infra/supabase/storage-runtime/
+!infra/supabase/storage-runtime/package.json
+!infra/supabase/storage-runtime/package-lock.json
