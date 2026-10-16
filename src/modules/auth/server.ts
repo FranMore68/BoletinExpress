@@ -64,7 +64,13 @@ export async function throttle(
   const result = await ctx.client.rpc("consume_auth_attempt", {
     p_key: hashAttempt(`${action}:${email}`),
   });
-  if (result.error) throw new AccessError(503, "unavailable");
+  if (result.error) {
+    console.error("auth_throttle_failed", {
+      code: result.error.code,
+      message: result.error.message,
+    });
+    throw new AccessError(503, "unavailable");
+  }
   if (result.data !== true) throw new AccessError(429, "rate");
 }
 export function failure(error: unknown) {

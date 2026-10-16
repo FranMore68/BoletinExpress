@@ -40,7 +40,7 @@ try {
 } catch {
   output += "No se pudo consultar el estado de los servicios.\n";
 }
-for (const service of ["postgres", "auth", "storage"]) {
+for (const service of ["postgres", "auth", "rest", "storage"]) {
   try {
     output += execFileSync(
       "docker",

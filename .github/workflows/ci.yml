@@ -49,7 +49,8 @@ jobs:
         run: |
           set -o pipefail
           node scripts/test-isolation.mjs | tee evidence/phase-3/isolation.log
-      - run: |
+      - if: always() && steps.isolation.outcome != 'skipped'
+        run: |
           docker tag boletinexpress-gateway:phase3 boletinexpress-gateway:phase1
           docker tag boletinexpress-templates:phase3 boletinexpress-templates:phase1
           docker tag boletinexpress-postgres:phase3 boletinexpress-postgres:phase1

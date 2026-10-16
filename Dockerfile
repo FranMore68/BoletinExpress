@@ -57,7 +57,7 @@ WORKDIR /source
 RUN tar xzf /tmp/auth.tar.gz --strip-components=1 -C /source
 RUN go get golang.org/x/net@v0.60.0 google.golang.org/grpc@v1.83.2
 RUN go test ./internal/crypto ./internal/conf
-RUN RELEASE_VERSION=v2.197.0-be1 make build
+RUN RELEASE_VERSION=2.197.0-be1 make build
 
 FROM supabase/gotrue:v2.197.0 AS auth
 USER root
