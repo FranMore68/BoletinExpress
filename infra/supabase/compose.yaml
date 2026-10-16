@@ -41,6 +41,8 @@ services:
       GOTRUE_SITE_URL: ${APP_URL}
       GOTRUE_URI_ALLOW_LIST: ${APP_URL}/auth/confirm
       GOTRUE_DISABLE_SIGNUP: "false"
+      # Auth 2.197 todavía usa DefaultGroupName al crear el usuario (signup.go).
+      GOTRUE_JWT_DEFAULT_GROUP_NAME: authenticated
       GOTRUE_JWT_ADMIN_ROLES: service_role
       GOTRUE_JWT_AUD: authenticated
       GOTRUE_JWT_EXP: 900
