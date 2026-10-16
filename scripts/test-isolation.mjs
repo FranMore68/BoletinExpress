@@ -1,5 +1,6 @@
 import assert from "node:assert/strict";
 import { createHash, createHmac, randomBytes, randomUUID } from "node:crypto";
+import { writeFileSync } from "node:fs";
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { createClient } from "@supabase/supabase-js";
 
@@ -22,6 +23,10 @@ assert.ok(
 const results = [];
 function pass(test, evidence) {
   results.push({ test, pass: true, evidence });
+  writeFileSync(
+    "evidence/phase-3/isolation.json",
+    JSON.stringify({ pass: false, complete: false, results }, null, 2),
+  );
   console.log("PASS", test);
 }
 class BrowserSession {
@@ -131,8 +136,8 @@ for (const account of accounts) {
     body: { token_hash: hash, type: "email" },
   });
   for (const c of confirm.headers.getSetCookie()) {
-    assert.match(c, /HttpOnly/i);
-    assert.match(c, /SameSite=lax/i);
+    assert.ok(/HttpOnly/i.test(c), "Cookie de sesión sin HttpOnly");
+    assert.ok(/SameSite=lax/i.test(c), "Cookie de sesión sin SameSite");
   }
   await json(confirm, 200);
   await json(
@@ -268,7 +273,12 @@ for (const suffix of ["", "?view=1"]) {
     res.headers.get("content-disposition"),
     suffix ? "inline" : "attachment",
   );
-  assert.deepEqual(Buffer.from(await res.arrayBuffer()), pdf);
+  assert.equal(
+    createHash("sha256")
+      .update(Buffer.from(await res.arrayBuffer()))
+      .digest("hex"),
+    createHash("sha256").update(pdf).digest("hex"),
+  );
   await json(await b.jar.request(`/api/private/files/${fileId}${suffix}`), 404);
   await json(await empty.request(`/api/private/files/${fileId}${suffix}`), 401);
 }
@@ -486,6 +496,7 @@ await writeFile(
   JSON.stringify(
     {
       pass: true,
+      complete: true,
       accounts: "dos cuentas ficticias distintas; credenciales no conservadas",
       pdfSha256: createHash("sha256").update(pdf).digest("hex"),
       results,

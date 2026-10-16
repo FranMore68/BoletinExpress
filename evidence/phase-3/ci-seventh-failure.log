@@ -1,0 +1,117 @@
+check	Run node scripts/test-isolation.mjs	﻿2026-10-16T16:16:41.6735255Z ##[group]Run node scripts/test-isolation.mjs
+check	Run node scripts/test-isolation.mjs	2026-10-16T16:16:41.6735875Z ^[[36;1mnode scripts/test-isolation.mjs^[[0m
+check	Run node scripts/test-isolation.mjs	2026-10-16T16:16:41.6799759Z shell: /usr/bin/bash -e {0}
+check	Run node scripts/test-isolation.mjs	2026-10-16T16:16:41.6800016Z env:
+check	Run node scripts/test-isolation.mjs	2026-10-16T16:16:41.6800207Z   NEXT_TELEMETRY_DISABLED: 1
+check	Run node scripts/test-isolation.mjs	2026-10-16T16:16:41.6800450Z ##[endgroup]
+check	Run node scripts/test-isolation.mjs	2026-10-16T16:16:41.9616610Z PASS rutas privadas y cuenta sin sesión bloqueadas
+check	Run node scripts/test-isolation.mjs	2026-10-16T16:16:59.7202468Z PASS registro, confirmación explícita y enlace de un uso
+check	Run node scripts/test-isolation.mjs	2026-10-16T16:17:04.9250387Z PASS listas y documento ajeno aislados en BFF
+check	Run node scripts/test-isolation.mjs	2026-10-16T16:17:06.2399044Z PASS origen, propietario, estado y saldo manipulados bloqueados
+check	Run node scripts/test-isolation.mjs	2026-10-16T16:17:09.7223345Z node:internal/modules/run_main:107
+check	Run node scripts/test-isolation.mjs	2026-10-16T16:17:09.7224292Z     triggerUncaughtException(
+check	Run node scripts/test-isolation.mjs	2026-10-16T16:17:09.7224583Z     ^
+check	Run node scripts/test-isolation.mjs	2026-10-16T16:17:09.7224698Z 
+check	Run node scripts/test-isolation.mjs	2026-10-16T16:17:09.7225155Z AssertionError [ERR_ASSERTION]: /api/private/documents/091bb5fe-f9c2-49cc-8217-0a97e95f7660/files: upload
+check	Run node scripts/test-isolation.mjs	2026-10-16T16:17:09.7225586Z 
+check	Run node scripts/test-isolation.mjs	2026-10-16T16:17:09.7225671Z 503 !== 201
+check	Run node scripts/test-isolation.mjs	2026-10-16T16:17:09.7226068Z 
+check	Run node scripts/test-isolation.mjs	2026-10-16T16:17:09.7226603Z     at json (file:///home/runner/work/BoletinExpress/BoletinExpress/scripts/test-isolation.mjs:63:12)
+check	Run node scripts/test-isolation.mjs	2026-10-16T16:17:09.7227677Z     at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+check	Run node scripts/test-isolation.mjs	2026-10-16T16:17:09.7229128Z     at async file:///home/runner/work/BoletinExpress/BoletinExpress/scripts/test-isolation.mjs:254:18 {
+check	Run node scripts/test-isolation.mjs	2026-10-16T16:17:09.7229949Z   generatedMessage: false,
+check	Run node scripts/test-isolation.mjs	2026-10-16T16:17:09.7230363Z   code: 'ERR_ASSERTION',
+check	Run node scripts/test-isolation.mjs	2026-10-16T16:17:09.7230732Z   actual: 503,
+check	Run node scripts/test-isolation.mjs	2026-10-16T16:17:09.7231056Z   expected: 201,
+check	Run node scripts/test-isolation.mjs	2026-10-16T16:17:09.7231924Z   operator: 'strictEqual',
+check	Run node scripts/test-isolation.mjs	2026-10-16T16:17:09.7232335Z   diff: 'simple'
+check	Run node scripts/test-isolation.mjs	2026-10-16T16:17:09.7232661Z }
+check	Run node scripts/test-isolation.mjs	2026-10-16T16:17:09.7232832Z 
+check	Run node scripts/test-isolation.mjs	2026-10-16T16:17:09.7232988Z Node.js v24.22.0
+check	Run node scripts/test-isolation.mjs	2026-10-16T16:17:09.7315634Z ##[error]Process completed with exit code 1.
+check	Run docker tag boletinexpress-gateway:phase3 boletinexpress-gateway:phase1	﻿2026-10-16T16:17:09.7376218Z ##[group]Run docker tag boletinexpress-gateway:phase3 boletinexpress-gateway:phase1
+check	Run docker tag boletinexpress-gateway:phase3 boletinexpress-gateway:phase1	2026-10-16T16:17:09.7376891Z ^[[36;1mdocker tag boletinexpress-gateway:phase3 boletinexpress-gateway:phase1^[[0m
+check	Run docker tag boletinexpress-gateway:phase3 boletinexpress-gateway:phase1	2026-10-16T16:17:09.7377874Z ^[[36;1mdocker tag boletinexpress-templates:phase3 boletinexpress-templates:phase1^[[0m
+check	Run docker tag boletinexpress-gateway:phase3 boletinexpress-gateway:phase1	2026-10-16T16:17:09.7378457Z ^[[36;1mdocker tag boletinexpress-postgres:phase3 boletinexpress-postgres:phase1^[[0m
+check	Run docker tag boletinexpress-gateway:phase3 boletinexpress-gateway:phase1	2026-10-16T16:17:09.7379141Z ^[[36;1mdocker tag supabase/gotrue:v2.197.0 boletinexpress-auth:phase1^[[0m
+check	Run docker tag boletinexpress-gateway:phase3 boletinexpress-gateway:phase1	2026-10-16T16:17:09.7379621Z ^[[36;1mdocker tag postgrest/postgrest:v14.17 boletinexpress-rest:phase1^[[0m
+check	Run docker tag boletinexpress-gateway:phase3 boletinexpress-gateway:phase1	2026-10-16T16:17:09.7380130Z ^[[36;1mdocker tag boletinexpress-storage:phase3 boletinexpress-storage:phase1^[[0m
+check	Run docker tag boletinexpress-gateway:phase3 boletinexpress-gateway:phase1	2026-10-16T16:17:09.7380650Z ^[[36;1mdocker tag axllent/mailpit:v1.31.6 boletinexpress-mail:phase1^[[0m
+check	Run docker tag boletinexpress-gateway:phase3 boletinexpress-gateway:phase1	2026-10-16T16:17:09.7381377Z ^[[36;1mBE_SCAN_REPORT_DIR=evidence/phase-3 BE_SCAN_SERVICES="web worker gateway templates postgres auth rest storage mail" sh scripts/scan-images.sh^[[0m
+check	Run docker tag boletinexpress-gateway:phase3 boletinexpress-gateway:phase1	2026-10-16T16:17:09.7445453Z shell: /usr/bin/bash -e {0}
+check	Run docker tag boletinexpress-gateway:phase3 boletinexpress-gateway:phase1	2026-10-16T16:17:09.7445733Z env:
+check	Run docker tag boletinexpress-gateway:phase3 boletinexpress-gateway:phase1	2026-10-16T16:17:09.7445935Z   NEXT_TELEMETRY_DISABLED: 1
+check	Run docker tag boletinexpress-gateway:phase3 boletinexpress-gateway:phase1	2026-10-16T16:17:09.7446179Z ##[endgroup]
+check	Run docker tag boletinexpress-gateway:phase3 boletinexpress-gateway:phase1	2026-10-16T16:17:10.1247447Z docker.io/aquasec/trivy@sha256:2416d1f74045b57274df1a340eee6b510cacd73c66a6ccb8da092b117eb7d222: Pulling from aquasec/trivy
+check	Run docker tag boletinexpress-gateway:phase3 boletinexpress-gateway:phase1	2026-10-16T16:17:10.1990868Z e2de96513ba9: Already exists
+check	Run docker tag boletinexpress-gateway:phase3 boletinexpress-gateway:phase1	2026-10-16T16:17:10.1993767Z 404cb589430b: Pulling fs layer
+check	Run docker tag boletinexpress-gateway:phase3 boletinexpress-gateway:phase1	2026-10-16T16:17:10.1995171Z 2f5cf6d3a5d1: Pulling fs layer
+check	Run docker tag boletinexpress-gateway:phase3 boletinexpress-gateway:phase1	2026-10-16T16:17:10.1996180Z 28e25cc2c5e5: Pulling fs layer
+check	Run docker tag boletinexpress-gateway:phase3 boletinexpress-gateway:phase1	2026-10-16T16:17:10.2953929Z 28e25cc2c5e5: Download complete
+check	Run docker tag boletinexpress-gateway:phase3 boletinexpress-gateway:phase1	2026-10-16T16:17:10.3776979Z 404cb589430b: Verifying Checksum
+check	Run docker tag boletinexpress-gateway:phase3 boletinexpress-gateway:phase1	2026-10-16T16:17:10.3777860Z 404cb589430b: Download complete
+check	Run docker tag boletinexpress-gateway:phase3 boletinexpress-gateway:phase1	2026-10-16T16:17:10.5434945Z 2f5cf6d3a5d1: Verifying Checksum
+check	Run docker tag boletinexpress-gateway:phase3 boletinexpress-gateway:phase1	2026-10-16T16:17:10.5435829Z 2f5cf6d3a5d1: Download complete
+check	Run docker tag boletinexpress-gateway:phase3 boletinexpress-gateway:phase1	2026-10-16T16:17:10.7139566Z 404cb589430b: Pull complete
+check	Run docker tag boletinexpress-gateway:phase3 boletinexpress-gateway:phase1	2026-10-16T16:17:12.3125867Z 2f5cf6d3a5d1: Pull complete
+check	Run docker tag boletinexpress-gateway:phase3 boletinexpress-gateway:phase1	2026-10-16T16:17:12.3313482Z 28e25cc2c5e5: Pull complete
+check	Run docker tag boletinexpress-gateway:phase3 boletinexpress-gateway:phase1	2026-10-16T16:17:12.3390972Z Digest: sha256:2416d1f74045b57274df1a340eee6b510cacd73c66a6ccb8da092b117eb7d222
+check	Run docker tag boletinexpress-gateway:phase3 boletinexpress-gateway:phase1	2026-10-16T16:17:12.3402896Z Status: Downloaded newer image for aquasec/trivy@sha256:2416d1f74045b57274df1a340eee6b510cacd73c66a6ccb8da092b117eb7d222
+check	Run docker tag boletinexpress-gateway:phase3 boletinexpress-gateway:phase1	2026-10-16T16:17:12.3426550Z docker.io/aquasec/trivy@sha256:2416d1f74045b57274df1a340eee6b510cacd73c66a6ccb8da092b117eb7d222
+check	Run docker tag boletinexpress-gateway:phase3 boletinexpress-gateway:phase1	2026-10-16T16:17:23.8357912Z 2026-10-16T16:17:12Z	INFO	[vulndb] Need to update DB
+check	Run docker tag boletinexpress-gateway:phase3 boletinexpress-gateway:phase1	2026-10-16T16:17:23.8361629Z 2026-10-16T16:17:12Z	INFO	[vulndb] Downloading vulnerability DB...
+check	Run docker tag boletinexpress-gateway:phase3 boletinexpress-gateway:phase1	2026-10-16T16:17:23.8363240Z 2026-10-16T16:17:12Z	INFO	[vulndb] Downloading artifact...	repo="mirror.gcr.io/aquasec/trivy-db:2"
+check	Run docker tag boletinexpress-gateway:phase3 boletinexpress-gateway:phase1	2026-10-16T16:17:23.8384329Z 36.84 MiB / 128.03 MiB [----------------->__________________________________________] 28.77% ? p/s ?87.16 MiB / 128.03 MiB [---------------------------------------->___________________] 68.08% ? p/s ?128.03 MiB / 128.03 MiB [--------------------------------------------------------->] 100.00% ? p/s ?128.03 MiB / 128.03 MiB [------------------------------------------->] 100.00% 152.00 MiB p/s ETA 0s128.03 MiB / 128.03 MiB [------------------------------------------->] 100.00% 152.00 MiB p/s ETA 0s128.03 MiB / 128.03 MiB [------------------------------------------->] 100.00% 152.00 MiB p/s ETA 0s128.03 MiB / 128.03 MiB [------------------------------------------->] 100.00% 142.19 MiB p/s ETA 0s128.03 MiB / 128.03 MiB [------------------------------------------->] 100.00% 142.19 MiB p/s ETA 0s128.03 MiB / 128.03 MiB [------------------------------------------->] 100.00% 142.19 MiB p/s ETA 0s128.03 MiB / 128.03 MiB [------------------------------------------->] 100.00% 133.02 MiB p/s ETA 0s128.03 MiB / 128.03 MiB [------------------------------------------->] 100.00% 133.02 MiB p/s ETA 0s128.03 MiB / 128.03 MiB [------------------------------------------->] 100.00% 133.02 MiB p/s ETA 0s128.03 MiB / 128.03 MiB [------------------------------------------->] 100.00% 124.44 MiB p/s ETA 0s128.03 MiB / 128.03 MiB [------------------------------------------->] 100.00% 124.44 MiB p/s ETA 0s128.03 MiB / 128.03 MiB [------------------------------------------->] 100.00% 124.44 MiB p/s ETA 0s128.03 MiB / 128.03 MiB [------------------------------------------->] 100.00% 116.41 MiB p/s ETA 0s128.03 MiB / 128.03 MiB [------------------------------------------->] 100.00% 116.41 MiB p/s ETA 0s128.03 MiB / 128.03 MiB [------------------------------------------->] 100.00% 116.41 MiB p/s ETA 0s128.03 MiB / 128.03 MiB [------------------------------------------->] 100.00% 108.90 MiB p/s ETA 0s128.03 MiB / 128.03 MiB [------------------------------------------->] 100.00% 108.90 MiB p/s ETA 0s128.03 MiB / 128.03 MiB [------------------------------------------->] 100.00% 108.90 MiB p/s ETA 0s128.03 MiB / 128.03 MiB [------------------------------------------->] 100.00% 101.87 MiB p/s ETA 0s128.03 MiB / 128.03 MiB [------------------------------------------->] 100.00% 101.87 MiB p/s ETA 0s128.03 MiB / 128.03 MiB [------------------------------------------->] 100.00% 101.87 MiB p/s ETA 0s128.03 MiB / 128.03 MiB [-------------------------------------------->] 100.00% 95.30 MiB p/s ETA 0s128.03 MiB / 128.03 MiB [-------------------------------------------->] 100.00% 95.30 MiB p/s ETA 0s128.03 MiB / 128.03 MiB [-------------------------------------------->] 100.00% 95.30 MiB p/s ETA 0s128.03 MiB / 128.03 MiB [-------------------------------------------->] 100.00% 89.15 MiB p/s ETA 0s128.03 MiB / 128.03 MiB [-------------------------------------------->] 100.00% 89.15 MiB p/s ETA 0s128.03 MiB / 128.03 MiB [-------------------------------------------->] 100.00% 89.15 MiB p/s ETA 0s128.03 MiB / 128.03 MiB [-------------------------------------------->] 100.00% 83.40 MiB p/s ETA 0s128.03 MiB / 128.03 MiB [-------------------------------------------->] 100.00% 83.40 MiB p/s ETA 0s128.03 MiB / 128.03 MiB [-----------------------------------------------] 100.00% 20.42 MiB p/s 6.5s2026-10-16T16:17:20Z	INFO	[vulndb] Artifact successfully downloaded	repo="mirror.gcr.io/aquasec/trivy-db:2"
+check	Run docker tag boletinexpress-gateway:phase3 boletinexpress-gateway:phase1	2026-10-16T16:17:29.3824701Z 2026-10-16T16:17:28Z	INFO	[vuln] Vulnerability scanning is enabled
+check	Run docker tag boletinexpress-gateway:phase3 boletinexpress-gateway:phase1	2026-10-16T16:17:29.3825760Z 2026-10-16T16:17:29Z	INFO	Detected OS	family="alpine" version="3.24.2"
+check	Run docker tag boletinexpress-gateway:phase3 boletinexpress-gateway:phase1	2026-10-16T16:17:29.3830405Z 2026-10-16T16:17:29Z	INFO	[alpine] Detecting vulnerabilities...	os_version="3.24" repository="3.24" pkg_num=19
+check	Run docker tag boletinexpress-gateway:phase3 boletinexpress-gateway:phase1	2026-10-16T16:17:29.3831748Z 2026-10-16T16:17:29Z	INFO	Number of language-specific files	num=1
+check	Run docker tag boletinexpress-gateway:phase3 boletinexpress-gateway:phase1	2026-10-16T16:17:29.3832766Z 2026-10-16T16:17:29Z	INFO	[node-pkg] Detecting vulnerabilities...
+check	Run docker tag boletinexpress-gateway:phase3 boletinexpress-gateway:phase1	2026-10-16T16:17:29.3834640Z 2026-10-16T16:17:29Z	WARN	Using severities from other vendors for some vulnerabilities. Read https://trivy.dev/docs/v0.76/guide/scanner/vulnerability#severity-selection for details.
+check	Run docker tag boletinexpress-gateway:phase3 boletinexpress-gateway:phase1	2026-10-16T16:17:32.4234085Z 2026-10-16T16:17:32Z	INFO	[vuln] Vulnerability scanning is enabled
+check	Run docker tag boletinexpress-gateway:phase3 boletinexpress-gateway:phase1	2026-10-16T16:17:32.4248123Z 2026-10-16T16:17:32Z	INFO	Detected OS	family="alpine" version="3.24.2"
+check	Run docker tag boletinexpress-gateway:phase3 boletinexpress-gateway:phase1	2026-10-16T16:17:32.4254469Z 2026-10-16T16:17:32Z	INFO	[alpine] Detecting vulnerabilities...	os_version="3.24" repository="3.24" pkg_num=19
+check	Run docker tag boletinexpress-gateway:phase3 boletinexpress-gateway:phase1	2026-10-16T16:17:32.4255840Z 2026-10-16T16:17:32Z	INFO	Number of language-specific files	num=1
+check	Run docker tag boletinexpress-gateway:phase3 boletinexpress-gateway:phase1	2026-10-16T16:17:32.4257075Z 2026-10-16T16:17:32Z	INFO	[node-pkg] Detecting vulnerabilities...
+check	Run docker tag boletinexpress-gateway:phase3 boletinexpress-gateway:phase1	2026-10-16T16:17:32.4259281Z 2026-10-16T16:17:32Z	WARN	Using severities from other vendors for some vulnerabilities. Read https://trivy.dev/docs/v0.76/guide/scanner/vulnerability#severity-selection for details.
+check	Run docker tag boletinexpress-gateway:phase3 boletinexpress-gateway:phase1	2026-10-16T16:17:35.5440817Z 2026-10-16T16:17:35Z	INFO	[vuln] Vulnerability scanning is enabled
+check	Run docker tag boletinexpress-gateway:phase3 boletinexpress-gateway:phase1	2026-10-16T16:17:35.5442182Z 2026-10-16T16:17:35Z	INFO	Detected OS	family="alpine" version="3.24.2"
+check	Run docker tag boletinexpress-gateway:phase3 boletinexpress-gateway:phase1	2026-10-16T16:17:35.5444078Z 2026-10-16T16:17:35Z	INFO	[alpine] Detecting vulnerabilities...	os_version="3.24" repository="3.24" pkg_num=19
+check	Run docker tag boletinexpress-gateway:phase3 boletinexpress-gateway:phase1	2026-10-16T16:17:35.5445522Z 2026-10-16T16:17:35Z	INFO	Number of language-specific files	num=1
+check	Run docker tag boletinexpress-gateway:phase3 boletinexpress-gateway:phase1	2026-10-16T16:17:35.5446611Z 2026-10-16T16:17:35Z	INFO	[node-pkg] Detecting vulnerabilities...
+check	Run docker tag boletinexpress-gateway:phase3 boletinexpress-gateway:phase1	2026-10-16T16:17:35.5449024Z 2026-10-16T16:17:35Z	WARN	Using severities from other vendors for some vulnerabilities. Read https://trivy.dev/docs/v0.76/guide/scanner/vulnerability#severity-selection for details.
+check	Run docker tag boletinexpress-gateway:phase3 boletinexpress-gateway:phase1	2026-10-16T16:17:38.6255651Z 2026-10-16T16:17:38Z	INFO	[vuln] Vulnerability scanning is enabled
+check	Run docker tag boletinexpress-gateway:phase3 boletinexpress-gateway:phase1	2026-10-16T16:17:38.6257006Z 2026-10-16T16:17:38Z	INFO	Detected OS	family="alpine" version="3.24.2"
+check	Run docker tag boletinexpress-gateway:phase3 boletinexpress-gateway:phase1	2026-10-16T16:17:38.6258465Z 2026-10-16T16:17:38Z	INFO	[alpine] Detecting vulnerabilities...	os_version="3.24" repository="3.24" pkg_num=19
+check	Run docker tag boletinexpress-gateway:phase3 boletinexpress-gateway:phase1	2026-10-16T16:17:38.6260131Z 2026-10-16T16:17:38Z	INFO	Number of language-specific files	num=1
+check	Run docker tag boletinexpress-gateway:phase3 boletinexpress-gateway:phase1	2026-10-16T16:17:38.6261126Z 2026-10-16T16:17:38Z	INFO	[node-pkg] Detecting vulnerabilities...
+check	Run docker tag boletinexpress-gateway:phase3 boletinexpress-gateway:phase1	2026-10-16T16:17:38.6263031Z 2026-10-16T16:17:38Z	WARN	Using severities from other vendors for some vulnerabilities. Read https://trivy.dev/docs/v0.76/guide/scanner/vulnerability#severity-selection for details.
+check	Run docker tag boletinexpress-gateway:phase3 boletinexpress-gateway:phase1	2026-10-16T16:18:09.4093357Z 2026-10-16T16:18:01Z	INFO	[vuln] Vulnerability scanning is enabled
+check	Run docker tag boletinexpress-gateway:phase3 boletinexpress-gateway:phase1	2026-10-16T16:18:09.4094686Z 2026-10-16T16:18:09Z	INFO	Detected OS	family="alpine" version="3.23.6"
+check	Run docker tag boletinexpress-gateway:phase3 boletinexpress-gateway:phase1	2026-10-16T16:18:09.4096198Z 2026-10-16T16:18:09Z	INFO	[alpine] Detecting vulnerabilities...	os_version="3.23" repository="3.23" pkg_num=40
+check	Run docker tag boletinexpress-gateway:phase3 boletinexpress-gateway:phase1	2026-10-16T16:18:09.4097471Z 2026-10-16T16:18:09Z	INFO	Number of language-specific files	num=3
+check	Run docker tag boletinexpress-gateway:phase3 boletinexpress-gateway:phase1	2026-10-16T16:18:09.4098438Z 2026-10-16T16:18:09Z	INFO	[cargo] Detecting vulnerabilities...
+check	Run docker tag boletinexpress-gateway:phase3 boletinexpress-gateway:phase1	2026-10-16T16:18:09.4100449Z 2026-10-16T16:18:09Z	INFO	[gobinary] Detecting vulnerabilities...
+check	Run docker tag boletinexpress-gateway:phase3 boletinexpress-gateway:phase1	2026-10-16T16:18:09.4101428Z 2026-10-16T16:18:09Z	INFO	[node-pkg] Detecting vulnerabilities...
+check	Run docker tag boletinexpress-gateway:phase3 boletinexpress-gateway:phase1	2026-10-16T16:18:09.4103238Z 2026-10-16T16:18:09Z	WARN	Using severities from other vendors for some vulnerabilities. Read https://trivy.dev/docs/v0.76/guide/scanner/vulnerability#severity-selection for details.
+check	Run docker tag boletinexpress-gateway:phase3 boletinexpress-gateway:phase1	2026-10-16T16:18:11.4229367Z 2026-10-16T16:18:11Z	INFO	[vuln] Vulnerability scanning is enabled
+check	Run docker tag boletinexpress-gateway:phase3 boletinexpress-gateway:phase1	2026-10-16T16:18:11.4230952Z 2026-10-16T16:18:11Z	INFO	Detected OS	family="alpine" version="3.24.1"
+check	Run docker tag boletinexpress-gateway:phase3 boletinexpress-gateway:phase1	2026-10-16T16:18:11.4232844Z 2026-10-16T16:18:11Z	INFO	[alpine] Detecting vulnerabilities...	os_version="3.24" repository="3.24" pkg_num=17
+check	Run docker tag boletinexpress-gateway:phase3 boletinexpress-gateway:phase1	2026-10-16T16:18:11.4234254Z 2026-10-16T16:18:11Z	INFO	Number of language-specific files	num=1
+check	Run docker tag boletinexpress-gateway:phase3 boletinexpress-gateway:phase1	2026-10-16T16:18:11.4235486Z 2026-10-16T16:18:11Z	INFO	[gobinary] Detecting vulnerabilities...
+check	Run docker tag boletinexpress-gateway:phase3 boletinexpress-gateway:phase1	2026-10-16T16:18:11.4237575Z 2026-10-16T16:18:11Z	WARN	Using severities from other vendors for some vulnerabilities. Read https://trivy.dev/docs/v0.76/guide/scanner/vulnerability#severity-selection for details.
+check	Run docker tag boletinexpress-gateway:phase3 boletinexpress-gateway:phase1	2026-10-16T16:18:12.2705118Z 2026-10-16T16:18:12Z	INFO	[vuln] Vulnerability scanning is enabled
+check	Run docker tag boletinexpress-gateway:phase3 boletinexpress-gateway:phase1	2026-10-16T16:18:12.2709452Z 2026-10-16T16:18:12Z	INFO	Number of language-specific files	num=0
+check	Run docker tag boletinexpress-gateway:phase3 boletinexpress-gateway:phase1	2026-10-16T16:18:53.5847231Z 2026-10-16T16:18:50Z	INFO	[vuln] Vulnerability scanning is enabled
+check	Run docker tag boletinexpress-gateway:phase3 boletinexpress-gateway:phase1	2026-10-16T16:18:53.5850058Z 2026-10-16T16:18:53Z	INFO	Detected OS	family="alpine" version="3.23.6"
+check	Run docker tag boletinexpress-gateway:phase3 boletinexpress-gateway:phase1	2026-10-16T16:18:53.5860064Z 2026-10-16T16:18:53Z	INFO	[alpine] Detecting vulnerabilities...	os_version="3.23" repository="3.23" pkg_num=47
+check	Run docker tag boletinexpress-gateway:phase3 boletinexpress-gateway:phase1	2026-10-16T16:18:53.5862070Z 2026-10-16T16:18:53Z	INFO	Number of language-specific files	num=1
+check	Run docker tag boletinexpress-gateway:phase3 boletinexpress-gateway:phase1	2026-10-16T16:18:53.5866217Z 2026-10-16T16:18:53Z	INFO	[node-pkg] Detecting vulnerabilities...
+check	Run docker tag boletinexpress-gateway:phase3 boletinexpress-gateway:phase1	2026-10-16T16:18:53.5868044Z 2026-10-16T16:18:53Z	WARN	Using severities from other vendors for some vulnerabilities. Read https://trivy.dev/docs/v0.76/guide/scanner/vulnerability#severity-selection for details.
+check	Run docker tag boletinexpress-gateway:phase3 boletinexpress-gateway:phase1	2026-10-16T16:18:54.5042229Z 2026-10-16T16:18:54Z	INFO	[vuln] Vulnerability scanning is enabled
+check	Run docker tag boletinexpress-gateway:phase3 boletinexpress-gateway:phase1	2026-10-16T16:18:54.5043338Z 2026-10-16T16:18:54Z	INFO	Detected OS	family="alpine" version="3.24.2"
+check	Run docker tag boletinexpress-gateway:phase3 boletinexpress-gateway:phase1	2026-10-16T16:18:54.5051020Z 2026-10-16T16:18:54Z	INFO	[alpine] Detecting vulnerabilities...	os_version="3.24" repository="3.24" pkg_num=17
+check	Run docker tag boletinexpress-gateway:phase3 boletinexpress-gateway:phase1	2026-10-16T16:18:54.5052851Z 2026-10-16T16:18:54Z	INFO	Number of language-specific files	num=1
+check	Run docker tag boletinexpress-gateway:phase3 boletinexpress-gateway:phase1	2026-10-16T16:18:54.5054037Z 2026-10-16T16:18:54Z	INFO	[gobinary] Detecting vulnerabilities...
+check	Run docker tag boletinexpress-gateway:phase3 boletinexpress-gateway:phase1	2026-10-16T16:18:54.5056166Z 2026-10-16T16:18:54Z	WARN	Using severities from other vendors for some vulnerabilities. Read https://trivy.dev/docs/v0.76/guide/scanner/vulnerability#severity-selection for details.
+check	Run docker tag boletinexpress-gateway:phase3 boletinexpress-gateway:phase1	2026-10-16T16:18:54.8609121Z ##[error]Process completed with exit code 1.

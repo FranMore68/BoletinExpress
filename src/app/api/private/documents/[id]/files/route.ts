@@ -29,12 +29,21 @@ export async function POST(
         upsert: false,
       });
     if (upload.error) {
+      console.error("private_upload_failed", {
+        status: upload.error.status,
+        message: upload.error.message,
+      });
       await ctx.client.rpc("cancel_file", { p_file: file.id });
       throw new AccessError(503, "upload");
     }
     const finish = await ctx.client.rpc("finish_file", { p_file: file.id });
-    if (finish.error || finish.data !== true)
+    if (finish.error || finish.data !== true) {
+      console.error("file_confirmation_failed", {
+        code: finish.error?.code,
+        message: finish.error?.message,
+      });
       throw new AccessError(503, "upload");
+    }
     return NextResponse.json({ file: { id: file.id } }, { status: 201 });
   });
 }
