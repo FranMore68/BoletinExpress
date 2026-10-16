@@ -271,7 +271,7 @@ for (const suffix of ["", "?view=1"]) {
   assert.match(res.headers.get("cache-control"), /no-store/);
   assert.match(
     res.headers.get("content-disposition"),
-    suffix ? "inline" : "attachment",
+    suffix ? /inline/ : /attachment/,
   );
   assert.equal(
     createHash("sha256")
