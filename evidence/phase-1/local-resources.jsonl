@@ -1,0 +1,2 @@
+{"BlockIO":"0B / 0B","CPUPerc":"0.00%","Container":"boletinexpress-evaluation-web-1","ID":"4de9a445f6d2","MemPerc":"7.99%","MemUsage":"40.93MiB / 512MiB","Name":"boletinexpress-evaluation-web-1","NetIO":"872B / 126B","PIDs":"11"}
+{"BlockIO":"0B / 0B","CPUPerc":"0.00%","Container":"boletinexpress-evaluation-worker-1","ID":"5fd30e7e1dd9","MemPerc":"7.82%","MemUsage":"20.02MiB / 256MiB","Name":"boletinexpress-evaluation-worker-1","NetIO":"1.99kB / 126B","PIDs":"7"}

@@ -1,0 +1,20 @@
+{
+  "phase": 1,
+  "status": "PENDIENTE_ACEPTACION_USUARIO",
+  "codeCommit": "3c8943e62591749814e461e00279fbedf1f65b93",
+  "ci": "https://github.com/FranMore68/BoletinExpress/actions/runs/38855942045",
+  "checks": {
+    "cleanInstall": true,
+    "lintAndTypes": true,
+    "baseTests": 2,
+    "pdfRegressionTests": 43,
+    "webAndWorkerBuild": true,
+    "highCriticalNpmFindings": 0,
+    "highCriticalImageFindings": 0,
+    "httpSmoke": true,
+    "privateRepository": true,
+    "secretsPatternScan": true,
+    "containersRestricted": true
+  },
+  "scope": "Base tecnica de evaluacion. Sin Supabase operativo, acceso, cola de trabajos, pagos, IA, correo ni despliegue VPS."
+}

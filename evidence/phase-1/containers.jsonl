@@ -1,0 +1,2 @@
+{"name":"/boletinexpress-evaluation-web-1","image":"sha256:047059ce8441947eb68aa52aa16e009e8df7f39445fdf7df36c3c15853419960","user":"node","readOnly":true,"memoryBytes":536870912,"nanoCpus":500000000,"capDrop":["ALL"],"health":"healthy","oomKilled":false}
+{"name":"/boletinexpress-evaluation-worker-1","image":"sha256:1ecca62af0ad0d1827021463aa77be004dd518336698b451358f8a0007b61ab7","user":"node","readOnly":true,"memoryBytes":268435456,"nanoCpus":250000000,"capDrop":["ALL"],"health":"healthy","oomKilled":false}

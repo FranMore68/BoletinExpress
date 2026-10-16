@@ -1,6 +1,6 @@
 {
   "phase": 0,
-  "status": "PENDIENTE_ACEPTACION_USUARIO",
+  "status": "ACEPTADA",
   "checks": {
     "unitTests": true,
     "briePixels": true,
@@ -11,5 +11,6 @@
     "visualReview": true,
     "cieReferenceFidelity": true,
     "reviewedFilesUnchanged": true
-  }
+  },
+  "acceptanceFile": "acceptance.json"
 }
