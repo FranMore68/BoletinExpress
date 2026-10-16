@@ -1,0 +1,53 @@
+{
+  "reviewedAt": "2026-10-16",
+  "pass": true,
+  "referenceUser": "plantillas/Plta_ELEC1CertificatInstalElectricaBTauditori.pdf",
+  "derivedReferences": {
+    "p2-h": {
+      "file": "evidence/phase-0/derived-xfa-references/CIE-ref-p2-h.pdf",
+      "sha256": "75f86ec05bfc1e8195f0e6d02593b2b972f2daf679a22ed6a031f029b1781eb2",
+      "templateIdenticalToOfficial": true,
+      "kind": "Copia diagnostica propia del XFA aportado; formulario modificado y plantilla intacta",
+      "fields": [
+        "TXT_P2",
+        "TXT_H"
+      ],
+      "adobeScreenshot": "adobe-p2-h-final.png",
+      "geometryMatches": true
+    },
+    "altres": {
+      "file": "evidence/phase-0/derived-xfa-references/CIE-ref-altres.pdf",
+      "sha256": "288611e9872cb5550df9f5a43c2fbdf78ce873dc1330fcb8f76750ed556d00b4",
+      "templateIdenticalToOfficial": true,
+      "kind": "Copia diagnostica propia del XFA aportado; formulario modificado y plantilla intacta",
+      "fields": [
+        "AltresUsos"
+      ],
+      "adobeScreenshot": "adobe-altres-final.png",
+      "geometryMatches": true
+    },
+    "altra-tensio": {
+      "file": "evidence/phase-0/derived-xfa-references/CIE-ref-altra-tensio.pdf",
+      "sha256": "e148bc965e242bf1ee73221cb8ae20d9f86785fac0e58d33153fb082fe212e5f",
+      "templateIdenticalToOfficial": true,
+      "kind": "Copia diagnostica propia del XFA aportado; formulario modificado y plantilla intacta",
+      "fields": [
+        "InfoTensioAltre"
+      ],
+      "adobeScreenshot": "adobe-altra-tensio-final.png",
+      "geometryMatches": true
+    }
+  },
+  "findings": {
+    "P1_P2": "Detalle debajo de los botones; el uso principal baja 6 mm en ambas clases.",
+    "G_H": "Detalle al inicio de pagina 2; cuerpo tecnico baja 13.5 + 3.822 mm.",
+    "AltresUsos": "Detalle en pagina 2; cuerpo baja 12.5 + 3.822 mm, con borde fino inferior del texto libre.",
+    "InfoTensioAltre": "Valor a la derecha de Altra, en la misma fila.",
+    "Tecnologia": "El original no incluye control XFA editable junto a esta etiqueta; se escribe en el espacio libre de su fila, sin tapar texto."
+  },
+  "limits": [
+    "Comparacion visual de estructura con Adobe y medidas del XFA; no es igualdad pixel a pixel entre motores.",
+    "Las copias derivadas no son originales independientes aportados por el usuario.",
+    "No valida normativa, mediciones, firma ni presentacion administrativa."
+  ]
+}

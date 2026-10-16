@@ -1,0 +1,105 @@
+{
+  "reviewedAt": "2026-10-16",
+  "brie": {
+    "pass": true,
+    "method": "Revisión visual de las dos páginas renderizadas con Poppler y comparación de píxeles fuera de los campos",
+    "evidence": [
+      "brie-filled-poppler-1.png",
+      "brie-filled-poppler-2.png",
+      "brie-pixel-verification.json"
+    ],
+    "limits": "Caso ficticio del prototipo; no acredita validez técnica ni todos los datos posibles"
+  },
+  "cie": {
+    "pass": true,
+    "approach": "static-vector-flow",
+    "staticTemplateBasePass": true,
+    "method": "Revision visual Adobe del XFA aportado Auditori y de tres copias diagnosticas con plantilla identica. Revision Poppler de las muestras y lectura independiente pypdf. Comparacion de pixels con el fondo de cada variante y huellas de los vectores conservados.",
+    "evidence": [
+      "cie-static-auditori_ref-poppler-1.png",
+      "cie-static-auditori_ref-poppler-2.png",
+      "cie-flow-review-contact.png",
+      "cie-flow-reference-comparison.json",
+      "cie-static-verification.json",
+      "cie-static-generation.json",
+      "referencias-usos/comparison.json",
+      "sources/source-revisions.json"
+    ],
+    "readabilityPass": true,
+    "conditionalReferenceComparison": {
+      "pass": true,
+      "referenceAvailable": [
+        "TXT_Us",
+        "DDLAmpliaMod",
+        "TXT_P1",
+        "TXT_G",
+        "TXT_P2",
+        "TXT_H",
+        "AltresUsos",
+        "InfoTensioAltre"
+      ],
+      "positionsMatching": [
+        "TXT_Us",
+        "DDLAmpliaMod",
+        "TXT_P1",
+        "TXT_G",
+        "TXT_P2",
+        "TXT_H",
+        "AltresUsos",
+        "InfoTensioAltre"
+      ],
+      "knownMismatches": [],
+      "remainingUnseen": [],
+      "reason": "Correcciones contrastadas con Adobe y medidas XFA. P2/h, otros usos y otra tension usan copias diagnosticas propias; ver informe."
+    },
+    "issues": [],
+    "limits": "Solo fidelidad de los casos de evaluacion. Los pixels se comparan contra el fondo recompuesto de cada variante; Adobe se contrasta visualmente. Tecnologia es escritura adicional en un espacio libre sin control XFA. Aceptacion del usuario pendiente.",
+    "useAnd50ReferenceComparison": {
+      "pass": true,
+      "source": "referencias-usos/comparison.json",
+      "usesCovered": 14,
+      "questionAnswers": [
+        "Sí",
+        "No"
+      ],
+      "positionSpreadPoints": 0,
+      "limits": "Geometría relativa y cobertura, no equivalencia completa de las exportaciones Carta con la base oficial A4."
+    },
+    "auditoriReference": {
+      "source": "referencia-auditori/comparison.json",
+      "sourcePass": true,
+      "prototypeMatches": true
+    },
+    "reviewedPdfHashes": {
+      "CIE-datos-ficticios-PRUEBA.pdf": "8b21db19d0380cbd12060d7a83935b51c8678ec6b294f673ed14e887784c67a1",
+      "cie-variantes/CIE-ampliacio_50-PRUEBA.pdf": "0ca398bf0361d46b9be2310dab08e4e60a7387a502c170e00abebbae0ad6164b",
+      "cie-variantes/CIE-modificacio_50-PRUEBA.pdf": "3c73b1ab818ede63973852c5b9befe6f7f8153d72f53477c9f3a884492db5824",
+      "cie-variantes/CIE-classe_p1-PRUEBA.pdf": "477d39586406f23c4d1a48b7319c43f1910a09051159f7631ca8eca370fb166f",
+      "cie-variantes/CIE-classe_p2-PRUEBA.pdf": "cef67252946eb69c9275641a95b393c96a6a455df2a9615e8f32f26516b41bf2",
+      "cie-variantes/CIE-us_g-PRUEBA.pdf": "548a9238cef9cfa149441b78376867f2cc211b500c8a1a4a5f0637601ed83cfd",
+      "cie-variantes/CIE-us_h-PRUEBA.pdf": "d8b6c39d35b9f8dc862d2c915425d6ec67923dc396890721ff2e823fbfa9a5f1",
+      "cie-variantes/CIE-altres_usos-PRUEBA.pdf": "b276cff8254c63e7c5e6e0c495f0e366b28b16695060d03d52bb98b2d16b3cc4",
+      "cie-variantes/CIE-tensio_altra-PRUEBA.pdf": "1a4f57c3f5bb041e538b38b4d554b5794aff65ccb1c47d5f40d37d7a35f4242a",
+      "cie-variantes/CIE-auditori_ref-PRUEBA.pdf": "225400629a464062729551a7e699b596050757fb504099a790ee2cba9aa5a2e0",
+      "cie-variantes/CIE-incomplet-PRUEBA.pdf": "cab6e7ff3522f2633e3130a78dc726e8fa5a24522b7be75718057f909de56534"
+    }
+  },
+  "cieXfaHistorical": {
+    "pass": false,
+    "method": "Comparación visual con Adobe Acrobat y ocho pruebas de interacción de campos condicionales",
+    "evidence": [
+      "adobe-cie-page1.png",
+      "adobe-cie-page2.png",
+      "cie-pdfjs-page1.png",
+      "cie-pdfjs-page2.png",
+      "cie-variants.json"
+    ],
+    "issues": [
+      "Los ocho campos condicionales comprobados no se activan",
+      "La tipografía no coincide visualmente con Adobe",
+      "La salida muestra Pàgina de sin los números calculados por el XFA",
+      "La presentación de los códigos postales no conserva sus divisiones internas"
+    ],
+    "limits": "No se considera apta la conversión base ni se ha completado un CIE de prueba validado"
+  }
+}

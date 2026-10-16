@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="112" height="112" viewBox="0 0 112 112" role="img" aria-labelledby="title desc">
+<title id="title">BoletinExpress, símbolo para fondo oscuro</title><desc id="desc">Símbolo vectorial modular en azul o blanco con cuadrado ámbar; fondo transparente.</desc>
+<g transform="translate(12 12)"><g fill="#FFFFFF">
+      <path d="M0 0h22v27H0zM0 31h22v26H0zM0 61h22v27H0zM26 0h22v27H26zM26 61h22v27H26z"/>
+      <path d="M52 0h17l15 15v15H52V0zm0 34h17c11 0 18 6 18 15 0 6-3 10-8 13 6 2 9 6 9 12 0 9-7 14-19 14H52V61h17c8 0 8-9 0-9H52V34z"/>
+    </g><path d="M26 31h22v26H26z" fill="#E08E00"/></g>
+</svg>

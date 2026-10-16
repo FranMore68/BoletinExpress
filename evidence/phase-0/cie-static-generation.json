@@ -1,0 +1,129 @@
+{
+  "approach": "static-overlay",
+  "cases": [
+    {
+      "id": "base",
+      "file": "CIE-datos-ficticios-PRUEBA.pdf",
+      "operations": 62,
+      "warnings": [],
+      "expected": [],
+      "dataTransferred": true,
+      "placementApproved": false
+    },
+    {
+      "id": "ampliacio_50",
+      "file": "cie-variantes/CIE-ampliacio_50-PRUEBA.pdf",
+      "operations": 64,
+      "warnings": [],
+      "expected": [
+        "DDLAmpliaMod"
+      ],
+      "dataTransferred": true,
+      "placementApproved": false
+    },
+    {
+      "id": "modificacio_50",
+      "file": "cie-variantes/CIE-modificacio_50-PRUEBA.pdf",
+      "operations": 64,
+      "warnings": [],
+      "expected": [
+        "DDLAmpliaMod"
+      ],
+      "dataTransferred": true,
+      "placementApproved": false
+    },
+    {
+      "id": "classe_p1",
+      "file": "cie-variantes/CIE-classe_p1-PRUEBA.pdf",
+      "operations": 63,
+      "warnings": [],
+      "expected": [
+        "TXT_P1"
+      ],
+      "dataTransferred": true,
+      "placementApproved": false
+    },
+    {
+      "id": "classe_p2",
+      "file": "cie-variantes/CIE-classe_p2-PRUEBA.pdf",
+      "operations": 63,
+      "warnings": [],
+      "expected": [
+        "TXT_P2"
+      ],
+      "dataTransferred": true,
+      "placementApproved": false
+    },
+    {
+      "id": "us_g",
+      "file": "cie-variantes/CIE-us_g-PRUEBA.pdf",
+      "operations": 63,
+      "warnings": [],
+      "expected": [
+        "TXT_G"
+      ],
+      "dataTransferred": true,
+      "placementApproved": false
+    },
+    {
+      "id": "us_h",
+      "file": "cie-variantes/CIE-us_h-PRUEBA.pdf",
+      "operations": 63,
+      "warnings": [],
+      "expected": [
+        "TXT_H"
+      ],
+      "dataTransferred": true,
+      "placementApproved": false
+    },
+    {
+      "id": "altres_usos",
+      "file": "cie-variantes/CIE-altres_usos-PRUEBA.pdf",
+      "operations": 63,
+      "warnings": [],
+      "expected": [
+        "AltresUsos"
+      ],
+      "dataTransferred": true,
+      "placementApproved": false
+    },
+    {
+      "id": "tensio_altra",
+      "file": "cie-variantes/CIE-tensio_altra-PRUEBA.pdf",
+      "operations": 63,
+      "warnings": [],
+      "expected": [
+        "InfoTensioAltre"
+      ],
+      "dataTransferred": true,
+      "placementApproved": false
+    },
+    {
+      "id": "auditori_ref",
+      "file": "cie-variantes/CIE-auditori_ref-PRUEBA.pdf",
+      "operations": 64,
+      "warnings": [],
+      "expected": [
+        "TXT_P1",
+        "TXT_G"
+      ],
+      "dataTransferred": true,
+      "placementApproved": false
+    },
+    {
+      "id": "incomplet",
+      "file": "cie-variantes/CIE-incomplet-PRUEBA.pdf",
+      "operations": 5,
+      "warnings": [
+        "Dato pendiente: DDLAmpliaMod",
+        "Dato pendiente: TXT_P1",
+        "Dato pendiente: InfoTensioAltre"
+      ],
+      "expected": [],
+      "dataTransferred": true,
+      "placementApproved": false
+    }
+  ],
+  "sourceSha256": "9fd2069f359435b26f9de491194d5af393e15a007bdc418212a828c4fa4b462d",
+  "acceptance": "PENDIENTE_REFERENCIAS_VARIANTES_ADOBE"
+}

@@ -1,0 +1,55 @@
+{
+  "pdfjsVersion": "6.4.299",
+  "scriptingExecuted": false,
+  "cases": [
+    {
+      "id": "ampliacio_50",
+      "pass": false,
+      "expected": "Aparece el campo con la opción «Sí»",
+      "observed": "El campo condicional no aparece"
+    },
+    {
+      "id": "modificacio_50",
+      "pass": false,
+      "expected": "Aparece el campo con la opción «Sí»",
+      "observed": "El campo condicional no aparece"
+    },
+    {
+      "id": "classe_p1",
+      "pass": false,
+      "expected": "Aparece el campo con la opción «a) Instal·lacions industrials amb una potència»",
+      "observed": "El campo condicional no aparece"
+    },
+    {
+      "id": "classe_p2",
+      "pass": false,
+      "expected": "Aparece el campo con la opción «a) Instal·lacions corresponents a indústries»",
+      "observed": "El campo condicional no aparece"
+    },
+    {
+      "id": "us_g",
+      "pass": false,
+      "expected": "Aparece la subclasificación g",
+      "observed": "La subclasificación no aparece"
+    },
+    {
+      "id": "us_h",
+      "pass": false,
+      "expected": "Aparece la subclasificación h",
+      "observed": "La subclasificación no aparece"
+    },
+    {
+      "id": "altres_usos",
+      "pass": false,
+      "expected": "Aparece el campo Especifiqueu quin ús",
+      "observed": "0 etiquetas presentes"
+    },
+    {
+      "id": "tensio_altra",
+      "pass": false,
+      "expected": "El campo de otra tensión se hace visible",
+      "observed": "El campo sigue invisible"
+    }
+  ],
+  "voltageDom": "<div class=\"xfaWrapper\" style=\"width: 79.35px; height: 17.01px; position: relative; align-self: start;\"><div class=\"xfaBorder\" style=\"top: -0.25px; left: -0.25px; width: calc(100% + 0.5px); height: calc(100% + 0.5px); border-width: 0.5px; border-color: rgb(0, 0, 0); border-style: none;\"></div><div data-element-id=\"field5390\" class=\"xfaField xfaFont xfaWrapped\" xfaname=\"TXT_Tensio\" style=\"font-kerning: none; letter-spacing: 0px; font-style: normal; font-size: 10.89px; font-family: Arial-PdfJS-XFA; line-height: 1.2; font-weight: normal; padding: 2.83px;\"><label class=\"xfaLabel xfaLeft\"><select class=\"xfaSelect\" fieldid=\"field5390\" aria-label=\"Tensió\" aria-required=\"false\" tabindex=\"5001\" style=\"border-width: 0.5px; border-color: rgb(0, 0, 0); margin: 0px; height: 100%;\"><option hidden=\"true\" selected=\"true\"> </option><option value=\"230 V\" style=\"font-size: calc(11px * var(--total-scale-factor));\">230 V</option><option value=\"3x230/400 V\" style=\"font-size: calc(11px * var(--total-scale-factor));\">3x230/400 V</option><option value=\"Altra\" style=\"font-size: calc(11px * var(--total-scale-factor));\">Altra</option></select></label></div></div>"
+}

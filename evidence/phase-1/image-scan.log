@@ -1,0 +1,6 @@
+docker.io/aquasec/trivy@sha256:2416d1f74045b57274df1a340eee6b510cacd73c66a6ccb8da092b117eb7d222: Pulling from aquasec/trivy
+Digest: sha256:2416d1f74045b57274df1a340eee6b510cacd73c66a6ccb8da092b117eb7d222
+Status: Image is up to date for aquasec/trivy@sha256:2416d1f74045b57274df1a340eee6b510cacd73c66a6ccb8da092b117eb7d222
+docker.io/aquasec/trivy@sha256:2416d1f74045b57274df1a340eee6b510cacd73c66a6ccb8da092b117eb7d222
+error during connect: Post "http://%2FUsers%2Ffrancescmore%2F.docker%2Frun%2Fdocker.sock/v1.55/containers/2402081c895aec9f67b2f608f2686cb78320db042b9d480fb413f7166d9be6bf/start": 
+failed to start containers: 2402081c895aec9f67b2f608f2686cb78320db042b9d480fb413f7166d9be6bf

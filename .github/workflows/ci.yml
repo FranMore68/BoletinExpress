@@ -1,0 +1,38 @@
+name: Comprobaciones
+on:
+  push:
+    branches: [main]
+    paths-ignore: ["docs/**", "evidence/**", "README.md"]
+  pull_request:
+    paths-ignore: ["docs/**", "evidence/**", "README.md"]
+permissions:
+  contents: read
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      NEXT_TELEMETRY_DISABLED: "1"
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09
+      - uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444
+        with:
+          node-version: "24.22.0"
+          cache: npm
+      - run: npm ci --ignore-scripts
+      - run: npm audit --audit-level=high
+      - run: npm run check
+      - run: npm run build
+      - run: npm ci --ignore-scripts --prefix tools/pdf-phase0
+      - run: npm audit --audit-level=high --prefix tools/pdf-phase0
+      - run: npm test --prefix tools/pdf-phase0
+      - run: docker build --target web -t boletinexpress-web:phase1 .
+      - run: docker build --target worker -t boletinexpress-worker:phase1 .
+      - run: sh scripts/scan-images.sh
+      - run: docker compose up --detach --wait
+      - run: node scripts/smoke.mjs
+      - if: always()
+        run: docker compose down

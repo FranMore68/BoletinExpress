@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="64" height="64" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+<title id="title">BoletinExpress, favicon</title><desc id="desc">Icono simplificado: retícula blanca y un cuadrado ámbar sobre azul marino.</desc>
+<rect width="64" height="64" rx="10" fill="#0B2545"/>
+<path fill="#FFFFFF" d="M5 6h15v23H5zM5 35h15v23H5zM24 6h15v23H24zM24 35h15v23H24zM43 6h15v23H43zM43 35h15v23H43z"/>
+<path fill="#E08E00" d="M24 35h15v23H24z"/>
+</svg>

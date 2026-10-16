@@ -1,0 +1,1112 @@
+{
+  "id": "ampliacio_50",
+  "file": "cie-variantes/CIE-ampliacio_50-PRUEBA.pdf",
+  "sourceSha256": "9fd2069f359435b26f9de491194d5af393e15a007bdc418212a828c4fa4b462d",
+  "operations": [
+    {
+      "name": "NomCognoms",
+      "page": 0,
+      "type": "text",
+      "value": "TITULAR FICTICI - PROVA DE PROGRAMARI",
+      "text": "TITULAR FICTICI - PROVA DE PROGRAMARI",
+      "lines": [
+        "TITULAR FICTICI - PROVA DE PROGRAMARI"
+      ],
+      "fontSize": 8,
+      "rect": {
+        "x": 87.8740157480315,
+        "y": 693.0935433070867,
+        "width": 390.8976377952756,
+        "height": 18.425196850393718
+      }
+    },
+    {
+      "name": "NIF",
+      "page": 0,
+      "type": "text",
+      "value": "FICTICI01",
+      "text": "FICTICI01",
+      "lines": [
+        "FICTICI01"
+      ],
+      "fontSize": 8,
+      "rect": {
+        "x": 484.4409448818898,
+        "y": 693.0935433070867,
+        "width": 79.37007874015751,
+        "height": 18.425196850393718
+      }
+    },
+    {
+      "name": "CBO_TipusVia",
+      "page": 0,
+      "type": "enum",
+      "value": "CAR",
+      "text": "Carrer",
+      "lines": [
+        "Carrer"
+      ],
+      "fontSize": 8,
+      "rect": {
+        "x": 87.8740157480315,
+        "y": 654.8258267716536,
+        "width": 81.68881889763779,
+        "height": 18.425196850393718
+      }
+    },
+    {
+      "name": "TXT_NomVia",
+      "page": 0,
+      "type": "text",
+      "value": "Exemple fictici",
+      "text": "Exemple fictici",
+      "lines": [
+        "Exemple fictici"
+      ],
+      "fontSize": 8,
+      "rect": {
+        "x": 175.232125984252,
+        "y": 654.8258267716536,
+        "width": 334.48818897637796,
+        "height": 18.425196850393718
+      }
+    },
+    {
+      "name": "TXT_Num",
+      "page": 0,
+      "type": "text",
+      "value": "12",
+      "text": "12",
+      "lines": [
+        "12"
+      ],
+      "fontSize": 8,
+      "rect": {
+        "x": 515.3896062992127,
+        "y": 654.8258267716536,
+        "width": 48.7020472440945,
+        "height": 18.425196850393718
+      }
+    },
+    {
+      "name": "TXT_Bloc",
+      "page": 0,
+      "type": "text",
+      "value": "A",
+      "text": "A",
+      "lines": [
+        "A"
+      ],
+      "fontSize": 8,
+      "rect": {
+        "x": 87.8740157480315,
+        "y": 616.5581102362205,
+        "width": 93.54330708661419,
+        "height": 18.42519685039383
+      }
+    },
+    {
+      "name": "TXT_Escala",
+      "page": 0,
+      "type": "text",
+      "value": "1",
+      "text": "1",
+      "lines": [
+        "1"
+      ],
+      "fontSize": 8,
+      "rect": {
+        "x": 184.251968503937,
+        "y": 616.5581102362205,
+        "width": 92.12598425196853,
+        "height": 18.42519685039383
+      }
+    },
+    {
+      "name": "TXT_Pis",
+      "page": 0,
+      "type": "text",
+      "value": "2",
+      "text": "2",
+      "lines": [
+        "2"
+      ],
+      "fontSize": 8,
+      "rect": {
+        "x": 283.46456692913387,
+        "y": 616.5581102362205,
+        "width": 92.12598425196853,
+        "height": 18.42519685039383
+      }
+    },
+    {
+      "name": "TXT_Porta",
+      "page": 0,
+      "type": "text",
+      "value": "1",
+      "text": "1",
+      "lines": [
+        "1"
+      ],
+      "fontSize": 8,
+      "rect": {
+        "x": 385.51181102362204,
+        "y": 616.5581102362205,
+        "width": 89.00787401574803,
+        "height": 18.42519685039383
+      }
+    },
+    {
+      "name": "TXT_CodiPostal",
+      "page": 0,
+      "type": "text",
+      "value": "08001",
+      "text": "08001",
+      "lines": [
+        "08001"
+      ],
+      "fontSize": 8,
+      "rect": {
+        "x": 484.4409448818898,
+        "y": 616.5581102362205,
+        "width": 79.37007874015751,
+        "height": 18.42519685039383
+      }
+    },
+    {
+      "name": "TXT_Poblacio",
+      "page": 0,
+      "type": "text",
+      "value": "POBLACIÓ FICTÍCIA",
+      "text": "POBLACIÓ FICTÍCIA",
+      "lines": [
+        "POBLACIÓ FICTÍCIA"
+      ],
+      "fontSize": 8,
+      "rect": {
+        "x": 87.8740157480315,
+        "y": 578.2903937007875,
+        "width": 221.10236220472441,
+        "height": 18.425196850393718
+      }
+    },
+    {
+      "name": "TXT_Tel",
+      "page": 0,
+      "type": "text",
+      "value": "000000001",
+      "text": "000000001",
+      "lines": [
+        "000000001"
+      ],
+      "fontSize": 8,
+      "rect": {
+        "x": 314.6456692913386,
+        "y": 578.2903937007875,
+        "width": 79.37007874015745,
+        "height": 18.425196850393718
+      }
+    },
+    {
+      "name": "TXT_Correu",
+      "page": 0,
+      "type": "text",
+      "value": "titular@example.invalid",
+      "text": "titular@example.invalid",
+      "lines": [
+        "titular@example.invalid"
+      ],
+      "fontSize": 8,
+      "rect": {
+        "x": 399.68503937007875,
+        "y": 578.2903937007875,
+        "width": 164.40661417322832,
+        "height": 18.425196850393718
+      }
+    },
+    {
+      "name": "NomCognoms_2",
+      "page": 0,
+      "type": "text",
+      "value": "EMPRESA FICTÍCIA DE PROVES",
+      "text": "EMPRESA FICTÍCIA DE PROVES",
+      "lines": [
+        "EMPRESA FICTÍCIA DE PROVES"
+      ],
+      "fontSize": 8,
+      "rect": {
+        "x": 87.8740157480315,
+        "y": 523.0148031496065,
+        "width": 277.51181102362204,
+        "height": 18.425196850393604
+      }
+    },
+    {
+      "name": "TXT_Rasic",
+      "page": 0,
+      "type": "text",
+      "value": "FICTICI-RASIC",
+      "text": "FICTICI-RASIC",
+      "lines": [
+        "FICTICI-RASIC"
+      ],
+      "fontSize": 8,
+      "rect": {
+        "x": 371.05511811023626,
+        "y": 523.0148031496065,
+        "width": 107.71653543307087,
+        "height": 18.425196850393604
+      }
+    },
+    {
+      "name": "NIF_2",
+      "page": 0,
+      "type": "text",
+      "value": "FICTICI02",
+      "text": "FICTICI02",
+      "lines": [
+        "FICTICI02"
+      ],
+      "fontSize": 8,
+      "rect": {
+        "x": 484.44094488188983,
+        "y": 523.0148031496065,
+        "width": 79.37007874015745,
+        "height": 18.425196850393604
+      }
+    },
+    {
+      "name": "NomCognomsInstalador",
+      "page": 0,
+      "type": "text",
+      "value": "PERSONA INSTAL·LADORA FICTÍCIA",
+      "text": "PERSONA INSTAL·LADORA FICTÍCIA",
+      "lines": [
+        "PERSONA INSTAL·LADORA FICTÍCIA"
+      ],
+      "fontSize": 8,
+      "rect": {
+        "x": 87.8740157480315,
+        "y": 484.7470866141733,
+        "width": 277.51181102362204,
+        "height": 18.425196850393718
+      }
+    },
+    {
+      "name": "TXT_Categoria",
+      "page": 0,
+      "type": "enum",
+      "value": "Bàsica",
+      "text": "Bàsica",
+      "lines": [
+        "Bàsica"
+      ],
+      "fontSize": 8,
+      "rect": {
+        "x": 371.05511811023626,
+        "y": 484.7470866141733,
+        "width": 107.71653543307087,
+        "height": 18.425196850393718
+      }
+    },
+    {
+      "name": "DNIInstallador",
+      "page": 0,
+      "type": "text",
+      "value": "FICTICI03",
+      "text": "FICTICI03",
+      "lines": [
+        "FICTICI03"
+      ],
+      "fontSize": 8,
+      "rect": {
+        "x": 484.44094488188983,
+        "y": 484.7470866141733,
+        "width": 79.37007874015745,
+        "height": 18.425196850393718
+      }
+    },
+    {
+      "name": "CBO_TipusVia_2",
+      "page": 0,
+      "type": "enum",
+      "value": "AVI",
+      "text": "Avinguda",
+      "lines": [
+        "Avinguda"
+      ],
+      "fontSize": 8,
+      "rect": {
+        "x": 87.8740157480315,
+        "y": 446.4793700787402,
+        "width": 81.68881889763779,
+        "height": 18.425196850393718
+      }
+    },
+    {
+      "name": "TXT_NomVia_2",
+      "page": 0,
+      "type": "text",
+      "value": "Proves",
+      "text": "Proves",
+      "lines": [
+        "Proves"
+      ],
+      "fontSize": 8,
+      "rect": {
+        "x": 175.232125984252,
+        "y": 446.4793700787402,
+        "width": 334.48818897637796,
+        "height": 18.425196850393718
+      }
+    },
+    {
+      "name": "TXT_Num_2",
+      "page": 0,
+      "type": "text",
+      "value": "5",
+      "text": "5",
+      "lines": [
+        "5"
+      ],
+      "fontSize": 8,
+      "rect": {
+        "x": 515.3896062992127,
+        "y": 446.4793700787402,
+        "width": 48.7020472440945,
+        "height": 18.425196850393718
+      }
+    },
+    {
+      "name": "TXT_Bloc_2",
+      "page": 0,
+      "type": "text",
+      "value": "B",
+      "text": "B",
+      "lines": [
+        "B"
+      ],
+      "fontSize": 8,
+      "rect": {
+        "x": 87.8740157480315,
+        "y": 408.21165354330714,
+        "width": 93.54330708661419,
+        "height": 18.425196850393718
+      }
+    },
+    {
+      "name": "TXT_Escala_2",
+      "page": 0,
+      "type": "text",
+      "value": "2",
+      "text": "2",
+      "lines": [
+        "2"
+      ],
+      "fontSize": 8,
+      "rect": {
+        "x": 184.251968503937,
+        "y": 408.21165354330714,
+        "width": 92.12598425196853,
+        "height": 18.425196850393718
+      }
+    },
+    {
+      "name": "TXT_Pis_2",
+      "page": 0,
+      "type": "text",
+      "value": "1",
+      "text": "1",
+      "lines": [
+        "1"
+      ],
+      "fontSize": 8,
+      "rect": {
+        "x": 283.46456692913387,
+        "y": 408.21165354330714,
+        "width": 92.12598425196853,
+        "height": 18.425196850393718
+      }
+    },
+    {
+      "name": "TXT_Porta_2",
+      "page": 0,
+      "type": "text",
+      "value": "3",
+      "text": "3",
+      "lines": [
+        "3"
+      ],
+      "fontSize": 8,
+      "rect": {
+        "x": 385.51181102362204,
+        "y": 408.21165354330714,
+        "width": 89.00787401574803,
+        "height": 18.425196850393718
+      }
+    },
+    {
+      "name": "TXT_CodiPostal_2",
+      "page": 0,
+      "type": "text",
+      "value": "08002",
+      "text": "08002",
+      "lines": [
+        "08002"
+      ],
+      "fontSize": 8,
+      "rect": {
+        "x": 484.4409448818898,
+        "y": 408.21165354330714,
+        "width": 79.37007874015751,
+        "height": 18.425196850393718
+      }
+    },
+    {
+      "name": "TXT_Poblacio_2",
+      "page": 0,
+      "type": "text",
+      "value": "POBLACIÓ FICTÍCIA",
+      "text": "POBLACIÓ FICTÍCIA",
+      "lines": [
+        "POBLACIÓ FICTÍCIA"
+      ],
+      "fontSize": 8,
+      "rect": {
+        "x": 87.8740157480315,
+        "y": 369.94393700787407,
+        "width": 221.10236220472441,
+        "height": 18.425196850393718
+      }
+    },
+    {
+      "name": "TXT_Tel_2",
+      "page": 0,
+      "type": "text",
+      "value": "000000002",
+      "text": "000000002",
+      "lines": [
+        "000000002"
+      ],
+      "fontSize": 8,
+      "rect": {
+        "x": 314.6456692913386,
+        "y": 369.94393700787407,
+        "width": 79.37007874015745,
+        "height": 18.425196850393718
+      }
+    },
+    {
+      "name": "TXT_Correu_2",
+      "page": 0,
+      "type": "text",
+      "value": "empresa@example.invalid",
+      "text": "empresa@example.invalid",
+      "lines": [
+        "empresa@example.invalid"
+      ],
+      "fontSize": 8,
+      "rect": {
+        "x": 399.68503937007875,
+        "y": 369.94393700787407,
+        "width": 164.40661417322832,
+        "height": 18.425196850393718
+      }
+    },
+    {
+      "name": "CBO_TipusVia_3",
+      "page": 0,
+      "type": "enum",
+      "value": "CAR",
+      "text": "Carrer",
+      "lines": [
+        "Carrer"
+      ],
+      "fontSize": 8,
+      "rect": {
+        "x": 87.8740157480315,
+        "y": 297.660472440945,
+        "width": 81.68881889763779,
+        "height": 18.425196850393718
+      }
+    },
+    {
+      "name": "TXT_NomVia_3",
+      "page": 0,
+      "type": "text",
+      "value": "Instal·lació fictícia",
+      "text": "Instal·lació fictícia",
+      "lines": [
+        "Instal·lació fictícia"
+      ],
+      "fontSize": 8,
+      "rect": {
+        "x": 175.232125984252,
+        "y": 297.660472440945,
+        "width": 334.48818897637796,
+        "height": 18.425196850393718
+      }
+    },
+    {
+      "name": "TXT_Num_3",
+      "page": 0,
+      "type": "text",
+      "value": "42",
+      "text": "42",
+      "lines": [
+        "42"
+      ],
+      "fontSize": 8,
+      "rect": {
+        "x": 515.3896062992127,
+        "y": 297.660472440945,
+        "width": 48.7020472440945,
+        "height": 18.425196850393718
+      }
+    },
+    {
+      "name": "TXT_Bloc_3",
+      "page": 0,
+      "type": "text",
+      "value": "C",
+      "text": "C",
+      "lines": [
+        "C"
+      ],
+      "fontSize": 8,
+      "rect": {
+        "x": 87.8740157480315,
+        "y": 259.3927559055119,
+        "width": 93.54330708661419,
+        "height": 18.425196850393718
+      }
+    },
+    {
+      "name": "TXT_Escala_3",
+      "page": 0,
+      "type": "text",
+      "value": "1",
+      "text": "1",
+      "lines": [
+        "1"
+      ],
+      "fontSize": 8,
+      "rect": {
+        "x": 184.251968503937,
+        "y": 259.3927559055119,
+        "width": 92.12598425196853,
+        "height": 18.425196850393718
+      }
+    },
+    {
+      "name": "TXT_Pis_3",
+      "page": 0,
+      "type": "text",
+      "value": "3",
+      "text": "3",
+      "lines": [
+        "3"
+      ],
+      "fontSize": 8,
+      "rect": {
+        "x": 283.46456692913387,
+        "y": 259.3927559055119,
+        "width": 92.12598425196853,
+        "height": 18.425196850393718
+      }
+    },
+    {
+      "name": "TXT_Porta_3",
+      "page": 0,
+      "type": "text",
+      "value": "2",
+      "text": "2",
+      "lines": [
+        "2"
+      ],
+      "fontSize": 8,
+      "rect": {
+        "x": 385.51181102362204,
+        "y": 259.3927559055119,
+        "width": 89.00787401574803,
+        "height": 18.425196850393718
+      }
+    },
+    {
+      "name": "TXT_CodiPostal_3",
+      "page": 0,
+      "type": "text",
+      "value": "08003",
+      "text": "08003",
+      "lines": [
+        "08003"
+      ],
+      "fontSize": 8,
+      "rect": {
+        "x": 484.4409448818898,
+        "y": 259.3927559055119,
+        "width": 79.37007874015751,
+        "height": 18.425196850393718
+      }
+    },
+    {
+      "name": "TXT_Poblacio_3",
+      "page": 0,
+      "type": "text",
+      "value": "POBLACIÓ FICTÍCIA",
+      "text": "POBLACIÓ FICTÍCIA",
+      "lines": [
+        "POBLACIÓ FICTÍCIA"
+      ],
+      "fontSize": 8,
+      "rect": {
+        "x": 87.8740157480315,
+        "y": 221.12503937007875,
+        "width": 221.10236220472441,
+        "height": 18.425196850393718
+      }
+    },
+    {
+      "name": "TXT_Tel_3",
+      "page": 0,
+      "type": "text",
+      "value": "000000003",
+      "text": "000000003",
+      "lines": [
+        "000000003"
+      ],
+      "fontSize": 8,
+      "rect": {
+        "x": 314.6456692913386,
+        "y": 221.12503937007875,
+        "width": 79.37007874015745,
+        "height": 18.425196850393718
+      }
+    },
+    {
+      "name": "TXT_Correu_3",
+      "page": 0,
+      "type": "text",
+      "value": "local@example.invalid",
+      "text": "local@example.invalid",
+      "lines": [
+        "local@example.invalid"
+      ],
+      "fontSize": 8,
+      "rect": {
+        "x": 399.68503937007875,
+        "y": 221.12503937007875,
+        "width": 164.40661417322832,
+        "height": 18.425196850393718
+      }
+    },
+    {
+      "name": "RB_TipusActuacio",
+      "page": 0,
+      "type": "mark",
+      "value": "AMPLIACIO",
+      "rect": {
+        "x": 149.36755905511814,
+        "y": 172.77637795275598,
+        "width": 6,
+        "height": 6
+      }
+    },
+    {
+      "name": "RB_Requisits",
+      "page": 0,
+      "type": "mark",
+      "value": "MEMORIA",
+      "rect": {
+        "x": 248.61417322834646,
+        "y": 94.98519685039378,
+        "width": 6,
+        "height": 6
+      }
+    },
+    {
+      "name": "TXT_Us",
+      "page": 0,
+      "type": "enum",
+      "value": "5",
+      "text": "f) Instal·lacions d'habitatges",
+      "lines": [
+        "f) Instal·lacions d'habitatges"
+      ],
+      "fontSize": 8,
+      "rect": {
+        "x": 87.8740157480315,
+        "y": 54.048188976378015,
+        "width": 476.21763779527555,
+        "height": 18.425196850393718
+      }
+    },
+    {
+      "name": "TXT_PotenciaMax",
+      "page": 1,
+      "type": "text",
+      "value": "9,2",
+      "text": "9,2",
+      "lines": [
+        "9,2"
+      ],
+      "fontSize": 8,
+      "rect": {
+        "x": 194.12787401574806,
+        "y": 720.0226771653544,
+        "width": 114.3036850393701,
+        "height": 11.338582677165391
+      }
+    },
+    {
+      "name": "TXT_Calibre",
+      "page": 1,
+      "type": "text",
+      "value": "63",
+      "text": "63",
+      "lines": [
+        "63"
+      ],
+      "fontSize": 8,
+      "rect": {
+        "x": 436.4900787401575,
+        "y": 720.0226771653544,
+        "width": 63.99637795275589,
+        "height": 11.338582677165391
+      }
+    },
+    {
+      "name": "TXT_Tensio",
+      "page": 1,
+      "type": "enum",
+      "value": "230 V",
+      "text": "230 V",
+      "lines": [
+        "230 V"
+      ],
+      "fontSize": 8,
+      "rect": {
+        "x": 130.3625196850394,
+        "y": 703.0148031496063,
+        "width": 73.68094488188976,
+        "height": 11.338582677165391
+      }
+    },
+    {
+      "name": "TXT_IGM",
+      "page": 1,
+      "type": "text",
+      "value": "63",
+      "text": "63",
+      "lines": [
+        "63"
+      ],
+      "fontSize": 8,
+      "rect": {
+        "x": 511.73858267716537,
+        "y": 703.0148031496063,
+        "width": 35.649921259842586,
+        "height": 11.338582677165391
+      }
+    },
+    {
+      "name": "TXT_Circuits",
+      "page": 1,
+      "type": "text",
+      "value": "8",
+      "text": "8",
+      "lines": [
+        "8"
+      ],
+      "fontSize": 8,
+      "rect": {
+        "x": 229.60629921259843,
+        "y": 686.0069291338583,
+        "width": 59.45669291338581,
+        "height": 11.338582677165391
+      }
+    },
+    {
+      "name": "TXT_SeccioLGA",
+      "page": 1,
+      "type": "text",
+      "value": "16",
+      "text": "16",
+      "lines": [
+        "16"
+      ],
+      "fontSize": 8,
+      "rect": {
+        "x": 384.0122834645669,
+        "y": 686.0069291338583,
+        "width": 27.010204724409448,
+        "height": 11.338582677165391
+      }
+    },
+    {
+      "name": "TXT_MaterialConductor",
+      "page": 1,
+      "type": "enum",
+      "value": "Coure",
+      "text": "Coure",
+      "lines": [
+        "Coure"
+      ],
+      "fontSize": 8,
+      "rect": {
+        "x": 510.13984251968503,
+        "y": 686.0069291338583,
+        "width": 51.023622047244146,
+        "height": 11.338582677165391
+      }
+    },
+    {
+      "name": "TXT_ResistenciaConductors",
+      "page": 1,
+      "type": "text",
+      "value": "500",
+      "text": "500",
+      "lines": [
+        "500"
+      ],
+      "fontSize": 8,
+      "rect": {
+        "x": 234.5329133858268,
+        "y": 668.9990551181103,
+        "width": 74.2884094488189,
+        "height": 11.338582677165391
+      }
+    },
+    {
+      "name": "TXT_UbicacioComptadors",
+      "page": 1,
+      "type": "enum",
+      "value": "Armari",
+      "text": "Armari",
+      "lines": [
+        "Armari"
+      ],
+      "fontSize": 8,
+      "rect": {
+        "x": 428.59559055118115,
+        "y": 668.9990551181103,
+        "width": 82.29259842519684,
+        "height": 11.338582677165391
+      }
+    },
+    {
+      "name": "TXT_AillamentTerra",
+      "page": 1,
+      "type": "text",
+      "value": "500",
+      "text": "500",
+      "lines": [
+        "500"
+      ],
+      "fontSize": 8,
+      "rect": {
+        "x": 209.76377952755908,
+        "y": 651.9911811023622,
+        "width": 98.36617322834647,
+        "height": 11.338582677165391
+      }
+    },
+    {
+      "name": "TXT_ResistenciaTerra",
+      "page": 1,
+      "type": "text",
+      "value": "12",
+      "text": "12",
+      "lines": [
+        "12"
+      ],
+      "fontSize": 8,
+      "rect": {
+        "x": 196.9937007874016,
+        "y": 634.9833070866142,
+        "width": 108.75940157480315,
+        "height": 11.338582677165391
+      }
+    },
+    {
+      "name": "TXT_Interruptor",
+      "page": 1,
+      "type": "text",
+      "value": "40",
+      "text": "40",
+      "lines": [
+        "40"
+      ],
+      "fontSize": 8,
+      "rect": {
+        "x": 262.3407874015748,
+        "y": 617.9754330708662,
+        "width": 47.637070866141755,
+        "height": 11.338582677165391
+      }
+    },
+    {
+      "name": "TXT_Tecnologia",
+      "page": 1,
+      "type": "text",
+      "value": "FOTOVOLTAICA FICTÍCIA",
+      "text": "FOTOVOLTAICA FICTÍCIA",
+      "lines": [
+        "FOTOVOLTAICA FICTÍCIA"
+      ],
+      "fontSize": 8,
+      "rect": {
+        "x": 397,
+        "y": 634.98,
+        "width": 164,
+        "height": 11.34
+      },
+      "placementStatus": "PROVISIONAL_ETIQUETA_SIN_CONTROL_XFA"
+    },
+    {
+      "name": "TXT_TipusConnexio",
+      "page": 1,
+      "type": "enum",
+      "value": "Interconnectada",
+      "text": "Interconnectada",
+      "lines": [
+        "Interconnectada"
+      ],
+      "fontSize": 8,
+      "rect": {
+        "x": 409.7253543307087,
+        "y": 617.9754330708662,
+        "width": 138.86362204724412,
+        "height": 11.338582677165391
+      }
+    },
+    {
+      "name": "RB_Subministrament",
+      "page": 1,
+      "type": "mark",
+      "value": "NO",
+      "rect": {
+        "x": 259.35464566929136,
+        "y": 603.6368503937009,
+        "width": 6,
+        "height": 6
+      }
+    },
+    {
+      "name": "TXT_Potencia",
+      "page": 1,
+      "type": "text",
+      "value": "3",
+      "text": "3",
+      "lines": [
+        "3"
+      ],
+      "fontSize": 8,
+      "rect": {
+        "x": 379.10551181102363,
+        "y": 600.9675590551182,
+        "width": 57.31200000000001,
+        "height": 11.338582677165391
+      }
+    },
+    {
+      "name": "NomCognomsInstalador_2",
+      "page": 1,
+      "type": "text",
+      "value": "PERSONA INSTAL·LADORA FICTÍCIA",
+      "text": "PERSONA INSTAL·LADORA FICTÍCIA",
+      "lines": [
+        "PERSONA INSTAL·LADORA FICTÍCIA"
+      ],
+      "fontSize": 8,
+      "rect": {
+        "x": 111.87411023622047,
+        "y": 535.8302362204724,
+        "width": 218.2827401574803,
+        "height": 11.338582677165391
+      }
+    },
+    {
+      "name": "TXT_Observacions",
+      "page": 1,
+      "type": "text",
+      "value": "PROVA FICTÍCIA. NO ÉS UN CERTIFICAT VÀLID. SENSE SIGNATURA.\nValors inventats per provar el PDF; no acrediten mesures ni compliment.\nMostra per revisar i acceptar la fase 0 del programari.",
+      "text": "PROVA FICTÍCIA. NO ÉS UN CERTIFICAT VÀLID. SENSE SIGNATURA.\nValors inventats per provar el PDF; no acrediten mesures ni compliment.\nMostra per revisar i acceptar la fase 0 del programari.",
+      "lines": [
+        "PROVA FICTÍCIA. NO ÉS UN CERTIFICAT VÀLID. SENSE SIGNATURA.",
+        "Valors inventats per provar el PDF; no acrediten mesures ni compliment.",
+        "Mostra per revisar i acceptar la fase 0 del programari."
+      ],
+      "fontSize": 8,
+      "rect": {
+        "x": 87.8740157480315,
+        "y": 415.944566929134,
+        "width": 476.21763779527555,
+        "height": 51.02362204724409
+      }
+    },
+    {
+      "name": "TXT_CUPS",
+      "page": 0,
+      "type": "text",
+      "value": "ES-FICTICI-0000000000",
+      "text": "ES-FICTICI-0000000000",
+      "lines": [
+        "ES-FICTICI-0000000000"
+      ],
+      "fontSize": 8,
+      "rect": {
+        "x": 386.44667716535434,
+        "y": 170.10708661417323,
+        "width": 176.09442519685047,
+        "height": 11.338582677165391
+      }
+    },
+    {
+      "name": "DDLAmpliaMod",
+      "page": 0,
+      "type": "enum",
+      "value": "SI",
+      "text": "Sí",
+      "lines": [
+        "Sí"
+      ],
+      "fontSize": 8,
+      "rect": {
+        "x": 88,
+        "y": 140,
+        "width": 298,
+        "height": 25
+      },
+      "valueRect": {
+        "x": 348.0275905511811,
+        "y": 143.31401574803147,
+        "width": 35.9733543307086,
+        "height": 19.8425196850394
+      },
+      "labelLines": [
+        "L'ampliació/modificació supera el 50% de la",
+        "potència de la instal·lació?"
+      ],
+      "placementStatus": "CONTRASTADO_REFERENCIAS_Y_WIDGET_XFA_50"
+    }
+  ],
+  "warnings": [],
+  "flow": {
+    "classField": null,
+    "detailField": null,
+    "classShift": 0,
+    "detailHeight": 0,
+    "technicalShift": 0
+  },
+  "components": [
+    {
+      "kind": "unchanged",
+      "sourcePages": [
+        0,
+        1
+      ]
+    }
+  ],
+  "placementApproved": false
+}

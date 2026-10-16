@@ -1,0 +1,23 @@
+{
+  "name": "boletinexpress-pdf-phase0",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Pruebas locales de fidelidad PDF, solo con datos ficticios",
+  "scripts": {
+    "inventory": "node inventory.mjs",
+    "probe:xfa": "node probe-xfa.mjs",
+    "probe:variants": "node probe-variants.mjs",
+    "generate:brie": "node generate-brie.mjs",
+    "generate:cie": "node generate-cie.mjs",
+    "gate": "node gate.mjs",
+    "test": "node --test test/*.test.mjs"
+  },
+  "engines": { "node": ">=22.13.0" },
+  "dependencies": {
+    "@pdf-lib/fontkit": "1.1.1",
+    "pdf-lib": "1.17.1",
+    "pdfjs-dist": "6.4.299",
+    "playwright-core": "1.62.1"
+  }
+}

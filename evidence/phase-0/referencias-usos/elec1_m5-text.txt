@@ -1,0 +1,56 @@
+Pàgina            1 de            2          
+G346NSIN-156 
+Certificat d'instal·lació elèctrica de baixa tensió (model ELEC-1)
+Titular de la instal·lació
+Raó social de l'empresa o nom i cognoms NIF/DNI
+Tipus de via Nom de la via  Núm.
+Bloc Escala Pis Porta Codi postal
+Població Telèfon Correu electrònic
+Empresa instal·ladora
+Raó social de l'empresa o nom i cognoms (persones autònomes) Núm. de registre (RASIC) NIF/DNI
+Nom i cognoms de la persona instal·ladora Categoria DNI/NIE
+Tipus de via Nom de la via  Núm.
+Bloc Escala Pis Porta Codi postal
+Població Telèfon Correu electrònic
+Instal·lació
+Adreça
+Tipus de via Nom de la via  Núm.
+Bloc Escala Pis Porta Codi postal
+Població Telèfon Correu electrònic
+Característiques de la instal·lació
+Tipus d'actuació
+ Nova  Ampliació  Modificació o reforma CUPS
+L'ampliació/modificació supera el 50% de la 
+potència de la instal·lació?
+Classificació
+Requisits administratius
+Classe P1 Classe P2 Memòria tècnica de disseny
+Ús de la instal·lació
+Sí
+b) Instal·lacions temporals per a obres segons l'ITC-BT-33 del REBT
+Pàgina            2 de            2          
+G346NSIN-156 
+Dades tècniques
+Per a totes les instal·lacions Per a instal·lacions d'enllaç
+Potència màxima admissible kW Calibre fusibles CGP A
+Tensió Intensitat Interruptor General de Maniobra (IGM) A
+Nombre de circuits al quadre principal Secció LGA  mm2 Material conductor
+Resistència d'aïllament entre conductors M? Ubicació de comptadors
+Resistència d'aïllament amb terra M? Per a instal·lacions generadores*
+Resistència de posada a terra ? Tecnologia
+Intensitat Interruptor General Automàtic (IGA)   A Tipus de connexió
+Té subministrament complementari? Sí No Potència  kW
+*No s'ha d'emplenar per a subministraments complementaris ja 
+que aquests formen part de la instal·lació receptora
+Certificació
+En/na CERTIFICA que la instal·lació descrita ha estat realitzada
+d'acord amb les prescripcions del Reglament Electrotècnic per a baixa tensió i les seves ITC, aprovat pel Reial Decret 842/2002, de 2 d'agost, el Decret 
+192/2023, de 7 de novembre, de la seguretat industrial dels establiments, les instal·lacions i els productes,  així com amb la seva documentació tècnica.
+Observacions
+Signatura de la persona instal·ladora
+1. Aquest certificat empara únicament l'actuació efectuada i documentada amb la documentació tècnica que l'acompanya.
+2. No es pot emetre un certificat d'instal·lació si en aquesta hi ha signes evidents de manca de seguretat.
+3. Aquest certificat s'ha d'acompanyar de la seva memòria tècnica o projecte i les instruccions d'ús i manteniment.
+4. En el cas d'ampliacions o modificacions, la classificació P1, P2 o memòria s'ha de fer d'acord amb l'actuació feta seguint els criteris 
+de l'apartat 3.2 de la ITC-BT-04.
+5. El CUPS no s'ha d'emplenar en els tràmits de nova instal·lació.

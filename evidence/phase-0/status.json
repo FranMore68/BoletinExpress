@@ -1,0 +1,15 @@
+{
+  "phase": 0,
+  "status": "PENDIENTE_ACEPTACION_USUARIO",
+  "checks": {
+    "unitTests": true,
+    "briePixels": true,
+    "cieVariants": true,
+    "ciePixels": true,
+    "cieUseAnd50References": true,
+    "dependencies": true,
+    "visualReview": true,
+    "cieReferenceFidelity": true,
+    "reviewedFilesUnchanged": true
+  }
+}

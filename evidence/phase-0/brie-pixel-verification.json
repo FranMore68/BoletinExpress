@@ -1,0 +1,20 @@
+{
+  "renderer": "Poppler",
+  "pages": [
+    {
+      "page": 1,
+      "changedPixels": 22869,
+      "changedOutsideFillRegions": 0,
+      "maskMarginPixels": 2,
+      "pass": true
+    },
+    {
+      "page": 2,
+      "changedPixels": 6336,
+      "changedOutsideFillRegions": 0,
+      "maskMarginPixels": 2,
+      "pass": true
+    }
+  ],
+  "pass": true
+}

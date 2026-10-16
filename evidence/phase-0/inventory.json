@@ -1,0 +1,5240 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-10-15T20:15:49.020Z",
+  "sources": {
+    "brie": {
+      "sha256": "5cc739303306d37a35a0b4912c6e7b6240d141e8ae251c4dc1d604e086eb2b64",
+      "bytes": 187456,
+      "storedPages": 2,
+      "pageSizes": [
+        {
+          "width": 595.25,
+          "height": 842
+        },
+        {
+          "width": 595.25,
+          "height": 842
+        }
+      ],
+      "form": "static",
+      "acroFormFields": 0
+    },
+    "cie": {
+      "sha256": "f846613f63196b0c2a2b343a64650e6e95a808d06a8ab7c5c1681f9b7d4ca19a",
+      "bytes": 144779,
+      "storedPages": 1,
+      "pageSizes": [
+        {
+          "width": 612,
+          "height": -792
+        }
+      ],
+      "form": "XFA",
+      "acroFormFields": 0
+    }
+  },
+  "brie": {
+    "fieldCount": 59,
+    "fields": {
+      "exemplar": {
+        "page": 0,
+        "type": "enum",
+        "choices": {
+          "titular": {
+            "x": 86.5,
+            "y": 734,
+            "width": 6.5,
+            "height": 6.5
+          },
+          "distribuidora": {
+            "x": 86.5,
+            "y": 722,
+            "width": 6.5,
+            "height": 6.5
+          },
+          "installadora": {
+            "x": 86.5,
+            "y": 710,
+            "width": 6.5,
+            "height": 6.5
+          }
+        },
+        "sample": "titular"
+      },
+      "empresa_nom": {
+        "page": 0,
+        "type": "text",
+        "x": 86,
+        "y": 669,
+        "width": 206,
+        "height": 10,
+        "fontSize": 8,
+        "sample": "INSTAL·LACIONS PROVA SL"
+      },
+      "empresa_telefon": {
+        "page": 0,
+        "type": "text",
+        "x": 300,
+        "y": 669,
+        "width": 70,
+        "height": 10,
+        "fontSize": 8,
+        "sample": "000000000"
+      },
+      "empresa_rasic": {
+        "page": 0,
+        "type": "text",
+        "x": 378,
+        "y": 669,
+        "width": 180,
+        "height": 10,
+        "fontSize": 8,
+        "sample": "PROVA-0000"
+      },
+      "installador_nom": {
+        "page": 0,
+        "type": "text",
+        "x": 89,
+        "y": 645,
+        "width": 280,
+        "height": 10,
+        "fontSize": 8,
+        "sample": "PERSONA INSTAL·LADORA FICTÍCIA"
+      },
+      "installador_nif": {
+        "page": 0,
+        "type": "text",
+        "x": 377,
+        "y": 645,
+        "width": 49,
+        "height": 10,
+        "fontSize": 8,
+        "sample": "00000000T"
+      },
+      "installador_dni": {
+        "page": 0,
+        "type": "text",
+        "x": 431,
+        "y": 645,
+        "width": 130,
+        "height": 10,
+        "fontSize": 8,
+        "sample": "00000000T"
+      },
+      "activitat_anterior": {
+        "page": 0,
+        "type": "text",
+        "x": 86,
+        "y": 607,
+        "width": 172,
+        "height": 10,
+        "fontSize": 8,
+        "sample": "Habitatge de prova"
+      },
+      "activitat_actual": {
+        "page": 0,
+        "type": "text",
+        "x": 266,
+        "y": 607,
+        "width": 205,
+        "height": 10,
+        "fontSize": 8,
+        "sample": "Habitatge de prova"
+      },
+      "superficie": {
+        "page": 0,
+        "type": "text",
+        "x": 482,
+        "y": 607,
+        "width": 77,
+        "height": 10,
+        "fontSize": 8,
+        "sample": "80"
+      },
+      "local_carrer": {
+        "page": 0,
+        "type": "text",
+        "x": 86,
+        "y": 578,
+        "width": 242,
+        "height": 10,
+        "fontSize": 8,
+        "sample": "Carrer de la Prova Fictícia"
+      },
+      "local_numero": {
+        "page": 0,
+        "type": "text",
+        "x": 338,
+        "y": 578,
+        "width": 70,
+        "height": 10,
+        "fontSize": 8,
+        "sample": "10"
+      },
+      "local_pis": {
+        "page": 0,
+        "type": "text",
+        "x": 418,
+        "y": 578,
+        "width": 66,
+        "height": 10,
+        "fontSize": 8,
+        "sample": "2"
+      },
+      "local_porta": {
+        "page": 0,
+        "type": "text",
+        "x": 493,
+        "y": 578,
+        "width": 68,
+        "height": 10,
+        "fontSize": 8,
+        "sample": "A"
+      },
+      "local_municipi": {
+        "page": 0,
+        "type": "text",
+        "x": 86,
+        "y": 558,
+        "width": 395,
+        "height": 10,
+        "fontSize": 8,
+        "sample": "Municipi de prova"
+      },
+      "local_cp": {
+        "page": 0,
+        "type": "text",
+        "x": 493,
+        "y": 558,
+        "width": 68,
+        "height": 10,
+        "fontSize": 8,
+        "sample": "00000"
+      },
+      "titular_nom": {
+        "page": 0,
+        "type": "text",
+        "x": 89,
+        "y": 527,
+        "width": 316,
+        "height": 10,
+        "fontSize": 8,
+        "sample": "TITULAR FICTICI DE PROVA"
+      },
+      "titular_nif": {
+        "page": 0,
+        "type": "text",
+        "x": 416,
+        "y": 527,
+        "width": 144,
+        "height": 10,
+        "fontSize": 8,
+        "sample": "00000000T"
+      },
+      "titular_domicili": {
+        "page": 0,
+        "type": "text",
+        "x": 89,
+        "y": 507,
+        "width": 266,
+        "height": 10,
+        "fontSize": 8,
+        "sample": "Carrer Fictici, 20"
+      },
+      "titular_municipi": {
+        "page": 0,
+        "type": "text",
+        "x": 366,
+        "y": 507,
+        "width": 194,
+        "height": 10,
+        "fontSize": 8,
+        "sample": "Municipi de prova"
+      },
+      "titular_telefon": {
+        "page": 0,
+        "type": "text",
+        "x": 89,
+        "y": 487,
+        "width": 393,
+        "height": 10,
+        "fontSize": 8,
+        "sample": "000000000"
+      },
+      "titular_cp": {
+        "page": 0,
+        "type": "text",
+        "x": 494,
+        "y": 487,
+        "width": 66,
+        "height": 10,
+        "fontSize": 8,
+        "sample": "00000"
+      },
+      "treball": {
+        "page": 0,
+        "type": "text",
+        "x": 86,
+        "y": 463,
+        "width": 472,
+        "height": 21,
+        "fontSize": 8,
+        "sample": "DADES FICTÍCIES. Prova de posició dels camps.\nAquest exemple no acredita cap instal·lació.",
+        "multiline": true
+      },
+      "diferencial_1_nombre": {
+        "page": 0,
+        "type": "text",
+        "x": 111,
+        "y": 396,
+        "width": 40,
+        "height": 10,
+        "fontSize": 8,
+        "sample": "1"
+      },
+      "diferencial_1_in": {
+        "page": 0,
+        "type": "text",
+        "x": 164,
+        "y": 396,
+        "width": 29,
+        "height": 10,
+        "fontSize": 8,
+        "sample": "40"
+      },
+      "diferencial_1_sensibilitat": {
+        "page": 0,
+        "type": "text",
+        "x": 232,
+        "y": 396,
+        "width": 22,
+        "height": 10,
+        "fontSize": 8,
+        "sample": "30"
+      },
+      "diferencial_2_nombre": {
+        "page": 0,
+        "type": "text",
+        "x": 111,
+        "y": 384,
+        "width": 40,
+        "height": 10,
+        "fontSize": 8,
+        "sample": "1"
+      },
+      "diferencial_2_in": {
+        "page": 0,
+        "type": "text",
+        "x": 164,
+        "y": 384,
+        "width": 29,
+        "height": 10,
+        "fontSize": 8,
+        "sample": "25"
+      },
+      "diferencial_2_sensibilitat": {
+        "page": 0,
+        "type": "text",
+        "x": 232,
+        "y": 384,
+        "width": 22,
+        "height": 10,
+        "fontSize": 8,
+        "sample": "30"
+      },
+      "seccio_derivacio": {
+        "page": 0,
+        "type": "text",
+        "x": 414,
+        "y": 407,
+        "width": 64,
+        "height": 10,
+        "fontSize": 8,
+        "sample": "10"
+      },
+      "terra_existeix": {
+        "page": 0,
+        "type": "boolean",
+        "yes": {
+          "x": 330,
+          "y": 385,
+          "width": 6.5,
+          "height": 6.5
+        },
+        "no": {
+          "x": 330,
+          "y": 373,
+          "width": 6.5,
+          "height": 6.5
+        },
+        "sample": true
+      },
+      "resistencia_terra": {
+        "page": 0,
+        "type": "text",
+        "x": 387,
+        "y": 385,
+        "width": 61,
+        "height": 10,
+        "fontSize": 8,
+        "sample": "12"
+      },
+      "resistencia_aillament": {
+        "page": 0,
+        "type": "text",
+        "x": 391,
+        "y": 361,
+        "width": 57,
+        "height": 10,
+        "fontSize": 8,
+        "sample": "1000000"
+      },
+      "potencia_maxima": {
+        "page": 0,
+        "type": "text",
+        "x": 215,
+        "y": 334,
+        "width": 46,
+        "height": 10,
+        "fontSize": 8,
+        "sample": "9,2"
+      },
+      "potencia_inicial": {
+        "page": 0,
+        "type": "text",
+        "x": 215,
+        "y": 324,
+        "width": 46,
+        "height": 10,
+        "fontSize": 8,
+        "sample": "5,75"
+      },
+      "potencia_contractar": {
+        "page": 0,
+        "type": "text",
+        "x": 215,
+        "y": 314,
+        "width": 46,
+        "height": 10,
+        "fontSize": 8,
+        "sample": "5,75"
+      },
+      "tensio_anterior": {
+        "page": 0,
+        "type": "text",
+        "x": 408,
+        "y": 344,
+        "width": 46,
+        "height": 10,
+        "fontSize": 8,
+        "sample": "230"
+      },
+      "tensio_actual": {
+        "page": 0,
+        "type": "text",
+        "x": 408,
+        "y": 334,
+        "width": 46,
+        "height": 10,
+        "fontSize": 8,
+        "sample": "230"
+      },
+      "intensitat_iga": {
+        "page": 0,
+        "type": "text",
+        "x": 408,
+        "y": 324,
+        "width": 46,
+        "height": 10,
+        "fontSize": 8,
+        "sample": "40"
+      },
+      "intensitat_icpm": {
+        "page": 0,
+        "type": "text",
+        "x": 408,
+        "y": 314,
+        "width": 46,
+        "height": 10,
+        "fontSize": 8,
+        "sample": "25"
+      },
+      "ascensor": {
+        "page": 0,
+        "type": "boolean",
+        "yes": {
+          "x": 279,
+          "y": 297,
+          "width": 6.5,
+          "height": 6.5
+        },
+        "no": {
+          "x": 312,
+          "y": 297,
+          "width": 6.5,
+          "height": 6.5
+        },
+        "sample": false
+      },
+      "potencia_ascensor": {
+        "page": 0,
+        "type": "text",
+        "x": 477,
+        "y": 296,
+        "width": 74,
+        "height": 10,
+        "fontSize": 8,
+        "sample": "0"
+      },
+      "certificat_nom": {
+        "page": 0,
+        "type": "text",
+        "x": 108,
+        "y": 263,
+        "width": 274,
+        "height": 10,
+        "fontSize": 8,
+        "sample": "PERSONA INSTAL·LADORA FICTÍCIA"
+      },
+      "certificat_dni": {
+        "page": 0,
+        "type": "text",
+        "x": 101,
+        "y": 253,
+        "width": 48,
+        "height": 10,
+        "fontSize": 8,
+        "sample": "00000000T"
+      },
+      "certificat_rasic": {
+        "page": 0,
+        "type": "text",
+        "x": 372,
+        "y": 253,
+        "width": 72,
+        "height": 10,
+        "fontSize": 8,
+        "sample": "PROVA-0000"
+      },
+      "lloc_data": {
+        "page": 0,
+        "type": "text",
+        "x": 133,
+        "y": 146,
+        "width": 423,
+        "height": 10,
+        "fontSize": 8,
+        "sample": "Municipi de prova, 15/10/2026"
+      },
+      "defecte_3_tensio": {
+        "page": 1,
+        "type": "text",
+        "x": 368,
+        "y": 652,
+        "width": 21,
+        "height": 10,
+        "fontSize": 7,
+        "sample": ""
+      },
+      "defecte_10_descripcio": {
+        "page": 1,
+        "type": "text",
+        "x": 174,
+        "y": 489,
+        "width": 383,
+        "height": 43,
+        "fontSize": 8,
+        "sample": "Prova fictícia del camp de descripció.",
+        "multiline": true
+      },
+      "comentaris": {
+        "page": 1,
+        "type": "text",
+        "x": 89,
+        "y": 296,
+        "width": 468,
+        "height": 38,
+        "fontSize": 8,
+        "sample": "DADES FICTÍCIES PER AVALUAR EL PROGRAMARI.\nNo és un certificat vàlid ni una verificació tècnica.",
+        "multiline": true
+      },
+      "defecte_1": {
+        "page": 1,
+        "type": "boolean",
+        "yes": {
+          "x": 90.5,
+          "y": 702.5,
+          "width": 6.5,
+          "height": 6.5
+        },
+        "no": {
+          "x": 121,
+          "y": 702.5,
+          "width": 6.5,
+          "height": 6.5
+        },
+        "sample": false
+      },
+      "defecte_2": {
+        "page": 1,
+        "type": "boolean",
+        "yes": {
+          "x": 90.5,
+          "y": 681.3,
+          "width": 6.5,
+          "height": 6.5
+        },
+        "no": {
+          "x": 121,
+          "y": 681.3,
+          "width": 6.5,
+          "height": 6.5
+        },
+        "sample": false
+      },
+      "defecte_3": {
+        "page": 1,
+        "type": "boolean",
+        "yes": {
+          "x": 90.5,
+          "y": 657.3,
+          "width": 6.5,
+          "height": 6.5
+        },
+        "no": {
+          "x": 121,
+          "y": 657.3,
+          "width": 6.5,
+          "height": 6.5
+        },
+        "sample": false
+      },
+      "defecte_4": {
+        "page": 1,
+        "type": "boolean",
+        "yes": {
+          "x": 90.5,
+          "y": 631.8,
+          "width": 6.5,
+          "height": 6.5
+        },
+        "no": {
+          "x": 121,
+          "y": 631.8,
+          "width": 6.5,
+          "height": 6.5
+        },
+        "sample": false
+      },
+      "defecte_5": {
+        "page": 1,
+        "type": "boolean",
+        "yes": {
+          "x": 90.5,
+          "y": 605.1999999999999,
+          "width": 6.5,
+          "height": 6.5
+        },
+        "no": {
+          "x": 121,
+          "y": 605.1999999999999,
+          "width": 6.5,
+          "height": 6.5
+        },
+        "sample": false
+      },
+      "defecte_6": {
+        "page": 1,
+        "type": "boolean",
+        "yes": {
+          "x": 90.5,
+          "y": 580.5,
+          "width": 6.5,
+          "height": 6.5
+        },
+        "no": {
+          "x": 121,
+          "y": 580.5,
+          "width": 6.5,
+          "height": 6.5
+        },
+        "sample": false
+      },
+      "defecte_7": {
+        "page": 1,
+        "type": "boolean",
+        "yes": {
+          "x": 90.5,
+          "y": 559.5,
+          "width": 6.5,
+          "height": 6.5
+        },
+        "no": {
+          "x": 121,
+          "y": 559.5,
+          "width": 6.5,
+          "height": 6.5
+        },
+        "sample": false
+      },
+      "defecte_8": {
+        "page": 1,
+        "type": "boolean",
+        "yes": {
+          "x": 90.5,
+          "y": 539.6999999999999,
+          "width": 6.5,
+          "height": 6.5
+        },
+        "no": {
+          "x": 121,
+          "y": 539.6999999999999,
+          "width": 6.5,
+          "height": 6.5
+        },
+        "sample": false
+      },
+      "defecte_9": {
+        "page": 1,
+        "type": "boolean",
+        "yes": {
+          "x": 90.5,
+          "y": 519.9,
+          "width": 6.5,
+          "height": 6.5
+        },
+        "no": {
+          "x": 121,
+          "y": 519.9,
+          "width": 6.5,
+          "height": 6.5
+        },
+        "sample": false
+      },
+      "defecte_10": {
+        "page": 1,
+        "type": "boolean",
+        "yes": {
+          "x": 90.5,
+          "y": 503.90000000000003,
+          "width": 6.5,
+          "height": 6.5
+        },
+        "no": {
+          "x": 121,
+          "y": 503.90000000000003,
+          "width": 6.5,
+          "height": 6.5
+        },
+        "sample": true
+      }
+    }
+  },
+  "cie": {
+    "fields": [
+      {
+        "path": "DATA[0].Page1[0].CurrentPage[0]",
+        "name": "CurrentPage",
+        "parentKind": "pageArea",
+        "parentPath": "DATA[0].Page1[0]",
+        "ui": "numericEdit",
+        "caption": "",
+        "attributes": {
+          "locale": "es_ES",
+          "h": "7.5mm",
+          "name": "CurrentPage",
+          "presence": "hidden",
+          "w": "35mm",
+          "x": "70mm",
+          "y": "288mm",
+          "access": "protected",
+          "id": "floatingField004328"
+        },
+        "bind": {
+          "match": "none"
+        },
+        "defaultValue": "",
+        "itemLists": [],
+        "scripts": [
+          "this.rawValue = xfa.layout.page(this);"
+        ]
+      },
+      {
+        "path": "DATA[0].Page1[0].PageCount[0]",
+        "name": "PageCount",
+        "parentKind": "pageArea",
+        "parentPath": "DATA[0].Page1[0]",
+        "ui": "numericEdit",
+        "caption": "",
+        "attributes": {
+          "locale": "es_ES",
+          "h": "7.5mm",
+          "name": "PageCount",
+          "presence": "hidden",
+          "w": "35mm",
+          "x": "70mm",
+          "y": "288mm",
+          "access": "protected",
+          "id": "floatingField018845"
+        },
+        "bind": {
+          "match": "none"
+        },
+        "defaultValue": "",
+        "itemLists": [],
+        "scripts": [
+          "this.rawValue = xfa.layout.pageCount();"
+        ]
+      },
+      {
+        "path": "DATA[0].principal[0].sTitular[0].NomCognoms[0]",
+        "name": "NomCognoms",
+        "parentKind": "subform",
+        "parentPath": "DATA[0].principal[0].sTitular[0]",
+        "ui": "textEdit",
+        "caption": "Raó social de l'empresa o nom i cognoms",
+        "attributes": {
+          "name": "NomCognoms",
+          "w": "139.9mm",
+          "h": "13.5mm"
+        },
+        "bind": null,
+        "defaultValue": "",
+        "itemLists": [],
+        "scripts": []
+      },
+      {
+        "path": "DATA[0].principal[0].sTitular[0].NIF[0]",
+        "name": "NIF",
+        "parentKind": "subform",
+        "parentPath": "DATA[0].principal[0].sTitular[0]",
+        "ui": "textEdit",
+        "caption": "NIF/DNI",
+        "attributes": {
+          "name": "NIF",
+          "w": "30mm",
+          "h": "13.5mm"
+        },
+        "bind": null,
+        "defaultValue": "",
+        "itemLists": [],
+        "scripts": []
+      },
+      {
+        "path": "DATA[0].principal[0].sTitular[0].CBO_TipusVia[0]",
+        "name": "CBO_TipusVia",
+        "parentKind": "subform",
+        "parentPath": "DATA[0].principal[0].sTitular[0]",
+        "ui": "choiceList",
+        "caption": "Tipus de via",
+        "attributes": {
+          "name": "CBO_TipusVia",
+          "w": "30.818mm",
+          "h": "13.5mm"
+        },
+        "bind": {
+          "match": "none"
+        },
+        "defaultValue": "",
+        "itemLists": [
+          {
+            "attributes": {},
+            "values": [
+              "",
+              "Apartament",
+              "Avinguda",
+              "Baixada",
+              "Barranc",
+              "Barri",
+              "Bloc",
+              "Camí",
+              "Carrer",
+              "Carreró",
+              "Carretera",
+              "Cases",
+              "Colònia",
+              "Costa",
+              "Disseminat",
+              "Edifici",
+              "Fageda",
+              "Glorieta",
+              "Gran Via",
+              "Grup",
+              "Lloc",
+              "Mercat",
+              "Parc",
+              "Partida",
+              "Passatge",
+              "Passeig",
+              "Plaça",
+              "Placeta",
+              "Poblat",
+              "Polígon",
+              "Prolongació",
+              "Pujada",
+              "Rambla",
+              "Ronda",
+              "Senda",
+              "Torrent",
+              "Travessera",
+              "Travessia",
+              "Urbanització",
+              "Via",
+              "Xalet"
+            ]
+          },
+          {
+            "attributes": {
+              "save": "1",
+              "presence": "hidden"
+            },
+            "values": [
+              "0",
+              "APA",
+              "AVI",
+              "BAI",
+              "BRC",
+              "BAR",
+              "BLO",
+              "CAM",
+              "CAR",
+              "CRO",
+              "CRT",
+              "CAS",
+              "COL",
+              "COS",
+              "DIS",
+              "EDI",
+              "FAG",
+              "GLO",
+              "GRV",
+              "GRU",
+              "LLO",
+              "MER",
+              "PAR",
+              "PTD",
+              "PTG",
+              "PAS",
+              "PLA",
+              "PCT",
+              "POB",
+              "POL",
+              "PRO",
+              "PUJ",
+              "RAM",
+              "RON",
+              "SEN",
+              "TOR",
+              "TRA",
+              "TVS",
+              "URB",
+              "VIA",
+              "XAL"
+            ]
+          }
+        ],
+        "scripts": []
+      },
+      {
+        "path": "DATA[0].principal[0].sTitular[0].TXT_NomVia[0]",
+        "name": "TXT_NomVia",
+        "parentKind": "subform",
+        "parentPath": "DATA[0].principal[0].sTitular[0]",
+        "ui": "textEdit",
+        "caption": "Nom de la via",
+        "attributes": {
+          "name": "TXT_NomVia",
+          "w": "120mm",
+          "h": "13.5mm"
+        },
+        "bind": {
+          "match": "none"
+        },
+        "defaultValue": "",
+        "itemLists": [],
+        "scripts": []
+      },
+      {
+        "path": "DATA[0].principal[0].sTitular[0].TXT_Num[0]",
+        "name": "TXT_Num",
+        "parentKind": "subform",
+        "parentPath": "DATA[0].principal[0].sTitular[0]",
+        "ui": "textEdit",
+        "caption": "Núm.",
+        "attributes": {
+          "name": "TXT_Num",
+          "w": "19.181mm",
+          "h": "13.5mm"
+        },
+        "bind": null,
+        "defaultValue": "",
+        "itemLists": [],
+        "scripts": []
+      },
+      {
+        "path": "DATA[0].principal[0].sTitular[0].TXT_Bloc[0]",
+        "name": "TXT_Bloc",
+        "parentKind": "subform",
+        "parentPath": "DATA[0].principal[0].sTitular[0]",
+        "ui": "textEdit",
+        "caption": "Bloc",
+        "attributes": {
+          "name": "TXT_Bloc",
+          "h": "13.5mm",
+          "w": "35mm"
+        },
+        "bind": {
+          "match": "none"
+        },
+        "defaultValue": "",
+        "itemLists": [],
+        "scripts": []
+      },
+      {
+        "path": "DATA[0].principal[0].sTitular[0].TXT_Escala[0]",
+        "name": "TXT_Escala",
+        "parentKind": "subform",
+        "parentPath": "DATA[0].principal[0].sTitular[0]",
+        "ui": "textEdit",
+        "caption": "Escala",
+        "attributes": {
+          "name": "TXT_Escala",
+          "h": "13.5mm",
+          "w": "35mm"
+        },
+        "bind": {
+          "match": "none"
+        },
+        "defaultValue": "",
+        "itemLists": [],
+        "scripts": []
+      },
+      {
+        "path": "DATA[0].principal[0].sTitular[0].TXT_Pis[0]",
+        "name": "TXT_Pis",
+        "parentKind": "subform",
+        "parentPath": "DATA[0].principal[0].sTitular[0]",
+        "ui": "textEdit",
+        "caption": "Pis",
+        "attributes": {
+          "name": "TXT_Pis",
+          "h": "13.5mm",
+          "w": "35mm"
+        },
+        "bind": {
+          "match": "none"
+        },
+        "defaultValue": "",
+        "itemLists": [],
+        "scripts": []
+      },
+      {
+        "path": "DATA[0].principal[0].sTitular[0].TXT_Porta[0]",
+        "name": "TXT_Porta",
+        "parentKind": "subform",
+        "parentPath": "DATA[0].principal[0].sTitular[0]",
+        "ui": "textEdit",
+        "caption": "Porta",
+        "attributes": {
+          "name": "TXT_Porta",
+          "h": "13.5mm",
+          "w": "34.9mm"
+        },
+        "bind": {
+          "match": "none"
+        },
+        "defaultValue": "",
+        "itemLists": [],
+        "scripts": []
+      },
+      {
+        "path": "DATA[0].principal[0].sTitular[0].TXT_CodiPostal[0]",
+        "name": "TXT_CodiPostal",
+        "parentKind": "subform",
+        "parentPath": "DATA[0].principal[0].sTitular[0]",
+        "ui": "textEdit",
+        "caption": "Codi postal",
+        "attributes": {
+          "name": "TXT_CodiPostal",
+          "w": "30mm",
+          "h": "13.5mm",
+          "locale": "es_ES"
+        },
+        "bind": {
+          "match": "none"
+        },
+        "defaultValue": "",
+        "itemLists": [],
+        "scripts": []
+      },
+      {
+        "path": "DATA[0].principal[0].sTitular[0].TXT_Poblacio[0]",
+        "name": "TXT_Poblacio",
+        "parentKind": "subform",
+        "parentPath": "DATA[0].principal[0].sTitular[0]",
+        "ui": "textEdit",
+        "caption": "Població",
+        "attributes": {
+          "name": "TXT_Poblacio",
+          "w": "80mm",
+          "h": "13.5mm"
+        },
+        "bind": {
+          "match": "none"
+        },
+        "defaultValue": "",
+        "itemLists": [],
+        "scripts": []
+      },
+      {
+        "path": "DATA[0].principal[0].sTitular[0].TXT_Tel[0]",
+        "name": "TXT_Tel",
+        "parentKind": "subform",
+        "parentPath": "DATA[0].principal[0].sTitular[0]",
+        "ui": "textEdit",
+        "caption": "Telèfon",
+        "attributes": {
+          "name": "TXT_Tel",
+          "w": "30mm",
+          "h": "13.5mm"
+        },
+        "bind": null,
+        "defaultValue": "",
+        "itemLists": [],
+        "scripts": []
+      },
+      {
+        "path": "DATA[0].principal[0].sTitular[0].TXT_Correu[0]",
+        "name": "TXT_Correu",
+        "parentKind": "subform",
+        "parentPath": "DATA[0].principal[0].sTitular[0]",
+        "ui": "textEdit",
+        "caption": "Correu electrònic",
+        "attributes": {
+          "name": "TXT_Correu",
+          "w": "59.999mm",
+          "h": "13.5mm"
+        },
+        "bind": null,
+        "defaultValue": "",
+        "itemLists": [],
+        "scripts": []
+      },
+      {
+        "path": "DATA[0].principal[0].sEmpresaIns[0].NomCognoms[0]",
+        "name": "NomCognoms",
+        "parentKind": "subform",
+        "parentPath": "DATA[0].principal[0].sEmpresaIns[0]",
+        "ui": "textEdit",
+        "caption": "Raó social de l'empresa o nom i cognoms (persones autònomes)",
+        "attributes": {
+          "name": "NomCognoms",
+          "w": "99.9mm",
+          "h": "13.5mm"
+        },
+        "bind": null,
+        "defaultValue": "",
+        "itemLists": [],
+        "scripts": []
+      },
+      {
+        "path": "DATA[0].principal[0].sEmpresaIns[0].TXT_Rasic[0]",
+        "name": "TXT_Rasic",
+        "parentKind": "subform",
+        "parentPath": "DATA[0].principal[0].sEmpresaIns[0]",
+        "ui": "textEdit",
+        "caption": "Núm. de registre (RASIC)",
+        "attributes": {
+          "name": "TXT_Rasic",
+          "w": "40mm",
+          "h": "13.5mm"
+        },
+        "bind": null,
+        "defaultValue": "",
+        "itemLists": [],
+        "scripts": []
+      },
+      {
+        "path": "DATA[0].principal[0].sEmpresaIns[0].NIF[0]",
+        "name": "NIF",
+        "parentKind": "subform",
+        "parentPath": "DATA[0].principal[0].sEmpresaIns[0]",
+        "ui": "textEdit",
+        "caption": "NIF/DNI",
+        "attributes": {
+          "name": "NIF",
+          "w": "30mm",
+          "h": "13.5mm"
+        },
+        "bind": null,
+        "defaultValue": "",
+        "itemLists": [],
+        "scripts": []
+      },
+      {
+        "path": "DATA[0].principal[0].sEmpresaIns[0].NomCognomsInstalador[0]",
+        "name": "NomCognomsInstalador",
+        "parentKind": "subform",
+        "parentPath": "DATA[0].principal[0].sEmpresaIns[0]",
+        "ui": "textEdit",
+        "caption": "Nom i cognoms de la persona instal·ladora",
+        "attributes": {
+          "name": "NomCognomsInstalador",
+          "w": "99.9mm",
+          "h": "13.5mm"
+        },
+        "bind": {
+          "match": "dataRef",
+          "ref": "Persona"
+        },
+        "defaultValue": "",
+        "itemLists": [],
+        "scripts": []
+      },
+      {
+        "path": "DATA[0].principal[0].sEmpresaIns[0].TXT_Categoria[0]",
+        "name": "TXT_Categoria",
+        "parentKind": "subform",
+        "parentPath": "DATA[0].principal[0].sEmpresaIns[0]",
+        "ui": "choiceList",
+        "caption": "Categoria",
+        "attributes": {
+          "name": "TXT_Categoria",
+          "w": "40mm",
+          "h": "13.5mm"
+        },
+        "bind": null,
+        "defaultValue": "",
+        "itemLists": [
+          {
+            "attributes": {
+              "save": "1"
+            },
+            "values": [
+              "Bàsica",
+              "Especialista"
+            ]
+          }
+        ],
+        "scripts": []
+      },
+      {
+        "path": "DATA[0].principal[0].sEmpresaIns[0].DNIInstallador[0]",
+        "name": "DNIInstallador",
+        "parentKind": "subform",
+        "parentPath": "DATA[0].principal[0].sEmpresaIns[0]",
+        "ui": "textEdit",
+        "caption": "DNI/NIE",
+        "attributes": {
+          "name": "DNIInstallador",
+          "w": "30mm",
+          "h": "13.5mm"
+        },
+        "bind": null,
+        "defaultValue": "",
+        "itemLists": [],
+        "scripts": []
+      },
+      {
+        "path": "DATA[0].principal[0].sEmpresaIns[0].sAdreca[0].CBO_TipusVia[0]",
+        "name": "CBO_TipusVia",
+        "parentKind": "subform",
+        "parentPath": "DATA[0].principal[0].sEmpresaIns[0].sAdreca[0]",
+        "ui": "choiceList",
+        "caption": "Tipus de via",
+        "attributes": {
+          "name": "CBO_TipusVia",
+          "w": "30.818mm",
+          "h": "13.5mm"
+        },
+        "bind": {
+          "match": "none"
+        },
+        "defaultValue": "",
+        "itemLists": [
+          {
+            "attributes": {},
+            "values": [
+              "",
+              "Apartament",
+              "Avinguda",
+              "Baixada",
+              "Barranc",
+              "Barri",
+              "Bloc",
+              "Camí",
+              "Carrer",
+              "Carreró",
+              "Carretera",
+              "Cases",
+              "Colònia",
+              "Costa",
+              "Disseminat",
+              "Edifici",
+              "Fageda",
+              "Glorieta",
+              "Gran Via",
+              "Grup",
+              "Lloc",
+              "Mercat",
+              "Parc",
+              "Partida",
+              "Passatge",
+              "Passeig",
+              "Plaça",
+              "Placeta",
+              "Poblat",
+              "Polígon",
+              "Prolongació",
+              "Pujada",
+              "Rambla",
+              "Ronda",
+              "Senda",
+              "Torrent",
+              "Travessera",
+              "Travessia",
+              "Urbanització",
+              "Via",
+              "Xalet"
+            ]
+          },
+          {
+            "attributes": {
+              "save": "1",
+              "presence": "hidden"
+            },
+            "values": [
+              "0",
+              "APA",
+              "AVI",
+              "BAI",
+              "BRC",
+              "BAR",
+              "BLO",
+              "CAM",
+              "CAR",
+              "CRO",
+              "CRT",
+              "CAS",
+              "COL",
+              "COS",
+              "DIS",
+              "EDI",
+              "FAG",
+              "GLO",
+              "GRV",
+              "GRU",
+              "LLO",
+              "MER",
+              "PAR",
+              "PTD",
+              "PTG",
+              "PAS",
+              "PLA",
+              "PCT",
+              "POB",
+              "POL",
+              "PRO",
+              "PUJ",
+              "RAM",
+              "RON",
+              "SEN",
+              "TOR",
+              "TRA",
+              "TVS",
+              "URB",
+              "VIA",
+              "XAL"
+            ]
+          }
+        ],
+        "scripts": []
+      },
+      {
+        "path": "DATA[0].principal[0].sEmpresaIns[0].sAdreca[0].TXT_NomVia[0]",
+        "name": "TXT_NomVia",
+        "parentKind": "subform",
+        "parentPath": "DATA[0].principal[0].sEmpresaIns[0].sAdreca[0]",
+        "ui": "textEdit",
+        "caption": "Nom de la via",
+        "attributes": {
+          "name": "TXT_NomVia",
+          "w": "120mm",
+          "h": "13.5mm"
+        },
+        "bind": {
+          "match": "none"
+        },
+        "defaultValue": "",
+        "itemLists": [],
+        "scripts": []
+      },
+      {
+        "path": "DATA[0].principal[0].sEmpresaIns[0].sAdreca[0].TXT_Num[0]",
+        "name": "TXT_Num",
+        "parentKind": "subform",
+        "parentPath": "DATA[0].principal[0].sEmpresaIns[0].sAdreca[0]",
+        "ui": "textEdit",
+        "caption": "Núm.",
+        "attributes": {
+          "name": "TXT_Num",
+          "w": "19.181mm",
+          "h": "13.5mm"
+        },
+        "bind": null,
+        "defaultValue": "",
+        "itemLists": [],
+        "scripts": []
+      },
+      {
+        "path": "DATA[0].principal[0].sEmpresaIns[0].sAdreca[0].TXT_Bloc[0]",
+        "name": "TXT_Bloc",
+        "parentKind": "subform",
+        "parentPath": "DATA[0].principal[0].sEmpresaIns[0].sAdreca[0]",
+        "ui": "textEdit",
+        "caption": "Bloc",
+        "attributes": {
+          "name": "TXT_Bloc",
+          "h": "13.5mm",
+          "w": "35mm"
+        },
+        "bind": {
+          "match": "none"
+        },
+        "defaultValue": "",
+        "itemLists": [],
+        "scripts": []
+      },
+      {
+        "path": "DATA[0].principal[0].sEmpresaIns[0].sAdreca[0].TXT_Escala[0]",
+        "name": "TXT_Escala",
+        "parentKind": "subform",
+        "parentPath": "DATA[0].principal[0].sEmpresaIns[0].sAdreca[0]",
+        "ui": "textEdit",
+        "caption": "Escala",
+        "attributes": {
+          "name": "TXT_Escala",
+          "h": "13.5mm",
+          "w": "35mm"
+        },
+        "bind": {
+          "match": "none"
+        },
+        "defaultValue": "",
+        "itemLists": [],
+        "scripts": []
+      },
+      {
+        "path": "DATA[0].principal[0].sEmpresaIns[0].sAdreca[0].TXT_Pis[0]",
+        "name": "TXT_Pis",
+        "parentKind": "subform",
+        "parentPath": "DATA[0].principal[0].sEmpresaIns[0].sAdreca[0]",
+        "ui": "textEdit",
+        "caption": "Pis",
+        "attributes": {
+          "name": "TXT_Pis",
+          "h": "13.5mm",
+          "w": "35mm"
+        },
+        "bind": {
+          "match": "none"
+        },
+        "defaultValue": "",
+        "itemLists": [],
+        "scripts": []
+      },
+      {
+        "path": "DATA[0].principal[0].sEmpresaIns[0].sAdreca[0].TXT_Porta[0]",
+        "name": "TXT_Porta",
+        "parentKind": "subform",
+        "parentPath": "DATA[0].principal[0].sEmpresaIns[0].sAdreca[0]",
+        "ui": "textEdit",
+        "caption": "Porta",
+        "attributes": {
+          "name": "TXT_Porta",
+          "h": "13.5mm",
+          "w": "34.9mm"
+        },
+        "bind": {
+          "match": "none"
+        },
+        "defaultValue": "",
+        "itemLists": [],
+        "scripts": []
+      },
+      {
+        "path": "DATA[0].principal[0].sEmpresaIns[0].sAdreca[0].TXT_CodiPostal[0]",
+        "name": "TXT_CodiPostal",
+        "parentKind": "subform",
+        "parentPath": "DATA[0].principal[0].sEmpresaIns[0].sAdreca[0]",
+        "ui": "textEdit",
+        "caption": "Codi postal",
+        "attributes": {
+          "name": "TXT_CodiPostal",
+          "w": "30mm",
+          "h": "13.5mm",
+          "locale": "es_ES"
+        },
+        "bind": {
+          "match": "none"
+        },
+        "defaultValue": "",
+        "itemLists": [],
+        "scripts": []
+      },
+      {
+        "path": "DATA[0].principal[0].sEmpresaIns[0].sAdreca[0].TXT_Poblacio[0]",
+        "name": "TXT_Poblacio",
+        "parentKind": "subform",
+        "parentPath": "DATA[0].principal[0].sEmpresaIns[0].sAdreca[0]",
+        "ui": "textEdit",
+        "caption": "Població",
+        "attributes": {
+          "name": "TXT_Poblacio",
+          "w": "80mm",
+          "h": "13.5mm"
+        },
+        "bind": {
+          "match": "none"
+        },
+        "defaultValue": "",
+        "itemLists": [],
+        "scripts": []
+      },
+      {
+        "path": "DATA[0].principal[0].sEmpresaIns[0].sAdreca[0].TXT_Tel[0]",
+        "name": "TXT_Tel",
+        "parentKind": "subform",
+        "parentPath": "DATA[0].principal[0].sEmpresaIns[0].sAdreca[0]",
+        "ui": "textEdit",
+        "caption": "Telèfon",
+        "attributes": {
+          "name": "TXT_Tel",
+          "w": "30mm",
+          "h": "13.5mm"
+        },
+        "bind": null,
+        "defaultValue": "",
+        "itemLists": [],
+        "scripts": []
+      },
+      {
+        "path": "DATA[0].principal[0].sEmpresaIns[0].sAdreca[0].TXT_Correu[0]",
+        "name": "TXT_Correu",
+        "parentKind": "subform",
+        "parentPath": "DATA[0].principal[0].sEmpresaIns[0].sAdreca[0]",
+        "ui": "textEdit",
+        "caption": "Correu electrònic",
+        "attributes": {
+          "name": "TXT_Correu",
+          "w": "59.999mm",
+          "h": "13.5mm"
+        },
+        "bind": null,
+        "defaultValue": "",
+        "itemLists": [],
+        "scripts": []
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sAdreca[0].CBO_TipusVia[0]",
+        "name": "CBO_TipusVia",
+        "parentKind": "subform",
+        "parentPath": "DATA[0].principal[0].sInstallacio[0].sAdreca[0]",
+        "ui": "choiceList",
+        "caption": "Tipus de via",
+        "attributes": {
+          "name": "CBO_TipusVia",
+          "w": "30.818mm",
+          "h": "13.5mm"
+        },
+        "bind": {
+          "match": "none"
+        },
+        "defaultValue": "",
+        "itemLists": [
+          {
+            "attributes": {},
+            "values": [
+              "",
+              "Apartament",
+              "Avinguda",
+              "Baixada",
+              "Barranc",
+              "Barri",
+              "Bloc",
+              "Camí",
+              "Carrer",
+              "Carreró",
+              "Carretera",
+              "Cases",
+              "Colònia",
+              "Costa",
+              "Disseminat",
+              "Edifici",
+              "Fageda",
+              "Glorieta",
+              "Gran Via",
+              "Grup",
+              "Lloc",
+              "Mercat",
+              "Parc",
+              "Partida",
+              "Passatge",
+              "Passeig",
+              "Plaça",
+              "Placeta",
+              "Poblat",
+              "Polígon",
+              "Prolongació",
+              "Pujada",
+              "Rambla",
+              "Ronda",
+              "Senda",
+              "Torrent",
+              "Travessera",
+              "Travessia",
+              "Urbanització",
+              "Via",
+              "Xalet"
+            ]
+          },
+          {
+            "attributes": {
+              "save": "1",
+              "presence": "hidden"
+            },
+            "values": [
+              "0",
+              "APA",
+              "AVI",
+              "BAI",
+              "BRC",
+              "BAR",
+              "BLO",
+              "CAM",
+              "CAR",
+              "CRO",
+              "CRT",
+              "CAS",
+              "COL",
+              "COS",
+              "DIS",
+              "EDI",
+              "FAG",
+              "GLO",
+              "GRV",
+              "GRU",
+              "LLO",
+              "MER",
+              "PAR",
+              "PTD",
+              "PTG",
+              "PAS",
+              "PLA",
+              "PCT",
+              "POB",
+              "POL",
+              "PRO",
+              "PUJ",
+              "RAM",
+              "RON",
+              "SEN",
+              "TOR",
+              "TRA",
+              "TVS",
+              "URB",
+              "VIA",
+              "XAL"
+            ]
+          }
+        ],
+        "scripts": []
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sAdreca[0].TXT_NomVia[0]",
+        "name": "TXT_NomVia",
+        "parentKind": "subform",
+        "parentPath": "DATA[0].principal[0].sInstallacio[0].sAdreca[0]",
+        "ui": "textEdit",
+        "caption": "Nom de la via",
+        "attributes": {
+          "name": "TXT_NomVia",
+          "w": "120mm",
+          "h": "13.5mm"
+        },
+        "bind": {
+          "match": "none"
+        },
+        "defaultValue": "",
+        "itemLists": [],
+        "scripts": []
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sAdreca[0].TXT_Num[0]",
+        "name": "TXT_Num",
+        "parentKind": "subform",
+        "parentPath": "DATA[0].principal[0].sInstallacio[0].sAdreca[0]",
+        "ui": "textEdit",
+        "caption": "Núm.",
+        "attributes": {
+          "name": "TXT_Num",
+          "w": "19.181mm",
+          "h": "13.5mm"
+        },
+        "bind": null,
+        "defaultValue": "",
+        "itemLists": [],
+        "scripts": []
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sAdreca[0].TXT_Bloc[0]",
+        "name": "TXT_Bloc",
+        "parentKind": "subform",
+        "parentPath": "DATA[0].principal[0].sInstallacio[0].sAdreca[0]",
+        "ui": "textEdit",
+        "caption": "Bloc",
+        "attributes": {
+          "name": "TXT_Bloc",
+          "h": "13.5mm",
+          "w": "35mm"
+        },
+        "bind": {
+          "match": "none"
+        },
+        "defaultValue": "",
+        "itemLists": [],
+        "scripts": []
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sAdreca[0].TXT_Escala[0]",
+        "name": "TXT_Escala",
+        "parentKind": "subform",
+        "parentPath": "DATA[0].principal[0].sInstallacio[0].sAdreca[0]",
+        "ui": "textEdit",
+        "caption": "Escala",
+        "attributes": {
+          "name": "TXT_Escala",
+          "h": "13.5mm",
+          "w": "35mm"
+        },
+        "bind": {
+          "match": "none"
+        },
+        "defaultValue": "",
+        "itemLists": [],
+        "scripts": []
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sAdreca[0].TXT_Pis[0]",
+        "name": "TXT_Pis",
+        "parentKind": "subform",
+        "parentPath": "DATA[0].principal[0].sInstallacio[0].sAdreca[0]",
+        "ui": "textEdit",
+        "caption": "Pis",
+        "attributes": {
+          "name": "TXT_Pis",
+          "h": "13.5mm",
+          "w": "35mm"
+        },
+        "bind": {
+          "match": "none"
+        },
+        "defaultValue": "",
+        "itemLists": [],
+        "scripts": []
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sAdreca[0].TXT_Porta[0]",
+        "name": "TXT_Porta",
+        "parentKind": "subform",
+        "parentPath": "DATA[0].principal[0].sInstallacio[0].sAdreca[0]",
+        "ui": "textEdit",
+        "caption": "Porta",
+        "attributes": {
+          "name": "TXT_Porta",
+          "h": "13.5mm",
+          "w": "34.9mm"
+        },
+        "bind": {
+          "match": "none"
+        },
+        "defaultValue": "",
+        "itemLists": [],
+        "scripts": []
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sAdreca[0].TXT_CodiPostal[0]",
+        "name": "TXT_CodiPostal",
+        "parentKind": "subform",
+        "parentPath": "DATA[0].principal[0].sInstallacio[0].sAdreca[0]",
+        "ui": "textEdit",
+        "caption": "Codi postal",
+        "attributes": {
+          "name": "TXT_CodiPostal",
+          "w": "30mm",
+          "h": "13.5mm",
+          "locale": "es_ES"
+        },
+        "bind": {
+          "match": "none"
+        },
+        "defaultValue": "",
+        "itemLists": [],
+        "scripts": []
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sAdreca[0].TXT_Poblacio[0]",
+        "name": "TXT_Poblacio",
+        "parentKind": "subform",
+        "parentPath": "DATA[0].principal[0].sInstallacio[0].sAdreca[0]",
+        "ui": "textEdit",
+        "caption": "Població",
+        "attributes": {
+          "name": "TXT_Poblacio",
+          "w": "80mm",
+          "h": "13.5mm"
+        },
+        "bind": {
+          "match": "none"
+        },
+        "defaultValue": "",
+        "itemLists": [],
+        "scripts": []
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sAdreca[0].TXT_Tel[0]",
+        "name": "TXT_Tel",
+        "parentKind": "subform",
+        "parentPath": "DATA[0].principal[0].sInstallacio[0].sAdreca[0]",
+        "ui": "textEdit",
+        "caption": "Telèfon",
+        "attributes": {
+          "name": "TXT_Tel",
+          "w": "30mm",
+          "h": "13.5mm"
+        },
+        "bind": null,
+        "defaultValue": "",
+        "itemLists": [],
+        "scripts": []
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sAdreca[0].TXT_Correu[0]",
+        "name": "TXT_Correu",
+        "parentKind": "subform",
+        "parentPath": "DATA[0].principal[0].sInstallacio[0].sAdreca[0]",
+        "ui": "textEdit",
+        "caption": "Correu electrònic",
+        "attributes": {
+          "name": "TXT_Correu",
+          "w": "59.999mm",
+          "h": "13.5mm"
+        },
+        "bind": null,
+        "defaultValue": "",
+        "itemLists": [],
+        "scripts": []
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sTipus[0].RB_TipusActuacio[0].CHK_Nova[0]",
+        "name": "CHK_Nova",
+        "parentKind": "exclGroup",
+        "parentPath": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sTipus[0].RB_TipusActuacio[0]",
+        "ui": "checkButton",
+        "caption": "Nova",
+        "attributes": {
+          "w": "20.988mm",
+          "h": "6mm",
+          "name": "CHK_Nova"
+        },
+        "bind": null,
+        "defaultValue": "",
+        "itemLists": [
+          {
+            "attributes": {},
+            "values": [
+              "NOVA"
+            ]
+          }
+        ],
+        "scripts": []
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sTipus[0].RB_TipusActuacio[0].CHK_Ampliacio[0]",
+        "name": "CHK_Ampliacio",
+        "parentKind": "exclGroup",
+        "parentPath": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sTipus[0].RB_TipusActuacio[0]",
+        "ui": "checkButton",
+        "caption": "Ampliació",
+        "attributes": {
+          "w": "26.493mm",
+          "h": "6mm",
+          "name": "CHK_Ampliacio",
+          "x": "20.988mm"
+        },
+        "bind": null,
+        "defaultValue": "",
+        "itemLists": [
+          {
+            "attributes": {},
+            "values": [
+              "AMPLI"
+            ]
+          }
+        ],
+        "scripts": []
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sTipus[0].RB_TipusActuacio[0].CHK_Modificacio[0]",
+        "name": "CHK_Modificacio",
+        "parentKind": "exclGroup",
+        "parentPath": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sTipus[0].RB_TipusActuacio[0]",
+        "ui": "checkButton",
+        "caption": "Modificació o reforma",
+        "attributes": {
+          "w": "45.99mm",
+          "h": "6mm",
+          "name": "CHK_Modificacio",
+          "x": "47.481mm"
+        },
+        "bind": null,
+        "defaultValue": "",
+        "itemLists": [
+          {
+            "attributes": {},
+            "values": [
+              "MODIF"
+            ]
+          }
+        ],
+        "scripts": []
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sTipus[0].TXT_CUPS[0]",
+        "name": "TXT_CUPS",
+        "parentKind": "subform",
+        "parentPath": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sTipus[0]",
+        "ui": "textEdit",
+        "caption": "CUPS",
+        "attributes": {
+          "name": "TXT_CUPS",
+          "w": "75.981mm",
+          "h": "6mm"
+        },
+        "bind": {
+          "match": "none"
+        },
+        "defaultValue": "",
+        "itemLists": [],
+        "scripts": []
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sTipus[0].SubFormAmplMod[0].DDLAmpliaMod[0]",
+        "name": "DDLAmpliaMod",
+        "parentKind": "subform",
+        "parentPath": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sTipus[0].SubFormAmplMod[0]",
+        "ui": "choiceList",
+        "caption": "L'ampliació/modificació supera el 50% de la potència de la instal·lació?",
+        "attributes": {
+          "name": "DDLAmpliaMod",
+          "w": "106.467mm",
+          "h": "9mm",
+          "y": "0.452mm",
+          "presence": "hidden"
+        },
+        "bind": null,
+        "defaultValue": "",
+        "itemLists": [
+          {
+            "attributes": {
+              "save": "1"
+            },
+            "values": [
+              "Sí",
+              "No"
+            ]
+          }
+        ],
+        "scripts": []
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].RB_Requisits[0].OPT_P1[0]",
+        "name": "OPT_P1",
+        "parentKind": "exclGroup",
+        "parentPath": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].RB_Requisits[0]",
+        "ui": "checkButton",
+        "caption": "Classe P1",
+        "attributes": {
+          "w": "28mm",
+          "h": "6mm",
+          "name": "OPT_P1"
+        },
+        "bind": null,
+        "defaultValue": "",
+        "itemLists": [
+          {
+            "attributes": {},
+            "values": [
+              "P1"
+            ]
+          }
+        ],
+        "scripts": [
+          "//+ GENERATED - DO NOT EDIT (ID:BBF68099-697C-4323-B8C4-34914CE24180 CRC:2131758502) //+ Type: Action //+ Result3: SetFieldValue(\"$Node3\",\"tonull\",\"\") //+ Result2: SetPresence(\"$Node3\",\"hidden\") //+ Result1: SetPresence(\"$Node2\",\"visible\") //+ Node3: DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sP2[0].TXT_P2[0] //+ Node2: DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sP1[0].TXT_P1[0] //+ Node1: DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].RB_Requisits[0].OPT_P1[0] //+ Condition1: RadioButton(\"$Node1\",\"click\") //+ ActionName: OPT_P1.click this.resolveNode(\"sP1.TXT_P1\").presence = \"visible\"; this.resolveNode(\"sP2.TXT_P2\").presence = \"hidden\"; this.resolveNode(\"sP2.TXT_P2\").rawValue = null; //-"
+        ]
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].RB_Requisits[0].OPT_P2[0]",
+        "name": "OPT_P2",
+        "parentKind": "exclGroup",
+        "parentPath": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].RB_Requisits[0]",
+        "ui": "checkButton",
+        "caption": "Classe P2",
+        "attributes": {
+          "w": "28mm",
+          "h": "6mm",
+          "name": "OPT_P2"
+        },
+        "bind": null,
+        "defaultValue": "",
+        "itemLists": [
+          {
+            "attributes": {},
+            "values": [
+              "P2"
+            ]
+          }
+        ],
+        "scripts": [
+          "//+ GENERATED - DO NOT EDIT (ID:E1CCCF04-348A-4767-B26C-8F5A460ACEDD CRC:1112853842) //+ Type: Action //+ Result3: SetFieldValue(\"$Node3\",\"tonull\",\"\") //+ Result2: SetPresence(\"$Node3\",\"hidden\") //+ Result1: SetPresence(\"$Node2\",\"visible\") //+ Node3: DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sP1[0].TXT_P1[0] //+ Node2: DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sP2[0].TXT_P2[0] //+ Node1: DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].RB_Requisits[0].OPT_P2[0] //+ Condition1: RadioButton(\"$Node1\",\"click\") //+ ActionName: OPT_P2.click this.resolveNode(\"sP2.TXT_P2\").presence = \"visible\"; this.resolveNode(\"sP1.TXT_P1\").presence = \"hidden\"; this.resolveNode(\"sP1.TXT_P1\").rawValue = null; //-"
+        ]
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].RB_Requisits[0].OPT_Memoria[0]",
+        "name": "OPT_Memoria",
+        "parentKind": "exclGroup",
+        "parentPath": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].RB_Requisits[0]",
+        "ui": "checkButton",
+        "caption": "Memòria tècnica de disseny",
+        "attributes": {
+          "w": "47.968mm",
+          "h": "6mm",
+          "name": "OPT_Memoria"
+        },
+        "bind": null,
+        "defaultValue": "",
+        "itemLists": [
+          {
+            "attributes": {},
+            "values": [
+              "Memoria"
+            ]
+          }
+        ],
+        "scripts": [
+          "//+ GENERATED - DO NOT EDIT (ID:02CAF4C0-D0A4-4435-8ED9-FD746851643C CRC:1947778169) //+ Type: Action //+ Result2: SetPresence(\"$Node3\",\"hidden\") //+ Result1: SetPresence(\"$Node2\",\"hidden\") //+ Node3: DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sP2[0].TXT_P2[0] //+ Node2: DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sP1[0].TXT_P1[0] //+ Node1: DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].RB_Requisits[0].OPT_Memoria[0] //+ Condition1: RadioButton(\"$Node1\",\"click\") //+ ActionName: OPT_Memoria.click this.resolveNode(\"sP1.TXT_P1\").presence = \"hidden\"; this.resolveNode(\"sP2.TXT_P2\").presence = \"hidden\"; //-"
+        ]
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sP1[0].TXT_P1[0]",
+        "name": "TXT_P1",
+        "parentKind": "subform",
+        "parentPath": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sP1[0]",
+        "ui": "choiceList",
+        "caption": "",
+        "attributes": {
+          "name": "TXT_P1",
+          "w": "169.999mm",
+          "h": "6mm",
+          "presence": "hidden"
+        },
+        "bind": {
+          "match": "none"
+        },
+        "defaultValue": "",
+        "itemLists": [
+          {
+            "attributes": {
+              "save": "1"
+            },
+            "values": [
+              "a) Instal·lacions industrials amb una potència màxima admissible superior a 100 kW",
+              "b) Locals de pública concurrència",
+              "c) Locals amb risc d'incendi o explosió, de classe I, excepte aparcaments i estacionaments de menys de 25 places.",
+              "d) Locals mullats P > 25 kW",
+              "e) Piscines P > 10 kW",
+              "f) Sales d'operacions quirúrgiques i sales d'intervenció",
+              "g) Instal·lacions d'enllumenat exterior P>5kW",
+              "h) Instal·lacions comunes d’edificis destinats a habitatges de 20 subministraments o més i/o més de 100 kW per CGP",
+              "i1) Instal·lacions corresponents a les infraestructures per a la recàrrega del vehicle elèctric (P>50 kW)",
+              "i2) Instal·lacions de recàrrega de vehicle elèctric ubicades a l'exterior (P>10kW)",
+              "i3) Instal·lacions que incloguin estacions de recàrrega previstes pel mode de càrrega 4"
+            ]
+          }
+        ],
+        "scripts": []
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sP2[0].TXT_P2[0]",
+        "name": "TXT_P2",
+        "parentKind": "subform",
+        "parentPath": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sP2[0]",
+        "ui": "choiceList",
+        "caption": "",
+        "attributes": {
+          "name": "TXT_P2",
+          "w": "169.999mm",
+          "h": "6mm",
+          "presence": "hidden"
+        },
+        "bind": {
+          "match": "none"
+        },
+        "defaultValue": "",
+        "itemLists": [
+          {
+            "attributes": {
+              "save": "1"
+            },
+            "values": [
+              "a) Instal·lacions corresponents a indústries, en general 20 kW>P<=100 kW",
+              "b1) Locals humits, amb pols o amb risc de corrosió (P>10 kW)",
+              "b2) Bombes d’extracció o elevació d’aigua, siguin industrials o no (P > 10 kW)",
+              "c1) Locals mullats (P > 10 kW)",
+              "c2) Generadors i convertidors (P > 10 kW)",
+              "c3) Conductors aïllats per caldejament, exclosos els habitatges (P > 10 kW i P<25 kW)",
+              "d1) Instal·lacions de caràcter temporal per a alimentació de maquinària d'obres de construcció (P > 50 kW)",
+              "d2) Instal·lacions de caràcter temporal en locals o emplaçaments oberts (P > 50 kW)",
+              "e) Edificis destinats a oficines, i locals comercials que no tinguin la consideració de pública concurrència amb més de 100 kW de potència per CGP",
+              "f ) Les corresponents a habitatges unifamiliars P > 50 kW",
+              "g) Aparcaments o estacionaments que requereixen ventilació forçada (Menys de 25 places)",
+              "h) Aparcaments o estacionaments amb ventilació natural (Més de 5 places i menys de 25 places)",
+              "j1) Línies de baixa tensió amb suports comuns amb les d'alta tensió",
+              "j2) Màquines d'elevació i transport",
+              "j3) Instal·lacions que utilitzin tensions especials",
+              "j4) Instal·lacions destinades a rètols lluminosos, llevat que es considerin instal·lacions de baixa tensió, segons el que estableix la ITC-BT 44",
+              "j5) Tanques elèctriques",
+              "n) Instal·lacions corresponents a piscines i fonts P > 5 kW, piscines fins a 10 kW",
+              "o) locals sense risc específic amb una potència màxima admissible >100 kW"
+            ]
+          }
+        ],
+        "scripts": []
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].TXT_Us[0]",
+        "name": "TXT_Us",
+        "parentKind": "subform",
+        "parentPath": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0]",
+        "ui": "choiceList",
+        "caption": "Ús de la instal·lació",
+        "attributes": {
+          "name": "TXT_Us",
+          "w": "169.999mm",
+          "h": "13.5mm"
+        },
+        "bind": {
+          "match": "none"
+        },
+        "defaultValue": "",
+        "itemLists": [
+          {
+            "attributes": {},
+            "values": [
+              "a) Instal·lacions industrials",
+              "b) Instal·lacions temporals per a obres segons l'ITC-BT-33 del REBT",
+              "d) Instal·lacions d'enllaç",
+              "e) Instal·lacions de serveis comuns d'edificis",
+              "f) Instal·lacions d'habitatges",
+              "g) Instal·lacions en locals d'espectacles i activitats recreatives amb subclassificació d'acord amb l'ITC-BT-28",
+              "h) Instal·lacions en locals de reunió, treball i usos sanitaris amb subclassificació d'acord amb l'ITC-BT-28",
+              "i) Instal·lacions de recàrrega de vehicles elèctrics",
+              "j) Instal·lacions en aparcaments i estacionaments",
+              "k) Instal·lacions d'enllumenat exterior",
+              "l) Instal·lacions generadores per autoconsum",
+              "m) Instal·lacions d'oficines sense presència de públic",
+              "n) Instal·lacions generadores",
+              "o) Altres usos"
+            ]
+          },
+          {
+            "attributes": {
+              "save": "1",
+              "presence": "hidden"
+            },
+            "values": [
+              "1",
+              "2",
+              "3",
+              "4",
+              "5",
+              "g",
+              "h",
+              "8",
+              "9",
+              "10",
+              "11",
+              "12",
+              "13",
+              "14"
+            ]
+          }
+        ],
+        "scripts": [
+          "scoUs.mostraG (); scoUs.mostraH (); scoUs.mostraAmaga ();",
+          "scoUs.mostraG (); scoUs.mostraH (); scoUs.mostraAmaga ();",
+          "//+ GENERATED - DO NOT EDIT (ID:E678D046-45F1-4875-8BE8-09CBE6119F9B CRC:767232942) //+ Type: Action //+ Result6: SetFieldValue(\"$Node4\",\"tonull\",\"\") //+ Result5: SetFieldValue(\"$Node3\",\"tonull\",\"\") //+ Result4: SetFieldValue(\"$Node5\",\"tonull\",\"\") //+ Result3: SetPresence(\"$Node4\",\"hidden\") //+ Result2: SetPresence(\"$Node3\",\"hidden\") //+ Result1: SetPresence(\"$Node2\",\"hidden\") //+ Node5: DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].AltresUsos[0].AltresUsos[0] //+ Node4: DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sH[0].TXT_H[0] //+ Node3: DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sG[0].TXT_G[0] //+ Node2: DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].AltresUsos[0] //+ Node1: DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].TXT_Us[0] //+ Condition1: ListField(\"$Node1\",\"changed\",\"\") //+ ActionName: TXT_Us.change this.resolveNode(\"AltresUsos\").presence = \"hidden\"; this.resolveNode(\"sG.TXT_G\").presence = \"hidden\"; this.resolveNode(\"sH.TXT_H\").presence = \"hidden\"; this.resolveNode(\"AltresUsos.AltresUsos\").rawValue = null; this.resolveNode(\"sG.TXT_G\").rawValue = null; this.resolveNode(\"sH.TXT_H\").rawValue = null; //- //+ GENERATED - DO NOT EDIT (ID:8F140299-92CC-4B18-91D0-C134706D1505 CRC:2541450608) //+ Type: Action //+ Result1: SetPresence(\"$Node2\",\"visible\") //+ Node2: DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].AltresUsos[0] //+ Node1: DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].TXT_Us[0] //+ Condition1: ListField(\"$Node1\",\"textselected\",\"14\") //+ ActionName: TXT_Us.change if ($.boundItem(xfa.event.newText) == \"14\") { this.resolveNode(\"AltresUsos\").presence = \"visible\"; } //- //+ GENERATED - DO NOT EDIT (ID:C970B9FB-BEC5-475F-AF84-BE9D7DC17CBB CRC:2222961423) //+ Type: Action //+ Result3: SetFieldValue(\"$Node3\",\"tonull\",\"\") //+ Result2: SetPresence(\"$Node3\",\"hidden\") //+ Result1: SetPresence(\"$Node2\",\"visible\") //+ Node3: DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sG[0].TXT_G[0] //+ Node2: DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sH[0].TXT_H[0] //+ Node1: DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].TXT_Us[0] //+ Condition1: ListField(\"$Node1\",\"textselected\",\"h\") //+ ActionName: TXT_Us.change if ($.boundItem(xfa.event.newText) == \"h\") { this.resolveNode(\"sH.TXT_H\").presence = \"visible\"; this.resolveNode(\"sG.TXT_G\").presence = \"hidden\"; this.resolveNode(\"sG.TXT_G\").rawValue = null; } //- //+ GENERATED - DO NOT EDIT (ID:8168C567-6A19-4E5A-8D5F-753B4837DE44 CRC:2690460748) //+ Type: Action //+ Result3: SetFieldValue(\"$Node3\",\"tonull\",\"\") //+ Result2: SetPresence(\"$Node3\",\"hidden\") //+ Result1: SetPresence(\"$Node2\",\"visible\") //+ Node3: DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sH[0].TXT_H[0] //+ Node2: DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sG[0].TXT_G[0] //+ Node1: DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].TXT_Us[0] //+ Condition1: ListField(\"$Node1\",\"textselected\",\"g\") //+ ActionName: TXT_Us.change if ($.boundItem(xfa.event.newText) == \"g\") { this.resolveNode(\"sG.TXT_G\").presence = \"visible\"; this.resolveNode(\"sH.TXT_H\").presence = \"hidden\"; this.resolveNode(\"sH.TXT_H\").rawValue = null; } //- scoUs.mostraG (); scoUs.mostraH (); scoUs.mostraAmaga ();"
+        ]
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].AltresUsos[0].AltresUsos[0]",
+        "name": "AltresUsos",
+        "parentKind": "subform",
+        "parentPath": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].AltresUsos[0]",
+        "ui": "textEdit",
+        "caption": "Especifiqueu quin ús",
+        "attributes": {
+          "name": "AltresUsos",
+          "w": "169.952mm",
+          "h": "12.5mm"
+        },
+        "bind": {
+          "match": "none"
+        },
+        "defaultValue": "",
+        "itemLists": [],
+        "scripts": []
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sG[0].TXT_G[0]",
+        "name": "TXT_G",
+        "parentKind": "subform",
+        "parentPath": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sG[0]",
+        "ui": "choiceList",
+        "caption": "Especifiqueu quin ús",
+        "attributes": {
+          "name": "TXT_G",
+          "w": "169.999mm",
+          "h": "13.5mm",
+          "presence": "hidden"
+        },
+        "bind": {
+          "match": "none"
+        },
+        "defaultValue": "",
+        "itemLists": [
+          {
+            "attributes": {
+              "save": "1"
+            },
+            "values": [
+              "g1) Cine",
+              "g2) Teatre",
+              "g3) Auditori",
+              "g4) Estadi",
+              "g5) Pavelló esportiu",
+              "g6) Plaça de toros",
+              "g7) Hipòdrom",
+              "g8) Parc d'atraccions o fira fixa",
+              "g9) Sala de festes o discoteca",
+              "g10) Sala de jocs d'atzar"
+            ]
+          }
+        ],
+        "scripts": []
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sH[0].TXT_H[0]",
+        "name": "TXT_H",
+        "parentKind": "subform",
+        "parentPath": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sH[0]",
+        "ui": "choiceList",
+        "caption": "Especifiqueu quin ús",
+        "attributes": {
+          "name": "TXT_H",
+          "w": "169.999mm",
+          "h": "13.5mm",
+          "presence": "hidden"
+        },
+        "bind": {
+          "match": "none"
+        },
+        "defaultValue": "",
+        "itemLists": [
+          {
+            "attributes": {
+              "save": "1"
+            },
+            "values": [
+              "h1) Temple",
+              "h2) Museu",
+              "h3) Sales de conferències i congressos",
+              "h4) Casino",
+              "h5) Hotel, hostal",
+              "h6) Bar, cafeteria, restaurant o similar",
+              "h7) Zones comunes en agrupacions d'establiments comercials",
+              "h8) Aeroport, estació de viatgers",
+              "h9) Estacionaments públics tancats i coberts per a més de 5 vehicles",
+              "h10) Hospital, ambulatori o sanatori",
+              "h11) Asils i llars d'infants",
+              "h12) Biblioteca",
+              "h13) Centre d'ensenyament",
+              "h14) Consultori mèdics",
+              "h15) Establiment comercial",
+              "h16) Oficina amb presència de públic",
+              "h17) Residència d'estudiants",
+              "h18) Gimnàs",
+              "h19) Sala d'exposicions",
+              "h20) Centre cultural",
+              "h21) Club social o esportiu",
+              "h22) Altres locals de pública concurrència"
+            ]
+          }
+        ],
+        "scripts": []
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TXT_PotenciaMax[0]",
+        "name": "TXT_PotenciaMax",
+        "parentKind": "subform",
+        "parentPath": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0]",
+        "ui": "numericEdit",
+        "caption": "kW",
+        "attributes": {
+          "name": "TXT_PotenciaMax",
+          "w": "50.5mm",
+          "h": "6mm"
+        },
+        "bind": {
+          "match": "none"
+        },
+        "defaultValue": "",
+        "itemLists": [],
+        "scripts": []
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TXT_Calibre[0]",
+        "name": "TXT_Calibre",
+        "parentKind": "subform",
+        "parentPath": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0]",
+        "ui": "numericEdit",
+        "caption": "A",
+        "attributes": {
+          "name": "TXT_Calibre",
+          "w": "30mm",
+          "h": "6mm"
+        },
+        "bind": {
+          "match": "none"
+        },
+        "defaultValue": "",
+        "itemLists": [],
+        "scripts": []
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TXT_Tensio[0]",
+        "name": "TXT_Tensio",
+        "parentKind": "subform",
+        "parentPath": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0]",
+        "ui": "choiceList",
+        "caption": "",
+        "attributes": {
+          "name": "TXT_Tensio",
+          "w": "27.993mm",
+          "h": "6mm"
+        },
+        "bind": {
+          "match": "none"
+        },
+        "defaultValue": "",
+        "itemLists": [
+          {
+            "attributes": {
+              "save": "1"
+            },
+            "values": [
+              "230 V",
+              "3x230/400 V",
+              "Altra"
+            ]
+          }
+        ],
+        "scripts": [
+          "//+ GENERATED - DO NOT EDIT (ID:303833FF-A295-4157-B65E-BE6E09FDA8DA CRC:3715338924) //+ Type: Action //+ Result2: SetEnabled(\"$Node2\",\"readOnly\") //+ Result1: SetPresence(\"$Node2\",\"invisible\") //+ Node2: DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].InfoTensioAltre[0] //+ Node1: DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TXT_Tensio[0] //+ Condition1: ListField(\"$Node1\",\"textselected\",\"3x230/400 V\") //+ ActionName: TXT_Tensio.change400V if ($.boundItem(xfa.event.newText) == \"3x230/400 V\") { this.resolveNode(\"InfoTensioAltre\").presence = \"invisible\"; oTargetField = this.resolveNode(\"InfoTensioAltre\"); oTargetField.access = \"readOnly\"; } //- //+ GENERATED - DO NOT EDIT (ID:E96C8219-0584-4222-9FFD-C7D5C1C52338 CRC:436561559) //+ Type: Action //+ Result2: SetEnabled(\"$Node2\",\"readOnly\") //+ Result1: SetPresence(\"$Node2\",\"invisible\") //+ Node2: DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].InfoTensioAltre[0] //+ Node1: DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TXT_Tensio[0] //+ Condition1: ListField(\"$Node1\",\"textselected\",\"230 V\") //+ ActionName: TXT_Tensio.change230V if ($.boundItem(xfa.event.newText) == \"230 V\") { this.resolveNode(\"InfoTensioAltre\").presence = \"invisible\"; oTargetField = this.resolveNode(\"InfoTensioAltre\"); oTargetField.access = \"readOnly\"; } //- //+ GENERATED - DO NOT EDIT (ID:DA43FEAD-8ABB-49CE-BF9D-C2D6D2FF2789 CRC:2339220448) //+ Type: Action //+ Result2: SetEnabled(\"$Node2\",\"open\") //+ Result1: SetPresence(\"$Node2\",\"visible\") //+ Node2: DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].InfoTensioAltre[0] //+ Node1: DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TXT_Tensio[0] //+ Condition1: ListField(\"$Node1\",\"textselected\",\"Altra\") //+ ActionName: TXT_Tensio.changeAltre if ($.boundItem(xfa.event.newText) == \"Altra\") { this.resolveNode(\"InfoTensioAltre\").presence = \"visible\"; oTargetField = this.resolveNode(\"InfoTensioAltre\"); oTargetField.access = \"open\"; } //-"
+        ]
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].InfoTensioAltre[0]",
+        "name": "InfoTensioAltre",
+        "parentKind": "subform",
+        "parentPath": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0]",
+        "ui": "textEdit",
+        "caption": "",
+        "attributes": {
+          "name": "InfoTensioAltre",
+          "w": "36mm",
+          "h": "5.999mm",
+          "presence": "invisible",
+          "access": "protected"
+        },
+        "bind": null,
+        "defaultValue": "",
+        "itemLists": [],
+        "scripts": []
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TXT_IGM[0]",
+        "name": "TXT_IGM",
+        "parentKind": "subform",
+        "parentPath": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0]",
+        "ui": "numericEdit",
+        "caption": "A",
+        "attributes": {
+          "name": "TXT_IGM",
+          "w": "20mm",
+          "h": "6mm"
+        },
+        "bind": {
+          "match": "none"
+        },
+        "defaultValue": "",
+        "itemLists": [],
+        "scripts": []
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TXT_Circuits[0]",
+        "name": "TXT_Circuits",
+        "parentKind": "subform",
+        "parentPath": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0]",
+        "ui": "numericEdit",
+        "caption": "",
+        "attributes": {
+          "name": "TXT_Circuits",
+          "w": "22.975mm",
+          "h": "6mm"
+        },
+        "bind": {
+          "match": "none"
+        },
+        "defaultValue": "",
+        "itemLists": [],
+        "scripts": []
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TXT_SeccioLGA[0]",
+        "name": "TXT_SeccioLGA",
+        "parentKind": "subform",
+        "parentPath": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0]",
+        "ui": "numericEdit",
+        "caption": "mm2",
+        "attributes": {
+          "name": "TXT_SeccioLGA",
+          "w": "20mm",
+          "h": "6mm"
+        },
+        "bind": {
+          "match": "none"
+        },
+        "defaultValue": "",
+        "itemLists": [],
+        "scripts": []
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TXT_MaterialConductor[0]",
+        "name": "TXT_MaterialConductor",
+        "parentKind": "subform",
+        "parentPath": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0]",
+        "ui": "choiceList",
+        "caption": "",
+        "attributes": {
+          "name": "TXT_MaterialConductor",
+          "w": "20mm",
+          "h": "6mm"
+        },
+        "bind": {
+          "match": "none"
+        },
+        "defaultValue": "",
+        "itemLists": [
+          {
+            "attributes": {
+              "save": "1"
+            },
+            "values": [
+              "Coure",
+              "Alumini"
+            ]
+          }
+        ],
+        "scripts": []
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TXT_ResistenciaConductors[0]",
+        "name": "TXT_ResistenciaConductors",
+        "parentKind": "subform",
+        "parentPath": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0]",
+        "ui": "textEdit",
+        "caption": "MΩ",
+        "attributes": {
+          "name": "TXT_ResistenciaConductors",
+          "w": "36mm",
+          "h": "6mm"
+        },
+        "bind": {
+          "match": "none"
+        },
+        "defaultValue": "",
+        "itemLists": [],
+        "scripts": []
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TXT_UbicacioComptadors[0]",
+        "name": "TXT_UbicacioComptadors",
+        "parentKind": "subform",
+        "parentPath": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0]",
+        "ui": "choiceList",
+        "caption": "",
+        "attributes": {
+          "name": "TXT_UbicacioComptadors",
+          "w": "31.031mm",
+          "h": "6mm"
+        },
+        "bind": {
+          "match": "none"
+        },
+        "defaultValue": "",
+        "itemLists": [
+          {
+            "attributes": {
+              "save": "1"
+            },
+            "values": [
+              "Sala",
+              "Armari",
+              "Altra"
+            ]
+          }
+        ],
+        "scripts": []
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TXT_AillamentTerra[0]",
+        "name": "TXT_AillamentTerra",
+        "parentKind": "subform",
+        "parentPath": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0]",
+        "ui": "numericEdit",
+        "caption": "MΩ",
+        "attributes": {
+          "name": "TXT_AillamentTerra",
+          "w": "45mm",
+          "h": "6mm"
+        },
+        "bind": {
+          "match": "none"
+        },
+        "defaultValue": "",
+        "itemLists": [],
+        "scripts": []
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TXT_ResistenciaTerra[0]",
+        "name": "TXT_ResistenciaTerra",
+        "parentKind": "subform",
+        "parentPath": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0]",
+        "ui": "numericEdit",
+        "caption": "Ω",
+        "attributes": {
+          "name": "TXT_ResistenciaTerra",
+          "w": "48.5mm",
+          "h": "6mm"
+        },
+        "bind": {
+          "match": "none"
+        },
+        "defaultValue": "",
+        "itemLists": [],
+        "scripts": []
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TXT_Interruptor[0]",
+        "name": "TXT_Interruptor",
+        "parentKind": "subform",
+        "parentPath": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0]",
+        "ui": "textEdit",
+        "caption": "A",
+        "attributes": {
+          "name": "TXT_Interruptor",
+          "w": "26.5mm",
+          "h": "6mm"
+        },
+        "bind": {
+          "match": "none"
+        },
+        "defaultValue": "",
+        "itemLists": [],
+        "scripts": []
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TXT_TipusConnexio[0]",
+        "name": "TXT_TipusConnexio",
+        "parentKind": "subform",
+        "parentPath": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0]",
+        "ui": "choiceList",
+        "caption": "",
+        "attributes": {
+          "name": "TXT_TipusConnexio",
+          "w": "50.988mm",
+          "h": "6mm"
+        },
+        "bind": {
+          "match": "none"
+        },
+        "defaultValue": "",
+        "itemLists": [
+          {
+            "attributes": {
+              "save": "1"
+            },
+            "values": [
+              "Assistida",
+              "Interconnectada"
+            ]
+          }
+        ],
+        "scripts": []
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].RB_Subministrament[0].OPT_Si[0]",
+        "name": "OPT_Si",
+        "parentKind": "exclGroup",
+        "parentPath": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].RB_Subministrament[0]",
+        "ui": "checkButton",
+        "caption": "Sí",
+        "attributes": {
+          "w": "11.99mm",
+          "h": "6mm",
+          "name": "OPT_Si"
+        },
+        "bind": null,
+        "defaultValue": "",
+        "itemLists": [
+          {
+            "attributes": {},
+            "values": [
+              "P1"
+            ]
+          }
+        ],
+        "scripts": []
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].RB_Subministrament[0].OPT_No[0]",
+        "name": "OPT_No",
+        "parentKind": "exclGroup",
+        "parentPath": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].RB_Subministrament[0]",
+        "ui": "checkButton",
+        "caption": "No",
+        "attributes": {
+          "w": "16.686mm",
+          "h": "6mm",
+          "name": "OPT_No"
+        },
+        "bind": null,
+        "defaultValue": "",
+        "itemLists": [
+          {
+            "attributes": {},
+            "values": [
+              "P2"
+            ]
+          }
+        ],
+        "scripts": []
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TXT_Potencia[0]",
+        "name": "TXT_Potencia",
+        "parentKind": "subform",
+        "parentPath": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0]",
+        "ui": "numericEdit",
+        "caption": "kW",
+        "attributes": {
+          "name": "TXT_Potencia",
+          "w": "28.993mm",
+          "h": "6mm"
+        },
+        "bind": {
+          "match": "none"
+        },
+        "defaultValue": "",
+        "itemLists": [],
+        "scripts": []
+      },
+      {
+        "path": "DATA[0].principal[0].s9[0].NomCognomsInstalador[0]",
+        "name": "NomCognomsInstalador",
+        "parentKind": "subform",
+        "parentPath": "DATA[0].principal[0].s9[0]",
+        "ui": "textEdit",
+        "caption": "En/na",
+        "attributes": {
+          "name": "NomCognomsInstalador",
+          "w": "87.472mm",
+          "h": "6mm"
+        },
+        "bind": {
+          "match": "dataRef",
+          "ref": "Persona"
+        },
+        "defaultValue": "",
+        "itemLists": [],
+        "scripts": []
+      },
+      {
+        "path": "DATA[0].principal[0].s9[0].TXT_Observacions[0]",
+        "name": "TXT_Observacions",
+        "parentKind": "subform",
+        "parentPath": "DATA[0].principal[0].s9[0]",
+        "ui": "textEdit",
+        "caption": "",
+        "attributes": {
+          "name": "TXT_Observacions",
+          "w": "169.999mm",
+          "minH": "20mm"
+        },
+        "bind": {
+          "match": "none"
+        },
+        "defaultValue": "",
+        "itemLists": [],
+        "scripts": []
+      },
+      {
+        "path": "DATA[0].principal[0].s10[0].SignatureField1[0]",
+        "name": "SignatureField1",
+        "parentKind": "subform",
+        "parentPath": "DATA[0].principal[0].s10[0]",
+        "ui": "signature",
+        "caption": "",
+        "attributes": {
+          "name": "SignatureField1",
+          "y": "7.052mm",
+          "x": "0.993mm",
+          "w": "39.985mm",
+          "h": "16.496mm"
+        },
+        "bind": {
+          "match": "none"
+        },
+        "defaultValue": "",
+        "itemLists": [],
+        "scripts": []
+      }
+    ],
+    "exclusionGroups": [
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sTipus[0].RB_TipusActuacio[0]",
+        "members": [
+          "CHK_Nova",
+          "CHK_Ampliacio",
+          "CHK_Modificacio"
+        ]
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].RB_Requisits[0]",
+        "members": [
+          "OPT_P1",
+          "OPT_P2",
+          "OPT_Memoria"
+        ]
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].RB_Subministrament[0]",
+        "members": [
+          "OPT_Si",
+          "OPT_No"
+        ]
+      }
+    ],
+    "conditionalNodes": [
+      {
+        "path": "DATA[0].Page1[0].CurrentPage[0]",
+        "kind": "field",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].Page1[0].CurrentPage[0]",
+        "kind": "border",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].Page1[0].PageCount[0]",
+        "kind": "field",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].Page1[0].PageCount[0]",
+        "kind": "border",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].Titol[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].Titol[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].Titol[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sTitular[0].TXT_TipusSubstancies[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sTitular[0].TXT_TipusSubstancies[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sTitular[0].NomCognoms[0]",
+        "kind": "border",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sTitular[0].NomCognoms[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sTitular[0].NomCognoms[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sTitular[0].NIF[0]",
+        "kind": "border",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sTitular[0].NIF[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sTitular[0].NIF[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sTitular[0].NIF[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sTitular[0].CBO_TipusVia[0]",
+        "kind": "border",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sTitular[0].CBO_TipusVia[0]",
+        "kind": "items",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sTitular[0].CBO_TipusVia[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sTitular[0].CBO_TipusVia[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sTitular[0].CBO_TipusVia[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sTitular[0].TXT_NomVia[0]",
+        "kind": "border",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sTitular[0].TXT_NomVia[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sTitular[0].TXT_NomVia[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sTitular[0].TXT_NomVia[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sTitular[0].TXT_Num[0]",
+        "kind": "border",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sTitular[0].TXT_Num[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sTitular[0].TXT_Num[0]",
+        "kind": "corner",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sTitular[0].TXT_Num[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sTitular[0].TXT_Num[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sTitular[0].TXT_Bloc[0]",
+        "kind": "border",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sTitular[0].TXT_Bloc[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sTitular[0].TXT_Bloc[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sTitular[0].TXT_Bloc[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sTitular[0].TXT_Escala[0]",
+        "kind": "border",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sTitular[0].TXT_Escala[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sTitular[0].TXT_Escala[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sTitular[0].TXT_Escala[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sTitular[0].TXT_Pis[0]",
+        "kind": "border",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sTitular[0].TXT_Pis[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sTitular[0].TXT_Pis[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sTitular[0].TXT_Pis[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sTitular[0].TXT_Porta[0]",
+        "kind": "border",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sTitular[0].TXT_Porta[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sTitular[0].TXT_Porta[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sTitular[0].TXT_Porta[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sTitular[0].TXT_CodiPostal[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sTitular[0].TXT_CodiPostal[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sTitular[0].TXT_CodiPostal[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sTitular[0].TXT_Poblacio[0]",
+        "kind": "border",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sTitular[0].TXT_Poblacio[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sTitular[0].TXT_Poblacio[0]",
+        "kind": "corner",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sTitular[0].TXT_Poblacio[0]",
+        "kind": "corner",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sTitular[0].TXT_Tel[0]",
+        "kind": "border",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sTitular[0].TXT_Tel[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sTitular[0].TXT_Tel[0]",
+        "kind": "corner",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sTitular[0].TXT_Correu[0]",
+        "kind": "border",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sTitular[0].TXT_Correu[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sTitular[0].TXT_Correu[0]",
+        "kind": "corner",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sEmpresaIns[0].TXT_TipusSubstancies[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sEmpresaIns[0].TXT_TipusSubstancies[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sEmpresaIns[0].NomCognoms[0]",
+        "kind": "border",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sEmpresaIns[0].NomCognoms[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sEmpresaIns[0].NomCognoms[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sEmpresaIns[0].TXT_Rasic[0]",
+        "kind": "border",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sEmpresaIns[0].TXT_Rasic[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sEmpresaIns[0].TXT_Rasic[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sEmpresaIns[0].TXT_Rasic[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sEmpresaIns[0].NIF[0]",
+        "kind": "border",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sEmpresaIns[0].NIF[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sEmpresaIns[0].NIF[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sEmpresaIns[0].NIF[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sEmpresaIns[0].NomCognomsInstalador[0]",
+        "kind": "border",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sEmpresaIns[0].NomCognomsInstalador[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sEmpresaIns[0].NomCognomsInstalador[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sEmpresaIns[0].TXT_Categoria[0]",
+        "kind": "border",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sEmpresaIns[0].TXT_Categoria[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sEmpresaIns[0].TXT_Categoria[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sEmpresaIns[0].TXT_Categoria[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sEmpresaIns[0].DNIInstallador[0]",
+        "kind": "border",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sEmpresaIns[0].DNIInstallador[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sEmpresaIns[0].DNIInstallador[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sEmpresaIns[0].DNIInstallador[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sEmpresaIns[0].sAdreca[0].CBO_TipusVia[0]",
+        "kind": "border",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sEmpresaIns[0].sAdreca[0].CBO_TipusVia[0]",
+        "kind": "items",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sEmpresaIns[0].sAdreca[0].CBO_TipusVia[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sEmpresaIns[0].sAdreca[0].CBO_TipusVia[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sEmpresaIns[0].sAdreca[0].CBO_TipusVia[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sEmpresaIns[0].sAdreca[0].TXT_NomVia[0]",
+        "kind": "border",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sEmpresaIns[0].sAdreca[0].TXT_NomVia[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sEmpresaIns[0].sAdreca[0].TXT_NomVia[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sEmpresaIns[0].sAdreca[0].TXT_NomVia[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sEmpresaIns[0].sAdreca[0].TXT_Num[0]",
+        "kind": "border",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sEmpresaIns[0].sAdreca[0].TXT_Num[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sEmpresaIns[0].sAdreca[0].TXT_Num[0]",
+        "kind": "corner",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sEmpresaIns[0].sAdreca[0].TXT_Num[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sEmpresaIns[0].sAdreca[0].TXT_Num[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sEmpresaIns[0].sAdreca[0].TXT_Bloc[0]",
+        "kind": "border",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sEmpresaIns[0].sAdreca[0].TXT_Bloc[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sEmpresaIns[0].sAdreca[0].TXT_Bloc[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sEmpresaIns[0].sAdreca[0].TXT_Bloc[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sEmpresaIns[0].sAdreca[0].TXT_Escala[0]",
+        "kind": "border",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sEmpresaIns[0].sAdreca[0].TXT_Escala[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sEmpresaIns[0].sAdreca[0].TXT_Escala[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sEmpresaIns[0].sAdreca[0].TXT_Escala[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sEmpresaIns[0].sAdreca[0].TXT_Pis[0]",
+        "kind": "border",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sEmpresaIns[0].sAdreca[0].TXT_Pis[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sEmpresaIns[0].sAdreca[0].TXT_Pis[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sEmpresaIns[0].sAdreca[0].TXT_Pis[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sEmpresaIns[0].sAdreca[0].TXT_Porta[0]",
+        "kind": "border",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sEmpresaIns[0].sAdreca[0].TXT_Porta[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sEmpresaIns[0].sAdreca[0].TXT_Porta[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sEmpresaIns[0].sAdreca[0].TXT_Porta[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sEmpresaIns[0].sAdreca[0].TXT_CodiPostal[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sEmpresaIns[0].sAdreca[0].TXT_CodiPostal[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sEmpresaIns[0].sAdreca[0].TXT_CodiPostal[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sEmpresaIns[0].sAdreca[0].TXT_Poblacio[0]",
+        "kind": "border",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sEmpresaIns[0].sAdreca[0].TXT_Poblacio[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sEmpresaIns[0].sAdreca[0].TXT_Poblacio[0]",
+        "kind": "corner",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sEmpresaIns[0].sAdreca[0].TXT_Poblacio[0]",
+        "kind": "corner",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sEmpresaIns[0].sAdreca[0].TXT_Tel[0]",
+        "kind": "border",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sEmpresaIns[0].sAdreca[0].TXT_Tel[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sEmpresaIns[0].sAdreca[0].TXT_Tel[0]",
+        "kind": "corner",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sEmpresaIns[0].sAdreca[0].TXT_Correu[0]",
+        "kind": "border",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sEmpresaIns[0].sAdreca[0].TXT_Correu[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sEmpresaIns[0].sAdreca[0].TXT_Correu[0]",
+        "kind": "corner",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].Titol[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].Titol[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sAdreca[0].Subtitol[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sAdreca[0].Subtitol[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sAdreca[0].Subtitol[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sAdreca[0].CBO_TipusVia[0]",
+        "kind": "border",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sAdreca[0].CBO_TipusVia[0]",
+        "kind": "items",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sAdreca[0].CBO_TipusVia[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sAdreca[0].CBO_TipusVia[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sAdreca[0].CBO_TipusVia[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sAdreca[0].TXT_NomVia[0]",
+        "kind": "border",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sAdreca[0].TXT_NomVia[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sAdreca[0].TXT_NomVia[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sAdreca[0].TXT_NomVia[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sAdreca[0].TXT_Num[0]",
+        "kind": "border",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sAdreca[0].TXT_Num[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sAdreca[0].TXT_Num[0]",
+        "kind": "corner",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sAdreca[0].TXT_Num[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sAdreca[0].TXT_Num[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sAdreca[0].TXT_Bloc[0]",
+        "kind": "border",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sAdreca[0].TXT_Bloc[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sAdreca[0].TXT_Bloc[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sAdreca[0].TXT_Bloc[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sAdreca[0].TXT_Escala[0]",
+        "kind": "border",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sAdreca[0].TXT_Escala[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sAdreca[0].TXT_Escala[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sAdreca[0].TXT_Escala[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sAdreca[0].TXT_Pis[0]",
+        "kind": "border",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sAdreca[0].TXT_Pis[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sAdreca[0].TXT_Pis[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sAdreca[0].TXT_Pis[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sAdreca[0].TXT_Porta[0]",
+        "kind": "border",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sAdreca[0].TXT_Porta[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sAdreca[0].TXT_Porta[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sAdreca[0].TXT_Porta[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sAdreca[0].TXT_CodiPostal[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sAdreca[0].TXT_CodiPostal[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sAdreca[0].TXT_CodiPostal[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sAdreca[0].TXT_Poblacio[0]",
+        "kind": "border",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sAdreca[0].TXT_Poblacio[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sAdreca[0].TXT_Poblacio[0]",
+        "kind": "corner",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sAdreca[0].TXT_Poblacio[0]",
+        "kind": "corner",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sAdreca[0].TXT_Tel[0]",
+        "kind": "border",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sAdreca[0].TXT_Tel[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sAdreca[0].TXT_Tel[0]",
+        "kind": "corner",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sAdreca[0].TXT_Correu[0]",
+        "kind": "border",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sAdreca[0].TXT_Correu[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sAdreca[0].TXT_Correu[0]",
+        "kind": "corner",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].Subtitol1[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].Subtitol1[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sTipus[0].Text[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sTipus[0].Text[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sTipus[0].Text[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sTipus[0].Text[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sTipus[0].Text[0]",
+        "kind": "corner",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sTipus[0].Text[0]",
+        "kind": "corner",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sTipus[0].TXT_CUPS[0]",
+        "kind": "border",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sTipus[0].TXT_CUPS[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sTipus[0].TXT_CUPS[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sTipus[0].TXT_CUPS[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sTipus[0].SubFormAmplMod[0].DDLAmpliaMod[0]",
+        "kind": "field",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].TXT_DadesInstal[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].TXT_DadesInstal[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].TXT_DadesInstal[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].TXT_DadesInstal[0]",
+        "kind": "corner",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].TXT_DadesInstal[1]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].TXT_DadesInstal[1]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].TXT_DadesInstal[1]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].TXT_DadesInstal[1]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].TXT_DadesInstal[1]",
+        "kind": "corner",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].TXT_DadesInstal[1]",
+        "kind": "corner",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sP1[0].TXT_P1[0]",
+        "kind": "field",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sP1[0].TXT_P1[0]",
+        "kind": "border",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sP1[0].TXT_P1[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sP1[0].TXT_P1[0]",
+        "kind": "corner",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sP2[0].TXT_P2[0]",
+        "kind": "field",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sP2[0].TXT_P2[0]",
+        "kind": "border",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sP2[0].TXT_P2[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sP2[0].TXT_P2[0]",
+        "kind": "corner",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].TXT_Us[0]",
+        "kind": "border",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].TXT_Us[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].TXT_Us[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].TXT_Us[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].TXT_Us[0]",
+        "kind": "corner",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].TXT_Us[0]",
+        "kind": "items",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].AltresUsos[0]",
+        "kind": "subform",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].AltresUsos[0].AltresUsos[0]",
+        "kind": "border",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].AltresUsos[0].AltresUsos[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].AltresUsos[0].AltresUsos[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].AltresUsos[0].AltresUsos[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sG[0].TXT_G[0]",
+        "kind": "field",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sG[0].TXT_G[0]",
+        "kind": "border",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sG[0].TXT_G[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sG[0].TXT_G[0]",
+        "kind": "corner",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sH[0].TXT_H[0]",
+        "kind": "field",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sH[0].TXT_H[0]",
+        "kind": "border",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sH[0].TXT_H[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sH[0].TXT_H[0]",
+        "kind": "corner",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].Subtitol1[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].Subtitol1[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].Subtitol1[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].Subtitol1[0]",
+        "kind": "corner",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TXT_DadesInstal[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TXT_DadesInstal[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TXT_DadesInstal[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TXT_DadesInstal[0]",
+        "kind": "corner",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].Titol_PerTotesIns[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].Titol_PerTotesIns[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].Titol_PerTotesIns[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].Titol_PerTotesIns[0]",
+        "kind": "corner",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].Titol_InstalacionsEnllaç[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].Titol_InstalacionsEnllaç[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].Titol_InstalacionsEnllaç[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].Titol_InstalacionsEnllaç[0]",
+        "kind": "corner",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TextPotenciaMax[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TextPotenciaMax[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TextPotenciaMax[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TextPotenciaMax[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TextPotenciaMax[0]",
+        "kind": "corner",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TextPotenciaMax[0]",
+        "kind": "corner",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TXT_PotenciaMax[0]",
+        "kind": "border",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TXT_PotenciaMax[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TXT_PotenciaMax[0]",
+        "kind": "corner",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TextCalibre[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TextCalibre[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TextCalibre[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TextCalibre[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TextCalibre[0]",
+        "kind": "corner",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TextCalibre[0]",
+        "kind": "corner",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TXT_Calibre[0]",
+        "kind": "border",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TXT_Calibre[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TXT_Calibre[0]",
+        "kind": "corner",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].Blanc1[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].Blanc1[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].Blanc1[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].Blanc1[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].Blanc1[0]",
+        "kind": "corner",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].Blanc1[0]",
+        "kind": "corner",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TextTensio[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TextTensio[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TextTensio[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TextTensio[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TextTensio[0]",
+        "kind": "corner",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TextTensio[0]",
+        "kind": "corner",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TXT_Tensio[0]",
+        "kind": "border",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TXT_Tensio[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TXT_Tensio[0]",
+        "kind": "corner",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].InfoTensioAltre[0]",
+        "kind": "field",
+        "presence": "invisible"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].InfoTensioAltre[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].InfoTensioAltre[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].InfoTensioAltre[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].InfoTensioAltre[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].InfoTensioAltre[0]",
+        "kind": "corner",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].InfoTensioAltre[0]",
+        "kind": "corner",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].Blanc1[1]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].Blanc1[1]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].Blanc1[1]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].Blanc1[1]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].Blanc1[1]",
+        "kind": "corner",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].Blanc1[1]",
+        "kind": "corner",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].IGM[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].IGM[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].IGM[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].IGM[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].IGM[0]",
+        "kind": "corner",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].IGM[0]",
+        "kind": "corner",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TXT_IGM[0]",
+        "kind": "border",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TXT_IGM[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TXT_IGM[0]",
+        "kind": "corner",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TextCircuits[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TextCircuits[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TextCircuits[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TextCircuits[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TextCircuits[0]",
+        "kind": "corner",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TextCircuits[0]",
+        "kind": "corner",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TXT_Circuits[0]",
+        "kind": "border",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TXT_Circuits[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TXT_Circuits[0]",
+        "kind": "corner",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].Blanc1[2]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].Blanc1[2]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].Blanc1[2]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].Blanc1[2]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].Blanc1[2]",
+        "kind": "corner",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].Blanc1[2]",
+        "kind": "corner",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TextSeccioLGA[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TextSeccioLGA[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TextSeccioLGA[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TextSeccioLGA[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TextSeccioLGA[0]",
+        "kind": "corner",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TextSeccioLGA[0]",
+        "kind": "corner",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TXT_SeccioLGA[0]",
+        "kind": "border",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TXT_SeccioLGA[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TXT_SeccioLGA[0]",
+        "kind": "corner",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TexTMaterialConductor[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TexTMaterialConductor[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TexTMaterialConductor[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TexTMaterialConductor[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TexTMaterialConductor[0]",
+        "kind": "corner",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TexTMaterialConductor[0]",
+        "kind": "corner",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TXT_MaterialConductor[0]",
+        "kind": "border",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TXT_MaterialConductor[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TXT_MaterialConductor[0]",
+        "kind": "corner",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TextResistenciaConductors[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TextResistenciaConductors[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TextResistenciaConductors[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TextResistenciaConductors[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TextResistenciaConductors[0]",
+        "kind": "corner",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TextResistenciaConductors[0]",
+        "kind": "corner",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TXT_ResistenciaConductors[0]",
+        "kind": "border",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TXT_ResistenciaConductors[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TXT_ResistenciaConductors[0]",
+        "kind": "corner",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TextUbicacioComptadors[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TextUbicacioComptadors[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TextUbicacioComptadors[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TextUbicacioComptadors[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TextUbicacioComptadors[0]",
+        "kind": "corner",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TextUbicacioComptadors[0]",
+        "kind": "corner",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TXT_UbicacioComptadors[0]",
+        "kind": "border",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TXT_UbicacioComptadors[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TXT_UbicacioComptadors[0]",
+        "kind": "corner",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TextAillamentTerra[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TextAillamentTerra[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TextAillamentTerra[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TextAillamentTerra[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TextAillamentTerra[0]",
+        "kind": "corner",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TextAillamentTerra[0]",
+        "kind": "corner",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TXT_AillamentTerra[0]",
+        "kind": "border",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TXT_AillamentTerra[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TXT_AillamentTerra[0]",
+        "kind": "corner",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].Titol_InsGeneradores[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].Titol_InsGeneradores[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].Titol_InsGeneradores[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].Titol_InsGeneradores[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].Titol_InsGeneradores[0]",
+        "kind": "corner",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].Titol_InsGeneradores[0]",
+        "kind": "corner",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TextResistenciaTerra[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TextResistenciaTerra[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TextResistenciaTerra[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TextResistenciaTerra[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TextResistenciaTerra[0]",
+        "kind": "corner",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TextResistenciaTerra[0]",
+        "kind": "corner",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TXT_ResistenciaTerra[0]",
+        "kind": "border",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TXT_ResistenciaTerra[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TXT_ResistenciaTerra[0]",
+        "kind": "corner",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].Blanc1[3]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].Blanc1[3]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].Blanc1[3]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].Blanc1[3]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].Blanc1[3]",
+        "kind": "corner",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].Blanc1[3]",
+        "kind": "corner",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TextTecnologia[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TextTecnologia[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TextTecnologia[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TextTecnologia[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TextTecnologia[0]",
+        "kind": "corner",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TextTecnologia[0]",
+        "kind": "corner",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].Blanc1[4]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].Blanc1[4]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].Blanc1[4]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].Blanc1[4]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].Blanc1[4]",
+        "kind": "corner",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].Blanc1[4]",
+        "kind": "corner",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TexTInterruptor[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TexTInterruptor[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TexTInterruptor[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TexTInterruptor[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TexTInterruptor[0]",
+        "kind": "corner",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TexTInterruptor[0]",
+        "kind": "corner",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TXT_Interruptor[0]",
+        "kind": "border",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TXT_Interruptor[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TXT_Interruptor[0]",
+        "kind": "corner",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TextTipusConnexio[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TextTipusConnexio[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TextTipusConnexio[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TextTipusConnexio[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TextTipusConnexio[0]",
+        "kind": "corner",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TextTipusConnexio[0]",
+        "kind": "corner",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TXT_TipusConnexio[0]",
+        "kind": "border",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TXT_TipusConnexio[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TXT_TipusConnexio[0]",
+        "kind": "corner",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TextSubministrament[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TextSubministrament[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TextSubministrament[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TextSubministrament[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TextSubministrament[0]",
+        "kind": "corner",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TextSubministrament[0]",
+        "kind": "corner",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].RB_Subministrament[0].OPT_Si[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].RB_Subministrament[0].OPT_Si[0]",
+        "kind": "corner",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].RB_Subministrament[0].OPT_No[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].RB_Subministrament[0].OPT_No[0]",
+        "kind": "corner",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].Blanc1[5]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].Blanc1[5]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].Blanc1[5]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].Blanc1[5]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].Blanc1[5]",
+        "kind": "corner",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].Blanc1[5]",
+        "kind": "corner",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TextPotencia[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TextPotencia[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TextPotencia[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TextPotencia[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TextPotencia[0]",
+        "kind": "corner",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TextPotencia[0]",
+        "kind": "corner",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TXT_Potencia[0]",
+        "kind": "border",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TXT_Potencia[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TXT_Potencia[0]",
+        "kind": "corner",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].Blanc1[6]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].Blanc1[6]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].Blanc1[6]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].Blanc1[6]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].Blanc1[6]",
+        "kind": "corner",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].Blanc1[6]",
+        "kind": "corner",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].Blanc1[7]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].Blanc1[7]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].Blanc1[7]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].Blanc1[7]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].Blanc1[7]",
+        "kind": "corner",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].Blanc1[7]",
+        "kind": "corner",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].AclarimentGeneradores[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].AclarimentGeneradores[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].AclarimentGeneradores[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].AclarimentGeneradores[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].AclarimentGeneradores[0]",
+        "kind": "corner",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].AclarimentGeneradores[0]",
+        "kind": "corner",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].s6[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].s6[0]",
+        "kind": "corner",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].s8[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].s8[0]",
+        "kind": "corner",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].s9[0].TXT_Certificat[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].s9[0].TXT_Certificat[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].s9[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].s9[0]",
+        "kind": "corner",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].s9[0].NomCognomsInstalador[0]",
+        "kind": "border",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].s9[0].NomCognomsInstalador[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].s9[0].NomCognomsInstalador[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].s9[0].NomCognomsInstalador[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].s9[0].TXT1[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].s9[0].TXT1[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].s9[0].TXT1[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].s9[0].TXT3[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].s9[0].TXT3[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].s9[0].TXT3[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].s9[0].TXT3[0]",
+        "kind": "corner",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].s9[0].TXT_Titol[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].s9[0].TXT_Titol[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].s9[0].TXT_Observacions[0]",
+        "kind": "border",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].s10[0].TXT_Signatura[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].s10[0].TXT_Signatura[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].s10[0].TXT_Signatura[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].s10[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].s10[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      },
+      {
+        "path": "DATA[0].principal[0].s10[0]",
+        "kind": "edge",
+        "presence": "hidden"
+      }
+    ],
+    "scripts": [
+      {
+        "path": "DATA[0].Page1[0].CurrentPage[0].event__layout_ready[0]",
+        "event": "ready",
+        "contentType": "application/x-javascript",
+        "code": "this.rawValue = xfa.layout.page(this);\n"
+      },
+      {
+        "path": "DATA[0].Page1[0].PageCount[0].event__layout_ready[0]",
+        "event": "ready",
+        "contentType": "application/x-javascript",
+        "code": "this.rawValue = xfa.layout.pageCount();\n"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sTipus[0].RB_TipusActuacio[0].event__change[0]",
+        "event": "change",
+        "contentType": "application/x-javascript",
+        "code": "//+ GENERATED - DO NOT EDIT (ID:85F3B059-86FB-43A6-8184-8DC5ECC8571D CRC:530211023)\n//+ Type: Action\n//+ Result1: SetPresence(\"$Node2\",\"visible\")\n//+ Node2: DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sTipus[0].SubFormAmplMod[0].DDLAmpliaMod[0]\n//+ Node1: DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sTipus[0].RB_TipusActuacio[0]\n//+ Condition1: ExclGroup(\"$Node1\",\"notequalto\",\"NOVA\")\n//+ ActionName: activar\nif (this.rawValue != \"NOVA\") {\n  this.resolveNode(\"SubFormAmplMod.DDLAmpliaMod\").presence = \"visible\";\n}\n//-\n//+ GENERATED - DO NOT EDIT (ID:E1A709D8-B014-414C-B54E-A22A872D80A6 CRC:737647368)\n//+ Type: Action\n//+ Result1: SetPresence(\"$Node2\",\"hidden\")\n//+ Node2: DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sTipus[0].SubFormAmplMod[0].DDLAmpliaMod[0]\n//+ Node1: DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sTipus[0].RB_TipusActuacio[0]\n//+ Condition1: ExclGroup(\"$Node1\",\"equalto\",\"NOVA\")\n//+ ActionName: desactivar\nif (this.rawValue == \"NOVA\") {\n  this.resolveNode(\"SubFormAmplMod.DDLAmpliaMod\").presence = \"hidden\";\n}\n//-\n"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].RB_Requisits[0].OPT_P1[0].event__click[0]",
+        "event": "click",
+        "contentType": "application/x-javascript",
+        "code": "//+ GENERATED - DO NOT EDIT (ID:BBF68099-697C-4323-B8C4-34914CE24180 CRC:2131758502)\n//+ Type: Action\n//+ Result3: SetFieldValue(\"$Node3\",\"tonull\",\"\")\n//+ Result2: SetPresence(\"$Node3\",\"hidden\")\n//+ Result1: SetPresence(\"$Node2\",\"visible\")\n//+ Node3: DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sP2[0].TXT_P2[0]\n//+ Node2: DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sP1[0].TXT_P1[0]\n//+ Node1: DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].RB_Requisits[0].OPT_P1[0]\n//+ Condition1: RadioButton(\"$Node1\",\"click\")\n//+ ActionName: OPT_P1.click\nthis.resolveNode(\"sP1.TXT_P1\").presence = \"visible\";\nthis.resolveNode(\"sP2.TXT_P2\").presence = \"hidden\";\nthis.resolveNode(\"sP2.TXT_P2\").rawValue = null;\n//-\n"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].RB_Requisits[0].OPT_P2[0].event__click[0]",
+        "event": "click",
+        "contentType": "application/x-javascript",
+        "code": "//+ GENERATED - DO NOT EDIT (ID:E1CCCF04-348A-4767-B26C-8F5A460ACEDD CRC:1112853842)\n//+ Type: Action\n//+ Result3: SetFieldValue(\"$Node3\",\"tonull\",\"\")\n//+ Result2: SetPresence(\"$Node3\",\"hidden\")\n//+ Result1: SetPresence(\"$Node2\",\"visible\")\n//+ Node3: DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sP1[0].TXT_P1[0]\n//+ Node2: DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sP2[0].TXT_P2[0]\n//+ Node1: DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].RB_Requisits[0].OPT_P2[0]\n//+ Condition1: RadioButton(\"$Node1\",\"click\")\n//+ ActionName: OPT_P2.click\nthis.resolveNode(\"sP2.TXT_P2\").presence = \"visible\";\nthis.resolveNode(\"sP1.TXT_P1\").presence = \"hidden\";\nthis.resolveNode(\"sP1.TXT_P1\").rawValue = null;\n//-\n"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].RB_Requisits[0].OPT_Memoria[0].event__click[0]",
+        "event": "click",
+        "contentType": "application/x-javascript",
+        "code": "//+ GENERATED - DO NOT EDIT (ID:02CAF4C0-D0A4-4435-8ED9-FD746851643C CRC:1947778169)\n//+ Type: Action\n//+ Result2: SetPresence(\"$Node3\",\"hidden\")\n//+ Result1: SetPresence(\"$Node2\",\"hidden\")\n//+ Node3: DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sP2[0].TXT_P2[0]\n//+ Node2: DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sP1[0].TXT_P1[0]\n//+ Node1: DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].RB_Requisits[0].OPT_Memoria[0]\n//+ Condition1: RadioButton(\"$Node1\",\"click\")\n//+ ActionName: OPT_Memoria.click\nthis.resolveNode(\"sP1.TXT_P1\").presence = \"hidden\";\nthis.resolveNode(\"sP2.TXT_P2\").presence = \"hidden\";\n//-\n"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].TXT_Us[0].event__initialize[0]",
+        "event": "initialize",
+        "contentType": "application/x-javascript",
+        "code": "\nscoUs.mostraG ();\nscoUs.mostraH ();\nscoUs.mostraAmaga ();\n"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].TXT_Us[0].event__exit[0]",
+        "event": "exit",
+        "contentType": "application/x-javascript",
+        "code": "scoUs.mostraG ();\nscoUs.mostraH ();\nscoUs.mostraAmaga ();\n\n"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].TXT_Us[0].event__change[0]",
+        "event": "change",
+        "contentType": "application/x-javascript",
+        "code": "//+ GENERATED - DO NOT EDIT (ID:E678D046-45F1-4875-8BE8-09CBE6119F9B CRC:767232942)\n//+ Type: Action\n//+ Result6: SetFieldValue(\"$Node4\",\"tonull\",\"\")\n//+ Result5: SetFieldValue(\"$Node3\",\"tonull\",\"\")\n//+ Result4: SetFieldValue(\"$Node5\",\"tonull\",\"\")\n//+ Result3: SetPresence(\"$Node4\",\"hidden\")\n//+ Result2: SetPresence(\"$Node3\",\"hidden\")\n//+ Result1: SetPresence(\"$Node2\",\"hidden\")\n//+ Node5: DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].AltresUsos[0].AltresUsos[0]\n//+ Node4: DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sH[0].TXT_H[0]\n//+ Node3: DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sG[0].TXT_G[0]\n//+ Node2: DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].AltresUsos[0]\n//+ Node1: DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].TXT_Us[0]\n//+ Condition1: ListField(\"$Node1\",\"changed\",\"\")\n//+ ActionName: TXT_Us.change\nthis.resolveNode(\"AltresUsos\").presence = \"hidden\";\nthis.resolveNode(\"sG.TXT_G\").presence = \"hidden\";\nthis.resolveNode(\"sH.TXT_H\").presence = \"hidden\";\nthis.resolveNode(\"AltresUsos.AltresUsos\").rawValue = null;\nthis.resolveNode(\"sG.TXT_G\").rawValue = null;\nthis.resolveNode(\"sH.TXT_H\").rawValue = null;\n//-\n//+ GENERATED - DO NOT EDIT (ID:8F140299-92CC-4B18-91D0-C134706D1505 CRC:2541450608)\n//+ Type: Action\n//+ Result1: SetPresence(\"$Node2\",\"visible\")\n//+ Node2: DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].AltresUsos[0]\n//+ Node1: DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].TXT_Us[0]\n//+ Condition1: ListField(\"$Node1\",\"textselected\",\"14\")\n//+ ActionName: TXT_Us.change\nif ($.boundItem(xfa.event.newText) == \"14\") {\n  this.resolveNode(\"AltresUsos\").presence = \"visible\";\n}\n//-\n//+ GENERATED - DO NOT EDIT (ID:C970B9FB-BEC5-475F-AF84-BE9D7DC17CBB CRC:2222961423)\n//+ Type: Action\n//+ Result3: SetFieldValue(\"$Node3\",\"tonull\",\"\")\n//+ Result2: SetPresence(\"$Node3\",\"hidden\")\n//+ Result1: SetPresence(\"$Node2\",\"visible\")\n//+ Node3: DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sG[0].TXT_G[0]\n//+ Node2: DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sH[0].TXT_H[0]\n//+ Node1: DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].TXT_Us[0]\n//+ Condition1: ListField(\"$Node1\",\"textselected\",\"h\")\n//+ ActionName: TXT_Us.change\nif ($.boundItem(xfa.event.newText) == \"h\") {\n  this.resolveNode(\"sH.TXT_H\").presence = \"visible\";\n  this.resolveNode(\"sG.TXT_G\").presence = \"hidden\";\n  this.resolveNode(\"sG.TXT_G\").rawValue = null;\n}\n//-\n//+ GENERATED - DO NOT EDIT (ID:8168C567-6A19-4E5A-8D5F-753B4837DE44 CRC:2690460748)\n//+ Type: Action\n//+ Result3: SetFieldValue(\"$Node3\",\"tonull\",\"\")\n//+ Result2: SetPresence(\"$Node3\",\"hidden\")\n//+ Result1: SetPresence(\"$Node2\",\"visible\")\n//+ Node3: DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sH[0].TXT_H[0]\n//+ Node2: DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sG[0].TXT_G[0]\n//+ Node1: DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].TXT_Us[0]\n//+ Condition1: ListField(\"$Node1\",\"textselected\",\"g\")\n//+ ActionName: TXT_Us.change\nif ($.boundItem(xfa.event.newText) == \"g\") {\n  this.resolveNode(\"sG.TXT_G\").presence = \"visible\";\n  this.resolveNode(\"sH.TXT_H\").presence = \"hidden\";\n  this.resolveNode(\"sH.TXT_H\").rawValue = null;\n}\n//-\n\nscoUs.mostraG ();\nscoUs.mostraH ();\nscoUs.mostraAmaga ();\n"
+      },
+      {
+        "path": "DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TXT_Tensio[0].event__change[0]",
+        "event": "change",
+        "contentType": "application/x-javascript",
+        "code": "//+ GENERATED - DO NOT EDIT (ID:303833FF-A295-4157-B65E-BE6E09FDA8DA CRC:3715338924)\n//+ Type: Action\n//+ Result2: SetEnabled(\"$Node2\",\"readOnly\")\n//+ Result1: SetPresence(\"$Node2\",\"invisible\")\n//+ Node2: DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].InfoTensioAltre[0]\n//+ Node1: DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TXT_Tensio[0]\n//+ Condition1: ListField(\"$Node1\",\"textselected\",\"3x230/400 V\")\n//+ ActionName: TXT_Tensio.change400V\nif ($.boundItem(xfa.event.newText) == \"3x230/400 V\") {\n  this.resolveNode(\"InfoTensioAltre\").presence = \"invisible\";\n  oTargetField = this.resolveNode(\"InfoTensioAltre\");\n  \toTargetField.access = \"readOnly\";\n}\n//-\n//+ GENERATED - DO NOT EDIT (ID:E96C8219-0584-4222-9FFD-C7D5C1C52338 CRC:436561559)\n//+ Type: Action\n//+ Result2: SetEnabled(\"$Node2\",\"readOnly\")\n//+ Result1: SetPresence(\"$Node2\",\"invisible\")\n//+ Node2: DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].InfoTensioAltre[0]\n//+ Node1: DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TXT_Tensio[0]\n//+ Condition1: ListField(\"$Node1\",\"textselected\",\"230 V\")\n//+ ActionName: TXT_Tensio.change230V\nif ($.boundItem(xfa.event.newText) == \"230 V\") {\n  this.resolveNode(\"InfoTensioAltre\").presence = \"invisible\";\n  oTargetField = this.resolveNode(\"InfoTensioAltre\");\n  \toTargetField.access = \"readOnly\";\n}\n//-\n//+ GENERATED - DO NOT EDIT (ID:DA43FEAD-8ABB-49CE-BF9D-C2D6D2FF2789 CRC:2339220448)\n//+ Type: Action\n//+ Result2: SetEnabled(\"$Node2\",\"open\")\n//+ Result1: SetPresence(\"$Node2\",\"visible\")\n//+ Node2: DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].InfoTensioAltre[0]\n//+ Node1: DATA[0].principal[0].sInstallacio[0].sCaracteristiques[0].sRequisits[0].sTotes[0].TXT_Tensio[0]\n//+ Condition1: ListField(\"$Node1\",\"textselected\",\"Altra\")\n//+ ActionName: TXT_Tensio.changeAltre\nif ($.boundItem(xfa.event.newText) == \"Altra\") {\n  this.resolveNode(\"InfoTensioAltre\").presence = \"visible\";\n  oTargetField = this.resolveNode(\"InfoTensioAltre\");\n  \toTargetField.access = \"open\";\n}\n//-\n"
+      },
+      {
+        "path": "DATA[0].principal[0].scoRequisits[0]",
+        "event": null,
+        "contentType": "application/x-javascript",
+        "code": "function mostraP1 (){\n\t\n\t\tvar sTipus = sInstallacio.sCaracteristiques.sRequisits.RB_Requisits.rawValue;\n\t\t\n\t\t\tif (sTipus == \"P1\"){\n\t\t\t\tsInstallacio.sCaracteristiques.sRequisits.sP1.presence = \"visible\";\n\t\t\t\t}else{\n\t\t\t\tsInstallacio.sCaracteristiques.sRequisits.sP1.presence = \"hidden\";\n\t\t\t\t}}\n\t\t\t\t\nfunction mostraP2 (){\n\t\n\t\tvar sTipus = sInstallacio.sCaracteristiques.sRequisits.RB_Requisits.rawValue;\n\t\t\n\t\t\tif (sTipus == \"P2\"){\n\t\t\t\tsInstallacio.sCaracteristiques.sRequisits.sP2.presence = \"visible\";\n\t\t\t\t}else{\n\t\t\t\tsInstallacio.sCaracteristiques.sRequisits.sP2.presence = \"hidden\";\n\t\t\t\t}\n\t\t\t\t}\n\n"
+      },
+      {
+        "path": "DATA[0].principal[0].scoUs[0]",
+        "event": null,
+        "contentType": "application/x-javascript",
+        "code": "\nfunction mostraG (){\n\t\n\t\tvar sUs = sInstallacio.sCaracteristiques.sRequisits.TXT_Us.rawValue;\n\t\t\n\t\t\tif (sUs == \"g\"){\n\t\t\t\tsInstallacio.sCaracteristiques.sG.presence = \"visible\";\n\t\t\t\tsInstallacio.sCaracteristiques.sH.presence = \"hidden\";\n\t\t\t\t}}\n\nfunction mostraH (){\n\t\n\t\tvar sUs = sInstallacio.sCaracteristiques.sRequisits.TXT_Us.rawValue;\n\t\t\n\t\t\tif (sUs == \"h\"){\n\t\t\t\tsInstallacio.sCaracteristiques.sH.presence = \"visible\";\n\t\t\t\tsInstallacio.sCaracteristiques.sG.presence = \"hidden\";\n\t\t\t\t}}\n\t\t\t\t\nfunction mostraAmaga (){\n\t\n\t\tvar sUs = sInstallacio.sCaracteristiques.sRequisits.TXT_Us.rawValue;\n\t\t\n\t\t\tif (sUs != \"h\" && sUs != \"g\"){\n\t\t\tsInstallacio.sCaracteristiques.sG.presence = \"hidden\";\n\t\t\t\tsInstallacio.sCaracteristiques.sH.presence = \"hidden\";\n\t\t\t\t}}\n"
+      },
+      {
+        "path": "DATA[0].event__initialize[0]",
+        "event": "initialize",
+        "contentType": "application/x-javascript",
+        "code": "app.runtimeHighlight = true;\n\n"
+      }
+    ],
+    "media": [
+      {
+        "stock": "a4",
+        "short": "210mm",
+        "long": "297mm"
+      }
+    ],
+    "fieldCount": 77
+  },
+  "warnings": [
+    "Las páginas almacenadas del ELEC-1 son el aviso de compatibilidad, no sus páginas XFA renderizadas.",
+    "No se deduce obligatoriedad técnica ni normativa por ausencia de validaciones XFA.",
+    "Las firmas y sellos se excluyen de los datos ficticios de la prueba."
+  ]
+}

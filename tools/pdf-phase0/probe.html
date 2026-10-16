@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="ca">
+<meta charset="utf-8">
+<title>BoletinExpress - prova local XFA</title>
+<link rel="stylesheet" href="/viewer.css">
+<style>
+  html, body { margin: 0; padding: 0; background: #fff; }
+  body { --scale-factor: 1; --total-scale-factor: 1; }
+  .sheet { position: relative; overflow: hidden; break-after: page; background: white; }
+  .sheet:last-child { break-after: auto; }
+  .xfaLayer { position: absolute; inset: 0; }
+  @page { size: A4; margin: 0; }
+  @media print { .sheet { break-inside: avoid; } }
+</style>
+<main id="pages"></main>
+<script type="module" src="/probe.mjs"></script>
+</html>

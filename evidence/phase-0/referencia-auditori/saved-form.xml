@@ -1,0 +1,95 @@
+<form checksum="2xDsxZHHYoPLgBgzipIebGGpyRM=" xmlns="http://www.xfa.org/schema/xfa-form/2.8/"
+><subform name="DATA"
+><instanceManager name="_principal"
+/><subform name="principal"
+><instanceManager name="_sInstallacio"
+/><subform name="sInstallacio"
+><instanceManager name="_sCaracteristiques"
+/><subform name="sCaracteristiques"
+><instanceManager name="_sRequisits"
+/><subform name="sRequisits"
+><exclGroup name="RB_Requisits"
+><field name="OPT_P1"
+><value override="1"
+><text
+>P1</text
+></value
+></field
+><field name="OPT_P2"
+><value override="1"
+/></field
+><field name="OPT_Memoria"
+><value override="1"
+/></field
+></exclGroup
+><instanceManager name="_sP1"
+/><subform name="sP1"
+><field name="TXT_P1" presence="visible"
+><value override="1"
+><text
+>a) Instal·lacions industrials amb una potència màxima admissible superior a 100 kW</text
+></value
+></field
+></subform
+><instanceManager name="_sP2"
+/><subform name="sP2"
+><field name="TXT_P2" presence="hidden"
+/></subform
+><field name="TXT_Us"
+><value override="1"
+><text
+>g</text
+></value
+></field
+><instanceManager name="_AltresUsos"
+/><subform name="AltresUsos" presence="hidden"
+/><instanceManager name="_sG"
+/><subform name="sG"
+><field name="TXT_G" presence="visible"
+><value override="1"
+><text
+>g3) Auditori</text
+></value
+></field
+></subform
+><instanceManager name="_sH"
+/><subform name="sH"
+><field name="TXT_H" presence="hidden"
+/></subform
+></subform
+></subform
+></subform
+></subform
+><pageSet
+><pageArea name="Page1"
+><field name="CurrentPage"
+><value
+><float
+>1.00000000</float
+></value
+></field
+><field name="PageCount"
+><value
+><float
+>2.00000000</float
+></value
+></field
+></pageArea
+><pageArea name="Page1"
+><field name="CurrentPage"
+><value
+><float
+>2.00000000</float
+></value
+></field
+><field name="PageCount"
+><value
+><float
+>2.00000000</float
+></value
+></field
+></pageArea
+></pageSet
+></subform
+></form
+>

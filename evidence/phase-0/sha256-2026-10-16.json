@@ -1,0 +1,22 @@
+{
+  "plantillas/Plta_ButlletiReconeixementBT.pdf": "5cc739303306d37a35a0b4912c6e7b6240d141e8ae251c4dc1d604e086eb2b64",
+  "plantillas/Plta_ELEC1CertificatInstalElectricaBT.pdf": "f846613f63196b0c2a2b343a64650e6e95a808d06a8ab7c5c1681f9b7d4ca19a",
+  "plantillas/Plta_ELEC1CertificatInstalElectricaBT-result.pdf": "9fd2069f359435b26f9de491194d5af393e15a007bdc418212a828c4fa4b462d",
+  "evidence/phase-0/sources/ELEC1-oficial-original.pdf": "f846613f63196b0c2a2b343a64650e6e95a808d06a8ab7c5c1681f9b7d4ca19a",
+  "output/pdf/phase-0/CIE-datos-ficticios-PRUEBA.pdf": "8b21db19d0380cbd12060d7a83935b51c8678ec6b294f673ed14e887784c67a1",
+  "output/pdf/phase-0/BRIE-datos-ficticios-PRUEBA.pdf": "de7272f5de3c4f994cdc10dec144f177ce82f87d82c5fdd3f387b1394f15fbe6",
+  "output/pdf/phase-0/cie-variantes/CIE-us_g-PRUEBA.pdf": "548a9238cef9cfa149441b78376867f2cc211b500c8a1a4a5f0637601ed83cfd",
+  "output/pdf/phase-0/cie-variantes/CIE-incomplet-PRUEBA.pdf": "cab6e7ff3522f2633e3130a78dc726e8fa5a24522b7be75718057f909de56534",
+  "output/pdf/phase-0/cie-variantes/CIE-classe_p1-PRUEBA.pdf": "477d39586406f23c4d1a48b7319c43f1910a09051159f7631ca8eca370fb166f",
+  "output/pdf/phase-0/cie-variantes/CIE-us_h-PRUEBA.pdf": "d8b6c39d35b9f8dc862d2c915425d6ec67923dc396890721ff2e823fbfa9a5f1",
+  "output/pdf/phase-0/cie-variantes/CIE-classe_p2-PRUEBA.pdf": "cef67252946eb69c9275641a95b393c96a6a455df2a9615e8f32f26516b41bf2",
+  "output/pdf/phase-0/cie-variantes/CIE-altres_usos-PRUEBA.pdf": "b276cff8254c63e7c5e6e0c495f0e366b28b16695060d03d52bb98b2d16b3cc4",
+  "output/pdf/phase-0/cie-variantes/CIE-ampliacio_50-PRUEBA.pdf": "0ca398bf0361d46b9be2310dab08e4e60a7387a502c170e00abebbae0ad6164b",
+  "output/pdf/phase-0/cie-variantes/CIE-modificacio_50-PRUEBA.pdf": "3c73b1ab818ede63973852c5b9befe6f7f8153d72f53477c9f3a884492db5824",
+  "output/pdf/phase-0/cie-variantes/CIE-tensio_altra-PRUEBA.pdf": "1a4f57c3f5bb041e538b38b4d554b5794aff65ccb1c47d5f40d37d7a35f4242a",
+  "output/pdf/phase-0/cie-variantes/CIE-auditori_ref-PRUEBA.pdf": "225400629a464062729551a7e699b596050757fb504099a790ee2cba9aa5a2e0",
+  "evidence/phase-0/derived-xfa-references/CIE-ref-p2-h.pdf": "75f86ec05bfc1e8195f0e6d02593b2b972f2daf679a22ed6a031f029b1781eb2",
+  "evidence/phase-0/derived-xfa-references/CIE-ref-altra-tensio.pdf": "e148bc965e242bf1ee73221cb8ae20d9f86785fac0e58d33153fb082fe212e5f",
+  "evidence/phase-0/derived-xfa-references/CIE-ref-altres.pdf": "288611e9872cb5550df9f5a43c2fbdf78ce873dc1330fcb8f76750ed556d00b4",
+  "plantillas/Plta_ELEC1CertificatInstalElectricaBTauditori.pdf": "01a2206988ae1109b3701370ddb42d286a9b751e0273ceea51855174a80cab42"
+}

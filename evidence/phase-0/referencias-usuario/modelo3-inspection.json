@@ -1,0 +1,20 @@
+{
+  "file": "plantillas/Plta_ELEC1CertificatInstalElectricaBTMODELO3.pdf",
+  "bytes": 124425,
+  "sha256": "1e366488222d6d881858d84227b6886e5d6d6ecc4b419784d4cca168b92ac190",
+  "pages": 2,
+  "xfa": false,
+  "fields": 0,
+  "values": {},
+  "pageSizes": [
+    [
+      612.0,
+      792.0
+    ],
+    [
+      612.0,
+      792.0
+    ]
+  ],
+  "producer": null
+}

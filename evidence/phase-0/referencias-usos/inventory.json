@@ -1,0 +1,401 @@
+[
+  {
+    "file": "plantillas/elec1_m1.pdf",
+    "sha256": "c5f16e3ae6151643c2f015389442a9e56b1c4cc1b233984ee4e36b6c5193748a",
+    "bytes": 124112,
+    "pages": 2,
+    "xfa": false,
+    "fields": 0,
+    "values": {},
+    "pageSizes": [
+      [
+        612.0,
+        792.0
+      ],
+      [
+        612.0,
+        792.0
+      ]
+    ],
+    "tailPage1": " de la instal·lació\nTipus d'actuació\n Nova  Ampliació  Modificació o reforma CUPS\nClassificació\nRequisits administratius\nClasse P1 Classe P2 Memòria tècnica de disseny\nÚs de la instal·lació\na) Instal·lacions industrials",
+    "textPage2": "Pàgina            2 de            2          \nG346NSIN-156 \nDades tècniques\nPer a totes les instal·lacions Per a instal·lacions d'enllaç\nPotència màxima admissible kW Calibre fusibles CGP A\nTensió Intensitat Interruptor General de Maniobra (IGM) A\nNombre de circuits al quadre principal Secció LGA  mm2 Material conductor\nResistència d'aïllament entre conductors M? Ubicació de comptadors\nResistència d'aïllament amb terra M? Per a instal·lacions generadores*\nResistència de posada a terra ? Tecnologia\nIntensitat Interruptor General Automàtic (IGA)   A Tipus de connexió\nTé subministrament complementari? Sí No Potència  kW\n*No s'ha d'emplenar per a subministraments complementaris ja \nque aquests formen part de la instal·lació receptora\nCertificació\nEn/na CERTIFICA que la instal·lació descrita ha estat realitzada\nd'acord amb les prescripcions del Reglament Electrotècnic per a baixa tensió i les seves ITC, aprovat pel Reial Decret 842/2002, de 2 d'agost, el Decret \n192/2023, de 7 de novembre, de la seguretat industrial dels establiments, les instal·lacions i els productes,  així com amb la seva documentació tècnica.\nObservacions\nSignatura de la persona instal·ladora\n1. Aquest certificat empara únicament l'actuació efectuada i documentada amb la documentació tècnica que l'acompanya.\n2. No es pot emetre un certificat d'instal·lació si en aquesta hi ha signes evidents de manca de seguretat.\n3. Aquest certificat s'ha d'acompanyar de la seva memòria tècnica o projecte i les instruccions d'ús i manteniment.\n4. En el cas d'ampliacions o modificacions, la classificació P1, P2 o memòria s'ha de fer d'acord amb l'actuació feta seguint els criteris \nde l'apartat 3.2 de la ITC-BT-04.\n5. El CUPS no s'ha d'emplenar en els tràmits de nova instal·lació.\n"
+  },
+  {
+    "file": "plantillas/elec1_m2.pdf",
+    "sha256": "85126ceb8ca63ab4e5f953dc6650af853c8d5272d7ef5c39c34ea241a21aa4a8",
+    "bytes": 124136,
+    "pages": 2,
+    "xfa": false,
+    "fields": 0,
+    "values": {},
+    "pageSizes": [
+      [
+        612.0,
+        792.0
+      ],
+      [
+        612.0,
+        792.0
+      ]
+    ],
+    "tailPage1": " de la instal·lació\nTipus d'actuació\n Nova  Ampliació  Modificació o reforma CUPS\nClassificació\nRequisits administratius\nClasse P1 Classe P2 Memòria tècnica de disseny\nÚs de la instal·lació\nb) Instal·lacions temporals per a obres segons l'ITC-BT-33 del REBT",
+    "textPage2": "Pàgina            2 de            2          \nG346NSIN-156 \nDades tècniques\nPer a totes les instal·lacions Per a instal·lacions d'enllaç\nPotència màxima admissible kW Calibre fusibles CGP A\nTensió Intensitat Interruptor General de Maniobra (IGM) A\nNombre de circuits al quadre principal Secció LGA  mm2 Material conductor\nResistència d'aïllament entre conductors M? Ubicació de comptadors\nResistència d'aïllament amb terra M? Per a instal·lacions generadores*\nResistència de posada a terra ? Tecnologia\nIntensitat Interruptor General Automàtic (IGA)   A Tipus de connexió\nTé subministrament complementari? Sí No Potència  kW\n*No s'ha d'emplenar per a subministraments complementaris ja \nque aquests formen part de la instal·lació receptora\nCertificació\nEn/na CERTIFICA que la instal·lació descrita ha estat realitzada\nd'acord amb les prescripcions del Reglament Electrotècnic per a baixa tensió i les seves ITC, aprovat pel Reial Decret 842/2002, de 2 d'agost, el Decret \n192/2023, de 7 de novembre, de la seguretat industrial dels establiments, les instal·lacions i els productes,  així com amb la seva documentació tècnica.\nObservacions\nSignatura de la persona instal·ladora\n1. Aquest certificat empara únicament l'actuació efectuada i documentada amb la documentació tècnica que l'acompanya.\n2. No es pot emetre un certificat d'instal·lació si en aquesta hi ha signes evidents de manca de seguretat.\n3. Aquest certificat s'ha d'acompanyar de la seva memòria tècnica o projecte i les instruccions d'ús i manteniment.\n4. En el cas d'ampliacions o modificacions, la classificació P1, P2 o memòria s'ha de fer d'acord amb l'actuació feta seguint els criteris \nde l'apartat 3.2 de la ITC-BT-04.\n5. El CUPS no s'ha d'emplenar en els tràmits de nova instal·lació.\n"
+  },
+  {
+    "file": "plantillas/elec1_m3.pdf",
+    "sha256": "72bee75e928aa9e66f527496913d0d7464bf076cb9a62bcb83181e7ea76efa51",
+    "bytes": 124506,
+    "pages": 2,
+    "xfa": false,
+    "fields": 0,
+    "values": {},
+    "pageSizes": [
+      [
+        612.0,
+        792.0
+      ],
+      [
+        612.0,
+        792.0
+      ]
+    ],
+    "tailPage1": " de la instal·lació\nTipus d'actuació\n Nova  Ampliació  Modificació o reforma CUPS\nL'ampliació/modificació supera el 50% de la \npotència de la instal·lació?\nClassificació\nRequisits administratius\nClasse P1 Classe P2 Memòria tècnica de disseny\nÚs de la instal·lació\nSí\na) Instal·lacions industrials",
+    "textPage2": "Pàgina            2 de            2          \nG346NSIN-156 \nDades tècniques\nPer a totes les instal·lacions Per a instal·lacions d'enllaç\nPotència màxima admissible kW Calibre fusibles CGP A\nTensió Intensitat Interruptor General de Maniobra (IGM) A\nNombre de circuits al quadre principal Secció LGA  mm2 Material conductor\nResistència d'aïllament entre conductors M? Ubicació de comptadors\nResistència d'aïllament amb terra M? Per a instal·lacions generadores*\nResistència de posada a terra ? Tecnologia\nIntensitat Interruptor General Automàtic (IGA)   A Tipus de connexió\nTé subministrament complementari? Sí No Potència  kW\n*No s'ha d'emplenar per a subministraments complementaris ja \nque aquests formen part de la instal·lació receptora\nCertificació\nEn/na CERTIFICA que la instal·lació descrita ha estat realitzada\nd'acord amb les prescripcions del Reglament Electrotècnic per a baixa tensió i les seves ITC, aprovat pel Reial Decret 842/2002, de 2 d'agost, el Decret \n192/2023, de 7 de novembre, de la seguretat industrial dels establiments, les instal·lacions i els productes,  així com amb la seva documentació tècnica.\nObservacions\nSignatura de la persona instal·ladora\n1. Aquest certificat empara únicament l'actuació efectuada i documentada amb la documentació tècnica que l'acompanya.\n2. No es pot emetre un certificat d'instal·lació si en aquesta hi ha signes evidents de manca de seguretat.\n3. Aquest certificat s'ha d'acompanyar de la seva memòria tècnica o projecte i les instruccions d'ús i manteniment.\n4. En el cas d'ampliacions o modificacions, la classificació P1, P2 o memòria s'ha de fer d'acord amb l'actuació feta seguint els criteris \nde l'apartat 3.2 de la ITC-BT-04.\n5. El CUPS no s'ha d'emplenar en els tràmits de nova instal·lació.\n"
+  },
+  {
+    "file": "plantillas/elec1_m4.pdf",
+    "sha256": "93c6e10c8fde81858b7d7d10fb8eb5c0fafe8ce51c9e5905f85efb5d7aedaf53",
+    "bytes": 124505,
+    "pages": 2,
+    "xfa": false,
+    "fields": 0,
+    "values": {},
+    "pageSizes": [
+      [
+        612.0,
+        792.0
+      ],
+      [
+        612.0,
+        792.0
+      ]
+    ],
+    "tailPage1": " de la instal·lació\nTipus d'actuació\n Nova  Ampliació  Modificació o reforma CUPS\nL'ampliació/modificació supera el 50% de la \npotència de la instal·lació?\nClassificació\nRequisits administratius\nClasse P1 Classe P2 Memòria tècnica de disseny\nÚs de la instal·lació\nNo\na) Instal·lacions industrials",
+    "textPage2": "Pàgina            2 de            2          \nG346NSIN-156 \nDades tècniques\nPer a totes les instal·lacions Per a instal·lacions d'enllaç\nPotència màxima admissible kW Calibre fusibles CGP A\nTensió Intensitat Interruptor General de Maniobra (IGM) A\nNombre de circuits al quadre principal Secció LGA  mm2 Material conductor\nResistència d'aïllament entre conductors M? Ubicació de comptadors\nResistència d'aïllament amb terra M? Per a instal·lacions generadores*\nResistència de posada a terra ? Tecnologia\nIntensitat Interruptor General Automàtic (IGA)   A Tipus de connexió\nTé subministrament complementari? Sí No Potència  kW\n*No s'ha d'emplenar per a subministraments complementaris ja \nque aquests formen part de la instal·lació receptora\nCertificació\nEn/na CERTIFICA que la instal·lació descrita ha estat realitzada\nd'acord amb les prescripcions del Reglament Electrotècnic per a baixa tensió i les seves ITC, aprovat pel Reial Decret 842/2002, de 2 d'agost, el Decret \n192/2023, de 7 de novembre, de la seguretat industrial dels establiments, les instal·lacions i els productes,  així com amb la seva documentació tècnica.\nObservacions\nSignatura de la persona instal·ladora\n1. Aquest certificat empara únicament l'actuació efectuada i documentada amb la documentació tècnica que l'acompanya.\n2. No es pot emetre un certificat d'instal·lació si en aquesta hi ha signes evidents de manca de seguretat.\n3. Aquest certificat s'ha d'acompanyar de la seva memòria tècnica o projecte i les instruccions d'ús i manteniment.\n4. En el cas d'ampliacions o modificacions, la classificació P1, P2 o memòria s'ha de fer d'acord amb l'actuació feta seguint els criteris \nde l'apartat 3.2 de la ITC-BT-04.\n5. El CUPS no s'ha d'emplenar en els tràmits de nova instal·lació.\n"
+  },
+  {
+    "file": "plantillas/elec1_m5.pdf",
+    "sha256": "b75b840a09a748cbbdac918b9c016c1e00574adcde0ad11087b98fbe7b566d3b",
+    "bytes": 124529,
+    "pages": 2,
+    "xfa": false,
+    "fields": 0,
+    "values": {},
+    "pageSizes": [
+      [
+        612.0,
+        792.0
+      ],
+      [
+        612.0,
+        792.0
+      ]
+    ],
+    "tailPage1": " de la instal·lació\nTipus d'actuació\n Nova  Ampliació  Modificació o reforma CUPS\nL'ampliació/modificació supera el 50% de la \npotència de la instal·lació?\nClassificació\nRequisits administratius\nClasse P1 Classe P2 Memòria tècnica de disseny\nÚs de la instal·lació\nSí\nb) Instal·lacions temporals per a obres segons l'ITC-BT-33 del REBT",
+    "textPage2": "Pàgina            2 de            2          \nG346NSIN-156 \nDades tècniques\nPer a totes les instal·lacions Per a instal·lacions d'enllaç\nPotència màxima admissible kW Calibre fusibles CGP A\nTensió Intensitat Interruptor General de Maniobra (IGM) A\nNombre de circuits al quadre principal Secció LGA  mm2 Material conductor\nResistència d'aïllament entre conductors M? Ubicació de comptadors\nResistència d'aïllament amb terra M? Per a instal·lacions generadores*\nResistència de posada a terra ? Tecnologia\nIntensitat Interruptor General Automàtic (IGA)   A Tipus de connexió\nTé subministrament complementari? Sí No Potència  kW\n*No s'ha d'emplenar per a subministraments complementaris ja \nque aquests formen part de la instal·lació receptora\nCertificació\nEn/na CERTIFICA que la instal·lació descrita ha estat realitzada\nd'acord amb les prescripcions del Reglament Electrotècnic per a baixa tensió i les seves ITC, aprovat pel Reial Decret 842/2002, de 2 d'agost, el Decret \n192/2023, de 7 de novembre, de la seguretat industrial dels establiments, les instal·lacions i els productes,  així com amb la seva documentació tècnica.\nObservacions\nSignatura de la persona instal·ladora\n1. Aquest certificat empara únicament l'actuació efectuada i documentada amb la documentació tècnica que l'acompanya.\n2. No es pot emetre un certificat d'instal·lació si en aquesta hi ha signes evidents de manca de seguretat.\n3. Aquest certificat s'ha d'acompanyar de la seva memòria tècnica o projecte i les instruccions d'ús i manteniment.\n4. En el cas d'ampliacions o modificacions, la classificació P1, P2 o memòria s'ha de fer d'acord amb l'actuació feta seguint els criteris \nde l'apartat 3.2 de la ITC-BT-04.\n5. El CUPS no s'ha d'emplenar en els tràmits de nova instal·lació.\n"
+  },
+  {
+    "file": "plantillas/elec1_m6.pdf",
+    "sha256": "ed2ed9eb6298679d1a74046e026276811b0cdcb0e7f92098dc8245e7f950a71b",
+    "bytes": 124506,
+    "pages": 2,
+    "xfa": false,
+    "fields": 0,
+    "values": {},
+    "pageSizes": [
+      [
+        612.0,
+        792.0
+      ],
+      [
+        612.0,
+        792.0
+      ]
+    ],
+    "tailPage1": " de la instal·lació\nTipus d'actuació\n Nova  Ampliació  Modificació o reforma CUPS\nL'ampliació/modificació supera el 50% de la \npotència de la instal·lació?\nClassificació\nRequisits administratius\nClasse P1 Classe P2 Memòria tècnica de disseny\nÚs de la instal·lació\nSí\nd) Instal·lacions d'enllaç",
+    "textPage2": "Pàgina            2 de            2          \nG346NSIN-156 \nDades tècniques\nPer a totes les instal·lacions Per a instal·lacions d'enllaç\nPotència màxima admissible kW Calibre fusibles CGP A\nTensió Intensitat Interruptor General de Maniobra (IGM) A\nNombre de circuits al quadre principal Secció LGA  mm2 Material conductor\nResistència d'aïllament entre conductors M? Ubicació de comptadors\nResistència d'aïllament amb terra M? Per a instal·lacions generadores*\nResistència de posada a terra ? Tecnologia\nIntensitat Interruptor General Automàtic (IGA)   A Tipus de connexió\nTé subministrament complementari? Sí No Potència  kW\n*No s'ha d'emplenar per a subministraments complementaris ja \nque aquests formen part de la instal·lació receptora\nCertificació\nEn/na CERTIFICA que la instal·lació descrita ha estat realitzada\nd'acord amb les prescripcions del Reglament Electrotècnic per a baixa tensió i les seves ITC, aprovat pel Reial Decret 842/2002, de 2 d'agost, el Decret \n192/2023, de 7 de novembre, de la seguretat industrial dels establiments, les instal·lacions i els productes,  així com amb la seva documentació tècnica.\nObservacions\nSignatura de la persona instal·ladora\n1. Aquest certificat empara únicament l'actuació efectuada i documentada amb la documentació tècnica que l'acompanya.\n2. No es pot emetre un certificat d'instal·lació si en aquesta hi ha signes evidents de manca de seguretat.\n3. Aquest certificat s'ha d'acompanyar de la seva memòria tècnica o projecte i les instruccions d'ús i manteniment.\n4. En el cas d'ampliacions o modificacions, la classificació P1, P2 o memòria s'ha de fer d'acord amb l'actuació feta seguint els criteris \nde l'apartat 3.2 de la ITC-BT-04.\n5. El CUPS no s'ha d'emplenar en els tràmits de nova instal·lació.\n"
+  },
+  {
+    "file": "plantillas/elec1_m7.pdf",
+    "sha256": "5ef9f47cbcdf204ffb07ce7da5ff78aa53ada0a099f27705b791b33b125d55aa",
+    "bytes": 124514,
+    "pages": 2,
+    "xfa": false,
+    "fields": 0,
+    "values": {},
+    "pageSizes": [
+      [
+        612.0,
+        792.0
+      ],
+      [
+        612.0,
+        792.0
+      ]
+    ],
+    "tailPage1": " de la instal·lació\nTipus d'actuació\n Nova  Ampliació  Modificació o reforma CUPS\nL'ampliació/modificació supera el 50% de la \npotència de la instal·lació?\nClassificació\nRequisits administratius\nClasse P1 Classe P2 Memòria tècnica de disseny\nÚs de la instal·lació\nSí\ne) Instal·lacions de serveis comuns d'edificis",
+    "textPage2": "Pàgina            2 de            2          \nG346NSIN-156 \nDades tècniques\nPer a totes les instal·lacions Per a instal·lacions d'enllaç\nPotència màxima admissible kW Calibre fusibles CGP A\nTensió Intensitat Interruptor General de Maniobra (IGM) A\nNombre de circuits al quadre principal Secció LGA  mm2 Material conductor\nResistència d'aïllament entre conductors M? Ubicació de comptadors\nResistència d'aïllament amb terra M? Per a instal·lacions generadores*\nResistència de posada a terra ? Tecnologia\nIntensitat Interruptor General Automàtic (IGA)   A Tipus de connexió\nTé subministrament complementari? Sí No Potència  kW\n*No s'ha d'emplenar per a subministraments complementaris ja \nque aquests formen part de la instal·lació receptora\nCertificació\nEn/na CERTIFICA que la instal·lació descrita ha estat realitzada\nd'acord amb les prescripcions del Reglament Electrotècnic per a baixa tensió i les seves ITC, aprovat pel Reial Decret 842/2002, de 2 d'agost, el Decret \n192/2023, de 7 de novembre, de la seguretat industrial dels establiments, les instal·lacions i els productes,  així com amb la seva documentació tècnica.\nObservacions\nSignatura de la persona instal·ladora\n1. Aquest certificat empara únicament l'actuació efectuada i documentada amb la documentació tècnica que l'acompanya.\n2. No es pot emetre un certificat d'instal·lació si en aquesta hi ha signes evidents de manca de seguretat.\n3. Aquest certificat s'ha d'acompanyar de la seva memòria tècnica o projecte i les instruccions d'ús i manteniment.\n4. En el cas d'ampliacions o modificacions, la classificació P1, P2 o memòria s'ha de fer d'acord amb l'actuació feta seguint els criteris \nde l'apartat 3.2 de la ITC-BT-04.\n5. El CUPS no s'ha d'emplenar en els tràmits de nova instal·lació.\n"
+  },
+  {
+    "file": "plantillas/elec1_m8.pdf",
+    "sha256": "0c245073628f92e407c9affeee3814e3155a1f27139f6a39ce36aede169c3def",
+    "bytes": 124507,
+    "pages": 2,
+    "xfa": false,
+    "fields": 0,
+    "values": {},
+    "pageSizes": [
+      [
+        612.0,
+        792.0
+      ],
+      [
+        612.0,
+        792.0
+      ]
+    ],
+    "tailPage1": " de la instal·lació\nTipus d'actuació\n Nova  Ampliació  Modificació o reforma CUPS\nL'ampliació/modificació supera el 50% de la \npotència de la instal·lació?\nClassificació\nRequisits administratius\nClasse P1 Classe P2 Memòria tècnica de disseny\nÚs de la instal·lació\nSí\nf) Instal·lacions d'habitatges",
+    "textPage2": "Pàgina            2 de            2          \nG346NSIN-156 \nDades tècniques\nPer a totes les instal·lacions Per a instal·lacions d'enllaç\nPotència màxima admissible kW Calibre fusibles CGP A\nTensió Intensitat Interruptor General de Maniobra (IGM) A\nNombre de circuits al quadre principal Secció LGA  mm2 Material conductor\nResistència d'aïllament entre conductors M? Ubicació de comptadors\nResistència d'aïllament amb terra M? Per a instal·lacions generadores*\nResistència de posada a terra ? Tecnologia\nIntensitat Interruptor General Automàtic (IGA)   A Tipus de connexió\nTé subministrament complementari? Sí No Potència  kW\n*No s'ha d'emplenar per a subministraments complementaris ja \nque aquests formen part de la instal·lació receptora\nCertificació\nEn/na CERTIFICA que la instal·lació descrita ha estat realitzada\nd'acord amb les prescripcions del Reglament Electrotècnic per a baixa tensió i les seves ITC, aprovat pel Reial Decret 842/2002, de 2 d'agost, el Decret \n192/2023, de 7 de novembre, de la seguretat industrial dels establiments, les instal·lacions i els productes,  així com amb la seva documentació tècnica.\nObservacions\nSignatura de la persona instal·ladora\n1. Aquest certificat empara únicament l'actuació efectuada i documentada amb la documentació tècnica que l'acompanya.\n2. No es pot emetre un certificat d'instal·lació si en aquesta hi ha signes evidents de manca de seguretat.\n3. Aquest certificat s'ha d'acompanyar de la seva memòria tècnica o projecte i les instruccions d'ús i manteniment.\n4. En el cas d'ampliacions o modificacions, la classificació P1, P2 o memòria s'ha de fer d'acord amb l'actuació feta seguint els criteris \nde l'apartat 3.2 de la ITC-BT-04.\n5. El CUPS no s'ha d'emplenar en els tràmits de nova instal·lació.\n"
+  },
+  {
+    "file": "plantillas/elec1_m9.pdf",
+    "sha256": "69aca9a7db636402aed0e4c10cabe5e9835247c16b830218bd0ff75a852776d0",
+    "bytes": 124563,
+    "pages": 2,
+    "xfa": false,
+    "fields": 0,
+    "values": {},
+    "pageSizes": [
+      [
+        612.0,
+        792.0
+      ],
+      [
+        612.0,
+        792.0
+      ]
+    ],
+    "tailPage1": " de la instal·lació\nTipus d'actuació\n Nova  Ampliació  Modificació o reforma CUPS\nL'ampliació/modificació supera el 50% de la \npotència de la instal·lació?\nClassificació\nRequisits administratius\nClasse P1 Classe P2 Memòria tècnica de disseny\nÚs de la instal·lació\nSí\ng) Instal·lacions en locals d'espectacles i activitats recreatives amb subclassificació d'acord amb l'ITC-BT-28",
+    "textPage2": "Pàgina            2 de            2          \nG346NSIN-156 \nDades tècniques\nPer a totes les instal·lacions Per a instal·lacions d'enllaç\nPotència màxima admissible kW Calibre fusibles CGP A\nTensió Intensitat Interruptor General de Maniobra (IGM) A\nNombre de circuits al quadre principal Secció LGA  mm2 Material conductor\nResistència d'aïllament entre conductors M? Ubicació de comptadors\nResistència d'aïllament amb terra M? Per a instal·lacions generadores*\nResistència de posada a terra ? Tecnologia\nIntensitat Interruptor General Automàtic (IGA)   A Tipus de connexió\nTé subministrament complementari? Sí No Potència  kW\n*No s'ha d'emplenar per a subministraments complementaris ja \nque aquests formen part de la instal·lació receptora\nCertificació\nEn/na CERTIFICA que la instal·lació descrita ha estat realitzada\nd'acord amb les prescripcions del Reglament Electrotècnic per a baixa tensió i les seves ITC, aprovat pel Reial Decret 842/2002, de 2 d'agost, el Decret \n192/2023, de 7 de novembre, de la seguretat industrial dels establiments, les instal·lacions i els productes,  així com amb la seva documentació tècnica.\nObservacions\nSignatura de la persona instal·ladora\n1. Aquest certificat empara únicament l'actuació efectuada i documentada amb la documentació tècnica que l'acompanya.\n2. No es pot emetre un certificat d'instal·lació si en aquesta hi ha signes evidents de manca de seguretat.\n3. Aquest certificat s'ha d'acompanyar de la seva memòria tècnica o projecte i les instruccions d'ús i manteniment.\n4. En el cas d'ampliacions o modificacions, la classificació P1, P2 o memòria s'ha de fer d'acord amb l'actuació feta seguint els criteris \nde l'apartat 3.2 de la ITC-BT-04.\n5. El CUPS no s'ha d'emplenar en els tràmits de nova instal·lació.\n"
+  },
+  {
+    "file": "plantillas/elec1_m10.pdf",
+    "sha256": "b3cc6b270d170aa0991a401b2c0c45e548f5df35b9e08b44d756525621475bb7",
+    "bytes": 124563,
+    "pages": 2,
+    "xfa": false,
+    "fields": 0,
+    "values": {},
+    "pageSizes": [
+      [
+        612.0,
+        792.0
+      ],
+      [
+        612.0,
+        792.0
+      ]
+    ],
+    "tailPage1": " de la instal·lació\nTipus d'actuació\n Nova  Ampliació  Modificació o reforma CUPS\nL'ampliació/modificació supera el 50% de la \npotència de la instal·lació?\nClassificació\nRequisits administratius\nClasse P1 Classe P2 Memòria tècnica de disseny\nÚs de la instal·lació\nSí\nh) Instal·lacions en locals de reunió, treball i usos sanitaris amb subclassificació d'acord amb l'ITC-BT-28",
+    "textPage2": "Pàgina            2 de            2          \nG346NSIN-156 \nDades tècniques\nPer a totes les instal·lacions Per a instal·lacions d'enllaç\nPotència màxima admissible kW Calibre fusibles CGP A\nTensió Intensitat Interruptor General de Maniobra (IGM) A\nNombre de circuits al quadre principal Secció LGA  mm2 Material conductor\nResistència d'aïllament entre conductors M? Ubicació de comptadors\nResistència d'aïllament amb terra M? Per a instal·lacions generadores*\nResistència de posada a terra ? Tecnologia\nIntensitat Interruptor General Automàtic (IGA)   A Tipus de connexió\nTé subministrament complementari? Sí No Potència  kW\n*No s'ha d'emplenar per a subministraments complementaris ja \nque aquests formen part de la instal·lació receptora\nCertificació\nEn/na CERTIFICA que la instal·lació descrita ha estat realitzada\nd'acord amb les prescripcions del Reglament Electrotècnic per a baixa tensió i les seves ITC, aprovat pel Reial Decret 842/2002, de 2 d'agost, el Decret \n192/2023, de 7 de novembre, de la seguretat industrial dels establiments, les instal·lacions i els productes,  així com amb la seva documentació tècnica.\nObservacions\nSignatura de la persona instal·ladora\n1. Aquest certificat empara únicament l'actuació efectuada i documentada amb la documentació tècnica que l'acompanya.\n2. No es pot emetre un certificat d'instal·lació si en aquesta hi ha signes evidents de manca de seguretat.\n3. Aquest certificat s'ha d'acompanyar de la seva memòria tècnica o projecte i les instruccions d'ús i manteniment.\n4. En el cas d'ampliacions o modificacions, la classificació P1, P2 o memòria s'ha de fer d'acord amb l'actuació feta seguint els criteris \nde l'apartat 3.2 de la ITC-BT-04.\n5. El CUPS no s'ha d'emplenar en els tràmits de nova instal·lació.\n"
+  },
+  {
+    "file": "plantillas/elec1_m11.pdf",
+    "sha256": "054b740c37562fcc5431e0afe76d2fa4bab3ca8b945c1c52926f7a052507e327",
+    "bytes": 124522,
+    "pages": 2,
+    "xfa": false,
+    "fields": 0,
+    "values": {},
+    "pageSizes": [
+      [
+        612.0,
+        792.0
+      ],
+      [
+        612.0,
+        792.0
+      ]
+    ],
+    "tailPage1": " de la instal·lació\nTipus d'actuació\n Nova  Ampliació  Modificació o reforma CUPS\nL'ampliació/modificació supera el 50% de la \npotència de la instal·lació?\nClassificació\nRequisits administratius\nClasse P1 Classe P2 Memòria tècnica de disseny\nÚs de la instal·lació\nSí\ni) Instal·lacions de recàrrega de vehicles elèctrics",
+    "textPage2": "Pàgina            2 de            2          \nG346NSIN-156 \nDades tècniques\nPer a totes les instal·lacions Per a instal·lacions d'enllaç\nPotència màxima admissible kW Calibre fusibles CGP A\nTensió Intensitat Interruptor General de Maniobra (IGM) A\nNombre de circuits al quadre principal Secció LGA  mm2 Material conductor\nResistència d'aïllament entre conductors M? Ubicació de comptadors\nResistència d'aïllament amb terra M? Per a instal·lacions generadores*\nResistència de posada a terra ? Tecnologia\nIntensitat Interruptor General Automàtic (IGA)   A Tipus de connexió\nTé subministrament complementari? Sí No Potència  kW\n*No s'ha d'emplenar per a subministraments complementaris ja \nque aquests formen part de la instal·lació receptora\nCertificació\nEn/na CERTIFICA que la instal·lació descrita ha estat realitzada\nd'acord amb les prescripcions del Reglament Electrotècnic per a baixa tensió i les seves ITC, aprovat pel Reial Decret 842/2002, de 2 d'agost, el Decret \n192/2023, de 7 de novembre, de la seguretat industrial dels establiments, les instal·lacions i els productes,  així com amb la seva documentació tècnica.\nObservacions\nSignatura de la persona instal·ladora\n1. Aquest certificat empara únicament l'actuació efectuada i documentada amb la documentació tècnica que l'acompanya.\n2. No es pot emetre un certificat d'instal·lació si en aquesta hi ha signes evidents de manca de seguretat.\n3. Aquest certificat s'ha d'acompanyar de la seva memòria tècnica o projecte i les instruccions d'ús i manteniment.\n4. En el cas d'ampliacions o modificacions, la classificació P1, P2 o memòria s'ha de fer d'acord amb l'actuació feta seguint els criteris \nde l'apartat 3.2 de la ITC-BT-04.\n5. El CUPS no s'ha d'emplenar en els tràmits de nova instal·lació.\n"
+  },
+  {
+    "file": "plantillas/elec1_m12.pdf",
+    "sha256": "054b740c37562fcc5431e0afe76d2fa4bab3ca8b945c1c52926f7a052507e327",
+    "bytes": 124522,
+    "pages": 2,
+    "xfa": false,
+    "fields": 0,
+    "values": {},
+    "pageSizes": [
+      [
+        612.0,
+        792.0
+      ],
+      [
+        612.0,
+        792.0
+      ]
+    ],
+    "tailPage1": " de la instal·lació\nTipus d'actuació\n Nova  Ampliació  Modificació o reforma CUPS\nL'ampliació/modificació supera el 50% de la \npotència de la instal·lació?\nClassificació\nRequisits administratius\nClasse P1 Classe P2 Memòria tècnica de disseny\nÚs de la instal·lació\nSí\ni) Instal·lacions de recàrrega de vehicles elèctrics",
+    "textPage2": "Pàgina            2 de            2          \nG346NSIN-156 \nDades tècniques\nPer a totes les instal·lacions Per a instal·lacions d'enllaç\nPotència màxima admissible kW Calibre fusibles CGP A\nTensió Intensitat Interruptor General de Maniobra (IGM) A\nNombre de circuits al quadre principal Secció LGA  mm2 Material conductor\nResistència d'aïllament entre conductors M? Ubicació de comptadors\nResistència d'aïllament amb terra M? Per a instal·lacions generadores*\nResistència de posada a terra ? Tecnologia\nIntensitat Interruptor General Automàtic (IGA)   A Tipus de connexió\nTé subministrament complementari? Sí No Potència  kW\n*No s'ha d'emplenar per a subministraments complementaris ja \nque aquests formen part de la instal·lació receptora\nCertificació\nEn/na CERTIFICA que la instal·lació descrita ha estat realitzada\nd'acord amb les prescripcions del Reglament Electrotècnic per a baixa tensió i les seves ITC, aprovat pel Reial Decret 842/2002, de 2 d'agost, el Decret \n192/2023, de 7 de novembre, de la seguretat industrial dels establiments, les instal·lacions i els productes,  així com amb la seva documentació tècnica.\nObservacions\nSignatura de la persona instal·ladora\n1. Aquest certificat empara únicament l'actuació efectuada i documentada amb la documentació tècnica que l'acompanya.\n2. No es pot emetre un certificat d'instal·lació si en aquesta hi ha signes evidents de manca de seguretat.\n3. Aquest certificat s'ha d'acompanyar de la seva memòria tècnica o projecte i les instruccions d'ús i manteniment.\n4. En el cas d'ampliacions o modificacions, la classificació P1, P2 o memòria s'ha de fer d'acord amb l'actuació feta seguint els criteris \nde l'apartat 3.2 de la ITC-BT-04.\n5. El CUPS no s'ha d'emplenar en els tràmits de nova instal·lació.\n"
+  },
+  {
+    "file": "plantillas/elec1_m13.pdf",
+    "sha256": "afcf6e207f85340a9464286ac6c6efddbecb8b94797d16cbd3239a3e213e7968",
+    "bytes": 124514,
+    "pages": 2,
+    "xfa": false,
+    "fields": 0,
+    "values": {},
+    "pageSizes": [
+      [
+        612.0,
+        792.0
+      ],
+      [
+        612.0,
+        792.0
+      ]
+    ],
+    "tailPage1": " de la instal·lació\nTipus d'actuació\n Nova  Ampliació  Modificació o reforma CUPS\nL'ampliació/modificació supera el 50% de la \npotència de la instal·lació?\nClassificació\nRequisits administratius\nClasse P1 Classe P2 Memòria tècnica de disseny\nÚs de la instal·lació\nSí\nj) Instal·lacions en aparcaments i estacionaments",
+    "textPage2": "Pàgina            2 de            2          \nG346NSIN-156 \nDades tècniques\nPer a totes les instal·lacions Per a instal·lacions d'enllaç\nPotència màxima admissible kW Calibre fusibles CGP A\nTensió Intensitat Interruptor General de Maniobra (IGM) A\nNombre de circuits al quadre principal Secció LGA  mm2 Material conductor\nResistència d'aïllament entre conductors M? Ubicació de comptadors\nResistència d'aïllament amb terra M? Per a instal·lacions generadores*\nResistència de posada a terra ? Tecnologia\nIntensitat Interruptor General Automàtic (IGA)   A Tipus de connexió\nTé subministrament complementari? Sí No Potència  kW\n*No s'ha d'emplenar per a subministraments complementaris ja \nque aquests formen part de la instal·lació receptora\nCertificació\nEn/na CERTIFICA que la instal·lació descrita ha estat realitzada\nd'acord amb les prescripcions del Reglament Electrotècnic per a baixa tensió i les seves ITC, aprovat pel Reial Decret 842/2002, de 2 d'agost, el Decret \n192/2023, de 7 de novembre, de la seguretat industrial dels establiments, les instal·lacions i els productes,  així com amb la seva documentació tècnica.\nObservacions\nSignatura de la persona instal·ladora\n1. Aquest certificat empara únicament l'actuació efectuada i documentada amb la documentació tècnica que l'acompanya.\n2. No es pot emetre un certificat d'instal·lació si en aquesta hi ha signes evidents de manca de seguretat.\n3. Aquest certificat s'ha d'acompanyar de la seva memòria tècnica o projecte i les instruccions d'ús i manteniment.\n4. En el cas d'ampliacions o modificacions, la classificació P1, P2 o memòria s'ha de fer d'acord amb l'actuació feta seguint els criteris \nde l'apartat 3.2 de la ITC-BT-04.\n5. El CUPS no s'ha d'emplenar en els tràmits de nova instal·lació.\n"
+  },
+  {
+    "file": "plantillas/elec1_m14.pdf",
+    "sha256": "23f8a1e8653063e66286b1b19cc4dbaa4e73312e5cabd7a32d9fcc12b5b34acf",
+    "bytes": 124513,
+    "pages": 2,
+    "xfa": false,
+    "fields": 0,
+    "values": {},
+    "pageSizes": [
+      [
+        612.0,
+        792.0
+      ],
+      [
+        612.0,
+        792.0
+      ]
+    ],
+    "tailPage1": " de la instal·lació\nTipus d'actuació\n Nova  Ampliació  Modificació o reforma CUPS\nL'ampliació/modificació supera el 50% de la \npotència de la instal·lació?\nClassificació\nRequisits administratius\nClasse P1 Classe P2 Memòria tècnica de disseny\nÚs de la instal·lació\nSí\nk) Instal·lacions d'enllumenat exterior",
+    "textPage2": "Pàgina            2 de            2          \nG346NSIN-156 \nDades tècniques\nPer a totes les instal·lacions Per a instal·lacions d'enllaç\nPotència màxima admissible kW Calibre fusibles CGP A\nTensió Intensitat Interruptor General de Maniobra (IGM) A\nNombre de circuits al quadre principal Secció LGA  mm2 Material conductor\nResistència d'aïllament entre conductors M? Ubicació de comptadors\nResistència d'aïllament amb terra M? Per a instal·lacions generadores*\nResistència de posada a terra ? Tecnologia\nIntensitat Interruptor General Automàtic (IGA)   A Tipus de connexió\nTé subministrament complementari? Sí No Potència  kW\n*No s'ha d'emplenar per a subministraments complementaris ja \nque aquests formen part de la instal·lació receptora\nCertificació\nEn/na CERTIFICA que la instal·lació descrita ha estat realitzada\nd'acord amb les prescripcions del Reglament Electrotècnic per a baixa tensió i les seves ITC, aprovat pel Reial Decret 842/2002, de 2 d'agost, el Decret \n192/2023, de 7 de novembre, de la seguretat industrial dels establiments, les instal·lacions i els productes,  així com amb la seva documentació tècnica.\nObservacions\nSignatura de la persona instal·ladora\n1. Aquest certificat empara únicament l'actuació efectuada i documentada amb la documentació tècnica que l'acompanya.\n2. No es pot emetre un certificat d'instal·lació si en aquesta hi ha signes evidents de manca de seguretat.\n3. Aquest certificat s'ha d'acompanyar de la seva memòria tècnica o projecte i les instruccions d'ús i manteniment.\n4. En el cas d'ampliacions o modificacions, la classificació P1, P2 o memòria s'ha de fer d'acord amb l'actuació feta seguint els criteris \nde l'apartat 3.2 de la ITC-BT-04.\n5. El CUPS no s'ha d'emplenar en els tràmits de nova instal·lació.\n"
+  },
+  {
+    "file": "plantillas/elec1_m15.pdf",
+    "sha256": "19e5ade967c655fc4b54fa7c122853067091330485608197eaee15f29c5a8b33",
+    "bytes": 124514,
+    "pages": 2,
+    "xfa": false,
+    "fields": 0,
+    "values": {},
+    "pageSizes": [
+      [
+        612.0,
+        792.0
+      ],
+      [
+        612.0,
+        792.0
+      ]
+    ],
+    "tailPage1": " de la instal·lació\nTipus d'actuació\n Nova  Ampliació  Modificació o reforma CUPS\nL'ampliació/modificació supera el 50% de la \npotència de la instal·lació?\nClassificació\nRequisits administratius\nClasse P1 Classe P2 Memòria tècnica de disseny\nÚs de la instal·lació\nSí\nl) Instal·lacions generadores per autoconsum",
+    "textPage2": "Pàgina            2 de            2          \nG346NSIN-156 \nDades tècniques\nPer a totes les instal·lacions Per a instal·lacions d'enllaç\nPotència màxima admissible kW Calibre fusibles CGP A\nTensió Intensitat Interruptor General de Maniobra (IGM) A\nNombre de circuits al quadre principal Secció LGA  mm2 Material conductor\nResistència d'aïllament entre conductors M? Ubicació de comptadors\nResistència d'aïllament amb terra M? Per a instal·lacions generadores*\nResistència de posada a terra ? Tecnologia\nIntensitat Interruptor General Automàtic (IGA)   A Tipus de connexió\nTé subministrament complementari? Sí No Potència  kW\n*No s'ha d'emplenar per a subministraments complementaris ja \nque aquests formen part de la instal·lació receptora\nCertificació\nEn/na CERTIFICA que la instal·lació descrita ha estat realitzada\nd'acord amb les prescripcions del Reglament Electrotècnic per a baixa tensió i les seves ITC, aprovat pel Reial Decret 842/2002, de 2 d'agost, el Decret \n192/2023, de 7 de novembre, de la seguretat industrial dels establiments, les instal·lacions i els productes,  així com amb la seva documentació tècnica.\nObservacions\nSignatura de la persona instal·ladora\n1. Aquest certificat empara únicament l'actuació efectuada i documentada amb la documentació tècnica que l'acompanya.\n2. No es pot emetre un certificat d'instal·lació si en aquesta hi ha signes evidents de manca de seguretat.\n3. Aquest certificat s'ha d'acompanyar de la seva memòria tècnica o projecte i les instruccions d'ús i manteniment.\n4. En el cas d'ampliacions o modificacions, la classificació P1, P2 o memòria s'ha de fer d'acord amb l'actuació feta seguint els criteris \nde l'apartat 3.2 de la ITC-BT-04.\n5. El CUPS no s'ha d'emplenar en els tràmits de nova instal·lació.\n"
+  },
+  {
+    "file": "plantillas/elec1_m16.pdf",
+    "sha256": "673e1c6c8d0cd35715b91a5227424b5773273da0a2a685b0df094b1cc53bc842",
+    "bytes": 124524,
+    "pages": 2,
+    "xfa": false,
+    "fields": 0,
+    "values": {},
+    "pageSizes": [
+      [
+        612.0,
+        792.0
+      ],
+      [
+        612.0,
+        792.0
+      ]
+    ],
+    "tailPage1": " de la instal·lació\nTipus d'actuació\n Nova  Ampliació  Modificació o reforma CUPS\nL'ampliació/modificació supera el 50% de la \npotència de la instal·lació?\nClassificació\nRequisits administratius\nClasse P1 Classe P2 Memòria tècnica de disseny\nÚs de la instal·lació\nSí\nm) Instal·lacions d'oficines sense presència de públic",
+    "textPage2": "Pàgina            2 de            2          \nG346NSIN-156 \nDades tècniques\nPer a totes les instal·lacions Per a instal·lacions d'enllaç\nPotència màxima admissible kW Calibre fusibles CGP A\nTensió Intensitat Interruptor General de Maniobra (IGM) A\nNombre de circuits al quadre principal Secció LGA  mm2 Material conductor\nResistència d'aïllament entre conductors M? Ubicació de comptadors\nResistència d'aïllament amb terra M? Per a instal·lacions generadores*\nResistència de posada a terra ? Tecnologia\nIntensitat Interruptor General Automàtic (IGA)   A Tipus de connexió\nTé subministrament complementari? Sí No Potència  kW\n*No s'ha d'emplenar per a subministraments complementaris ja \nque aquests formen part de la instal·lació receptora\nCertificació\nEn/na CERTIFICA que la instal·lació descrita ha estat realitzada\nd'acord amb les prescripcions del Reglament Electrotècnic per a baixa tensió i les seves ITC, aprovat pel Reial Decret 842/2002, de 2 d'agost, el Decret \n192/2023, de 7 de novembre, de la seguretat industrial dels establiments, les instal·lacions i els productes,  així com amb la seva documentació tècnica.\nObservacions\nSignatura de la persona instal·ladora\n1. Aquest certificat empara únicament l'actuació efectuada i documentada amb la documentació tècnica que l'acompanya.\n2. No es pot emetre un certificat d'instal·lació si en aquesta hi ha signes evidents de manca de seguretat.\n3. Aquest certificat s'ha d'acompanyar de la seva memòria tècnica o projecte i les instruccions d'ús i manteniment.\n4. En el cas d'ampliacions o modificacions, la classificació P1, P2 o memòria s'ha de fer d'acord amb l'actuació feta seguint els criteris \nde l'apartat 3.2 de la ITC-BT-04.\n5. El CUPS no s'ha d'emplenar en els tràmits de nova instal·lació.\n"
+  },
+  {
+    "file": "plantillas/elec1_m17.pdf",
+    "sha256": "870a28a2c4cb11cbf0299a28be02f02637e376ce2f0383f54c3e5c65e74c83bb",
+    "bytes": 124505,
+    "pages": 2,
+    "xfa": false,
+    "fields": 0,
+    "values": {},
+    "pageSizes": [
+      [
+        612.0,
+        792.0
+      ],
+      [
+        612.0,
+        792.0
+      ]
+    ],
+    "tailPage1": " de la instal·lació\nTipus d'actuació\n Nova  Ampliació  Modificació o reforma CUPS\nL'ampliació/modificació supera el 50% de la \npotència de la instal·lació?\nClassificació\nRequisits administratius\nClasse P1 Classe P2 Memòria tècnica de disseny\nÚs de la instal·lació\nSí\nn) Instal·lacions generadores",
+    "textPage2": "Pàgina            2 de            2          \nG346NSIN-156 \nDades tècniques\nPer a totes les instal·lacions Per a instal·lacions d'enllaç\nPotència màxima admissible kW Calibre fusibles CGP A\nTensió Intensitat Interruptor General de Maniobra (IGM) A\nNombre de circuits al quadre principal Secció LGA  mm2 Material conductor\nResistència d'aïllament entre conductors M? Ubicació de comptadors\nResistència d'aïllament amb terra M? Per a instal·lacions generadores*\nResistència de posada a terra ? Tecnologia\nIntensitat Interruptor General Automàtic (IGA)   A Tipus de connexió\nTé subministrament complementari? Sí No Potència  kW\n*No s'ha d'emplenar per a subministraments complementaris ja \nque aquests formen part de la instal·lació receptora\nCertificació\nEn/na CERTIFICA que la instal·lació descrita ha estat realitzada\nd'acord amb les prescripcions del Reglament Electrotècnic per a baixa tensió i les seves ITC, aprovat pel Reial Decret 842/2002, de 2 d'agost, el Decret \n192/2023, de 7 de novembre, de la seguretat industrial dels establiments, les instal·lacions i els productes,  així com amb la seva documentació tècnica.\nObservacions\nSignatura de la persona instal·ladora\n1. Aquest certificat empara únicament l'actuació efectuada i documentada amb la documentació tècnica que l'acompanya.\n2. No es pot emetre un certificat d'instal·lació si en aquesta hi ha signes evidents de manca de seguretat.\n3. Aquest certificat s'ha d'acompanyar de la seva memòria tècnica o projecte i les instruccions d'ús i manteniment.\n4. En el cas d'ampliacions o modificacions, la classificació P1, P2 o memòria s'ha de fer d'acord amb l'actuació feta seguint els criteris \nde l'apartat 3.2 de la ITC-BT-04.\n5. El CUPS no s'ha d'emplenar en els tràmits de nova instal·lació.\n"
+  },
+  {
+    "file": "plantillas/elec1_m18.pdf",
+    "sha256": "65857d657b42d9fa8886b6381062d622f2efbaf62d2a1f0d8be995c1951160a3",
+    "bytes": 124489,
+    "pages": 2,
+    "xfa": false,
+    "fields": 0,
+    "values": {},
+    "pageSizes": [
+      [
+        612.0,
+        792.0
+      ],
+      [
+        612.0,
+        792.0
+      ]
+    ],
+    "tailPage1": " de la instal·lació\nTipus d'actuació\n Nova  Ampliació  Modificació o reforma CUPS\nL'ampliació/modificació supera el 50% de la \npotència de la instal·lació?\nClassificació\nRequisits administratius\nClasse P1 Classe P2 Memòria tècnica de disseny\nÚs de la instal·lació\nSí\no) Altres usos",
+    "textPage2": "Pàgina            2 de            2          \nG346NSIN-156 \nDades tècniques\nPer a totes les instal·lacions Per a instal·lacions d'enllaç\nPotència màxima admissible kW Calibre fusibles CGP A\nTensió Intensitat Interruptor General de Maniobra (IGM) A\nNombre de circuits al quadre principal Secció LGA  mm2 Material conductor\nResistència d'aïllament entre conductors M? Ubicació de comptadors\nResistència d'aïllament amb terra M? Per a instal·lacions generadores*\nResistència de posada a terra ? Tecnologia\nIntensitat Interruptor General Automàtic (IGA)   A Tipus de connexió\nTé subministrament complementari? Sí No Potència  kW\n*No s'ha d'emplenar per a subministraments complementaris ja \nque aquests formen part de la instal·lació receptora\nCertificació\nEn/na CERTIFICA que la instal·lació descrita ha estat realitzada\nd'acord amb les prescripcions del Reglament Electrotècnic per a baixa tensió i les seves ITC, aprovat pel Reial Decret 842/2002, de 2 d'agost, el Decret \n192/2023, de 7 de novembre, de la seguretat industrial dels establiments, les instal·lacions i els productes,  així com amb la seva documentació tècnica.\nObservacions\nSignatura de la persona instal·ladora\n1. Aquest certificat empara únicament l'actuació efectuada i documentada amb la documentació tècnica que l'acompanya.\n2. No es pot emetre un certificat d'instal·lació si en aquesta hi ha signes evidents de manca de seguretat.\n3. Aquest certificat s'ha d'acompanyar de la seva memòria tècnica o projecte i les instruccions d'ús i manteniment.\n4. En el cas d'ampliacions o modificacions, la classificació P1, P2 o memòria s'ha de fer d'acord amb l'actuació feta seguint els criteris \nde l'apartat 3.2 de la ITC-BT-04.\n5. El CUPS no s'ha d'emplenar en els tràmits de nova instal·lació.\n"
+  },
+  {
+    "file": "plantillas/elec1_m19.pdf",
+    "sha256": "9dae14a325defc98aead8a3ef52e1ec37e077e2fcc0c90dfa73becb26a563b32",
+    "bytes": 124490,
+    "pages": 2,
+    "xfa": false,
+    "fields": 0,
+    "values": {},
+    "pageSizes": [
+      [
+        612.0,
+        792.0
+      ],
+      [
+        612.0,
+        792.0
+      ]
+    ],
+    "tailPage1": " de la instal·lació\nTipus d'actuació\n Nova  Ampliació  Modificació o reforma CUPS\nL'ampliació/modificació supera el 50% de la \npotència de la instal·lació?\nClassificació\nRequisits administratius\nClasse P1 Classe P2 Memòria tècnica de disseny\nÚs de la instal·lació\nNo\no) Altres usos",
+    "textPage2": "Pàgina            2 de            2          \nG346NSIN-156 \nDades tècniques\nPer a totes les instal·lacions Per a instal·lacions d'enllaç\nPotència màxima admissible kW Calibre fusibles CGP A\nTensió Intensitat Interruptor General de Maniobra (IGM) A\nNombre de circuits al quadre principal Secció LGA  mm2 Material conductor\nResistència d'aïllament entre conductors M? Ubicació de comptadors\nResistència d'aïllament amb terra M? Per a instal·lacions generadores*\nResistència de posada a terra ? Tecnologia\nIntensitat Interruptor General Automàtic (IGA)   A Tipus de connexió\nTé subministrament complementari? Sí No Potència  kW\n*No s'ha d'emplenar per a subministraments complementaris ja \nque aquests formen part de la instal·lació receptora\nCertificació\nEn/na CERTIFICA que la instal·lació descrita ha estat realitzada\nd'acord amb les prescripcions del Reglament Electrotècnic per a baixa tensió i les seves ITC, aprovat pel Reial Decret 842/2002, de 2 d'agost, el Decret \n192/2023, de 7 de novembre, de la seguretat industrial dels establiments, les instal·lacions i els productes,  així com amb la seva documentació tècnica.\nObservacions\nSignatura de la persona instal·ladora\n1. Aquest certificat empara únicament l'actuació efectuada i documentada amb la documentació tècnica que l'acompanya.\n2. No es pot emetre un certificat d'instal·lació si en aquesta hi ha signes evidents de manca de seguretat.\n3. Aquest certificat s'ha d'acompanyar de la seva memòria tècnica o projecte i les instruccions d'ús i manteniment.\n4. En el cas d'ampliacions o modificacions, la classificació P1, P2 o memòria s'ha de fer d'acord amb l'actuació feta seguint els criteris \nde l'apartat 3.2 de la ITC-BT-04.\n5. El CUPS no s'ha d'emplenar en els tràmits de nova instal·lació.\n"
+  }
+]

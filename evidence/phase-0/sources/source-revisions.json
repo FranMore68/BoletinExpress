@@ -1,0 +1,21 @@
+{
+  "recordedAt": "2026-10-16",
+  "officialBaseline": {
+    "file": "evidence/phase-0/sources/ELEC1-oficial-original.pdf",
+    "sha256": "f846613f63196b0c2a2b343a64650e6e95a808d06a8ab7c5c1681f9b7d4ca19a",
+    "origin": "Descarga oficial conservada en la comprobación anterior: https://empresa.extranet.gencat.cat/impresos/AppJava/downloadFile.html?idDoc=G346NSIN-156-00.pdf"
+  },
+  "workingSource": {
+    "file": "plantillas/Plta_ELEC1CertificatInstalElectricaBT.pdf",
+    "sha256": "f846613f63196b0c2a2b343a64650e6e95a808d06a8ab7c5c1681f9b7d4ca19a"
+  },
+  "xfaTemplateIdentical": true,
+  "templateSha256": "32dcee0b8d6853cdddc135da7d1b434d22ee7b82000a6e9842e1e1cde7b12481",
+  "datasetsIdentical": true,
+  "action": "La comprobacion actual encuentra el archivo de trabajo identico a la referencia oficial. El generador utiliza la copia fijada y no escribe en plantillas. Se conserva la huella historica del archivo de trabajo.",
+  "previousWorkingSource": {
+    "file": "plantillas/Plta_ELEC1CertificatInstalElectricaBT.pdf",
+    "sha256": "2b747cee55aad04ad0a643e2a5f86aded74b105e88d8ac263c2e9d7657994a81"
+  },
+  "workingSourceMatchesOfficialNow": true
+}

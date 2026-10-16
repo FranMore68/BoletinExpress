@@ -1,0 +1,268 @@
+TAP version 13
+# Subtest: la plantilla BRIE conserva su huella y sus dos páginas
+ok 1 - la plantilla BRIE conserva su huella y sus dos páginas
+  ---
+  duration_ms: 21.888458
+  type: 'test'
+  ...
+# Subtest: la plantilla CIE original sigue intacta y se identifica como XFA
+ok 2 - la plantilla CIE original sigue intacta y se identifica como XFA
+  ---
+  duration_ms: 5.820875
+  type: 'test'
+  ...
+# Subtest: el BRIE completo conserva páginas, medidas y fuente incrustada
+ok 3 - el BRIE completo conserva páginas, medidas y fuente incrustada
+  ---
+  duration_ms: 85.7755
+  type: 'test'
+  ...
+# Subtest: las opciones No y el valor cero se trasladan sin desaparecer
+ok 4 - las opciones No y el valor cero se trasladan sin desaparecer
+  ---
+  duration_ms: 49.699209
+  type: 'test'
+  ...
+# Subtest: los datos ausentes dejan campos vacíos sin valores inventados
+ok 5 - los datos ausentes dejan campos vacíos sin valores inventados
+  ---
+  duration_ms: 47.376625
+  type: 'test'
+  ...
+# Subtest: el campo condicional de tensión del defecto 3 también admite datos explícitos
+ok 6 - el campo condicional de tensión del defecto 3 también admite datos explícitos
+  ---
+  duration_ms: 47.315709
+  type: 'test'
+  ...
+# Subtest: rechaza una plantilla distinta antes de escribir datos
+ok 7 - rechaza una plantilla distinta antes de escribir datos
+  ---
+  duration_ms: 0.356583
+  type: 'test'
+  ...
+# Subtest: rechaza el campo no definido campo_inventado
+ok 8 - rechaza el campo no definido campo_inventado
+  ---
+  duration_ms: 11.783625
+  type: 'test'
+  ...
+# Subtest: rechaza el campo no definido toString
+ok 9 - rechaza el campo no definido toString
+  ---
+  duration_ms: 12.081958
+  type: 'test'
+  ...
+# Subtest: rechaza el campo no definido constructor
+ok 10 - rechaza el campo no definido constructor
+  ---
+  duration_ms: 12.20575
+  type: 'test'
+  ...
+# Subtest: rechaza el campo no definido __proto__
+ok 11 - rechaza el campo no definido __proto__
+  ---
+  duration_ms: 11.345834
+  type: 'test'
+  ...
+# Subtest: rechaza texto excesivo y nunca lo recorta
+ok 12 - rechaza texto excesivo y nunca lo recorta
+  ---
+  duration_ms: 10.825417
+  type: 'test'
+  ...
+# Subtest: rechaza párrafos que superan el espacio disponible
+ok 13 - rechaza párrafos que superan el espacio disponible
+  ---
+  duration_ms: 12.671375
+  type: 'test'
+  ...
+# Subtest: rechaza palabras indivisibles que no caben en el campo
+ok 14 - rechaza palabras indivisibles que no caben en el campo
+  ---
+  duration_ms: 11.454292
+  type: 'test'
+  ...
+# Subtest: rechaza opciones, booleanos y tipos de texto incorrectos
+ok 15 - rechaza opciones, booleanos y tipos de texto incorrectos
+  ---
+  duration_ms: 32.531333
+  type: 'test'
+  ...
+# Subtest: todas las marcas quedan en la página y en la opción seleccionada
+ok 16 - todas las marcas quedan en la página y en la opción seleccionada
+  ---
+  duration_ms: 50.962458
+  type: 'test'
+  ...
+# Subtest: la generación no modifica los bytes de la plantilla
+ok 17 - la generación no modifica los bytes de la plantilla
+  ---
+  duration_ms: 51.379292
+  type: 'test'
+  ...
+# Subtest: la plantilla estática conserva su huella y los originales no se modifican
+ok 18 - la plantilla estática conserva su huella y los originales no se modifican
+  ---
+  duration_ms: 39.402791
+  type: 'test'
+  ...
+# Subtest: el archivo de trabajo conserva la estructura XFA de la referencia oficial
+ok 19 - el archivo de trabajo conserva la estructura XFA de la referencia oficial
+  ---
+  duration_ms: 11.587959
+  type: 'test'
+  ...
+# Subtest: CIE conserva dos páginas A4, cero widgets, cero XFA y fuente incrustada
+ok 20 - CIE conserva dos páginas A4, cero widgets, cero XFA y fuente incrustada
+  ---
+  duration_ms: 27.463209
+  type: 'test'
+  ...
+# Subtest: escribe el dato elegido en ampliacio_50 sin activar otras ramas
+ok 21 - escribe el dato elegido en ampliacio_50 sin activar otras ramas
+  ---
+  duration_ms: 16.537416
+  type: 'test'
+  ...
+# Subtest: escribe el dato elegido en modificacio_50 sin activar otras ramas
+ok 22 - escribe el dato elegido en modificacio_50 sin activar otras ramas
+  ---
+  duration_ms: 15.132208
+  type: 'test'
+  ...
+# Subtest: escribe el dato elegido en classe_p1 sin activar otras ramas
+ok 23 - escribe el dato elegido en classe_p1 sin activar otras ramas
+  ---
+  duration_ms: 22.973
+  type: 'test'
+  ...
+# Subtest: escribe el dato elegido en classe_p2 sin activar otras ramas
+ok 24 - escribe el dato elegido en classe_p2 sin activar otras ramas
+  ---
+  duration_ms: 21.015792
+  type: 'test'
+  ...
+# Subtest: escribe el dato elegido en us_g sin activar otras ramas
+ok 25 - escribe el dato elegido en us_g sin activar otras ramas
+  ---
+  duration_ms: 27.302709
+  type: 'test'
+  ...
+# Subtest: escribe el dato elegido en us_h sin activar otras ramas
+ok 26 - escribe el dato elegido en us_h sin activar otras ramas
+  ---
+  duration_ms: 23.938584
+  type: 'test'
+  ...
+# Subtest: escribe el dato elegido en altres_usos sin activar otras ramas
+ok 27 - escribe el dato elegido en altres_usos sin activar otras ramas
+  ---
+  duration_ms: 24.458
+  type: 'test'
+  ...
+# Subtest: escribe el dato elegido en tensio_altra sin activar otras ramas
+ok 28 - escribe el dato elegido en tensio_altra sin activar otras ramas
+  ---
+  duration_ms: 10.37075
+  type: 'test'
+  ...
+# Subtest: escribe el dato elegido en auditori_ref sin activar otras ramas
+ok 29 - escribe el dato elegido en auditori_ref sin activar otras ramas
+  ---
+  duration_ms: 21.040542
+  type: 'test'
+  ...
+# Subtest: un borrador incompleto señala ausencias sin inventar respuestas
+ok 30 - un borrador incompleto señala ausencias sin inventar respuestas
+  ---
+  duration_ms: 11.01775
+  type: 'test'
+  ...
+# Subtest: las ramas incompatibles se rechazan antes de dibujar
+ok 31 - las ramas incompatibles se rechazan antes de dibujar
+  ---
+  duration_ms: 0.516459
+  type: 'test'
+  ...
+# Subtest: todos los valores oficiales de P1, P2, g y h se escriben sin abreviar ni recortar
+ok 32 - todos los valores oficiales de P1, P2, g y h se escriben sin abreviar ni recortar
+  ---
+  duration_ms: 1003.010375
+  type: 'test'
+  ...
+# Subtest: rechaza exceso de anchura, de altura y palabras indivisibles
+ok 33 - rechaza exceso de anchura, de altura y palabras indivisibles
+  ---
+  duration_ms: 27.139167
+  type: 'test'
+  ...
+# Subtest: identificadores, valores de opción y tipos incorrectos no se aceptan
+ok 34 - identificadores, valores de opción y tipos incorrectos no se aceptan
+  ---
+  duration_ms: 0.388334
+  type: 'test'
+  ...
+# Subtest: cero y No explícitos se conservan y no se inventan datos ausentes
+ok 35 - cero y No explícitos se conservan y no se inventan datos ausentes
+  ---
+  duration_ms: 5.39575
+  type: 'test'
+  ...
+# Subtest: rechaza una versión distinta de la plantilla
+ok 36 - rechaza una versión distinta de la plantilla
+  ---
+  duration_ms: 0.170667
+  type: 'test'
+  ...
+# Subtest: se pueden combinar ampliación, P1, uso g y otra tensión sin perder datos
+ok 37 - se pueden combinar ampliación, P1, uso g y otra tensión sin perder datos
+  ---
+  duration_ms: 28.862208
+  type: 'test'
+  ...
+# Subtest: cada campo del inventario XFA está mapeado o excluido expresamente
+ok 38 - cada campo del inventario XFA está mapeado o excluido expresamente
+  ---
+  duration_ms: 1.757541
+  type: 'test'
+  ...
+# Subtest: los catorce usos conservan la lista y se desplazan solo al insertar un supuesto P1/P2
+ok 39 - los catorce usos conservan la lista y se desplazan solo al insertar un supuesto P1/P2
+  ---
+  duration_ms: 447.274416
+  type: 'test'
+  ...
+# Subtest: la referencia Auditori tiene P1 bajo los botones y el detalle antes de los datos técnicos de página 2
+ok 40 - la referencia Auditori tiene P1 bajo los botones y el detalle antes de los datos técnicos de página 2
+  ---
+  duration_ms: 21.730292
+  type: 'test'
+  ...
+# Subtest: las variantes g/h y otros usos trasladan todos los datos técnicos, incluida la marca Sí/No
+ok 41 - las variantes g/h y otros usos trasladan todos los datos técnicos, incluida la marca Sí/No
+  ---
+  duration_ms: 71.105333
+  type: 'test'
+  ...
+# Subtest: la pregunta del 50 % conserva posición y coloca Sí/No a la derecha
+ok 42 - la pregunta del 50 % conserva posición y coloca Sí/No a la derecha
+  ---
+  duration_ms: 23.11
+  type: 'test'
+  ...
+# Subtest: todas las operaciones quedan en la página y no se solapan entre sí
+ok 43 - todas las operaciones quedan en la página y no se solapan entre sí
+  ---
+  duration_ms: 171.758084
+  type: 'test'
+  ...
+1..43
+# tests 43
+# suites 0
+# pass 43
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 2250.249

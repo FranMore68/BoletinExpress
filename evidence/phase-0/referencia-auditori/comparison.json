@@ -1,0 +1,66 @@
+{
+  "file": "plantillas/Plta_ELEC1CertificatInstalElectricaBTauditori.pdf",
+  "sha256": "01a2206988ae1109b3701370ddb42d286a9b751e0273ceea51855174a80cab42",
+  "xfaTemplateIdenticalToOfficial": true,
+  "savedFormFields": {
+    "TXT_P1": {
+      "presence": "visible",
+      "value": "a) Instal·lacions industrials amb una potència màxima admissible superior a 100 kW"
+    },
+    "TXT_P2": {
+      "presence": "hidden",
+      "value": null
+    },
+    "TXT_Us": {
+      "presence": null,
+      "value": "g"
+    },
+    "TXT_G": {
+      "presence": "visible",
+      "value": "g3) Auditori"
+    },
+    "TXT_H": {
+      "presence": "hidden",
+      "value": null
+    }
+  },
+  "adobeVisualReference": {
+    "P1": "En página 1, debajo de los botones P1/P2/memoria y antes del uso principal",
+    "G": "Especifiqueu quin ús y g3) Auditori en página 2, encima de Dades tècniques"
+  },
+  "comparisonWithPrototype": {
+    "TXT_P1": {
+      "pass": true,
+      "prototype": "Debajo de los botones, segun referencia"
+    },
+    "TXT_G": {
+      "pass": true,
+      "prototype": "Pagina 2 antes de Dades tecniques, segun referencia"
+    }
+  },
+  "coverageAdded": [
+    "TXT_P1",
+    "TXT_G"
+  ],
+  "remainingUnseen": [],
+  "evidence": [
+    "adobe-auditori-page1-final.png",
+    "adobe-auditori-page2-final.png",
+    "saved-form.xml"
+  ],
+  "phase0Pass": true,
+  "unchangedAfterInspection": true,
+  "previousPrototypeComparison": {
+    "TXT_P1": {
+      "pass": false,
+      "prototype": "Sobre los botones de requisitos",
+      "reference": "Debajo de los botones"
+    },
+    "TXT_G": {
+      "pass": false,
+      "prototype": "Página 1 bajo el uso principal",
+      "reference": "Página 2 antes de Dades tècniques"
+    }
+  },
+  "additionalReferences": "../cie-flow-reference-comparison.json"
+}

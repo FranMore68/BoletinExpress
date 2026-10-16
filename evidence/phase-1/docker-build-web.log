@@ -1,0 +1,110 @@
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 DONE 0.0s
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 968B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/node:24-alpine@sha256:44fce696f38ba8c987c4db89954051000bbd05ffd8d8659ba15ed4a8602e937f
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 198B done
+#3 DONE 0.0s
+
+#4 [base 1/2] FROM docker.io/library/node:24-alpine@sha256:44fce696f38ba8c987c4db89954051000bbd05ffd8d8659ba15ed4a8602e937f
+#4 resolve docker.io/library/node:24-alpine@sha256:44fce696f38ba8c987c4db89954051000bbd05ffd8d8659ba15ed4a8602e937f done
+#4 DONE 0.0s
+
+#5 [internal] load build context
+#5 transferring context: 81.83kB done
+#5 DONE 0.0s
+
+#6 [base 2/2] WORKDIR /app
+#6 CACHED
+
+#7 [dependencies 1/2] COPY package.json package-lock.json ./
+#7 DONE 0.0s
+
+#8 [dependencies 2/2] RUN npm ci --ignore-scripts
+#8 5.560 
+#8 5.560 added 56 packages, and audited 57 packages in 5s
+#8 5.560 
+#8 5.561 15 packages are looking for funding
+#8 5.561   run `npm fund` for details
+#8 5.561 
+#8 5.561 found 0 vulnerabilities
+#8 5.562 npm notice
+#8 5.562 npm notice New major version of npm available! 11.19.1 -> 12.2.0
+#8 5.562 npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.0
+#8 5.562 npm notice To update run: npm install -g npm@12.2.0
+#8 5.562 npm notice
+#8 DONE 5.7s
+
+#9 [build 1/4] COPY next.config.ts tsconfig.json next-env.d.ts postcss.config.mjs ./
+#9 DONE 0.0s
+
+#10 [build 2/4] COPY src ./src
+#10 DONE 0.0s
+
+#11 [build 3/4] COPY public ./public
+#11 DONE 0.0s
+
+#12 [build 4/4] RUN npm run build
+#12 0.141 
+#12 0.141 > boletinexpress@0.1.0 build
+#12 0.141 > next build
+#12 0.141 
+#12 0.294 ▲ Next.js 16.4.2 (Turbopack)
+#12 0.309 ✓ Running next.config.ts took 15ms
+#12 0.315 
+#12 0.325   Creating an optimized production build ...
+#12 1.347 ✓ Compiled successfully in 1021ms
+#12 1.350   Running TypeScript ...
+#12 1.490   Finished TypeScript in 141ms ...
+#12 1.491   Collecting page data using 5 workers ...
+#12 1.719   Generating static pages using 5 workers (0/4) ...
+#12 1.854   Generating static pages using 5 workers (1/4) 
+#12 1.897   Generating static pages using 5 workers (2/4) 
+#12 1.898   Generating static pages using 5 workers (3/4) 
+#12 1.899 ✓ Generating static pages using 5 workers (4/4) in 180ms
+#12 1.901   Finalizing page optimization ...
+#12 1.954 
+#12 1.955 Route (app)
+#12 1.955 ┌ ○ /
+#12 1.955 ├ ○ /_not-found
+#12 1.955 └ ƒ /api/health
+#12 1.955 
+#12 1.955 
+#12 1.955 ○  (Static)   prerendered as static content
+#12 1.955 ƒ  (Dynamic)  server-rendered on demand
+#12 1.955 
+#12 DONE 2.0s
+
+#13 [runtime 1/1] RUN rm -rf /usr/local/lib/node_modules/npm /usr/local/bin/npm /usr/local/bin/npx /opt/yarn* /usr/local/bin/yarn*
+#13 CACHED
+
+#14 [web 1/3] COPY --from=build --chown=node:node /app/.next/standalone ./
+#14 DONE 0.1s
+
+#15 [web 2/3] COPY --from=build --chown=node:node /app/.next/static ./.next/static
+#15 DONE 0.0s
+
+#16 [web 3/3] COPY --from=build --chown=node:node /app/public ./public
+#16 DONE 0.0s
+
+#17 exporting to image
+#17 exporting layers
+#17 exporting layers 0.9s done
+#17 exporting manifest sha256:0f11c0d563f118df2f135be4d37542dffac954998e0e91d6eb85a5cd80771a1d done
+#17 exporting config sha256:ebdda65ed21e22e5b1a7e44137d01994948061d465a41117224dbf03fdf5a73a done
+#17 exporting attestation manifest sha256:01c20cf2cdb5c8f43b2af2dbbdeb7b4b4c1f0441948e761db35ed6eca0b1ad8d done
+#17 exporting manifest list sha256:047059ce8441947eb68aa52aa16e009e8df7f39445fdf7df36c3c15853419960 done
+#17 naming to docker.io/library/boletinexpress-web:phase1 done
+#17 unpacking to docker.io/library/boletinexpress-web:phase1
+#17 unpacking to docker.io/library/boletinexpress-web:phase1 0.2s done
+#17 DONE 1.1s
+
+View build details: docker-desktop://dashboard/build/default/default/v8rp3flr6ywkhqvbnl3369n1q

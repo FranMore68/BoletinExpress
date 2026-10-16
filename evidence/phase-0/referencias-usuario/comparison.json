@@ -1,0 +1,93 @@
+{
+  "reviewedAt": "2026-10-16",
+  "sources": [
+    {
+      "file": "plantillas/Plta_ELEC1CertificatInstalElectricaBT_MODELO1.pdf",
+      "bytes": 124032,
+      "sha256": "c6c4382a10679bcc4e23a6e00bd5f647bf15cb92cbbb2ad96c06e573d946697c",
+      "pages": 2,
+      "xfa": false,
+      "fields": 0,
+      "values": {},
+      "pageSizes": [
+        [
+          612.0,
+          792.0
+        ],
+        [
+          612.0,
+          792.0
+        ]
+      ],
+      "producer": null
+    },
+    {
+      "file": "plantillas/Plta_ELEC1CertificatInstalElectricaBTMOdelo2.pdf",
+      "bytes": 124424,
+      "sha256": "d644c40f62e7e4eff4cd6dfaf85fa7201107d4ae19f2e338448b522efb79facd",
+      "pages": 2,
+      "xfa": false,
+      "fields": 0,
+      "values": {},
+      "pageSizes": [
+        [
+          612.0,
+          792.0
+        ],
+        [
+          612.0,
+          792.0
+        ]
+      ],
+      "producer": null
+    },
+    {
+      "file": "plantillas/Plta_ELEC1CertificatInstalElectricaBTMODELO3.pdf",
+      "bytes": 124425,
+      "sha256": "1e366488222d6d881858d84227b6886e5d6d6ecc4b419784d4cca168b92ac190",
+      "pages": 2,
+      "xfa": false,
+      "fields": 0,
+      "values": {},
+      "pageSizes": [
+        [
+          612.0,
+          792.0
+        ],
+        [
+          612.0,
+          792.0
+        ]
+      ],
+      "producer": null
+    }
+  ],
+  "observedSelections": {
+    "modelo1": "Nova",
+    "modelo2": "Ampliació",
+    "modelo3": "Modificació o reforma"
+  },
+  "coverage": {
+    "DDLAmpliaMod": {
+      "labelVisible": true,
+      "answerPopulated": false,
+      "sources": [
+        "modelo2",
+        "modelo3"
+      ],
+      "geometryApproved": false
+    },
+    "TXT_P1": false,
+    "TXT_P2": false,
+    "TXT_G": false,
+    "TXT_H": false,
+    "AltresUsos": false,
+    "InfoTensioAltre": false
+  },
+  "issues": [
+    "Las tres referencias están en Carta 612x792, no en A4.",
+    "Las opciones P1/P2, uso y tensión están sin seleccionar.",
+    "La exportación cambia tipografías, divisiones de códigos postales y círculos por casillas; Ω aparece como ?."
+  ],
+  "phase0Closed": false
+}

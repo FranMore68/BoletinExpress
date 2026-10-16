@@ -1,0 +1,1677 @@
+{
+  "probe": {
+    "ready": true,
+    "error": null,
+    "pdfjsVersion": "6.4.299",
+    "pages": [
+      {
+        "number": 1,
+        "width": 793.3333333333333,
+        "height": 1121.3333333333333
+      },
+      {
+        "number": 2,
+        "width": 793.3333333333333,
+        "height": 1121.3333333333333
+      }
+    ]
+  },
+  "controls": [
+    {
+      "page": 0,
+      "tag": "INPUT",
+      "label": null,
+      "value": "",
+      "visible": true,
+      "rect": {
+        "x": 87.85995371901957,
+        "y": 694.2490299962578,
+        "width": 390.9088468834321,
+        "height": 16.593858940775608
+      }
+    },
+    {
+      "page": 0,
+      "tag": "INPUT",
+      "label": null,
+      "value": "",
+      "visible": true,
+      "rect": {
+        "x": 484.42504005266085,
+        "y": 694.2490299962578,
+        "width": 79.37555162807988,
+        "height": 16.593858940775608
+      }
+    },
+    {
+      "page": 0,
+      "tag": "SELECT",
+      "label": null,
+      "value": "",
+      "visible": true,
+      "rect": {
+        "x": 87.85995371901957,
+        "y": 655.9831575906794,
+        "width": 81.70365567275236,
+        "height": 16.593858940775608
+      },
+      "options": [
+        {
+          "value": "",
+          "label": " "
+        },
+        {
+          "value": "0",
+          "label": " "
+        },
+        {
+          "value": "APA",
+          "label": "Apartament"
+        },
+        {
+          "value": "AVI",
+          "label": "Avinguda"
+        },
+        {
+          "value": "BAI",
+          "label": "Baixada"
+        },
+        {
+          "value": "BRC",
+          "label": "Barranc"
+        },
+        {
+          "value": "BAR",
+          "label": "Barri"
+        },
+        {
+          "value": "BLO",
+          "label": "Bloc"
+        },
+        {
+          "value": "CAM",
+          "label": "Camí"
+        },
+        {
+          "value": "CAR",
+          "label": "Carrer"
+        },
+        {
+          "value": "CRO",
+          "label": "Carreró"
+        },
+        {
+          "value": "CRT",
+          "label": "Carretera"
+        },
+        {
+          "value": "CAS",
+          "label": "Cases"
+        },
+        {
+          "value": "COL",
+          "label": "Colònia"
+        },
+        {
+          "value": "COS",
+          "label": "Costa"
+        },
+        {
+          "value": "DIS",
+          "label": "Disseminat"
+        },
+        {
+          "value": "EDI",
+          "label": "Edifici"
+        },
+        {
+          "value": "FAG",
+          "label": "Fageda"
+        },
+        {
+          "value": "GLO",
+          "label": "Glorieta"
+        },
+        {
+          "value": "GRV",
+          "label": "Gran Via"
+        },
+        {
+          "value": "GRU",
+          "label": "Grup"
+        },
+        {
+          "value": "LLO",
+          "label": "Lloc"
+        },
+        {
+          "value": "MER",
+          "label": "Mercat"
+        },
+        {
+          "value": "PAR",
+          "label": "Parc"
+        },
+        {
+          "value": "PTD",
+          "label": "Partida"
+        },
+        {
+          "value": "PTG",
+          "label": "Passatge"
+        },
+        {
+          "value": "PAS",
+          "label": "Passeig"
+        },
+        {
+          "value": "PLA",
+          "label": "Plaça"
+        },
+        {
+          "value": "PCT",
+          "label": "Placeta"
+        },
+        {
+          "value": "POB",
+          "label": "Poblat"
+        },
+        {
+          "value": "POL",
+          "label": "Polígon"
+        },
+        {
+          "value": "PRO",
+          "label": "Prolongació"
+        },
+        {
+          "value": "PUJ",
+          "label": "Pujada"
+        },
+        {
+          "value": "RAM",
+          "label": "Rambla"
+        },
+        {
+          "value": "RON",
+          "label": "Ronda"
+        },
+        {
+          "value": "SEN",
+          "label": "Senda"
+        },
+        {
+          "value": "TOR",
+          "label": "Torrent"
+        },
+        {
+          "value": "TRA",
+          "label": "Travessera"
+        },
+        {
+          "value": "TVS",
+          "label": "Travessia"
+        },
+        {
+          "value": "URB",
+          "label": "Urbanització"
+        },
+        {
+          "value": "VIA",
+          "label": "Via"
+        },
+        {
+          "value": "XAL",
+          "label": "Xalet"
+        }
+      ]
+    },
+    {
+      "page": 0,
+      "tag": "INPUT",
+      "label": null,
+      "value": "",
+      "visible": true,
+      "rect": {
+        "x": 175.21990034073227,
+        "y": 655.9831575906794,
+        "width": 334.5021960490812,
+        "height": 16.593858940775608
+      }
+    },
+    {
+      "page": 0,
+      "tag": "INPUT",
+      "label": null,
+      "value": "",
+      "visible": true,
+      "rect": {
+        "x": 515.3783987829407,
+        "y": 655.9831575906794,
+        "width": 48.70344474425383,
+        "height": 16.593858940775608
+      }
+    },
+    {
+      "page": 0,
+      "tag": "INPUT",
+      "label": null,
+      "value": "",
+      "visible": true,
+      "rect": {
+        "x": 87.85995371901957,
+        "y": 617.7172851851009,
+        "width": 93.54748724369682,
+        "height": 16.593858940775608
+      }
+    },
+    {
+      "page": 0,
+      "tag": "INPUT",
+      "label": null,
+      "value": "",
+      "visible": true,
+      "rect": {
+        "x": 184.2355807151131,
+        "y": 617.7172851851009,
+        "width": 92.12560100148578,
+        "height": 16.593858940775608
+      }
+    },
+    {
+      "page": 0,
+      "tag": "INPUT",
+      "label": null,
+      "value": "",
+      "visible": true,
+      "rect": {
+        "x": 283.43935318568674,
+        "y": 617.7172851851009,
+        "width": 92.1256124456527,
+        "height": 16.593858940775608
+      }
+    },
+    {
+      "page": 0,
+      "tag": "INPUT",
+      "label": null,
+      "value": "",
+      "visible": true,
+      "rect": {
+        "x": 385.47126540865713,
+        "y": 617.7172851851009,
+        "width": 89.01620940263525,
+        "height": 16.593858940775608
+      }
+    },
+    {
+      "page": 0,
+      "tag": "INPUT",
+      "label": null,
+      "value": "",
+      "visible": true,
+      "rect": {
+        "x": 484.39382036527775,
+        "y": 617.7172851851009,
+        "width": 79.37550585141216,
+        "height": 16.593858940775608
+      }
+    },
+    {
+      "page": 0,
+      "tag": "INPUT",
+      "label": null,
+      "value": "",
+      "visible": true,
+      "rect": {
+        "x": 87.85995371901957,
+        "y": 579.4514013353554,
+        "width": 221.11082662044785,
+        "height": 16.593858940775608
+      }
+    },
+    {
+      "page": 0,
+      "tag": "INPUT",
+      "label": null,
+      "value": "",
+      "visible": true,
+      "rect": {
+        "x": 314.6270655663443,
+        "y": 579.4514013353554,
+        "width": 79.37550585141216,
+        "height": 16.593858940775608
+      }
+    },
+    {
+      "page": 0,
+      "tag": "INPUT",
+      "label": null,
+      "value": "",
+      "visible": true,
+      "rect": {
+        "x": 399.65887381088373,
+        "y": 579.4514013353554,
+        "width": 164.42296971631083,
+        "height": 16.593858940775608
+      }
+    },
+    {
+      "page": 0,
+      "tag": "INPUT",
+      "label": null,
+      "value": "",
+      "visible": true,
+      "rect": {
+        "x": 87.85995371901957,
+        "y": 524.1697807751536,
+        "width": 277.51743167813106,
+        "height": 16.593858940775608
+      }
+    },
+    {
+      "page": 0,
+      "tag": "INPUT",
+      "label": null,
+      "value": "",
+      "visible": true,
+      "rect": {
+        "x": 371.03369351236137,
+        "y": 524.1697807751536,
+        "width": 107.71943430348068,
+        "height": 16.593858940775608
+      }
+    },
+    {
+      "page": 0,
+      "tag": "INPUT",
+      "label": null,
+      "value": "",
+      "visible": true,
+      "rect": {
+        "x": 484.4094302089693,
+        "y": 524.1697807751536,
+        "width": 79.37550585141216,
+        "height": 16.593858940775608
+      }
+    },
+    {
+      "page": 0,
+      "tag": "INPUT",
+      "label": null,
+      "value": "",
+      "visible": true,
+      "rect": {
+        "x": 87.85995371901957,
+        "y": 485.90391981374205,
+        "width": 277.51743167813106,
+        "height": 16.593858940775608
+      }
+    },
+    {
+      "page": 0,
+      "tag": "SELECT",
+      "label": null,
+      "value": "",
+      "visible": true,
+      "rect": {
+        "x": 371.03369351236137,
+        "y": 485.90391981374205,
+        "width": 107.71943430348068,
+        "height": 16.593858940775608
+      },
+      "options": [
+        {
+          "value": "",
+          "label": " "
+        },
+        {
+          "value": "Bàsica",
+          "label": "Bàsica"
+        },
+        {
+          "value": "Especialista",
+          "label": "Especialista"
+        }
+      ]
+    },
+    {
+      "page": 0,
+      "tag": "INPUT",
+      "label": null,
+      "value": "",
+      "visible": true,
+      "rect": {
+        "x": 484.4094302089693,
+        "y": 485.90391981374205,
+        "width": 79.37550585141216,
+        "height": 16.593858940775608
+      }
+    },
+    {
+      "page": 0,
+      "tag": "SELECT",
+      "label": null,
+      "value": "",
+      "visible": true,
+      "rect": {
+        "x": 87.85995371901957,
+        "y": 447.63803596399663,
+        "width": 81.70365567275236,
+        "height": 16.593858940775608
+      },
+      "options": [
+        {
+          "value": "",
+          "label": " "
+        },
+        {
+          "value": "0",
+          "label": " "
+        },
+        {
+          "value": "APA",
+          "label": "Apartament"
+        },
+        {
+          "value": "AVI",
+          "label": "Avinguda"
+        },
+        {
+          "value": "BAI",
+          "label": "Baixada"
+        },
+        {
+          "value": "BRC",
+          "label": "Barranc"
+        },
+        {
+          "value": "BAR",
+          "label": "Barri"
+        },
+        {
+          "value": "BLO",
+          "label": "Bloc"
+        },
+        {
+          "value": "CAM",
+          "label": "Camí"
+        },
+        {
+          "value": "CAR",
+          "label": "Carrer"
+        },
+        {
+          "value": "CRO",
+          "label": "Carreró"
+        },
+        {
+          "value": "CRT",
+          "label": "Carretera"
+        },
+        {
+          "value": "CAS",
+          "label": "Cases"
+        },
+        {
+          "value": "COL",
+          "label": "Colònia"
+        },
+        {
+          "value": "COS",
+          "label": "Costa"
+        },
+        {
+          "value": "DIS",
+          "label": "Disseminat"
+        },
+        {
+          "value": "EDI",
+          "label": "Edifici"
+        },
+        {
+          "value": "FAG",
+          "label": "Fageda"
+        },
+        {
+          "value": "GLO",
+          "label": "Glorieta"
+        },
+        {
+          "value": "GRV",
+          "label": "Gran Via"
+        },
+        {
+          "value": "GRU",
+          "label": "Grup"
+        },
+        {
+          "value": "LLO",
+          "label": "Lloc"
+        },
+        {
+          "value": "MER",
+          "label": "Mercat"
+        },
+        {
+          "value": "PAR",
+          "label": "Parc"
+        },
+        {
+          "value": "PTD",
+          "label": "Partida"
+        },
+        {
+          "value": "PTG",
+          "label": "Passatge"
+        },
+        {
+          "value": "PAS",
+          "label": "Passeig"
+        },
+        {
+          "value": "PLA",
+          "label": "Plaça"
+        },
+        {
+          "value": "PCT",
+          "label": "Placeta"
+        },
+        {
+          "value": "POB",
+          "label": "Poblat"
+        },
+        {
+          "value": "POL",
+          "label": "Polígon"
+        },
+        {
+          "value": "PRO",
+          "label": "Prolongació"
+        },
+        {
+          "value": "PUJ",
+          "label": "Pujada"
+        },
+        {
+          "value": "RAM",
+          "label": "Rambla"
+        },
+        {
+          "value": "RON",
+          "label": "Ronda"
+        },
+        {
+          "value": "SEN",
+          "label": "Senda"
+        },
+        {
+          "value": "TOR",
+          "label": "Torrent"
+        },
+        {
+          "value": "TRA",
+          "label": "Travessera"
+        },
+        {
+          "value": "TVS",
+          "label": "Travessia"
+        },
+        {
+          "value": "URB",
+          "label": "Urbanització"
+        },
+        {
+          "value": "VIA",
+          "label": "Via"
+        },
+        {
+          "value": "XAL",
+          "label": "Xalet"
+        }
+      ]
+    },
+    {
+      "page": 0,
+      "tag": "INPUT",
+      "label": null,
+      "value": "",
+      "visible": true,
+      "rect": {
+        "x": 175.21990034073227,
+        "y": 447.63803596399663,
+        "width": 334.5021960490812,
+        "height": 16.593858940775608
+      }
+    },
+    {
+      "page": 0,
+      "tag": "INPUT",
+      "label": null,
+      "value": "",
+      "visible": true,
+      "rect": {
+        "x": 515.3783987829407,
+        "y": 447.63803596399663,
+        "width": 48.70344474425383,
+        "height": 16.593858940775608
+      }
+    },
+    {
+      "page": 0,
+      "tag": "INPUT",
+      "label": null,
+      "value": "",
+      "visible": true,
+      "rect": {
+        "x": 87.85995371901957,
+        "y": 409.37217500258504,
+        "width": 93.54748724369682,
+        "height": 16.593858940775608
+      }
+    },
+    {
+      "page": 0,
+      "tag": "INPUT",
+      "label": null,
+      "value": "",
+      "visible": true,
+      "rect": {
+        "x": 184.2355807151131,
+        "y": 409.37217500258504,
+        "width": 92.12560100148578,
+        "height": 16.593858940775608
+      }
+    },
+    {
+      "page": 0,
+      "tag": "INPUT",
+      "label": null,
+      "value": "",
+      "visible": true,
+      "rect": {
+        "x": 283.43935318568674,
+        "y": 409.37217500258504,
+        "width": 92.1256124456527,
+        "height": 16.593858940775608
+      }
+    },
+    {
+      "page": 0,
+      "tag": "INPUT",
+      "label": null,
+      "value": "",
+      "visible": true,
+      "rect": {
+        "x": 385.47126540865713,
+        "y": 409.37217500258504,
+        "width": 89.01620940263525,
+        "height": 16.593858940775608
+      }
+    },
+    {
+      "page": 0,
+      "tag": "INPUT",
+      "label": null,
+      "value": "",
+      "visible": true,
+      "rect": {
+        "x": 484.39382036527775,
+        "y": 409.37217500258504,
+        "width": 79.37550585141216,
+        "height": 16.593858940775608
+      }
+    },
+    {
+      "page": 0,
+      "tag": "INPUT",
+      "label": null,
+      "value": "",
+      "visible": true,
+      "rect": {
+        "x": 87.85995371901957,
+        "y": 371.1062682645058,
+        "width": 221.11082662044785,
+        "height": 16.593858940775608
+      }
+    },
+    {
+      "page": 0,
+      "tag": "INPUT",
+      "label": null,
+      "value": "",
+      "visible": true,
+      "rect": {
+        "x": 314.6270655663443,
+        "y": 371.1062682645058,
+        "width": 79.37550585141216,
+        "height": 16.593858940775608
+      }
+    },
+    {
+      "page": 0,
+      "tag": "INPUT",
+      "label": null,
+      "value": "",
+      "visible": true,
+      "rect": {
+        "x": 399.65887381088373,
+        "y": 371.1062682645058,
+        "width": 164.42296971631083,
+        "height": 16.593858940775608
+      }
+    },
+    {
+      "page": 0,
+      "tag": "SELECT",
+      "label": null,
+      "value": "",
+      "visible": true,
+      "rect": {
+        "x": 87.85995371901957,
+        "y": 298.824543725873,
+        "width": 81.70365567275236,
+        "height": 16.593858940775608
+      },
+      "options": [
+        {
+          "value": "",
+          "label": " "
+        },
+        {
+          "value": "0",
+          "label": " "
+        },
+        {
+          "value": "APA",
+          "label": "Apartament"
+        },
+        {
+          "value": "AVI",
+          "label": "Avinguda"
+        },
+        {
+          "value": "BAI",
+          "label": "Baixada"
+        },
+        {
+          "value": "BRC",
+          "label": "Barranc"
+        },
+        {
+          "value": "BAR",
+          "label": "Barri"
+        },
+        {
+          "value": "BLO",
+          "label": "Bloc"
+        },
+        {
+          "value": "CAM",
+          "label": "Camí"
+        },
+        {
+          "value": "CAR",
+          "label": "Carrer"
+        },
+        {
+          "value": "CRO",
+          "label": "Carreró"
+        },
+        {
+          "value": "CRT",
+          "label": "Carretera"
+        },
+        {
+          "value": "CAS",
+          "label": "Cases"
+        },
+        {
+          "value": "COL",
+          "label": "Colònia"
+        },
+        {
+          "value": "COS",
+          "label": "Costa"
+        },
+        {
+          "value": "DIS",
+          "label": "Disseminat"
+        },
+        {
+          "value": "EDI",
+          "label": "Edifici"
+        },
+        {
+          "value": "FAG",
+          "label": "Fageda"
+        },
+        {
+          "value": "GLO",
+          "label": "Glorieta"
+        },
+        {
+          "value": "GRV",
+          "label": "Gran Via"
+        },
+        {
+          "value": "GRU",
+          "label": "Grup"
+        },
+        {
+          "value": "LLO",
+          "label": "Lloc"
+        },
+        {
+          "value": "MER",
+          "label": "Mercat"
+        },
+        {
+          "value": "PAR",
+          "label": "Parc"
+        },
+        {
+          "value": "PTD",
+          "label": "Partida"
+        },
+        {
+          "value": "PTG",
+          "label": "Passatge"
+        },
+        {
+          "value": "PAS",
+          "label": "Passeig"
+        },
+        {
+          "value": "PLA",
+          "label": "Plaça"
+        },
+        {
+          "value": "PCT",
+          "label": "Placeta"
+        },
+        {
+          "value": "POB",
+          "label": "Poblat"
+        },
+        {
+          "value": "POL",
+          "label": "Polígon"
+        },
+        {
+          "value": "PRO",
+          "label": "Prolongació"
+        },
+        {
+          "value": "PUJ",
+          "label": "Pujada"
+        },
+        {
+          "value": "RAM",
+          "label": "Rambla"
+        },
+        {
+          "value": "RON",
+          "label": "Ronda"
+        },
+        {
+          "value": "SEN",
+          "label": "Senda"
+        },
+        {
+          "value": "TOR",
+          "label": "Torrent"
+        },
+        {
+          "value": "TRA",
+          "label": "Travessera"
+        },
+        {
+          "value": "TVS",
+          "label": "Travessia"
+        },
+        {
+          "value": "URB",
+          "label": "Urbanització"
+        },
+        {
+          "value": "VIA",
+          "label": "Via"
+        },
+        {
+          "value": "XAL",
+          "label": "Xalet"
+        }
+      ]
+    },
+    {
+      "page": 0,
+      "tag": "INPUT",
+      "label": null,
+      "value": "",
+      "visible": true,
+      "rect": {
+        "x": 175.21990034073227,
+        "y": 298.824543725873,
+        "width": 334.5021960490812,
+        "height": 16.593858940775608
+      }
+    },
+    {
+      "page": 0,
+      "tag": "INPUT",
+      "label": null,
+      "value": "",
+      "visible": true,
+      "rect": {
+        "x": 515.3783987829407,
+        "y": 298.824543725873,
+        "width": 48.70344474425383,
+        "height": 16.593858940775608
+      }
+    },
+    {
+      "page": 0,
+      "tag": "INPUT",
+      "label": null,
+      "value": "",
+      "visible": true,
+      "rect": {
+        "x": 87.85995371901957,
+        "y": 260.5586827644614,
+        "width": 93.54748724369682,
+        "height": 16.593858940775608
+      }
+    },
+    {
+      "page": 0,
+      "tag": "INPUT",
+      "label": null,
+      "value": "",
+      "visible": true,
+      "rect": {
+        "x": 184.2355807151131,
+        "y": 260.5586827644614,
+        "width": 92.12560100148578,
+        "height": 16.593858940775608
+      }
+    },
+    {
+      "page": 0,
+      "tag": "INPUT",
+      "label": null,
+      "value": "",
+      "visible": true,
+      "rect": {
+        "x": 283.43935318568674,
+        "y": 260.5586827644614,
+        "width": 92.1256124456527,
+        "height": 16.593858940775608
+      }
+    },
+    {
+      "page": 0,
+      "tag": "INPUT",
+      "label": null,
+      "value": "",
+      "visible": true,
+      "rect": {
+        "x": 385.47126540865713,
+        "y": 260.5586827644614,
+        "width": 89.01620940263525,
+        "height": 16.593858940775608
+      }
+    },
+    {
+      "page": 0,
+      "tag": "INPUT",
+      "label": null,
+      "value": "",
+      "visible": true,
+      "rect": {
+        "x": 484.39382036527775,
+        "y": 260.5586827644614,
+        "width": 79.37550585141216,
+        "height": 16.593858940775608
+      }
+    },
+    {
+      "page": 0,
+      "tag": "INPUT",
+      "label": null,
+      "value": "",
+      "visible": true,
+      "rect": {
+        "x": 87.85995371901957,
+        "y": 222.29282180304995,
+        "width": 221.11082662044785,
+        "height": 16.593858940775608
+      }
+    },
+    {
+      "page": 0,
+      "tag": "INPUT",
+      "label": null,
+      "value": "",
+      "visible": true,
+      "rect": {
+        "x": 314.6270655663443,
+        "y": 222.29282180304995,
+        "width": 79.37550585141216,
+        "height": 16.593858940775608
+      }
+    },
+    {
+      "page": 0,
+      "tag": "INPUT",
+      "label": null,
+      "value": "",
+      "visible": true,
+      "rect": {
+        "x": 399.65887381088373,
+        "y": 222.29282180304995,
+        "width": 164.42296971631083,
+        "height": 16.593858940775608
+      }
+    },
+    {
+      "page": 0,
+      "tag": "INPUT",
+      "label": null,
+      "value": "on",
+      "visible": true,
+      "rect": {
+        "x": 87.85995371901957,
+        "y": 167.4487117445542,
+        "width": 10.00006755905267,
+        "height": 17.000081090097098
+      }
+    },
+    {
+      "page": 0,
+      "tag": "INPUT",
+      "label": null,
+      "value": "on",
+      "visible": true,
+      "rect": {
+        "x": 147.34471352191986,
+        "y": 167.4487117445542,
+        "width": 10.000073281136135,
+        "height": 17.000081090097098
+      }
+    },
+    {
+      "page": 0,
+      "tag": "INPUT",
+      "label": null,
+      "value": "on",
+      "visible": true,
+      "rect": {
+        "x": 222.43896796925776,
+        "y": 167.4487117445542,
+        "width": 10.000050392802276,
+        "height": 17.000081090097098
+      }
+    },
+    {
+      "page": 0,
+      "tag": "INPUT",
+      "label": null,
+      "value": "",
+      "visible": true,
+      "rect": {
+        "x": 386.8150394894924,
+        "y": 170.276840052784,
+        "width": 175.7199188822061,
+        "height": 11.343824473637563
+      }
+    },
+    {
+      "page": 0,
+      "tag": "INPUT",
+      "label": null,
+      "value": "on",
+      "visible": true,
+      "rect": {
+        "x": 87.85995371901957,
+        "y": 89.66692057971272,
+        "width": 10.00006755905267,
+        "height": 17.000126866764816
+      }
+    },
+    {
+      "page": 0,
+      "tag": "INPUT",
+      "label": null,
+      "value": "on",
+      "visible": true,
+      "rect": {
+        "x": 167.21984400465675,
+        "y": 89.66692057971272,
+        "width": 10.000073281136135,
+        "height": 17.000126866764816
+      }
+    },
+    {
+      "page": 0,
+      "tag": "INPUT",
+      "label": null,
+      "value": "on",
+      "visible": true,
+      "rect": {
+        "x": 246.5797514565443,
+        "y": 89.66692057971272,
+        "width": 10.000050392802276,
+        "height": 17.000126866764816
+      }
+    },
+    {
+      "page": 0,
+      "tag": "SELECT",
+      "label": null,
+      "value": "",
+      "visible": true,
+      "rect": {
+        "x": 87.85995371901957,
+        "y": 75.49496779784533,
+        "width": 476.22190697442534,
+        "height": 11.343824473637563
+      },
+      "options": [
+        {
+          "value": "",
+          "label": " "
+        },
+        {
+          "value": "a) Instal·lacions industrials amb una potència màxima admissible superior a 100 kW",
+          "label": "a) Instal·lacions industrials amb una potència màxima admissible superior a 100 kW"
+        },
+        {
+          "value": "b) Locals de pública concurrència            ",
+          "label": "b) Locals de pública concurrència            "
+        },
+        {
+          "value": "c) Locals amb risc d'incendi o explosió, de classe I, excepte aparcaments i estacionaments de menys de 25 places.",
+          "label": "c) Locals amb risc d'incendi o explosió, de classe I, excepte aparcaments i estacionaments de menys de 25 places."
+        },
+        {
+          "value": "d) Locals mullats P > 25 kW",
+          "label": "d) Locals mullats P > 25 kW"
+        },
+        {
+          "value": "e) Piscines P > 10 kW",
+          "label": "e) Piscines P > 10 kW"
+        },
+        {
+          "value": "f) Sales d'operacions quirúrgiques i sales d'intervenció ",
+          "label": "f) Sales d'operacions quirúrgiques i sales d'intervenció "
+        },
+        {
+          "value": "g) Instal·lacions d'enllumenat exterior P>5kW",
+          "label": "g) Instal·lacions d'enllumenat exterior P>5kW"
+        },
+        {
+          "value": "h) Instal·lacions comunes d’edificis destinats a habitatges de 20 subministraments o més i/o més de 100 kW per CGP",
+          "label": "h) Instal·lacions comunes d’edificis destinats a habitatges de 20 subministraments o més i/o més de 100 kW per CGP"
+        },
+        {
+          "value": "i1) Instal·lacions corresponents a les infraestructures per a la recàrrega del vehicle elèctric (P>50 kW)",
+          "label": "i1) Instal·lacions corresponents a les infraestructures per a la recàrrega del vehicle elèctric (P>50 kW)"
+        },
+        {
+          "value": "i2) Instal·lacions de recàrrega de vehicle elèctric ubicades a l'exterior (P>10kW)",
+          "label": "i2) Instal·lacions de recàrrega de vehicle elèctric ubicades a l'exterior (P>10kW)"
+        },
+        {
+          "value": "i3) Instal·lacions que incloguin estacions de recàrrega previstes pel mode de càrrega 4",
+          "label": "i3) Instal·lacions que incloguin estacions de recàrrega previstes pel mode de càrrega 4"
+        }
+      ]
+    },
+    {
+      "page": 0,
+      "tag": "SELECT",
+      "label": null,
+      "value": "",
+      "visible": true,
+      "rect": {
+        "x": 87.85995371901957,
+        "y": 38.244753763072936,
+        "width": 476.22190697442534,
+        "height": 16.593858940775608
+      },
+      "options": [
+        {
+          "value": "",
+          "label": " "
+        },
+        {
+          "value": "1",
+          "label": "a) Instal·lacions industrials"
+        },
+        {
+          "value": "2",
+          "label": "b) Instal·lacions temporals per a obres segons l'ITC-BT-33 del REBT"
+        },
+        {
+          "value": "3",
+          "label": "d) Instal·lacions d'enllaç"
+        },
+        {
+          "value": "4",
+          "label": "e) Instal·lacions de serveis comuns d'edificis"
+        },
+        {
+          "value": "5",
+          "label": "f) Instal·lacions d'habitatges"
+        },
+        {
+          "value": "g",
+          "label": "g) Instal·lacions en locals d'espectacles i activitats recreatives amb subclassificació d'acord amb l'ITC-BT-28"
+        },
+        {
+          "value": "h",
+          "label": "h) Instal·lacions en locals de reunió, treball i usos sanitaris amb subclassificació d'acord amb l'ITC-BT-28"
+        },
+        {
+          "value": "8",
+          "label": "i) Instal·lacions de recàrrega de vehicles elèctrics"
+        },
+        {
+          "value": "9",
+          "label": "j) Instal·lacions en aparcaments i estacionaments"
+        },
+        {
+          "value": "10",
+          "label": "k) Instal·lacions d'enllumenat exterior"
+        },
+        {
+          "value": "11",
+          "label": "l) Instal·lacions generadores per autoconsum"
+        },
+        {
+          "value": "12",
+          "label": "m) Instal·lacions d'oficines sense presència de públic"
+        },
+        {
+          "value": "13",
+          "label": "n) Instal·lacions generadores"
+        },
+        {
+          "value": "14",
+          "label": "o) Altres usos"
+        }
+      ]
+    },
+    {
+      "page": 1,
+      "tag": "SELECT",
+      "label": null,
+      "value": "",
+      "visible": true,
+      "rect": {
+        "x": 87.85995371901957,
+        "y": 733.905540346247,
+        "width": 476.22190697442534,
+        "height": 16.593858940775608
+      },
+      "options": [
+        {
+          "value": "",
+          "label": " "
+        },
+        {
+          "value": "g1) Cine",
+          "label": "g1) Cine"
+        },
+        {
+          "value": "g2) Teatre",
+          "label": "g2) Teatre"
+        },
+        {
+          "value": "g3) Auditori",
+          "label": "g3) Auditori"
+        },
+        {
+          "value": "g4) Estadi",
+          "label": "g4) Estadi"
+        },
+        {
+          "value": "g5) Pavelló esportiu",
+          "label": "g5) Pavelló esportiu"
+        },
+        {
+          "value": "g6) Plaça de toros",
+          "label": "g6) Plaça de toros"
+        },
+        {
+          "value": "g7) Hipòdrom",
+          "label": "g7) Hipòdrom"
+        },
+        {
+          "value": "g8) Parc d'atraccions o fira fixa",
+          "label": "g8) Parc d'atraccions o fira fixa"
+        },
+        {
+          "value": "g9) Sala de festes o discoteca",
+          "label": "g9) Sala de festes o discoteca"
+        },
+        {
+          "value": "g10) Sala de jocs d'atzar",
+          "label": "g10) Sala de jocs d'atzar"
+        }
+      ]
+    },
+    {
+      "page": 1,
+      "tag": "INPUT",
+      "label": "Potència màxima admissible",
+      "value": "",
+      "visible": true,
+      "rect": {
+        "x": 194.11064936088076,
+        "y": 671.0614082841767,
+        "width": 113.48512004411793,
+        "height": 11.343824473637563
+      }
+    },
+    {
+      "page": 1,
+      "tag": "INPUT",
+      "label": "Calibre fusibles CGP",
+      "value": "",
+      "visible": true,
+      "rect": {
+        "x": 436.45599038859234,
+        "y": 671.0614082841767,
+        "width": 63.375416067594976,
+        "height": 11.343824473637563
+      }
+    },
+    {
+      "page": 1,
+      "tag": "SELECT",
+      "label": "Tensió",
+      "value": "",
+      "visible": true,
+      "rect": {
+        "x": 130.3446095434889,
+        "y": 654.0612356407441,
+        "width": 73.68797232673492,
+        "height": 11.343824473637563
+      },
+      "options": [
+        {
+          "value": "",
+          "label": " "
+        },
+        {
+          "value": "230 V",
+          "label": "230 V"
+        },
+        {
+          "value": "3x230/400 V",
+          "label": "3x230/400 V"
+        },
+        {
+          "value": "Altra",
+          "label": "Altra"
+        }
+      ]
+    },
+    {
+      "page": 1,
+      "tag": "INPUT",
+      "label": "Té subministrament complementari?",
+      "value": "",
+      "visible": true,
+      "rect": {
+        "x": 208.26699229905657,
+        "y": 652.6394123414511,
+        "width": 99.23502649045751,
+        "height": 14.18756262555886
+      }
+    },
+    {
+      "page": 1,
+      "tag": "INPUT",
+      "label": "Calibre fusibles CGP",
+      "value": "",
+      "visible": true,
+      "rect": {
+        "x": 511.7064691586817,
+        "y": 654.0612356407441,
+        "width": 35.03151050386032,
+        "height": 11.343824473637563
+      }
+    },
+    {
+      "page": 1,
+      "tag": "INPUT",
+      "label": "Nombre de circuits al quadre principal",
+      "value": "",
+      "visible": true,
+      "rect": {
+        "x": 229.57962458977948,
+        "y": 637.061154550647,
+        "width": 59.46915568129222,
+        "height": 11.343824473637563
+      }
+    },
+    {
+      "page": 1,
+      "tag": "INPUT",
+      "label": "Secció LGA",
+      "value": "",
+      "visible": true,
+      "rect": {
+        "x": 383.9712784492373,
+        "y": 637.061154550647,
+        "width": 26.031428529004096,
+        "height": 11.343824473637563
+      }
+    },
+    {
+      "page": 1,
+      "tag": "SELECT",
+      "label": "Material conductor",
+      "value": "",
+      "visible": true,
+      "rect": {
+        "x": 510.0814890080604,
+        "y": 637.061154550647,
+        "width": 51.03155451100979,
+        "height": 11.343824473637563
+      },
+      "options": [
+        {
+          "value": "",
+          "label": " "
+        },
+        {
+          "value": "Coure",
+          "label": "Coure"
+        },
+        {
+          "value": "Alumini",
+          "label": "Alumini"
+        }
+      ]
+    },
+    {
+      "page": 1,
+      "tag": "INPUT",
+      "label": "Resistència entre conductors",
+      "value": "",
+      "visible": true,
+      "rect": {
+        "x": 234.5171646347468,
+        "y": 620.0610734605499,
+        "width": 73.39109919242264,
+        "height": 11.343824473637563
+      }
+    },
+    {
+      "page": 1,
+      "tag": "SELECT",
+      "label": "Ubicació de comptadors",
+      "value": "",
+      "visible": true,
+      "rect": {
+        "x": 428.58093868788524,
+        "y": 620.0610734605499,
+        "width": 82.29743055179425,
+        "height": 11.343824473637563
+      },
+      "options": [
+        {
+          "value": "",
+          "label": " "
+        },
+        {
+          "value": "Sala",
+          "label": "Sala"
+        },
+        {
+          "value": "Armari",
+          "label": "Armari"
+        },
+        {
+          "value": "Altra",
+          "label": "Altra"
+        }
+      ]
+    },
+    {
+      "page": 1,
+      "tag": "INPUT",
+      "label": "Resistència d'aïllament amb terra",
+      "value": "",
+      "visible": true,
+      "rect": {
+        "x": 209.73575957109338,
+        "y": 603.0609008171174,
+        "width": 97.89125240962224,
+        "height": 11.343824473637563
+      }
+    },
+    {
+      "page": 1,
+      "tag": "INPUT",
+      "label": "Resistència a terra",
+      "value": "",
+      "visible": true,
+      "rect": {
+        "x": 196.9700431331613,
+        "y": 586.0608197270203,
+        "width": 107.81320780729915,
+        "height": 11.343824473637563
+      }
+    },
+    {
+      "page": 1,
+      "tag": "INPUT",
+      "label": "Nombre de circuits al quadre principal",
+      "value": "",
+      "visible": true,
+      "rect": {
+        "x": 262.3298548579584,
+        "y": 569.0607386369231,
+        "width": 47.45342127890316,
+        "height": 11.343824473637563
+      }
+    },
+    {
+      "page": 1,
+      "tag": "SELECT",
+      "label": "Tipus de connexió",
+      "value": "",
+      "visible": true,
+      "rect": {
+        "x": 409.70579951142827,
+        "y": 569.0607386369231,
+        "width": 138.86031715306362,
+        "height": 11.343824473637563
+      },
+      "options": [
+        {
+          "value": "",
+          "label": " "
+        },
+        {
+          "value": "Assistida",
+          "label": "Assistida"
+        },
+        {
+          "value": "Interconnectada",
+          "label": "Interconnectada"
+        }
+      ]
+    },
+    {
+      "page": 1,
+      "tag": "INPUT",
+      "label": null,
+      "value": "on",
+      "visible": true,
+      "rect": {
+        "x": 223.34520866005306,
+        "y": 549.2324834619286,
+        "width": 10.000073281136135,
+        "height": 17.000081090097098
+      }
+    },
+    {
+      "page": 1,
+      "tag": "INPUT",
+      "label": null,
+      "value": "on",
+      "visible": true,
+      "rect": {
+        "x": 257.3298067732234,
+        "y": 549.2324834619286,
+        "width": 10.000073281136135,
+        "height": 17.000081090097098
+      }
+    },
+    {
+      "page": 1,
+      "tag": "INPUT",
+      "label": "Potència",
+      "value": "",
+      "visible": true,
+      "rect": {
+        "x": 379.0806137120123,
+        "y": 552.0605659934906,
+        "width": 56.516011293527065,
+        "height": 11.343824473637563
+      }
+    },
+    {
+      "page": 1,
+      "tag": "INPUT",
+      "label": null,
+      "value": "",
+      "visible": true,
+      "rect": {
+        "x": 112.86011975560952,
+        "y": 486.85701292394583,
+        "width": 217.28266122927047,
+        "height": 11.343824473637563
+      }
+    },
+    {
+      "page": 1,
+      "tag": "TEXTAREA",
+      "label": null,
+      "value": "",
+      "visible": true,
+      "rect": {
+        "x": 87.85995371901957,
+        "y": 366.99694258021,
+        "width": 476.22190697442534,
+        "height": 51.03146295767435
+      }
+    }
+  ]
+}
