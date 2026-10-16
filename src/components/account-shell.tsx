@@ -47,7 +47,7 @@ export function AccountShell({
             alt="BoletinExpress"
           />
         </a>
-        <fieldset className="language-switch" aria-label={tr("language")}>
+        <fieldset className="language" aria-label={tr("language")}>
           {(["es", "ca"] as const).map((l) => (
             <button
               type="button"

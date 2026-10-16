@@ -1,0 +1,59 @@
+{
+  "checks": [
+    {
+      "test": "desktop-es-access",
+      "pass": true,
+      "heading": "Acceder a mi cuenta",
+      "height": 900,
+      "lang": "es",
+      "scrollWidth": 1440,
+      "width": 1440
+    },
+    {
+      "test": "mobile-ca-access",
+      "pass": true,
+      "heading": "Accedeix al meu compte",
+      "height": 740,
+      "lang": "ca",
+      "scrollWidth": 305,
+      "width": 320
+    },
+    {
+      "test": "mobile-ca-recover",
+      "pass": true,
+      "heading": "Recupera la contrasenya",
+      "height": 740,
+      "lang": "ca",
+      "scrollWidth": 305,
+      "width": 320
+    },
+    {
+      "test": "mobile-ca-signup",
+      "pass": true,
+      "heading": "Crea un compte",
+      "height": 740,
+      "lang": "ca",
+      "scrollWidth": 305,
+      "width": 320
+    },
+    {
+      "test": "tablet-ca-signup",
+      "pass": true,
+      "heading": "Crea un compte",
+      "height": 1024,
+      "lang": "ca",
+      "scrollWidth": 768,
+      "width": 768
+    },
+    {
+      "test": "desktop-es-signup",
+      "pass": true,
+      "heading": "Crear cuenta",
+      "height": 900,
+      "lang": "es",
+      "scrollWidth": 1425,
+      "width": 1440
+    }
+  ],
+  "scope": "Interfaz sin backend local disponible; pruebas de integración en CI"
+}

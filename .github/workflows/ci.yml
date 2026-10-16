@@ -52,6 +52,8 @@ jobs:
           docker tag supabase/storage-api:v1.74.0 boletinexpress-storage:phase1
           docker tag axllent/mailpit:v1.29.2 boletinexpress-mail:phase1
           BE_SCAN_REPORT_DIR=evidence/phase-3 BE_SCAN_SERVICES="web worker gateway templates postgres auth rest storage mail" sh scripts/scan-images.sh
+      - if: failure()
+        run: node scripts/diagnose-services.mjs
       - if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:

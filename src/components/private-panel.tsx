@@ -1,5 +1,11 @@
 "use client";
-import { type FormEvent, useCallback, useEffect, useState } from "react";
+import {
+  type FormEvent,
+  useCallback,
+  useEffect,
+  useRef,
+  useState,
+} from "react";
 import type { AuthKey } from "@/lib/i18n/auth-copy";
 import {
   AccountShell,
@@ -17,6 +23,7 @@ type Doc = {
 };
 type PrivateFile = { id: string; created_at: string };
 export function PrivatePanel() {
+  const heading = useRef<HTMLHeadingElement>(null);
   const language = useAccountLocale();
   const { tr, locale } = language;
   const [email, setEmail] = useState("");
@@ -27,6 +34,9 @@ export function PrivatePanel() {
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<AuthKey | null>(null);
   const [notice, setNotice] = useState<AuthKey | null>(null);
+  useEffect(() => {
+    if (active?.id) heading.current?.focus({ preventScroll: true });
+  }, [active?.id]);
   const load = useCallback(async () => {
     const [session, list] = await Promise.all([
       accountRequest("/api/auth/session"),
@@ -141,7 +151,9 @@ export function PrivatePanel() {
             {tr("logout")}
           </button>
         </div>
-        <h1>{active ? active.title : tr("privateTitle")}</h1>
+        <h1 ref={heading} tabIndex={-1}>
+          {active ? active.title : tr("privateTitle")}
+        </h1>
         <p>{tr("privateHelp")}</p>
         {error && (
           <p className="account-error" role="alert">

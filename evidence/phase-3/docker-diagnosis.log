@@ -1,0 +1,3 @@
+[2026-10-16T15:27:59.616179000Z][com.docker.virtualization] VM has stopped: Invalid virtual machine configuration. The storage device attachment is invalid.
+[2026-10-16T15:27:59.616258000Z][com.docker.virtualization] Searching for crashes after error Invalid virtual machine configuration. The storage device attachment is invalid.
+[2026-10-16T15:28:09.636200000Z][com.docker.virtualization][E] com.docker.virtualization: Invalid virtual machine configuration. The storage device attachment is invalid.

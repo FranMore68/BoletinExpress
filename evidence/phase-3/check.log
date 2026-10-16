@@ -110,18 +110,18 @@ Generating route types...
 > boletinexpress@0.1.0 test
 > node --test tests/*.test.ts
 
-✔ las mutaciones requieren el origen propio y rechazan peticiones cruzadas (8.14925ms)
-✔ validación de credenciales, identificadores y tamaño del cuerpo (1.01025ms)
-✔ el permiso de recuperación se vincula a usuario y sesión (0.225709ms)
-✔ el acceso y almacenamiento tienen mensajes completos en ES y CA (0.087166ms)
-✔ las propuestas de ejemplo conservan cambios manuales, incluidos campos vaciados (0.780625ms)
-✔ el cierre de la demo es idempotente y bloquea cambios del ejemplo (0.118375ms)
-✔ la demo impide validar sin datos o con saldo simulado insuficiente (0.190583ms)
-✔ tres borradores activos y sus identificadores se mantienen coherentes al eliminar uno (0.559958ms)
-✔ cada mensaje dispone de ES y CA y conserva sus variables de interpolación (0.367125ms)
-✔ bloquea secretos y entornos privados antes de publicar (0.827125ms)
-✔ permite referencias a secretos pero no contraseñas incrustadas en URI (0.069583ms)
-✔ worker arranca sin credenciales, expone solo liveness y se detiene (52.894125ms)
+✔ las mutaciones requieren el origen propio y rechazan peticiones cruzadas (8.278375ms)
+✔ validación de credenciales, identificadores y tamaño del cuerpo (1.513584ms)
+✔ el permiso de recuperación se vincula a usuario y sesión (0.259625ms)
+✔ el acceso y almacenamiento tienen mensajes completos en ES y CA (0.09325ms)
+✔ las propuestas de ejemplo conservan cambios manuales, incluidos campos vaciados (0.654083ms)
+✔ el cierre de la demo es idempotente y bloquea cambios del ejemplo (0.105667ms)
+✔ la demo impide validar sin datos o con saldo simulado insuficiente (0.608458ms)
+✔ tres borradores activos y sus identificadores se mantienen coherentes al eliminar uno (0.125583ms)
+✔ cada mensaje dispone de ES y CA y conserva sus variables de interpolación (0.6385ms)
+✔ bloquea secretos y entornos privados antes de publicar (0.843208ms)
+✔ permite referencias a secretos pero no contraseñas incrustadas en URI (0.067875ms)
+✔ worker arranca sin credenciales, expone solo liveness y se detiene (54.217875ms)
 ℹ tests 12
 ℹ suites 0
 ℹ pass 12
@@ -129,9 +129,9 @@ Generating route types...
 ℹ cancelled 0
 ℹ skipped 0
 ℹ todo 0
-ℹ duration_ms 128.821375
+ℹ duration_ms 133.94375
 
 > boletinexpress@0.1.0 check:secrets
 > node scripts/check-secrets.mjs
 
-Sin patrones de secretos detectados en 480 archivos versionables.
+Sin patrones de secretos detectados en 493 archivos versionables.

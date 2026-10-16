@@ -1,5 +1,5 @@
 "use client";
-import { type FormEvent, useState } from "react";
+import { type FormEvent, useEffect, useRef, useState } from "react";
 import type { AuthKey } from "@/lib/i18n/auth-copy";
 import {
   AccountShell,
@@ -10,12 +10,16 @@ import {
 
 type Mode = "login" | "signup" | "recover" | "resend";
 export function AccessPanel() {
+  const heading = useRef<HTMLHeadingElement>(null);
   const language = useAccountLocale();
   const { tr, locale } = language;
   const [mode, setMode] = useState<Mode>("login");
   const [busy, setBusy] = useState(false);
   const [notice, setNotice] = useState<AuthKey | null>(null);
   const [error, setError] = useState<AuthKey | null>(null);
+  useEffect(() => {
+    if (mode) heading.current?.focus({ preventScroll: true });
+  }, [mode]);
   async function submit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     if (busy) return;
@@ -42,7 +46,9 @@ export function AccessPanel() {
     <AccountShell language={language}>
       <section className="account-card">
         <p className="eyebrow">{tr("phase3")}</p>
-        <h1>{tr(mode)}</h1>
+        <h1 ref={heading} tabIndex={-1}>
+          {tr(mode)}
+        </h1>
         <p>{tr(`${mode}Help`)}</p>
         <form onSubmit={submit}>
           <label htmlFor="email">{tr("email")}</label>
