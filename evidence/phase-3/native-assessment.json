@@ -1,0 +1,7 @@
+{
+  "cli": "2.121.0",
+  "result": "NO_ADOPTADA",
+  "reason": "El arranque nativo experimental rechaza auth.email.template.confirmation.content_path porque no admite servir plantillas. No se sustituyen las plantillas de confirmación acordadas.",
+  "dockerData": "Conservados; no se elimina ni restablece el disco virtual",
+  "reference": "https://supabase.com/docs/guides/local-development/docker-and-native-runtimes"
+}

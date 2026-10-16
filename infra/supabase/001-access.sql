@@ -1,6 +1,7 @@
 begin;
 create schema if not exists private;
 revoke all on schema private from public;
+create table if not exists private.schema_migrations(version text primary key, applied_at timestamptz not null default now());
 grant usage on schema private to authenticated;
 
 create or replace function private.session_active() returns boolean
@@ -119,12 +120,19 @@ create policy documents_download on storage.objects for select to authenticated
 -- No UPDATE/DELETE policies and no public bucket: cannot replace or relocate files.
 
 create table if not exists private.auth_attempts(key text primary key,started_at timestamptz not null,hits integer not null);
+create index if not exists auth_attempts_expiry on private.auth_attempts(started_at);
 create or replace function public.consume_auth_attempt(p_key text) returns boolean
 language plpgsql security definer set search_path='' as $$
 declare n integer;
 begin
  if length(p_key)<>64 then return false; end if;
  delete from private.auth_attempts where started_at<now()-interval '1 day';
+ insert into private.auth_attempts values('global',now(),1)
+ on conflict(key) do update set
+ hits=case when private.auth_attempts.started_at<now()-interval '1 minute' then 1 else private.auth_attempts.hits+1 end,
+ started_at=case when private.auth_attempts.started_at<now()-interval '1 minute' then now() else private.auth_attempts.started_at end
+ returning hits into n;
+ if n>100 then return false; end if;
  insert into private.auth_attempts values(p_key,now(),1)
  on conflict(key) do update set
  hits=case when private.auth_attempts.started_at<now()-interval '1 minute' then 1 else private.auth_attempts.hits+1 end,
@@ -134,5 +142,6 @@ begin
 end;$$;
 revoke all on function public.consume_auth_attempt(text) from public;
 grant execute on function public.consume_auth_attempt(text) to anon,authenticated;
+insert into private.schema_migrations(version) values('001-access') on conflict do nothing;
 notify pgrst,'reload schema';
 commit;

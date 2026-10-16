@@ -1,4 +1,5 @@
 import type { RefObject } from "react";
+import type { Locale } from "@/lib/i18n/copy";
 import type { DemoState } from "@/modules/demo/model";
 import { documentTypes } from "@/modules/documents/catalog";
 import type { Access, Navigate, ScreenProps } from "./experience-types";
@@ -6,6 +7,7 @@ import { Icon } from "./icons";
 
 export function LandingView({
   tr,
+  locale,
   heading,
   wheel,
   access,
@@ -13,6 +15,7 @@ export function LandingView({
   navigate,
   demo,
 }: ScreenProps & {
+  locale: Locale;
   wheel: RefObject<HTMLDivElement | null>;
   access: Access;
   setAccess: (value: Access) => void;
@@ -147,7 +150,10 @@ export function LandingView({
             {tr(access === "register" ? "startTrial" : "demoEnter")}
             <Icon name="arrow" size={18} />
           </button>
-          <a className="button button-secondary full" href="/acceso">
+          <a
+            className="button button-secondary full"
+            href={`/acceso?lang=${locale}`}
+          >
             {tr("realAccess")}
           </a>
           <p className="access-foot">{tr("accessFoot")}</p>

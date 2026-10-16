@@ -9,3 +9,5 @@ La aplicación usa la clave anon exclusivamente en servidor y opera con el JWT d
 El entorno local exclusivo incluye PostgreSQL, Auth, PostgREST y Storage sin transformación. Los correos de evaluación se capturan en Mailpit; no se envían a direcciones externas. El SMTP de Resend quedará pendiente de aportar el dominio remitente y sus secretos al preparar el despliegue.
 
 Las migraciones y las pruebas de dos cuentas se ejecutarán en CI. Docker Desktop del Mac ha fallado antes de iniciar los servicios nuevos; el reinicio ha devuelto «Invalid virtual machine configuration. The storage device attachment is invalid». Se conserva el disco virtual y no se restablecen ni eliminan datos de Docker. La limitación se registrará en el cierre.
+
+La primera integración Linux detectó un rol de Edge Functions que la configuración reducida no crea. Se retiró esa instrucción de la inicialización de contraseñas; se mantienen los roles de Auth, PostgREST y Storage. La CLI oficial 2.121.0 ofrece arranque nativo experimental, pero rechaza la configuración de plantillas de confirmación; no se adopta como sustituto del entorno de contenedores.

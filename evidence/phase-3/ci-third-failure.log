@@ -1,0 +1,618 @@
+check	Run node scripts/init-local-auth.mjs	﻿2026-10-16T15:46:07.0269305Z ##[group]Run node scripts/init-local-auth.mjs
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:07.0269695Z ^[[36;1mnode scripts/init-local-auth.mjs^[[0m
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:07.0270087Z ^[[36;1mdocker build --target gateway -t boletinexpress-gateway:phase3 .^[[0m
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:07.0270576Z ^[[36;1mdocker build --target templates -t boletinexpress-templates:phase3 .^[[0m
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:07.0271065Z ^[[36;1mdocker build --target database -t boletinexpress-postgres:phase3 .^[[0m
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:07.0271626Z ^[[36;1mdocker compose --env-file .secrets/supabase.env -f infra/supabase/compose.yaml up --detach^[[0m
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:07.0272105Z ^[[36;1msh scripts/apply-access.sh^[[0m
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:07.0307862Z shell: /usr/bin/bash -e {0}
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:07.0308137Z env:
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:07.0308336Z   NEXT_TELEMETRY_DISABLED: 1
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:07.0308571Z ##[endgroup]
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:07.0717468Z Credenciales locales generadas en .secrets (excluidas de Git). No se muestran valores.
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:07.3842459Z #0 building with "default" instance using docker driver
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:07.3843078Z 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:07.3843654Z #1 [internal] load build definition from Dockerfile
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:07.3844949Z #1 transferring dockerfile: 1.41kB done
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:07.3845519Z #1 DONE 0.0s
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:07.3845769Z 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:07.3846969Z #2 [internal] load metadata for docker.io/library/node:24-alpine@sha256:44fce696f38ba8c987c4db89954051000bbd05ffd8d8659ba15ed4a8602e937f
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:07.3847941Z #2 DONE 0.0s
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:07.3848091Z 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:07.3848253Z #3 [internal] load .dockerignore
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:07.3848640Z #3 transferring context: 371B done
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:07.3848934Z #3 DONE 0.0s
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:07.3849074Z 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:07.3849631Z #4 [base 1/2] FROM docker.io/library/node:24-alpine@sha256:44fce696f38ba8c987c4db89954051000bbd05ffd8d8659ba15ed4a8602e937f
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:07.3850232Z #4 DONE 0.0s
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:07.3850363Z 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:07.3850499Z #5 [base 2/2] WORKDIR /app
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:07.3850767Z #5 CACHED
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:07.3850906Z 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:07.3851459Z #6 [runtime 1/1] RUN rm -rf /usr/local/lib/node_modules/npm /usr/local/bin/npm /usr/local/bin/npx /opt/yarn* /usr/local/bin/yarn*
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:07.3852060Z #6 CACHED
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:07.3852183Z 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:07.3852346Z #7 [internal] load build context
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:07.3852694Z #7 transferring context: 1.41kB done
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:07.3852987Z #7 DONE 0.0s
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:07.3853119Z 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:07.3853456Z #8 [gateway 1/1] COPY --chown=node:node infra/supabase/gateway.mjs ./gateway.mjs
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:07.3853906Z #8 DONE 0.0s
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:07.3854033Z 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:07.3854159Z #9 exporting to image
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:07.3854431Z #9 exporting layers
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:08.0032045Z #9 exporting layers 0.8s done
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:08.0208113Z #9 writing image sha256:718240c67124918ed6815b1b6f26f0fa503893773e81e8e046165353cc3ec3ee done
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:08.0209523Z #9 naming to docker.io/library/boletinexpress-gateway:phase3 done
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:08.0210448Z #9 DONE 0.8s
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:08.3064146Z #0 building with "default" instance using docker driver
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:08.3064822Z 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:08.3065692Z #1 [internal] load build definition from Dockerfile
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:08.3066488Z #1 transferring dockerfile: 1.41kB done
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:08.3067040Z #1 DONE 0.0s
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:08.3067426Z 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:08.3068474Z #2 [internal] load metadata for docker.io/library/node:24-alpine@sha256:44fce696f38ba8c987c4db89954051000bbd05ffd8d8659ba15ed4a8602e937f
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:08.3069549Z #2 DONE 0.0s
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:08.3069691Z 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:08.3069864Z #3 [internal] load .dockerignore
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:08.3070234Z #3 transferring context: 371B done
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:08.3070538Z #3 DONE 0.0s
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:08.3070667Z 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:08.3071227Z #4 [base 1/2] FROM docker.io/library/node:24-alpine@sha256:44fce696f38ba8c987c4db89954051000bbd05ffd8d8659ba15ed4a8602e937f
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:08.3071829Z #4 DONE 0.0s
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:08.3071969Z 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:08.3072278Z #5 [base 2/2] WORKDIR /app
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:08.3072563Z #5 CACHED
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:08.3072688Z 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:08.3073255Z #6 [runtime 1/1] RUN rm -rf /usr/local/lib/node_modules/npm /usr/local/bin/npm /usr/local/bin/npx /opt/yarn* /usr/local/bin/yarn*
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:08.3073870Z #6 CACHED
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:08.3074010Z 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:08.3074164Z #7 [internal] load build context
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:08.3074527Z #7 transferring context: 1.02kB done
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:08.3074834Z #7 DONE 0.0s
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:08.3074969Z 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:08.3075586Z #8 [templates 1/1] COPY --chown=node:node infra/supabase/templates.mjs infra/supabase/confirmation.html infra/supabase/recovery.html ./
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:08.3076245Z #8 DONE 0.0s
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:08.3076379Z 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:08.3076513Z #9 exporting to image
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:08.3076785Z #9 exporting layers
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:09.0029254Z #9 exporting layers 0.8s done
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:09.0170885Z #9 writing image sha256:f14404e1b1f92d102f52fed132292cab839b65cca62319201a02ff7ba88675c7 done
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:09.0180758Z #9 naming to docker.io/library/boletinexpress-templates:phase3 done
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:09.0182001Z #9 DONE 0.9s
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:09.2770597Z #0 building with "default" instance using docker driver
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:09.2771116Z 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:09.2771375Z #1 [internal] load build definition from Dockerfile
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:09.2771821Z #1 transferring dockerfile: 1.41kB done
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:09.2772144Z #1 DONE 0.0s
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:09.2772289Z 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:09.2772626Z #2 [internal] load metadata for docker.io/supabase/postgres:17.6.1.136
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:09.4505718Z #2 ...
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:09.4506057Z 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:09.4506613Z #3 [auth] supabase/postgres:pull token for registry-1.docker.io
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:09.4507464Z #3 DONE 0.0s
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:09.6007709Z 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:09.6008761Z #2 [internal] load metadata for docker.io/supabase/postgres:17.6.1.136
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:09.8632169Z #2 DONE 0.7s
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:09.9724216Z 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:09.9725241Z #4 [internal] load .dockerignore
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:09.9726634Z #4 transferring context: 371B done
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:09.9727344Z #4 DONE 0.0s
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:09.9727716Z 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:09.9728105Z #5 [internal] load build context
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:09.9728775Z #5 transferring context: 472B done
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:09.9729678Z #5 DONE 0.0s
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:09.9730026Z 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:09.9731366Z #6 [database 1/2] FROM docker.io/supabase/postgres:17.6.1.136@sha256:f371b5f3f2ac0a05703f33d6e6134515fb2498cab708fb948a0aeb7481467c00
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:09.9734550Z #6 resolve docker.io/supabase/postgres:17.6.1.136@sha256:f371b5f3f2ac0a05703f33d6e6134515fb2498cab708fb948a0aeb7481467c00 done
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:09.9738543Z #6 extracting sha256:6a0ac1617861a677b045b7ff88545213ec31c0ff08763195a70a4a5adda577bb
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:10.0777510Z #6 extracting sha256:6a0ac1617861a677b045b7ff88545213ec31c0ff08763195a70a4a5adda577bb 0.1s done
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:10.0779840Z #6 sha256:6a0ac1617861a677b045b7ff88545213ec31c0ff08763195a70a4a5adda577bb 3.86MB / 3.86MB 0.1s done
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:10.0781470Z #6 sha256:5a4314708484bec672de2c09653a5c01fb1c84a998564ac231b0325e2238ed5b 5.78kB / 5.78kB done
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:10.0783619Z #6 sha256:d343daf747a6ad03e586e255b02f7ad1010ad582f29d77eb49b052429cafcb0c 0B / 4.39MB 0.1s
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:10.0785805Z #6 sha256:9e88118ea305c76c22014e2bbf589500d5652fcc56559515d67568c8b4530f84 0B / 1.02kB 0.1s
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:10.0788307Z #6 sha256:f371b5f3f2ac0a05703f33d6e6134515fb2498cab708fb948a0aeb7481467c00 1.61kB / 1.61kB done
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:10.0789927Z #6 sha256:f519727303f0af6862882be2a30f420e28710d4209226e681aaddb2c01d12d9b 13.54kB / 13.54kB done
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:10.0791113Z #6 sha256:fbca7e993e1ca5d6fa3b3eceeeaa60060bea2f696143866d4a9aeb5a6c2057a4 0B / 358.00MB 0.1s
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:10.0792404Z #6 extracting sha256:d343daf747a6ad03e586e255b02f7ad1010ad582f29d77eb49b052429cafcb0c
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:10.1794177Z #6 sha256:d343daf747a6ad03e586e255b02f7ad1010ad582f29d77eb49b052429cafcb0c 4.39MB / 4.39MB 0.1s done
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:10.1797652Z #6 sha256:9e88118ea305c76c22014e2bbf589500d5652fcc56559515d67568c8b4530f84 1.02kB / 1.02kB 0.2s done
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:10.1799106Z #6 sha256:fbca7e993e1ca5d6fa3b3eceeeaa60060bea2f696143866d4a9aeb5a6c2057a4 41.94MB / 358.00MB 0.3s
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:10.1800518Z #6 sha256:9c04f0608c117cb390f13f39e93ce0a0e21fc78367d9bbcd2d522aa14c967f91 77.89kB / 77.89kB 0.2s done
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:10.1802007Z #6 sha256:8ddaf57867ebf405490a6dcde68cfdd06af44dbb5cd3aaf74e6818890e45eae6 814.07kB / 814.07kB 0.3s done
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:10.1803354Z #6 sha256:9705dc122b7f54aa4db8bcd9a7689b01d77b8ccbbc735fd006c9b11134542093 0B / 297B 0.3s
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:10.1804625Z #6 sha256:77a683edb9456bb628eeb281daf9d5809218efe391654c2fec125c013198cb6f 0B / 3.21kB 0.3s
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:10.2822469Z #6 sha256:fbca7e993e1ca5d6fa3b3eceeeaa60060bea2f696143866d4a9aeb5a6c2057a4 78.64MB / 358.00MB 0.4s
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:10.2825507Z #6 sha256:9705dc122b7f54aa4db8bcd9a7689b01d77b8ccbbc735fd006c9b11134542093 297B / 297B 0.3s done
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:10.2827900Z #6 sha256:77a683edb9456bb628eeb281daf9d5809218efe391654c2fec125c013198cb6f 3.21kB / 3.21kB 0.3s done
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:10.2830030Z #6 sha256:99eec413ff9cbf99b056ab9ccb9b16b4a2a4c860b37c06b7d023b0c83b934c6c 1.03kB / 1.03kB 0.4s
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:10.2832081Z #6 sha256:abb565a09a47b57891f184637339c57ec61041fbd91eeab812aadec9f2f0252c 0B / 2.37kB 0.4s
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:10.4790447Z #6 sha256:fbca7e993e1ca5d6fa3b3eceeeaa60060bea2f696143866d4a9aeb5a6c2057a4 140.51MB / 358.00MB 0.6s
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:10.4791783Z #6 extracting sha256:d343daf747a6ad03e586e255b02f7ad1010ad582f29d77eb49b052429cafcb0c 0.2s done
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:10.4793024Z #6 sha256:99eec413ff9cbf99b056ab9ccb9b16b4a2a4c860b37c06b7d023b0c83b934c6c 1.03kB / 1.03kB 0.4s done
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:10.4794186Z #6 sha256:abb565a09a47b57891f184637339c57ec61041fbd91eeab812aadec9f2f0252c 2.37kB / 2.37kB 0.4s done
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:10.4795278Z #6 sha256:7bd6db39b9a3188024b7d477b65588c5f979e9bcad11e98721961e007b4aeef2 0B / 1.02kB 0.5s
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:10.4796430Z #6 sha256:f04e445057aecdb61300d6c321de9f202d94427bacfa5fa7db0826a703542e57 1.99kB / 1.99kB 0.5s done
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:10.4797621Z #6 sha256:a08f9afeb021502109912e125720c76e36fc71b0a4b952925c463f1ed89d8d7f 342B / 342B 0.6s
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:10.4798813Z #6 sha256:5cc41111c8147f42e6df24bc6ddec10b8efb50baf50be06bf12a0e1f4d29f38d 8.54kB / 8.54kB 0.5s done
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:11.0290894Z #6 sha256:fbca7e993e1ca5d6fa3b3eceeeaa60060bea2f696143866d4a9aeb5a6c2057a4 187.70MB / 358.00MB 1.0s
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:11.0292602Z #6 sha256:7bd6db39b9a3188024b7d477b65588c5f979e9bcad11e98721961e007b4aeef2 1.02kB / 1.02kB 0.7s done
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:11.0560282Z #6 sha256:a08f9afeb021502109912e125720c76e36fc71b0a4b952925c463f1ed89d8d7f 342B / 342B 1.0s done
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:11.0563250Z #6 sha256:934229c37c0f10763a1e40597c48e0797c584fc0e8b935ccc2fa94a789763602 0B / 277B 1.2s
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:11.1797796Z #6 sha256:fbca7e993e1ca5d6fa3b3eceeeaa60060bea2f696143866d4a9aeb5a6c2057a4 270.53MB / 358.00MB 1.3s
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:11.1800431Z #6 sha256:934229c37c0f10763a1e40597c48e0797c584fc0e8b935ccc2fa94a789763602 277B / 277B 1.3s
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:11.1803157Z #6 sha256:66bdddd6039a7de1cf7affa49df728c3d11997b18116fae19e2867347b4afe0e 0B / 1.59kB 1.3s
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:11.3072007Z #6 sha256:fbca7e993e1ca5d6fa3b3eceeeaa60060bea2f696143866d4a9aeb5a6c2057a4 296.75MB / 358.00MB 1.4s
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:11.3073967Z #6 sha256:934229c37c0f10763a1e40597c48e0797c584fc0e8b935ccc2fa94a789763602 277B / 277B 1.3s done
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:11.3075692Z #6 sha256:66bdddd6039a7de1cf7affa49df728c3d11997b18116fae19e2867347b4afe0e 1.59kB / 1.59kB 1.3s done
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:11.3077630Z #6 extracting sha256:9e88118ea305c76c22014e2bbf589500d5652fcc56559515d67568c8b4530f84 done
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:11.3078881Z #6 sha256:d57bc90469443b5bae80e1a58bba7617687726d2ad2b620e215a71c6b83093c0 0B / 3.85kB 1.4s
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:11.3080139Z #6 sha256:09f359af2c8c4cdf97027f61f3a698d6d2f12c00a0383095b336a376d2f15519 0B / 361B 1.4s
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:11.4787422Z #6 sha256:fbca7e993e1ca5d6fa3b3eceeeaa60060bea2f696143866d4a9aeb5a6c2057a4 358.00MB / 358.00MB 1.6s
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:11.6100252Z #6 sha256:09f359af2c8c4cdf97027f61f3a698d6d2f12c00a0383095b336a376d2f15519 361B / 361B 1.6s
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:11.9790488Z #6 sha256:d57bc90469443b5bae80e1a58bba7617687726d2ad2b620e215a71c6b83093c0 3.85kB / 3.85kB 1.8s done
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:12.1632769Z #6 sha256:fbca7e993e1ca5d6fa3b3eceeeaa60060bea2f696143866d4a9aeb5a6c2057a4 358.00MB / 358.00MB 2.1s done
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:12.1635241Z #6 sha256:09f359af2c8c4cdf97027f61f3a698d6d2f12c00a0383095b336a376d2f15519 361B / 361B 2.1s done
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:12.1636631Z #6 extracting sha256:fbca7e993e1ca5d6fa3b3eceeeaa60060bea2f696143866d4a9aeb5a6c2057a4 0.1s
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:12.1641110Z #6 sha256:7e2a3209ccb005defa4d13678f2d616896d9d86661bb09de5970866c4d484109 335B / 335B 2.2s done
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:12.1644768Z #6 sha256:7caa0d6a85af2544f6e1af38cddc759ba5e1da719a177bc5f325824d7c272efd 0B / 8.58kB 2.2s
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:12.1648816Z #6 sha256:e7cd8a022c6d3e1d791c063a0145df72671227b460692464f0efd656f8ed8c2b 0B / 397B 2.2s
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:12.1651307Z #6 sha256:050236ff9d6fbede0471807465f7759979144f7e52efbbd8535744f80964795a 389B / 389B 2.2s done
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:12.1655125Z #6 sha256:27080c64989e348e94d3cbe75f75cba9e3a822a2b808b47c4992a15f1a05357b 0B / 636B 2.2s
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:12.2668888Z #6 sha256:7caa0d6a85af2544f6e1af38cddc759ba5e1da719a177bc5f325824d7c272efd 8.58kB / 8.58kB 2.3s done
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:12.2670682Z #6 sha256:e7cd8a022c6d3e1d791c063a0145df72671227b460692464f0efd656f8ed8c2b 397B / 397B 2.2s done
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:12.2672078Z #6 sha256:27080c64989e348e94d3cbe75f75cba9e3a822a2b808b47c4992a15f1a05357b 636B / 636B 2.3s done
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:12.2673465Z #6 sha256:90e0d490e65d14461ecc5eba7a3838f88c84f1ee4c65710d792884e9b227e272 0B / 523B 2.3s
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:12.2675043Z #6 sha256:40b5286cf3803fbdc7eb951abf48772029659dae9dc073bdf3a95b0277138a27 0B / 9.85kB 2.3s
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:12.2676458Z #6 sha256:37896fbd0b4d0a2a1b18759f5799b516f175a3434d958c277cffa3092f3d7244 0B / 13.54kB 2.3s
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:12.3767577Z #6 sha256:90e0d490e65d14461ecc5eba7a3838f88c84f1ee4c65710d792884e9b227e272 523B / 523B 2.3s done
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:12.3770881Z #6 sha256:40b5286cf3803fbdc7eb951abf48772029659dae9dc073bdf3a95b0277138a27 9.85kB / 9.85kB 2.3s done
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:12.3792452Z #6 sha256:37896fbd0b4d0a2a1b18759f5799b516f175a3434d958c277cffa3092f3d7244 13.54kB / 13.54kB 2.3s done
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:12.3794600Z #6 sha256:5f373982f4450e6b385bfb70c3ecb070b7e1e6ed894d99396929786cc8321cf6 0B / 314B 2.4s
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:12.3795505Z #6 sha256:15efbe177d1c3547839efc39f16cf433088190118782f5a9c72b48569db5c453 5.28kB / 5.28kB 2.4s done
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:12.3824128Z #6 sha256:57a2f2b4949933085e33bd8cd8893f75b80e41693700bb5db54b2864e73ea826 272B / 272B 2.4s done
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:12.4927922Z #6 sha256:5f373982f4450e6b385bfb70c3ecb070b7e1e6ed894d99396929786cc8321cf6 314B / 314B 2.4s done
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:17.2197963Z #6 extracting sha256:fbca7e993e1ca5d6fa3b3eceeeaa60060bea2f696143866d4a9aeb5a6c2057a4 5.2s
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:22.2551683Z #6 extracting sha256:fbca7e993e1ca5d6fa3b3eceeeaa60060bea2f696143866d4a9aeb5a6c2057a4 10.2s
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:22.6918133Z #6 extracting sha256:fbca7e993e1ca5d6fa3b3eceeeaa60060bea2f696143866d4a9aeb5a6c2057a4 10.5s done
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:25.5499082Z #6 extracting sha256:9c04f0608c117cb390f13f39e93ce0a0e21fc78367d9bbcd2d522aa14c967f91
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:25.6693682Z #6 extracting sha256:9c04f0608c117cb390f13f39e93ce0a0e21fc78367d9bbcd2d522aa14c967f91 done
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:25.6694744Z #6 extracting sha256:8ddaf57867ebf405490a6dcde68cfdd06af44dbb5cd3aaf74e6818890e45eae6 0.0s done
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:25.6695683Z #6 extracting sha256:9705dc122b7f54aa4db8bcd9a7689b01d77b8ccbbc735fd006c9b11134542093 done
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:25.6696370Z #6 extracting sha256:77a683edb9456bb628eeb281daf9d5809218efe391654c2fec125c013198cb6f done
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:25.6697030Z #6 extracting sha256:99eec413ff9cbf99b056ab9ccb9b16b4a2a4c860b37c06b7d023b0c83b934c6c done
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:25.6698237Z #6 extracting sha256:abb565a09a47b57891f184637339c57ec61041fbd91eeab812aadec9f2f0252c done
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:25.6699566Z #6 extracting sha256:5cc41111c8147f42e6df24bc6ddec10b8efb50baf50be06bf12a0e1f4d29f38d
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:25.7709374Z #6 extracting sha256:5cc41111c8147f42e6df24bc6ddec10b8efb50baf50be06bf12a0e1f4d29f38d done
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:25.7710884Z #6 extracting sha256:f04e445057aecdb61300d6c321de9f202d94427bacfa5fa7db0826a703542e57 done
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:25.7712182Z #6 extracting sha256:7bd6db39b9a3188024b7d477b65588c5f979e9bcad11e98721961e007b4aeef2 done
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:25.7713447Z #6 extracting sha256:a08f9afeb021502109912e125720c76e36fc71b0a4b952925c463f1ed89d8d7f done
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:25.7714884Z #6 extracting sha256:934229c37c0f10763a1e40597c48e0797c584fc0e8b935ccc2fa94a789763602 done
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:25.7716196Z #6 extracting sha256:66bdddd6039a7de1cf7affa49df728c3d11997b18116fae19e2867347b4afe0e done
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:25.7718515Z #6 extracting sha256:d57bc90469443b5bae80e1a58bba7617687726d2ad2b620e215a71c6b83093c0 done
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:25.7723220Z #6 extracting sha256:09f359af2c8c4cdf97027f61f3a698d6d2f12c00a0383095b336a376d2f15519 done
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:25.7731389Z #6 extracting sha256:050236ff9d6fbede0471807465f7759979144f7e52efbbd8535744f80964795a done
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:25.7738676Z #6 extracting sha256:7e2a3209ccb005defa4d13678f2d616896d9d86661bb09de5970866c4d484109 done
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:25.7755610Z #6 extracting sha256:e7cd8a022c6d3e1d791c063a0145df72671227b460692464f0efd656f8ed8c2b done
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:25.7758097Z #6 extracting sha256:27080c64989e348e94d3cbe75f75cba9e3a822a2b808b47c4992a15f1a05357b done
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:25.7759602Z #6 extracting sha256:7caa0d6a85af2544f6e1af38cddc759ba5e1da719a177bc5f325824d7c272efd done
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:25.7761016Z #6 extracting sha256:40b5286cf3803fbdc7eb951abf48772029659dae9dc073bdf3a95b0277138a27 done
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:25.7762500Z #6 extracting sha256:37896fbd0b4d0a2a1b18759f5799b516f175a3434d958c277cffa3092f3d7244
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:25.9068624Z #6 extracting sha256:37896fbd0b4d0a2a1b18759f5799b516f175a3434d958c277cffa3092f3d7244 done
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:25.9070314Z #6 extracting sha256:90e0d490e65d14461ecc5eba7a3838f88c84f1ee4c65710d792884e9b227e272 done
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:25.9072875Z #6 extracting sha256:57a2f2b4949933085e33bd8cd8893f75b80e41693700bb5db54b2864e73ea826 done
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:25.9073993Z #6 extracting sha256:15efbe177d1c3547839efc39f16cf433088190118782f5a9c72b48569db5c453 done
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:25.9081398Z #6 extracting sha256:5f373982f4450e6b385bfb70c3ecb070b7e1e6ed894d99396929786cc8321cf6 done
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:25.9082518Z #6 DONE 16.0s
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:26.0838148Z 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:26.0839485Z #7 [database 2/2] COPY infra/supabase/roles.sql /docker-entrypoint-initdb.d/init-scripts/99-roles.sql
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:26.0840577Z #7 DONE 0.0s
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:26.0840908Z 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:26.0841215Z #8 exporting to image
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:26.0841760Z #8 exporting layers
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:26.7835861Z #8 exporting layers 0.9s done
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:26.7982851Z #8 writing image sha256:0796a56f4ceab257032c0771c32f0deef58e942536c754da92f782c945da7e4f done
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:26.7984256Z #8 naming to docker.io/library/boletinexpress-postgres:phase3 done
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:26.7984886Z #8 DONE 0.9s
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:27.0080817Z  rest Pulling 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:27.0081465Z  storage Pulling 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:27.0086995Z  mail Pulling 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:27.0087596Z  auth Pulling 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:27.9781130Z  589002ba0eae Pulling fs layer 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:27.9782516Z  110fdf3698bd Pulling fs layer 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:27.9783734Z  15db81b59380 Pulling fs layer 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:27.9914773Z  cd68e1dc2f6c Pulling fs layer 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:27.9915500Z  cd68e1dc2f6c Waiting 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:27.9929710Z  e6f31ffc071e Pulling fs layer 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:27.9930068Z  d7e873383d31 Pulling fs layer 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:27.9930341Z  00981fef6de8 Pulling fs layer 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:27.9930616Z  264aff2833b7 Pulling fs layer 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:27.9930877Z  0a85b149f5b7 Pulling fs layer 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:27.9931133Z  36a353320488 Pulling fs layer 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:27.9931639Z  a6f36c1182d9 Pulling fs layer 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:27.9931896Z  4135400def2a Pulling fs layer 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:27.9932151Z  01d24c3560cf Pulling fs layer 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:27.9932415Z  3c88e9a69541 Pulling fs layer 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:27.9932668Z  d2780d7704a5 Pulling fs layer 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:27.9932927Z  35ed90d85712 Pulling fs layer 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:27.9933191Z  56e1017e84a3 Pulling fs layer 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:27.9933452Z  fb95fef3d6a0 Pulling fs layer 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:27.9933710Z  e6f31ffc071e Waiting 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:27.9933944Z  d7e873383d31 Waiting 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:27.9934166Z  00981fef6de8 Waiting 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:27.9934376Z  264aff2833b7 Waiting 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:27.9934586Z  0a85b149f5b7 Waiting 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:27.9934798Z  36a353320488 Waiting 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:27.9935004Z  a6f36c1182d9 Waiting 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:27.9935221Z  4135400def2a Waiting 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:27.9935430Z  01d24c3560cf Waiting 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:27.9935643Z  3c88e9a69541 Waiting 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:27.9935865Z  d2780d7704a5 Waiting 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:27.9936074Z  35ed90d85712 Waiting 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:27.9936285Z  56e1017e84a3 Waiting 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:27.9936500Z  fb95fef3d6a0 Waiting 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:28.0080851Z  55afa1ecc21d Already exists 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:28.0097688Z  565df2d910df Pulling fs layer 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:28.0098285Z  dc286a8aa197 Pulling fs layer 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:28.0098902Z  518a41cba818 Pulling fs layer 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:28.0099503Z  1278e66a267c Pulling fs layer 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:28.0100048Z  44c4479b4ddc Pulling fs layer 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:28.0100549Z  518a41cba818 Waiting 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:28.0101021Z  1278e66a267c Waiting 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:28.0101472Z  565df2d910df Waiting 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:28.0101931Z  dc286a8aa197 Waiting 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:28.0102379Z  44c4479b4ddc Waiting 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:28.1621790Z  15db81b59380 Downloading [==>                                                ]  15.74kB/364.8kB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:28.1632474Z  589002ba0eae Downloading [>                                                  ]  48.51kB/3.862MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:28.1665497Z  110fdf3698bd Downloading [>                                                  ]  114.7kB/10.72MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:28.1686745Z  15db81b59380 Verifying Checksum 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:28.1703026Z  15db81b59380 Download complete 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:28.1869348Z  589002ba0eae Verifying Checksum 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:28.1871795Z  589002ba0eae Download complete 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:28.2025933Z  589002ba0eae Extracting [>                                                  ]  65.54kB/3.862MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:28.2055478Z  110fdf3698bd Verifying Checksum 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:28.2058770Z  110fdf3698bd Download complete 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:28.2797686Z  589002ba0eae Extracting [==================================================>]  3.862MB/3.862MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:28.2803389Z  589002ba0eae Extracting [==================================================>]  3.862MB/3.862MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:28.2947750Z  589002ba0eae Pull complete 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:28.3009959Z  110fdf3698bd Extracting [>                                                  ]  131.1kB/10.72MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:28.3483226Z  cd68e1dc2f6c Downloading [>                                                  ]   64.9kB/6.364MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:28.3804357Z  e6f31ffc071e Downloading [>                                                  ]  48.49kB/3.844MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:28.3827790Z  cd68e1dc2f6c Verifying Checksum 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:28.3828862Z  cd68e1dc2f6c Download complete 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:28.3913632Z  cd68e1dc2f6c Extracting [>                                                  ]  65.54kB/6.364MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:28.4012140Z  110fdf3698bd Extracting [========================>                          ]  5.243MB/10.72MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:28.4028310Z  d7e873383d31 Downloading [>                                                  ]    540kB/53.38MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:28.4200071Z  e6f31ffc071e Verifying Checksum 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:28.4201462Z  e6f31ffc071e Download complete 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:28.4421425Z  e6f31ffc071e Extracting [>                                                  ]  65.54kB/3.844MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:28.5043101Z  d7e873383d31 Downloading [=================>                                 ]  18.38MB/53.38MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:28.5044085Z  cd68e1dc2f6c Extracting [============>                                      ]  1.573MB/6.364MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:28.5325779Z  e6f31ffc071e Extracting [=================>                                 ]  1.311MB/3.844MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:28.5379402Z  110fdf3698bd Extracting [================================>                  ]  6.947MB/10.72MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:28.5985352Z  00981fef6de8 Downloading [>                                                  ]  15.74kB/1.262MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:28.6034148Z  cd68e1dc2f6c Extracting [=====================>                             ]  2.687MB/6.364MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:28.6125858Z  d7e873383d31 Downloading [======================================>            ]  41.63MB/53.38MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:28.6303215Z  00981fef6de8 Verifying Checksum 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:28.6306057Z  00981fef6de8 Download complete 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:28.6343625Z  e6f31ffc071e Extracting [=================================>                 ]  2.556MB/3.844MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:28.6361271Z  264aff2833b7 Downloading [==================================================>]     443B/443B
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:28.6380451Z  264aff2833b7 Verifying Checksum 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:28.6381029Z  264aff2833b7 Download complete 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:28.6389422Z  110fdf3698bd Extracting [==========================================>        ]  9.044MB/10.72MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:28.6698251Z  d7e873383d31 Verifying Checksum 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:28.6699518Z  d7e873383d31 Download complete 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:28.6923008Z  e6f31ffc071e Extracting [==================================================>]  3.844MB/3.844MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:28.7046208Z  cd68e1dc2f6c Extracting [===================================>               ]  4.522MB/6.364MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:28.7164726Z  e6f31ffc071e Pull complete 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:28.7220917Z  110fdf3698bd Extracting [==================================================>]  10.72MB/10.72MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:28.8179932Z  36a353320488 Downloading [==================================================>]      93B/93B
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:28.8537493Z  a6f36c1182d9 Downloading [>                                                  ]  3.457kB/181.5kB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:29.0569913Z  36a353320488 Verifying Checksum 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:29.0577954Z  36a353320488 Download complete 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:29.0603594Z  a6f36c1182d9 Downloading [====>                                              ]  15.74kB/181.5kB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:29.0640133Z  cd68e1dc2f6c Extracting [============================================>      ]  5.636MB/6.364MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:29.0649334Z  a6f36c1182d9 Downloading [==================================================>]  181.5kB/181.5kB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:29.0657109Z  a6f36c1182d9 Verifying Checksum 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:29.0658161Z  a6f36c1182d9 Download complete 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:29.0706668Z  110fdf3698bd Pull complete 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:29.0749340Z  15db81b59380 Extracting [====>                                              ]  32.77kB/364.8kB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:29.0763920Z  0a85b149f5b7 Downloading [>                                                  ]    529kB/111.2MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:29.0934696Z  d7e873383d31 Extracting [>                                                  ]  557.1kB/53.38MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:29.0940465Z  cd68e1dc2f6c Extracting [==================================================>]  6.364MB/6.364MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:29.1127431Z  15db81b59380 Extracting [==================================================>]  364.8kB/364.8kB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:29.1171010Z  cd68e1dc2f6c Pull complete 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:29.1528128Z  15db81b59380 Extracting [==================================================>]  364.8kB/364.8kB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:29.1622630Z  rest Pulled 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:29.1766721Z  0a85b149f5b7 Downloading [========>                                          ]  18.16MB/111.2MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:29.2417043Z  d7e873383d31 Extracting [==>                                                ]  2.228MB/53.38MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:29.2587704Z  01d24c3560cf Downloading [>                                                  ]  130.4kB/13.01MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:29.2813081Z  4135400def2a Downloading [==================================================>]     660B/660B
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:29.2815418Z  4135400def2a Verifying Checksum 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:29.2816314Z  4135400def2a Download complete 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:29.2868998Z  0a85b149f5b7 Downloading [=====================>                             ]  48.02MB/111.2MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:29.3511540Z  d7e873383d31 Extracting [====>                                              ]  4.456MB/53.38MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:29.3587601Z  01d24c3560cf Downloading [================================================>  ]  12.58MB/13.01MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:29.3601372Z  01d24c3560cf Verifying Checksum 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:29.3602870Z  01d24c3560cf Download complete 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:29.3798886Z  0a85b149f5b7 Downloading [================================>                  ]  72.01MB/111.2MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:29.4535777Z  15db81b59380 Pull complete 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:29.4666690Z  mail Pulled 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:29.4704934Z  3c88e9a69541 Downloading [=====>                                             ]  3.501kB/32.47kB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:29.4727241Z  3c88e9a69541 Verifying Checksum 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:29.4728438Z  3c88e9a69541 Download complete 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:29.4736299Z  d7e873383d31 Extracting [========>                                          ]  8.913MB/53.38MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:29.4783617Z  0a85b149f5b7 Downloading [============================================>      ]  98.13MB/111.2MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:29.5257424Z  0a85b149f5b7 Verifying Checksum 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:29.5259044Z  0a85b149f5b7 Download complete 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:29.5595002Z  d2780d7704a5 Downloading [>                                                  ]  525.4kB/55.62MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:29.5757300Z  d7e873383d31 Extracting [=============>                                     ]  13.93MB/53.38MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:29.6455531Z  35ed90d85712 Downloading [>                                                  ]  32.13kB/1.796MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:29.6620555Z  35ed90d85712 Downloading [==================================================>]  1.796MB/1.796MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:29.6621843Z  35ed90d85712 Verifying Checksum 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:29.6622368Z  35ed90d85712 Download complete 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:29.6630721Z  d2780d7704a5 Downloading [======>                                            ]  7.368MB/55.62MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:29.6797595Z  d7e873383d31 Extracting [==================>                                ]  20.05MB/53.38MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:29.7055164Z  56e1017e84a3 Downloading [==================================================>]     587B/587B
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:29.7056167Z  56e1017e84a3 Verifying Checksum 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:29.7056738Z  56e1017e84a3 Download complete 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:29.7659883Z  d2780d7704a5 Downloading [=============>                                     ]  15.29MB/55.62MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:29.7900566Z  d7e873383d31 Extracting [=======================>                           ]  25.07MB/53.38MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:29.8457836Z  fb95fef3d6a0 Downloading [==================================================>]     271B/271B
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:29.8469347Z  fb95fef3d6a0 Verifying Checksum 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:29.8470278Z  fb95fef3d6a0 Download complete 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:29.8682154Z  d2780d7704a5 Downloading [========================================>          ]  44.66MB/55.62MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:29.8851709Z  565df2d910df Downloading [==================================================>]     941B/941B
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:29.8852990Z  565df2d910df Verifying Checksum 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:29.8853579Z  565df2d910df Download complete 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:29.8949578Z  565df2d910df Extracting [==================================================>]     941B/941B
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:29.8950853Z  565df2d910df Extracting [==================================================>]     941B/941B
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:29.9318784Z  d2780d7704a5 Verifying Checksum 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:29.9566789Z  d2780d7704a5 Download complete 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:29.9568943Z  d7e873383d31 Extracting [==========================>                        ]  28.41MB/53.38MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:30.0394996Z  dc286a8aa197 Downloading [>                                                  ]  3.458kB/245.1kB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:30.0433571Z  dc286a8aa197 Download complete 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:30.0701745Z  518a41cba818 Downloading [>                                                  ]  261.5kB/25.31MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:30.0994218Z  1278e66a267c Downloading [============>                                      ]    3.5kB/13.58kB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:30.0995337Z  1278e66a267c Downloading [==================================================>]  13.58kB/13.58kB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:30.0996333Z  1278e66a267c Verifying Checksum 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:30.0997072Z  1278e66a267c Download complete 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:30.1468883Z  518a41cba818 Verifying Checksum 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:30.1469458Z  518a41cba818 Download complete 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:30.2638680Z  d7e873383d31 Extracting [===========================>                       ]  29.52MB/53.38MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:30.4277966Z  44c4479b4ddc Downloading [==================================================>]     169B/169B
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:30.5113450Z  44c4479b4ddc Download complete 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:30.5176472Z  d7e873383d31 Extracting [============================>                      ]  30.64MB/53.38MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:30.6561464Z  d7e873383d31 Extracting [=============================>                     ]   31.2MB/53.38MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:30.6580855Z  565df2d910df Pull complete 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:30.6591159Z  dc286a8aa197 Extracting [======>                                            ]  32.77kB/245.1kB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:30.7065586Z  dc286a8aa197 Extracting [==================================================>]  245.1kB/245.1kB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:30.7568009Z  d7e873383d31 Extracting [===================================>               ]  37.88MB/53.38MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:30.8189470Z  dc286a8aa197 Pull complete 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:30.8301267Z  518a41cba818 Extracting [>                                                  ]  262.1kB/25.31MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:30.8652592Z  d7e873383d31 Extracting [======================================>            ]  41.22MB/53.38MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:30.9360985Z  518a41cba818 Extracting [=========>                                         ]  4.719MB/25.31MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:30.9778440Z  d7e873383d31 Extracting [==========================================>        ]  45.12MB/53.38MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:31.0396957Z  518a41cba818 Extracting [=================>                                 ]  8.651MB/25.31MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:31.0904363Z  d7e873383d31 Extracting [=============================================>     ]  48.46MB/53.38MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:31.1401064Z  518a41cba818 Extracting [==========================>                        ]  13.37MB/25.31MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:31.2471688Z  518a41cba818 Extracting [==================================================>]  25.31MB/25.31MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:31.2658087Z  d7e873383d31 Extracting [==============================================>    ]  50.14MB/53.38MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:31.4599157Z  518a41cba818 Pull complete 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:31.4620310Z  1278e66a267c Extracting [==================================================>]  13.58kB/13.58kB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:31.4623128Z  1278e66a267c Extracting [==================================================>]  13.58kB/13.58kB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:31.5016487Z  1278e66a267c Pull complete 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:31.5043301Z  44c4479b4ddc Extracting [==================================================>]     169B/169B
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:31.5049610Z  44c4479b4ddc Extracting [==================================================>]     169B/169B
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:31.5171185Z  44c4479b4ddc Pull complete 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:31.5214435Z  auth Pulled 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:31.5270815Z  d7e873383d31 Extracting [===============================================>   ]  50.69MB/53.38MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:31.6946653Z  d7e873383d31 Extracting [================================================>  ]  51.81MB/53.38MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:31.8078651Z  d7e873383d31 Extracting [=================================================> ]  52.92MB/53.38MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:31.8946042Z  d7e873383d31 Extracting [==================================================>]  53.38MB/53.38MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:31.9173731Z  d7e873383d31 Pull complete 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:31.9180201Z  00981fef6de8 Extracting [=>                                                 ]  32.77kB/1.262MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:31.9610524Z  00981fef6de8 Extracting [==================================================>]  1.262MB/1.262MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:31.9616451Z  00981fef6de8 Extracting [==================================================>]  1.262MB/1.262MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:31.9715196Z  00981fef6de8 Pull complete 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:31.9725397Z  264aff2833b7 Extracting [==================================================>]     443B/443B
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:31.9735315Z  264aff2833b7 Extracting [==================================================>]     443B/443B
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:31.9789282Z  264aff2833b7 Pull complete 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:31.9965951Z  0a85b149f5b7 Extracting [>                                                  ]  557.1kB/111.2MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:32.1011518Z  0a85b149f5b7 Extracting [===>                                               ]  8.356MB/111.2MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:32.2102711Z  0a85b149f5b7 Extracting [=======>                                           ]  16.71MB/111.2MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:32.3135525Z  0a85b149f5b7 Extracting [==========>                                        ]   23.4MB/111.2MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:32.4821540Z  0a85b149f5b7 Extracting [===========>                                       ]  25.62MB/111.2MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:32.6096358Z  0a85b149f5b7 Extracting [============>                                      ]  26.74MB/111.2MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:32.7372874Z  0a85b149f5b7 Extracting [=============>                                     ]  30.64MB/111.2MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:32.8429985Z  0a85b149f5b7 Extracting [================>                                  ]  36.77MB/111.2MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:32.9517790Z  0a85b149f5b7 Extracting [===================>                               ]  44.01MB/111.2MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:33.0595429Z  0a85b149f5b7 Extracting [======================>                            ]  49.58MB/111.2MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:33.1763450Z  0a85b149f5b7 Extracting [=======================>                           ]  51.81MB/111.2MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:33.2805905Z  0a85b149f5b7 Extracting [=========================>                         ]  56.26MB/111.2MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:33.3820654Z  0a85b149f5b7 Extracting [==========================>                        ]   59.6MB/111.2MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:33.4893018Z  0a85b149f5b7 Extracting [==============================>                    ]  67.96MB/111.2MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:33.5945655Z  0a85b149f5b7 Extracting [=================================>                 ]  74.65MB/111.2MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:33.6950583Z  0a85b149f5b7 Extracting [=====================================>             ]     83MB/111.2MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:33.8041532Z  0a85b149f5b7 Extracting [========================================>          ]   90.8MB/111.2MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:33.9045972Z  0a85b149f5b7 Extracting [============================================>      ]  98.04MB/111.2MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:34.0052589Z  0a85b149f5b7 Extracting [===============================================>   ]  105.8MB/111.2MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:34.0928403Z  0a85b149f5b7 Extracting [==================================================>]  111.2MB/111.2MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:35.3509637Z  0a85b149f5b7 Pull complete 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:35.3518587Z  36a353320488 Extracting [==================================================>]      93B/93B
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:35.3520557Z  36a353320488 Extracting [==================================================>]      93B/93B
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:35.3610592Z  36a353320488 Pull complete 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:35.3617969Z  a6f36c1182d9 Extracting [=========>                                         ]  32.77kB/181.5kB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:35.3708002Z  a6f36c1182d9 Extracting [==================================================>]  181.5kB/181.5kB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:35.4093216Z  a6f36c1182d9 Pull complete 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:35.4106554Z  4135400def2a Extracting [==================================================>]     660B/660B
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:35.4109911Z  4135400def2a Extracting [==================================================>]     660B/660B
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:35.4187342Z  4135400def2a Pull complete 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:35.4208007Z  01d24c3560cf Extracting [>                                                  ]  131.1kB/13.01MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:35.5210800Z  01d24c3560cf Extracting [=====================>                             ]  5.636MB/13.01MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:35.6405821Z  01d24c3560cf Extracting [=======================================>           ]  10.22MB/13.01MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:35.7488703Z  01d24c3560cf Extracting [=========================================>         ]  10.88MB/13.01MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:35.8545199Z  01d24c3560cf Extracting [===========================================>       ]  11.27MB/13.01MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:35.9582087Z  01d24c3560cf Extracting [=============================================>     ]   11.8MB/13.01MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:36.1024694Z  01d24c3560cf Extracting [=================================================> ]  12.98MB/13.01MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:36.1172254Z  01d24c3560cf Extracting [==================================================>]  13.01MB/13.01MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:36.2104958Z  01d24c3560cf Pull complete 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:36.2113481Z  3c88e9a69541 Extracting [==================================================>]  32.47kB/32.47kB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:36.2121354Z  3c88e9a69541 Extracting [==================================================>]  32.47kB/32.47kB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:36.2343539Z  3c88e9a69541 Pull complete 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:36.3672078Z  d2780d7704a5 Extracting [>                                                  ]  557.1kB/55.62MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:36.4690666Z  d2780d7704a5 Extracting [=>                                                 ]  1.114MB/55.62MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:36.7618951Z  d2780d7704a5 Extracting [=>                                                 ]  1.671MB/55.62MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:36.8739524Z  d2780d7704a5 Extracting [======>                                            ]  7.242MB/55.62MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:37.0016328Z  d2780d7704a5 Extracting [=======>                                           ]  8.356MB/55.62MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:37.1129596Z  d2780d7704a5 Extracting [========>                                          ]  8.913MB/55.62MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:37.3210896Z  d2780d7704a5 Extracting [=========>                                         ]  10.03MB/55.62MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:37.6678353Z  d2780d7704a5 Extracting [=========>                                         ]  10.58MB/55.62MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:37.7743170Z  d2780d7704a5 Extracting [==========>                                        ]   11.7MB/55.62MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:37.9048559Z  d2780d7704a5 Extracting [===========>                                       ]  12.26MB/55.62MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:38.0816236Z  d2780d7704a5 Extracting [===========>                                       ]  12.81MB/55.62MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:38.2662303Z  d2780d7704a5 Extracting [============>                                      ]  13.37MB/55.62MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:38.5569629Z  d2780d7704a5 Extracting [============>                                      ]  13.93MB/55.62MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:38.7964951Z  d2780d7704a5 Extracting [=============>                                     ]  14.48MB/55.62MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:39.0563688Z  d2780d7704a5 Extracting [=============>                                     ]  15.04MB/55.62MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:39.2804627Z  d2780d7704a5 Extracting [==============>                                    ]   15.6MB/55.62MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:39.5885139Z  d2780d7704a5 Extracting [==============>                                    ]  16.15MB/55.62MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:39.7384791Z  d2780d7704a5 Extracting [===============>                                   ]  16.71MB/55.62MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:39.9366114Z  d2780d7704a5 Extracting [===============>                                   ]  17.27MB/55.62MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:40.0874563Z  d2780d7704a5 Extracting [================>                                  ]  17.83MB/55.62MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:40.2290280Z  d2780d7704a5 Extracting [================>                                  ]  18.38MB/55.62MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:40.3686191Z  d2780d7704a5 Extracting [=================>                                 ]  18.94MB/55.62MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:40.5392024Z  d2780d7704a5 Extracting [=================>                                 ]   19.5MB/55.62MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:40.6907810Z  d2780d7704a5 Extracting [==================>                                ]  20.05MB/55.62MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:40.8429301Z  d2780d7704a5 Extracting [==================>                                ]  20.61MB/55.62MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:41.0036862Z  d2780d7704a5 Extracting [===================>                               ]  21.17MB/55.62MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:41.1613718Z  d2780d7704a5 Extracting [===================>                               ]  21.73MB/55.62MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:41.3110177Z  d2780d7704a5 Extracting [====================>                              ]  22.28MB/55.62MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:41.4520205Z  d2780d7704a5 Extracting [====================>                              ]  22.84MB/55.62MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:41.5930219Z  d2780d7704a5 Extracting [=====================>                             ]   23.4MB/55.62MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:41.7355294Z  d2780d7704a5 Extracting [=====================>                             ]  23.95MB/55.62MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:41.8925322Z  d2780d7704a5 Extracting [======================>                            ]  24.51MB/55.62MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:42.0617734Z  d2780d7704a5 Extracting [======================>                            ]  25.07MB/55.62MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:42.2106675Z  d2780d7704a5 Extracting [=======================>                           ]  25.62MB/55.62MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:42.4002899Z  d2780d7704a5 Extracting [=======================>                           ]  26.18MB/55.62MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:42.5361398Z  d2780d7704a5 Extracting [========================>                          ]  26.74MB/55.62MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:42.7365590Z  d2780d7704a5 Extracting [========================>                          ]   27.3MB/55.62MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:42.9892462Z  d2780d7704a5 Extracting [=========================>                         ]  27.85MB/55.62MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:43.2240324Z  d2780d7704a5 Extracting [=========================>                         ]  28.41MB/55.62MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:43.4741404Z  d2780d7704a5 Extracting [==========================>                        ]  28.97MB/55.62MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:43.6939124Z  d2780d7704a5 Extracting [==========================>                        ]  29.52MB/55.62MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:43.9077792Z  d2780d7704a5 Extracting [===========================>                       ]  30.08MB/55.62MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:44.1098496Z  d2780d7704a5 Extracting [===========================>                       ]  30.64MB/55.62MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:44.3230833Z  d2780d7704a5 Extracting [============================>                      ]   31.2MB/55.62MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:44.5205728Z  d2780d7704a5 Extracting [==============================>                    ]  33.42MB/55.62MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:44.6314174Z  d2780d7704a5 Extracting [==============================>                    ]  33.98MB/55.62MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:44.9448486Z  d2780d7704a5 Extracting [================================>                  ]  35.65MB/55.62MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:45.1517585Z  d2780d7704a5 Extracting [================================>                  ]  36.21MB/55.62MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:45.3468218Z  d2780d7704a5 Extracting [=================================>                 ]  36.77MB/55.62MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:45.5836996Z  d2780d7704a5 Extracting [=================================>                 ]  37.32MB/55.62MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:45.7509940Z  d2780d7704a5 Extracting [==================================>                ]  37.88MB/55.62MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:46.1036551Z  d2780d7704a5 Extracting [==================================>                ]  38.44MB/55.62MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:46.4054276Z  d2780d7704a5 Extracting [===================================>               ]  38.99MB/55.62MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:46.6040845Z  d2780d7704a5 Extracting [====================================>              ]  40.11MB/55.62MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:46.7991998Z  d2780d7704a5 Extracting [======================================>            ]  42.89MB/55.62MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:46.9619734Z  d2780d7704a5 Extracting [=======================================>           ]  44.01MB/55.62MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:47.0847936Z  d2780d7704a5 Extracting [========================================>          ]  45.12MB/55.62MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:47.2183243Z  d2780d7704a5 Extracting [=========================================>         ]  45.68MB/55.62MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:47.4409203Z  d2780d7704a5 Extracting [==========================================>        ]  46.79MB/55.62MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:47.5916626Z  d2780d7704a5 Extracting [============================================>      ]  49.02MB/55.62MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:47.7613109Z  d2780d7704a5 Extracting [=============================================>     ]  50.14MB/55.62MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:47.9249674Z  d2780d7704a5 Extracting [===============================================>   ]  52.36MB/55.62MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:48.0872549Z  d2780d7704a5 Extracting [================================================>  ]  53.48MB/55.62MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:48.2392132Z  d2780d7704a5 Extracting [==================================================>]  55.62MB/55.62MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:50.9497995Z  d2780d7704a5 Pull complete 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:50.9504355Z  35ed90d85712 Extracting [>                                                  ]  32.77kB/1.796MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:51.0568298Z  35ed90d85712 Extracting [======================>                            ]  819.2kB/1.796MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:51.1574957Z  35ed90d85712 Extracting [===========================================>       ]  1.573MB/1.796MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:51.1734179Z  35ed90d85712 Extracting [==================================================>]  1.796MB/1.796MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:51.1749533Z  35ed90d85712 Extracting [==================================================>]  1.796MB/1.796MB
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:51.2058339Z  35ed90d85712 Pull complete 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:51.2066133Z  56e1017e84a3 Extracting [==================================================>]     587B/587B
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:51.2071807Z  56e1017e84a3 Extracting [==================================================>]     587B/587B
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:51.2240604Z  56e1017e84a3 Pull complete 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:51.2255846Z  fb95fef3d6a0 Extracting [==================================================>]     271B/271B
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:51.2261177Z  fb95fef3d6a0 Extracting [==================================================>]     271B/271B
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:51.2343238Z  fb95fef3d6a0 Pull complete 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:51.2390041Z  storage Pulled 
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:51.2419808Z  Network boletinexpress-data  Creating
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:51.2825529Z  Network boletinexpress-data  Created
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:51.2843054Z  Volume "boletinexpress-private-files"  Creating
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:51.2860490Z  Volume "boletinexpress-private-files"  Created
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:51.2861244Z  Volume "boletinexpress-postgres-data"  Creating
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:51.2868347Z  Volume "boletinexpress-postgres-data"  Created
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:51.2872059Z  Volume "boletinexpress-db-config"  Creating
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:51.2882732Z  Volume "boletinexpress-db-config"  Created
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:51.2889401Z  Container boletinexpress-data-mail-1  Creating
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:51.2891030Z  Container boletinexpress-data-templates-1  Creating
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:51.2891998Z  Container boletinexpress-data-postgres-1  Creating
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:51.3105175Z  Container boletinexpress-data-mail-1  Created
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:51.3138794Z  Container boletinexpress-data-postgres-1  Created
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:51.3148781Z  Container boletinexpress-data-auth-1  Creating
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:51.3150293Z  Container boletinexpress-data-rest-1  Creating
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:51.3155723Z  Container boletinexpress-data-templates-1  Created
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:51.3250290Z  Container boletinexpress-data-rest-1  Created
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:51.3251312Z  Container boletinexpress-data-storage-1  Creating
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:51.3273907Z  Container boletinexpress-data-auth-1  Created
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:51.3333055Z  Container boletinexpress-data-storage-1  Created
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:51.3334103Z  Container boletinexpress-data-gateway-1  Creating
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:51.3413491Z  Container boletinexpress-data-gateway-1  Created
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:51.3438098Z  Container boletinexpress-data-postgres-1  Starting
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:51.3439149Z  Container boletinexpress-data-templates-1  Starting
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:51.3439921Z  Container boletinexpress-data-mail-1  Starting
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:51.5525374Z  Container boletinexpress-data-postgres-1  Started
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:51.5526120Z  Container boletinexpress-data-postgres-1  Waiting
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:53.2894008Z  Container boletinexpress-data-templates-1  Started
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:53.3411629Z  Container boletinexpress-data-mail-1  Started
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:46:53.3412457Z  Container boletinexpress-data-postgres-1  Waiting
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:47:08.3429469Z  Container boletinexpress-data-postgres-1  Healthy
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:47:08.3433643Z  Container boletinexpress-data-auth-1  Starting
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:47:08.5543980Z  Container boletinexpress-data-postgres-1  Healthy
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:47:08.5544878Z  Container boletinexpress-data-rest-1  Starting
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:47:08.9210008Z  Container boletinexpress-data-auth-1  Started
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:47:09.1895423Z  Container boletinexpress-data-rest-1  Started
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:47:09.1896172Z  Container boletinexpress-data-postgres-1  Waiting
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:47:09.6911594Z  Container boletinexpress-data-postgres-1  Healthy
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:47:09.6912649Z  Container boletinexpress-data-storage-1  Starting
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:47:10.2462136Z  Container boletinexpress-data-storage-1  Started
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:47:10.2463331Z  Container boletinexpress-data-gateway-1  Starting
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:47:12.0506570Z  Container boletinexpress-data-gateway-1  Started
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:48:29.0950933Z BEGIN
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:48:29.0962029Z CREATE SCHEMA
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:48:29.0964243Z REVOKE
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:48:29.0967930Z GRANT
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:48:29.0977944Z CREATE FUNCTION
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:48:29.0979639Z REVOKE
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:48:29.0981174Z GRANT
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:48:29.1009041Z CREATE TABLE
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:48:29.1013525Z CREATE INDEX
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:48:29.1015680Z ALTER TABLE
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:48:29.1019594Z REVOKE
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:48:29.1022496Z GRANT
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:48:29.1913640Z CREATE POLICY
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:48:29.2939690Z CREATE TABLE
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:48:29.2948451Z CREATE INDEX
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:48:29.2953502Z ALTER TABLE
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:48:29.2958466Z REVOKE
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:48:29.2959303Z GRANT
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:48:29.2963252Z CREATE POLICY
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:48:29.2967860Z CREATE FUNCTION
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:48:29.2968654Z REVOKE
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:48:29.2972636Z GRANT
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:48:29.2976994Z CREATE FUNCTION
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:48:29.2977783Z REVOKE
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:48:29.2981037Z GRANT
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:48:29.2984706Z CREATE FUNCTION
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:48:29.2988453Z REVOKE
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:48:29.2989137Z GRANT
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:48:29.2992631Z CREATE FUNCTION
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:48:29.2993308Z REVOKE
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:48:29.2996668Z GRANT
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:48:29.2997462Z CREATE FUNCTION
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:48:29.3000942Z REVOKE
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:48:29.3001558Z GRANT
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:48:29.3005182Z ERROR:  permission denied for table buckets
+check	Run node scripts/init-local-auth.mjs	2026-10-16T15:48:29.3079300Z ##[error]Process completed with exit code 3.

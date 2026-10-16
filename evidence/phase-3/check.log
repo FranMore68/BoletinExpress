@@ -97,7 +97,7 @@ tests/secrets.test.ts:28:40 lint/suspicious/noTemplateCurlyInString ━━━━
   i Turn the string into a template string.
   
 
-Checked 57 files in 24ms. No fixes applied.
+Checked 58 files in 22ms. No fixes applied.
 Found 2 warnings.
 Found 3 infos.
 
@@ -110,18 +110,18 @@ Generating route types...
 > boletinexpress@0.1.0 test
 > node --test tests/*.test.ts
 
-✔ las mutaciones requieren el origen propio y rechazan peticiones cruzadas (8.278375ms)
-✔ validación de credenciales, identificadores y tamaño del cuerpo (1.513584ms)
-✔ el permiso de recuperación se vincula a usuario y sesión (0.259625ms)
-✔ el acceso y almacenamiento tienen mensajes completos en ES y CA (0.09325ms)
-✔ las propuestas de ejemplo conservan cambios manuales, incluidos campos vaciados (0.654083ms)
-✔ el cierre de la demo es idempotente y bloquea cambios del ejemplo (0.105667ms)
-✔ la demo impide validar sin datos o con saldo simulado insuficiente (0.608458ms)
-✔ tres borradores activos y sus identificadores se mantienen coherentes al eliminar uno (0.125583ms)
-✔ cada mensaje dispone de ES y CA y conserva sus variables de interpolación (0.6385ms)
-✔ bloquea secretos y entornos privados antes de publicar (0.843208ms)
-✔ permite referencias a secretos pero no contraseñas incrustadas en URI (0.067875ms)
-✔ worker arranca sin credenciales, expone solo liveness y se detiene (54.217875ms)
+✔ las mutaciones requieren el origen propio y rechazan peticiones cruzadas (8.367208ms)
+✔ validación de credenciales, identificadores y tamaño del cuerpo (0.994791ms)
+✔ el permiso de recuperación se vincula a usuario y sesión (0.230041ms)
+✔ el acceso y almacenamiento tienen mensajes completos en ES y CA (0.087583ms)
+✔ las propuestas de ejemplo conservan cambios manuales, incluidos campos vaciados (0.653375ms)
+✔ el cierre de la demo es idempotente y bloquea cambios del ejemplo (0.109458ms)
+✔ la demo impide validar sin datos o con saldo simulado insuficiente (0.180417ms)
+✔ tres borradores activos y sus identificadores se mantienen coherentes al eliminar uno (0.101667ms)
+✔ cada mensaje dispone de ES y CA y conserva sus variables de interpolación (0.395667ms)
+✔ bloquea secretos y entornos privados antes de publicar (0.820417ms)
+✔ permite referencias a secretos pero no contraseñas incrustadas en URI (0.067458ms)
+✔ worker arranca sin credenciales, expone solo liveness y se detiene (52.183084ms)
 ℹ tests 12
 ℹ suites 0
 ℹ pass 12
@@ -129,9 +129,9 @@ Generating route types...
 ℹ cancelled 0
 ℹ skipped 0
 ℹ todo 0
-ℹ duration_ms 133.94375
+ℹ duration_ms 133.610541
 
 > boletinexpress@0.1.0 check:secrets
 > node scripts/check-secrets.mjs
 
-Sin patrones de secretos detectados en 493 archivos versionables.
+Sin patrones de secretos detectados en 506 archivos versionables.

@@ -458,6 +458,21 @@ pass(
   "cierre de sesión y acceso posterior bloqueado",
   "cookies retiradas y sesión revocada",
 );
+const limited = [];
+for (let i = 0; i < 6; i++)
+  limited.push(
+    (
+      await new BrowserSession().request("/api/auth/login", {
+        method: "POST",
+        body: { email: b.email, password: "incorrecta-ficticia" },
+      })
+    ).status,
+  );
+assert.ok(limited.includes(429));
+pass(
+  "intentos de acceso limitados en servidor",
+  "el sexto intento repetido queda limitado por cuota persistente",
+);
 await mkdir("evidence/phase-3", { recursive: true });
 await writeFile(
   "evidence/phase-3/isolation.json",

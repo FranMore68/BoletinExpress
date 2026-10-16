@@ -402,6 +402,7 @@ export function Experience() {
         )}
         {view === "landing" && (
           <LandingView
+            locale={locale}
             tr={tr}
             heading={heading}
             wheel={wheel}
