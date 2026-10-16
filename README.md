@@ -2,7 +2,7 @@
 
 Aplicación prevista para preparar BRIE y CIE ELEC-1 con revisión humana, interfaz ES/CA y datos ficticios durante la evaluación.
 
-**Estado actual: fases 0 y 1 aceptadas; fase 2 implementada y en verificación final.** Interfaz ES/CA y recorrido con datos ficticios disponibles en localhost. Autenticación, documentos de cuentas y servicios externos corresponden a las fases siguientes.
+**Estado actual: fases 0 y 1 aceptadas; fase 2 con comprobaciones superadas, pendiente de aceptación.** Interfaz ES/CA y recorrido con datos ficticios disponibles en localhost. Autenticación, documentos de cuentas y servicios externos corresponden a las fases siguientes.
 
 - [Interfaz ES/CA y pruebas de fase 2](docs/fase-2.md)
 - [Base técnica y pruebas de fase 1](docs/fase-1.md)

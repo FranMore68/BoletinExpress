@@ -1,6 +1,6 @@
 # Fase 2 · Interfaz ES/CA
 
-La interfaz permite recorrer la preparación de BRIE y CIE ELEC-1 con datos ficticios. Incluye entrada pública, presentación saltable, selección de modelo, edición, revisión de PDF de ejemplo, cierre simulado, documentos y recarga de KC simulada. Estado: pendiente de aceptación del usuario, tras completar las comprobaciones automáticas.
+La interfaz permite recorrer la preparación de BRIE y CIE ELEC-1 con datos ficticios. Incluye entrada pública, presentación saltable, selección de modelo, edición, revisión de PDF de ejemplo, cierre simulado, documentos y recarga de KC simulada. Estado: comprobaciones superadas; pendiente de aceptación del usuario.
 
 ## Alcance entregado
 
@@ -29,13 +29,15 @@ La vista previa y descarga contienen ejemplos fijos aprobados en fase 0. Los cam
 | Fuentes locales, panel fijo y pie accesible | Superada | `evidence/phase-2/ui-checks.json` |
 | PDF e imágenes servidos frente a originales de prueba | 6 recursos idénticos por bytes | `evidence/phase-2/demo-assets.json` |
 | Contenedor local y rutas de salud/privadas | Superada | `evidence/phase-2/docker-build.log`, `smoke.log` |
-| CI, 43 pruebas PDF y auditoría de imágenes | Pendiente de ejecución remota | Se registrará el resultado antes del cierre |
+| CI: 7 pruebas de aplicación + 43 PDF, construcción de ambas imágenes, auditorías y demo | Superada; 0 vulnerabilidades altas/críticas detectadas en imágenes | `evidence/phase-2/ci-run.json`, `ci.log` |
 | Revisión antes de publicar | APTO PARA COMMIT | `evidence/phase-2/pre-commit-review.md` |
 
 Se corrigieron el desbordamiento decorativo móvil, el orden del foco en la revisión y el confinamiento/retorno del foco de los diálogos. No hay fallos funcionales abiertos en el alcance probado. Los tamaños móviles son emulados; no se afirma una prueba en dispositivos físicos. El test local del worker necesitó ejecutarse fuera del aislamiento que impide abrir puertos; pasó al habilitar el puerto local de prueba.
 
 ## Reproducción
 
-Con Node 24, ejecutar `npm ci --ignore-scripts`, `npm run check` y `npm run build`. Para los contenedores, seguir `infra/README.md`. La demo local está en http://127.0.0.1:3000. Elegir «Probar con 10 KC», saltar la presentación, escoger BRIE o CIE, cargar el ejemplo completo y revisar el PDF. Validar muestra el coste simulado y permite descargar el ejemplo. Cambiar ES/CA desde la cabecera en cualquier pantalla.
+Con Node 24, ejecutar `npm ci --ignore-scripts`, `npm run check` y `npm run build`. Para los contenedores, seguir los comandos de `infra/README.md` y ejecutar también `node scripts/check-demo-assets.mjs`. Las etiquetas locales `phase1` contienen la versión de código que se acaba de construir; se conservan por compatibilidad con los comandos de base técnica. La demo local está en http://127.0.0.1:3000. Elegir «Probar con 10 KC», saltar la presentación, escoger BRIE o CIE, cargar el ejemplo completo y revisar el PDF. Validar muestra el coste simulado y permite descargar el ejemplo. Cambiar ES/CA desde la cabecera en cualquier pantalla.
 
 No se ha desplegado esta fase en el VPS. La prueba de recursos y convivencia con Control-Contracts-ATC sigue correspondiendo a la fase 10.
+
+La [ejecución de CI](https://github.com/FranMore68/BoletinExpress/actions/runs/38903385648) terminó correctamente sobre el commit `86e00d8502b6ae3f020bc9a1def1f88ecd3ddb4e`. Los commits posteriores de cierre contienen únicamente documentación y evidencias. Los 55 registros favorables de interfaz incluyen capturas repetidas y comprobaciones del recorrido; no equivalen a 55 pruebas unitarias distintas. La consola del contenedor no registró avisos ni errores durante la comprobación final (`browser-console.json`). El arranque por Compose quedó esperando en Docker Desktop; se completó con `docker start boletinexpress-evaluation-web-1` y ambos contenedores quedaron saludables (`containers.json`). En CI, Compose terminó normalmente.

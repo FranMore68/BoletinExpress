@@ -1,0 +1,12 @@
+{
+  "phase": 2,
+  "status": "PENDIENTE_ACEPTACION_USUARIO",
+  "technicalChecks": "PASS",
+  "codeCommit": "86e00d8502b6ae3f020bc9a1def1f88ecd3ddb4e",
+  "ci": "https://github.com/FranMore68/BoletinExpress/actions/runs/38903385648",
+  "automatedTests": 50,
+  "uiRecords": 55,
+  "openFailures": [],
+  "scope": "Interfaz ES/CA con datos ficticios en memoria y PDF de ejemplo fijo",
+  "nextPhase": "3. Acceso y aislamiento, solo tras aceptar el cierre"
+}

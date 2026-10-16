@@ -1,0 +1,647 @@
+check	Set up job	﻿2026-10-16T12:50:38.4915850Z Current runner version: '2.337.0'
+check	Set up job	2026-10-16T12:50:38.4982672Z ##[group]Runner Image Provisioner
+check	Set up job	2026-10-16T12:50:38.4983647Z Hosted Compute Agent
+check	Set up job	2026-10-16T12:50:38.4984281Z Version: 20261012.601
+check	Set up job	2026-10-16T12:50:38.4985044Z Commit: f3dc54e1fb89da6852db922499a0233137369e1d
+check	Set up job	2026-10-16T12:50:38.4985784Z Build Date: 2026-10-12T17:48:21Z
+check	Set up job	2026-10-16T12:50:38.4986509Z Worker ID: {dc09d06b-a3b0-4e23-8dad-e136ad16a19e}
+check	Set up job	2026-10-16T12:50:38.4987234Z Region: eastus
+check	Set up job	2026-10-16T12:50:38.4987771Z Cloud: Azure
+check	Set up job	2026-10-16T12:50:38.4988384Z ##[endgroup]
+check	Set up job	2026-10-16T12:50:38.4990155Z ##[group]Operating System
+check	Set up job	2026-10-16T12:50:38.4991134Z Ubuntu
+check	Set up job	2026-10-16T12:50:38.4991912Z 24.04.5
+check	Set up job	2026-10-16T12:50:38.4992469Z LTS
+check	Set up job	2026-10-16T12:50:38.4993455Z ##[endgroup]
+check	Set up job	2026-10-16T12:50:38.4994034Z ##[group]Runner Image
+check	Set up job	2026-10-16T12:50:38.4994629Z Image: ubuntu-24.04
+check	Set up job	2026-10-16T12:50:38.4995259Z Version: 20261012.334.1
+check	Set up job	2026-10-16T12:50:38.4996316Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261012.334/images/ubuntu/Ubuntu2404-Readme.md
+check	Set up job	2026-10-16T12:50:38.4998147Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261012.334
+check	Set up job	2026-10-16T12:50:38.4999086Z ##[endgroup]
+check	Set up job	2026-10-16T12:50:38.5000256Z ##[group]GITHUB_TOKEN Permissions
+check	Set up job	2026-10-16T12:50:38.5022703Z Contents: read
+check	Set up job	2026-10-16T12:50:38.5023346Z Metadata: read
+check	Set up job	2026-10-16T12:50:38.5024010Z ##[endgroup]
+check	Set up job	2026-10-16T12:50:38.5026226Z Secret source: Actions
+check	Set up job	2026-10-16T12:50:38.5027349Z Cache mode: write
+check	Set up job	2026-10-16T12:50:38.5028428Z Prepare workflow directory
+check	Set up job	2026-10-16T12:50:38.5613745Z Prepare all required actions
+check	Set up job	2026-10-16T12:50:38.5688930Z Getting action download info
+check	Set up job	2026-10-16T12:50:38.9425999Z Download action repository 'actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09' (SHA:fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09)
+check	Set up job	2026-10-16T12:50:39.0398928Z Download action repository 'actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444' (SHA:a0853c24544627f65ddf259abe73b1d18a591444)
+check	Set up job	2026-10-16T12:50:39.2414021Z Complete job name: check
+check	Run actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09	﻿2026-10-16T12:50:39.3241403Z ##[group]Run actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09
+check	Run actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09	2026-10-16T12:50:39.3242551Z with:
+check	Run actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09	2026-10-16T12:50:39.3243012Z   repository: FranMore68/BoletinExpress
+check	Run actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09	2026-10-16T12:50:39.3246742Z   token: ***
+check	Run actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09	2026-10-16T12:50:39.3247180Z   ssh-strict: true
+check	Run actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09	2026-10-16T12:50:39.3247608Z   ssh-user: git
+check	Run actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09	2026-10-16T12:50:39.3248044Z   persist-credentials: true
+check	Run actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09	2026-10-16T12:50:39.3248513Z   clean: true
+check	Run actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09	2026-10-16T12:50:39.3248948Z   sparse-checkout-cone-mode: true
+check	Run actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09	2026-10-16T12:50:39.3249458Z   fetch-depth: 1
+check	Run actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09	2026-10-16T12:50:39.3250144Z   fetch-tags: false
+check	Run actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09	2026-10-16T12:50:39.3250658Z   show-progress: true
+check	Run actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09	2026-10-16T12:50:39.3251248Z   lfs: false
+check	Run actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09	2026-10-16T12:50:39.3251661Z   submodules: false
+check	Run actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09	2026-10-16T12:50:39.3252109Z   set-safe-directory: true
+check	Run actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09	2026-10-16T12:50:39.3252618Z   allow-unsafe-pr-checkout: false
+check	Run actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09	2026-10-16T12:50:39.3253434Z env:
+check	Run actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09	2026-10-16T12:50:39.3253862Z   NEXT_TELEMETRY_DISABLED: 1
+check	Run actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09	2026-10-16T12:50:39.3254348Z ##[endgroup]
+check	Run actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09	2026-10-16T12:50:39.4547274Z Syncing repository: FranMore68/BoletinExpress
+check	Run actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09	2026-10-16T12:50:39.4552742Z ##[group]Getting Git version info
+check	Run actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09	2026-10-16T12:50:39.4558981Z Working directory is '/home/runner/work/BoletinExpress/BoletinExpress'
+check	Run actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09	2026-10-16T12:50:39.4585112Z [command]/usr/bin/git version
+check	Run actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09	2026-10-16T12:50:39.6003517Z git version 2.55.0
+check	Run actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09	2026-10-16T12:50:39.6044533Z ##[endgroup]
+check	Run actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09	2026-10-16T12:50:39.6052336Z Temporarily overriding HOME='/home/runner/work/_temp/b7e0bac5-13c5-4531-a00a-91f9d2bfb1db' before making global git config changes
+check	Run actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09	2026-10-16T12:50:39.6055552Z Adding repository directory to the temporary git global config as a safe directory
+check	Run actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09	2026-10-16T12:50:39.6058437Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/BoletinExpress/BoletinExpress
+check	Run actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09	2026-10-16T12:50:39.6084179Z Deleting the contents of '/home/runner/work/BoletinExpress/BoletinExpress'
+check	Run actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09	2026-10-16T12:50:39.6089725Z ##[group]Initializing the repository
+check	Run actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09	2026-10-16T12:50:39.6091258Z [command]/usr/bin/git init /home/runner/work/BoletinExpress/BoletinExpress
+check	Run actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09	2026-10-16T12:50:39.6093279Z hint: Using 'master' as the name for the initial branch. This default branch name
+check	Run actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09	2026-10-16T12:50:39.6094802Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+check	Run actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09	2026-10-16T12:50:39.6096298Z hint: to use in all of your new repositories, which will suppress this warning,
+check	Run actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09	2026-10-16T12:50:39.6097586Z hint: call:
+check	Run actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09	2026-10-16T12:50:39.6098272Z hint:
+check	Run actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09	2026-10-16T12:50:39.6099121Z hint: 	git config --global init.defaultBranch <name>
+check	Run actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09	2026-10-16T12:50:39.6100478Z hint:
+check	Run actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09	2026-10-16T12:50:39.6101938Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+check	Run actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09	2026-10-16T12:50:39.6103478Z hint: 'development'. The just-created branch can be renamed via this command:
+check	Run actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09	2026-10-16T12:50:39.6104669Z hint:
+check	Run actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09	2026-10-16T12:50:39.6105323Z hint: 	git branch -m <name>
+check	Run actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09	2026-10-16T12:50:39.6106074Z hint:
+check	Run actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09	2026-10-16T12:50:39.6107064Z hint: Disable this message with "git config set advice.defaultBranchName false"
+check	Run actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09	2026-10-16T12:50:39.6108796Z Initialized empty Git repository in /home/runner/work/BoletinExpress/BoletinExpress/.git/
+check	Run actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09	2026-10-16T12:50:39.6111924Z [command]/usr/bin/git remote add origin https://github.com/FranMore68/BoletinExpress
+check	Run actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09	2026-10-16T12:50:39.6115086Z ##[endgroup]
+check	Run actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09	2026-10-16T12:50:39.6116399Z ##[group]Disabling automatic garbage collection
+check	Run actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09	2026-10-16T12:50:39.6117456Z [command]/usr/bin/git config --local gc.auto 0
+check	Run actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09	2026-10-16T12:50:39.6119742Z ##[endgroup]
+check	Run actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09	2026-10-16T12:50:39.6121063Z ##[group]Setting up auth
+check	Run actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09	2026-10-16T12:50:39.6122220Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+check	Run actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09	2026-10-16T12:50:39.6125813Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+check	Run actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09	2026-10-16T12:50:39.6331903Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+check	Run actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09	2026-10-16T12:50:39.6349930Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+check	Run actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09	2026-10-16T12:50:39.6802660Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+check	Run actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09	2026-10-16T12:50:39.6806834Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+check	Run actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09	2026-10-16T12:50:39.6973579Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+check	Run actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09	2026-10-16T12:50:39.7018891Z ##[endgroup]
+check	Run actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09	2026-10-16T12:50:39.7021122Z ##[group]Fetching the repository
+check	Run actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09	2026-10-16T12:50:39.7031965Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +86e00d8502b6ae3f020bc9a1def1f88ecd3ddb4e:refs/remotes/origin/main
+check	Run actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09	2026-10-16T12:50:40.2686510Z From https://github.com/FranMore68/BoletinExpress
+check	Run actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09	2026-10-16T12:50:40.2712117Z  * [new ref]         86e00d8502b6ae3f020bc9a1def1f88ecd3ddb4e -> origin/main
+check	Run actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09	2026-10-16T12:50:40.2722210Z ##[endgroup]
+check	Run actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09	2026-10-16T12:50:40.2724032Z ##[group]Determining the checkout info
+check	Run actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09	2026-10-16T12:50:40.2725995Z ##[endgroup]
+check	Run actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09	2026-10-16T12:50:40.2727321Z [command]/usr/bin/git sparse-checkout disable
+check	Run actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09	2026-10-16T12:50:40.2808083Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+check	Run actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09	2026-10-16T12:50:40.2866336Z ##[group]Checking out the ref
+check	Run actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09	2026-10-16T12:50:40.2868441Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+check	Run actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09	2026-10-16T12:50:40.3657120Z Switched to a new branch 'main'
+check	Run actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09	2026-10-16T12:50:40.3661605Z branch 'main' set up to track 'origin/main'.
+check	Run actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09	2026-10-16T12:50:40.3683978Z ##[endgroup]
+check	Run actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09	2026-10-16T12:50:40.3728994Z [command]/usr/bin/git log -1 --format=%H
+check	Run actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09	2026-10-16T12:50:40.3759323Z 86e00d8502b6ae3f020bc9a1def1f88ecd3ddb4e
+check	Run actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444	﻿2026-10-16T12:50:40.4141655Z ##[group]Run actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444
+check	Run actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444	2026-10-16T12:50:40.4143398Z with:
+check	Run actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444	2026-10-16T12:50:40.4144622Z   node-version: 24.22.0
+check	Run actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444	2026-10-16T12:50:40.4145679Z   cache: npm
+check	Run actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444	2026-10-16T12:50:40.4215862Z   always-auth: false
+check	Run actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444	2026-10-16T12:50:40.4217844Z   check-latest: false
+check	Run actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444	2026-10-16T12:50:40.4232818Z   token: ***
+check	Run actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444	2026-10-16T12:50:40.4234220Z   package-manager-cache: true
+check	Run actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444	2026-10-16T12:50:40.4235339Z env:
+check	Run actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444	2026-10-16T12:50:40.4236231Z   NEXT_TELEMETRY_DISABLED: 1
+check	Run actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444	2026-10-16T12:50:40.4237290Z ##[endgroup]
+check	Run actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444	2026-10-16T12:50:40.6055271Z Attempting to download 24.22.0...
+check	Run actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444	2026-10-16T12:50:40.6084078Z (node:2070) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+check	Run actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444	2026-10-16T12:50:40.6086346Z (Use `node --trace-deprecation ...` to show where the warning was created)
+check	Run actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444	2026-10-16T12:50:41.3217025Z Acquiring 24.22.0 - x64 from https://github.com/actions/node-versions/releases/download/24.22.0-38668177966/node-24.22.0-linux-x64.tar.gz
+check	Run actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444	2026-10-16T12:50:41.9012346Z Extracting ...
+check	Run actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444	2026-10-16T12:50:41.9234095Z [command]/usr/bin/tar xz --strip 1 --warning=no-unknown-keyword --overwrite -C /home/runner/work/_temp/011ba812-aaf8-4d28-a19b-4ebe25fb1dc3 -f /home/runner/work/_temp/2d3f32fc-8243-41de-b825-2c7e1accd96a
+check	Run actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444	2026-10-16T12:50:43.3798323Z Adding to the cache ...
+check	Run actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444	2026-10-16T12:50:47.2974018Z ##[group]Environment details
+check	Run actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444	2026-10-16T12:50:47.5926333Z node: v24.22.0
+check	Run actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444	2026-10-16T12:50:47.5927354Z npm: 11.19.1
+check	Run actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444	2026-10-16T12:50:47.5927870Z yarn: 1.22.22
+check	Run actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444	2026-10-16T12:50:47.5928741Z ##[endgroup]
+check	Run actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444	2026-10-16T12:50:47.5961193Z [command]/opt/hostedtoolcache/node/24.22.0/x64/bin/npm config get cache
+check	Run actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444	2026-10-16T12:50:47.7028152Z /home/runner/.npm
+check	Run actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444	2026-10-16T12:50:47.7842131Z Cache hit for: node-cache-Linux-x64-npm-c25637272d91a18fd049532cc0a3b8c30c1aa3ae49b23da31f05b3cfa861c617
+check	Run actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444	2026-10-16T12:50:47.8023477Z (node:2070) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+check	Run actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444	2026-10-16T12:50:48.8482638Z Received 180355072 of 249657893 (72.2%), 171.5 MBs/sec
+check	Run actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444	2026-10-16T12:50:49.1242029Z Received 249657893 of 249657893 (100.0%), 186.0 MBs/sec
+check	Run actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444	2026-10-16T12:50:49.1243495Z Cache Size: ~238 MB (249657893 B)
+check	Run actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444	2026-10-16T12:50:49.1367420Z [command]/usr/bin/tar -xf /home/runner/work/_temp/0efcd425-dc7c-4985-af87-ada1de3946c7/cache.tzst -P -C /home/runner/work/BoletinExpress/BoletinExpress --use-compress-program unzstd
+check	Run actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444	2026-10-16T12:50:49.5488790Z Cache restored successfully
+check	Run actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444	2026-10-16T12:50:49.5612704Z Cache restored from key: node-cache-Linux-x64-npm-c25637272d91a18fd049532cc0a3b8c30c1aa3ae49b23da31f05b3cfa861c617
+check	Run npm ci --ignore-scripts	﻿2026-10-16T12:50:49.5841737Z ##[group]Run npm ci --ignore-scripts
+check	Run npm ci --ignore-scripts	2026-10-16T12:50:49.5842155Z ^[[36;1mnpm ci --ignore-scripts^[[0m
+check	Run npm ci --ignore-scripts	2026-10-16T12:50:49.6118992Z shell: /usr/bin/bash -e {0}
+check	Run npm ci --ignore-scripts	2026-10-16T12:50:49.6119339Z env:
+check	Run npm ci --ignore-scripts	2026-10-16T12:50:49.6119591Z   NEXT_TELEMETRY_DISABLED: 1
+check	Run npm ci --ignore-scripts	2026-10-16T12:50:49.6119860Z ##[endgroup]
+check	Run npm ci --ignore-scripts	2026-10-16T12:50:58.8477360Z 
+check	Run npm ci --ignore-scripts	2026-10-16T12:50:58.8508200Z added 56 packages, and audited 57 packages in 9s
+check	Run npm ci --ignore-scripts	2026-10-16T12:50:58.8509146Z 
+check	Run npm ci --ignore-scripts	2026-10-16T12:50:58.8509670Z 15 packages are looking for funding
+check	Run npm ci --ignore-scripts	2026-10-16T12:50:58.8510347Z   run `npm fund` for details
+check	Run npm ci --ignore-scripts	2026-10-16T12:50:58.8511131Z 
+check	Run npm ci --ignore-scripts	2026-10-16T12:50:58.8531522Z found 0 vulnerabilities
+check	Run npm audit --audit-level=high	﻿2026-10-16T12:50:58.9835264Z ##[group]Run npm audit --audit-level=high
+check	Run npm audit --audit-level=high	2026-10-16T12:50:58.9835895Z ^[[36;1mnpm audit --audit-level=high^[[0m
+check	Run npm audit --audit-level=high	2026-10-16T12:50:58.9932670Z shell: /usr/bin/bash -e {0}
+check	Run npm audit --audit-level=high	2026-10-16T12:50:58.9933113Z env:
+check	Run npm audit --audit-level=high	2026-10-16T12:50:58.9933502Z   NEXT_TELEMETRY_DISABLED: 1
+check	Run npm audit --audit-level=high	2026-10-16T12:50:58.9933909Z ##[endgroup]
+check	Run npm audit --audit-level=high	2026-10-16T12:50:59.6952386Z found 0 vulnerabilities
+check	Run npm run check	﻿2026-10-16T12:50:59.7113873Z ##[group]Run npm run check
+check	Run npm run check	2026-10-16T12:50:59.7114348Z ^[[36;1mnpm run check^[[0m
+check	Run npm run check	2026-10-16T12:50:59.7198677Z shell: /usr/bin/bash -e {0}
+check	Run npm run check	2026-10-16T12:50:59.7199100Z env:
+check	Run npm run check	2026-10-16T12:50:59.7199429Z   NEXT_TELEMETRY_DISABLED: 1
+check	Run npm run check	2026-10-16T12:50:59.7199828Z ##[endgroup]
+check	Run npm run check	2026-10-16T12:50:59.8700655Z 
+check	Run npm run check	2026-10-16T12:50:59.8721946Z > boletinexpress@0.1.0 check
+check	Run npm run check	2026-10-16T12:50:59.8742032Z > npm run lint && npm run typecheck && npm test && npm run check:secrets
+check	Run npm run check	2026-10-16T12:50:59.8743500Z 
+check	Run npm run check	2026-10-16T12:51:00.0261268Z 
+check	Run npm run check	2026-10-16T12:51:00.0281800Z > boletinexpress@0.1.0 lint
+check	Run npm run check	2026-10-16T12:51:00.0301710Z > biome check .
+check	Run npm run check	2026-10-16T12:51:00.0361186Z 
+check	Run npm run check	2026-10-16T12:51:00.3002218Z Checked 36 files in 168ms. No fixes applied.
+check	Run npm run check	2026-10-16T12:51:00.5601618Z 
+check	Run npm run check	2026-10-16T12:51:00.5622064Z > boletinexpress@0.1.0 typecheck
+check	Run npm run check	2026-10-16T12:51:00.5631606Z > next typegen && tsc --noEmit
+check	Run npm run check	2026-10-16T12:51:00.5641328Z 
+check	Run npm run check	2026-10-16T12:51:00.9655771Z Generating route types...
+check	Run npm run check	2026-10-16T12:51:00.9894952Z ✓ Types generated successfully
+check	Run npm run check	2026-10-16T12:51:01.7421491Z 
+check	Run npm run check	2026-10-16T12:51:01.7422632Z > boletinexpress@0.1.0 test
+check	Run npm run check	2026-10-16T12:51:01.7442703Z > node --test tests/*.test.ts
+check	Run npm run check	2026-10-16T12:51:01.7461278Z 
+check	Run npm run check	2026-10-16T12:51:01.9267373Z ✔ las propuestas de ejemplo conservan cambios manuales, incluidos campos vaciados (2.177678ms)
+check	Run npm run check	2026-10-16T12:51:01.9288928Z ✔ el cierre de la demo es idempotente y bloquea cambios del ejemplo (1.818485ms)
+check	Run npm run check	2026-10-16T12:51:01.9309811Z ✔ la demo impide validar sin datos o con saldo simulado insuficiente (0.690573ms)
+check	Run npm run check	2026-10-16T12:51:01.9332570Z ✔ tres borradores activos y sus identificadores se mantienen coherentes al eliminar uno (0.363601ms)
+check	Run npm run check	2026-10-16T12:51:01.9334273Z ✔ cada mensaje dispone de ES y CA y conserva sus variables de interpolación (1.619283ms)
+check	Run npm run check	2026-10-16T12:51:02.0559374Z ✔ bloquea secretos y entornos privados antes de publicar (2.484172ms)
+check	Run npm run check	2026-10-16T12:51:02.3567667Z ✔ worker arranca sin credenciales, expone solo liveness y se detiene (185.871351ms)
+check	Run npm run check	2026-10-16T12:51:02.3997164Z ℹ tests 7
+check	Run npm run check	2026-10-16T12:51:02.3998305Z ℹ suites 0
+check	Run npm run check	2026-10-16T12:51:02.3998958Z ℹ pass 7
+check	Run npm run check	2026-10-16T12:51:02.3999587Z ℹ fail 0
+check	Run npm run check	2026-10-16T12:51:02.4000164Z ℹ cancelled 0
+check	Run npm run check	2026-10-16T12:51:02.4001081Z ℹ skipped 0
+check	Run npm run check	2026-10-16T12:51:02.4001803Z ℹ todo 0
+check	Run npm run check	2026-10-16T12:51:02.4002457Z ℹ duration_ms 619.594606
+check	Run npm run check	2026-10-16T12:51:02.5144452Z 
+check	Run npm run check	2026-10-16T12:51:02.5145337Z > boletinexpress@0.1.0 check:secrets
+check	Run npm run check	2026-10-16T12:51:02.5146317Z > node scripts/check-secrets.mjs
+check	Run npm run check	2026-10-16T12:51:02.5146868Z 
+check	Run npm run check	2026-10-16T12:51:02.5898826Z Sin patrones de secretos detectados en 431 archivos versionables.
+check	Run npm run build	﻿2026-10-16T12:51:02.6104956Z ##[group]Run npm run build
+check	Run npm run build	2026-10-16T12:51:02.6105277Z ^[[36;1mnpm run build^[[0m
+check	Run npm run build	2026-10-16T12:51:02.6169514Z shell: /usr/bin/bash -e {0}
+check	Run npm run build	2026-10-16T12:51:02.6169801Z env:
+check	Run npm run build	2026-10-16T12:51:02.6170013Z   NEXT_TELEMETRY_DISABLED: 1
+check	Run npm run build	2026-10-16T12:51:02.6170258Z ##[endgroup]
+check	Run npm run build	2026-10-16T12:51:02.7314733Z 
+check	Run npm run build	2026-10-16T12:51:02.7315605Z > boletinexpress@0.1.0 build
+check	Run npm run build	2026-10-16T12:51:02.7316384Z > next build
+check	Run npm run build	2026-10-16T12:51:02.7316782Z 
+check	Run npm run build	2026-10-16T12:51:03.1984248Z ▲ Next.js 16.4.2 (Turbopack)
+check	Run npm run build	2026-10-16T12:51:03.2361448Z ✓ Running next.config.ts took 34ms
+check	Run npm run build	2026-10-16T12:51:03.2363542Z ⚠ No build cache found. Please configure build caching for faster rebuilds. Read more: https://nextjs.org/docs/messages/no-cache
+check	Run npm run build	2026-10-16T12:51:03.2501494Z 
+check	Run npm run build	2026-10-16T12:51:03.2849713Z   Creating an optimized production build ...
+check	Run npm run build	2026-10-16T12:51:10.1903936Z ✓ Compiled successfully in 6.9s
+check	Run npm run build	2026-10-16T12:51:10.1952084Z   Running TypeScript ...
+check	Run npm run build	2026-10-16T12:51:11.5342961Z   Finished TypeScript in 1339ms ...
+check	Run npm run build	2026-10-16T12:51:11.5353543Z   Collecting page data using 1 worker ...
+check	Run npm run build	2026-10-16T12:51:12.0030114Z   Generating static pages using 1 worker (0/5) ...
+check	Run npm run build	2026-10-16T12:51:12.0262692Z   Generating static pages using 1 worker (1/5) 
+check	Run npm run build	2026-10-16T12:51:12.1105054Z   Generating static pages using 1 worker (2/5) 
+check	Run npm run build	2026-10-16T12:51:12.1469083Z   Generating static pages using 1 worker (3/5) 
+check	Run npm run build	2026-10-16T12:51:12.1473190Z ✓ Generating static pages using 1 worker (5/5) in 144ms
+check	Run npm run build	2026-10-16T12:51:12.1509846Z   Finalizing page optimization ...
+check	Run npm run build	2026-10-16T12:51:12.4381606Z 
+check	Run npm run build	2026-10-16T12:51:12.4412754Z Route (app)
+check	Run npm run build	2026-10-16T12:51:12.4413439Z ┌ ○ /
+check	Run npm run build	2026-10-16T12:51:12.4413886Z ├ ○ /_not-found
+check	Run npm run build	2026-10-16T12:51:12.4414352Z ├ ƒ /api/health
+check	Run npm run build	2026-10-16T12:51:12.4414797Z └ ○ /icon.svg
+check	Run npm run build	2026-10-16T12:51:12.4415033Z 
+check	Run npm run build	2026-10-16T12:51:12.4415048Z 
+check	Run npm run build	2026-10-16T12:51:12.4415842Z ○  (Static)   prerendered as static content
+check	Run npm run build	2026-10-16T12:51:12.4416646Z ƒ  (Dynamic)  server-rendered on demand
+check	Run npm run build	2026-10-16T12:51:12.4417018Z 
+check	Run npm ci --ignore-scripts --prefix tools/pdf-phase0	﻿2026-10-16T12:51:12.4879909Z ##[group]Run npm ci --ignore-scripts --prefix tools/pdf-phase0
+check	Run npm ci --ignore-scripts --prefix tools/pdf-phase0	2026-10-16T12:51:12.4881375Z ^[[36;1mnpm ci --ignore-scripts --prefix tools/pdf-phase0^[[0m
+check	Run npm ci --ignore-scripts --prefix tools/pdf-phase0	2026-10-16T12:51:12.4972768Z shell: /usr/bin/bash -e {0}
+check	Run npm ci --ignore-scripts --prefix tools/pdf-phase0	2026-10-16T12:51:12.4973282Z env:
+check	Run npm ci --ignore-scripts --prefix tools/pdf-phase0	2026-10-16T12:51:12.4973656Z   NEXT_TELEMETRY_DISABLED: 1
+check	Run npm ci --ignore-scripts --prefix tools/pdf-phase0	2026-10-16T12:51:12.4974098Z ##[endgroup]
+check	Run npm ci --ignore-scripts --prefix tools/pdf-phase0	2026-10-16T12:51:14.5824355Z 
+check	Run npm ci --ignore-scripts --prefix tools/pdf-phase0	2026-10-16T12:51:14.5825469Z added 11 packages, and audited 12 packages in 2s
+check	Run npm ci --ignore-scripts --prefix tools/pdf-phase0	2026-10-16T12:51:14.5826509Z 
+check	Run npm ci --ignore-scripts --prefix tools/pdf-phase0	2026-10-16T12:51:14.5827149Z 3 packages are looking for funding
+check	Run npm ci --ignore-scripts --prefix tools/pdf-phase0	2026-10-16T12:51:14.5828002Z   run `npm fund` for details
+check	Run npm ci --ignore-scripts --prefix tools/pdf-phase0	2026-10-16T12:51:14.5838258Z 
+check	Run npm ci --ignore-scripts --prefix tools/pdf-phase0	2026-10-16T12:51:14.5838904Z found 0 vulnerabilities
+check	Run npm audit --audit-level=high --prefix tools/pdf-phase0	﻿2026-10-16T12:51:14.6102628Z ##[group]Run npm audit --audit-level=high --prefix tools/pdf-phase0
+check	Run npm audit --audit-level=high --prefix tools/pdf-phase0	2026-10-16T12:51:14.6103181Z ^[[36;1mnpm audit --audit-level=high --prefix tools/pdf-phase0^[[0m
+check	Run npm audit --audit-level=high --prefix tools/pdf-phase0	2026-10-16T12:51:14.6165758Z shell: /usr/bin/bash -e {0}
+check	Run npm audit --audit-level=high --prefix tools/pdf-phase0	2026-10-16T12:51:14.6166035Z env:
+check	Run npm audit --audit-level=high --prefix tools/pdf-phase0	2026-10-16T12:51:14.6166244Z   NEXT_TELEMETRY_DISABLED: 1
+check	Run npm audit --audit-level=high --prefix tools/pdf-phase0	2026-10-16T12:51:14.6166494Z ##[endgroup]
+check	Run npm audit --audit-level=high --prefix tools/pdf-phase0	2026-10-16T12:51:15.0572336Z found 0 vulnerabilities
+check	Run npm test --prefix tools/pdf-phase0	﻿2026-10-16T12:51:15.0706689Z ##[group]Run npm test --prefix tools/pdf-phase0
+check	Run npm test --prefix tools/pdf-phase0	2026-10-16T12:51:15.0707427Z ^[[36;1mnpm test --prefix tools/pdf-phase0^[[0m
+check	Run npm test --prefix tools/pdf-phase0	2026-10-16T12:51:15.0783569Z shell: /usr/bin/bash -e {0}
+check	Run npm test --prefix tools/pdf-phase0	2026-10-16T12:51:15.0783880Z env:
+check	Run npm test --prefix tools/pdf-phase0	2026-10-16T12:51:15.0784097Z   NEXT_TELEMETRY_DISABLED: 1
+check	Run npm test --prefix tools/pdf-phase0	2026-10-16T12:51:15.0784355Z ##[endgroup]
+check	Run npm test --prefix tools/pdf-phase0	2026-10-16T12:51:15.2040169Z 
+check	Run npm test --prefix tools/pdf-phase0	2026-10-16T12:51:15.2041403Z > boletinexpress-pdf-phase0@0.0.0 test
+check	Run npm test --prefix tools/pdf-phase0	2026-10-16T12:51:15.2042682Z > node --test test/*.test.mjs
+check	Run npm test --prefix tools/pdf-phase0	2026-10-16T12:51:15.2043423Z 
+check	Run npm test --prefix tools/pdf-phase0	2026-10-16T12:51:15.6096224Z ✔ la plantilla BRIE conserva su huella y sus dos páginas (64.442424ms)
+check	Run npm test --prefix tools/pdf-phase0	2026-10-16T12:51:15.6403524Z ✔ la plantilla CIE original sigue intacta y se identifica como XFA (31.037077ms)
+check	Run npm test --prefix tools/pdf-phase0	2026-10-16T12:51:15.9444847Z ✔ el BRIE completo conserva páginas, medidas y fuente incrustada (305.009636ms)
+check	Run npm test --prefix tools/pdf-phase0	2026-10-16T12:51:16.0266112Z ✔ las opciones No y el valor cero se trasladan sin desaparecer (81.558341ms)
+check	Run npm test --prefix tools/pdf-phase0	2026-10-16T12:51:16.0883620Z ✔ los datos ausentes dejan campos vacíos sin valores inventados (61.675601ms)
+check	Run npm test --prefix tools/pdf-phase0	2026-10-16T12:51:16.1550986Z ✔ el campo condicional de tensión del defecto 3 también admite datos explícitos (64.261927ms)
+check	Run npm test --prefix tools/pdf-phase0	2026-10-16T12:51:16.1572191Z ✔ rechaza una plantilla distinta antes de escribir datos (1.106723ms)
+check	Run npm test --prefix tools/pdf-phase0	2026-10-16T12:51:16.1782606Z ✔ rechaza el campo no definido campo_inventado (24.443318ms)
+check	Run npm test --prefix tools/pdf-phase0	2026-10-16T12:51:16.1978645Z ✔ rechaza el campo no definido toString (19.230244ms)
+check	Run npm test --prefix tools/pdf-phase0	2026-10-16T12:51:16.2184395Z ✔ rechaza el campo no definido constructor (20.973598ms)
+check	Run npm test --prefix tools/pdf-phase0	2026-10-16T12:51:16.2424715Z ✔ rechaza el campo no definido __proto__ (23.841569ms)
+check	Run npm test --prefix tools/pdf-phase0	2026-10-16T12:51:16.2593350Z ✔ rechaza texto excesivo y nunca lo recorta (16.93753ms)
+check	Run npm test --prefix tools/pdf-phase0	2026-10-16T12:51:16.2784801Z ✔ rechaza párrafos que superan el espacio disponible (18.882483ms)
+check	Run npm test --prefix tools/pdf-phase0	2026-10-16T12:51:16.3018470Z ✔ rechaza palabras indivisibles que no caben en el campo (23.467708ms)
+check	Run npm test --prefix tools/pdf-phase0	2026-10-16T12:51:16.3541943Z ✔ rechaza opciones, booleanos y tipos de texto incorrectos (52.165112ms)
+check	Run npm test --prefix tools/pdf-phase0	2026-10-16T12:51:16.4588162Z ✔ todas las marcas quedan en la página y en la opción seleccionada (103.976936ms)
+check	Run npm test --prefix tools/pdf-phase0	2026-10-16T12:51:16.5377416Z ✔ la generación no modifica los bytes de la plantilla (79.587155ms)
+check	Run npm test --prefix tools/pdf-phase0	2026-10-16T12:51:16.9818682Z ✔ la plantilla estática conserva su huella y los originales no se modifican (159.132596ms)
+check	Run npm test --prefix tools/pdf-phase0	2026-10-16T12:51:17.0317302Z ✔ el archivo de trabajo conserva la estructura XFA de la referencia oficial (49.210307ms)
+check	Run npm test --prefix tools/pdf-phase0	2026-10-16T12:51:17.0970061Z ✔ CIE conserva dos páginas A4, cero widgets, cero XFA y fuente incrustada (63.497676ms)
+check	Run npm test --prefix tools/pdf-phase0	2026-10-16T12:51:17.1419193Z ✔ escribe el dato elegido en ampliacio_50 sin activar otras ramas (46.045421ms)
+check	Run npm test --prefix tools/pdf-phase0	2026-10-16T12:51:17.1866396Z ✔ escribe el dato elegido en modificacio_50 sin activar otras ramas (45.905028ms)
+check	Run npm test --prefix tools/pdf-phase0	2026-10-16T12:51:17.2509754Z ✔ escribe el dato elegido en classe_p1 sin activar otras ramas (64.042336ms)
+check	Run npm test --prefix tools/pdf-phase0	2026-10-16T12:51:17.3286654Z ✔ escribe el dato elegido en classe_p2 sin activar otras ramas (77.298772ms)
+check	Run npm test --prefix tools/pdf-phase0	2026-10-16T12:51:17.3952983Z ✔ escribe el dato elegido en us_g sin activar otras ramas (66.296818ms)
+check	Run npm test --prefix tools/pdf-phase0	2026-10-16T12:51:17.4627721Z ✔ escribe el dato elegido en us_h sin activar otras ramas (67.043378ms)
+check	Run npm test --prefix tools/pdf-phase0	2026-10-16T12:51:17.5143505Z ✔ escribe el dato elegido en altres_usos sin activar otras ramas (52.229331ms)
+check	Run npm test --prefix tools/pdf-phase0	2026-10-16T12:51:17.5404682Z ✔ escribe el dato elegido en tensio_altra sin activar otras ramas (26.012927ms)
+check	Run npm test --prefix tools/pdf-phase0	2026-10-16T12:51:17.5921840Z ✔ escribe el dato elegido en auditori_ref sin activar otras ramas (51.424516ms)
+check	Run npm test --prefix tools/pdf-phase0	2026-10-16T12:51:17.6275683Z ✔ un borrador incompleto señala ausencias sin inventar respuestas (29.540492ms)
+check	Run npm test --prefix tools/pdf-phase0	2026-10-16T12:51:17.6352280Z ✔ las ramas incompatibles se rechazan antes de dibujar (1.374835ms)
+check	Run npm test --prefix tools/pdf-phase0	2026-10-16T12:51:19.4925267Z ✔ todos los valores oficiales de P1, P2, g y h se escriben sin abreviar ni recortar (1869.320998ms)
+check	Run npm test --prefix tools/pdf-phase0	2026-10-16T12:51:19.5324833Z ✔ rechaza exceso de anchura, de altura y palabras indivisibles (38.797147ms)
+check	Run npm test --prefix tools/pdf-phase0	2026-10-16T12:51:19.5332996Z ✔ identificadores, valores de opción y tipos incorrectos no se aceptan (1.208944ms)
+check	Run npm test --prefix tools/pdf-phase0	2026-10-16T12:51:19.5464060Z ✔ cero y No explícitos se conservan y no se inventan datos ausentes (12.955562ms)
+check	Run npm test --prefix tools/pdf-phase0	2026-10-16T12:51:19.5502843Z ✔ rechaza una versión distinta de la plantilla (0.485269ms)
+check	Run npm test --prefix tools/pdf-phase0	2026-10-16T12:51:19.6040092Z ✔ se pueden combinar ampliación, P1, uso g y otra tensión sin perder datos (57.165317ms)
+check	Run npm test --prefix tools/pdf-phase0	2026-10-16T12:51:19.6068358Z ✔ cada campo del inventario XFA está mapeado o excluido expresamente (3.285663ms)
+check	Run npm test --prefix tools/pdf-phase0	2026-10-16T12:51:20.5783488Z ✔ los catorce usos conservan la lista y se desplazan solo al insertar un supuesto P1/P2 (971.450644ms)
+check	Run npm test --prefix tools/pdf-phase0	2026-10-16T12:51:20.6266478Z ✔ la referencia Auditori tiene P1 bajo los botones y el detalle antes de los datos técnicos de página 2 (44.860497ms)
+check	Run npm test --prefix tools/pdf-phase0	2026-10-16T12:51:20.7814504Z ✔ las variantes g/h y otros usos trasladan todos los datos técnicos, incluida la marca Sí/No (154.456287ms)
+check	Run npm test --prefix tools/pdf-phase0	2026-10-16T12:51:20.8331855Z ✔ la pregunta del 50 % conserva posición y coloca Sí/No a la derecha (55.113573ms)
+check	Run npm test --prefix tools/pdf-phase0	2026-10-16T12:51:21.2053978Z ✔ todas las operaciones quedan en la página y no se solapan entre sí (371.303942ms)
+check	Run npm test --prefix tools/pdf-phase0	2026-10-16T12:51:21.2353768Z ℹ tests 43
+check	Run npm test --prefix tools/pdf-phase0	2026-10-16T12:51:21.2361517Z ℹ suites 0
+check	Run npm test --prefix tools/pdf-phase0	2026-10-16T12:51:21.2362450Z ℹ pass 43
+check	Run npm test --prefix tools/pdf-phase0	2026-10-16T12:51:21.2363022Z ℹ fail 0
+check	Run npm test --prefix tools/pdf-phase0	2026-10-16T12:51:21.2363565Z ℹ cancelled 0
+check	Run npm test --prefix tools/pdf-phase0	2026-10-16T12:51:21.2364172Z ℹ skipped 0
+check	Run npm test --prefix tools/pdf-phase0	2026-10-16T12:51:21.2364835Z ℹ todo 0
+check	Run npm test --prefix tools/pdf-phase0	2026-10-16T12:51:21.2365569Z ℹ duration_ms 5994.102454
+check	Run docker build --target web -t boletinexpress-web:phase1 .	﻿2026-10-16T12:51:21.2527348Z ##[group]Run docker build --target web -t boletinexpress-web:phase1 .
+check	Run docker build --target web -t boletinexpress-web:phase1 .	2026-10-16T12:51:21.2528308Z ^[[36;1mdocker build --target web -t boletinexpress-web:phase1 .^[[0m
+check	Run docker build --target web -t boletinexpress-web:phase1 .	2026-10-16T12:51:21.2593842Z shell: /usr/bin/bash -e {0}
+check	Run docker build --target web -t boletinexpress-web:phase1 .	2026-10-16T12:51:21.2594285Z env:
+check	Run docker build --target web -t boletinexpress-web:phase1 .	2026-10-16T12:51:21.2594623Z   NEXT_TELEMETRY_DISABLED: 1
+check	Run docker build --target web -t boletinexpress-web:phase1 .	2026-10-16T12:51:21.2595068Z ##[endgroup]
+check	Run docker build --target web -t boletinexpress-web:phase1 .	2026-10-16T12:51:21.8587088Z #0 building with "default" instance using docker driver
+check	Run docker build --target web -t boletinexpress-web:phase1 .	2026-10-16T12:51:21.8592646Z 
+check	Run docker build --target web -t boletinexpress-web:phase1 .	2026-10-16T12:51:21.8593563Z #1 [internal] load build definition from Dockerfile
+check	Run docker build --target web -t boletinexpress-web:phase1 .	2026-10-16T12:51:21.8594445Z #1 transferring dockerfile: 968B done
+check	Run docker build --target web -t boletinexpress-web:phase1 .	2026-10-16T12:51:21.8594906Z #1 DONE 0.0s
+check	Run docker build --target web -t boletinexpress-web:phase1 .	2026-10-16T12:51:21.8595099Z 
+check	Run docker build --target web -t boletinexpress-web:phase1 .	2026-10-16T12:51:21.8595504Z #2 [auth] library/node:pull token for registry-1.docker.io
+check	Run docker build --target web -t boletinexpress-web:phase1 .	2026-10-16T12:51:21.8596077Z #2 DONE 0.0s
+check	Run docker build --target web -t boletinexpress-web:phase1 .	2026-10-16T12:51:21.8596273Z 
+check	Run docker build --target web -t boletinexpress-web:phase1 .	2026-10-16T12:51:21.8597299Z #3 [internal] load metadata for docker.io/library/node:24-alpine@sha256:44fce696f38ba8c987c4db89954051000bbd05ffd8d8659ba15ed4a8602e937f
+check	Run docker build --target web -t boletinexpress-web:phase1 .	2026-10-16T12:51:22.0164083Z #3 DONE 0.3s
+check	Run docker build --target web -t boletinexpress-web:phase1 .	2026-10-16T12:51:22.1456926Z 
+check	Run docker build --target web -t boletinexpress-web:phase1 .	2026-10-16T12:51:22.1459923Z #4 [internal] load .dockerignore
+check	Run docker build --target web -t boletinexpress-web:phase1 .	2026-10-16T12:51:22.1461165Z #4 transferring context: 198B done
+check	Run docker build --target web -t boletinexpress-web:phase1 .	2026-10-16T12:51:22.1462181Z #4 DONE 0.0s
+check	Run docker build --target web -t boletinexpress-web:phase1 .	2026-10-16T12:51:22.1462777Z 
+check	Run docker build --target web -t boletinexpress-web:phase1 .	2026-10-16T12:51:22.1463249Z #5 [internal] load build context
+check	Run docker build --target web -t boletinexpress-web:phase1 .	2026-10-16T12:51:22.1464695Z #5 transferring context: 3.18MB 0.0s done
+check	Run docker build --target web -t boletinexpress-web:phase1 .	2026-10-16T12:51:22.1465806Z #5 DONE 0.1s
+check	Run docker build --target web -t boletinexpress-web:phase1 .	2026-10-16T12:51:22.1466216Z 
+check	Run docker build --target web -t boletinexpress-web:phase1 .	2026-10-16T12:51:22.1467469Z #6 [base 1/2] FROM docker.io/library/node:24-alpine@sha256:44fce696f38ba8c987c4db89954051000bbd05ffd8d8659ba15ed4a8602e937f
+check	Run docker build --target web -t boletinexpress-web:phase1 .	2026-10-16T12:51:22.1469762Z #6 resolve docker.io/library/node:24-alpine@sha256:44fce696f38ba8c987c4db89954051000bbd05ffd8d8659ba15ed4a8602e937f done
+check	Run docker build --target web -t boletinexpress-web:phase1 .	2026-10-16T12:51:22.1471965Z #6 sha256:c3fb422c2ba38fa35c8cca2a7872ca59ca302e4394e8edc96434c39b282b8608 15.73MB / 57.33MB 0.1s
+check	Run docker build --target web -t boletinexpress-web:phase1 .	2026-10-16T12:51:22.1474135Z #6 sha256:2af284e0bab394dd343f480c97a8438422f4a8f3aaae795457c6de5dfa89b3dd 1.26MB / 1.26MB 0.1s done
+check	Run docker build --target web -t boletinexpress-web:phase1 .	2026-10-16T12:51:22.1476314Z #6 sha256:862c5dc468d45e2429239f43ada1e4e4bba2fa8e215f39c3f2dcc558c65007b1 441B / 441B 0.0s done
+check	Run docker build --target web -t boletinexpress-web:phase1 .	2026-10-16T12:51:22.1478259Z #6 sha256:44fce696f38ba8c987c4db89954051000bbd05ffd8d8659ba15ed4a8602e937f 3.87kB / 3.87kB done
+check	Run docker build --target web -t boletinexpress-web:phase1 .	2026-10-16T12:51:22.1480481Z #6 sha256:429bdfbc204b4eabc6438e6d34e4e9d8dd2ca1df8289bcd78cdd3c5db387b7a5 1.72kB / 1.72kB done
+check	Run docker build --target web -t boletinexpress-web:phase1 .	2026-10-16T12:51:22.1482829Z #6 sha256:b842533ff06352670de854fcbd6939f01dd0f1a0fe4fd40d8e60a943626ee58b 6.68kB / 6.68kB done
+check	Run docker build --target web -t boletinexpress-web:phase1 .	2026-10-16T12:51:22.2462479Z #6 sha256:c3fb422c2ba38fa35c8cca2a7872ca59ca302e4394e8edc96434c39b282b8608 57.33MB / 57.33MB 0.2s
+check	Run docker build --target web -t boletinexpress-web:phase1 .	2026-10-16T12:51:22.3867166Z #6 sha256:c3fb422c2ba38fa35c8cca2a7872ca59ca302e4394e8edc96434c39b282b8608 57.33MB / 57.33MB 0.2s done
+check	Run docker build --target web -t boletinexpress-web:phase1 .	2026-10-16T12:51:22.3871496Z #6 extracting sha256:c3fb422c2ba38fa35c8cca2a7872ca59ca302e4394e8edc96434c39b282b8608 0.1s
+check	Run docker build --target web -t boletinexpress-web:phase1 .	2026-10-16T12:51:23.8708817Z #6 extracting sha256:c3fb422c2ba38fa35c8cca2a7872ca59ca302e4394e8edc96434c39b282b8608 1.6s done
+check	Run docker build --target web -t boletinexpress-web:phase1 .	2026-10-16T12:51:26.5346318Z #6 extracting sha256:2af284e0bab394dd343f480c97a8438422f4a8f3aaae795457c6de5dfa89b3dd
+check	Run docker build --target web -t boletinexpress-web:phase1 .	2026-10-16T12:51:26.6385942Z #6 extracting sha256:2af284e0bab394dd343f480c97a8438422f4a8f3aaae795457c6de5dfa89b3dd 0.1s done
+check	Run docker build --target web -t boletinexpress-web:phase1 .	2026-10-16T12:51:26.6387965Z #6 extracting sha256:862c5dc468d45e2429239f43ada1e4e4bba2fa8e215f39c3f2dcc558c65007b1 done
+check	Run docker build --target web -t boletinexpress-web:phase1 .	2026-10-16T12:51:26.6388929Z #6 DONE 4.6s
+check	Run docker build --target web -t boletinexpress-web:phase1 .	2026-10-16T12:51:26.8490771Z 
+check	Run docker build --target web -t boletinexpress-web:phase1 .	2026-10-16T12:51:26.8492065Z #7 [base 2/2] WORKDIR /app
+check	Run docker build --target web -t boletinexpress-web:phase1 .	2026-10-16T12:51:26.8492649Z #7 DONE 0.0s
+check	Run docker build --target web -t boletinexpress-web:phase1 .	2026-10-16T12:51:26.8493066Z 
+check	Run docker build --target web -t boletinexpress-web:phase1 .	2026-10-16T12:51:26.8493608Z #8 [dependencies 1/2] COPY package.json package-lock.json ./
+check	Run docker build --target web -t boletinexpress-web:phase1 .	2026-10-16T12:51:26.8494396Z #8 DONE 0.0s
+check	Run docker build --target web -t boletinexpress-web:phase1 .	2026-10-16T12:51:26.8494728Z 
+check	Run docker build --target web -t boletinexpress-web:phase1 .	2026-10-16T12:51:26.8495153Z #9 [dependencies 2/2] RUN npm ci --ignore-scripts
+check	Run docker build --target web -t boletinexpress-web:phase1 .	2026-10-16T12:51:27.3260250Z #9 ...
+check	Run docker build --target web -t boletinexpress-web:phase1 .	2026-10-16T12:51:27.3261039Z 
+check	Run docker build --target web -t boletinexpress-web:phase1 .	2026-10-16T12:51:27.3262099Z #10 [runtime 1/1] RUN rm -rf /usr/local/lib/node_modules/npm /usr/local/bin/npm /usr/local/bin/npx /opt/yarn* /usr/local/bin/yarn*
+check	Run docker build --target web -t boletinexpress-web:phase1 .	2026-10-16T12:51:27.3263530Z #10 DONE 0.7s
+check	Run docker build --target web -t boletinexpress-web:phase1 .	2026-10-16T12:51:27.4764704Z 
+check	Run docker build --target web -t boletinexpress-web:phase1 .	2026-10-16T12:51:27.4769267Z #9 [dependencies 2/2] RUN npm ci --ignore-scripts
+check	Run docker build --target web -t boletinexpress-web:phase1 .	2026-10-16T12:51:41.5503766Z #9 14.85 
+check	Run docker build --target web -t boletinexpress-web:phase1 .	2026-10-16T12:51:41.5505146Z #9 14.85 added 56 packages, and audited 57 packages in 14s
+check	Run docker build --target web -t boletinexpress-web:phase1 .	2026-10-16T12:51:41.7052529Z #9 14.85 
+check	Run docker build --target web -t boletinexpress-web:phase1 .	2026-10-16T12:51:41.7072243Z #9 14.85 15 packages are looking for funding
+check	Run docker build --target web -t boletinexpress-web:phase1 .	2026-10-16T12:51:41.7091951Z #9 14.85   run `npm fund` for details
+check	Run docker build --target web -t boletinexpress-web:phase1 .	2026-10-16T12:51:41.7101783Z #9 14.85 
+check	Run docker build --target web -t boletinexpress-web:phase1 .	2026-10-16T12:51:41.7111779Z #9 14.85 found 0 vulnerabilities
+check	Run docker build --target web -t boletinexpress-web:phase1 .	2026-10-16T12:51:41.7121968Z #9 14.86 npm notice
+check	Run docker build --target web -t boletinexpress-web:phase1 .	2026-10-16T12:51:41.7132732Z #9 14.86 npm notice New major version of npm available! 11.19.1 -> 12.2.0
+check	Run docker build --target web -t boletinexpress-web:phase1 .	2026-10-16T12:51:41.7142171Z #9 14.86 npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.0
+check	Run docker build --target web -t boletinexpress-web:phase1 .	2026-10-16T12:51:41.7152278Z #9 14.86 npm notice To update run: npm install -g npm@12.2.0
+check	Run docker build --target web -t boletinexpress-web:phase1 .	2026-10-16T12:51:41.7158024Z #9 14.86 npm notice
+check	Run docker build --target web -t boletinexpress-web:phase1 .	2026-10-16T12:51:43.5199922Z #9 DONE 16.8s
+check	Run docker build --target web -t boletinexpress-web:phase1 .	2026-10-16T12:51:43.7631616Z 
+check	Run docker build --target web -t boletinexpress-web:phase1 .	2026-10-16T12:51:43.7632792Z #11 [build 1/4] COPY next.config.ts tsconfig.json next-env.d.ts postcss.config.mjs ./
+check	Run docker build --target web -t boletinexpress-web:phase1 .	2026-10-16T12:51:43.7633619Z #11 DONE 0.1s
+check	Run docker build --target web -t boletinexpress-web:phase1 .	2026-10-16T12:51:43.7633837Z 
+check	Run docker build --target web -t boletinexpress-web:phase1 .	2026-10-16T12:51:43.7634214Z #12 [build 2/4] COPY src ./src
+check	Run docker build --target web -t boletinexpress-web:phase1 .	2026-10-16T12:51:43.7634746Z #12 DONE 0.0s
+check	Run docker build --target web -t boletinexpress-web:phase1 .	2026-10-16T12:51:43.7635045Z 
+check	Run docker build --target web -t boletinexpress-web:phase1 .	2026-10-16T12:51:43.7635843Z #13 [build 3/4] COPY public ./public
+check	Run docker build --target web -t boletinexpress-web:phase1 .	2026-10-16T12:51:43.7636421Z #13 DONE 0.0s
+check	Run docker build --target web -t boletinexpress-web:phase1 .	2026-10-16T12:51:43.7636731Z 
+check	Run docker build --target web -t boletinexpress-web:phase1 .	2026-10-16T12:51:43.7637414Z #14 [build 4/4] RUN npm run build
+check	Run docker build --target web -t boletinexpress-web:phase1 .	2026-10-16T12:51:43.9193902Z #14 0.307 
+check	Run docker build --target web -t boletinexpress-web:phase1 .	2026-10-16T12:51:43.9194943Z #14 0.307 > boletinexpress@0.1.0 build
+check	Run docker build --target web -t boletinexpress-web:phase1 .	2026-10-16T12:51:43.9196676Z #14 0.307 > next build
+check	Run docker build --target web -t boletinexpress-web:phase1 .	2026-10-16T12:51:43.9197452Z #14 0.307 
+check	Run docker build --target web -t boletinexpress-web:phase1 .	2026-10-16T12:51:44.5211256Z #14 0.910 ▲ Next.js 16.4.2 (Turbopack)
+check	Run docker build --target web -t boletinexpress-web:phase1 .	2026-10-16T12:51:44.6399938Z #14 0.961 ✓ Running next.config.ts took 49ms
+check	Run docker build --target web -t boletinexpress-web:phase1 .	2026-10-16T12:51:44.6404561Z #14 0.982 
+check	Run docker build --target web -t boletinexpress-web:phase1 .	2026-10-16T12:51:44.6405488Z #14 1.028   Creating an optimized production build ...
+check	Run docker build --target web -t boletinexpress-web:phase1 .	2026-10-16T12:51:51.8729104Z #14 8.261 ✓ Compiled successfully in 7.2s
+check	Run docker build --target web -t boletinexpress-web:phase1 .	2026-10-16T12:51:52.0268466Z #14 8.265   Running TypeScript ...
+check	Run docker build --target web -t boletinexpress-web:phase1 .	2026-10-16T12:51:53.1933872Z #14 9.582   Finished TypeScript in 1316ms ...
+check	Run docker build --target web -t boletinexpress-web:phase1 .	2026-10-16T12:51:53.3507600Z #14 9.589   Collecting page data using 1 worker ...
+check	Run docker build --target web -t boletinexpress-web:phase1 .	2026-10-16T12:51:53.8971536Z #14 10.28   Generating static pages using 1 worker (0/5) ...
+check	Run docker build --target web -t boletinexpress-web:phase1 .	2026-10-16T12:51:54.0407006Z #14 10.31   Generating static pages using 1 worker (1/5) 
+check	Run docker build --target web -t boletinexpress-web:phase1 .	2026-10-16T12:51:54.0408139Z #14 10.43   Generating static pages using 1 worker (2/5) 
+check	Run docker build --target web -t boletinexpress-web:phase1 .	2026-10-16T12:51:54.2544829Z #14 10.48   Generating static pages using 1 worker (3/5) 
+check	Run docker build --target web -t boletinexpress-web:phase1 .	2026-10-16T12:51:54.2546946Z #14 10.49 ✓ Generating static pages using 1 worker (5/5) in 202ms
+check	Run docker build --target web -t boletinexpress-web:phase1 .	2026-10-16T12:51:54.2548080Z #14 10.49   Finalizing page optimization ...
+check	Run docker build --target web -t boletinexpress-web:phase1 .	2026-10-16T12:51:54.3845321Z #14 10.77 
+check	Run docker build --target web -t boletinexpress-web:phase1 .	2026-10-16T12:51:54.4899588Z #14 10.78 Route (app)
+check	Run docker build --target web -t boletinexpress-web:phase1 .	2026-10-16T12:51:54.4900614Z #14 10.78 ┌ ○ /
+check	Run docker build --target web -t boletinexpress-web:phase1 .	2026-10-16T12:51:54.4901699Z #14 10.78 ├ ○ /_not-found
+check	Run docker build --target web -t boletinexpress-web:phase1 .	2026-10-16T12:51:54.4902501Z #14 10.78 ├ ƒ /api/health
+check	Run docker build --target web -t boletinexpress-web:phase1 .	2026-10-16T12:51:54.4903282Z #14 10.78 └ ○ /icon.svg
+check	Run docker build --target web -t boletinexpress-web:phase1 .	2026-10-16T12:51:54.4903801Z #14 10.78 
+check	Run docker build --target web -t boletinexpress-web:phase1 .	2026-10-16T12:51:54.4904285Z #14 10.78 
+check	Run docker build --target web -t boletinexpress-web:phase1 .	2026-10-16T12:51:54.4905092Z #14 10.78 ○  (Static)   prerendered as static content
+check	Run docker build --target web -t boletinexpress-web:phase1 .	2026-10-16T12:51:54.4906088Z #14 10.78 ƒ  (Dynamic)  server-rendered on demand
+check	Run docker build --target web -t boletinexpress-web:phase1 .	2026-10-16T12:51:54.4906769Z #14 10.78 
+check	Run docker build --target web -t boletinexpress-web:phase1 .	2026-10-16T12:51:54.4907358Z #14 DONE 10.9s
+check	Run docker build --target web -t boletinexpress-web:phase1 .	2026-10-16T12:51:54.7133353Z 
+check	Run docker build --target web -t boletinexpress-web:phase1 .	2026-10-16T12:51:54.7242277Z #15 [web 1/3] COPY --from=build --chown=node:node /app/.next/standalone ./
+check	Run docker build --target web -t boletinexpress-web:phase1 .	2026-10-16T12:51:55.0187621Z #15 DONE 0.3s
+check	Run docker build --target web -t boletinexpress-web:phase1 .	2026-10-16T12:51:55.2381337Z 
+check	Run docker build --target web -t boletinexpress-web:phase1 .	2026-10-16T12:51:55.2382705Z #16 [web 2/3] COPY --from=build --chown=node:node /app/.next/static ./.next/static
+check	Run docker build --target web -t boletinexpress-web:phase1 .	2026-10-16T12:51:55.2384136Z #16 DONE 0.1s
+check	Run docker build --target web -t boletinexpress-web:phase1 .	2026-10-16T12:51:55.2384728Z 
+check	Run docker build --target web -t boletinexpress-web:phase1 .	2026-10-16T12:51:55.2385829Z #17 [web 3/3] COPY --from=build --chown=node:node /app/public ./public
+check	Run docker build --target web -t boletinexpress-web:phase1 .	2026-10-16T12:51:55.2386802Z #17 DONE 0.0s
+check	Run docker build --target web -t boletinexpress-web:phase1 .	2026-10-16T12:51:55.2387617Z 
+check	Run docker build --target web -t boletinexpress-web:phase1 .	2026-10-16T12:51:55.2388166Z #18 exporting to image
+check	Run docker build --target web -t boletinexpress-web:phase1 .	2026-10-16T12:51:55.2389203Z #18 exporting layers
+check	Run docker build --target web -t boletinexpress-web:phase1 .	2026-10-16T12:51:56.0138346Z #18 exporting layers 0.9s done
+check	Run docker build --target web -t boletinexpress-web:phase1 .	2026-10-16T12:51:56.0341530Z #18 writing image sha256:3cb3cc56ddf60194440a3e3f58103833a81b64bab5f12519fe3ce393af4156d1 done
+check	Run docker build --target web -t boletinexpress-web:phase1 .	2026-10-16T12:51:56.0342693Z #18 naming to docker.io/library/boletinexpress-web:phase1 done
+check	Run docker build --target web -t boletinexpress-web:phase1 .	2026-10-16T12:51:56.0343376Z #18 DONE 0.9s
+check	Run docker build --target worker -t boletinexpress-worker:phase1 .	﻿2026-10-16T12:51:56.0461898Z ##[group]Run docker build --target worker -t boletinexpress-worker:phase1 .
+check	Run docker build --target worker -t boletinexpress-worker:phase1 .	2026-10-16T12:51:56.0462924Z ^[[36;1mdocker build --target worker -t boletinexpress-worker:phase1 .^[[0m
+check	Run docker build --target worker -t boletinexpress-worker:phase1 .	2026-10-16T12:51:56.0555861Z shell: /usr/bin/bash -e {0}
+check	Run docker build --target worker -t boletinexpress-worker:phase1 .	2026-10-16T12:51:56.0556329Z env:
+check	Run docker build --target worker -t boletinexpress-worker:phase1 .	2026-10-16T12:51:56.0556685Z   NEXT_TELEMETRY_DISABLED: 1
+check	Run docker build --target worker -t boletinexpress-worker:phase1 .	2026-10-16T12:51:56.0557124Z ##[endgroup]
+check	Run docker build --target worker -t boletinexpress-worker:phase1 .	2026-10-16T12:51:56.3829703Z #0 building with "default" instance using docker driver
+check	Run docker build --target worker -t boletinexpress-worker:phase1 .	2026-10-16T12:51:56.3830363Z 
+check	Run docker build --target worker -t boletinexpress-worker:phase1 .	2026-10-16T12:51:56.3831049Z #1 [internal] load build definition from Dockerfile
+check	Run docker build --target worker -t boletinexpress-worker:phase1 .	2026-10-16T12:51:56.3831761Z #1 transferring dockerfile: 968B done
+check	Run docker build --target worker -t boletinexpress-worker:phase1 .	2026-10-16T12:51:56.3832324Z #1 DONE 0.0s
+check	Run docker build --target worker -t boletinexpress-worker:phase1 .	2026-10-16T12:51:56.3832593Z 
+check	Run docker build --target worker -t boletinexpress-worker:phase1 .	2026-10-16T12:51:56.3833524Z #2 [internal] load metadata for docker.io/library/node:24-alpine@sha256:44fce696f38ba8c987c4db89954051000bbd05ffd8d8659ba15ed4a8602e937f
+check	Run docker build --target worker -t boletinexpress-worker:phase1 .	2026-10-16T12:51:56.3834233Z #2 DONE 0.0s
+check	Run docker build --target worker -t boletinexpress-worker:phase1 .	2026-10-16T12:51:56.3834368Z 
+check	Run docker build --target worker -t boletinexpress-worker:phase1 .	2026-10-16T12:51:56.3834736Z #3 [internal] load .dockerignore
+check	Run docker build --target worker -t boletinexpress-worker:phase1 .	2026-10-16T12:51:56.3835904Z #3 transferring context: 198B done
+check	Run docker build --target worker -t boletinexpress-worker:phase1 .	2026-10-16T12:51:56.3836462Z #3 DONE 0.0s
+check	Run docker build --target worker -t boletinexpress-worker:phase1 .	2026-10-16T12:51:56.3836723Z 
+check	Run docker build --target worker -t boletinexpress-worker:phase1 .	2026-10-16T12:51:56.3837601Z #4 [base 1/2] FROM docker.io/library/node:24-alpine@sha256:44fce696f38ba8c987c4db89954051000bbd05ffd8d8659ba15ed4a8602e937f
+check	Run docker build --target worker -t boletinexpress-worker:phase1 .	2026-10-16T12:51:56.3838193Z #4 DONE 0.0s
+check	Run docker build --target worker -t boletinexpress-worker:phase1 .	2026-10-16T12:51:56.3838319Z 
+check	Run docker build --target worker -t boletinexpress-worker:phase1 .	2026-10-16T12:51:56.3838630Z #5 [base 2/2] WORKDIR /app
+check	Run docker build --target worker -t boletinexpress-worker:phase1 .	2026-10-16T12:51:56.3839157Z #5 CACHED
+check	Run docker build --target worker -t boletinexpress-worker:phase1 .	2026-10-16T12:51:56.3839401Z 
+check	Run docker build --target worker -t boletinexpress-worker:phase1 .	2026-10-16T12:51:56.3840221Z #6 [runtime 1/1] RUN rm -rf /usr/local/lib/node_modules/npm /usr/local/bin/npm /usr/local/bin/npx /opt/yarn* /usr/local/bin/yarn*
+check	Run docker build --target worker -t boletinexpress-worker:phase1 .	2026-10-16T12:51:56.3841042Z #6 CACHED
+check	Run docker build --target worker -t boletinexpress-worker:phase1 .	2026-10-16T12:51:56.3841159Z 
+check	Run docker build --target worker -t boletinexpress-worker:phase1 .	2026-10-16T12:51:56.3841310Z #7 [internal] load build context
+check	Run docker build --target worker -t boletinexpress-worker:phase1 .	2026-10-16T12:51:56.3841859Z #7 transferring context: 996B done
+check	Run docker build --target worker -t boletinexpress-worker:phase1 .	2026-10-16T12:51:56.3842248Z #7 DONE 0.0s
+check	Run docker build --target worker -t boletinexpress-worker:phase1 .	2026-10-16T12:51:56.3842469Z 
+check	Run docker build --target worker -t boletinexpress-worker:phase1 .	2026-10-16T12:51:56.3843271Z #8 [worker 1/1] COPY --chown=node:node worker ./worker
+check	Run docker build --target worker -t boletinexpress-worker:phase1 .	2026-10-16T12:51:56.3843629Z #8 DONE 0.0s
+check	Run docker build --target worker -t boletinexpress-worker:phase1 .	2026-10-16T12:51:56.3843762Z 
+check	Run docker build --target worker -t boletinexpress-worker:phase1 .	2026-10-16T12:51:56.3843876Z #9 exporting to image
+check	Run docker build --target worker -t boletinexpress-worker:phase1 .	2026-10-16T12:51:56.3844116Z #9 exporting layers
+check	Run docker build --target worker -t boletinexpress-worker:phase1 .	2026-10-16T12:51:57.0038164Z #9 exporting layers 0.8s done
+check	Run docker build --target worker -t boletinexpress-worker:phase1 .	2026-10-16T12:51:57.0209667Z #9 writing image sha256:489f392eb53bea9b24cab804e4878108c08b425dab28e48de635c31a2fc87daf done
+check	Run docker build --target worker -t boletinexpress-worker:phase1 .	2026-10-16T12:51:57.0211185Z #9 naming to docker.io/library/boletinexpress-worker:phase1 done
+check	Run docker build --target worker -t boletinexpress-worker:phase1 .	2026-10-16T12:51:57.0214036Z #9 DONE 0.8s
+check	Run sh scripts/scan-images.sh	﻿2026-10-16T12:51:57.0302575Z ##[group]Run sh scripts/scan-images.sh
+check	Run sh scripts/scan-images.sh	2026-10-16T12:51:57.0302931Z ^[[36;1msh scripts/scan-images.sh^[[0m
+check	Run sh scripts/scan-images.sh	2026-10-16T12:51:57.0370535Z shell: /usr/bin/bash -e {0}
+check	Run sh scripts/scan-images.sh	2026-10-16T12:51:57.0371180Z env:
+check	Run sh scripts/scan-images.sh	2026-10-16T12:51:57.0371402Z   NEXT_TELEMETRY_DISABLED: 1
+check	Run sh scripts/scan-images.sh	2026-10-16T12:51:57.0371649Z ##[endgroup]
+check	Run sh scripts/scan-images.sh	2026-10-16T12:51:57.2154102Z docker.io/aquasec/trivy@sha256:2416d1f74045b57274df1a340eee6b510cacd73c66a6ccb8da092b117eb7d222: Pulling from aquasec/trivy
+check	Run sh scripts/scan-images.sh	2026-10-16T12:51:57.3006828Z e2de96513ba9: Already exists
+check	Run sh scripts/scan-images.sh	2026-10-16T12:51:57.3017738Z 404cb589430b: Pulling fs layer
+check	Run sh scripts/scan-images.sh	2026-10-16T12:51:57.3018959Z 2f5cf6d3a5d1: Pulling fs layer
+check	Run sh scripts/scan-images.sh	2026-10-16T12:51:57.3019688Z 28e25cc2c5e5: Pulling fs layer
+check	Run sh scripts/scan-images.sh	2026-10-16T12:51:57.3416671Z 28e25cc2c5e5: Verifying Checksum
+check	Run sh scripts/scan-images.sh	2026-10-16T12:51:57.3419047Z 28e25cc2c5e5: Download complete
+check	Run sh scripts/scan-images.sh	2026-10-16T12:51:57.3681434Z 404cb589430b: Verifying Checksum
+check	Run sh scripts/scan-images.sh	2026-10-16T12:51:57.3682190Z 404cb589430b: Download complete
+check	Run sh scripts/scan-images.sh	2026-10-16T12:51:57.5750682Z 2f5cf6d3a5d1: Verifying Checksum
+check	Run sh scripts/scan-images.sh	2026-10-16T12:51:57.5753363Z 2f5cf6d3a5d1: Download complete
+check	Run sh scripts/scan-images.sh	2026-10-16T12:51:57.7301845Z 404cb589430b: Pull complete
+check	Run sh scripts/scan-images.sh	2026-10-16T12:51:58.8760128Z 2f5cf6d3a5d1: Pull complete
+check	Run sh scripts/scan-images.sh	2026-10-16T12:51:59.2244324Z 28e25cc2c5e5: Pull complete
+check	Run sh scripts/scan-images.sh	2026-10-16T12:51:59.2280472Z Digest: sha256:2416d1f74045b57274df1a340eee6b510cacd73c66a6ccb8da092b117eb7d222
+check	Run sh scripts/scan-images.sh	2026-10-16T12:51:59.2287098Z Status: Downloaded newer image for aquasec/trivy@sha256:2416d1f74045b57274df1a340eee6b510cacd73c66a6ccb8da092b117eb7d222
+check	Run sh scripts/scan-images.sh	2026-10-16T12:51:59.2298541Z docker.io/aquasec/trivy@sha256:2416d1f74045b57274df1a340eee6b510cacd73c66a6ccb8da092b117eb7d222
+check	Run sh scripts/scan-images.sh	2026-10-16T12:52:10.5346217Z 2026-10-16T12:51:59Z	INFO	[vulndb] Need to update DB
+check	Run sh scripts/scan-images.sh	2026-10-16T12:52:10.5347325Z 2026-10-16T12:51:59Z	INFO	[vulndb] Downloading vulnerability DB...
+check	Run sh scripts/scan-images.sh	2026-10-16T12:52:10.5348507Z 2026-10-16T12:51:59Z	INFO	[vulndb] Downloading artifact...	repo="mirror.gcr.io/aquasec/trivy-db:2"
+check	Run sh scripts/scan-images.sh	2026-10-16T12:52:10.5367938Z 50.30 MiB / 128.03 MiB [----------------------->____________________________________] 39.29% ? p/s ?101.70 MiB / 128.03 MiB [---------------------------------------------->____________] 79.44% ? p/s ?128.03 MiB / 128.03 MiB [--------------------------------------------------------->] 100.00% ? p/s ?128.03 MiB / 128.03 MiB [------------------------------------------->] 100.00% 129.67 MiB p/s ETA 0s128.03 MiB / 128.03 MiB [------------------------------------------->] 100.00% 129.67 MiB p/s ETA 0s128.03 MiB / 128.03 MiB [------------------------------------------->] 100.00% 129.67 MiB p/s ETA 0s128.03 MiB / 128.03 MiB [------------------------------------------->] 100.00% 121.30 MiB p/s ETA 0s128.03 MiB / 128.03 MiB [------------------------------------------->] 100.00% 121.30 MiB p/s ETA 0s128.03 MiB / 128.03 MiB [------------------------------------------->] 100.00% 121.30 MiB p/s ETA 0s128.03 MiB / 128.03 MiB [------------------------------------------->] 100.00% 113.47 MiB p/s ETA 0s128.03 MiB / 128.03 MiB [------------------------------------------->] 100.00% 113.47 MiB p/s ETA 0s128.03 MiB / 128.03 MiB [------------------------------------------->] 100.00% 113.47 MiB p/s ETA 0s128.03 MiB / 128.03 MiB [------------------------------------------->] 100.00% 106.15 MiB p/s ETA 0s128.03 MiB / 128.03 MiB [------------------------------------------->] 100.00% 106.15 MiB p/s ETA 0s128.03 MiB / 128.03 MiB [------------------------------------------->] 100.00% 106.15 MiB p/s ETA 0s128.03 MiB / 128.03 MiB [-------------------------------------------->] 100.00% 99.31 MiB p/s ETA 0s128.03 MiB / 128.03 MiB [-------------------------------------------->] 100.00% 99.31 MiB p/s ETA 0s128.03 MiB / 128.03 MiB [-------------------------------------------->] 100.00% 99.31 MiB p/s ETA 0s128.03 MiB / 128.03 MiB [-------------------------------------------->] 100.00% 92.90 MiB p/s ETA 0s128.03 MiB / 128.03 MiB [-------------------------------------------->] 100.00% 92.90 MiB p/s ETA 0s128.03 MiB / 128.03 MiB [-------------------------------------------->] 100.00% 92.90 MiB p/s ETA 0s128.03 MiB / 128.03 MiB [-------------------------------------------->] 100.00% 86.90 MiB p/s ETA 0s128.03 MiB / 128.03 MiB [-------------------------------------------->] 100.00% 86.90 MiB p/s ETA 0s128.03 MiB / 128.03 MiB [-------------------------------------------->] 100.00% 86.90 MiB p/s ETA 0s128.03 MiB / 128.03 MiB [-------------------------------------------->] 100.00% 81.30 MiB p/s ETA 0s128.03 MiB / 128.03 MiB [-------------------------------------------->] 100.00% 81.30 MiB p/s ETA 0s128.03 MiB / 128.03 MiB [-----------------------------------------------] 100.00% 25.22 MiB p/s 5.3s2026-10-16T12:52:05Z	INFO	[vulndb] Artifact successfully downloaded	repo="mirror.gcr.io/aquasec/trivy-db:2"
+check	Run sh scripts/scan-images.sh	2026-10-16T12:52:15.8268770Z 2026-10-16T12:52:15Z	INFO	[vuln] Vulnerability scanning is enabled
+check	Run sh scripts/scan-images.sh	2026-10-16T12:52:15.8269962Z 2026-10-16T12:52:15Z	INFO	Detected OS	family="alpine" version="3.24.2"
+check	Run sh scripts/scan-images.sh	2026-10-16T12:52:15.8286040Z 2026-10-16T12:52:15Z	INFO	[alpine] Detecting vulnerabilities...	os_version="3.24" repository="3.24" pkg_num=19
+check	Run sh scripts/scan-images.sh	2026-10-16T12:52:15.8301911Z 2026-10-16T12:52:15Z	INFO	Number of language-specific files	num=1
+check	Run sh scripts/scan-images.sh	2026-10-16T12:52:15.8312108Z 2026-10-16T12:52:15Z	INFO	[node-pkg] Detecting vulnerabilities...
+check	Run sh scripts/scan-images.sh	2026-10-16T12:52:15.8314287Z 2026-10-16T12:52:15Z	WARN	Using severities from other vendors for some vulnerabilities. Read https://trivy.dev/docs/v0.76/guide/scanner/vulnerability#severity-selection for details.
+check	Run sh scripts/scan-images.sh	2026-10-16T12:52:19.2947523Z 2026-10-16T12:52:19Z	INFO	[vuln] Vulnerability scanning is enabled
+check	Run sh scripts/scan-images.sh	2026-10-16T12:52:19.2948632Z 2026-10-16T12:52:19Z	INFO	Detected OS	family="alpine" version="3.24.2"
+check	Run sh scripts/scan-images.sh	2026-10-16T12:52:19.2949958Z 2026-10-16T12:52:19Z	INFO	[alpine] Detecting vulnerabilities...	os_version="3.24" repository="3.24" pkg_num=19
+check	Run sh scripts/scan-images.sh	2026-10-16T12:52:19.2951402Z 2026-10-16T12:52:19Z	INFO	Number of language-specific files	num=1
+check	Run sh scripts/scan-images.sh	2026-10-16T12:52:19.2952296Z 2026-10-16T12:52:19Z	INFO	[node-pkg] Detecting vulnerabilities...
+check	Run sh scripts/scan-images.sh	2026-10-16T12:52:19.2954120Z 2026-10-16T12:52:19Z	WARN	Using severities from other vendors for some vulnerabilities. Read https://trivy.dev/docs/v0.76/guide/scanner/vulnerability#severity-selection for details.
+check	Run docker compose up --detach --wait	﻿2026-10-16T12:52:19.4150311Z ##[group]Run docker compose up --detach --wait
+check	Run docker compose up --detach --wait	2026-10-16T12:52:19.4150713Z ^[[36;1mdocker compose up --detach --wait^[[0m
+check	Run docker compose up --detach --wait	2026-10-16T12:52:19.4224085Z shell: /usr/bin/bash -e {0}
+check	Run docker compose up --detach --wait	2026-10-16T12:52:19.4224370Z env:
+check	Run docker compose up --detach --wait	2026-10-16T12:52:19.4224586Z   NEXT_TELEMETRY_DISABLED: 1
+check	Run docker compose up --detach --wait	2026-10-16T12:52:19.4224841Z ##[endgroup]
+check	Run docker compose up --detach --wait	2026-10-16T12:52:19.7182839Z  Network boletinexpress-evaluation  Creating
+check	Run docker compose up --detach --wait	2026-10-16T12:52:19.7672057Z  Network boletinexpress-evaluation  Created
+check	Run docker compose up --detach --wait	2026-10-16T12:52:19.7682212Z  Container boletinexpress-evaluation-web-1  Creating
+check	Run docker compose up --detach --wait	2026-10-16T12:52:19.7688500Z  Container boletinexpress-evaluation-worker-1  Creating
+check	Run docker compose up --detach --wait	2026-10-16T12:52:19.8014405Z  Container boletinexpress-evaluation-worker-1  Created
+check	Run docker compose up --detach --wait	2026-10-16T12:52:19.8015739Z  Container boletinexpress-evaluation-web-1  Created
+check	Run docker compose up --detach --wait	2026-10-16T12:52:19.8028871Z  Container boletinexpress-evaluation-worker-1  Starting
+check	Run docker compose up --detach --wait	2026-10-16T12:52:19.8030045Z  Container boletinexpress-evaluation-web-1  Starting
+check	Run docker compose up --detach --wait	2026-10-16T12:52:20.0460004Z  Container boletinexpress-evaluation-web-1  Started
+check	Run docker compose up --detach --wait	2026-10-16T12:52:20.0789375Z  Container boletinexpress-evaluation-worker-1  Started
+check	Run docker compose up --detach --wait	2026-10-16T12:52:20.0802378Z  Container boletinexpress-evaluation-web-1  Waiting
+check	Run docker compose up --detach --wait	2026-10-16T12:52:20.0803825Z  Container boletinexpress-evaluation-worker-1  Waiting
+check	Run docker compose up --detach --wait	2026-10-16T12:52:25.5812803Z  Container boletinexpress-evaluation-web-1  Healthy
+check	Run docker compose up --detach --wait	2026-10-16T12:52:26.0808703Z  Container boletinexpress-evaluation-worker-1  Healthy
+check	Run node scripts/smoke.mjs	﻿2026-10-16T12:52:26.0895025Z ##[group]Run node scripts/smoke.mjs
+check	Run node scripts/smoke.mjs	2026-10-16T12:52:26.0895588Z ^[[36;1mnode scripts/smoke.mjs^[[0m
+check	Run node scripts/smoke.mjs	2026-10-16T12:52:26.0966858Z shell: /usr/bin/bash -e {0}
+check	Run node scripts/smoke.mjs	2026-10-16T12:52:26.0967153Z env:
+check	Run node scripts/smoke.mjs	2026-10-16T12:52:26.0967367Z   NEXT_TELEMETRY_DISABLED: 1
+check	Run node scripts/smoke.mjs	2026-10-16T12:52:26.0967610Z ##[endgroup]
+check	Run node scripts/smoke.mjs	2026-10-16T12:52:26.3316636Z {
+check	Run node scripts/smoke.mjs	2026-10-16T12:52:26.3328039Z   "pass": true,
+check	Run node scripts/smoke.mjs	2026-10-16T12:52:26.3341429Z   "checks": [
+check	Run node scripts/smoke.mjs	2026-10-16T12:52:26.3381447Z     "pagina y cabeceras",
+check	Run node scripts/smoke.mjs	2026-10-16T12:52:26.3382142Z     "liveness sin datos internos",
+check	Run node scripts/smoke.mjs	2026-10-16T12:52:26.3383322Z     "liveness no permite escrituras",
+check	Run node scripts/smoke.mjs	2026-10-16T12:52:26.3384072Z     "rutas privadas y fuentes no publicadas"
+check	Run node scripts/smoke.mjs	2026-10-16T12:52:26.3384783Z   ]
+check	Run node scripts/smoke.mjs	2026-10-16T12:52:26.3385230Z }
+check	Run node scripts/check-demo-assets.mjs	﻿2026-10-16T12:52:26.3512974Z ##[group]Run node scripts/check-demo-assets.mjs
+check	Run node scripts/check-demo-assets.mjs	2026-10-16T12:52:26.3513648Z ^[[36;1mnode scripts/check-demo-assets.mjs^[[0m
+check	Run node scripts/check-demo-assets.mjs	2026-10-16T12:52:26.3607257Z shell: /usr/bin/bash -e {0}
+check	Run node scripts/check-demo-assets.mjs	2026-10-16T12:52:26.3607744Z env:
+check	Run node scripts/check-demo-assets.mjs	2026-10-16T12:52:26.3608116Z   NEXT_TELEMETRY_DISABLED: 1
+check	Run node scripts/check-demo-assets.mjs	2026-10-16T12:52:26.3608520Z ##[endgroup]
+check	Run node scripts/check-demo-assets.mjs	2026-10-16T12:52:26.5411558Z {
+check	Run node scripts/check-demo-assets.mjs	2026-10-16T12:52:26.5442283Z   "pass": true,
+check	Run node scripts/check-demo-assets.mjs	2026-10-16T12:52:26.5443955Z   "fixedFictitiousAssetsOnly": true,
+check	Run node scripts/check-demo-assets.mjs	2026-10-16T12:52:26.5445175Z   "results": [
+check	Run node scripts/check-demo-assets.mjs	2026-10-16T12:52:26.5446769Z     {
+check	Run node scripts/check-demo-assets.mjs	2026-10-16T12:52:26.5512182Z       "file": "BRIE-ejemplo.pdf",
+check	Run node scripts/check-demo-assets.mjs	2026-10-16T12:52:26.5518801Z       "bytes": 259611,
+check	Run node scripts/check-demo-assets.mjs	2026-10-16T12:52:26.5542167Z       "sha256": "de7272f5de3c4f994cdc10dec144f177ce82f87d82c5fdd3f387b1394f15fbe6",
+check	Run node scripts/check-demo-assets.mjs	2026-10-16T12:52:26.5561714Z       "pass": true
+check	Run node scripts/check-demo-assets.mjs	2026-10-16T12:52:26.5581700Z     },
+check	Run node scripts/check-demo-assets.mjs	2026-10-16T12:52:26.5582462Z     {
+check	Run node scripts/check-demo-assets.mjs	2026-10-16T12:52:26.5601647Z       "file": "CIE-ejemplo.pdf",
+check	Run node scripts/check-demo-assets.mjs	2026-10-16T12:52:26.5621660Z       "bytes": 812573,
+check	Run node scripts/check-demo-assets.mjs	2026-10-16T12:52:26.5641851Z       "sha256": "225400629a464062729551a7e699b596050757fb504099a790ee2cba9aa5a2e0",
+check	Run node scripts/check-demo-assets.mjs	2026-10-16T12:52:26.5642892Z       "pass": true
+check	Run node scripts/check-demo-assets.mjs	2026-10-16T12:52:26.5661587Z     },
+check	Run node scripts/check-demo-assets.mjs	2026-10-16T12:52:26.5681519Z     {
+check	Run node scripts/check-demo-assets.mjs	2026-10-16T12:52:26.5691502Z       "file": "BRIE-1.png",
+check	Run node scripts/check-demo-assets.mjs	2026-10-16T12:52:26.5711245Z       "bytes": 266365,
+check	Run node scripts/check-demo-assets.mjs	2026-10-16T12:52:26.5722287Z       "sha256": "6bcff90aa278cbd4015bfd1cb7fb5954af53a462fbba73fccd0812bdf3a5db47",
+check	Run node scripts/check-demo-assets.mjs	2026-10-16T12:52:26.5731438Z       "pass": true
+check	Run node scripts/check-demo-assets.mjs	2026-10-16T12:52:26.5762479Z     },
+check	Run node scripts/check-demo-assets.mjs	2026-10-16T12:52:26.5762958Z     {
+check	Run node scripts/check-demo-assets.mjs	2026-10-16T12:52:26.5771263Z       "file": "BRIE-2.png",
+check	Run node scripts/check-demo-assets.mjs	2026-10-16T12:52:26.5771928Z       "bytes": 192175,
+check	Run node scripts/check-demo-assets.mjs	2026-10-16T12:52:26.5772893Z       "sha256": "cf93056107d177e0533c4e3e3d47288834f76dd2a31f1589eb6b1f37484e117a",
+check	Run node scripts/check-demo-assets.mjs	2026-10-16T12:52:26.5773857Z       "pass": true
+check	Run node scripts/check-demo-assets.mjs	2026-10-16T12:52:26.5774428Z     },
+check	Run node scripts/check-demo-assets.mjs	2026-10-16T12:52:26.5774941Z     {
+check	Run node scripts/check-demo-assets.mjs	2026-10-16T12:52:26.5775487Z       "file": "CIE-1.png",
+check	Run node scripts/check-demo-assets.mjs	2026-10-16T12:52:26.5776105Z       "bytes": 178646,
+check	Run node scripts/check-demo-assets.mjs	2026-10-16T12:52:26.5777020Z       "sha256": "276c783bb8d887405c0d93e85dad801da8de669aa9daa332766ba8d488972b63",
+check	Run node scripts/check-demo-assets.mjs	2026-10-16T12:52:26.5777990Z       "pass": true
+check	Run node scripts/check-demo-assets.mjs	2026-10-16T12:52:26.5778539Z     },
+check	Run node scripts/check-demo-assets.mjs	2026-10-16T12:52:26.5779047Z     {
+check	Run node scripts/check-demo-assets.mjs	2026-10-16T12:52:26.5780029Z       "file": "CIE-2.png",
+check	Run node scripts/check-demo-assets.mjs	2026-10-16T12:52:26.5780639Z       "bytes": 194177,
+check	Run node scripts/check-demo-assets.mjs	2026-10-16T12:52:26.5781895Z       "sha256": "63ee119a3bd207dade8068cb2b915b1b2b395c59deac22b43dab5ce0a428c5d9",
+check	Run node scripts/check-demo-assets.mjs	2026-10-16T12:52:26.5783027Z       "pass": true
+check	Run node scripts/check-demo-assets.mjs	2026-10-16T12:52:26.5783889Z     }
+check	Run node scripts/check-demo-assets.mjs	2026-10-16T12:52:26.5784365Z   ]
+check	Run node scripts/check-demo-assets.mjs	2026-10-16T12:52:26.5784822Z }
+check	Run docker compose down	﻿2026-10-16T12:52:26.5918642Z ##[group]Run docker compose down
+check	Run docker compose down	2026-10-16T12:52:26.5919144Z ^[[36;1mdocker compose down^[[0m
+check	Run docker compose down	2026-10-16T12:52:26.6027591Z shell: /usr/bin/bash -e {0}
+check	Run docker compose down	2026-10-16T12:52:26.6028059Z env:
+check	Run docker compose down	2026-10-16T12:52:26.6028384Z   NEXT_TELEMETRY_DISABLED: 1
+check	Run docker compose down	2026-10-16T12:52:26.6028781Z ##[endgroup]
+check	Run docker compose down	2026-10-16T12:52:26.6878611Z  Container boletinexpress-evaluation-web-1  Stopping
+check	Run docker compose down	2026-10-16T12:52:26.6879938Z  Container boletinexpress-evaluation-worker-1  Stopping
+check	Run docker compose down	2026-10-16T12:52:26.8304507Z  Container boletinexpress-evaluation-worker-1  Stopped
+check	Run docker compose down	2026-10-16T12:52:26.8340262Z  Container boletinexpress-evaluation-worker-1  Removing
+check	Run docker compose down	2026-10-16T12:52:26.8639882Z  Container boletinexpress-evaluation-worker-1  Removed
+check	Run docker compose down	2026-10-16T12:52:26.8641940Z  Container boletinexpress-evaluation-web-1  Stopped
+check	Run docker compose down	2026-10-16T12:52:26.8643124Z  Container boletinexpress-evaluation-web-1  Removing
+check	Run docker compose down	2026-10-16T12:52:26.8826141Z  Container boletinexpress-evaluation-web-1  Removed
+check	Run docker compose down	2026-10-16T12:52:26.8840389Z  Network boletinexpress-evaluation  Removing
+check	Run docker compose down	2026-10-16T12:52:26.9662450Z  Network boletinexpress-evaluation  Removed
+check	Post Run actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444	﻿2026-10-16T12:52:26.9805926Z Post job cleanup.
+check	Post Run actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444	2026-10-16T12:52:27.1212642Z (node:3802) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+check	Post Run actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444	2026-10-16T12:52:27.1214490Z (Use `node --trace-deprecation ...` to show where the warning was created)
+check	Post Run actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444	2026-10-16T12:52:27.1217661Z Cache hit occurred on the primary key node-cache-Linux-x64-npm-c25637272d91a18fd049532cc0a3b8c30c1aa3ae49b23da31f05b3cfa861c617, not saving cache.
+check	Post Run actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09	﻿2026-10-16T12:52:27.1387402Z Post job cleanup.
+check	Post Run actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09	2026-10-16T12:52:27.2831879Z [command]/usr/bin/git version
+check	Post Run actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09	2026-10-16T12:52:27.2946191Z git version 2.55.0
+check	Post Run actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09	2026-10-16T12:52:27.3102478Z Temporarily overriding HOME='/home/runner/work/_temp/ef5dbf70-3b81-4d21-b106-da8727f5e80a' before making global git config changes
+check	Post Run actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09	2026-10-16T12:52:27.3116679Z Adding repository directory to the temporary git global config as a safe directory
+check	Post Run actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09	2026-10-16T12:52:27.3152727Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/BoletinExpress/BoletinExpress
+check	Post Run actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09	2026-10-16T12:52:27.3242024Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+check	Post Run actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09	2026-10-16T12:52:27.3383093Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+check	Post Run actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09	2026-10-16T12:52:27.3935180Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+check	Post Run actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09	2026-10-16T12:52:27.4033726Z http.https://github.com/.extraheader
+check	Post Run actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09	2026-10-16T12:52:27.4071902Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+check	Post Run actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09	2026-10-16T12:52:27.4174678Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+check	Post Run actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09	2026-10-16T12:52:27.4555544Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+check	Post Run actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09	2026-10-16T12:52:27.4620085Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+check	Complete job	﻿2026-10-16T12:52:27.5250547Z Cleaning up orphan processes
