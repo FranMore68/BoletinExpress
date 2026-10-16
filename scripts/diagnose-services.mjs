@@ -29,6 +29,26 @@ for (const service of ["postgres", "auth", "storage"]) {
     output += `No se pudieron consultar los registros de ${service}.\n`;
   }
 }
+try {
+  output += execFileSync(
+    "docker",
+    [
+      "compose",
+      "-f",
+      "compose.yaml",
+      "-f",
+      "compose.auth.yaml",
+      "logs",
+      "--no-color",
+      "--tail",
+      "25",
+      "web",
+    ],
+    { encoding: "utf8", timeout: 10000, stdio: ["ignore", "pipe", "pipe"] },
+  );
+} catch {
+  output += "No se pudieron consultar los registros de web.\n";
+}
 for (const secret of secrets) output = output.replaceAll(secret, "[REDACTED]");
 output = output.replace(
   /postgres(?:ql)?:\/\/[^\s:]+:[^\s@]+@/g,

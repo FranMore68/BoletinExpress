@@ -58,7 +58,14 @@ class BrowserSession {
   }
 }
 async function json(res, status) {
-  assert.equal(res.status, status);
+  if (res.status !== status) {
+    const body = await res.json().catch(() => ({}));
+    assert.equal(
+      res.status,
+      status,
+      `${new URL(res.url).pathname}: ${body.error || "respuesta inesperada"}`,
+    );
+  }
   return res.json();
 }
 const mailbox = process.env.AUTH_TEST_MAILBOX || "http://127.0.0.1:54324";

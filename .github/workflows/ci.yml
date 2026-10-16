@@ -42,8 +42,10 @@ jobs:
       - run: docker compose -f compose.yaml -f compose.auth.yaml up --detach --wait
       - run: node scripts/smoke.mjs
       - run: node scripts/check-demo-assets.mjs
-      - run: node scripts/test-isolation.mjs
-      - run: |
+      - id: isolation
+        run: node scripts/test-isolation.mjs
+      - if: success() || steps.isolation.outcome == 'failure'
+        run: |
           docker tag boletinexpress-gateway:phase3 boletinexpress-gateway:phase1
           docker tag boletinexpress-templates:phase3 boletinexpress-templates:phase1
           docker tag boletinexpress-postgres:phase3 boletinexpress-postgres:phase1

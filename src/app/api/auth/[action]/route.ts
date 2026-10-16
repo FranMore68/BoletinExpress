@@ -9,6 +9,7 @@ import {
   recoveryProof,
   sameProof,
   stringValue,
+  validEmailHash,
 } from "@/modules/auth/security";
 import { api, requireUser, throttle } from "@/modules/auth/server";
 export const dynamic = "force-dynamic";
@@ -85,10 +86,7 @@ export async function POST(
     if (action === "confirm") {
       const hash = stringValue(body, "token_hash", 128);
       const type = stringValue(body, "type", 16);
-      if (
-        !/^[a-f0-9]{32,128}$/i.test(hash) ||
-        !["email", "recovery"].includes(type)
-      )
+      if (!validEmailHash(hash) || !["email", "recovery"].includes(type))
         throw new AccessError(400, "link");
       await throttle(ctx, "confirm", hash);
       const result = await ctx.client.auth.verifyOtp({

@@ -10,6 +10,7 @@ import {
   recoveryProof,
   sameProof,
   uuid,
+  validEmailHash,
 } from "../src/modules/auth/security.ts";
 
 test("las mutaciones requieren el origen propio y rechazan peticiones cruzadas", () => {
@@ -76,4 +77,12 @@ test("el acceso y almacenamiento tienen mensajes completos en ES y CA", () => {
     assert.equal(pair.length, 2);
     for (const value of pair) assert.ok(value.trim());
   }
+});
+
+test("admite el hash PKCE oficial sin aceptar formatos arbitrarios", () => {
+  const hash = "a".repeat(64);
+  assert.ok(validEmailHash(hash));
+  assert.ok(validEmailHash(`pkce_${hash}`));
+  for (const bad of ["", "pkce_abc", `otro_${hash}`, `${hash} <script>`])
+    assert.equal(validEmailHash(bad), false);
 });

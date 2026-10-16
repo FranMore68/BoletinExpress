@@ -1,0 +1,28 @@
+check	Run node scripts/test-isolation.mjs	﻿2026-10-16T15:54:52.6230899Z ##[group]Run node scripts/test-isolation.mjs
+check	Run node scripts/test-isolation.mjs	2026-10-16T15:54:52.6231524Z ^[[36;1mnode scripts/test-isolation.mjs^[[0m
+check	Run node scripts/test-isolation.mjs	2026-10-16T15:54:52.6381409Z shell: /usr/bin/bash -e {0}
+check	Run node scripts/test-isolation.mjs	2026-10-16T15:54:52.6381876Z env:
+check	Run node scripts/test-isolation.mjs	2026-10-16T15:54:52.6382438Z   NEXT_TELEMETRY_DISABLED: 1
+check	Run node scripts/test-isolation.mjs	2026-10-16T15:54:52.6382895Z ##[endgroup]
+check	Run node scripts/test-isolation.mjs	2026-10-16T15:54:52.9328743Z PASS rutas privadas y cuenta sin sesión bloqueadas
+check	Run node scripts/test-isolation.mjs	2026-10-16T15:55:02.1910683Z node:internal/modules/run_main:107
+check	Run node scripts/test-isolation.mjs	2026-10-16T15:55:02.1911549Z     triggerUncaughtException(
+check	Run node scripts/test-isolation.mjs	2026-10-16T15:55:02.1912082Z     ^
+check	Run node scripts/test-isolation.mjs	2026-10-16T15:55:02.1912746Z 
+check	Run node scripts/test-isolation.mjs	2026-10-16T15:55:02.1913386Z AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+check	Run node scripts/test-isolation.mjs	2026-10-16T15:55:02.1914059Z 
+check	Run node scripts/test-isolation.mjs	2026-10-16T15:55:02.1914339Z 400 !== 200
+check	Run node scripts/test-isolation.mjs	2026-10-16T15:55:02.1914671Z 
+check	Run node scripts/test-isolation.mjs	2026-10-16T15:55:02.1915414Z     at json (file:///home/runner/work/BoletinExpress/BoletinExpress/scripts/test-isolation.mjs:61:10)
+check	Run node scripts/test-isolation.mjs	2026-10-16T15:55:02.1917912Z     at file:///home/runner/work/BoletinExpress/BoletinExpress/scripts/test-isolation.mjs:130:9
+check	Run node scripts/test-isolation.mjs	2026-10-16T15:55:02.1919431Z     at process.processTicksAndRejections (node:internal/process/task_queues:104:5) {
+check	Run node scripts/test-isolation.mjs	2026-10-16T15:55:02.1920300Z   generatedMessage: true,
+check	Run node scripts/test-isolation.mjs	2026-10-16T15:55:02.1920778Z   code: 'ERR_ASSERTION',
+check	Run node scripts/test-isolation.mjs	2026-10-16T15:55:02.1921678Z   actual: 400,
+check	Run node scripts/test-isolation.mjs	2026-10-16T15:55:02.1922082Z   expected: 200,
+check	Run node scripts/test-isolation.mjs	2026-10-16T15:55:02.1922800Z   operator: 'strictEqual',
+check	Run node scripts/test-isolation.mjs	2026-10-16T15:55:02.1923266Z   diff: 'simple'
+check	Run node scripts/test-isolation.mjs	2026-10-16T15:55:02.1923659Z }
+check	Run node scripts/test-isolation.mjs	2026-10-16T15:55:02.1923909Z 
+check	Run node scripts/test-isolation.mjs	2026-10-16T15:55:02.1924134Z Node.js v24.22.0
+check	Run node scripts/test-isolation.mjs	2026-10-16T15:55:02.1990459Z ##[error]Process completed with exit code 1.

@@ -98,3 +98,7 @@ export function sameProof(a: string, b: string) {
   const y = Buffer.from(b);
   return x.length === y.length && timingSafeEqual(x, y);
 }
+
+export function validEmailHash(value: string) {
+  return /^(?:pkce_)?[a-f0-9]{32,128}$/i.test(value);
+}
