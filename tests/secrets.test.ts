@@ -17,3 +17,16 @@ test("bloquea secretos y entornos privados antes de publicar", () => {
   );
   assert.deepEqual(findings("src/config.ts", "const mode = 'evaluation';"), []);
 });
+
+test("permite referencias a secretos pero no contraseñas incrustadas en URI", () => {
+  const prefix = "postgres://user:";
+  assert.deepEqual(
+    findings("compose.yaml", prefix + "${POSTGRES_PASSWORD}@db/postgres"),
+    [],
+  );
+  assert.ok(
+    findings("compose.yaml", prefix + "${POSTGRES_PASSWORD}extra@db/postgres")
+      .length,
+  );
+  assert.ok(findings("compose.yaml", prefix + "literal@db/postgres").length);
+});

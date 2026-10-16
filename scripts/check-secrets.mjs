@@ -11,7 +11,7 @@ export function findings(file, text) {
     /\bsk-(?:proj-)?[A-Za-z0-9_-]{32,}/,
     /\b(?:ghp|gho|github_pat)_[A-Za-z0-9_]{30,}/,
     /\b(?:sb_secret_|re_)[A-Za-z0-9_]{24,}/,
-    /postgres(?:ql)?:\/\/[^\s:]+:[^\s@]+@/,
+    /postgres(?:ql)?:\/\/[^\s:]+:(?!\$\{[A-Z_][A-Z0-9_]*\}@)[^\s@]+@/,
   ];
   if (patterns.some((pattern) => pattern.test(text)))
     result.push("posible credencial");

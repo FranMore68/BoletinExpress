@@ -1,0 +1,35 @@
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 1.41kB done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/supabase/postgres:17.6.1.136
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 371B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 495B done
+#4 DONE 0.0s
+
+#5 [database 1/2] FROM docker.io/supabase/postgres:17.6.1.136@sha256:f371b5f3f2ac0a05703f33d6e6134515fb2498cab708fb948a0aeb7481467c00
+#5 resolve docker.io/supabase/postgres:17.6.1.136@sha256:f371b5f3f2ac0a05703f33d6e6134515fb2498cab708fb948a0aeb7481467c00 done
+#5 DONE 0.1s
+
+#6 [database 2/2] COPY infra/supabase/roles.sql /docker-entrypoint-initdb.d/init-scripts/99-roles.sql
+#6 DONE 0.0s
+
+#7 exporting to image
+#7 exporting layers 0.0s done
+#7 exporting manifest sha256:83c1cb993898428b1846b2ec6b079f636874c4ac02cd82433eb927df94830e0c done
+#7 exporting config sha256:ab7beb76472798add02f45a4a11561d0468377d5f3d002a591e9c077e86876ff done
+#7 exporting attestation manifest sha256:245777495a26efe3c0390449ddbb31565b69f8834e0cf17398e5a221aa256fe0 done
+#7 exporting manifest list sha256:cca18e9529f849a618c5215b2053659c63189f682c49bede3bea0b47008d577c done
+#7 naming to docker.io/library/boletinexpress-postgres:phase3 done
+#7 unpacking to docker.io/library/boletinexpress-postgres:phase3 0.0s done
+#7 DONE 0.3s
+
+View build details: docker-desktop://dashboard/build/default/default/sz6p7ro7idv299y8h9a37ou8c

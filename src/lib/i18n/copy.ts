@@ -36,9 +36,10 @@ export const copy = {
   startTrial: ["Probar con 10 KC", "Prova-ho amb 10 KC"],
   demoEnter: ["Entrar en la demo", "Entra a la demo"],
   accessFoot: [
-    "El registro real y la confirmación del correo se incorporarán después de esta demo.",
-    "El registre real i la confirmació del correu s’incorporaran després d’aquesta demo.",
+    "La demo funciona sin cuenta. Para guardar documentos, entra en el acceso con correo confirmado.",
+    "La demo funciona sense compte. Per desar documents, entra a l’accés amb correu confirmat.",
   ],
+  realAccess: ["Crear cuenta o acceder", "Crea un compte o accedeix"],
   offered: [
     "Dos documentos. Un mismo recorrido.",
     "Dos documents. Un mateix recorregut.",

@@ -147,6 +147,9 @@ export function LandingView({
             {tr(access === "register" ? "startTrial" : "demoEnter")}
             <Icon name="arrow" size={18} />
           </button>
+          <a className="button button-secondary full" href="/acceso">
+            {tr("realAccess")}
+          </a>
           <p className="access-foot">{tr("accessFoot")}</p>
           <div className="access-demo">{tr("demo")}</div>
         </section>

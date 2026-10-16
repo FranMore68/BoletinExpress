@@ -1,0 +1,11 @@
+# Añadir al Compose base solo cuando los servicios de datos estén preparados.
+services:
+  web:
+    env_file: [.secrets/app.env]
+    environment:
+      SUPABASE_URL: http://gateway:8000
+    networks: [default, data]
+networks:
+  data:
+    external: true
+    name: boletinexpress-data

@@ -11,3 +11,10 @@
 !public/**
 !worker/
 !worker/**
+!infra/
+!infra/supabase/
+!infra/supabase/gateway.mjs
+!infra/supabase/templates.mjs
+!infra/supabase/confirmation.html
+!infra/supabase/recovery.html
+!infra/supabase/roles.sql

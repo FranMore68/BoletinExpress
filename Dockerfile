@@ -28,3 +28,16 @@ FROM runtime AS worker
 COPY --chown=node:node worker ./worker
 EXPOSE 3001
 CMD ["node", "worker/index.mjs"]
+
+FROM runtime AS gateway
+COPY --chown=node:node infra/supabase/gateway.mjs ./gateway.mjs
+EXPOSE 8000
+CMD ["node", "gateway.mjs"]
+
+FROM runtime AS templates
+COPY --chown=node:node infra/supabase/templates.mjs infra/supabase/confirmation.html infra/supabase/recovery.html ./
+EXPOSE 8080
+CMD ["node", "templates.mjs"]
+
+FROM supabase/postgres:17.6.1.136 AS database
+COPY infra/supabase/roles.sql /docker-entrypoint-initdb.d/init-scripts/99-roles.sql

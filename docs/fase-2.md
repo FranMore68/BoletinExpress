@@ -1,6 +1,6 @@
 # Fase 2 · Interfaz ES/CA
 
-La interfaz permite recorrer la preparación de BRIE y CIE ELEC-1 con datos ficticios. Incluye entrada pública, presentación saltable, selección de modelo, edición, revisión de PDF de ejemplo, cierre simulado, documentos y recarga de KC simulada. Estado: comprobaciones superadas; pendiente de aceptación del usuario.
+La interfaz permite recorrer la preparación de BRIE y CIE ELEC-1 con datos ficticios. Incluye entrada pública, presentación saltable, selección de modelo, edición, revisión de PDF de ejemplo, cierre simulado, documentos y recarga de KC simulada. Estado: aceptada por el usuario el 16/10/2026.
 
 ## Alcance entregado
 

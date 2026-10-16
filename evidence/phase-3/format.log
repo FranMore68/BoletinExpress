@@ -1,0 +1,97 @@
+tests/secrets.test.ts:24:30 lint/style/useTemplate  FIXABLE  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  i Template literals are preferred over string concatenation.
+  
+    22 │   const prefix = "postgres://user:";
+    23 │   assert.deepEqual(
+  > 24 │     findings("compose.yaml", prefix + "${POSTGRES_PASSWORD}@db/postgres"),
+       │                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    25 │     [],
+    26 │   );
+  
+  i Unsafe fix: Use a template literal.
+  
+    22 22 │     const prefix = "postgres://user:";
+    23 23 │     assert.deepEqual(
+    24    │ - ····findings("compose.yaml",·prefix·+·"${POSTGRES_PASSWORD}@db/postgres"),
+       24 │ + ····findings("compose.yaml",·`${prefix}\${POSTGRES_PASSWORD}@db/postgres`),
+    25 25 │       [],
+    26 26 │     );
+  
+
+tests/secrets.test.ts:28:30 lint/style/useTemplate  FIXABLE  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  i Template literals are preferred over string concatenation.
+  
+    26 │   );
+    27 │   assert.ok(
+  > 28 │     findings("compose.yaml", prefix + "${POSTGRES_PASSWORD}extra@db/postgres")
+       │                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    29 │       .length,
+    30 │   );
+  
+  i Unsafe fix: Use a template literal.
+  
+    26 26 │     );
+    27 27 │     assert.ok(
+    28    │ - ····findings("compose.yaml",·prefix·+·"${POSTGRES_PASSWORD}extra@db/postgres")
+       28 │ + ····findings("compose.yaml",·`${prefix}\${POSTGRES_PASSWORD}extra@db/postgres`)
+    29 29 │         .length,
+    30 30 │     );
+  
+
+tests/secrets.test.ts:31:38 lint/style/useTemplate  FIXABLE  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  i Template literals are preferred over string concatenation.
+  
+    29 │       .length,
+    30 │   );
+  > 31 │   assert.ok(findings("compose.yaml", prefix + "literal@db/postgres").length);
+       │                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    32 │ });
+    33 │ 
+  
+  i Unsafe fix: Use a template literal.
+  
+    29 29 │         .length,
+    30 30 │     );
+    31    │ - ··assert.ok(findings("compose.yaml",·prefix·+·"literal@db/postgres").length);
+       31 │ + ··assert.ok(findings("compose.yaml",·`${prefix}literal@db/postgres`).length);
+    32 32 │   });
+    33 33 │   
+  
+
+tests/secrets.test.ts:24:40 lint/suspicious/noTemplateCurlyInString ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  ! Unexpected template string placeholder.
+  
+    22 │   const prefix = "postgres://user:";
+    23 │   assert.deepEqual(
+  > 24 │     findings("compose.yaml", prefix + "${POSTGRES_PASSWORD}@db/postgres"),
+       │                                        ^^^^^^^^^^^^^^^^^^^^
+    25 │     [],
+    26 │   );
+  
+  i Turn the string into a template string.
+  
+
+tests/secrets.test.ts:28:40 lint/suspicious/noTemplateCurlyInString ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  ! Unexpected template string placeholder.
+  
+    26 │   );
+    27 │   assert.ok(
+  > 28 │     findings("compose.yaml", prefix + "${POSTGRES_PASSWORD}extra@db/postgres")
+       │                                        ^^^^^^^^^^^^^^^^^^^^
+    29 │       .length,
+    30 │   );
+  
+  i Turn the string into a template string.
+  
+
+Skipped 3 suggested fixes.
+If you wish to apply the suggested (unsafe) fixes, use the command biome check --write --unsafe
+
+Checked 51 files in 28ms. Fixed 2 files.
+Found 2 warnings.
+Found 3 infos.

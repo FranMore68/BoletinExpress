@@ -1,0 +1,41 @@
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 1.28kB done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/node:24-alpine@sha256:44fce696f38ba8c987c4db89954051000bbd05ffd8d8659ba15ed4a8602e937f
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 345B done
+#3 DONE 0.0s
+
+#4 [base 1/2] FROM docker.io/library/node:24-alpine@sha256:44fce696f38ba8c987c4db89954051000bbd05ffd8d8659ba15ed4a8602e937f
+#4 resolve docker.io/library/node:24-alpine@sha256:44fce696f38ba8c987c4db89954051000bbd05ffd8d8659ba15ed4a8602e937f done
+#4 DONE 0.0s
+
+#5 [internal] load build context
+#5 transferring context: 1.25kB done
+#5 DONE 0.0s
+
+#6 [base 2/2] WORKDIR /app
+#6 CACHED
+
+#7 [runtime 1/1] RUN rm -rf /usr/local/lib/node_modules/npm /usr/local/bin/npm /usr/local/bin/npx /opt/yarn* /usr/local/bin/yarn*
+#7 CACHED
+
+#8 [gateway 1/1] COPY --chown=node:node infra/supabase/gateway.mjs ./gateway.mjs
+#8 DONE 0.0s
+
+#9 exporting to image
+#9 exporting layers 0.0s done
+#9 exporting manifest sha256:edbfc0be566cdc1e563238dfcdcf5ba0cea34c4d39983708aeeb13321a2da041 done
+#9 exporting config sha256:ffca3ce8f5903de35f9748d6be31c3861a08b934b3fa944e5517766bff8c57ae done
+#9 exporting attestation manifest sha256:ee6db95e418f2a8f2ff7782c1bccade5c3a9574cdf7aef0cc397b475ad85e40c done
+#9 exporting manifest list sha256:fdbe019b27d0193a2b4d566f6607ca6855c2034dad7c19fc810b33c816735f18 done
+#9 naming to docker.io/library/boletinexpress-gateway:phase3 done
+#9 unpacking to docker.io/library/boletinexpress-gateway:phase3 done
+#9 DONE 0.3s
+
+View build details: docker-desktop://dashboard/build/default/default/qvy7cgtbsnvlu4mgheqzndixz

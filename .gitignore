@@ -20,3 +20,4 @@ credentials*.json
 !evidence/phase-1/*.log
 
 !evidence/phase-2/*.log
+!evidence/phase-3/*.log
