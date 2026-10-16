@@ -139,10 +139,7 @@ export const authCopy = {
   preview: ["Ver PDF", "Mostra el PDF"],
   download: ["Descargar PDF", "Descarrega el PDF"],
   loading: ["Cargando…", "Carregant…"],
-  phase3: [
-    "Acceso y almacenamiento · fase 3",
-    "Accés i emmagatzematge · fase 3",
-  ],
+  phase3: ["Tu cuenta y tus documentos", "El teu compte i els teus documents"],
 } as const satisfies Record<string, readonly [string, string]>;
 export type AuthKey = keyof typeof authCopy;
 export function authText(locale: Locale, key: AuthKey) {
