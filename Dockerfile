@@ -40,7 +40,7 @@ EXPOSE 8080
 CMD ["node", "templates.mjs"]
 
 FROM supabase/postgres:17.11.0.004 AS database
-RUN apk add --no-cache su-exec=0.3-r0 && rm /usr/local/bin/gosu && ln -s /sbin/su-exec /usr/local/bin/gosu
+RUN apk add --no-cache su-exec=0.3-r0 && rm /usr/local/bin/gosu && printf '#!/bin/sh\nexec /sbin/su-exec "$@"\n' > /usr/local/bin/gosu && chmod 755 /usr/local/bin/gosu
 COPY infra/supabase/roles.sql /docker-entrypoint-initdb.d/init-scripts/99-roles.sql
 
 FROM supabase/storage-api:v1.83.5 AS storage

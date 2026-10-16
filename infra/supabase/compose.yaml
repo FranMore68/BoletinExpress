@@ -113,6 +113,12 @@ services:
     mem_limit: 64m
     cpus: 0.01
     read_only: true
+    healthcheck:
+      test: [CMD, wget, -q, -O, /dev/null, "http://127.0.0.1:8000/health"]
+      interval: 5s
+      timeout: 3s
+      start_period: 60s
+      retries: 30
     environment:
       ANON_KEY: ${ANON_KEY}
       SERVICE_ROLE_KEY: ${SERVICE_ROLE_KEY}

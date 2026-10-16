@@ -6,7 +6,7 @@
 > boletinexpress@0.1.0 lint
 > biome check .
 
-Checked 58 files in 98ms. No fixes applied.
+Checked 58 files in 44ms. No fixes applied.
 
 > boletinexpress@0.1.0 typecheck
 > next typegen && tsc --noEmit
@@ -17,19 +17,19 @@ Generating route types...
 > boletinexpress@0.1.0 test
 > node --test tests/*.test.ts
 
-✔ las mutaciones requieren el origen propio y rechazan peticiones cruzadas (8.233458ms)
-✔ validación de credenciales, identificadores y tamaño del cuerpo (1.012083ms)
-✔ el permiso de recuperación se vincula a usuario y sesión (0.392792ms)
-✔ el acceso y almacenamiento tienen mensajes completos en ES y CA (0.093708ms)
-✔ admite el hash PKCE oficial sin aceptar formatos arbitrarios (0.100417ms)
-✔ las propuestas de ejemplo conservan cambios manuales, incluidos campos vaciados (0.684916ms)
-✔ el cierre de la demo es idempotente y bloquea cambios del ejemplo (0.10625ms)
-✔ la demo impide validar sin datos o con saldo simulado insuficiente (0.175167ms)
-✔ tres borradores activos y sus identificadores se mantienen coherentes al eliminar uno (0.5735ms)
-✔ cada mensaje dispone de ES y CA y conserva sus variables de interpolación (0.360125ms)
-✔ bloquea secretos y entornos privados antes de publicar (0.936458ms)
-✔ permite referencias a secretos pero no contraseñas incrustadas en URI (0.080541ms)
-✔ worker arranca sin credenciales, expone solo liveness y se detiene (57.248334ms)
+✔ las mutaciones requieren el origen propio y rechazan peticiones cruzadas (7.964417ms)
+✔ validación de credenciales, identificadores y tamaño del cuerpo (0.972333ms)
+✔ el permiso de recuperación se vincula a usuario y sesión (0.456208ms)
+✔ el acceso y almacenamiento tienen mensajes completos en ES y CA (0.09425ms)
+✔ admite el hash PKCE oficial sin aceptar formatos arbitrarios (0.102209ms)
+✔ las propuestas de ejemplo conservan cambios manuales, incluidos campos vaciados (0.830667ms)
+✔ el cierre de la demo es idempotente y bloquea cambios del ejemplo (0.119125ms)
+✔ la demo impide validar sin datos o con saldo simulado insuficiente (0.189042ms)
+✔ tres borradores activos y sus identificadores se mantienen coherentes al eliminar uno (0.100875ms)
+✔ cada mensaje dispone de ES y CA y conserva sus variables de interpolación (0.805834ms)
+✔ bloquea secretos y entornos privados antes de publicar (0.852917ms)
+✔ permite referencias a secretos pero no contraseñas incrustadas en URI (0.070292ms)
+✔ worker arranca sin credenciales, expone solo liveness y se detiene (55.00675ms)
 ℹ tests 13
 ℹ suites 0
 ℹ pass 13
@@ -37,9 +37,9 @@ Generating route types...
 ℹ cancelled 0
 ℹ skipped 0
 ℹ todo 0
-ℹ duration_ms 134.313875
+ℹ duration_ms 134.556084
 
 > boletinexpress@0.1.0 check:secrets
 > node scripts/check-secrets.mjs
 
-Sin patrones de secretos detectados en 527 archivos versionables.
+Sin patrones de secretos detectados en 529 archivos versionables.

@@ -34,6 +34,7 @@ for service in ${BE_SCAN_SERVICES:-web worker}; do
   code=$(docker inspect --format '{{.State.ExitCode}}' "$container")
   docker rm "$container" >/dev/null
   container=''
+  rm -f "$archives/$service.tar"
   if [ "$code" -ne 0 ]; then failed=1; fi
 done
 exit "$failed"

@@ -39,7 +39,7 @@ jobs:
           docker build --target database -t boletinexpress-postgres:phase3 .
           docker build --target storage -t boletinexpress-storage:phase3 .
           docker build --target auth -t boletinexpress-auth:phase3 .
-          docker compose --env-file .secrets/supabase.env -f infra/supabase/compose.yaml up --detach
+          docker compose --env-file .secrets/supabase.env -f infra/supabase/compose.yaml up --detach --wait --wait-timeout 240
           sh scripts/apply-access.sh
 
       - run: docker compose -f compose.yaml -f compose.auth.yaml up --detach --wait
@@ -51,6 +51,7 @@ jobs:
           node scripts/test-isolation.mjs | tee evidence/phase-3/isolation.log
       - if: always() && steps.isolation.outcome != 'skipped'
         run: |
+          docker builder prune --all --force
           docker tag boletinexpress-gateway:phase3 boletinexpress-gateway:phase1
           docker tag boletinexpress-templates:phase3 boletinexpress-templates:phase1
           docker tag boletinexpress-postgres:phase3 boletinexpress-postgres:phase1

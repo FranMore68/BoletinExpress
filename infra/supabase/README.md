@@ -15,7 +15,7 @@ docker build --target storage -t boletinexpress-storage:phase3 .
 docker build --target auth -t boletinexpress-auth:phase3 .
 docker build --target gateway -t boletinexpress-gateway:phase3 .
 docker build --target templates -t boletinexpress-templates:phase3 .
-docker compose --env-file .secrets/supabase.env -f infra/supabase/compose.yaml up --detach
+docker compose --env-file .secrets/supabase.env -f infra/supabase/compose.yaml up --detach --wait --wait-timeout 240
 sh scripts/apply-access.sh
 docker build --target web -t boletinexpress-web:phase1 .
 docker build --target worker -t boletinexpress-worker:phase1 .
