@@ -1,5 +1,5 @@
 import { createHash } from "node:crypto";
-import { PDFDocument } from "pdf-lib";
+import { PDFDocument, PDFName } from "pdf-lib";
 import { AccessError, uuid } from "../auth/security.ts";
 import type { AuthContext } from "../auth/server.ts";
 export async function sessionId(ctx: AuthContext) {
@@ -26,7 +26,7 @@ export async function verifiedPdf(ctx: AuthContext, path: string, sha: string) {
     throw new AccessError(409, "pdf_not_ready");
   try {
     const pdf = await PDFDocument.load(bytes);
-    if (pdf.getPageCount() !== 2 || pdf.getForm().getFields().length)
+    if (pdf.getPageCount() !== 2 || pdf.catalog.has(PDFName.of("AcroForm")))
       throw Error();
   } catch {
     throw new AccessError(409, "pdf_not_ready");

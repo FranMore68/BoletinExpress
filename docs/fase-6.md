@@ -25,7 +25,7 @@ El PDF validado conserva los mismos bytes y objeto inmutable que se revisó. Su 
 | Doble clic, concurrencia y reintentos | Superado: 11 grupos de integración | `evidence/phase-6/integration.json` |
 | Cobro BRIE/CIE, saldo insuficiente y fallos de PDF | Superado: 11 grupos de integración | `evidence/phase-6/integration.json` |
 | Documento cerrado, PDF idéntico y retirada de fuentes | Superado: 11 grupos de integración | `evidence/phase-6/integration.json` |
-| Formato, tipos y 24 pruebas de aplicación | Superado | `evidence/phase-6/check.log` |
+| Formato, tipos y 25 pruebas de aplicación | Superado | `evidence/phase-6/check.log` |
 | Dependencias de aplicación y worker | Sin vulnerabilidades notificadas | `evidence/phase-6/audit-app.log`, `audit-worker.log` |
 | Dependencias de Storage | Sin altas ni críticas; 30 avisos moderados | `evidence/phase-6/audit-storage.log` |
 | Instalación desde cero y nueve imágenes | Pendiente de CI | Se añadirá el resultado verificado |

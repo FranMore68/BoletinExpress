@@ -1,6 +1,10 @@
 import assert from "node:assert/strict";
+import { createHash } from "node:crypto";
 import test from "node:test";
+import { PDFDocument } from "pdf-lib";
+import type { AuthContext } from "../src/modules/auth/server.ts";
 import { reviewToken, verifyReview } from "../src/modules/credits/review.ts";
+import { verifiedPdf } from "../src/modules/credits/server.ts";
 
 process.env.AUTH_PROOF_SECRET = "f".repeat(64);
 const review = {
@@ -38,4 +42,51 @@ test("modificar cualquier contenido o firma del comprobante invalida la revisió
   assert.throws(() => verifyReview(`${payload}.${"0".repeat(64)}`));
   assert.throws(() => verifyReview(undefined));
   assert.throws(() => verifyReview("x".repeat(2049)));
+});
+
+test("el cobro exige bytes íntegros, dos páginas y ausencia de formulario interactivo", async () => {
+  const pdf = await PDFDocument.create();
+  pdf.addPage();
+  pdf.addPage();
+  const bytes = await pdf.save();
+  const sha = createHash("sha256").update(bytes).digest("hex");
+  const ctx = {
+    client: {
+      storage: {
+        from: () => ({
+          download: async () => ({
+            data: new Blob([new Uint8Array(bytes)]),
+            error: null,
+          }),
+        }),
+      },
+    },
+  } as unknown as AuthContext;
+  assert.deepEqual(
+    new Uint8Array(await verifiedPdf(ctx, "ficticio.pdf", sha)),
+    bytes,
+  );
+  await assert.rejects(() => verifiedPdf(ctx, "ficticio.pdf", "0".repeat(64)));
+  // Even an empty AcroForm is not an accepted static final PDF.
+  pdf.getForm();
+  const interactive = await pdf.save();
+  const other = {
+    client: {
+      storage: {
+        from: () => ({
+          download: async () => ({
+            data: new Blob([new Uint8Array(interactive)]),
+            error: null,
+          }),
+        }),
+      },
+    },
+  } as unknown as AuthContext;
+  await assert.rejects(() =>
+    verifiedPdf(
+      other,
+      "ficticio.pdf",
+      createHash("sha256").update(interactive).digest("hex"),
+    ),
+  );
 });
