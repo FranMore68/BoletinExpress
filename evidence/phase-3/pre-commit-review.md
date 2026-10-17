@@ -6,8 +6,8 @@ Alcance: implementación de acceso y aislamiento, esquema/RLS, Storage, contened
 
 - **Alto, Auth:** el análisis de la imagen corregida conserva CVE-2026-32286 en `github.com/jackc/pgproto3/v2 v2.3.3`. El registro oficial de Go indica que no hay una versión corregida conocida. Requiere respuestas de un PostgreSQL malicioso o comprometido; mantenerlo en red privada reduce exposición, pero no resuelve el aviso. El plan aceptado impide cerrar la fase con avisos altos/críticos.
 - **PostgreSQL corregido:** retirado el helper Go heredado y sustituido por su-exec 0.3-r0 mediante un script compatible. La eliminación se separa en una capa propia. La auditoría final ya no muestra las 23 entradas anteriores.
-- **Integración superada:** corregida una llamada de la batería que pasaba texto a assert.match en lugar de RegExp. Los 12 grupos de integración han pasado en CI 38948859820.
-- **Limitación local:** Docker Desktop no arranca el disco virtual del Mac. La interfaz funciona con Node y la integración se comprueba en Linux temporal; no se han borrado datos ni volúmenes para eludir el fallo.
+- **Integración superada:** corregida una llamada de la batería que pasaba texto a assert.match en lugar de RegExp. Los 12 grupos de integración han pasado en CI 39047620981 y en el Mac. La fixture de cuota se ha aislado de ventanas anteriores; revisión en `review-rate-fixture-2026-10-17.md`.
+- **Limitación local resuelta el 17/10/2026:** Docker Desktop vuelve a arrancar. Los nueve servicios y los doce grupos de integración se han comprobado también en el Mac, sin borrar discos ni volúmenes. Los cambios posteriores de cuotas y disponibilidad tienen revisiones separadas `review-local-cpu-2026-10-17.md` y `review-local-readiness-2026-10-17.md`.
 
 ## Comprobaciones de la revisión
 

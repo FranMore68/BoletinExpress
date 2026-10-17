@@ -1,0 +1,42 @@
+{
+  "pass": true,
+  "fixedFictitiousAssetsOnly": true,
+  "results": [
+    {
+      "file": "BRIE-ejemplo.pdf",
+      "bytes": 259611,
+      "sha256": "de7272f5de3c4f994cdc10dec144f177ce82f87d82c5fdd3f387b1394f15fbe6",
+      "pass": true
+    },
+    {
+      "file": "CIE-ejemplo.pdf",
+      "bytes": 812573,
+      "sha256": "225400629a464062729551a7e699b596050757fb504099a790ee2cba9aa5a2e0",
+      "pass": true
+    },
+    {
+      "file": "BRIE-1.png",
+      "bytes": 266365,
+      "sha256": "6bcff90aa278cbd4015bfd1cb7fb5954af53a462fbba73fccd0812bdf3a5db47",
+      "pass": true
+    },
+    {
+      "file": "BRIE-2.png",
+      "bytes": 192175,
+      "sha256": "cf93056107d177e0533c4e3e3d47288834f76dd2a31f1589eb6b1f37484e117a",
+      "pass": true
+    },
+    {
+      "file": "CIE-1.png",
+      "bytes": 178646,
+      "sha256": "276c783bb8d887405c0d93e85dad801da8de669aa9daa332766ba8d488972b63",
+      "pass": true
+    },
+    {
+      "file": "CIE-2.png",
+      "bytes": 194177,
+      "sha256": "63ee119a3bd207dade8068cb2b915b1b2b395c59deac22b43dab5ce0a428c5d9",
+      "pass": true
+    }
+  ]
+}

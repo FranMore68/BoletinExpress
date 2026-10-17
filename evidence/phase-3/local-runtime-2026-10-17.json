@@ -1,0 +1,104 @@
+{
+  "checkedAtUtc": "2026-10-17T16:14:15.951625+00:00",
+  "platform": "Docker Desktop 4.81.0 / Docker Engine 29.6.1 / linux-arm64 on macOS",
+  "services": [
+    {
+      "name": "/boletinexpress-data-storage-1",
+      "imageId": "sha256:c15766205b3774ed6aee13c7b665c06b40a5d903ea8fa5c557232d0743bf9507",
+      "status": "running",
+      "oom": false,
+      "restarts": 0,
+      "health": "healthy",
+      "nanoCpus": 100000000,
+      "memoryBytes": 536870912
+    },
+    {
+      "name": "/boletinexpress-data-postgres-1",
+      "imageId": "sha256:84ce85eae9937c42553d9eaec2b5b29597aa1325273b7362a8831606ade44d72",
+      "status": "running",
+      "oom": false,
+      "restarts": 0,
+      "health": "healthy",
+      "nanoCpus": 50000000,
+      "memoryBytes": 1342177280
+    },
+    {
+      "name": "/boletinexpress-data-templates-1",
+      "imageId": "sha256:99534d4f79b22afe21358fc459013b69e07b8e21d466e486118fae2573c6fea4",
+      "status": "running",
+      "oom": false,
+      "restarts": 0,
+      "health": null,
+      "nanoCpus": 10000000,
+      "memoryBytes": 67108864
+    },
+    {
+      "name": "/boletinexpress-data-mail-1",
+      "imageId": "sha256:23fe39e81bde596a918000b3135c0f85dc8bb4c9ea6be274b051143f3e300387",
+      "status": "running",
+      "oom": false,
+      "restarts": 0,
+      "health": "healthy",
+      "nanoCpus": 10000000,
+      "memoryBytes": 67108864
+    },
+    {
+      "name": "/boletinexpress-data-gateway-1",
+      "imageId": "sha256:b5920bfb2f015ae47d8e41fe86da14a3581f4c7bee068ef751f382f503571bb8",
+      "status": "running",
+      "oom": false,
+      "restarts": 0,
+      "health": "healthy",
+      "nanoCpus": 10000000,
+      "memoryBytes": 67108864
+    },
+    {
+      "name": "/boletinexpress-data-auth-1",
+      "imageId": "sha256:58f84d97790703ab63111cc2c5a27b02b01d01b43d0c7896d77550dbdd526c70",
+      "status": "running",
+      "oom": false,
+      "restarts": 0,
+      "health": null,
+      "nanoCpus": 40000000,
+      "memoryBytes": 134217728
+    },
+    {
+      "name": "/boletinexpress-data-rest-1",
+      "imageId": "sha256:c9dc201e555f5d8e37e7f39cdd4df0229774996e213bfd7de8d10ac609030f2c",
+      "status": "running",
+      "oom": false,
+      "restarts": 0,
+      "health": null,
+      "nanoCpus": 30000000,
+      "memoryBytes": 134217728
+    },
+    {
+      "name": "/boletinexpress-evaluation-worker-1",
+      "imageId": "sha256:e4a0b7106033be86be8fe5b2bdace373462b7f67def8cf1e300629481ad8f83d",
+      "status": "running",
+      "oom": false,
+      "restarts": 0,
+      "health": "healthy",
+      "nanoCpus": 250000000,
+      "memoryBytes": 268435456
+    },
+    {
+      "name": "/boletinexpress-evaluation-web-1",
+      "imageId": "sha256:f6fa29bfd4c407f1273dd47c25c894521c37382000d158c5ab2aedc03100dac9",
+      "status": "running",
+      "oom": false,
+      "restarts": 0,
+      "health": "healthy",
+      "nanoCpus": 500000000,
+      "memoryBytes": 536870912
+    }
+  ],
+  "configuredCpuTotal": 1,
+  "configuredMemoryMiBTotal": 3008,
+  "integrationGroupsPassed": 12,
+  "secretsAndVolumesPreserved": true,
+  "app": "http://127.0.0.1:3000/acceso?lang=es",
+  "mailbox": "http://127.0.0.1:54324",
+  "vpsModified": false,
+  "testScriptCommit": "d564b5e"
+}

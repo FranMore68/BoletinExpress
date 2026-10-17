@@ -1,0 +1,217 @@
+check	Run set -o pipefail	﻿2026-10-17T15:56:32.0234106Z ##[group]Run set -o pipefail
+check	Run set -o pipefail	2026-10-17T15:56:32.0234324Z ^[[36;1mset -o pipefail^[[0m
+check	Run set -o pipefail	2026-10-17T15:56:32.0234542Z ^[[36;1mnode scripts/test-isolation.mjs | tee evidence/phase-3/isolation.log^[[0m
+check	Run set -o pipefail	2026-10-17T15:56:32.0296690Z shell: /usr/bin/bash -e {0}
+check	Run set -o pipefail	2026-10-17T15:56:32.0296858Z env:
+check	Run set -o pipefail	2026-10-17T15:56:32.0296984Z   NEXT_TELEMETRY_DISABLED: 1
+check	Run set -o pipefail	2026-10-17T15:56:32.0297128Z ##[endgroup]
+check	Run set -o pipefail	2026-10-17T15:56:32.2020034Z PASS rutas privadas y cuenta sin sesión bloqueadas
+check	Run set -o pipefail	2026-10-17T15:56:47.9785062Z PASS registro, confirmación explícita y enlace de un uso
+check	Run set -o pipefail	2026-10-17T15:56:56.9823202Z PASS listas y documento ajeno aislados en BFF
+check	Run set -o pipefail	2026-10-17T15:56:59.4134396Z PASS origen, propietario, estado y saldo manipulados bloqueados
+check	Run set -o pipefail	2026-10-17T15:57:12.2867878Z PASS PDF privado, vista y descarga autenticadas
+check	Run set -o pipefail	2026-10-17T15:57:17.4781212Z PASS RLS directa y Storage rechazan acceso y cambios cruzados
+check	Run set -o pipefail	2026-10-17T15:57:21.8816614Z PASS límite de tres borradores concurrentes
+check	Run set -o pipefail	2026-10-17T15:57:36.2785225Z PASS recuperación restringida y cierre de sesiones anteriores
+check	Run set -o pipefail	2026-10-17T15:57:36.7778734Z PASS JWT revocado bloqueado por RLS durante su vigencia
+check	Run set -o pipefail	2026-10-17T15:57:37.0781686Z PASS cookies manipuladas y JWT caducado rechazados
+check	Run set -o pipefail	2026-10-17T15:57:38.6139895Z PASS cierre de sesión y acceso posterior bloqueado
+check	Run set -o pipefail	2026-10-17T15:57:48.7573080Z node:internal/modules/run_main:107
+check	Run set -o pipefail	2026-10-17T15:57:48.7573665Z     triggerUncaughtException(
+check	Run set -o pipefail	2026-10-17T15:57:48.7573985Z     ^
+check	Run set -o pipefail	2026-10-17T15:57:48.7574143Z 
+check	Run set -o pipefail	2026-10-17T15:57:48.7574463Z AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+check	Run set -o pipefail	2026-10-17T15:57:48.7574812Z 
+check	Run set -o pipefail	2026-10-17T15:57:48.7574985Z   assert.ok(limited.includes(429))
+check	Run set -o pipefail	2026-10-17T15:57:48.7575199Z 
+check	Run set -o pipefail	2026-10-17T15:57:48.7575539Z     at file:///home/runner/work/BoletinExpress/BoletinExpress/scripts/test-isolation.mjs:488:8
+check	Run set -o pipefail	2026-10-17T15:57:48.7576312Z     at process.processTicksAndRejections (node:internal/process/task_queues:104:5) {
+check	Run set -o pipefail	2026-10-17T15:57:48.7577056Z   generatedMessage: true,
+check	Run set -o pipefail	2026-10-17T15:57:48.7577318Z   code: 'ERR_ASSERTION',
+check	Run set -o pipefail	2026-10-17T15:57:48.7577581Z   actual: false,
+check	Run set -o pipefail	2026-10-17T15:57:48.7577763Z   expected: true,
+check	Run set -o pipefail	2026-10-17T15:57:48.7577990Z   operator: '==',
+check	Run set -o pipefail	2026-10-17T15:57:48.7578165Z   diff: 'simple'
+check	Run set -o pipefail	2026-10-17T15:57:48.7578379Z }
+check	Run set -o pipefail	2026-10-17T15:57:48.7578469Z 
+check	Run set -o pipefail	2026-10-17T15:57:48.7578547Z Node.js v24.22.0
+check	Run set -o pipefail	2026-10-17T15:57:48.7653176Z ##[error]Process completed with exit code 1.
+check	Run docker builder prune --all --force	﻿2026-10-17T15:57:48.7695366Z ##[group]Run docker builder prune --all --force
+check	Run docker builder prune --all --force	2026-10-17T15:57:48.7695592Z ^[[36;1mdocker builder prune --all --force^[[0m
+check	Run docker builder prune --all --force	2026-10-17T15:57:48.7695827Z ^[[36;1mdocker tag boletinexpress-gateway:phase3 boletinexpress-gateway:phase1^[[0m
+check	Run docker builder prune --all --force	2026-10-17T15:57:48.7696326Z ^[[36;1mdocker tag boletinexpress-templates:phase3 boletinexpress-templates:phase1^[[0m
+check	Run docker builder prune --all --force	2026-10-17T15:57:48.7696630Z ^[[36;1mdocker tag boletinexpress-postgres:phase3 boletinexpress-postgres:phase1^[[0m
+check	Run docker builder prune --all --force	2026-10-17T15:57:48.7696918Z ^[[36;1mdocker tag boletinexpress-auth:phase3 boletinexpress-auth:phase1^[[0m
+check	Run docker builder prune --all --force	2026-10-17T15:57:48.7697178Z ^[[36;1mdocker tag postgrest/postgrest:v14.17 boletinexpress-rest:phase1^[[0m
+check	Run docker builder prune --all --force	2026-10-17T15:57:48.7697446Z ^[[36;1mdocker tag boletinexpress-storage:phase3 boletinexpress-storage:phase1^[[0m
+check	Run docker builder prune --all --force	2026-10-17T15:57:48.7697713Z ^[[36;1mdocker tag axllent/mailpit:v1.31.6 boletinexpress-mail:phase1^[[0m
+check	Run docker builder prune --all --force	2026-10-17T15:57:48.7698098Z ^[[36;1mBE_SCAN_REPORT_DIR=evidence/phase-3 BE_SCAN_SERVICES="web worker gateway templates postgres auth rest storage mail" sh scripts/scan-images.sh^[[0m
+check	Run docker builder prune --all --force	2026-10-17T15:57:48.7752536Z shell: /usr/bin/bash -e {0}
+check	Run docker builder prune --all --force	2026-10-17T15:57:48.7752676Z env:
+check	Run docker builder prune --all --force	2026-10-17T15:57:48.7752791Z   NEXT_TELEMETRY_DISABLED: 1
+check	Run docker builder prune --all --force	2026-10-17T15:57:48.7752924Z ##[endgroup]
+check	Run docker builder prune --all --force	2026-10-17T15:57:52.2621060Z ID						RECLAIMABLE	SIZE		LAST ACCESSED
+check	Run docker builder prune --all --force	2026-10-17T15:57:52.2621745Z hah0gc6o12k4mwbav3hy6bs83               	true 		782B      	7 minutes ago
+check	Run docker builder prune --all --force	2026-10-17T15:57:52.2622891Z j6jxfpcystk4ivu7t3g330coi               	true 	921B      	7 minutes ago
+check	Run docker builder prune --all --force	2026-10-17T15:57:52.5018882Z pj2rmf76xc05xh6yokh5qihpm*              	true 	110.2MB   	7 minutes ago
+check	Run docker builder prune --all --force	2026-10-17T15:57:52.5038874Z del0b9oexp6wsvhehg217x662*              	true 	759.6kB   	2 minutes ago
+check	Run docker builder prune --all --force	2026-10-17T15:57:54.9720500Z yil4x8be3hkehusspqztn6s0d*              	true 	1.675GB   	2 minutes ago
+check	Run docker builder prune --all --force	2026-10-17T15:57:54.9745204Z 6l682i0mqw1ir3uwsgqv7ph23*              	true 	840.2kB   	6 minutes ago
+check	Run docker builder prune --all --force	2026-10-17T15:57:54.9757676Z whwnjky4l3j5tjnzhtewyxb2e               	true 	2.98MB    	7 minutes ago
+check	Run docker builder prune --all --force	2026-10-17T15:57:54.9780403Z jn8n7dsyytmxk4fd0hztqa0zj*              	true 	2.84kB    	2 minutes ago
+check	Run docker builder prune --all --force	2026-10-17T15:57:54.9787092Z if9hwqr73g0690xm1p01bqt60               	true 	1.093kB   	2 minutes ago
+check	Run docker builder prune --all --force	2026-10-17T15:57:54.9793936Z cx8vbdebxyusv2z6kw51r5mdw               	true 	0B        	6 minutes ago
+check	Run docker builder prune --all --force	2026-10-17T15:57:56.8194412Z qr4k1rrqzk894j1qxwzjplb8z               	true 	1.435kB   	7 minutes ago
+check	Run docker builder prune --all --force	2026-10-17T15:57:56.8202158Z 9yvvzhqq9e6fb84fbr4u6p0ej               	true 	14.3MB    	6 minutes ago
+check	Run docker builder prune --all --force	2026-10-17T15:57:56.8209269Z gawzpivdnyaopvkas7k598lrv               	true 	356B      	7 minutes ago
+check	Run docker builder prune --all --force	2026-10-17T15:57:56.8215357Z 9dj2rmmuxj4mdc76ofk8ly951               	true 	53.23MB   	2 minutes ago
+check	Run docker builder prune --all --force	2026-10-17T15:57:56.8250425Z lpbiufp4llafc3f8obvctuqzg*              	true 	457B      	2 minutes ago
+check	Run docker builder prune --all --force	2026-10-17T15:57:56.8277561Z uw2shuvu9xtxvq6remkvs4hl8               	true 	2.98MB    	7 minutes ago
+check	Run docker builder prune --all --force	2026-10-17T15:57:56.8289362Z jfh3vl0u6m9gxoxufp8e5idhi               	true 	1.801MB   	7 minutes ago
+check	Run docker builder prune --all --force	2026-10-17T15:57:58.4899853Z vka39svhkojmxchg5v1h7ae7h               	true 	450.7MB   	2 minutes ago
+check	Run docker builder prune --all --force	2026-10-17T15:58:00.0051583Z zc1cs70c3lifluob2nlnmkqfa               	true 	34B       	7 minutes ago
+check	Run docker builder prune --all --force	2026-10-17T15:58:00.0062173Z 4mtlcrsv60zlnr8waay45wfx0               	true 	57.31MB   	7 minutes ago
+check	Run docker builder prune --all --force	2026-10-17T15:58:00.9758984Z ns1rourez0smw2b73vclxh3j0               	true 	92.49MB   	2 minutes ago
+check	Run docker builder prune --all --force	2026-10-17T15:58:00.9759588Z muimtx1tvw8xi89wz4m5k96wx               	true 	6.272MB   	2 minutes ago
+check	Run docker builder prune --all --force	2026-10-17T15:58:00.9832161Z aupxfcpvmkdkc2uwqor5mhstx               	true 	164.4kB   	7 minutes ago
+check	Run docker builder prune --all --force	2026-10-17T15:58:00.9843168Z xkoa020l4nikgy2f6uhp44wch               	true 	840.2kB   	6 minutes ago
+check	Run docker builder prune --all --force	2026-10-17T15:58:02.3980724Z an13obzxqctemjee1a3sjl6ul               	true 	3.629MB   	3 minutes ago
+check	Run docker builder prune --all --force	2026-10-17T15:58:02.3985379Z pl5e9k570dzht6u2i45fkwgv3               	true 	0B        	6 minutes ago
+check	Run docker builder prune --all --force	2026-10-17T15:58:02.3994376Z bn8vxkq7m2ywyc97p2hy5n0fy               	true 	0B        	3 minutes ago
+check	Run docker builder prune --all --force	2026-10-17T15:58:02.4001232Z prrlfwznvkbnldq8stfsg6ge4               	true 	0B        	7 minutes ago
+check	Run docker builder prune --all --force	2026-10-17T15:58:02.4023663Z n5ankxy908x5pa6oo4gxrqkt6               	true 	1.873kB   	7 minutes ago
+check	Run docker builder prune --all --force	2026-10-17T15:58:02.4031377Z p7xrknyz1nc7bks2yw0idjzgi               	true 	70.68kB   	7 minutes ago
+check	Run docker builder prune --all --force	2026-10-17T15:58:03.5688441Z 9vm03whqqqissrohjhk26ct4s               	true 	0B        	3 minutes ago
+check	Run docker builder prune --all --force	2026-10-17T15:58:03.5689093Z nesstyt3tkzjmm1ysmwjm9e39               	true 	0B        	7 minutes ago
+check	Run docker builder prune --all --force	2026-10-17T15:58:03.5714425Z ptmtrqbia5ap49ynva4gs6f9g               	true 	0B        	6 minutes ago
+check	Run docker builder prune --all --force	2026-10-17T15:58:05.3142484Z g0w5rvlcaqu6ueivkhw03ybnc               	true 	858.8MB   	7 minutes ago
+check	Run docker builder prune --all --force	2026-10-17T15:58:05.3149056Z wc0nqg91i5z6qgnew1a71tg2z               	true 	0B        	6 minutes ago
+check	Run docker builder prune --all --force	2026-10-17T15:58:06.0741087Z 56wqhl8zndt61b2anse1i3fyo               	true 	759.6kB   	3 minutes ago
+check	Run docker builder prune --all --force	2026-10-17T15:58:06.0777345Z o352kj81nxrieitilieflbwrl               	true 	0B        	6 minutes ago
+check	Run docker builder prune --all --force	2026-10-17T15:58:06.0991573Z 0vjkeqsbx2q5dumfbayc8zrrc               	true 	80.73kB   	7 minutes ago
+check	Run docker builder prune --all --force	2026-10-17T15:58:06.0999430Z 9ofhm43lt157p4jaf1epna9x2               	true 	0B        	6 minutes ago
+check	Run docker builder prune --all --force	2026-10-17T15:58:06.1006427Z v216799cwhc0bt2qgcir42vde               	true 	0B        	7 minutes ago
+check	Run docker builder prune --all --force	2026-10-17T15:58:06.7233026Z nfzgu7tvzzq7bfa5hupfxs5st               	true 	0B        	7 minutes ago
+check	Run docker builder prune --all --force	2026-10-17T15:58:06.7240857Z om5ksyjj27mqgigfi0d1dtg7t               	true 	0B        	7 minutes ago
+check	Run docker builder prune --all --force	2026-10-17T15:58:06.7250444Z p6etndg1jltw6w6yscpt883n2               	true 	0B        	6 minutes ago
+check	Run docker builder prune --all --force	2026-10-17T15:58:06.7391943Z y6xa42afkbsca0eicxo1qecaw               	true 	13.28MB   	3 minutes ago
+check	Run docker builder prune --all --force	2026-10-17T15:58:06.7399413Z vleklihuizidncbhhgv1bfvae               	true 	0B        	6 minutes ago
+check	Run docker builder prune --all --force	2026-10-17T15:58:06.7434504Z pjfzxmedxff6bk746ytukyj6e               	true 	0B        	6 minutes ago
+check	Run docker builder prune --all --force	2026-10-17T15:58:06.7445359Z up0nlbt8x81fmg488ibdys1mf               	true 	0B        	7 minutes ago
+check	Run docker builder prune --all --force	2026-10-17T15:58:06.7452156Z n1f5pmzmfbaool7pwinlqd05w               	true 	0B        	7 minutes ago
+check	Run docker builder prune --all --force	2026-10-17T15:58:06.7460930Z 30bjfy1c92hurp029ylh7mucd               	true 	0B        	6 minutes ago
+check	Run docker builder prune --all --force	2026-10-17T15:58:06.7483075Z u4mrapszmuqht72vdh77uzmey               	true 	0B        	3 minutes ago
+check	Run docker builder prune --all --force	2026-10-17T15:58:06.7519430Z u8avjqupxsw8a8btzuv1z1bd4               	true 	0B        	6 minutes ago
+check	Run docker builder prune --all --force	2026-10-17T15:58:06.7529895Z j1dnrpatvwk8t9fhe7pmnapql               	true 	0B        	8 minutes ago
+check	Run docker builder prune --all --force	2026-10-17T15:58:06.7554377Z u5xet6mb2gtno4f3ap00lbw9m               	true 	0B        	6 minutes ago
+check	Run docker builder prune --all --force	2026-10-17T15:58:06.7561525Z p662pebk8m5f0wkg2xwo0ar3g               	true 	0B        	6 minutes ago
+check	Run docker builder prune --all --force	2026-10-17T15:58:06.7570417Z pby0yumnps63znkatrehcszk3               	true 	0B        	7 minutes ago
+check	Run docker builder prune --all --force	2026-10-17T15:58:06.7602621Z kvez7bxht3eb6ohgzxnci77x7               	true 	0B        	6 minutes ago
+check	Run docker builder prune --all --force	2026-10-17T15:58:06.7612594Z fk1ehuvrwyuotggxis9wd3zrr               	true 	0B        	7 minutes ago
+check	Run docker builder prune --all --force	2026-10-17T15:58:08.9234872Z 3t0c105migdmgvikgfquktaqo               	true 	0B        	6 minutes ago
+check	Run docker builder prune --all --force	2026-10-17T15:58:08.9243098Z uxpkqhfbo5yvqwkycw3upl46c               	true 	0B        	8 minutes ago
+check	Run docker builder prune --all --force	2026-10-17T15:58:08.9269709Z purkz706e77nd83u9415dvvmb               	true 	0B        	7 minutes ago
+check	Run docker builder prune --all --force	2026-10-17T15:58:08.9493065Z 32wsscq4j5cx4y07nxv89rybc               	true 	0B        	6 minutes ago
+check	Run docker builder prune --all --force	2026-10-17T15:58:08.9501200Z 80ixwnc5plqxrlb7dyj23grpb               	true 	0B        	6 minutes ago
+check	Run docker builder prune --all --force	2026-10-17T15:58:08.9529732Z lcgr7t42uq84pshj6q3hc5ulm               	true 	0B        	7 minutes ago
+check	Run docker builder prune --all --force	2026-10-17T15:58:08.9538644Z jsh8i9a13stb44475hie26l2e               	true 	0B        	6 minutes ago
+check	Run docker builder prune --all --force	2026-10-17T15:58:08.9549166Z vxt1w436kkwx5v0hjx9i2m2dp               	true 	0B        	6 minutes ago
+check	Run docker builder prune --all --force	2026-10-17T15:58:08.9569711Z kwq8bypgtjirgpkf8elvax1jb               	true 	0B        	7 minutes ago
+check	Run docker builder prune --all --force	2026-10-17T15:58:08.9589619Z tpbexx3vway180k06pkrq6k49               	true 	0B        	6 minutes ago
+check	Run docker builder prune --all --force	2026-10-17T15:58:08.9600779Z 5ixd4pk7z3yywwbdq7si5q090               	true 	0B        	7 minutes ago
+check	Run docker builder prune --all --force	2026-10-17T15:58:08.9610700Z 45xj8clwscpe2r2pfbxu9gln7               	true 	0B        	6 minutes ago
+check	Run docker builder prune --all --force	2026-10-17T15:58:08.9633702Z 559ckuxtxc5a3y54k8rhs8d17               	true 	0B        	6 minutes ago
+check	Run docker builder prune --all --force	2026-10-17T15:58:08.9639926Z xs4a8l1xsi6aji8e06jl9226m               	true 	0B        	7 minutes ago
+check	Run docker builder prune --all --force	2026-10-17T15:58:08.9660725Z 97nf5hcn1cf1zutgkn55al7p1               	true 	0B        	6 minutes ago
+check	Run docker builder prune --all --force	2026-10-17T15:58:08.9669966Z mxngenugcsvcokur0ivq3jpgd               	true 	0B        	7 minutes ago
+check	Run docker builder prune --all --force	2026-10-17T15:58:08.9683552Z 2kwhnrbgubsarkpl8apwvk0xs               	true 	0B        	7 minutes ago
+check	Run docker builder prune --all --force	2026-10-17T15:58:08.9699439Z yvmiug3ec8y7etmhy3tem4uem               	true 	0B        	7 minutes ago
+check	Run docker builder prune --all --force	2026-10-17T15:58:08.9716141Z 4k2zt8xuknt780ksjhhxcgugu               	true 	0B        	7 minutes ago
+check	Run docker builder prune --all --force	2026-10-17T15:58:08.9729389Z vt3dio5a1p5g346he3acx8sko               	true 	0B        	7 minutes ago
+check	Run docker builder prune --all --force	2026-10-17T15:58:08.9743089Z ynkejeeissq5g1b2s2yhanj77               	true 	0B        	7 minutes ago
+check	Run docker builder prune --all --force	2026-10-17T15:58:08.9756800Z qchu3r24e645050ht3wd10pzh               	true 	0B        	7 minutes ago
+check	Run docker builder prune --all --force	2026-10-17T15:58:08.9818888Z erbvgz4p30clr2qz3d0bkev9v               	true 	0B        	7 minutes ago
+check	Run docker builder prune --all --force	2026-10-17T15:58:08.9834665Z b1wta4mrl7p5o59lomobyxu3s               	true 	0B        	7 minutes ago
+check	Run docker builder prune --all --force	2026-10-17T15:58:08.9850044Z 3sff4vvlun5p3ag8g78s5mx3s               	true 	0B        	7 minutes ago
+check	Run docker builder prune --all --force	2026-10-17T15:58:08.9865483Z zvicahok7hfs990ibbxwfpej2               	true 	0B        	7 minutes ago
+check	Run docker builder prune --all --force	2026-10-17T15:58:08.9881120Z jtiu5p49lb4tycd2seth4fqx2               	true 	0B        	7 minutes ago
+check	Run docker builder prune --all --force	2026-10-17T15:58:08.9896607Z 8s2dj3b6o10pmenzva12o9y8t               	true 	0B        	7 minutes ago
+check	Run docker builder prune --all --force	2026-10-17T15:58:08.9907162Z kjo12ig49dyfh1lzsoxh33tn0               	true 	0B        	7 minutes ago
+check	Run docker builder prune --all --force	2026-10-17T15:58:08.9920557Z e47wiyjngbujqpnepqot5ikef               	true 	0B        	7 minutes ago
+check	Run docker builder prune --all --force	2026-10-17T15:58:08.9934443Z bgbgwlxo5l1c75rpnqqq519rz               	true 	0B        	7 minutes ago
+check	Run docker builder prune --all --force	2026-10-17T15:58:08.9946368Z xlm6vpf6k6v4tboksgj2dx0xk               	true 	0B        	7 minutes ago
+check	Run docker builder prune --all --force	2026-10-17T15:58:08.9958928Z qmzqha22xneyfzh8yras3esdn               	true 	0B        	6 minutes ago
+check	Run docker builder prune --all --force	2026-10-17T15:58:09.0016719Z Total:	3.346GB
+check	Run docker builder prune --all --force	2026-10-17T15:58:09.6706589Z docker.io/aquasec/trivy@sha256:2416d1f74045b57274df1a340eee6b510cacd73c66a6ccb8da092b117eb7d222: Pulling from aquasec/trivy
+check	Run docker builder prune --all --force	2026-10-17T15:58:09.8635691Z e2de96513ba9: Already exists
+check	Run docker builder prune --all --force	2026-10-17T15:58:09.8641489Z 404cb589430b: Pulling fs layer
+check	Run docker builder prune --all --force	2026-10-17T15:58:09.8642007Z 2f5cf6d3a5d1: Pulling fs layer
+check	Run docker builder prune --all --force	2026-10-17T15:58:09.8643517Z 28e25cc2c5e5: Pulling fs layer
+check	Run docker builder prune --all --force	2026-10-17T15:58:10.0134423Z 28e25cc2c5e5: Verifying Checksum
+check	Run docker builder prune --all --force	2026-10-17T15:58:10.0134953Z 28e25cc2c5e5: Download complete
+check	Run docker builder prune --all --force	2026-10-17T15:58:10.1547997Z 404cb589430b: Verifying Checksum
+check	Run docker builder prune --all --force	2026-10-17T15:58:10.1548562Z 404cb589430b: Download complete
+check	Run docker builder prune --all --force	2026-10-17T15:58:10.2493326Z 2f5cf6d3a5d1: Verifying Checksum
+check	Run docker builder prune --all --force	2026-10-17T15:58:10.2495430Z 2f5cf6d3a5d1: Download complete
+check	Run docker builder prune --all --force	2026-10-17T15:58:11.0001121Z 404cb589430b: Pull complete
+check	Run docker builder prune --all --force	2026-10-17T15:58:12.9013518Z 2f5cf6d3a5d1: Pull complete
+check	Run docker builder prune --all --force	2026-10-17T15:58:12.9170767Z 28e25cc2c5e5: Pull complete
+check	Run docker builder prune --all --force	2026-10-17T15:58:12.9198212Z Digest: sha256:2416d1f74045b57274df1a340eee6b510cacd73c66a6ccb8da092b117eb7d222
+check	Run docker builder prune --all --force	2026-10-17T15:58:12.9205024Z Status: Downloaded newer image for aquasec/trivy@sha256:2416d1f74045b57274df1a340eee6b510cacd73c66a6ccb8da092b117eb7d222
+check	Run docker builder prune --all --force	2026-10-17T15:58:12.9208918Z docker.io/aquasec/trivy@sha256:2416d1f74045b57274df1a340eee6b510cacd73c66a6ccb8da092b117eb7d222
+check	Run docker builder prune --all --force	2026-10-17T15:58:28.4052381Z 2026-10-17T15:58:13Z	INFO	[vulndb] Need to update DB
+check	Run docker builder prune --all --force	2026-10-17T15:58:28.4052991Z 2026-10-17T15:58:13Z	INFO	[vulndb] Downloading vulnerability DB...
+check	Run docker builder prune --all --force	2026-10-17T15:58:28.4053529Z 2026-10-17T15:58:13Z	INFO	[vulndb] Downloading artifact...	repo="mirror.gcr.io/aquasec/trivy-db:2"
+check	Run docker builder prune --all --force	2026-10-17T15:58:28.4063116Z 2.92 MiB / 128.03 MiB [->____________________________________________________________] 2.28% ? p/s ?31.71 MiB / 128.03 MiB [-------------->_____________________________________________] 24.77% ? p/s ?68.00 MiB / 128.03 MiB [------------------------------->____________________________] 53.11% ? p/s ?104.20 MiB / 128.03 MiB [------------------------------------>________] 81.39% 168.97 MiB p/s ETA 0s128.03 MiB / 128.03 MiB [------------------------------------------->] 100.00% 168.97 MiB p/s ETA 0s128.03 MiB / 128.03 MiB [------------------------------------------->] 100.00% 168.97 MiB p/s ETA 0s128.03 MiB / 128.03 MiB [------------------------------------------->] 100.00% 160.63 MiB p/s ETA 0s128.03 MiB / 128.03 MiB [------------------------------------------->] 100.00% 160.63 MiB p/s ETA 0s128.03 MiB / 128.03 MiB [------------------------------------------->] 100.00% 160.63 MiB p/s ETA 0s128.03 MiB / 128.03 MiB [------------------------------------------->] 100.00% 150.26 MiB p/s ETA 0s128.03 MiB / 128.03 MiB [------------------------------------------->] 100.00% 150.26 MiB p/s ETA 0s128.03 MiB / 128.03 MiB [------------------------------------------->] 100.00% 150.26 MiB p/s ETA 0s128.03 MiB / 128.03 MiB [------------------------------------------->] 100.00% 140.57 MiB p/s ETA 0s128.03 MiB / 128.03 MiB [------------------------------------------->] 100.00% 140.57 MiB p/s ETA 0s128.03 MiB / 128.03 MiB [------------------------------------------->] 100.00% 140.57 MiB p/s ETA 0s128.03 MiB / 128.03 MiB [------------------------------------------->] 100.00% 131.50 MiB p/s ETA 0s128.03 MiB / 128.03 MiB [------------------------------------------->] 100.00% 131.50 MiB p/s ETA 0s128.03 MiB / 128.03 MiB [------------------------------------------->] 100.00% 131.50 MiB p/s ETA 0s128.03 MiB / 128.03 MiB [------------------------------------------->] 100.00% 123.02 MiB p/s ETA 0s128.03 MiB / 128.03 MiB [------------------------------------------->] 100.00% 123.02 MiB p/s ETA 0s128.03 MiB / 128.03 MiB [------------------------------------------->] 100.00% 123.02 MiB p/s ETA 0s128.03 MiB / 128.03 MiB [------------------------------------------->] 100.00% 115.08 MiB p/s ETA 0s128.03 MiB / 128.03 MiB [------------------------------------------->] 100.00% 115.08 MiB p/s ETA 0s128.03 MiB / 128.03 MiB [------------------------------------------->] 100.00% 115.08 MiB p/s ETA 0s128.03 MiB / 128.03 MiB [------------------------------------------->] 100.00% 107.65 MiB p/s ETA 0s128.03 MiB / 128.03 MiB [------------------------------------------->] 100.00% 107.65 MiB p/s ETA 0s128.03 MiB / 128.03 MiB [------------------------------------------->] 100.00% 107.65 MiB p/s ETA 0s128.03 MiB / 128.03 MiB [------------------------------------------->] 100.00% 100.71 MiB p/s ETA 0s128.03 MiB / 128.03 MiB [------------------------------------------->] 100.00% 100.71 MiB p/s ETA 0s128.03 MiB / 128.03 MiB [------------------------------------------->] 100.00% 100.71 MiB p/s ETA 0s128.03 MiB / 128.03 MiB [-------------------------------------------->] 100.00% 94.21 MiB p/s ETA 0s128.03 MiB / 128.03 MiB [-------------------------------------------->] 100.00% 94.21 MiB p/s ETA 0s128.03 MiB / 128.03 MiB [-------------------------------------------->] 100.00% 94.21 MiB p/s ETA 0s128.03 MiB / 128.03 MiB [-------------------------------------------->] 100.00% 88.13 MiB p/s ETA 0s128.03 MiB / 128.03 MiB [-----------------------------------------------] 100.00% 19.13 MiB p/s 6.9s2026-10-17T15:58:20Z	INFO	[vulndb] Artifact successfully downloaded	repo="mirror.gcr.io/aquasec/trivy-db:2"
+check	Run docker builder prune --all --force	2026-10-17T15:58:34.4020069Z 2026-10-17T15:58:33Z	INFO	[vuln] Vulnerability scanning is enabled
+check	Run docker builder prune --all --force	2026-10-17T15:58:34.4021935Z 2026-10-17T15:58:34Z	INFO	Detected OS	family="alpine" version="3.24.2"
+check	Run docker builder prune --all --force	2026-10-17T15:58:34.4025790Z 2026-10-17T15:58:34Z	INFO	[alpine] Detecting vulnerabilities...	os_version="3.24" repository="3.24" pkg_num=19
+check	Run docker builder prune --all --force	2026-10-17T15:58:34.4026684Z 2026-10-17T15:58:34Z	INFO	Number of language-specific files	num=1
+check	Run docker builder prune --all --force	2026-10-17T15:58:34.4027280Z 2026-10-17T15:58:34Z	INFO	[node-pkg] Detecting vulnerabilities...
+check	Run docker builder prune --all --force	2026-10-17T15:58:34.4028360Z 2026-10-17T15:58:34Z	WARN	Using severities from other vendors for some vulnerabilities. Read https://trivy.dev/docs/v0.76/guide/scanner/vulnerability#severity-selection for details.
+check	Run docker builder prune --all --force	2026-10-17T15:58:38.7482012Z 2026-10-17T15:58:38Z	INFO	[vuln] Vulnerability scanning is enabled
+check	Run docker builder prune --all --force	2026-10-17T15:58:38.7482611Z 2026-10-17T15:58:38Z	INFO	Detected OS	family="alpine" version="3.24.2"
+check	Run docker builder prune --all --force	2026-10-17T15:58:38.7483135Z 2026-10-17T15:58:38Z	INFO	[alpine] Detecting vulnerabilities...	os_version="3.24" repository="3.24" pkg_num=19
+check	Run docker builder prune --all --force	2026-10-17T15:58:38.7483582Z 2026-10-17T15:58:38Z	INFO	Number of language-specific files	num=1
+check	Run docker builder prune --all --force	2026-10-17T15:58:38.7484055Z 2026-10-17T15:58:38Z	INFO	[node-pkg] Detecting vulnerabilities...
+check	Run docker builder prune --all --force	2026-10-17T15:58:38.7484853Z 2026-10-17T15:58:38Z	WARN	Using severities from other vendors for some vulnerabilities. Read https://trivy.dev/docs/v0.76/guide/scanner/vulnerability#severity-selection for details.
+check	Run docker builder prune --all --force	2026-10-17T15:58:42.4603429Z 2026-10-17T15:58:42Z	INFO	[vuln] Vulnerability scanning is enabled
+check	Run docker builder prune --all --force	2026-10-17T15:58:42.4603996Z 2026-10-17T15:58:42Z	INFO	Detected OS	family="alpine" version="3.24.2"
+check	Run docker builder prune --all --force	2026-10-17T15:58:42.4604557Z 2026-10-17T15:58:42Z	INFO	[alpine] Detecting vulnerabilities...	os_version="3.24" repository="3.24" pkg_num=19
+check	Run docker builder prune --all --force	2026-10-17T15:58:42.4605009Z 2026-10-17T15:58:42Z	INFO	Number of language-specific files	num=1
+check	Run docker builder prune --all --force	2026-10-17T15:58:42.4605408Z 2026-10-17T15:58:42Z	INFO	[node-pkg] Detecting vulnerabilities...
+check	Run docker builder prune --all --force	2026-10-17T15:58:42.4606205Z 2026-10-17T15:58:42Z	WARN	Using severities from other vendors for some vulnerabilities. Read https://trivy.dev/docs/v0.76/guide/scanner/vulnerability#severity-selection for details.
+check	Run docker builder prune --all --force	2026-10-17T15:58:46.2637179Z 2026-10-17T15:58:46Z	INFO	[vuln] Vulnerability scanning is enabled
+check	Run docker builder prune --all --force	2026-10-17T15:58:46.2637809Z 2026-10-17T15:58:46Z	INFO	Detected OS	family="alpine" version="3.24.2"
+check	Run docker builder prune --all --force	2026-10-17T15:58:46.2638267Z 2026-10-17T15:58:46Z	INFO	[alpine] Detecting vulnerabilities...	os_version="3.24" repository="3.24" pkg_num=19
+check	Run docker builder prune --all --force	2026-10-17T15:58:46.2638605Z 2026-10-17T15:58:46Z	INFO	Number of language-specific files	num=1
+check	Run docker builder prune --all --force	2026-10-17T15:58:46.2638871Z 2026-10-17T15:58:46Z	INFO	[node-pkg] Detecting vulnerabilities...
+check	Run docker builder prune --all --force	2026-10-17T15:58:46.2639581Z 2026-10-17T15:58:46Z	WARN	Using severities from other vendors for some vulnerabilities. Read https://trivy.dev/docs/v0.76/guide/scanner/vulnerability#severity-selection for details.
+check	Run docker builder prune --all --force	2026-10-17T15:59:27.4187229Z 2026-10-17T15:59:23Z	INFO	[vuln] Vulnerability scanning is enabled
+check	Run docker builder prune --all --force	2026-10-17T15:59:27.4187854Z 2026-10-17T15:59:27Z	INFO	Detected OS	family="alpine" version="3.23.6"
+check	Run docker builder prune --all --force	2026-10-17T15:59:27.4188460Z 2026-10-17T15:59:27Z	INFO	[alpine] Detecting vulnerabilities...	os_version="3.23" repository="3.23" pkg_num=40
+check	Run docker builder prune --all --force	2026-10-17T15:59:27.4189031Z 2026-10-17T15:59:27Z	INFO	Number of language-specific files	num=2
+check	Run docker builder prune --all --force	2026-10-17T15:59:27.4199612Z 2026-10-17T15:59:27Z	INFO	[cargo] Detecting vulnerabilities...
+check	Run docker builder prune --all --force	2026-10-17T15:59:27.4200017Z 2026-10-17T15:59:27Z	INFO	[node-pkg] Detecting vulnerabilities...
+check	Run docker builder prune --all --force	2026-10-17T15:59:27.4200666Z 2026-10-17T15:59:27Z	WARN	Using severities from other vendors for some vulnerabilities. Read https://trivy.dev/docs/v0.76/guide/scanner/vulnerability#severity-selection for details.
+check	Run docker builder prune --all --force	2026-10-17T15:59:30.6407225Z 2026-10-17T15:59:30Z	INFO	[vuln] Vulnerability scanning is enabled
+check	Run docker builder prune --all --force	2026-10-17T15:59:30.6407715Z 2026-10-17T15:59:30Z	INFO	Detected OS	family="alpine" version="3.24.1"
+check	Run docker builder prune --all --force	2026-10-17T15:59:30.6408095Z 2026-10-17T15:59:30Z	INFO	[alpine] Detecting vulnerabilities...	os_version="3.24" repository="3.24" pkg_num=17
+check	Run docker builder prune --all --force	2026-10-17T15:59:30.6408490Z 2026-10-17T15:59:30Z	INFO	Number of language-specific files	num=1
+check	Run docker builder prune --all --force	2026-10-17T15:59:30.6409031Z 2026-10-17T15:59:30Z	INFO	[gobinary] Detecting vulnerabilities...
+check	Run docker builder prune --all --force	2026-10-17T15:59:30.6409612Z 2026-10-17T15:59:30Z	WARN	Using severities from other vendors for some vulnerabilities. Read https://trivy.dev/docs/v0.76/guide/scanner/vulnerability#severity-selection for details.
+check	Run docker builder prune --all --force	2026-10-17T15:59:31.4526878Z 2026-10-17T15:59:31Z	INFO	[vuln] Vulnerability scanning is enabled
+check	Run docker builder prune --all --force	2026-10-17T15:59:31.4537436Z 2026-10-17T15:59:31Z	INFO	Number of language-specific files	num=0
+check	Run docker builder prune --all --force	2026-10-17T16:00:10.3153886Z 2026-10-17T16:00:07Z	INFO	[vuln] Vulnerability scanning is enabled
+check	Run docker builder prune --all --force	2026-10-17T16:00:10.3168324Z 2026-10-17T16:00:10Z	INFO	Detected OS	family="alpine" version="3.23.6"
+check	Run docker builder prune --all --force	2026-10-17T16:00:10.3169710Z 2026-10-17T16:00:10Z	INFO	[alpine] Detecting vulnerabilities...	os_version="3.23" repository="3.23" pkg_num=47
+check	Run docker builder prune --all --force	2026-10-17T16:00:10.3186504Z 2026-10-17T16:00:10Z	INFO	Number of language-specific files	num=1
+check	Run docker builder prune --all --force	2026-10-17T16:00:10.3187225Z 2026-10-17T16:00:10Z	INFO	[node-pkg] Detecting vulnerabilities...
+check	Run docker builder prune --all --force	2026-10-17T16:00:10.3195389Z 2026-10-17T16:00:10Z	WARN	Using severities from other vendors for some vulnerabilities. Read https://trivy.dev/docs/v0.76/guide/scanner/vulnerability#severity-selection for details.
+check	Run docker builder prune --all --force	2026-10-17T16:00:11.8201504Z 2026-10-17T16:00:11Z	INFO	[vuln] Vulnerability scanning is enabled
+check	Run docker builder prune --all --force	2026-10-17T16:00:11.8226796Z 2026-10-17T16:00:11Z	INFO	Detected OS	family="alpine" version="3.24.2"
+check	Run docker builder prune --all --force	2026-10-17T16:00:11.8227801Z 2026-10-17T16:00:11Z	INFO	[alpine] Detecting vulnerabilities...	os_version="3.24" repository="3.24" pkg_num=17
+check	Run docker builder prune --all --force	2026-10-17T16:00:11.8244544Z 2026-10-17T16:00:11Z	INFO	Number of language-specific files	num=1
+check	Run docker builder prune --all --force	2026-10-17T16:00:11.8266623Z 2026-10-17T16:00:11Z	INFO	[gobinary] Detecting vulnerabilities...
+check	Run docker builder prune --all --force	2026-10-17T16:00:11.8274065Z 2026-10-17T16:00:11Z	WARN	Using severities from other vendors for some vulnerabilities. Read https://trivy.dev/docs/v0.76/guide/scanner/vulnerability#severity-selection for details.
+check	Run docker builder prune --all --force	2026-10-17T16:00:11.8873729Z ##[error]Process completed with exit code 1.

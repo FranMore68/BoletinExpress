@@ -1,0 +1,124 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 2.88kB done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/supabase/storage-api:v1.83.5
+#2 DONE 1.3s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 499B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 840.63kB 0.0s done
+#4 DONE 0.0s
+
+#5 [storage 1/4] FROM docker.io/supabase/storage-api:v1.83.5@sha256:11473750c5a07d82b010f51746c94c902405ce7576cdc74a070983cf19501742
+#5 resolve docker.io/supabase/storage-api:v1.83.5@sha256:11473750c5a07d82b010f51746c94c902405ce7576cdc74a070983cf19501742 done
+#5 sha256:5e343bdaed63d3d0cee0749945351c4060b1c87509f06db0b47417467b136677 271B / 271B 0.2s
+#5 sha256:5e343bdaed63d3d0cee0749945351c4060b1c87509f06db0b47417467b136677 271B / 271B 0.2s done
+#5 sha256:ccc0721c9756be7a40ad7fd8122b17b8d527f140fa7bb3449a724234f8f2df7d 589B / 589B 0.3s done
+#5 sha256:1a40023bf08561ebdb05f3c44ee7a77d5cb3655cc49b9bec5ff0b9e5487db12a 0B / 2.24MB 0.2s
+#5 sha256:96b98b70fd9a62f3e2183f7c722483fc7a9dc98bbf70abdac31d7ff131b28813 0B / 62.35MB 0.2s
+#5 sha256:e212d6d705a04ec1c2cc64af09ce93998bf7fedf34e7798f2bbb8dae3858755d 0B / 13.10MB 0.2s
+#5 sha256:161d854e403e9e3a8f3fa2463a094cd5a0999bab4c3aa9a8205c25d8022f9471 0B / 46.18kB 0.2s
+#5 sha256:1a40023bf08561ebdb05f3c44ee7a77d5cb3655cc49b9bec5ff0b9e5487db12a 2.24MB / 2.24MB 0.5s done
+#5 sha256:96b98b70fd9a62f3e2183f7c722483fc7a9dc98bbf70abdac31d7ff131b28813 5.24MB / 62.35MB 0.5s
+#5 sha256:161d854e403e9e3a8f3fa2463a094cd5a0999bab4c3aa9a8205c25d8022f9471 46.18kB / 46.18kB 0.2s done
+#5 sha256:96b98b70fd9a62f3e2183f7c722483fc7a9dc98bbf70abdac31d7ff131b28813 13.63MB / 62.35MB 0.6s
+#5 sha256:e212d6d705a04ec1c2cc64af09ce93998bf7fedf34e7798f2bbb8dae3858755d 3.15MB / 13.10MB 0.5s
+#5 sha256:3dda29914182784e700a8ffc30e41317e8452aa75d9e8e4cada9cddcaee73db3 0B / 658B 0.2s
+#5 sha256:abb845148e6df57ac286c4ef2881b10ab836bc8655a7dcc003ca3ff99bdd7bef 186.18kB / 186.18kB 0.2s done
+#5 sha256:96b98b70fd9a62f3e2183f7c722483fc7a9dc98bbf70abdac31d7ff131b28813 22.02MB / 62.35MB 0.8s
+#5 sha256:e212d6d705a04ec1c2cc64af09ce93998bf7fedf34e7798f2bbb8dae3858755d 13.10MB / 13.10MB 0.6s done
+#5 sha256:179fd9cce99dd7121edcf9f869db5adbc87a310501b2ee937a7d63cc949820fa 91B / 91B 0.1s done
+#5 sha256:96b98b70fd9a62f3e2183f7c722483fc7a9dc98bbf70abdac31d7ff131b28813 36.70MB / 62.35MB 0.9s
+#5 sha256:3dda29914182784e700a8ffc30e41317e8452aa75d9e8e4cada9cddcaee73db3 658B / 658B 0.4s done
+#5 sha256:96aaeaa43808b020462368b514d61563529732ab288f0f1c344de577e521a44d 0B / 101.66MB 0.2s
+#5 sha256:938607a8a9a350678a7c2d20e3169aba0c8c011f14e7a4415a2888d57d3f957a 445B / 445B 0.1s done
+#5 sha256:96b98b70fd9a62f3e2183f7c722483fc7a9dc98bbf70abdac31d7ff131b28813 47.19MB / 62.35MB 1.1s
+#5 sha256:96aaeaa43808b020462368b514d61563529732ab288f0f1c344de577e521a44d 6.29MB / 101.66MB 0.3s
+#5 sha256:9acc1219ab628b124f080c2dfd3adec0834bc74cf9e8643dbd505b41ee2ec704 0B / 1.26MB 0.2s
+#5 sha256:4a9740e994bb2318f0c8774ebe412c37b7e551d48a7771a959bfa3f2e3ab221d 0B / 56.63MB 0.2s
+#5 sha256:96b98b70fd9a62f3e2183f7c722483fc7a9dc98bbf70abdac31d7ff131b28813 52.43MB / 62.35MB 1.2s
+#5 sha256:9acc1219ab628b124f080c2dfd3adec0834bc74cf9e8643dbd505b41ee2ec704 1.26MB / 1.26MB 0.3s done
+#5 sha256:4a9740e994bb2318f0c8774ebe412c37b7e551d48a7771a959bfa3f2e3ab221d 5.24MB / 56.63MB 0.3s
+#5 sha256:96b98b70fd9a62f3e2183f7c722483fc7a9dc98bbf70abdac31d7ff131b28813 59.77MB / 62.35MB 1.4s
+#5 sha256:96aaeaa43808b020462368b514d61563529732ab288f0f1c344de577e521a44d 17.83MB / 101.66MB 0.6s
+#5 sha256:4a9740e994bb2318f0c8774ebe412c37b7e551d48a7771a959bfa3f2e3ab221d 10.49MB / 56.63MB 0.5s
+#5 sha256:96b98b70fd9a62f3e2183f7c722483fc7a9dc98bbf70abdac31d7ff131b28813 62.35MB / 62.35MB 1.5s done
+#5 sha256:96aaeaa43808b020462368b514d61563529732ab288f0f1c344de577e521a44d 25.17MB / 101.66MB 0.8s
+#5 sha256:4a9740e994bb2318f0c8774ebe412c37b7e551d48a7771a959bfa3f2e3ab221d 19.92MB / 56.63MB 0.6s
+#5 sha256:96aaeaa43808b020462368b514d61563529732ab288f0f1c344de577e521a44d 30.41MB / 101.66MB 0.9s
+#5 sha256:4a9740e994bb2318f0c8774ebe412c37b7e551d48a7771a959bfa3f2e3ab221d 30.41MB / 56.63MB 0.8s
+#5 sha256:96aaeaa43808b020462368b514d61563529732ab288f0f1c344de577e521a44d 39.85MB / 101.66MB 1.1s
+#5 sha256:4a9740e994bb2318f0c8774ebe412c37b7e551d48a7771a959bfa3f2e3ab221d 37.75MB / 56.63MB 0.9s
+#5 sha256:96aaeaa43808b020462368b514d61563529732ab288f0f1c344de577e521a44d 48.23MB / 101.66MB 1.2s
+#5 sha256:4a9740e994bb2318f0c8774ebe412c37b7e551d48a7771a959bfa3f2e3ab221d 42.99MB / 56.63MB 1.1s
+#5 sha256:96aaeaa43808b020462368b514d61563529732ab288f0f1c344de577e521a44d 58.72MB / 101.66MB 1.4s
+#5 sha256:4a9740e994bb2318f0c8774ebe412c37b7e551d48a7771a959bfa3f2e3ab221d 51.38MB / 56.63MB 1.2s
+#5 sha256:96aaeaa43808b020462368b514d61563529732ab288f0f1c344de577e521a44d 82.84MB / 101.66MB 1.7s
+#5 sha256:4a9740e994bb2318f0c8774ebe412c37b7e551d48a7771a959bfa3f2e3ab221d 56.63MB / 56.63MB 1.3s done
+#5 extracting sha256:4a9740e994bb2318f0c8774ebe412c37b7e551d48a7771a959bfa3f2e3ab221d
+#5 sha256:96aaeaa43808b020462368b514d61563529732ab288f0f1c344de577e521a44d 97.52MB / 101.66MB 1.8s
+#5 sha256:96aaeaa43808b020462368b514d61563529732ab288f0f1c344de577e521a44d 101.66MB / 101.66MB 1.9s done
+#5 extracting sha256:4a9740e994bb2318f0c8774ebe412c37b7e551d48a7771a959bfa3f2e3ab221d 0.5s done
+#5 DONE 2.9s
+
+#5 [storage 1/4] FROM docker.io/supabase/storage-api:v1.83.5@sha256:11473750c5a07d82b010f51746c94c902405ce7576cdc74a070983cf19501742
+#5 extracting sha256:9acc1219ab628b124f080c2dfd3adec0834bc74cf9e8643dbd505b41ee2ec704 0.0s done
+#5 extracting sha256:938607a8a9a350678a7c2d20e3169aba0c8c011f14e7a4415a2888d57d3f957a done
+#5 extracting sha256:96aaeaa43808b020462368b514d61563529732ab288f0f1c344de577e521a44d
+#5 extracting sha256:96aaeaa43808b020462368b514d61563529732ab288f0f1c344de577e521a44d 0.8s done
+#5 DONE 3.7s
+
+#5 [storage 1/4] FROM docker.io/supabase/storage-api:v1.83.5@sha256:11473750c5a07d82b010f51746c94c902405ce7576cdc74a070983cf19501742
+#5 extracting sha256:179fd9cce99dd7121edcf9f869db5adbc87a310501b2ee937a7d63cc949820fa done
+#5 extracting sha256:abb845148e6df57ac286c4ef2881b10ab836bc8655a7dcc003ca3ff99bdd7bef done
+#5 extracting sha256:3dda29914182784e700a8ffc30e41317e8452aa75d9e8e4cada9cddcaee73db3 done
+#5 extracting sha256:e212d6d705a04ec1c2cc64af09ce93998bf7fedf34e7798f2bbb8dae3858755d
+#5 extracting sha256:e212d6d705a04ec1c2cc64af09ce93998bf7fedf34e7798f2bbb8dae3858755d 0.2s done
+#5 DONE 3.9s
+
+#5 [storage 1/4] FROM docker.io/supabase/storage-api:v1.83.5@sha256:11473750c5a07d82b010f51746c94c902405ce7576cdc74a070983cf19501742
+#5 extracting sha256:161d854e403e9e3a8f3fa2463a094cd5a0999bab4c3aa9a8205c25d8022f9471 done
+#5 extracting sha256:96b98b70fd9a62f3e2183f7c722483fc7a9dc98bbf70abdac31d7ff131b28813
+#5 extracting sha256:96b98b70fd9a62f3e2183f7c722483fc7a9dc98bbf70abdac31d7ff131b28813 4.0s done
+#5 DONE 7.9s
+
+#5 [storage 1/4] FROM docker.io/supabase/storage-api:v1.83.5@sha256:11473750c5a07d82b010f51746c94c902405ce7576cdc74a070983cf19501742
+#5 extracting sha256:1a40023bf08561ebdb05f3c44ee7a77d5cb3655cc49b9bec5ff0b9e5487db12a 0.1s done
+#5 extracting sha256:ccc0721c9756be7a40ad7fd8122b17b8d527f140fa7bb3449a724234f8f2df7d done
+#5 extracting sha256:5e343bdaed63d3d0cee0749945351c4060b1c87509f06db0b47417467b136677 done
+#5 DONE 8.0s
+
+#6 [storage 2/4] COPY infra/supabase/storage-runtime/package.json infra/supabase/storage-runtime/package-lock.json /app/
+#6 DONE 0.5s
+
+#7 [storage 3/4] RUN npm install --omit=dev --ignore-scripts --no-audit --no-fund
+#7 2.108 
+#7 2.108 added 3 packages, removed 2 packages, and changed 11 packages in 2s
+#7 2.109 npm notice
+#7 2.109 npm notice New major version of npm available! 11.12.1 -> 12.2.0
+#7 2.109 npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.0
+#7 2.109 npm notice To update run: npm install -g npm@12.2.0
+#7 2.109 npm notice
+#7 DONE 2.1s
+
+#8 [storage 4/4] RUN rm -rf /usr/local/lib/node_modules/npm /usr/local/bin/npm /usr/local/bin/npx /opt/yarn* /usr/local/bin/yarn*
+#8 DONE 0.3s
+
+#9 exporting to image
+#9 exporting layers
+#9 exporting layers 0.3s done
+#9 exporting manifest sha256:479696cad63a063bd296a23b0ba69f0e5840cd916d579f8497d02eef92dc180e done
+#9 exporting config sha256:3b529636d91e07047243a02b2b5340a57b74b8efacb864b7c94587bf2b98b658 done
+#9 exporting attestation manifest sha256:ea3f223aea086e33a70200592a37568784f5c005baa6075bd6dc7eee2f8b436e done
+#9 exporting manifest list sha256:c15766205b3774ed6aee13c7b665c06b40a5d903ea8fa5c557232d0743bf9507 done
+#9 naming to docker.io/library/boletinexpress-storage:phase3 done
+#9 unpacking to docker.io/library/boletinexpress-storage:phase3 0.1s done
+#9 DONE 0.4s
+
+View build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux/8yfxzpchgygo80o077j9s7qhf

@@ -13,10 +13,20 @@
   "blockedBy": [
     "CVE-2026-32286 en Auth: github.com/jackc/pgproto3/v2 v2.3.3; sin version corregida conocida"
   ],
-  "localLimitation": "Docker Desktop no puede arrancar el disco virtual; interfaz disponible con Node, integracion completa verificada en Linux de CI",
-  "ci": "https://github.com/FranMore68/BoletinExpress/actions/runs/38948859820",
-  "testedCommit": "dfe0ae45f8b3b3fde34e19c4008b1fb72c84ac1a",
+  "localLimitation": null,
+  "ci": "https://github.com/FranMore68/BoletinExpress/actions/runs/39047620981",
+  "testedCommit": "d564b5ef85d9a42f95324ee2f4d03a2cc0b55154",
   "userAcceptance": false,
   "nextPhaseStarted": false,
-  "vpsModified": false
+  "vpsModified": false,
+  "localVerification": {
+    "date": "2026-10-17",
+    "platform": "macOS / Docker linux-arm64",
+    "pass": true,
+    "groups": 12,
+    "runtimeEvidence": "local-runtime-2026-10-17.json",
+    "integrationEvidence": "local-isolation-2026-10-17.json"
+  },
+  "securityEvidence": "audit-2026-10-17.json",
+  "securityAuditDate": "2026-10-17"
 }

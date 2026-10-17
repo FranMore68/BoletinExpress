@@ -33,4 +33,6 @@ Los límites del conjunto de datos suman 2240 MiB y 0,25 CPU, incluidos pasarela
 
 La retención, limpieza de reservas incompletas, créditos y formularios completos se incorporarán en sus fases. Las rutas documentales de fase 3 admiten borradores privados y PDF ficticios de prueba, con cinco archivos de hasta 2 MB. El contenido no se envía a IA.
 
-En el Mac actual, Docker Desktop no puede arrancar su disco virtual; la interfaz puede servirse con Node y las pruebas completas se realizan en el Linux temporal de CI. El diagnóstico está en `evidence/phase-3/docker-diagnosis.log`. No se ha eliminado ni restablecido ese disco. La alternativa nativa experimental de CLI 2.121.0 se descartó porque no admite servir nuestras plantillas de correo.
+Docker Desktop se recuperó el 17/10/2026 deteniendo sus procesos bloqueados con `docker desktop stop --force --timeout 30` y arrancándolo con `docker desktop start --timeout 45`. No se borraron su disco virtual ni los volúmenes. Los servicios se han reconstruido para arm64 y los doce grupos de integración han pasado también localmente; evidencias en `evidence/phase-3/local-runtime-2026-10-17.json` y `local-isolation-2026-10-17.json`.
+
+Para evitar cuotas inválidas en este Docker, todas son al menos 0,01 CPU. PostgreSQL recibe 0,05 CPU y Storage 0,10 CPU; se mantienen los totales anteriores. Storage usa el wget ya incluido en su imagen para comprobar `/status`, evitando arrancar otro proceso Node en cada sonda. Estos ajustes no sustituyen la prueba de capacidad del VPS.

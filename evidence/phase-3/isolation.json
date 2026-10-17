@@ -62,7 +62,7 @@
     {
       "test": "intentos de acceso limitados en servidor",
       "pass": true,
-      "evidence": "el sexto intento repetido queda limitado por cuota persistente"
+      "evidence": "seis operaciones con clave nueva: cinco 401 y un 429 por cuota persistente"
     }
   ]
 }

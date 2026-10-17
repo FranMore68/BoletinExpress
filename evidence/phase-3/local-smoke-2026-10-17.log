@@ -1,0 +1,9 @@
+{
+  "pass": true,
+  "checks": [
+    "pagina y cabeceras",
+    "liveness sin datos internos",
+    "liveness no permite escrituras",
+    "rutas privadas y fuentes no publicadas"
+  ]
+}

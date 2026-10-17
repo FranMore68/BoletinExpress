@@ -1,0 +1,129 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 2.88kB done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/supabase/postgres:17.11.0.004
+#2 DONE 1.3s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 499B done
+#3 DONE 0.0s
+
+#4 [database 1/4] FROM docker.io/supabase/postgres:17.11.0.004@sha256:6058a6759ab9268cff8ee70641d61f1bd75953316281b76427cf5a6b4db2eafc
+#4 resolve docker.io/supabase/postgres:17.11.0.004@sha256:6058a6759ab9268cff8ee70641d61f1bd75953316281b76427cf5a6b4db2eafc done
+#4 DONE 0.1s
+
+#5 [internal] load build context
+#5 transferring context: 472B 0.1s done
+#5 DONE 0.1s
+
+#4 [database 1/4] FROM docker.io/supabase/postgres:17.11.0.004@sha256:6058a6759ab9268cff8ee70641d61f1bd75953316281b76427cf5a6b4db2eafc
+#4 sha256:871bbb38bb0b318eb7016f31cb08fc1eac89ba6a89f59b6ea89193c29440b6d5 310B / 310B 0.1s done
+#4 sha256:6bfe7a2d28e1c9a50ee6edf52d46641193eda07105d8f59f9b590d00043226be 271B / 271B 0.2s done
+#4 sha256:78f21bec080055cdc39d66fb068aafc33de2eae78a3d7697b94ba989cc1ff6ed 0B / 5.28kB 0.2s
+#4 sha256:d257c890406ae550e525c3a87fef41e0a3f62f3b2a6fd3305e43ec891e593d1f 0B / 522B 0.2s
+#4 sha256:399d075e66ee038692390e3eac2889dddc20d1debca49eb9328ba38205cf60a2 0B / 14.71kB 0.2s
+#4 sha256:78f21bec080055cdc39d66fb068aafc33de2eae78a3d7697b94ba989cc1ff6ed 5.28kB / 5.28kB 0.3s done
+#4 sha256:d257c890406ae550e525c3a87fef41e0a3f62f3b2a6fd3305e43ec891e593d1f 522B / 522B 0.3s done
+#4 sha256:399d075e66ee038692390e3eac2889dddc20d1debca49eb9328ba38205cf60a2 14.71kB / 14.71kB 0.2s done
+#4 sha256:0f5f64f38b417a8ee0d5592c5ab9914d6d1a7bda17064307baeadde5c8f09253 9.97kB / 9.97kB 0.1s done
+#4 sha256:4053edcbc879acc95abbf492c69f8d16f0050ebb9828c5a1eff7247fb0ad07e7 8.67kB / 8.67kB 0.1s done
+#4 sha256:6551dd75dae7bac6877a4783874e619cf77ab2ee5cfe93b865881576d87fb555 634B / 634B 0.1s done
+#4 sha256:413448a3d1c3c2be0a645d0a4ab8eb72cbdd337c39e4f0caa8a8acbaf18e450d 396B / 396B 0.1s done
+#4 sha256:3cc183dfce348bed0a68d4d79a960e6d3f0ca400634160bf2d77904f6be055b8 334B / 334B 0.2s done
+#4 sha256:7af69fb7ba6cd68f90133b05e5b03c50e8f00048b62ab90b8c9e9644cde8224d 390B / 390B 0.1s done
+#4 sha256:6e7df10b27ce394270a0bd880e4256341444725056eed6af5d106ecd133f4929 359B / 359B 0.1s done
+#4 sha256:1da3a2679955598862bbf055630eb0c97e2c74d52e18412fd5480cab3b156142 4.44kB / 4.44kB 0.2s done
+#4 sha256:cc977fdb14decf8077a9b6867c020c7e1ce4dd30eff224f11c1efe9f17fa1e9c 1.61kB / 1.61kB 0.1s done
+#4 sha256:27fa679f6ca6bd37c03612eb2620b8b78c6f7d6654498952d46fdc7b23d837b8 276B / 276B 0.1s done
+#4 sha256:32377917db36dff674e230ff10f469c2d787f6d8db3bb2002638531c31b4e547 353B / 353B 0.1s done
+#4 sha256:513214828b2c6fcbc9013f7b68e9f041783494674a63f14b0b87398c388171cb 1.01kB / 1.01kB 0.1s done
+#4 sha256:1cb86cf889aa10dc60da1784b8c048c4727828e2548f1597b79ebc597e0e0f3d 1.99kB / 1.99kB 0.1s done
+#4 sha256:47cb6c124be2e40f5b21be86f0e9e0732da443dd25ba5e60772efacabd3ac9dc 2.40kB / 2.40kB 0.1s done
+#4 sha256:0767945c71b30744945642d27c361dbb7d8cbdadc517d556cae2a9be5b20acb5 8.64kB / 8.64kB 0.1s done
+#4 sha256:8408a6304b0bf4eb532b43943131bf933d8aec8d0a52fa6a58cf75522e4b0bd9 1.06kB / 1.06kB 0.1s done
+#4 sha256:5a958ca6f3be8fc411b6d56472a36e12138dee4ea7dfdd335ee924edb827c4a0 3.21kB / 3.21kB 0.1s done
+#4 sha256:dfbfc900caac668627c521f69059b8646178b5bc24211406a3d491b1c325d124 293B / 293B 0.1s done
+#4 sha256:f4c90f35bf5cf26682304397d9c76305ae75765e613133a573a2033ab309aab6 0B / 748.18kB 0.2s
+#4 sha256:64360ae4fa33bfc0d2fd5cdd7a6f5648bd426fbdf2b3523828b9d824779ae878 102.09kB / 102.09kB 0.2s
+#4 sha256:f4c90f35bf5cf26682304397d9c76305ae75765e613133a573a2033ab309aab6 748.18kB / 748.18kB 0.2s done
+#4 sha256:64360ae4fa33bfc0d2fd5cdd7a6f5648bd426fbdf2b3523828b9d824779ae878 102.09kB / 102.09kB 0.2s done
+#4 sha256:4eb25340d558c9d7dec1a21cfa4087a8dc6deb2abfef6874081ccdaf6d2ff353 1.02kB / 1.02kB 0.1s done
+#4 sha256:4cc2092ad78d5ee65076439a51e230ad6c2e5c42511dd840842e07595be2242d 0B / 355.62MB 0.2s
+#4 sha256:cfe822d4e34633167fedf699e9311d8d120b1b3f1ebbcf4a598344ffbed89d18 0B / 4.59MB 0.2s
+#4 sha256:ace1621be7ff15b54252f68393ac33181df7f3e095e36a5d9a9892031b357d31 4.19MB / 4.19MB 0.2s done
+#4 extracting sha256:ace1621be7ff15b54252f68393ac33181df7f3e095e36a5d9a9892031b357d31 0.0s done
+#4 sha256:cfe822d4e34633167fedf699e9311d8d120b1b3f1ebbcf4a598344ffbed89d18 4.59MB / 4.59MB 0.3s done
+#4 extracting sha256:cfe822d4e34633167fedf699e9311d8d120b1b3f1ebbcf4a598344ffbed89d18 0.1s done
+#4 sha256:4cc2092ad78d5ee65076439a51e230ad6c2e5c42511dd840842e07595be2242d 46.14MB / 355.62MB 0.8s
+#4 extracting sha256:4eb25340d558c9d7dec1a21cfa4087a8dc6deb2abfef6874081ccdaf6d2ff353 done
+#4 sha256:4cc2092ad78d5ee65076439a51e230ad6c2e5c42511dd840842e07595be2242d 77.59MB / 355.62MB 1.1s
+#4 sha256:4cc2092ad78d5ee65076439a51e230ad6c2e5c42511dd840842e07595be2242d 106.95MB / 355.62MB 1.4s
+#4 sha256:4cc2092ad78d5ee65076439a51e230ad6c2e5c42511dd840842e07595be2242d 138.41MB / 355.62MB 1.7s
+#4 sha256:4cc2092ad78d5ee65076439a51e230ad6c2e5c42511dd840842e07595be2242d 168.82MB / 355.62MB 2.0s
+#4 sha256:4cc2092ad78d5ee65076439a51e230ad6c2e5c42511dd840842e07595be2242d 201.33MB / 355.62MB 2.3s
+#4 sha256:4cc2092ad78d5ee65076439a51e230ad6c2e5c42511dd840842e07595be2242d 236.98MB / 355.62MB 2.6s
+#4 sha256:4cc2092ad78d5ee65076439a51e230ad6c2e5c42511dd840842e07595be2242d 267.39MB / 355.62MB 2.9s
+#4 sha256:4cc2092ad78d5ee65076439a51e230ad6c2e5c42511dd840842e07595be2242d 300.94MB / 355.62MB 3.2s
+#4 sha256:4cc2092ad78d5ee65076439a51e230ad6c2e5c42511dd840842e07595be2242d 319.82MB / 355.62MB 3.3s
+#4 sha256:4cc2092ad78d5ee65076439a51e230ad6c2e5c42511dd840842e07595be2242d 353.37MB / 355.62MB 3.6s
+#4 sha256:4cc2092ad78d5ee65076439a51e230ad6c2e5c42511dd840842e07595be2242d 355.62MB / 355.62MB 3.7s done
+#4 extracting sha256:4cc2092ad78d5ee65076439a51e230ad6c2e5c42511dd840842e07595be2242d
+#4 extracting sha256:4cc2092ad78d5ee65076439a51e230ad6c2e5c42511dd840842e07595be2242d 3.8s done
+#4 DONE 8.5s
+
+#4 [database 1/4] FROM docker.io/supabase/postgres:17.11.0.004@sha256:6058a6759ab9268cff8ee70641d61f1bd75953316281b76427cf5a6b4db2eafc
+#4 extracting sha256:64360ae4fa33bfc0d2fd5cdd7a6f5648bd426fbdf2b3523828b9d824779ae878
+#4 extracting sha256:64360ae4fa33bfc0d2fd5cdd7a6f5648bd426fbdf2b3523828b9d824779ae878 0.2s done
+#4 DONE 8.7s
+
+#4 [database 1/4] FROM docker.io/supabase/postgres:17.11.0.004@sha256:6058a6759ab9268cff8ee70641d61f1bd75953316281b76427cf5a6b4db2eafc
+#4 extracting sha256:f4c90f35bf5cf26682304397d9c76305ae75765e613133a573a2033ab309aab6 done
+#4 extracting sha256:dfbfc900caac668627c521f69059b8646178b5bc24211406a3d491b1c325d124 done
+#4 extracting sha256:5a958ca6f3be8fc411b6d56472a36e12138dee4ea7dfdd335ee924edb827c4a0 done
+#4 extracting sha256:8408a6304b0bf4eb532b43943131bf933d8aec8d0a52fa6a58cf75522e4b0bd9 done
+#4 extracting sha256:47cb6c124be2e40f5b21be86f0e9e0732da443dd25ba5e60772efacabd3ac9dc done
+#4 extracting sha256:0767945c71b30744945642d27c361dbb7d8cbdadc517d556cae2a9be5b20acb5 done
+#4 extracting sha256:1cb86cf889aa10dc60da1784b8c048c4727828e2548f1597b79ebc597e0e0f3d done
+#4 extracting sha256:513214828b2c6fcbc9013f7b68e9f041783494674a63f14b0b87398c388171cb done
+#4 extracting sha256:32377917db36dff674e230ff10f469c2d787f6d8db3bb2002638531c31b4e547 done
+#4 extracting sha256:27fa679f6ca6bd37c03612eb2620b8b78c6f7d6654498952d46fdc7b23d837b8 done
+#4 extracting sha256:cc977fdb14decf8077a9b6867c020c7e1ce4dd30eff224f11c1efe9f17fa1e9c done
+#4 extracting sha256:1da3a2679955598862bbf055630eb0c97e2c74d52e18412fd5480cab3b156142 done
+#4 extracting sha256:6e7df10b27ce394270a0bd880e4256341444725056eed6af5d106ecd133f4929 done
+#4 extracting sha256:7af69fb7ba6cd68f90133b05e5b03c50e8f00048b62ab90b8c9e9644cde8224d done
+#4 extracting sha256:3cc183dfce348bed0a68d4d79a960e6d3f0ca400634160bf2d77904f6be055b8 done
+#4 extracting sha256:413448a3d1c3c2be0a645d0a4ab8eb72cbdd337c39e4f0caa8a8acbaf18e450d done
+#4 extracting sha256:6551dd75dae7bac6877a4783874e619cf77ab2ee5cfe93b865881576d87fb555 done
+#4 extracting sha256:4053edcbc879acc95abbf492c69f8d16f0050ebb9828c5a1eff7247fb0ad07e7 done
+#4 extracting sha256:0f5f64f38b417a8ee0d5592c5ab9914d6d1a7bda17064307baeadde5c8f09253 done
+#4 extracting sha256:399d075e66ee038692390e3eac2889dddc20d1debca49eb9328ba38205cf60a2 done
+#4 extracting sha256:d257c890406ae550e525c3a87fef41e0a3f62f3b2a6fd3305e43ec891e593d1f done
+#4 extracting sha256:6bfe7a2d28e1c9a50ee6edf52d46641193eda07105d8f59f9b590d00043226be done
+#4 extracting sha256:78f21bec080055cdc39d66fb068aafc33de2eae78a3d7697b94ba989cc1ff6ed done
+#4 extracting sha256:871bbb38bb0b318eb7016f31cb08fc1eac89ba6a89f59b6ea89193c29440b6d5 done
+#4 DONE 8.8s
+
+#6 [database 2/4] RUN apk add --no-cache su-exec=0.3-r0 && rm /usr/local/bin/gosu
+#6 0.356 OK: 24.2 MiB in 40 packages
+#6 DONE 0.5s
+
+#7 [database 3/4] RUN printf '#!/bin/sh\nexec /sbin/su-exec "$@"\n' > /usr/local/bin/gosu && chmod 755 /usr/local/bin/gosu
+#7 DONE 0.1s
+
+#8 [database 4/4] COPY infra/supabase/roles.sql /docker-entrypoint-initdb.d/init-scripts/99-roles.sql
+#8 DONE 0.0s
+
+#9 exporting to image
+#9 exporting layers 0.0s done
+#9 exporting manifest sha256:287bdca3e1fcb7134b7d8d48e8b22de97fb8b1ddd385283a2d5fc8268729d1a7 done
+#9 exporting config sha256:462069be194c442a3f737c7bd107e8bfb25d4e26df000ff919af2bf8ca202397 done
+#9 exporting attestation manifest sha256:597c1b760cfffe8aef2477f5bfdae6382bb5ab3b65012d49f899b53c8bf26c8f done
+#9 exporting manifest list sha256:84ce85eae9937c42553d9eaec2b5b29597aa1325273b7362a8831606ade44d72 done
+#9 naming to docker.io/library/boletinexpress-postgres:phase3 done
+#9 unpacking to docker.io/library/boletinexpress-postgres:phase3 0.0s done
+#9 DONE 0.1s
+
+View build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux/pgqy6cbi7w5tyh3iomfezgimi

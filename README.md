@@ -2,7 +2,7 @@
 
 Aplicación prevista para preparar BRIE y CIE ELEC-1 con revisión humana, interfaz ES/CA y datos ficticios durante la evaluación.
 
-**Estado actual: fases 0, 1 y 2 aceptadas; fase 3 verificada funcionalmente y abierta por un aviso alto de seguridad en Auth.** Registro, confirmación, recuperación y almacenamiento privado ES/CA implementados; 12 grupos de integración superados en Linux de CI. La interfaz está disponible en localhost mediante Node; el acceso completo local queda pendiente de recuperar Docker Desktop. Véase [el informe de fase 3](docs/fase-3.md).
+**Estado actual: fases 0, 1 y 2 aceptadas; fase 3 verificada funcionalmente y abierta por un aviso alto de seguridad en Auth.** Registro, confirmación, recuperación y almacenamiento privado ES/CA implementados; 12 grupos de integración superados en Linux de CI y en los contenedores del Mac. Docker Desktop está recuperado y el acceso completo local está disponible en `http://127.0.0.1:3000/acceso?lang=es`; los mensajes de confirmación y recuperación se capturan en `http://127.0.0.1:54324`. Véase [el informe de fase 3](docs/fase-3.md).
 
 - [Interfaz ES/CA y pruebas de fase 2](docs/fase-2.md)
 - [Base técnica y pruebas de fase 1](docs/fase-1.md)

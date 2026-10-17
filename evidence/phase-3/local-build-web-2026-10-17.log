@@ -1,0 +1,119 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 2.88kB done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/node:24-alpine@sha256:44fce696f38ba8c987c4db89954051000bbd05ffd8d8659ba15ed4a8602e937f
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 499B done
+#3 DONE 0.0s
+
+#4 [base 1/2] FROM docker.io/library/node:24-alpine@sha256:44fce696f38ba8c987c4db89954051000bbd05ffd8d8659ba15ed4a8602e937f
+#4 resolve docker.io/library/node:24-alpine@sha256:44fce696f38ba8c987c4db89954051000bbd05ffd8d8659ba15ed4a8602e937f done
+#4 DONE 0.0s
+
+#5 [internal] load build context
+#5 transferring context: 3.23MB 0.0s done
+#5 DONE 0.0s
+
+#6 [base 2/2] WORKDIR /app
+#6 CACHED
+
+#7 [dependencies 1/2] COPY package.json package-lock.json ./
+#7 DONE 0.0s
+
+#8 [dependencies 2/2] RUN npm ci --ignore-scripts
+#8 6.084 
+#8 6.084 added 66 packages, and audited 67 packages in 6s
+#8 6.084 
+#8 6.084 16 packages are looking for funding
+#8 6.084   run `npm fund` for details
+#8 6.085 
+#8 6.085 found 0 vulnerabilities
+#8 6.086 npm notice
+#8 6.086 npm notice New major version of npm available! 11.19.1 -> 12.2.0
+#8 6.086 npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.0
+#8 6.086 npm notice To update run: npm install -g npm@12.2.0
+#8 6.086 npm notice
+#8 DONE 6.4s
+
+#9 [build 1/4] COPY next.config.ts tsconfig.json next-env.d.ts postcss.config.mjs ./
+#9 DONE 0.1s
+
+#10 [build 2/4] COPY src ./src
+#10 DONE 0.0s
+
+#11 [build 3/4] COPY public ./public
+#11 DONE 0.0s
+
+#12 [build 4/4] RUN npm run build
+#12 0.133 
+#12 0.133 > boletinexpress@0.1.0 build
+#12 0.133 > next build
+#12 0.133 
+#12 0.314 ▲ Next.js 16.4.2 (Turbopack)
+#12 0.333 ✓ Running next.config.ts took 19ms
+#12 0.339 
+#12 0.352   Creating an optimized production build ...
+#12 2.029 ✓ Compiled successfully in 1675ms
+#12 2.031   Running TypeScript ...
+#12 2.426   Finished TypeScript in 395ms ...
+#12 2.428   Collecting page data using 9 workers ...
+#12 2.833   Generating static pages using 9 workers (0/9) ...
+#12 2.899   Generating static pages using 9 workers (2/9) 
+#12 2.922   Generating static pages using 9 workers (4/9) 
+#12 2.922   Generating static pages using 9 workers (6/9) 
+#12 2.935 ✓ Generating static pages using 9 workers (9/9) in 102ms
+#12 2.938   Finalizing page optimization ...
+#12 3.014 
+#12 3.015 Route (app)
+#12 3.015 ┌ ○ /
+#12 3.015 ├ ○ /_not-found
+#12 3.015 ├ ○ /acceso
+#12 3.015 ├ ƒ /api/auth/[action]
+#12 3.015 ├ ƒ /api/health
+#12 3.015 ├ ƒ /api/private/documents
+#12 3.015 ├ ƒ /api/private/documents/[id]
+#12 3.015 ├ ƒ /api/private/documents/[id]/files
+#12 3.015 ├ ƒ /api/private/files/[id]
+#12 3.015 ├ ○ /auth/confirm
+#12 3.015 ├ ○ /auth/reset
+#12 3.015 ├ ○ /cuenta
+#12 3.015 └ ○ /icon.svg
+#12 3.015 
+#12 3.015 
+#12 3.015 ƒ Proxy (Middleware)
+#12 3.015 
+#12 3.015 ○  (Static)   prerendered as static content
+#12 3.015 ƒ  (Dynamic)  server-rendered on demand
+#12 3.016 
+#12 DONE 3.1s
+
+#13 [runtime 1/1] RUN rm -rf /usr/local/lib/node_modules/npm /usr/local/bin/npm /usr/local/bin/npx /opt/yarn* /usr/local/bin/yarn*
+#13 CACHED
+
+#14 [web 1/3] COPY --from=build --chown=node:node /app/.next/standalone ./
+#14 DONE 0.1s
+
+#15 [web 2/3] COPY --from=build --chown=node:node /app/.next/static ./.next/static
+#15 DONE 0.0s
+
+#16 [web 3/3] COPY --from=build --chown=node:node /app/public ./public
+#16 DONE 0.0s
+
+#17 exporting to image
+#17 exporting layers
+#17 exporting layers 1.0s done
+#17 exporting manifest sha256:b2ee4998c7de1bd3572e31ecba74e1f0ad554a7e81fb8ebd2b8b7f0f8ddc7dbe done
+#17 exporting config sha256:588a78ca93bb00360ba6b41baa38d695db8d6733fa3763f6724f9d3f23cb89fb done
+#17 exporting attestation manifest sha256:ad35d0d06df4c761370c8621f4ebb3baa8169331069f4e5c8ee24583ede96ade done
+#17 exporting manifest list sha256:f6fa29bfd4c407f1273dd47c25c894521c37382000d158c5ab2aedc03100dac9 done
+#17 naming to docker.io/library/boletinexpress-web:phase1 done
+#17 unpacking to docker.io/library/boletinexpress-web:phase1
+#17 unpacking to docker.io/library/boletinexpress-web:phase1 0.2s done
+#17 DONE 1.3s
+
+View build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux/lrztro4lxu12v05l546642yws
