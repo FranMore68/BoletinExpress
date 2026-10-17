@@ -16,7 +16,7 @@ La transacción mantiene el orden cuenta→documento, un movimiento por document
 
 El cierre conserva el objeto PDF inmutable que se revisó, borra los datos de trabajo y retira el acceso a las fuentes. La cola de limpieza no puede borrar el PDF final. El alta de objetos toma un bloqueo compartido sobre el borrador para serializarse con la validación y evitar fuentes tardías. La verificación rechaza cualquier AcroForm, incluso vacío, además de comprobar hash y dos páginas; tiene una prueba específica. No se modifican plantillas ni adaptadores PDF.
 
-Se corrige la clasificación de fallos temporales de Auth para no presentarlos como sesión caducada. El editor no vuelve a mostrarse como editable si refrescar la cuenta falla después de confirmar el cierre. La casilla de revisión tiene tamaño propio y etiqueta clicable para no heredar el ancho de los campos de texto.
+Se corrige la clasificación de fallos temporales de Auth para no presentarlos como sesión caducada. El editor no vuelve a mostrarse como editable si refrescar la cuenta falla después de confirmar el cierre. Regenerar una vista previa ya lista vuelve a montar el visor para renovar el comprobante y permitir una nueva confirmación; evita dejar el botón bloqueado con una revisión eliminada. La casilla de revisión tiene tamaño propio y etiqueta clicable para no heredar el ancho de los campos de texto.
 
 Las claves quedan en .secrets, excluidas de Git, sin introducir claves administrativas en el frontal. El verificador de secretos, formato, tipos, 25 pruebas de aplicación, 43 pruebas PDF y 267 casos del catálogo han pasado. La batería final de créditos verifica 11 grupos. No hay cambios destructivos en volúmenes ni credenciales existentes.
 

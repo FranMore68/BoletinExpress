@@ -6,7 +6,7 @@
 > boletinexpress@0.1.0 lint
 > biome check .
 
-Checked 90 files in 40ms. No fixes applied.
+Checked 90 files in 39ms. No fixes applied.
 
 > boletinexpress@0.1.0 typecheck
 > next typegen && tsc --noEmit
@@ -17,31 +17,31 @@ Generating route types...
 > boletinexpress@0.1.0 test
 > node --test tests/*.test.ts
 
-✔ las mutaciones requieren el origen propio y rechazan peticiones cruzadas (10.279792ms)
-✔ validación de credenciales, identificadores y tamaño del cuerpo (2.677833ms)
-✔ el permiso de recuperación se vincula a usuario y sesión (0.782125ms)
-✔ el acceso y almacenamiento tienen mensajes completos en ES y CA (0.219959ms)
-✔ admite el hash PKCE oficial sin aceptar formatos arbitrarios (0.286458ms)
-✔ todos los campos del BRIE coinciden con el inventario PDF aprobado (3.148916ms)
-✔ el formulario conserva No, cero y correcciones vaciadas (0.145125ms)
-✔ rechaza campos inventados, tipos incorrectos, opciones desconocidas y contenido excesivo (0.195084ms)
-✔ la plantilla privada es idéntica al original y la fuente al recurso de fase 0 (7.508291ms)
-✔ los 70 campos y las opciones CIE conservan el inventario aprobado y etiquetas ES/CA (3.116834ms)
-✔ las ramas y CUPS se excluyen al cambiar la selección sin borrar los valores locales (0.161083ms)
-✔ CIE admite borradores incompletos y cero; rechaza códigos postales, ramas y opciones incompatibles (0.316666ms)
-✔ el fondo CIE privado es idéntico al estático aprobado y los campos técnicos conservan unidades (4.213208ms)
-✔ el contrato SQL CIE coincide con las restricciones de entrada de los 70 campos (1.375167ms)
-✔ el comprobante vincula usuario, sesión, documento, revisión y PDF por 30 minutos (0.93325ms)
-✔ modificar cualquier contenido o firma del comprobante invalida la revisión (0.313875ms)
-✔ el cobro exige bytes íntegros, dos páginas y ausencia de formulario interactivo (11.143917ms)
-✔ las propuestas de ejemplo conservan cambios manuales, incluidos campos vaciados (1.573208ms)
-✔ el cierre de la demo es idempotente y bloquea cambios del ejemplo (0.287125ms)
-✔ la demo impide validar sin datos o con saldo simulado insuficiente (0.358334ms)
-✔ tres borradores activos y sus identificadores se mantienen coherentes al eliminar uno (0.153209ms)
-✔ cada mensaje dispone de ES y CA y conserva sus variables de interpolación (1.808708ms)
-✔ bloquea secretos y entornos privados antes de publicar (1.142875ms)
-✔ permite referencias a secretos pero no contraseñas incrustadas en URI (0.072166ms)
-✔ worker arranca sin credenciales, expone solo liveness y se detiene (69.304292ms)
+✔ las mutaciones requieren el origen propio y rechazan peticiones cruzadas (12.230125ms)
+✔ validación de credenciales, identificadores y tamaño del cuerpo (2.218625ms)
+✔ el permiso de recuperación se vincula a usuario y sesión (0.398125ms)
+✔ el acceso y almacenamiento tienen mensajes completos en ES y CA (0.100708ms)
+✔ admite el hash PKCE oficial sin aceptar formatos arbitrarios (0.102459ms)
+✔ todos los campos del BRIE coinciden con el inventario PDF aprobado (2.137708ms)
+✔ el formulario conserva No, cero y correcciones vaciadas (0.151417ms)
+✔ rechaza campos inventados, tipos incorrectos, opciones desconocidas y contenido excesivo (0.15775ms)
+✔ la plantilla privada es idéntica al original y la fuente al recurso de fase 0 (5.988625ms)
+✔ los 70 campos y las opciones CIE conservan el inventario aprobado y etiquetas ES/CA (1.883625ms)
+✔ las ramas y CUPS se excluyen al cambiar la selección sin borrar los valores locales (0.141083ms)
+✔ CIE admite borradores incompletos y cero; rechaza códigos postales, ramas y opciones incompatibles (0.290125ms)
+✔ el fondo CIE privado es idéntico al estático aprobado y los campos técnicos conservan unidades (3.22725ms)
+✔ el contrato SQL CIE coincide con las restricciones de entrada de los 70 campos (0.876667ms)
+✔ el comprobante vincula usuario, sesión, documento, revisión y PDF por 30 minutos (1.018208ms)
+✔ modificar cualquier contenido o firma del comprobante invalida la revisión (0.3615ms)
+✔ el cobro exige bytes íntegros, dos páginas y ausencia de formulario interactivo (11.494666ms)
+✔ las propuestas de ejemplo conservan cambios manuales, incluidos campos vaciados (0.657542ms)
+✔ el cierre de la demo es idempotente y bloquea cambios del ejemplo (0.109125ms)
+✔ la demo impide validar sin datos o con saldo simulado insuficiente (0.177125ms)
+✔ tres borradores activos y sus identificadores se mantienen coherentes al eliminar uno (0.757916ms)
+✔ cada mensaje dispone de ES y CA y conserva sus variables de interpolación (0.493375ms)
+✔ bloquea secretos y entornos privados antes de publicar (3.69325ms)
+✔ permite referencias a secretos pero no contraseñas incrustadas en URI (0.216208ms)
+✔ worker arranca sin credenciales, expone solo liveness y se detiene (72.485541ms)
 ℹ tests 25
 ℹ suites 0
 ℹ pass 25
@@ -49,9 +49,9 @@ Generating route types...
 ℹ cancelled 0
 ℹ skipped 0
 ℹ todo 0
-ℹ duration_ms 185.399125
+ℹ duration_ms 176.065875
 
 > boletinexpress@0.1.0 check:secrets
 > node scripts/check-secrets.mjs
 
-Sin patrones de secretos detectados en 875 archivos versionables.
+Sin patrones de secretos detectados en 880 archivos versionables.

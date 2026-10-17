@@ -49,6 +49,7 @@ export function DocumentEditor({
   const [preview, setPreview] = useState<Preview>(null);
   const [error, setError] = useState<AuthKey | null>(null);
   const [saved, setSaved] = useState(false);
+  const [previewRender, setPreviewRender] = useState(0);
   const [receipt, setReceipt] = useState<string | null>(null);
   const [reviewed, setReviewed] = useState(false);
   const rendered = useCallback((value: string | null) => {
@@ -142,6 +143,7 @@ export function DocumentEditor({
       });
       setPreview(r.preview);
       rendered(null);
+      setPreviewRender((value) => value + 1);
     } catch (e) {
       setError(errorKey(e));
     } finally {
@@ -280,6 +282,7 @@ export function DocumentEditor({
               {tr("openPreview")}
             </a>
             <PdfPreview
+              key={previewRender}
               label={tr(model === "CIE" ? "reviewCie" : "reviewBrie")}
               url={`${base}/preview/file?revision=${revision}`}
               failure={tr("unavailable")}
