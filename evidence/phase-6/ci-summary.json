@@ -1,0 +1,90 @@
+{
+  "pass": true,
+  "runId": 39077607312,
+  "url": "https://github.com/FranMore68/BoletinExpress/actions/runs/39077607312",
+  "testedCommit": "54718ed66e2f56d541e20b7c86464c4b2a4cab0f",
+  "applicationTests": 25,
+  "pdfTests": 43,
+  "integrationGroups": {
+    "access": 12,
+    "brie": 8,
+    "cie": 8,
+    "credits": 11
+  },
+  "totalIntegrationGroups": 39,
+  "catalogCases": 267,
+  "images": {
+    "web": {
+      "high": 0,
+      "critical": 0,
+      "createdAt": "2026-10-17T23:19:36.811069897Z",
+      "imageId": "sha256:d70719bbddad1d2b57c60b6cad6cc84ab5fcb3c3f0f8f351d3ebdd34f30fccb7",
+      "scanTargets": 2,
+      "coverageNote": "Inventario disponible"
+    },
+    "worker": {
+      "high": 0,
+      "critical": 0,
+      "createdAt": "2026-10-17T23:19:41.301214446Z",
+      "imageId": "sha256:0443316aeee684a05e2f30c4a9939a40104d8591b7b69e4e9ae5278e0bde0e87",
+      "scanTargets": 2,
+      "coverageNote": "Inventario disponible"
+    },
+    "gateway": {
+      "high": 0,
+      "critical": 0,
+      "createdAt": "2026-10-17T23:19:44.363596078Z",
+      "imageId": "sha256:7c09f6ec2660c8584d45c69f6e1afa88cca2053960cd616ecd94320ab8ae8b73",
+      "scanTargets": 2,
+      "coverageNote": "Inventario disponible"
+    },
+    "templates": {
+      "high": 0,
+      "critical": 0,
+      "createdAt": "2026-10-17T23:19:47.653485919Z",
+      "imageId": "sha256:0f06025f6316b2e27875761bd79ea8243f8eb399d1d54defc2beb891691f3995",
+      "scanTargets": 2,
+      "coverageNote": "Inventario disponible"
+    },
+    "postgres": {
+      "high": 0,
+      "critical": 0,
+      "createdAt": "2026-10-17T23:20:21.295171371Z",
+      "imageId": "sha256:5f3ed3f287916e2c792ecc63fa601aceb42e7c40610d7cf45ad155bebb7abc6c",
+      "scanTargets": 3,
+      "coverageNote": "Inventario disponible"
+    },
+    "auth": {
+      "high": 0,
+      "critical": 0,
+      "createdAt": "2026-10-17T23:20:24.083037486Z",
+      "imageId": "sha256:a637ba419655e7afd2ec4f96ab3571bff7686e95cb88349ac346def9297713a6",
+      "scanTargets": 2,
+      "coverageNote": "Inventario disponible"
+    },
+    "rest": {
+      "high": 0,
+      "critical": 0,
+      "createdAt": "2026-10-17T23:20:24.71899669Z",
+      "imageId": "sha256:fc3d286fec899d5a5bebbb98eac771ced1ccaa44deac8ce2fc23fe5d262eb3d9",
+      "scanTargets": 0,
+      "coverageNote": "Sin inventario de paquetes en la imagen estática; no cubre dependencias Haskell"
+    },
+    "storage": {
+      "high": 0,
+      "critical": 0,
+      "createdAt": "2026-10-17T23:21:10.002934539Z",
+      "imageId": "sha256:f6720f1404fef34ecbe66940efa0e5c98c4eb9c6c68407f4d7f4b4dfccbb7eb3",
+      "scanTargets": 2,
+      "coverageNote": "Inventario disponible"
+    },
+    "mail": {
+      "high": 0,
+      "critical": 0,
+      "createdAt": "2026-10-17T23:21:11.187360558Z",
+      "imageId": "sha256:978742ab0aca1fb510b407aa54d3cc9fb1d51ca4988ce0bc6fbdb1fdc6afbc4c",
+      "scanTargets": 2,
+      "coverageNote": "Inventario disponible"
+    }
+  }
+}

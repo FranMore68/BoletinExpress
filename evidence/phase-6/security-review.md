@@ -5,7 +5,7 @@ Alcance: diff completo respecto a e6c0678. Migración 004, saldo y movimientos, 
 ## Hallazgos por severidad
 
 - Sin hallazgos altos o críticos detectados en el cambio revisado. Las operaciones exigen sesión confirmada y activa, propietario, origen propio, revisión y SHA-256. El precio procede del tipo documental en SQL, nunca del cliente.
-- Observación: Storage conserva 30 avisos moderados de dependencias transitivas ya existentes; aplicación y worker no notifican vulnerabilidades. No se añaden ni cambian dependencias. La auditoría de las nueve imágenes debe verificarse en CI antes del cierre de fase.
+- Observación: Storage conserva 30 avisos moderados de dependencias transitivas ya existentes; aplicación y worker no notifican vulnerabilidades. No se añaden ni cambian dependencias. La auditoría de las nueve imágenes en CI no detecta altas ni críticas. PostgREST es una imagen estática sin inventario de paquetes para Trivy; no se afirma cobertura de sus dependencias Haskell.
 - Observación operativa: ocho peticiones HTTP simultáneas alcanzaron el plazo de Auth con las cuotas iniciales. Se devuelve 503 recuperable, se han redistribuido las cuotas conservando 1 CPU y se prueban por separado ocho transacciones reales con un solo cargo, el doble clic HTTP y tres CIE que compiten por 10 KC. La prueba de capacidad de dos usuarios en el VPS sigue perteneciendo a fase 10.
 
 ## Correcciones y comprobaciones
@@ -18,7 +18,7 @@ El cierre conserva el objeto PDF inmutable que se revisó, borra los datos de tr
 
 Se corrige la clasificación de fallos temporales de Auth para no presentarlos como sesión caducada. El editor no vuelve a mostrarse como editable si refrescar la cuenta falla después de confirmar el cierre. Regenerar una vista previa ya lista vuelve a montar el visor para renovar el comprobante y permitir una nueva confirmación; evita dejar el botón bloqueado con una revisión eliminada. La casilla de revisión tiene tamaño propio y etiqueta clicable para no heredar el ancho de los campos de texto.
 
-Las claves quedan en .secrets, excluidas de Git, sin introducir claves administrativas en el frontal. El verificador de secretos, formato, tipos, 25 pruebas de aplicación, 43 pruebas PDF y 267 casos del catálogo han pasado. La batería final de créditos verifica 11 grupos. No hay cambios destructivos en volúmenes ni credenciales existentes.
+Las claves quedan en .secrets, excluidas de Git, sin introducir claves administrativas en el frontal. El verificador de secretos, formato, tipos, 25 pruebas de aplicación, 43 pruebas PDF y 267 casos del catálogo han pasado. La batería final de créditos verifica 11 grupos. CI 39077607312 supera instalación limpia, 39 grupos de integración y nueve auditorías; los informes originales están descargados y comprobados en evidence/phase-6/ci. La revisión repetida sobre un PDF listo y el rechazo por saldo insuficiente están comprobados también en la interfaz. No hay cambios destructivos en volúmenes ni credenciales existentes.
 
 Riesgo: cambio aditivo del piloto con datos ficticios; quedan observaciones de dependencias moderadas y capacidad, documentadas y sujetas a los hitos previstos.
 

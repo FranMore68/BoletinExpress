@@ -2,9 +2,9 @@
 
 Aplicación prevista para preparar BRIE y CIE ELEC-1 con revisión humana, interfaz ES/CA y datos ficticios durante la evaluación.
 
-**Estado actual: fases 0 a 5 aceptadas; fase 6 en comprobación.** Se incorporan saldo real de prueba, movimientos y validación transaccional de BRIE y CIE vinculada al PDF revisado. Véase [el informe de fase 6](docs/fase-6.md).
+**Estado actual: fases 0 a 5 aceptadas; fase 6 completada técnicamente y pendiente de aceptación.** Se incorporan saldo real de prueba, movimientos y validación transaccional de BRIE y CIE vinculada al PDF revisado. Véase [el informe de fase 6](docs/fase-6.md).
 
-El entorno local está disponible en `http://127.0.0.1:3000/acceso?lang=es`; los correos de evaluación se capturan en `http://127.0.0.1:54324`. El VPS y Control-Contracts-ATC no se han modificado. CI ha superado 22 pruebas de aplicación, 43 pruebas PDF, 267 casos de catálogo y 28 grupos de integración. Nueve imágenes sin avisos altos ni críticos.
+El entorno local está disponible en `http://127.0.0.1:3000/acceso?lang=es`; los correos de evaluación se capturan en `http://127.0.0.1:54324`. El VPS y Control-Contracts-ATC no se han modificado. CI ha superado 25 pruebas de aplicación, 43 pruebas PDF, 267 casos de catálogo y 39 grupos de integración. Nueve imágenes analizadas sin avisos altos ni críticos detectados; las limitaciones de cobertura y los avisos moderados están en el informe de fase 6.
 
 El [perfil reutilizable del electricista](docs/perfil-electricista.md) permite copiar los datos profesionales a un nuevo BRIE o CIE. Los cambios del perfil se aplican a documentos nuevos y no alteran los anteriores.
 

@@ -1,0 +1,108 @@
+{
+  "checkedAt": "2026-10-17T23:06:55.413Z",
+  "containers": [
+    {
+      "name": "boletinexpress-data-auth-1",
+      "service": "auth",
+      "memoryMiB": 128,
+      "cpus": 0.15,
+      "status": "running",
+      "health": "healthy",
+      "restarts": 0,
+      "oomKilled": false,
+      "image": "sha256:f4883ef46d4c153629bb344fada5f883fd0534eebccc1ff99b8f7d0f2d311607"
+    },
+    {
+      "name": "boletinexpress-data-storage-1",
+      "service": "storage",
+      "memoryMiB": 512,
+      "cpus": 0.1,
+      "status": "running",
+      "health": "healthy",
+      "restarts": 0,
+      "oomKilled": false,
+      "image": "sha256:c15766205b3774ed6aee13c7b665c06b40a5d903ea8fa5c557232d0743bf9507"
+    },
+    {
+      "name": "boletinexpress-data-postgres-1",
+      "service": "postgres",
+      "memoryMiB": 1280,
+      "cpus": 0.1,
+      "status": "running",
+      "health": "healthy",
+      "restarts": 0,
+      "oomKilled": false,
+      "image": "sha256:84ce85eae9937c42553d9eaec2b5b29597aa1325273b7362a8831606ade44d72"
+    },
+    {
+      "name": "boletinexpress-data-templates-1",
+      "service": "templates",
+      "memoryMiB": 64,
+      "cpus": 0.01,
+      "status": "running",
+      "health": "not_configured",
+      "restarts": 0,
+      "oomKilled": false,
+      "image": "sha256:99534d4f79b22afe21358fc459013b69e07b8e21d466e486118fae2573c6fea4"
+    },
+    {
+      "name": "boletinexpress-data-mail-1",
+      "service": "mail",
+      "memoryMiB": 64,
+      "cpus": 0.01,
+      "status": "running",
+      "health": "healthy",
+      "restarts": 0,
+      "oomKilled": false,
+      "image": "sha256:23fe39e81bde596a918000b3135c0f85dc8bb4c9ea6be274b051143f3e300387"
+    },
+    {
+      "name": "boletinexpress-data-gateway-1",
+      "service": "gateway",
+      "memoryMiB": 64,
+      "cpus": 0.01,
+      "status": "running",
+      "health": "healthy",
+      "restarts": 0,
+      "oomKilled": false,
+      "image": "sha256:b5920bfb2f015ae47d8e41fe86da14a3581f4c7bee068ef751f382f503571bb8"
+    },
+    {
+      "name": "boletinexpress-data-rest-1",
+      "service": "rest",
+      "memoryMiB": 128,
+      "cpus": 0.03,
+      "status": "running",
+      "health": "not_configured",
+      "restarts": 0,
+      "oomKilled": false,
+      "image": "sha256:c9dc201e555f5d8e37e7f39cdd4df0229774996e213bfd7de8d10ac609030f2c"
+    },
+    {
+      "name": "boletinexpress-evaluation-web-1",
+      "service": "web",
+      "memoryMiB": 512,
+      "cpus": 0.34,
+      "status": "running",
+      "health": "healthy",
+      "restarts": 0,
+      "oomKilled": false,
+      "image": "sha256:c2baaf67b5245d318794726262c86f3271343e8aa2898725e57ce2b211e62dd7"
+    },
+    {
+      "name": "boletinexpress-evaluation-worker-1",
+      "service": "worker",
+      "memoryMiB": 256,
+      "cpus": 0.25,
+      "status": "running",
+      "health": "healthy",
+      "restarts": 0,
+      "oomKilled": false,
+      "image": "sha256:1ff516aaae0407977fc6e1c13614be713ac94a9a393fb8c5e088b164d927660b"
+    }
+  ],
+  "memoryMiB": 3008,
+  "cpus": 1,
+  "pass": true,
+  "note": "Presupuesto de los nueve servicios principales. Excluye el frontal temporal de comprobación visual. No es la prueba de carga del VPS."
+}

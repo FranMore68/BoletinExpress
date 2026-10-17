@@ -1,0 +1,23 @@
+{
+  "phase": 6,
+  "implemented": true,
+  "localTestsPassed": true,
+  "acceptedByUser": false,
+  "phase7Started": false,
+  "codeCommit": "54718ed66e2f56d541e20b7c86464c4b2a4cab0f",
+  "ciRun": 39077607312,
+  "ciStatus": "success",
+  "applicationTests": 25,
+  "pdfTests": 43,
+  "catalogCases": 267,
+  "creditIntegrationGroups": 11,
+  "uiPassed": true,
+  "resourceBudgetPassed": true,
+  "ciPassed": true,
+  "technicalClosureComplete": true,
+  "closedAt": "2026-10-17T23:23:15.578213+00:00",
+  "totalIntegrationGroups": 39,
+  "scannedImages": 9,
+  "highDetected": 0,
+  "criticalDetected": 0
+}

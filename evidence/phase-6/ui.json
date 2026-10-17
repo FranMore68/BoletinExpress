@@ -1,0 +1,52 @@
+{
+  "pass": true,
+  "checkedAt": "2026-10-17T22:55:19.589Z",
+  "fictitiousOnly": true,
+  "isolatedFrontend": "http://localhost:3010",
+  "checks": {
+    "welcomeBalance": 10,
+    "afterBrie": 8,
+    "afterCie": 3,
+    "uniqueMovements": [
+      10,
+      -2,
+      -5
+    ],
+    "reviewCheckboxDisabledUntilPdfRendered": true,
+    "keyboardCheckbox": "Space",
+    "brieVisibleCost": 2,
+    "cieVisibleCost": 5,
+    "closedHasNoEditor": true,
+    "languages": [
+      "es",
+      "ca"
+    ],
+    "viewportMobile": {
+      "width": 320,
+      "height": 760,
+      "contentWidth": 305,
+      "noHorizontalOverflow": true
+    },
+    "desktopChecked": true,
+    "downloadViaBrowser": true,
+    "downloadHasTwoStaticPages": true,
+    "downloadMatchesValidatedSha256": true,
+    "sha256": "eae4a6aae4406406d07853483e59a7f19b176aaff6374be66550d36239ade6d9",
+    "regenerateReadyPreviewWorks": true,
+    "reviewCheckboxResetsAndCanBeConfirmedAgain": true,
+    "insufficientCreditsShownWithoutClosing": true
+  },
+  "evidence": [
+    "wallet-es.png",
+    "wallet-mobile-ca.png",
+    "brie-closed-mobile-ca.png",
+    "cie-review-mobile-ca.png",
+    "cie-closed-es.png",
+    "cie-ui-final.pdf",
+    "repeated-review-insufficient-es.png"
+  ],
+  "limits": [
+    "No se ha enviado una impresi\u00f3n f\u00edsica. La apertura inline est\u00e1 comprobada por HTTP.",
+    "El frontal temporal y la pesta\u00f1a de pruebas se detienen al terminar."
+  ]
+}
