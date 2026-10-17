@@ -1,5 +1,66 @@
 import type { Locale } from "./copy";
 export const authCopy = {
+  profile: ["Mi perfil", "El meu perfil"],
+  profileHelp: [
+    "Guarda los datos de empresa e instalador una vez. Se copiarán a los documentos nuevos; podrás revisarlos en cada borrador.",
+    "Desa les dades d’empresa i instal·lador una vegada. Es copiaran als documents nous; les podràs revisar a cada esborrany.",
+  ],
+  profileRetention: [
+    "El perfil se conserva en tu cuenta para reutilizarlo. Cambiarlo no modifica los documentos anteriores. No guardamos firmas. Utiliza datos ficticios.",
+    "El perfil es conserva al teu compte per reutilitzar-lo. Canviar-lo no modifica els documents anteriors. No desem signatures. Fes servir dades fictícies.",
+  ],
+  saveProfile: ["Guardar perfil", "Desa el perfil"],
+  profileSaved: [
+    "Perfil guardado. Se utilizará en tus próximos documentos.",
+    "Perfil desat. S’utilitzarà als teus propers documents.",
+  ],
+  brieManual: ["Completar BRIE", "Completa el BRIE"],
+  brieHelp: [
+    "Revisa los datos copiados de tu perfil y completa los del local, titular e instalación. Puedes guardar aunque falten datos.",
+    "Revisa les dades copiades del perfil i completa les del local, titular i instal·lació. Pots desar encara que faltin dades.",
+  ],
+  brieSafety: [
+    "Tú indicas las mediciones y la existencia de defectos. La aplicación no determina el cumplimiento normativo ni añade datos o firmas.",
+    "Tu indiques les mesures i l’existència de defectes. L’aplicació no determina el compliment normatiu ni afegeix dades o signatures.",
+  ],
+  emptyFields: ["Campos sin rellenar", "Camps sense emplenar"],
+  emptyHelp: [
+    "Algunos campos pueden no corresponder a tu caso. Revisa cuáles necesitas completar; no se rellenan automáticamente.",
+    "Alguns camps poden no correspondre al teu cas. Revisa quins necessites completar; no s’emplenen automàticament.",
+  ],
+  revision: ["Revisión", "Revisió"],
+  unsavedConfirm: [
+    "Hay cambios sin guardar. ¿Quieres salir y descartarlos?",
+    "Hi ha canvis sense desar. Vols sortir i descartar-los?",
+  ],
+  saveDraft: ["Guardar borrador", "Desa l’esborrany"],
+  draftSaved: ["Borrador guardado.", "Esborrany desat."],
+  saveBeforePreview: [
+    "Guarda los cambios antes de generar otra vista previa.",
+    "Desa els canvis abans de generar una altra vista prèvia.",
+  ],
+  generatePreview: ["Generar vista previa PDF", "Genera la vista prèvia PDF"],
+  generating: ["Generando PDF…", "Generant el PDF…"],
+  reviewBrie: [
+    "Revisar las dos páginas del BRIE",
+    "Revisa les dues pàgines del BRIE",
+  ],
+  previewDraftNotice: [
+    "Borrador de evaluación, sin firmas. Esta vista previa no valida el documento ni consume KC. Si corriges los datos, tendrás que generar otra revisión.",
+    "Esborrany d’avaluació, sense signatures. Aquesta vista prèvia no valida el document ni consumeix KC. Si corregeixes les dades, hauràs de generar una altra revisió.",
+  ],
+  openPreview: [
+    "Abrir PDF en otra pestaña",
+    "Obre el PDF en una altra pestanya",
+  ],
+  pdfFit: [
+    "No se ha generado el PDF: revisa los campos indicados. Su contenido no cabe o incluye caracteres que la fuente no admite. No se recorta el texto.",
+    "No s’ha generat el PDF: revisa els camps indicats. El contingut no hi cap o inclou caràcters que la font no admet. El text no es retalla.",
+  ],
+  conflict: [
+    "Este registro cambió en otra pestaña. Vuelve a abrirlo antes de guardar; tus cambios no han sobrescrito la otra versión.",
+    "Aquest registre ha canviat en una altra pestanya. Torna’l a obrir abans de desar; els teus canvis no han sobreescrit l’altra versió.",
+  ],
   brand: ["BoletinExpress", "BoletinExpress"],
   home: ["Volver al inicio", "Torna a l’inici"],
   language: ["Idioma", "Idioma"],
@@ -120,8 +181,8 @@ export const authCopy = {
   logout: ["Cerrar sesión", "Tanca la sessió"],
   privateTitle: ["Tus documentos privados", "Els teus documents privats"],
   privateHelp: [
-    "Estos borradores se guardan en tu cuenta. El formulario completo y la generación del boletín se incorporarán en las siguientes fases.",
-    "Aquests esborranys es desen al teu compte. El formulari complet i la generació del butlletí s’incorporaran a les fases següents.",
+    "Guarda tu perfil profesional y crea un BRIE con tus datos. El formulario CIE llegará en la siguiente fase.",
+    "Desa el teu perfil professional i crea un BRIE amb les teves dades. El formulari CIE arribarà a la fase següent.",
   ],
   create: ["Crear borrador privado", "Crea un esborrany privat"],
   title: ["Nombre de prueba", "Nom de prova"],

@@ -4,7 +4,7 @@ export async function ownedDocument(ctx: AuthContext, id: string) {
   uuid(id);
   const { data, error } = await ctx.client
     .from("documents")
-    .select("id,type,title,status,created_at")
+    .select("id,type,title,status,created_at,work_data,revision")
     .eq("id", id)
     .maybeSingle();
   if (error) throw new AccessError(503, "unavailable");
@@ -15,6 +15,8 @@ export async function ownedDocument(ctx: AuthContext, id: string) {
     title: string;
     status: string;
     created_at: string;
+    work_data: Record<string, string | boolean>;
+    revision: number;
   };
 }
 export async function pdfBody(request: Request) {

@@ -82,6 +82,7 @@ export async function accountRequest(path: string, body?: unknown) {
 export function errorKey(error: unknown): AuthKey {
   const key = error instanceof Error ? error.message : "unavailable";
   return [
+    "conflict",
     "session",
     "credentials",
     "registration",

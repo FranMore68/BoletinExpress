@@ -1,0 +1,9 @@
+proname,anon,authenticated,worker
+claim_brie_job,f,f,t
+finish_brie_job,f,f,t
+obsolete_brie_previews,f,f,t
+remove_obsolete_preview,f,f,t
+request_brie_preview,f,t,f
+save_brie,f,t,f
+save_professional_profile,f,t,f
+(7 rows)

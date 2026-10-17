@@ -9,7 +9,7 @@ La fase 1 prepara y prueba `web` y `worker` localmente. No instala servicios en 
 - Web: 512 MiB y 0,5 CPU; worker: 256 MiB y 0,25 CPU. Total de esta fase: 768 MiB y 0,75 CPU.
 - Del presupuesto conjunto de 3072 MiB y 1 CPU quedan 2304 MiB y 0,25 CPU para los servicios de datos. Es una reserva de configuración; su viabilidad se medirá antes del despliegue.
 
-Supabase dedicado (PostgreSQL, Auth y Storage privado), sus secretos, redes y volúmenes se configurarán en fase 3. No se ha preparado un Supabase incompleto que parezca operativo. La cola persistente y sus handlers se añadirán cuando se integren los trabajos; el worker actual indica `jobsEnabled: false`.
+Supabase dedicado, acceso y Storage privado están implementados en la fase 3. La fase 4 añade la cola PostgreSQL y el generador BRIE. Con `compose.auth.yaml` y `.secrets/worker.env`, el worker indica `jobsEnabled: true`; sin esa configuración solo expone liveness. Véanse [la fase 3](../docs/fase-3.md) y [la fase 4](../docs/fase-4.md) para reproducir el entorno integrado. El conjunto configura 3008 MiB y 1 CPU.
 
 ## Reproducir desde la raíz
 

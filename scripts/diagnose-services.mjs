@@ -1,8 +1,13 @@
 import { execFileSync } from "node:child_process";
-import { readFileSync, writeFileSync } from "node:fs";
+import { existsSync, readFileSync, writeFileSync } from "node:fs";
 
-const secrets = readFileSync(".secrets/supabase.env", "utf8")
-  .split("\n")
+const secrets = [
+  ".secrets/supabase.env",
+  ".secrets/app.env",
+  ".secrets/worker.env",
+]
+  .filter((file) => existsSync(file))
+  .flatMap((file) => readFileSync(file, "utf8").split("\n"))
   .filter(Boolean)
   .map((l) => l.slice(l.indexOf("=") + 1))
   .filter((v) => v.length > 16);

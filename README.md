@@ -2,7 +2,7 @@
 
 Aplicación prevista para preparar BRIE y CIE ELEC-1 con revisión humana, interfaz ES/CA y datos ficticios durante la evaluación.
 
-**Estado actual: fases 0, 1 y 2 aceptadas; fase 3 con todas las comprobaciones superadas y pendiente de aceptación de cierre.** Registro, confirmación, recuperación y almacenamiento privado ES/CA implementados; 12 grupos de integración superados en Linux de CI y en los contenedores del Mac. Auth migrado a pgx/v5; nueve imágenes auditadas sin avisos altos o críticos. Docker Desktop está recuperado y el acceso completo local está disponible en `http://127.0.0.1:3000/acceso?lang=es`; los mensajes de confirmación y recuperación se capturan en `http://127.0.0.1:54324`. Véase [el informe de fase 3](docs/fase-3.md).
+**Estado actual: fases 0, 1, 2 y 3 aceptadas; fase 4 en construcción: perfil profesional y BRIE manual.** Registro, confirmación, recuperación y almacenamiento privado ES/CA implementados; 12 grupos de integración superados en Linux de CI y en los contenedores del Mac. Auth migrado a pgx/v5; nueve imágenes auditadas sin avisos altos o críticos. Docker Desktop está recuperado y el acceso completo local está disponible en `http://127.0.0.1:3000/acceso?lang=es`; los mensajes de confirmación y recuperación se capturan en `http://127.0.0.1:54324`. Véase [el informe de fase 3](docs/fase-3.md).
 
 El [perfil reutilizable del electricista](docs/perfil-electricista.md) se incorpora al inicio de la fase 4 para autocompletar el BRIE y se reutiliza en el CIE de la fase 5. Los cambios del perfil se aplican a documentos nuevos y no alteran los anteriores.
 

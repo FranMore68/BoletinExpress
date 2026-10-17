@@ -1,0 +1,22 @@
+{
+  "phase": 4,
+  "status": "local-tests-passed-ci-pending",
+  "accepted": false,
+  "nextPhaseStarted": false,
+  "tests": {
+    "application": 17,
+    "pdf": 43,
+    "integrationGroups": 8
+  },
+  "visual": true,
+  "localImageAudit": {
+    "web": {
+      "high": 0,
+      "critical": 0
+    },
+    "worker": {
+      "high": 0,
+      "critical": 0
+    }
+  }
+}

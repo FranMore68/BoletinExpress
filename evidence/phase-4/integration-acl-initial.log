@@ -1,0 +1,22 @@
+PASS perfil persistente tras cerrar sesión, conflicto controlado y dos cuentas separadas
+PASS dos BRIE copian el perfil; actualizarlo solo afecta a documentos nuevos
+PASS correcciones propias y vaciados se conservan; revisiones obsoletas y escrituras ajenas rechazadas
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+
+  assert.ok((await client.rpc("claim_brie_job")).error)
+
+    at file:///Volumes/SSD_Ugreen/001.MasterIA/Hackathones/HackathonVibecoding_e7/BoletinExpress/scripts/test-phase4.mjs:189:8
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5) {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: null,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v24.19.0

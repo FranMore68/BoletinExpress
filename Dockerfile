@@ -10,6 +10,7 @@ FROM dependencies AS build
 COPY next.config.ts tsconfig.json next-env.d.ts postcss.config.mjs ./
 COPY src ./src
 COPY public ./public
+COPY scripts/prepare-pdf-viewer.mjs ./scripts/prepare-pdf-viewer.mjs
 RUN npm run build
 
 FROM base AS runtime
@@ -24,7 +25,14 @@ COPY --from=build --chown=node:node /app/public ./public
 EXPOSE 3000
 CMD ["node", "server.js"]
 
+FROM base AS worker-dependencies
+COPY worker/package.json worker/package-lock.json ./
+RUN npm ci --omit=dev --ignore-scripts
+
 FROM runtime AS worker
+COPY --from=worker-dependencies --chown=node:node /app/node_modules ./node_modules
+COPY --chown=node:node shared ./shared
+COPY --chown=node:node assets/pdf ./assets/pdf
 COPY --chown=node:node worker ./worker
 EXPOSE 3001
 CMD ["node", "worker/index.mjs"]

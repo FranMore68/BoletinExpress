@@ -2651,3 +2651,80 @@ legend {
   text-align: center;
   min-height: 48px;
 }
+
+.data-section {
+  border: 1px solid #dce3eb;
+  border-radius: 16px;
+  padding: 1.2rem;
+  margin: 1.5rem 0;
+  min-width: 0;
+}
+.data-section legend {
+  font-weight: 700;
+  padding: 0 0.5rem;
+}
+.data-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.1rem;
+}
+.data-field {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+.data-field input,
+.data-field select,
+.data-field textarea {
+  width: 100%;
+  box-sizing: border-box;
+  font: inherit;
+  padding: 0.75rem;
+  border: 1px solid #78889b;
+  border-radius: 8px;
+  color: var(--ink, #0b2545);
+  background: white;
+}
+.data-field [aria-invalid="true"] {
+  border: 2px solid #a83224;
+}
+.data-wide {
+  grid-column: 1 / -1;
+}
+.editor-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin: 1rem 0;
+}
+.generated-preview {
+  margin-top: 2rem;
+}
+
+.private-block form > fieldset {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  min-width: 0;
+}
+@media (max-width: 600px) {
+  .data-grid {
+    grid-template-columns: 1fr;
+  }
+  .data-section {
+    padding: 0.8rem;
+  }
+  .editor-actions .button {
+    width: 100%;
+  }
+}
+
+.pdf-pages canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-top: 1rem;
+  border: 1px solid var(--line, #d9dfe7);
+}

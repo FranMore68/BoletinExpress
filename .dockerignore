@@ -29,3 +29,11 @@
 !infra/supabase/auth-runtime/go.mod
 !infra/supabase/auth-runtime/go.sum
 !infra/supabase/auth-runtime/migration_test.go
+!shared/
+!shared/**
+!assets/
+!assets/pdf/
+!assets/pdf/**
+
+!scripts/
+!scripts/prepare-pdf-viewer.mjs

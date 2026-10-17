@@ -7,12 +7,15 @@ import {
   useState,
 } from "react";
 import type { AuthKey } from "@/lib/i18n/auth-copy";
+import type { FieldValues } from "@/modules/documents/brie-schema";
 import {
   AccountShell,
   accountRequest,
   errorKey,
   useAccountLocale,
 } from "./account-shell";
+import { BrieEditor } from "./brie-editor";
+import { ProfilePanel } from "./profile-panel";
 
 type Doc = {
   id: string;
@@ -20,12 +23,15 @@ type Doc = {
   title: string;
   status: string;
   created_at: string;
+  work_data: FieldValues;
+  revision: number;
 };
 type PrivateFile = { id: string; created_at: string };
 export function PrivatePanel() {
   const heading = useRef<HTMLHeadingElement>(null);
   const language = useAccountLocale();
   const { tr, locale } = language;
+  const [showProfile, setShowProfile] = useState(false);
   const [email, setEmail] = useState("");
   const [docs, setDocs] = useState<Doc[]>([]);
   const [active, setActive] = useState<Doc | null>(null);
@@ -151,6 +157,16 @@ export function PrivatePanel() {
             {tr("logout")}
           </button>
         </div>
+        {!active && (
+          <button
+            type="button"
+            className="button button-secondary"
+            onClick={() => setShowProfile(true)}
+            disabled={busy}
+          >
+            {tr("profile")}
+          </button>
+        )}
         <h1 ref={heading} tabIndex={-1}>
           {active ? active.title : tr("privateTitle")}
         </h1>
@@ -161,65 +177,83 @@ export function PrivatePanel() {
           </p>
         )}
         {notice && <p role="status">{tr(notice)}</p>}
-        {loading ? (
+        {showProfile ? (
+          <ProfilePanel
+            language={language}
+            onBack={() => setShowProfile(false)}
+          />
+        ) : loading ? (
           <p role="status">{tr("loading")}</p>
         ) : active ? (
-          <>
-            <button
-              type="button"
-              className="button button-secondary"
-              onClick={() => {
+          active.type === "BRIE" ? (
+            <BrieEditor
+              key={active.id}
+              document={active}
+              language={language}
+              onBack={() => {
                 setActive(null);
                 setError(null);
                 setNotice(null);
               }}
-            >
-              {tr("back")}
-            </button>
-            <section className="private-block">
-              <p className="eyebrow">{active.type}</p>
-              <h2>{tr("files")}</h2>
-              <p>{tr("filesHelp")}</p>
-              <form onSubmit={upload}>
-                <label htmlFor="private-file">{tr("file")}</label>
-                <input
-                  id="private-file"
-                  name="file"
-                  type="file"
-                  accept="application/pdf,.pdf"
-                  required
-                />
-                <button
-                  className="button button-primary"
-                  type="submit"
-                  disabled={busy}
-                >
-                  {tr(busy ? "working" : "uploadButton")}
-                </button>
-              </form>
-              {!files.length ? (
-                <p>{tr("noFiles")}</p>
-              ) : (
-                <ul className="private-file-list">
-                  {files.map((file, i) => (
-                    <li key={file.id}>
-                      <strong>PDF {i + 1}</strong>
-                      <a
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        href={`/api/private/files/${file.id}?view=1`}
-                      >
-                        {tr("preview")}
-                      </a>
-                      <a href={`/api/private/files/${file.id}`}>
-                        {tr("download")}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              )}
-            </section>
-          </>
+            />
+          ) : (
+            <>
+              <button
+                type="button"
+                className="button button-secondary"
+                onClick={() => {
+                  setActive(null);
+                  setError(null);
+                  setNotice(null);
+                }}
+              >
+                {tr("back")}
+              </button>
+              <section className="private-block">
+                <p className="eyebrow">{active.type}</p>
+                <h2>{tr("files")}</h2>
+                <p>{tr("filesHelp")}</p>
+                <form onSubmit={upload}>
+                  <label htmlFor="private-file">{tr("file")}</label>
+                  <input
+                    id="private-file"
+                    name="file"
+                    type="file"
+                    accept="application/pdf,.pdf"
+                    required
+                  />
+                  <button
+                    className="button button-primary"
+                    type="submit"
+                    disabled={busy}
+                  >
+                    {tr(busy ? "working" : "uploadButton")}
+                  </button>
+                </form>
+                {!files.length ? (
+                  <p>{tr("noFiles")}</p>
+                ) : (
+                  <ul className="private-file-list">
+                    {files.map((file, i) => (
+                      <li key={file.id}>
+                        <strong>PDF {i + 1}</strong>
+                        <a
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          href={`/api/private/files/${file.id}?view=1`}
+                        >
+                          {tr("preview")}
+                        </a>
+                        <a href={`/api/private/files/${file.id}`}>
+                          {tr("download")}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </section>
+            </>
+          )
         ) : (
           <>
             <form className="private-create" onSubmit={create}>

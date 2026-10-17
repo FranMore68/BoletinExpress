@@ -1,6 +1,6 @@
 {
   "phase": 3,
-  "status": "PRUEBAS_SUPERADAS_PENDIENTE_ACEPTACION",
+  "status": "ACEPTADA",
   "functionalTests": {
     "pass": true,
     "groups": 12,
@@ -15,8 +15,8 @@
   "localLimitation": null,
   "ci": "https://github.com/FranMore68/BoletinExpress/actions/runs/39052031663",
   "testedCommit": "e09bdd19dbb61084b246a025a3739113f4c0c99b",
-  "userAcceptance": false,
-  "nextPhaseStarted": false,
+  "userAcceptance": true,
+  "nextPhaseStarted": true,
   "vpsModified": false,
   "localVerification": {
     "date": "2026-10-17",
@@ -41,5 +41,6 @@
     "ciPending": false,
     "legacyModulesAbsent": true,
     "rollbackImage": "boletinexpress-auth:phase3-before-pgx5-20261017"
-  }
+  },
+  "acceptedAt": "2026-10-17"
 }

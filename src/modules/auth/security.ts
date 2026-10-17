@@ -26,7 +26,7 @@ export function checkMutation(request: Request) {
   )
     throw new AccessError(403, "origin");
 }
-export async function jsonBody(request: Request) {
+export async function jsonBody(request: Request, maxBytes = 8192) {
   if (!request.headers.get("content-type")?.startsWith("application/json"))
     throw new AccessError(415, "format");
   const reader = request.body?.getReader();
@@ -37,7 +37,7 @@ export async function jsonBody(request: Request) {
     const { done, value } = await reader.read();
     if (done) break;
     length += value.length;
-    if (length > 8192) {
+    if (length > maxBytes) {
       await reader.cancel();
       throw new AccessError(413, "size");
     }

@@ -25,6 +25,8 @@ jobs:
       - run: npm ci --ignore-scripts
       - run: npm audit --audit-level=high
       - run: npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime
+      - run: npm ci --ignore-scripts --prefix worker
+      - run: npm audit --omit=dev --audit-level=high --prefix worker
       - run: npm run check
       - run: npm run build
       - run: npm ci --ignore-scripts --prefix tools/pdf-phase0
@@ -41,6 +43,7 @@ jobs:
           docker build --target auth -t boletinexpress-auth:phase3 .
           docker compose --env-file .secrets/supabase.env -f infra/supabase/compose.yaml up --detach --wait --wait-timeout 240
           sh scripts/apply-access.sh
+          node scripts/init-worker-key.mjs
 
       - run: docker compose -f compose.yaml -f compose.auth.yaml up --detach --wait
       - run: node scripts/smoke.mjs
@@ -49,6 +52,10 @@ jobs:
         run: |
           set -o pipefail
           node scripts/test-isolation.mjs | tee evidence/phase-3/isolation.log
+      - id: phase4
+        run: |
+          set -o pipefail
+          node scripts/test-phase4.mjs | tee evidence/phase-4/integration.log
       - if: always() && steps.isolation.outcome != 'skipped'
         run: |
           docker builder prune --all --force
@@ -66,7 +73,9 @@ jobs:
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
           name: phase-3-evidence
-          path: evidence/phase-3
+          path: |
+            evidence/phase-3
+            evidence/phase-4
           retention-days: 7
       - if: always()
         run: |

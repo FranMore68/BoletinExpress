@@ -1,0 +1,30 @@
+{
+  "pass": true,
+  "renderer": "Poppler 110 dpi",
+  "results": [
+    {
+      "case": "completo",
+      "page": 1,
+      "changedOutsideApprovedFields": 0,
+      "pass": true
+    },
+    {
+      "case": "completo",
+      "page": 2,
+      "changedOutsideApprovedFields": 0,
+      "pass": true
+    },
+    {
+      "case": "incompleto",
+      "page": 1,
+      "changedOutsideApprovedFields": 0,
+      "pass": true
+    },
+    {
+      "case": "incompleto",
+      "page": 2,
+      "changedOutsideApprovedFields": 0,
+      "pass": true
+    }
+  ]
+}

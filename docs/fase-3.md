@@ -1,6 +1,6 @@
 # Fase 3 · Acceso y aislamiento
 
-**Estado: todas las comprobaciones superadas; pendiente de aceptación del cierre.** Las fases 0, 1 y 2 están aceptadas. No se ha iniciado la fase 4 ni se ha intervenido en el VPS.
+**Estado: aceptada por el usuario el 17/10/2026.** Las fases 0, 1, 2 y 3 están aceptadas. La fase 4 está en construcción. No se ha intervenido en el VPS.
 
 ## Entrega
 
@@ -49,7 +49,7 @@ Se corrigieron el rol authenticated que Auth todavía utiliza al registrar usuar
 
 La primera comprobación de continuidad se adelantó al arranque de Auth. Se añadió una sonda `/health`, la pasarela espera su estado saludable y la repetición pasó. El fallo inicial se conserva en `auth-continuity-startup-race-2026-10-17.log`. El reenvío de confirmación recibe ahora una prueba explícita de segundo mensaje y la interfaz indica el destino local del correo.
 
-**Sin fallos técnicos bloqueantes pendientes para esta fase.** Falta la aceptación del cierre por el usuario. La capacidad del VPS y Control-Contracts-ATC se comprobarán en fase 10; los límites configurados del Mac no sustituyen esa medición.
+**Sin fallos técnicos bloqueantes pendientes para esta fase.** El usuario ha aceptado el cierre. La capacidad del VPS y Control-Contracts-ATC se comprobarán en fase 10; los límites configurados del Mac no sustituyen esa medición.
 
 ## Reproducción y siguiente fase
 
@@ -57,4 +57,4 @@ El arranque, migración y actualización de Auth se describen en `infra/supabase
 
 La revisión actual está en `pre-commit-review.md` y el estado legible por herramientas en `status.json`. Los fallos e informes anteriores se conservan como historial.
 
-Cuando se acepte el cierre, la fase 4 empezará por [Mi perfil](perfil-electricista.md), para guardar los datos de empresa e instalador y reutilizarlos en el BRIE y, en fase 5, en el CIE. No se ha adelantado su implementación.
+Tras aceptar el cierre, la fase 4 empieza por [Mi perfil](perfil-electricista.md), para guardar los datos de empresa e instalador y reutilizarlos en el BRIE y, en fase 5, en el CIE. Su implementación se realiza en la fase 4.

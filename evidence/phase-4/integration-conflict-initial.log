@@ -1,0 +1,20 @@
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: /api/private/profile: unavailable
+
+503 !== 409
+
+    at json (file:///Volumes/SSD_Ugreen/001.MasterIA/Hackathones/HackathonVibecoding_e7/BoletinExpress/scripts/auth-test-client.mjs:56:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async file:///Volumes/SSD_Ugreen/001.MasterIA/Hackathones/HackathonVibecoding_e7/BoletinExpress/scripts/test-phase4.mjs:60:1 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: 503,
+  expected: 409,
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v24.19.0

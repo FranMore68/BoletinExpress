@@ -1,0 +1,66 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [base 1/2] FROM docker.io/library/node:24-alpine@sha256:44fce696f38ba8c987c4db89954051000bbd05ffd8d8659ba15ed4a8602e937f
+#1 resolve docker.io/library/node:24-alpine@sha256:44fce696f38ba8c987c4db89954051000bbd05ffd8d8659ba15ed4a8602e937f done
+#1 DONE 0.0s
+
+#2 [base 2/2] WORKDIR /app
+#2 CACHED
+
+#3 [internal] load build definition from Dockerfile
+#3 transferring dockerfile: 4.03kB done
+#3 DONE 0.0s
+
+#4 [internal] load metadata for docker.io/library/node:24-alpine@sha256:44fce696f38ba8c987c4db89954051000bbd05ffd8d8659ba15ed4a8602e937f
+#4 DONE 0.0s
+
+#5 [internal] load .dockerignore
+#5 transferring context: 862B done
+#5 DONE 0.0s
+
+#6 [runtime 1/1] RUN rm -rf /usr/local/lib/node_modules/npm /usr/local/bin/npm /usr/local/bin/npx /opt/yarn* /usr/local/bin/yarn*
+#6 CACHED
+
+#7 [internal] load build context
+#7 transferring context: 363.93kB done
+#7 DONE 0.0s
+
+#8 [worker-dependencies 1/2] COPY worker/package.json worker/package-lock.json ./
+#8 DONE 0.4s
+
+#9 [worker-dependencies 2/2] RUN npm ci --omit=dev --ignore-scripts
+#9 1.187 
+#9 1.187 added 6 packages, and audited 7 packages in 1s
+#9 1.188 
+#9 1.188 found 0 vulnerabilities
+#9 1.189 npm notice
+#9 1.189 npm notice New major version of npm available! 11.19.1 -> 12.2.0
+#9 1.189 npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.0
+#9 1.189 npm notice To update run: npm install -g npm@12.2.0
+#9 1.189 npm notice
+#9 DONE 1.4s
+
+#10 [worker 1/4] COPY --from=worker-dependencies --chown=node:node /app/node_modules ./node_modules
+#10 DONE 0.1s
+
+#11 [worker 2/4] COPY --chown=node:node shared ./shared
+#11 DONE 0.0s
+
+#12 [worker 3/4] COPY --chown=node:node assets/pdf ./assets/pdf
+#12 DONE 0.0s
+
+#13 [worker 4/4] COPY --chown=node:node worker ./worker
+#13 DONE 0.0s
+
+#14 exporting to image
+#14 exporting layers
+#14 exporting layers 0.6s done
+#14 exporting manifest sha256:aa150d750ec77f0ae4c4a06b8e06dc9a8aaed7bd476f3ad1ca6697d4646a8f6b done
+#14 exporting config sha256:cbcb524486a789920ff442b91a38c28062260100695d209e63cdd1f9c9b6bbd7 done
+#14 exporting attestation manifest sha256:24897b72118cca6097d3fc13546e681633664f7365a5e0fac31d530454a1392b done
+#14 exporting manifest list sha256:8931f5c1fc466d97012b313cf165a21c4acd989014ad6c03f704bb2f6ca985e8 done
+#14 naming to docker.io/library/boletinexpress-worker:phase1 done
+#14 unpacking to docker.io/library/boletinexpress-worker:phase1 0.2s done
+#14 DONE 0.8s
+
+View build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux/nasokkmwrfci5j2umssbbn53u

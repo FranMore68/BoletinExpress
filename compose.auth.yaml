@@ -6,6 +6,9 @@ services:
       SUPABASE_URL: http://gateway:8000
       LOCAL_MAILBOX_URL: http://127.0.0.1:54324
     networks: [default, data]
+  worker:
+    env_file: [.secrets/worker.env]
+    networks: [default, data]
 networks:
   data:
     external: true

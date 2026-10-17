@@ -1,0 +1,46 @@
+{
+  "operations": [
+    {
+      "name": "empresa_nom",
+      "page": 0,
+      "type": "text",
+      "value": "BRIE INCOMPLETO",
+      "lines": [
+        "BRIE INCOMPLETO"
+      ],
+      "rect": {
+        "x": 85,
+        "y": 666,
+        "width": 208,
+        "height": 12
+      }
+    },
+    {
+      "name": "ascensor",
+      "page": 0,
+      "type": "boolean",
+      "value": false,
+      "rect": {
+        "x": 311,
+        "y": 296,
+        "width": 8.5,
+        "height": 8.5
+      }
+    },
+    {
+      "name": "potencia_ascensor",
+      "page": 0,
+      "type": "text",
+      "value": "0",
+      "lines": [
+        "0"
+      ],
+      "rect": {
+        "x": 476,
+        "y": 293,
+        "width": 76,
+        "height": 12
+      }
+    }
+  ]
+}
