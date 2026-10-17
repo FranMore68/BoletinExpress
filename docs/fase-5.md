@@ -1,6 +1,6 @@
 # Fase 5: CIE ELEC-1 manual
 
-Estado: cierre técnico completado el 18/10/2026; pendiente de aceptación del usuario. La fase 4 fue aceptada el 17/10/2026 mediante «vamos con la fase 5». La fase 6 requiere aceptar este cierre.
+Estado: cierre técnico completado el 18/10/2026; aceptado por el usuario mediante «ok vamos con la fase 6». La fase 4 fue aceptada el 17/10/2026 mediante «vamos con la fase 5». Se autoriza comenzar la fase 6.
 
 ## Resultado
 
@@ -63,7 +63,7 @@ Para probar el producto: recargar `http://127.0.0.1:3000/cuenta?lang=es`, revisa
 
 ## Pendientes
 
-Sin fallos funcionales o de seguridad abiertos en el alcance verificado. CI y las pruebas locales están superados. Falta la aceptación del usuario. No se inicia la fase 6, no se cobra KC y no se despliega en el VPS. Control-Contracts-ATC permanece fuera del alcance de los cambios.
+Sin fallos funcionales o de seguridad abiertos en el alcance verificado. CI y las pruebas locales están superados. Aceptación recibida; se inicia la fase 6. No no se cobra KC y no se despliega en el VPS. Control-Contracts-ATC permanece fuera del alcance de los cambios.
 
 ## Revisión previa a publicación
 

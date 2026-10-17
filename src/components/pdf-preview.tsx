@@ -5,10 +5,12 @@ export function PdfPreview({
   url,
   label,
   failure,
+  onRendered,
 }: {
   url: string;
   label: string;
   failure: string;
+  onRendered?: (receipt: string | null) => void;
 }) {
   const container = useRef<HTMLDivElement>(null);
   const [failed, setFailed] = useState(false);
@@ -17,6 +19,7 @@ export function PdfPreview({
     let cancelled = false;
     let cleanup: (() => void) | undefined;
     setFailed(false);
+    onRendered?.(null);
     async function render() {
       const pdfjs = await import("pdfjs-dist");
       pdfjs.GlobalWorkerOptions.workerSrc =
@@ -27,6 +30,7 @@ export function PdfPreview({
         signal: abort.signal,
       });
       if (!response.ok) throw new Error("PDF unavailable");
+      const receipt = response.headers.get("X-Boletin-Review");
       const task = pdfjs.getDocument({
         data: await response.arrayBuffer(),
       });
@@ -52,6 +56,7 @@ export function PdfPreview({
         container.current.append(canvas);
         await page.render({ canvas, viewport }).promise;
       }
+      if (!cancelled) onRendered?.(receipt);
     }
     void render().catch(() => {
       if (!cancelled) setFailed(true);
@@ -62,7 +67,7 @@ export function PdfPreview({
       cleanup?.();
       container.current?.replaceChildren();
     };
-  }, [url, label]);
+  }, [url, label, onRendered]);
   return (
     <>
       <section className="pdf-pages" ref={container} aria-label={label} />

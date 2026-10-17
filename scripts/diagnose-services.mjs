@@ -5,6 +5,7 @@ const secrets = [
   ".secrets/supabase.env",
   ".secrets/app.env",
   ".secrets/worker.env",
+  ".secrets/credits.env",
 ]
   .filter((file) => existsSync(file))
   .flatMap((file) => readFileSync(file, "utf8").split("\n"))

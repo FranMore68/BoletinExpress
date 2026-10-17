@@ -30,6 +30,14 @@ async function storage(path, options = {}) {
   });
 }
 async function tick() {
+  for (const old of await rpc("validation_cleanup_tasks")) {
+    const deleted = await storage(`/object/${old.bucket}`, {
+      method: "DELETE",
+      body: JSON.stringify({ prefixes: [old.object_path] }),
+    });
+    if (deleted.ok || deleted.status === 404)
+      await rpc("finish_validation_cleanup", { p_id: old.id });
+  }
   for (const old of await rpc("obsolete_brie_previews")) {
     const deleted = await storage("/object/previews", {
       method: "DELETE",

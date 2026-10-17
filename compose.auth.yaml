@@ -1,7 +1,7 @@
 # Añadir al Compose base solo cuando los servicios de datos estén preparados.
 services:
   web:
-    env_file: [.secrets/app.env]
+    env_file: [.secrets/app.env, .secrets/credits.env]
     environment:
       SUPABASE_URL: http://gateway:8000
       LOCAL_MAILBOX_URL: http://127.0.0.1:54324

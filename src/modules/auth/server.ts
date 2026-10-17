@@ -43,6 +43,8 @@ export function authContext(request: NextRequest) {
 export type AuthContext = ReturnType<typeof authContext>;
 export async function requireUser(ctx: AuthContext) {
   const { data, error } = await ctx.client.auth.getUser();
+  if (error && (!error.status || error.status >= 500))
+    throw new AccessError(503, "unavailable");
   if (error || !data.user?.email_confirmed_at)
     throw new AccessError(401, "session");
   const active = await ctx.client.rpc("session_active");

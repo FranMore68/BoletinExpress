@@ -1,0 +1,57 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 4.10kB done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/node:24-alpine@sha256:44fce696f38ba8c987c4db89954051000bbd05ffd8d8659ba15ed4a8602e937f
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 905B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 634.89kB done
+#4 DONE 0.0s
+
+#5 [base 1/2] FROM docker.io/library/node:24-alpine@sha256:44fce696f38ba8c987c4db89954051000bbd05ffd8d8659ba15ed4a8602e937f
+#5 resolve docker.io/library/node:24-alpine@sha256:44fce696f38ba8c987c4db89954051000bbd05ffd8d8659ba15ed4a8602e937f 0.0s done
+#5 DONE 0.0s
+
+#6 [worker-dependencies 2/2] RUN npm ci --omit=dev --ignore-scripts
+#6 CACHED
+
+#7 [worker 2/4] COPY --chown=node:node shared ./shared
+#7 CACHED
+
+#8 [worker 1/4] COPY --from=worker-dependencies --chown=node:node /app/node_modules ./node_modules
+#8 CACHED
+
+#9 [base 2/2] WORKDIR /app
+#9 CACHED
+
+#10 [runtime 1/1] RUN rm -rf /usr/local/lib/node_modules/npm /usr/local/bin/npm /usr/local/bin/npx /opt/yarn* /usr/local/bin/yarn*
+#10 CACHED
+
+#11 [worker-dependencies 1/2] COPY worker/package.json worker/package-lock.json ./
+#11 CACHED
+
+#12 [worker 3/4] COPY --chown=node:node assets/pdf ./assets/pdf
+#12 CACHED
+
+#13 [worker 4/4] COPY --chown=node:node worker ./worker
+#13 DONE 0.0s
+
+#14 exporting to image
+#14 exporting layers 0.0s done
+#14 exporting manifest sha256:d8a4519f8b602bc48a4ab15dd279b9def9b4202c8ef1e4fc79a8e8f4d76bfaab done
+#14 exporting config sha256:96929bda43b16e8ab20edfe645edd66f6fa0b8f8319711c6ec22be6ac9a94f5a done
+#14 exporting attestation manifest sha256:b0e3fa4d45d136f259b90054d0bab3f5ffe733fb15a1d3d824f5307237e1c4b0 done
+#14 exporting manifest list sha256:1ff516aaae0407977fc6e1c13614be713ac94a9a393fb8c5e088b164d927660b
+#14 exporting manifest list sha256:1ff516aaae0407977fc6e1c13614be713ac94a9a393fb8c5e088b164d927660b done
+#14 naming to docker.io/library/boletinexpress-worker:phase1 done
+#14 unpacking to docker.io/library/boletinexpress-worker:phase1 done
+#14 DONE 0.1s
+
+View build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux/kl2ywp39b7fhcdr8vqedqan0x

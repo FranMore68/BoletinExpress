@@ -1,7 +1,8 @@
 "use client";
-import { type FormEvent, useEffect, useState } from "react";
+import { type FormEvent, useCallback, useEffect, useState } from "react";
 import type { AuthKey } from "@/lib/i18n/auth-copy";
 import { brieFields, type FieldValues } from "@/modules/documents/brie-schema";
+import { documentTypes } from "@/modules/documents/catalog";
 import {
   activeCieValues,
   cieFieldActive,
@@ -32,11 +33,13 @@ export function DocumentEditor({
   onBack,
   language,
   model,
+  onValidated,
 }: {
   document: DocumentDraft;
   model: "BRIE" | "CIE";
   onBack: () => void;
   language: AccountLanguage;
+  onValidated: () => Promise<void>;
 }) {
   const { tr, locale } = language;
   const [fields, setFields] = useState(document.work_data || {});
@@ -46,6 +49,25 @@ export function DocumentEditor({
   const [preview, setPreview] = useState<Preview>(null);
   const [error, setError] = useState<AuthKey | null>(null);
   const [saved, setSaved] = useState(false);
+  const [receipt, setReceipt] = useState<string | null>(null);
+  const [reviewed, setReviewed] = useState(false);
+  const rendered = useCallback((value: string | null) => {
+    setReceipt(value);
+    setReviewed(false);
+  }, []);
+  async function validate() {
+    if (busy || dirty || !receipt || !reviewed) return;
+    setBusy(true);
+    setError(null);
+    try {
+      await accountRequest(`${base}/validate`, { reviewToken: receipt });
+      await onValidated();
+    } catch (e) {
+      setError(errorKey(e));
+    } finally {
+      setBusy(false);
+    }
+  }
   const base = `/api/private/documents/${document.id}`;
   useEffect(() => {
     let cancelled = false;
@@ -96,6 +118,7 @@ export function DocumentEditor({
       setRevision(r.document.revision);
       setDirty(false);
       setPreview(null);
+      rendered(null);
       setSaved(true);
     } catch (e) {
       setError(errorKey(e));
@@ -118,6 +141,7 @@ export function DocumentEditor({
         retry: true,
       });
       setPreview(r.preview);
+      rendered(null);
     } catch (e) {
       setError(errorKey(e));
     } finally {
@@ -198,6 +222,7 @@ export function DocumentEditor({
             onChange={(v) => {
               setFields(v);
               setDirty(true);
+              rendered(null);
               setSaved(false);
             }}
           />
@@ -258,7 +283,32 @@ export function DocumentEditor({
               label={tr(model === "CIE" ? "reviewCie" : "reviewBrie")}
               url={`${base}/preview/file?revision=${revision}`}
               failure={tr("unavailable")}
+              onRendered={rendered}
             />
+            <p>{tr("validationHelp")}</p>
+            {error && (
+              <p role="alert" className="account-error">
+                {tr(error)}
+              </p>
+            )}
+            <label className="review-confirm">
+              <input
+                type="checkbox"
+                checked={reviewed}
+                disabled={!receipt || busy}
+                onChange={(e) => setReviewed(e.target.checked)}
+              />
+              {tr("reviewConfirm")}
+            </label>
+            <button
+              type="button"
+              className="button button-primary"
+              disabled={!receipt || !reviewed || busy}
+              onClick={validate}
+            >
+              {tr(busy ? "working" : "validateDocument")} ·{" "}
+              {documentTypes[model].creditCost} KC
+            </button>
           </section>
         )}
     </section>

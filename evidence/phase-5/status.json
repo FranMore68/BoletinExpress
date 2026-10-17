@@ -1,8 +1,8 @@
 {
   "phase": 5,
-  "status": "technical-completion-awaiting-user-acceptance",
-  "accepted": false,
-  "nextPhaseStarted": false,
+  "status": "accepted",
+  "accepted": true,
+  "nextPhaseStarted": true,
   "tests": {
     "application": 22,
     "pdf": 43,
@@ -62,5 +62,7 @@
         "critical": 0
       }
     }
-  }
+  },
+  "acceptedAt": "2026-10-18",
+  "acceptedBy": "ok vamos con la fase 6"
 }

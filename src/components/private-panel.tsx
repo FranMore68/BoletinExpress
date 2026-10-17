@@ -14,8 +14,10 @@ import {
   errorKey,
   useAccountLocale,
 } from "./account-shell";
+import { CreditPanel, type Wallet } from "./credit-panel";
 import { DocumentEditor } from "./document-editor";
 import { ProfilePanel } from "./profile-panel";
+import { ValidatedDocument } from "./validated-document";
 
 type Doc = {
   id: string;
@@ -32,6 +34,7 @@ export function PrivatePanel() {
   const { tr, locale } = language;
   const [showProfile, setShowProfile] = useState(false);
   const [email, setEmail] = useState("");
+  const [wallet, setWallet] = useState<Wallet | null>(null);
   const [docs, setDocs] = useState<Doc[]>([]);
   const [active, setActive] = useState<Doc | null>(null);
   const [loading, setLoading] = useState(true);
@@ -42,11 +45,13 @@ export function PrivatePanel() {
     if (active?.id) heading.current?.focus({ preventScroll: true });
   }, [active?.id]);
   const load = useCallback(async () => {
-    const [session, list] = await Promise.all([
+    const [session, list, credits] = await Promise.all([
       accountRequest("/api/auth/session"),
       accountRequest("/api/private/documents"),
+      accountRequest("/api/private/credits"),
     ]);
     setEmail(session.email);
+    setWallet(credits);
     setDocs(list.documents);
     setLoading(false);
   }, []);
@@ -122,6 +127,7 @@ export function PrivatePanel() {
             {tr("logout")}
           </button>
         </div>
+        {wallet && <CreditPanel wallet={wallet} language={language} />}
         {!active && (
           <button
             type="button"
@@ -149,11 +155,27 @@ export function PrivatePanel() {
           />
         ) : loading ? (
           <p role="status">{tr("loading")}</p>
+        ) : active?.status === "validated" ? (
+          <ValidatedDocument
+            id={active.id}
+            language={language}
+            onBack={() => setActive(null)}
+          />
         ) : active ? (
           <DocumentEditor
             key={active.id}
             document={active}
             model={active.type}
+            onValidated={async () => {
+              // Closing is already committed; never restore an editable document if refreshing the list fails.
+              setActive({ ...active, status: "validated", work_data: {} });
+              setWallet(null);
+              try {
+                await load();
+              } catch (e) {
+                setError(errorKey(e));
+              }
+            }}
             language={language}
             onBack={() => {
               setActive(null);
@@ -186,7 +208,14 @@ export function PrivatePanel() {
                   <li key={d.id}>
                     <div>
                       <strong>{d.title}</strong>
-                      <span>{d.type}</span>
+                      <span>
+                        {d.type} ·{" "}
+                        {tr(
+                          d.status === "validated"
+                            ? "validatedStatus"
+                            : "draftStatus",
+                        )}
+                      </span>
                     </div>
                     <button
                       type="button"

@@ -1,5 +1,48 @@
 import type { Locale } from "./copy";
 export const authCopy = {
+  creditBalance: ["Saldo de prueba", "Saldo de prova"],
+  creditHistory: ["Movimientos de KC", "Moviments de KC"],
+  welcomeCredit: [
+    "Correo confirmado: regalo de bienvenida",
+    "Correu confirmat: regal de benvinguda",
+  ],
+  validationCredit: ["Validación de documento", "Validació de document"],
+  creditHelp: [
+    "10 KC de bienvenida una sola vez. BRIE: 2 KC; CIE: 5 KC. Las recargas de prueba todavía no están disponibles.",
+    "10 KC de benvinguda una sola vegada. BRIE: 2 KC; CIE: 5 KC. Les recàrregues de prova encara no estan disponibles.",
+  ],
+  validationHelp: [
+    "Validar descuenta el coste indicado y cierra esta versión. Se eliminan los datos de trabajo y las fuentes; se conserva el PDF revisado. Revisa ambas páginas antes de confirmar. Validar aquí no certifica el cumplimiento normativo ni añade una firma.",
+    "Validar descompta el cost indicat i tanca aquesta versió. S’eliminen les dades de treball i les fonts; es conserva el PDF revisat. Revisa totes dues pàgines abans de confirmar. Validar aquí no certifica el compliment normatiu ni afegeix una signatura.",
+  ],
+  reviewConfirm: [
+    "He revisado las dos páginas y confirmo el cierre de este documento.",
+    "He revisat totes dues pàgines i confirmo el tancament d’aquest document.",
+  ],
+  validateDocument: ["Validar y cerrar", "Valida i tanca"],
+  validatedStatus: ["Validado", "Validat"],
+  draftStatus: ["Borrador", "Esborrany"],
+  validatedHelp: [
+    "Documento cerrado. Conserva el PDF revisado y no permite editar los datos. La descarga estará disponible durante 30 días desde la validación.",
+    "Document tancat. Conserva el PDF revisat i no permet editar les dades. La descàrrega estarà disponible durant 30 dies des de la validació.",
+  ],
+  printPdf: ["Abrir PDF para imprimir", "Obre el PDF per imprimir"],
+  insufficient_credits: [
+    "No tienes KC suficientes. No se ha cobrado ni cerrado el documento.",
+    "No tens prou KC. No s’ha cobrat ni tancat el document.",
+  ],
+  review_invalid: [
+    "La revisión no corresponde a esta sesión o documento. Vuelve a abrir el borrador y revisa su PDF.",
+    "La revisió no correspon a aquesta sessió o document. Torna a obrir l’esborrany i revisa’n el PDF.",
+  ],
+  review_expired: [
+    "La revisión ha caducado tras 30 minutos. Vuelve a abrir el borrador para revisar el PDF.",
+    "La revisió ha caducat després de 30 minuts. Torna a obrir l’esborrany per revisar el PDF.",
+  ],
+  pdf_not_ready: [
+    "El PDF revisado ya no está disponible o ha cambiado. Vuelve a generar y revisar la vista previa. No se ha cobrado.",
+    "El PDF revisat ja no està disponible o ha canviat. Torna a generar i revisar la vista prèvia. No s’ha cobrat.",
+  ],
   cieManual: ["Completar CIE ELEC-1", "Completa el CIE ELEC-1"],
   cieHelp: [
     "Revisa los datos del perfil y completa titular, emplazamiento y datos técnicos. Elige la actuación, los requisitos y el uso para mostrar sus campos adicionales.",

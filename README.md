@@ -2,7 +2,7 @@
 
 Aplicación prevista para preparar BRIE y CIE ELEC-1 con revisión humana, interfaz ES/CA y datos ficticios durante la evaluación.
 
-**Estado actual: fases 0 a 4 aceptadas; fase 5 completada técnicamente y pendiente de aceptación.** El formulario CIE ELEC-1 integra sus 70 campos y variantes, reutiliza el perfil profesional y comparte el worker privado con BRIE. La fase 6 no ha comenzado. Véase [el informe de fase 5](docs/fase-5.md).
+**Estado actual: fases 0 a 5 aceptadas; fase 6 en comprobación.** Se incorporan saldo real de prueba, movimientos y validación transaccional de BRIE y CIE vinculada al PDF revisado. Véase [el informe de fase 6](docs/fase-6.md).
 
 El entorno local está disponible en `http://127.0.0.1:3000/acceso?lang=es`; los correos de evaluación se capturan en `http://127.0.0.1:54324`. El VPS y Control-Contracts-ATC no se han modificado. CI ha superado 22 pruebas de aplicación, 43 pruebas PDF, 267 casos de catálogo y 28 grupos de integración. Nueve imágenes sin avisos altos ni críticos.
 

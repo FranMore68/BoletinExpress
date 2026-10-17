@@ -1,0 +1,121 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 4.10kB done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/node:24-alpine@sha256:44fce696f38ba8c987c4db89954051000bbd05ffd8d8659ba15ed4a8602e937f
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 905B done
+#3 DONE 0.0s
+
+#4 [base 1/2] FROM docker.io/library/node:24-alpine@sha256:44fce696f38ba8c987c4db89954051000bbd05ffd8d8659ba15ed4a8602e937f
+#4 resolve docker.io/library/node:24-alpine@sha256:44fce696f38ba8c987c4db89954051000bbd05ffd8d8659ba15ed4a8602e937f done
+#4 DONE 0.0s
+
+#5 [internal] load build context
+#5 transferring context: 53.43kB 0.0s done
+#5 DONE 0.0s
+
+#6 [dependencies 1/2] COPY package.json package-lock.json ./
+#6 CACHED
+
+#7 [dependencies 2/2] RUN npm ci --ignore-scripts
+#7 CACHED
+
+#8 [base 2/2] WORKDIR /app
+#8 CACHED
+
+#9 [build 1/5] COPY next.config.ts tsconfig.json next-env.d.ts postcss.config.mjs ./
+#9 CACHED
+
+#10 [build 2/5] COPY src ./src
+#10 DONE 0.0s
+
+#11 [build 3/5] COPY public ./public
+#11 DONE 0.0s
+
+#12 [build 4/5] COPY scripts/prepare-pdf-viewer.mjs ./scripts/prepare-pdf-viewer.mjs
+#12 DONE 0.0s
+
+#13 [build 5/5] RUN npm run build
+#13 0.179 
+#13 0.179 > boletinexpress@0.1.0 prebuild
+#13 0.179 > node scripts/prepare-pdf-viewer.mjs
+#13 0.179 
+#13 0.202 
+#13 0.202 > boletinexpress@0.1.0 build
+#13 0.202 > next build
+#13 0.202 
+#13 0.397 ▲ Next.js 16.4.2 (Turbopack)
+#13 0.429 ✓ Running next.config.ts took 31ms
+#13 0.434 
+#13 0.447   Creating an optimized production build ...
+#13 3.064 ✓ Compiled successfully in 2.6s
+#13 3.068   Running TypeScript ...
+#13 3.542   Finished TypeScript in 475ms ...
+#13 3.543   Collecting page data using 9 workers ...
+#13 4.158   Generating static pages using 9 workers (0/8) ...
+#13 4.224   Generating static pages using 9 workers (2/8) 
+#13 4.254   Generating static pages using 9 workers (4/8) 
+#13 4.258   Generating static pages using 9 workers (6/8) 
+#13 4.258 ✓ Generating static pages using 9 workers (8/8) in 100ms
+#13 4.261   Finalizing page optimization ...
+#13 4.382 
+#13 4.384 Route (app)
+#13 4.384 ┌ ○ /
+#13 4.384 ├ ○ /_not-found
+#13 4.384 ├ ƒ /acceso
+#13 4.384 ├ ƒ /api/auth/[action]
+#13 4.384 ├ ƒ /api/health
+#13 4.384 ├ ƒ /api/private/credits
+#13 4.384 ├ ƒ /api/private/documents
+#13 4.384 ├ ƒ /api/private/documents/[id]
+#13 4.384 ├ ƒ /api/private/documents/[id]/fields
+#13 4.384 ├ ƒ /api/private/documents/[id]/files
+#13 4.384 ├ ƒ /api/private/documents/[id]/pdf
+#13 4.384 ├ ƒ /api/private/documents/[id]/preview
+#13 4.384 ├ ƒ /api/private/documents/[id]/preview/file
+#13 4.384 ├ ƒ /api/private/documents/[id]/validate
+#13 4.384 ├ ƒ /api/private/files/[id]
+#13 4.384 ├ ƒ /api/private/profile
+#13 4.384 ├ ○ /auth/confirm
+#13 4.384 ├ ○ /auth/reset
+#13 4.384 ├ ○ /cuenta
+#13 4.384 └ ○ /icon.svg
+#13 4.384 
+#13 4.384 
+#13 4.384 ƒ Proxy (Middleware)
+#13 4.384 
+#13 4.384 ○  (Static)   prerendered as static content
+#13 4.384 ƒ  (Dynamic)  server-rendered on demand
+#13 4.384 
+#13 DONE 4.5s
+
+#14 [runtime 1/1] RUN rm -rf /usr/local/lib/node_modules/npm /usr/local/bin/npm /usr/local/bin/npx /opt/yarn* /usr/local/bin/yarn*
+#14 CACHED
+
+#15 [web 1/3] COPY --from=build --chown=node:node /app/.next/standalone ./
+#15 DONE 0.2s
+
+#16 [web 2/3] COPY --from=build --chown=node:node /app/.next/static ./.next/static
+#16 DONE 0.0s
+
+#17 [web 3/3] COPY --from=build --chown=node:node /app/public ./public
+#17 DONE 0.0s
+
+#18 exporting to image
+#18 exporting layers
+#18 exporting layers 1.0s done
+#18 exporting manifest sha256:74af5dd6143f8d042d64b511b5b0452a3454705bbcd32483d3cbbbe5935bfe29 done
+#18 exporting config sha256:db9ea311f695f98c7a0c28bab03e29e56fb37f3efd57e5c828d7530890c489f4 done
+#18 exporting attestation manifest sha256:414161be3e8cc3e5fbacffa55208ef318d53e8d60bceda5ee597adef8a0233a4 done
+#18 exporting manifest list sha256:00bafc75d2ea37df6fbeeea9b56ca45e81844d007459c67d585fa92ff1e3aca9 done
+#18 naming to docker.io/library/boletinexpress-web:phase1 done
+#18 unpacking to docker.io/library/boletinexpress-web:phase1
+#18 unpacking to docker.io/library/boletinexpress-web:phase1 0.3s done
+#18 DONE 1.3s
+
+View build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux/ntowhpx3t6xdpk705gcwr57kd
