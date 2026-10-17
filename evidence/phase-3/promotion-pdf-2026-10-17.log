@@ -1,0 +1,55 @@
+
+> boletinexpress-pdf-phase0@0.0.0 test
+> node --test test/*.test.mjs
+
+✔ la plantilla BRIE conserva su huella y sus dos páginas (26.513541ms)
+✔ la plantilla CIE original sigue intacta y se identifica como XFA (9.823667ms)
+✔ el BRIE completo conserva páginas, medidas y fuente incrustada (195.654458ms)
+✔ las opciones No y el valor cero se trasladan sin desaparecer (116.513708ms)
+✔ los datos ausentes dejan campos vacíos sin valores inventados (70.338542ms)
+✔ el campo condicional de tensión del defecto 3 también admite datos explícitos (68.51725ms)
+✔ rechaza una plantilla distinta antes de escribir datos (0.489042ms)
+✔ rechaza el campo no definido campo_inventado (27.811083ms)
+✔ rechaza el campo no definido toString (32.607958ms)
+✔ rechaza el campo no definido constructor (25.027875ms)
+✔ rechaza el campo no definido __proto__ (19.799166ms)
+✔ rechaza texto excesivo y nunca lo recorta (53.833458ms)
+✔ rechaza párrafos que superan el espacio disponible (41.954042ms)
+✔ rechaza palabras indivisibles que no caben en el campo (29.215083ms)
+✔ rechaza opciones, booleanos y tipos de texto incorrectos (91.779167ms)
+✔ todas las marcas quedan en la página y en la opción seleccionada (85.1115ms)
+✔ la generación no modifica los bytes de la plantilla (151.912458ms)
+✔ la plantilla estática conserva su huella y los originales no se modifican (105.463458ms)
+✔ el archivo de trabajo conserva la estructura XFA de la referencia oficial (24.701959ms)
+✔ CIE conserva dos páginas A4, cero widgets, cero XFA y fuente incrustada (55.336ms)
+✔ escribe el dato elegido en ampliacio_50 sin activar otras ramas (42.878625ms)
+✔ escribe el dato elegido en modificacio_50 sin activar otras ramas (33.003875ms)
+✔ escribe el dato elegido en classe_p1 sin activar otras ramas (65.46975ms)
+✔ escribe el dato elegido en classe_p2 sin activar otras ramas (46.896625ms)
+✔ escribe el dato elegido en us_g sin activar otras ramas (43.555375ms)
+✔ escribe el dato elegido en us_h sin activar otras ramas (29.050167ms)
+✔ escribe el dato elegido en altres_usos sin activar otras ramas (31.672458ms)
+✔ escribe el dato elegido en tensio_altra sin activar otras ramas (21.352084ms)
+✔ escribe el dato elegido en auditori_ref sin activar otras ramas (39.104833ms)
+✔ un borrador incompleto señala ausencias sin inventar respuestas (21.2775ms)
+✔ las ramas incompatibles se rechazan antes de dibujar (0.772875ms)
+✔ todos los valores oficiales de P1, P2, g y h se escriben sin abreviar ni recortar (2673.780792ms)
+✔ rechaza exceso de anchura, de altura y palabras indivisibles (58.582458ms)
+✔ identificadores, valores de opción y tipos incorrectos no se aceptan (0.768959ms)
+✔ cero y No explícitos se conservan y no se inventan datos ausentes (14.341417ms)
+✔ rechaza una versión distinta de la plantilla (2.468083ms)
+✔ se pueden combinar ampliación, P1, uso g y otra tensión sin perder datos (100.083917ms)
+✔ cada campo del inventario XFA está mapeado o excluido expresamente (19.797417ms)
+✔ los catorce usos conservan la lista y se desplazan solo al insertar un supuesto P1/P2 (965.995708ms)
+✔ la referencia Auditori tiene P1 bajo los botones y el detalle antes de los datos técnicos de página 2 (42.571792ms)
+✔ las variantes g/h y otros usos trasladan todos los datos técnicos, incluida la marca Sí/No (96.63025ms)
+✔ la pregunta del 50 % conserva posición y coloca Sí/No a la derecha (32.995709ms)
+✔ todas las operaciones quedan en la página y no se solapan entre sí (332.258625ms)
+ℹ tests 43
+ℹ suites 0
+ℹ pass 43
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 5156.601292

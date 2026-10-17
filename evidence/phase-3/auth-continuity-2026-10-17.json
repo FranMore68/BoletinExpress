@@ -1,0 +1,7 @@
+{
+  "pass": true,
+  "sessionSurvivedAuthMigration": true,
+  "existingDraftPreserved": true,
+  "sameUserAndDocument": true,
+  "testSessionRevokedAfterCheck": true
+}

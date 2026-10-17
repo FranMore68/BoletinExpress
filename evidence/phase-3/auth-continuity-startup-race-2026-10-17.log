@@ -1,0 +1,17 @@
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: HTTP 401: /api/auth/session
+    at request (file:///Volumes/SSD_Ugreen/001.MasterIA/Hackathones/HackathonVibecoding_e7/BoletinExpress/scripts/test-auth-continuity.mjs:24:10)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async file:///Volumes/SSD_Ugreen/001.MasterIA/Hackathones/HackathonVibecoding_e7/BoletinExpress/scripts/test-auth-continuity.mjs:65:16 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v24.19.0

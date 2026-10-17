@@ -21,3 +21,11 @@
 !infra/supabase/storage-runtime/
 !infra/supabase/storage-runtime/package.json
 !infra/supabase/storage-runtime/package-lock.json
+!infra/supabase/auth-candidate/
+!infra/supabase/auth-candidate/migration_test.go
+!infra/supabase/auth-candidate/go.mod
+!infra/supabase/auth-candidate/go.sum
+!infra/supabase/auth-runtime/
+!infra/supabase/auth-runtime/go.mod
+!infra/supabase/auth-runtime/go.sum
+!infra/supabase/auth-runtime/migration_test.go

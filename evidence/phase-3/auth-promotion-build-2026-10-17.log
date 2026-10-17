@@ -1,0 +1,582 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 3.73kB done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/golang:1.27.2-alpine3.24@sha256:f92b6ef800e499660581efdabdf25d9d817a9d124eaf900924f0504e7e27e12d
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/supabase/gotrue:v2.197.0
+#3 DONE 0.7s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 805B done
+#4 DONE 0.0s
+
+#5 [auth-build  3/13] ADD --checksum=sha256:d21291c281604ccc6272c81c6506c8d521bc38d3141b0d339cb1a5988b1d461d https://codeload.github.com/supabase/auth/tar.gz/refs/tags/v2.197.0 /tmp/auth.tar.gz
+#5 DONE 0.0s
+
+#6 [auth 1/5] FROM docker.io/supabase/gotrue:v2.197.0@sha256:1736a63078f5922b198c4cbe50f80ab9a2d3b54fe8b7b6cfb2e9dc5dbbc12c6b
+#6 resolve docker.io/supabase/gotrue:v2.197.0@sha256:1736a63078f5922b198c4cbe50f80ab9a2d3b54fe8b7b6cfb2e9dc5dbbc12c6b done
+#6 DONE 0.0s
+
+#7 [auth-build  1/13] FROM docker.io/library/golang:1.27.2-alpine3.24@sha256:f92b6ef800e499660581efdabdf25d9d817a9d124eaf900924f0504e7e27e12d
+#7 resolve docker.io/library/golang:1.27.2-alpine3.24@sha256:f92b6ef800e499660581efdabdf25d9d817a9d124eaf900924f0504e7e27e12d done
+#7 DONE 0.0s
+
+#8 [internal] load build context
+#8 transferring context: 59.80kB 0.0s done
+#8 DONE 0.0s
+
+#9 [auth-build  2/13] RUN apk add --no-cache make git
+#9 CACHED
+
+#10 [auth-build  3/13] ADD --checksum=sha256:d21291c281604ccc6272c81c6506c8d521bc38d3141b0d339cb1a5988b1d461d https://codeload.github.com/supabase/auth/tar.gz/refs/tags/v2.197.0 /tmp/auth.tar.gz
+#10 CACHED
+
+#11 [auth-build  4/13] WORKDIR /source
+#11 CACHED
+
+#12 [auth-build  5/13] RUN tar xzf /tmp/auth.tar.gz --strip-components=1 -C /source
+#12 CACHED
+
+#13 [auth-build  6/13] RUN sed -i 's|"github.com/jackc/pgconn"|"github.com/jackc/pgx/v5/pgconn"|' internal/utilities/postgres.go internal/hooks/hookspgfunc/hookspgfunc_test.go
+#13 CACHED
+
+#14 [auth-build  7/13] COPY infra/supabase/auth-runtime/go.mod infra/supabase/auth-runtime/go.sum ./
+#14 DONE 0.0s
+
+#15 [auth-build  8/13] RUN go mod download && go mod verify
+#15 8.267 all modules verified
+#15 DONE 8.8s
+
+#16 [auth-build  9/13] RUN go list -m all > /source/auth-modules.txt && ! grep -E '^github.com/jackc/(pgproto3/v2|pgconn|pgx/v4|pgtype) ' /source/auth-modules.txt
+#16 DONE 0.8s
+
+#17 [auth-build 10/13] COPY infra/supabase/auth-runtime/migration_test.go internal/utilities/boletin_migration_test.go
+#17 DONE 0.0s
+
+#18 [auth-build 11/13] RUN go test -v ./internal/crypto ./internal/conf ./internal/utilities
+#18 15.52 === RUN   TestGenerateOtp
+#18 15.52     crypto_test.go:33: test #00 - exp 1 using 1 digits
+#18 15.52     crypto_test.go:33: test #01 - exp 4 using 1 digits
+#18 15.52     crypto_test.go:33: test #02 - exp 2 using 1 digits
+#18 15.52     crypto_test.go:33: test #03 - exp 0 using 1 digits
+#18 15.52     crypto_test.go:33: test #04 - exp 65 using 2 digits
+#18 15.52     crypto_test.go:33: test #05 - exp 83 using 2 digits
+#18 15.52     crypto_test.go:33: test #06 - exp 18 using 2 digits
+#18 15.52     crypto_test.go:33: test #07 - exp 04 using 2 digits
+#18 15.52     crypto_test.go:33: test #08 - exp 883 using 3 digits
+#18 15.52     crypto_test.go:33: test #09 - exp 110 using 3 digits
+#18 15.52     crypto_test.go:33: test #10 - exp 677 using 3 digits
+#18 15.52     crypto_test.go:33: test #11 - exp 744 using 3 digits
+#18 15.52     crypto_test.go:33: test #12 - exp 6157 using 4 digits
+#18 15.52     crypto_test.go:33: test #13 - exp 8369 using 4 digits
+#18 15.52     crypto_test.go:33: test #14 - exp 3385 using 4 digits
+#18 15.52     crypto_test.go:33: test #15 - exp 1617 using 4 digits
+#18 15.52     crypto_test.go:33: test #16 - exp 69588 using 5 digits
+#18 15.52     crypto_test.go:33: test #17 - exp 96393 using 5 digits
+#18 15.52     crypto_test.go:33: test #18 - exp 57989 using 5 digits
+#18 15.52     crypto_test.go:33: test #19 - exp 57681 using 5 digits
+#18 15.52     crypto_test.go:33: test #20 - exp 284024 using 6 digits
+#18 15.52     crypto_test.go:33: test #21 - exp 554454 using 6 digits
+#18 15.52     crypto_test.go:33: test #22 - exp 975571 using 6 digits
+#18 15.52     crypto_test.go:33: test #23 - exp 053470 using 6 digits
+#18 15.52     crypto_test.go:33: test #24 - exp 7076089 using 7 digits
+#18 15.52     crypto_test.go:33: test #25 - exp 6287428 using 7 digits
+#18 15.52     crypto_test.go:33: test #26 - exp 3903112 using 7 digits
+#18 15.52     crypto_test.go:33: test #27 - exp 3915653 using 7 digits
+#18 15.52     crypto_test.go:33: test #28 - exp 44800453 using 8 digits
+#18 15.52     crypto_test.go:33: test #29 - exp 38979394 using 8 digits
+#18 15.52     crypto_test.go:33: test #30 - exp 70448040 using 8 digits
+#18 15.52     crypto_test.go:33: test #31 - exp 29351463 using 8 digits
+#18 15.52     crypto_test.go:33: test #32 - exp 526897122 using 9 digits
+#18 15.52     crypto_test.go:33: test #33 - exp 047135939 using 9 digits
+#18 15.52     crypto_test.go:33: test #34 - exp 351530466 using 9 digits
+#18 15.52     crypto_test.go:33: test #35 - exp 381602894 using 9 digits
+#18 15.52     crypto_test.go:33: test #36 - exp 6834743966 using 10 digits
+#18 15.52     crypto_test.go:33: test #37 - exp 2026285792 using 10 digits
+#18 15.52     crypto_test.go:33: test #38 - exp 7189110983 using 10 digits
+#18 15.52     crypto_test.go:33: test #39 - exp 4023217386 using 10 digits
+#18 15.52     crypto_test.go:70: test #00 - exp 0009 using 4 digits (seed: 5)
+#18 15.52     crypto_test.go:70: test #01 - exp 0072 using 4 digits (seed: 133)
+#18 15.52     crypto_test.go:70: test #02 - exp 0040 using 4 digits (seed: 203)
+#18 15.52     crypto_test.go:70: test #03 - exp 0095 using 4 digits (seed: 551)
+#18 15.52     crypto_test.go:70: test #04 - exp 00061 using 5 digits (seed: 248)
+#18 15.52     crypto_test.go:70: test #05 - exp 00056 using 5 digits (seed: 977)
+#18 15.52     crypto_test.go:70: test #06 - exp 00013 using 5 digits (seed: 981)
+#18 15.52     crypto_test.go:70: test #07 - exp 00038 using 5 digits (seed: 2504)
+#18 15.52     crypto_test.go:70: test #08 - exp 000056 using 6 digits (seed: 977)
+#18 15.52     crypto_test.go:70: test #09 - exp 000094 using 6 digits (seed: 21852)
+#18 15.52     crypto_test.go:70: test #10 - exp 000099 using 6 digits (seed: 30190)
+#18 15.52     crypto_test.go:70: test #11 - exp 000012 using 6 digits (seed: 32646)
+#18 15.52     crypto_test.go:70: test #12 - exp 00000374 using 8 digits (seed: 15749)
+#18 15.52     crypto_test.go:70: test #13 - exp 00000995 using 8 digits (seed: 198113)
+#18 15.52     crypto_test.go:70: test #14 - exp 00000271 using 8 digits (seed: 213316)
+#18 15.52     crypto_test.go:70: test #15 - exp 00000612 using 8 digits (seed: 226219)
+#18 15.52     crypto_test.go:70: test #16 - exp 0058477947 using 10 digits (seed: 1)
+#18 15.52     crypto_test.go:70: test #17 - exp 0018825892 using 10 digits (seed: 79)
+#18 15.52     crypto_test.go:70: test #18 - exp 0039133437 using 10 digits (seed: 148)
+#18 15.52     crypto_test.go:70: test #19 - exp 0004026570 using 10 digits (seed: 248)
+#18 15.52     crypto_test.go:70: test #20 - exp 0000007968 using 10 digits (seed: 1380744)
+#18 15.52 --- PASS: TestGenerateOtp (0.00s)
+#18 15.52 === RUN   TestEncryptedStringPositive
+#18 15.52 --- PASS: TestEncryptedStringPositive (0.00s)
+#18 15.52 === RUN   TestParseEncryptedStringNegative
+#18 15.52 --- PASS: TestParseEncryptedStringNegative (0.00s)
+#18 15.52 === RUN   TestEncryptedStringDecryptNegative
+#18 15.52 --- PASS: TestEncryptedStringDecryptNegative (0.00s)
+#18 15.52 === RUN   TestSecureToken
+#18 15.52 --- PASS: TestSecureToken (0.00s)
+#18 15.52 === RUN   TestArgon2
+#18 15.52 --- PASS: TestArgon2 (0.00s)
+#18 15.52 === RUN   TestGeneratePassword
+#18 15.52 === RUN   TestGeneratePassword/Valid_password_generation
+#18 15.52 === RUN   TestGeneratePassword/Empty_required_chars
+#18 15.52 --- PASS: TestGeneratePassword (0.00s)
+#18 15.52     --- PASS: TestGeneratePassword/Valid_password_generation (0.00s)
+#18 15.52     --- PASS: TestGeneratePassword/Empty_required_chars (0.00s)
+#18 15.52 === RUN   TestFirebaseScrypt
+#18 15.52 --- PASS: TestFirebaseScrypt (0.04s)
+#18 15.52 === RUN   TestBcrypt
+#18 15.52 --- PASS: TestBcrypt (0.10s)
+#18 15.52 === RUN   TestGenerateRecoveryCode
+#18 15.52 --- PASS: TestGenerateRecoveryCode (0.00s)
+#18 15.52 === RUN   TestNormalizeRecoveryCode
+#18 15.52 --- PASS: TestNormalizeRecoveryCode (0.00s)
+#18 15.52 === RUN   TestGenerateRecoveryCodeHash
+#18 15.52 --- PASS: TestGenerateRecoveryCodeHash (0.04s)
+#18 15.52 === RUN   TestGenerateRecoveryCodeHashRandFailure
+#18 15.52 --- PASS: TestGenerateRecoveryCodeHashRandFailure (0.00s)
+#18 15.52 === RUN   TestCompareHashAndRecoveryCode
+#18 15.52 --- PASS: TestCompareHashAndRecoveryCode (0.06s)
+#18 15.52 === RUN   TestCompareHashAndRecoveryCodeParameterAgility
+#18 15.52 --- PASS: TestCompareHashAndRecoveryCodeParameterAgility (0.00s)
+#18 15.52 === RUN   TestCompareHashAndRecoveryCodeNegativeExamples
+#18 15.52 --- PASS: TestCompareHashAndRecoveryCodeNegativeExamples (0.00s)
+#18 15.52 === RUN   TestSafeIntegers
+#18 15.52 --- PASS: TestSafeIntegers (0.00s)
+#18 15.52 === RUN   TestRefreshTokenParse
+#18 15.52 === RUN   TestRefreshTokenParse/negative_example_0
+#18 15.52 === RUN   TestRefreshTokenParse/negative_example_1
+#18 15.52 === RUN   TestRefreshTokenParse/negative_example_2
+#18 15.52 === RUN   TestRefreshTokenParse/negative_example_3
+#18 15.52 === RUN   TestRefreshTokenParse/negative_example_4
+#18 15.52 --- PASS: TestRefreshTokenParse (0.00s)
+#18 15.52     --- PASS: TestRefreshTokenParse/negative_example_0 (0.00s)
+#18 15.52     --- PASS: TestRefreshTokenParse/negative_example_1 (0.00s)
+#18 15.52     --- PASS: TestRefreshTokenParse/negative_example_2 (0.00s)
+#18 15.52     --- PASS: TestRefreshTokenParse/negative_example_3 (0.00s)
+#18 15.52     --- PASS: TestRefreshTokenParse/negative_example_4 (0.00s)
+#18 15.52 === RUN   TestRefreshTokenTableName
+#18 15.52 --- PASS: TestRefreshTokenTableName (0.00s)
+#18 15.52 === RUN   TestMust
+#18 15.52 --- PASS: TestMust (0.00s)
+#18 15.52 PASS
+#18 15.52 ok  	github.com/supabase/auth/internal/crypto	0.262s
+#18 15.52 === RUN   TestPasswordRequiredCharactersDecode
+#18 15.52 --- PASS: TestPasswordRequiredCharactersDecode (0.00s)
+#18 15.52 === RUN   TestHTTPHookSecretsDecode
+#18 15.52 --- PASS: TestHTTPHookSecretsDecode (0.00s)
+#18 15.52 === RUN   TestValidateExtensibilityPointURI
+#18 15.52 --- PASS: TestValidateExtensibilityPointURI (0.00s)
+#18 15.52 === RUN   TestValidateExtensibilityPointSecrets
+#18 15.52 --- PASS: TestValidateExtensibilityPointSecrets (0.00s)
+#18 15.52 === RUN   TestTime
+#18 15.52     configuration_test.go:241: test #0 - exp err  with time 2025-01-01 10:00:00 +0000 UTC from UnmarshalText("2025-01-01T10:00:00Z")
+#18 15.52     configuration_test.go:241: test #1 - exp err  with time 2025-01-01 10:00:00 +0000 UTC from UnmarshalText("  2025-01-01T10:00:00Z\n  \r")
+#18 15.52     configuration_test.go:241: test #2 - exp err  with time 0001-01-01 00:00:00 +0000 UTC from UnmarshalText("")
+#18 15.52     configuration_test.go:241: test #3 - exp err "invalid" as "2006-01-02T15:04:05Z07:00": cannot parse "invalid" as "2006" with time 0001-01-01 00:00:00 +0000 UTC from UnmarshalText("invalid")
+#18 15.52 --- PASS: TestTime (0.00s)
+#18 15.52 === RUN   TestValidate
+#18 15.52     configuration_test.go:709: test #0 - exp err  from *conf.APIConfiguration.Validate() (&conf.APIConfiguration{Host:"", Port:"", Endpoint:"", RequestIDHeader:"", ExternalURL:"http://localhost", MaxRequestDuration:0})
+#18 15.52     configuration_test.go:709: test #1 - exp err parse "invalid": invalid URI for request from *conf.APIConfiguration.Validate() (&conf.APIConfiguration{Host:"", Port:"", Endpoint:"", RequestIDHeader:"", ExternalURL:"invalid", MaxRequestDuration:0})
+#18 15.52     configuration_test.go:709: test #2 - exp err parse "invalid": invalid URI for request from *conf.APIConfiguration.Validate() (&conf.APIConfiguration{Host:"", Port:"", Endpoint:"", RequestIDHeader:"", ExternalURL:"invalid", MaxRequestDuration:0})
+#18 15.52     configuration_test.go:709: test #3 - exp err  from *conf.CustomOAuthConfiguration.Validate() (&conf.CustomOAuthConfiguration{Enabled:false, MaxProviders:0, ExternalURL:""})
+#18 15.52     configuration_test.go:709: test #4 - exp err  from *conf.CustomOAuthConfiguration.Validate() (&conf.CustomOAuthConfiguration{Enabled:false, MaxProviders:0, ExternalURL:"https://custom.example.com"})
+#18 15.52     configuration_test.go:709: test #5 - exp err parse "invalid": invalid URI for request from *conf.CustomOAuthConfiguration.Validate() (&conf.CustomOAuthConfiguration{Enabled:false, MaxProviders:0, ExternalURL:"invalid"})
+#18 15.52     configuration_test.go:709: test #6 - exp err  from *conf.SessionsConfiguration.Validate() (&conf.SessionsConfiguration{Timebox:(*time.Duration)(nil), InactivityTimeout:(*time.Duration)(nil), AllowLowAAL:(*time.Duration)(nil), SinglePerUser:false, Tags:[]string(nil)})
+#18 15.52     configuration_test.go:709: test #7 - exp err conf: session timebox duration must be positive when set, was 0 from *conf.SessionsConfiguration.Validate() (&conf.SessionsConfiguration{Timebox:(*time.Duration)(0x507e35842a48), InactivityTimeout:(*time.Duration)(nil), AllowLowAAL:(*time.Duration)(nil), SinglePerUser:false, Tags:[]string(nil)})
+#18 15.52     configuration_test.go:709: test #8 - exp err conf: session timebox duration must be positive when set, was -1 from *conf.SessionsConfiguration.Validate() (&conf.SessionsConfiguration{Timebox:(*time.Duration)(0x507e35842a50), InactivityTimeout:(*time.Duration)(nil), AllowLowAAL:(*time.Duration)(nil), SinglePerUser:false, Tags:[]string(nil)})
+#18 15.52     configuration_test.go:709: test #9 - exp err conf: session inactivity timeout duration must be positive when set, was -1ns from *conf.SessionsConfiguration.Validate() (&conf.SessionsConfiguration{Timebox:(*time.Duration)(nil), InactivityTimeout:(*time.Duration)(0x507e35842a58), AllowLowAAL:(*time.Duration)(nil), SinglePerUser:false, Tags:[]string(nil)})
+#18 15.52     configuration_test.go:709: test #10 - exp err  from *conf.SessionsConfiguration.Validate() (&conf.SessionsConfiguration{Timebox:(*time.Duration)(nil), InactivityTimeout:(*time.Duration)(nil), AllowLowAAL:(*time.Duration)(nil), SinglePerUser:false, Tags:[]string(nil)})
+#18 15.52     configuration_test.go:709: test #11 - exp err conf: session allow low AAL duration must be positive when set, was 0 from *conf.SessionsConfiguration.Validate() (&conf.SessionsConfiguration{Timebox:(*time.Duration)(nil), InactivityTimeout:(*time.Duration)(nil), AllowLowAAL:(*time.Duration)(0x507e35842a60), SinglePerUser:false, Tags:[]string(nil)})
+#18 15.52     configuration_test.go:709: test #12 - exp err conf: session allow low AAL duration must be positive when set, was -1 from *conf.SessionsConfiguration.Validate() (&conf.SessionsConfiguration{Timebox:(*time.Duration)(nil), InactivityTimeout:(*time.Duration)(nil), AllowLowAAL:(*time.Duration)(0x507e35842a68), SinglePerUser:false, Tags:[]string(nil)})
+#18 15.52     configuration_test.go:709: test #13 - exp err  from *conf.SessionsConfiguration.Validate() (&conf.SessionsConfiguration{Timebox:(*time.Duration)(0x507e35842a70), InactivityTimeout:(*time.Duration)(nil), AllowLowAAL:(*time.Duration)(nil), SinglePerUser:false, Tags:[]string(nil)})
+#18 15.52     configuration_test.go:709: test #14 - exp err  from *conf.SMTPConfiguration.Validate() (&conf.SMTPConfiguration{MaxFrequency:0, Host:"", Port:0, User:"", Pass:"", AdminEmail:"", SenderName:"", Headers:"", LoggingEnabled:false, fromAddress:"", normalizedHeadersVal:conf.cachedValue[map[string][]string]{val:map[string][]string(nil), err:error(nil)}})
+#18 15.52     configuration_test.go:709: test #15 - exp err  from *conf.SMTPConfiguration.Validate() (&conf.SMTPConfiguration{MaxFrequency:0, Host:"", Port:0, User:"", Pass:"", AdminEmail:"test@example.com", SenderName:"Test", Headers:"", LoggingEnabled:false, fromAddress:"", normalizedHeadersVal:conf.cachedValue[map[string][]string]{val:map[string][]string(nil), err:error(nil)}})
+#18 15.52     configuration_test.go:709: test #16 - exp err  from *conf.SMTPConfiguration.Validate() (&conf.SMTPConfiguration{MaxFrequency:0, Host:"", Port:0, User:"", Pass:"", AdminEmail:"", SenderName:"", Headers:"invalid", LoggingEnabled:false, fromAddress:"", normalizedHeadersVal:conf.cachedValue[map[string][]string]{val:map[string][]string(nil), err:error(nil)}})
+#18 15.52 time="2026-10-17T16:58:40Z" level=warning msg="conf: SMTP headers configuration is invalid, ignoring" error="invalid character 'i' looking for beginning of value"
+#18 15.52     configuration_test.go:709: test #17 - exp err  from *conf.MailerConfiguration.Validate() (&conf.MailerConfiguration{Autoconfirm:false, AllowUnverifiedEmailSignIns:false, Subjects:conf.EmailContentConfiguration{Invite:"", Confirmation:"", Recovery:"", EmailChange:"", MagicLink:"", Reauthentication:"", PasswordChangedNotification:"", EmailChangedNotification:"", PhoneChangedNotification:"", IdentityLinkedNotification:"", IdentityUnlinkedNotification:"", MFAFactorEnrolledNotification:"", MFAFactorUnenrolledNotification:""}, Templates:conf.EmailContentConfiguration{Invite:"", Confirmation:"", Recovery:"", EmailChange:"", MagicLink:"", Reauthentication:"", PasswordChangedNotification:"", EmailChangedNotification:"", PhoneChangedNotification:"", IdentityLinkedNotification:"", IdentityUnlinkedNotification:"", MFAFactorEnrolledNotification:"", MFAFactorUnenrolledNotification:""}, URLPaths:conf.EmailContentConfiguration{Invite:"", Confirmation:"", Recovery:"", EmailChange:"", MagicLink:"", Reauthentication:"", PasswordChangedNotification:"", EmailChangedNotification:"", PhoneChangedNotification:"", IdentityLinkedNotification:"", IdentityUnlinkedNotification:"", MFAFactorEnrolledNotification:"", MFAFactorUnenrolledNotification:""}, Notifications:conf.NotificationsConfiguration{PasswordChangedEnabled:false, EmailChangedEnabled:false, PhoneChangedEnabled:false, IdentityLinkedEnabled:false, IdentityUnlinkedEnabled:false, MFAFactorEnrolledEnabled:false, MFAFactorUnenrolledEnabled:false}, SecureEmailChangeEnabled:false, OtpExp:0x0, OtpLength:0, ExternalHosts:[]string(nil), EmailBackgroundSending:false, EmailValidationExtended:false, EmailValidationServiceURL:"", EmailValidationServiceHeaders:"", EmailValidationBlockedMX:"", TemplateMaxSize:0, TemplateMaxAge:0, TemplateRetryInterval:0, TemplateReloadingEnabled:false, TemplateReloadingMaxIdle:0, serviceHeadersVal:conf.cachedValue[map[string][]string]{val:map[string][]string(nil), err:error(nil)}, blockedMXRecordsVal:conf.cachedValue[map[string]bool]{val:map[string]bool(nil), err:error(nil)}})
+#18 15.52     configuration_test.go:709: test #18 - exp err  from *conf.MailerConfiguration.Validate() (&conf.MailerConfiguration{Autoconfirm:false, AllowUnverifiedEmailSignIns:false, Subjects:conf.EmailContentConfiguration{Invite:"", Confirmation:"", Recovery:"", EmailChange:"", MagicLink:"", Reauthentication:"", PasswordChangedNotification:"", EmailChangedNotification:"", PhoneChangedNotification:"", IdentityLinkedNotification:"", IdentityUnlinkedNotification:"", MFAFactorEnrolledNotification:"", MFAFactorUnenrolledNotification:""}, Templates:conf.EmailContentConfiguration{Invite:"", Confirmation:"", Recovery:"", EmailChange:"", MagicLink:"", Reauthentication:"", PasswordChangedNotification:"", EmailChangedNotification:"", PhoneChangedNotification:"", IdentityLinkedNotification:"", IdentityUnlinkedNotification:"", MFAFactorEnrolledNotification:"", MFAFactorUnenrolledNotification:""}, URLPaths:conf.EmailContentConfiguration{Invite:"", Confirmation:"", Recovery:"", EmailChange:"", MagicLink:"", Reauthentication:"", PasswordChangedNotification:"", EmailChangedNotification:"", PhoneChangedNotification:"", IdentityLinkedNotification:"", IdentityUnlinkedNotification:"", MFAFactorEnrolledNotification:"", MFAFactorUnenrolledNotification:""}, Notifications:conf.NotificationsConfiguration{PasswordChangedEnabled:false, EmailChangedEnabled:false, PhoneChangedEnabled:false, IdentityLinkedEnabled:false, IdentityUnlinkedEnabled:false, MFAFactorEnrolledEnabled:false, MFAFactorUnenrolledEnabled:false}, SecureEmailChangeEnabled:false, OtpExp:0x0, OtpLength:0, ExternalHosts:[]string(nil), EmailBackgroundSending:false, EmailValidationExtended:false, EmailValidationServiceURL:"", EmailValidationServiceHeaders:"invalid", EmailValidationBlockedMX:"", TemplateMaxSize:0, TemplateMaxAge:0, TemplateRetryInterval:0, TemplateReloadingEnabled:false, TemplateReloadingMaxIdle:0, serviceHeadersVal:conf.cachedValue[map[string][]string]{val:map[string][]string(nil), err:error(nil)}, blockedMXRecordsVal:conf.cachedValue[map[string]bool]{val:map[string]bool(nil), err:error(nil)}})
+#18 15.52 time="2026-10-17T16:58:40Z" level=warning msg="conf: mailer validation headers configuration is invalid, ignoring" error="invalid character 'i' looking for beginning of value"
+#18 15.52     configuration_test.go:709: test #19 - exp err  from *conf.MailerConfiguration.Validate() (&conf.MailerConfiguration{Autoconfirm:false, AllowUnverifiedEmailSignIns:false, Subjects:conf.EmailContentConfiguration{Invite:"", Confirmation:"", Recovery:"", EmailChange:"", MagicLink:"", Reauthentication:"", PasswordChangedNotification:"", EmailChangedNotification:"", PhoneChangedNotification:"", IdentityLinkedNotification:"", IdentityUnlinkedNotification:"", MFAFactorEnrolledNotification:"", MFAFactorUnenrolledNotification:""}, Templates:conf.EmailContentConfiguration{Invite:"", Confirmation:"", Recovery:"", EmailChange:"", MagicLink:"", Reauthentication:"", PasswordChangedNotification:"", EmailChangedNotification:"", PhoneChangedNotification:"", IdentityLinkedNotification:"", IdentityUnlinkedNotification:"", MFAFactorEnrolledNotification:"", MFAFactorUnenrolledNotification:""}, URLPaths:conf.EmailContentConfiguration{Invite:"", Confirmation:"", Recovery:"", EmailChange:"", MagicLink:"", Reauthentication:"", PasswordChangedNotification:"", EmailChangedNotification:"", PhoneChangedNotification:"", IdentityLinkedNotification:"", IdentityUnlinkedNotification:"", MFAFactorEnrolledNotification:"", MFAFactorUnenrolledNotification:""}, Notifications:conf.NotificationsConfiguration{PasswordChangedEnabled:false, EmailChangedEnabled:false, PhoneChangedEnabled:false, IdentityLinkedEnabled:false, IdentityUnlinkedEnabled:false, MFAFactorEnrolledEnabled:false, MFAFactorUnenrolledEnabled:false}, SecureEmailChangeEnabled:false, OtpExp:0x0, OtpLength:0, ExternalHosts:[]string(nil), EmailBackgroundSending:false, EmailValidationExtended:false, EmailValidationServiceURL:"", EmailValidationServiceHeaders:"", EmailValidationBlockedMX:"invalid", TemplateMaxSize:0, TemplateMaxAge:0, TemplateRetryInterval:0, TemplateReloadingEnabled:false, TemplateReloadingMaxIdle:0, serviceHeadersVal:conf.cachedValue[map[string][]string]{val:map[string][]string(nil), err:error(nil)}, blockedMXRecordsVal:conf.cachedValue[map[string]bool]{val:map[string]bool(nil), err:error(nil)}})
+#18 15.52 time="2026-10-17T16:58:40Z" level=warning msg="conf: blocked mx records configuration is invalid, ignoring" error="invalid character 'i' looking for beginning of value"
+#18 15.52     configuration_test.go:709: test #20 - exp err  from *conf.MailerConfiguration.Validate() (&conf.MailerConfiguration{Autoconfirm:false, AllowUnverifiedEmailSignIns:false, Subjects:conf.EmailContentConfiguration{Invite:"", Confirmation:"", Recovery:"", EmailChange:"", MagicLink:"", Reauthentication:"", PasswordChangedNotification:"", EmailChangedNotification:"", PhoneChangedNotification:"", IdentityLinkedNotification:"", IdentityUnlinkedNotification:"", MFAFactorEnrolledNotification:"", MFAFactorUnenrolledNotification:""}, Templates:conf.EmailContentConfiguration{Invite:"", Confirmation:"", Recovery:"", EmailChange:"", MagicLink:"", Reauthentication:"", PasswordChangedNotification:"", EmailChangedNotification:"", PhoneChangedNotification:"", IdentityLinkedNotification:"", IdentityUnlinkedNotification:"", MFAFactorEnrolledNotification:"", MFAFactorUnenrolledNotification:""}, URLPaths:conf.EmailContentConfiguration{Invite:"", Confirmation:"", Recovery:"", EmailChange:"", MagicLink:"", Reauthentication:"", PasswordChangedNotification:"", EmailChangedNotification:"", PhoneChangedNotification:"", IdentityLinkedNotification:"", IdentityUnlinkedNotification:"", MFAFactorEnrolledNotification:"", MFAFactorUnenrolledNotification:""}, Notifications:conf.NotificationsConfiguration{PasswordChangedEnabled:false, EmailChangedEnabled:false, PhoneChangedEnabled:false, IdentityLinkedEnabled:false, IdentityUnlinkedEnabled:false, MFAFactorEnrolledEnabled:false, MFAFactorUnenrolledEnabled:false}, SecureEmailChangeEnabled:false, OtpExp:0x0, OtpLength:0, ExternalHosts:[]string(nil), EmailBackgroundSending:false, EmailValidationExtended:false, EmailValidationServiceURL:"", EmailValidationServiceHeaders:"", EmailValidationBlockedMX:"[\"foo.com\"]", TemplateMaxSize:0, TemplateMaxAge:0, TemplateRetryInterval:0, TemplateReloadingEnabled:false, TemplateReloadingMaxIdle:0, serviceHeadersVal:conf.cachedValue[map[string][]string]{val:map[string][]string(nil), err:error(nil)}, blockedMXRecordsVal:conf.cachedValue[map[string]bool]{val:map[string]bool(nil), err:error(nil)}})
+#18 15.52     configuration_test.go:709: test #21 - exp err  from *conf.CaptchaConfiguration.Validate() (&conf.CaptchaConfiguration{Enabled:false, Provider:"", Secret:"", Timeout:0})
+#18 15.52     configuration_test.go:709: test #22 - exp err unsupported captcha provider: from *conf.CaptchaConfiguration.Validate() (&conf.CaptchaConfiguration{Enabled:true, Provider:"", Secret:"", Timeout:0})
+#18 15.52     configuration_test.go:709: test #23 - exp err captcha provider secret is empty from *conf.CaptchaConfiguration.Validate() (&conf.CaptchaConfiguration{Enabled:true, Provider:"hcaptcha", Secret:"", Timeout:0})
+#18 15.52     configuration_test.go:709: test #24 - exp err  from *conf.CaptchaConfiguration.Validate() (&conf.CaptchaConfiguration{Enabled:true, Provider:"hcaptcha", Secret:"abc", Timeout:0})
+#18 15.52     configuration_test.go:709: test #25 - exp err  from *conf.DatabaseEncryptionConfiguration.Validate() (&conf.DatabaseEncryptionConfiguration{Encrypt:false, EncryptionKeyID:"", EncryptionKey:"", DecryptionKeys:map[string]string(nil)})
+#18 15.52     configuration_test.go:709: test #26 - exp err conf: encryption key ID must be specified from *conf.DatabaseEncryptionConfiguration.Validate() (&conf.DatabaseEncryptionConfiguration{Encrypt:true, EncryptionKeyID:"", EncryptionKey:"", DecryptionKeys:map[string]string(nil)})
+#18 15.52     configuration_test.go:709: test #27 - exp err illegal base64 data at input byte 0 from *conf.DatabaseEncryptionConfiguration.Validate() (&conf.DatabaseEncryptionConfiguration{Encrypt:true, EncryptionKeyID:"keyid", EncryptionKey:"|", DecryptionKeys:map[string]string(nil)})
+#18 15.52     configuration_test.go:709: test #28 - exp err conf: encryption key is not 256 bits from *conf.DatabaseEncryptionConfiguration.Validate() (&conf.DatabaseEncryptionConfiguration{Encrypt:true, EncryptionKeyID:"keyid", EncryptionKey:"aaaaaaa", DecryptionKeys:map[string]string(nil)})
+#18 15.52     configuration_test.go:709: test #29 - exp err conf: encryption key must also be present in decryption keys from *conf.DatabaseEncryptionConfiguration.Validate() (&conf.DatabaseEncryptionConfiguration{Encrypt:true, EncryptionKeyID:"keyid", EncryptionKey:"YWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWE", DecryptionKeys:map[string]string(nil)})
+#18 15.52     configuration_test.go:709: test #30 - exp err illegal base64 data at input byte 0 from *conf.DatabaseEncryptionConfiguration.Validate() (&conf.DatabaseEncryptionConfiguration{Encrypt:true, EncryptionKeyID:"keyid", EncryptionKey:"YWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWE", DecryptionKeys:map[string]string{"keyid":"|"}})
+#18 15.52     configuration_test.go:709: test #31 - exp err conf: decryption key with ID "keyid" must be 256 bits from *conf.DatabaseEncryptionConfiguration.Validate() (&conf.DatabaseEncryptionConfiguration{Encrypt:true, EncryptionKeyID:"keyid", EncryptionKey:"YWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWE", DecryptionKeys:map[string]string{"keyid":"aaa"}})
+#18 15.52     configuration_test.go:709: test #32 - exp err  from *conf.DatabaseEncryptionConfiguration.Validate() (&conf.DatabaseEncryptionConfiguration{Encrypt:true, EncryptionKeyID:"keyid", EncryptionKey:"YWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWE", DecryptionKeys:map[string]string{"keyid":"YWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWE"}})
+#18 15.52     configuration_test.go:709: test #33 - exp err  from *conf.SecurityConfiguration.Validate() (&conf.SecurityConfiguration{Captcha:conf.CaptchaConfiguration{Enabled:true, Provider:"hcaptcha", Secret:"abc", Timeout:0}, RefreshTokenUpgradePercentage:0, RefreshTokenAlgorithmVersion:0, RefreshTokenRotationEnabled:false, RefreshTokenReuseInterval:0, RefreshTokenAllowReuse:false, UpdatePasswordRequireReauthentication:false, UpdatePasswordRequireCurrentPassword:false, ManualLinkingEnabled:false, SbForwardedForEnabled:false, DBEncryption:conf.DatabaseEncryptionConfiguration{Encrypt:true, EncryptionKeyID:"keyid", EncryptionKey:"YWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWE", DecryptionKeys:map[string]string{"keyid":"YWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWE"}}})
+#18 15.52     configuration_test.go:709: test #34 - exp err unsupported captcha provider: from *conf.SecurityConfiguration.Validate() (&conf.SecurityConfiguration{Captcha:conf.CaptchaConfiguration{Enabled:true, Provider:"", Secret:"", Timeout:0}, RefreshTokenUpgradePercentage:0, RefreshTokenAlgorithmVersion:0, RefreshTokenRotationEnabled:false, RefreshTokenReuseInterval:0, RefreshTokenAllowReuse:false, UpdatePasswordRequireReauthentication:false, UpdatePasswordRequireCurrentPassword:false, ManualLinkingEnabled:false, SbForwardedForEnabled:false, DBEncryption:conf.DatabaseEncryptionConfiguration{Encrypt:true, EncryptionKeyID:"keyid", EncryptionKey:"YWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWE", DecryptionKeys:map[string]string{"keyid":"YWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWE"}}})
+#18 15.52     configuration_test.go:709: test #35 - exp err conf: encryption key ID must be specified from *conf.SecurityConfiguration.Validate() (&conf.SecurityConfiguration{Captcha:conf.CaptchaConfiguration{Enabled:true, Provider:"hcaptcha", Secret:"abc", Timeout:0}, RefreshTokenUpgradePercentage:0, RefreshTokenAlgorithmVersion:0, RefreshTokenRotationEnabled:false, RefreshTokenReuseInterval:0, RefreshTokenAllowReuse:false, UpdatePasswordRequireReauthentication:false, UpdatePasswordRequireCurrentPassword:false, ManualLinkingEnabled:false, SbForwardedForEnabled:false, DBEncryption:conf.DatabaseEncryptionConfiguration{Encrypt:true, EncryptionKeyID:"", EncryptionKey:"", DecryptionKeys:map[string]string(nil)}})
+#18 15.52     configuration_test.go:709: test #36 - exp err missing Twilio account SID from *conf.TwilioProviderConfiguration.Validate() (&conf.TwilioProviderConfiguration{AccountSid:"", AuthToken:"", MessageServiceSid:"", ContentSid:""})
+#18 15.52     configuration_test.go:709: test #37 - exp err missing Twilio auth token from *conf.TwilioProviderConfiguration.Validate() (&conf.TwilioProviderConfiguration{AccountSid:"a", AuthToken:"", MessageServiceSid:"", ContentSid:""})
+#18 15.52     configuration_test.go:709: test #38 - exp err missing Twilio message service SID or Twilio phone number from *conf.TwilioProviderConfiguration.Validate() (&conf.TwilioProviderConfiguration{AccountSid:"a", AuthToken:"b", MessageServiceSid:"", ContentSid:""})
+#18 15.52     configuration_test.go:709: test #39 - exp err  from *conf.TwilioProviderConfiguration.Validate() (&conf.TwilioProviderConfiguration{AccountSid:"a", AuthToken:"b", MessageServiceSid:"c", ContentSid:""})
+#18 15.52     configuration_test.go:709: test #40 - exp err parse "": empty url from *conf.GlobalConfiguration.Validate() (&conf.GlobalConfiguration{API:conf.APIConfiguration{Host:"", Port:"", Endpoint:"", RequestIDHeader:"", ExternalURL:"", MaxRequestDuration:0}, DB:conf.DBConfiguration{Driver:"", URL:"", Namespace:"", ConnPercentage:0, MaxPoolSize:0, MaxIdlePoolSize:0, ConnMaxLifetime:0, ConnMaxIdleTime:0, HealthCheckPeriod:0, MigrationsPath:"", CleanupEnabled:false, Advisor:conf.DBAdvisorConfiguration{Enabled:false, SamplingInterval:0, ObservationInterval:0}}, External:conf.ProviderConfiguration{AnonymousUsers:conf.AnonymousProviderConfiguration{Enabled:false}, Apple:conf.OAuthProviderConfiguration{ClientID:[]string(nil), Secret:"", RedirectURI:"", URL:"", ApiURL:"", Enabled:false, EmailOptional:false, SkipNonceCheck:false}, Azure:conf.OAuthProviderConfiguration{ClientID:[]string(nil), Secret:"", RedirectURI:"", URL:"", ApiURL:"", Enabled:false, EmailOptional:false, SkipNonceCheck:false}, Bitbucket:conf.OAuthProviderConfiguration{ClientID:[]string(nil), Secret:"", RedirectURI:"", URL:"", ApiURL:"", Enabled:false, EmailOptional:false, SkipNonceCheck:false}, Discord:conf.OAuthProviderConfiguration{ClientID:[]string(nil), Secret:"", RedirectURI:"", URL:"", ApiURL:"", Enabled:false, EmailOptional:false, SkipNonceCheck:false}, Facebook:conf.OAuthProviderConfiguration{ClientID:[]string(nil), Secret:"", RedirectURI:"", URL:"", ApiURL:"", Enabled:false, EmailOptional:false, SkipNonceCheck:false}, Snapchat:conf.OAuthProviderConfiguration{ClientID:[]string(nil), Secret:"", RedirectURI:"", URL:"", ApiURL:"", Enabled:false, EmailOptional:false, SkipNonceCheck:false}, Figma:conf.OAuthProviderConfiguration{ClientID:[]string(nil), Secret:"", RedirectURI:"", URL:"", ApiURL:"", Enabled:false, EmailOptional:false, SkipNonceCheck:false}, Fly:conf.OAuthProviderConfiguration{ClientID:[]string(nil), Secret:"", RedirectURI:"", URL:"", ApiURL:"", Enabled:false, EmailOptional:false, SkipNonceCheck:false}, Github:conf.OAuthProviderConfiguration{ClientID:[]string(nil), Secret:"", RedirectURI:"", URL:"", ApiURL:"", Enabled:false, EmailOptional:false, SkipNonceCheck:false}, Gitlab:conf.OAuthProviderConfiguration{ClientID:[]string(nil), Secret:"", RedirectURI:"", URL:"", ApiURL:"", Enabled:false, EmailOptional:false, SkipNonceCheck:false}, Google:conf.OAuthProviderConfiguration{ClientID:[]string(nil), Secret:"", RedirectURI:"", URL:"", ApiURL:"", Enabled:false, EmailOptional:false, SkipNonceCheck:false}, Kakao:conf.OAuthProviderConfiguration{ClientID:[]string(nil), Secret:"", RedirectURI:"", URL:"", ApiURL:"", Enabled:false, EmailOptional:false, SkipNonceCheck:false}, Notion:conf.OAuthProviderConfiguration{ClientID:[]string(nil), Secret:"", RedirectURI:"", URL:"", ApiURL:"", Enabled:false, EmailOptional:false, SkipNonceCheck:false}, Keycloak:conf.OAuthProviderConfiguration{ClientID:[]string(nil), Secret:"", RedirectURI:"", URL:"", ApiURL:"", Enabled:false, EmailOptional:false, SkipNonceCheck:false}, Linkedin:conf.OAuthProviderConfiguration{ClientID:[]string(nil), Secret:"", RedirectURI:"", URL:"", ApiURL:"", Enabled:false, EmailOptional:false, SkipNonceCheck:false}, LinkedinOIDC:conf.OAuthProviderConfiguration{ClientID:[]string(nil), Secret:"", RedirectURI:"", URL:"", ApiURL:"", Enabled:false, EmailOptional:false, SkipNonceCheck:false}, Spotify:conf.OAuthProviderConfiguration{ClientID:[]string(nil), Secret:"", RedirectURI:"", URL:"", ApiURL:"", Enabled:false, EmailOptional:false, SkipNonceCheck:false}, Slack:conf.OAuthProviderConfiguration{ClientID:[]string(nil), Secret:"", RedirectURI:"", URL:"", ApiURL:"", Enabled:false, EmailOptional:false, SkipNonceCheck:false}, SlackOIDC:conf.OAuthProviderConfiguration{ClientID:[]string(nil), Secret:"", RedirectURI:"", URL:"", ApiURL:"", Enabled:false, EmailOptional:false, SkipNonceCheck:false}, Twitter:conf.OAuthProviderConfiguration{ClientID:[]string(nil), Secret:"", RedirectURI:"", URL:"", ApiURL:"", Enabled:false, EmailOptional:false, SkipNonceCheck:false}, Twitch:conf.OAuthProviderConfiguration{ClientID:[]string(nil), Secret:"", RedirectURI:"", URL:"", ApiURL:"", Enabled:false, EmailOptional:false, SkipNonceCheck:false}, VercelMarketplace:conf.OAuthProviderConfiguration{ClientID:[]string(nil), Secret:"", RedirectURI:"", URL:"", ApiURL:"", Enabled:false, EmailOptional:false, SkipNonceCheck:false}, WorkOS:conf.OAuthProviderConfiguration{ClientID:[]string(nil), Secret:"", RedirectURI:"", URL:"", ApiURL:"", Enabled:false, EmailOptional:false, SkipNonceCheck:false}, Email:conf.EmailProviderConfiguration{Enabled:false, AuthorizedAddresses:[]string(nil), MagicLinkEnabled:false}, Phone:conf.PhoneProviderConfiguration{Enabled:false}, X:conf.OAuthProviderConfiguration{ClientID:[]string(nil), Secret:"", RedirectURI:"", URL:"", ApiURL:"", Enabled:false, EmailOptional:false, SkipNonceCheck:false}, Zoom:conf.OAuthProviderConfiguration{ClientID:[]string(nil), Secret:"", RedirectURI:"", URL:"", ApiURL:"", Enabled:false, EmailOptional:false, SkipNonceCheck:false}, IosBundleId:"", RedirectURL:"", AllowedIdTokenIssuers:[]string(nil), FlowStateExpiryDuration:0, OIDCProviderCacheTTL:0, Web3Solana:conf.SolanaConfiguration{Enabled:false, MaximumValidityDuration:0}, Web3Ethereum:conf.EthereumConfiguration{Enabled:false, MaximumValidityDuration:0}}, CustomOAuth:conf.CustomOAuthConfiguration{Enabled:false, MaxProviders:0, ExternalURL:""}, OAuthServer:conf.OAuthServerConfiguration{Enabled:false, AllowDynamicRegistration:false, AuthorizationPath:"", AuthorizationTTL:0, DefaultScope:""}, Logging:conf.LoggingConfig{Level:"", File:"", DisableColors:false, QuoteEmptyFields:false, TSFormat:"", Fields:map[string]interface {}(nil), SQL:""}, Profiler:conf.ProfilerConfig{Enabled:false, Host:"", Port:""}, OperatorToken:"", Tracing:conf.TracingConfig{Enabled:false, Exporter:"", ExporterProtocol:"", Host:"", Port:"", ServiceName:"", Tags:map[string]string(nil)}, Metrics:conf.MetricsConfig{Enabled:false, Exporter:"", ExporterProtocol:"", PrometheusListenHost:"", PrometheusListenPort:""}, SMTP:conf.SMTPConfiguration{MaxFrequency:0, Host:"", Port:0, User:"", Pass:"", AdminEmail:"", SenderName:"", Headers:"", LoggingEnabled:false, fromAddress:"", normalizedHeadersVal:conf.cachedValue[map[string][]string]{val:map[string][]string(nil), err:error(nil)}}, AuditLog:conf.AuditLogConfiguration{DisablePostgres:false}, RateLimitHeader:"", RateLimitEmailSent:conf.Rate{Events:0, OverTime:0, typ:"", val:""}, RateLimitSmsSent:conf.Rate{Events:0, OverTime:0, typ:"", val:""}, RateLimitVerify:0, RateLimitTokenRefresh:0, RateLimitSso:0, RateLimitAnonymousUsers:0, RateLimitOtp:0, RateLimitWeb3:0, RateLimitPasskey:0, RateLimitOAuthDynamicClientRegister:0, SiteURL:"", URIAllowList:[]string(nil), URIAllowListMap:map[string]glob.Glob(nil), Password:conf.PasswordConfiguration{MinLength:0, RequiredCharacters:conf.PasswordRequiredCharacters(nil), HIBP:conf.HIBPConfiguration{Enabled:false, FailClosed:false, UserAgent:"", Bloom:conf.HIBPBloomConfiguration{Enabled:false, Items:0x0, FalsePositives:0}}}, JWT:conf.JWTConfiguration{Secret:"", Exp:0, Aud:"", AdminGroupName:"", AdminRoles:[]string(nil), DefaultGroupName:"", Issuer:"", KeyID:"", Keys:conf.JwtKeysDecoder(nil), ValidMethods:[]string(nil), SigningKey:(func(context.Context) (interface {}, error))(nil)}, Mailer:conf.MailerConfiguration{Autoconfirm:false, AllowUnverifiedEmailSignIns:false, Subjects:conf.EmailContentConfiguration{Invite:"", Confirmation:"", Recovery:"", EmailChange:"", MagicLink:"", Reauthentication:"", PasswordChangedNotification:"", EmailChangedNotification:"", PhoneChangedNotification:"", IdentityLinkedNotification:"", IdentityUnlinkedNotification:"", MFAFactorEnrolledNotification:"", MFAFactorUnenrolledNotification:""}, Templates:conf.EmailContentConfiguration{Invite:"", Confirmation:"", Recovery:"", EmailChange:"", MagicLink:"", Reauthentication:"", PasswordChangedNotification:"", EmailChangedNotification:"", PhoneChangedNotification:"", IdentityLinkedNotification:"", IdentityUnlinkedNotification:"", MFAFactorEnrolledNotification:"", MFAFactorUnenrolledNotification:""}, URLPaths:conf.EmailContentConfiguration{Invite:"", Confirmation:"", Recovery:"", EmailChange:"", MagicLink:"", Reauthentication:"", PasswordChangedNotification:"", EmailChangedNotification:"", PhoneChangedNotification:"", IdentityLinkedNotification:"", IdentityUnlinkedNotification:"", MFAFactorEnrolledNotification:"", MFAFactorUnenrolledNotification:""}, Notifications:conf.NotificationsConfiguration{PasswordChangedEnabled:false, EmailChangedEnabled:false, PhoneChangedEnabled:false, IdentityLinkedEnabled:false, IdentityUnlinkedEnabled:false, MFAFactorEnrolledEnabled:false, MFAFactorUnenrolledEnabled:false}, SecureEmailChangeEnabled:false, OtpExp:0x0, OtpLength:0, ExternalHosts:[]string(nil), EmailBackgroundSending:false, EmailValidationExtended:false, EmailValidationServiceURL:"", EmailValidationServiceHeaders:"", EmailValidationBlockedMX:"", TemplateMaxSize:0, TemplateMaxAge:0, TemplateRetryInterval:0, TemplateReloadingEnabled:false, TemplateReloadingMaxIdle:0, serviceHeadersVal:conf.cachedValue[map[string][]string]{val:map[string][]string(nil), err:error(nil)}, blockedMXRecordsVal:conf.cachedValue[map[string]bool]{val:map[string]bool(nil), err:error(nil)}}, Sms:conf.SmsProviderConfiguration{Autoconfirm:false, MaxFrequency:0, OtpExp:0x0, OtpLength:0, Provider:"", Template:"", TestOTP:map[string]string(nil), TestOTPValidUntil:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), SMSTemplate:(*template.Template)(nil), Twilio:conf.TwilioProviderConfiguration{AccountSid:"", AuthToken:"", MessageServiceSid:"", ContentSid:""}, TwilioVerify:conf.TwilioVerifyProviderConfiguration{AccountSid:"", AuthToken:"", MessageServiceSid:""}, Messagebird:conf.MessagebirdProviderConfiguration{AccessKey:"", Originator:""}, Textlocal:conf.TextlocalProviderConfiguration{ApiKey:"", Sender:""}, Vonage:conf.VonageProviderConfiguration{ApiKey:"", ApiSecret:"", From:""}}, DisableSignup:false, Hook:conf.HookConfiguration{MFAVerificationAttempt:conf.ExtensibilityPointConfiguration{URI:"", Enabled:false, HookName:"", HTTPHookSecrets:conf.HTTPHookSecrets(nil)}, PasswordVerificationAttempt:conf.ExtensibilityPointConfiguration{URI:"", Enabled:false, HookName:"", HTTPHookSecrets:conf.HTTPHookSecrets(nil)}, CustomAccessToken:conf.ExtensibilityPointConfiguration{URI:"", Enabled:false, HookName:"", HTTPHookSecrets:conf.HTTPHookSecrets(nil)}, SendEmail:conf.ExtensibilityPointConfiguration{URI:"", Enabled:false, HookName:"", HTTPHookSecrets:conf.HTTPHookSecrets(nil)}, SendSMS:conf.ExtensibilityPointConfiguration{URI:"", Enabled:false, HookName:"", HTTPHookSecrets:conf.HTTPHookSecrets(nil)}, BeforeUserCreated:conf.ExtensibilityPointConfiguration{URI:"", Enabled:false, HookName:"", HTTPHookSecrets:conf.HTTPHookSecrets(nil)}, AfterUserCreated:conf.ExtensibilityPointConfiguration{URI:"", Enabled:false, HookName:"", HTTPHookSecrets:conf.HTTPHookSecrets(nil)}}, Security:conf.SecurityConfiguration{Captcha:conf.CaptchaConfiguration{Enabled:false, Provider:"", Secret:"", Timeout:0}, RefreshTokenUpgradePercentage:0, RefreshTokenAlgorithmVersion:0, RefreshTokenRotationEnabled:false, RefreshTokenReuseInterval:0, RefreshTokenAllowReuse:false, UpdatePasswordRequireReauthentication:false, UpdatePasswordRequireCurrentPassword:false, ManualLinkingEnabled:false, SbForwardedForEnabled:false, DBEncryption:conf.DatabaseEncryptionConfiguration{Encrypt:false, EncryptionKeyID:"", EncryptionKey:"", DecryptionKeys:map[string]string(nil)}}, Sessions:conf.SessionsConfiguration{Timebox:(*time.Duration)(nil), InactivityTimeout:(*time.Duration)(nil), AllowLowAAL:(*time.Duration)(nil), SinglePerUser:false, Tags:[]string(nil)}, MFA:conf.MFAConfiguration{ChallengeExpiryDuration:0, FactorExpiryDuration:0, RateLimitChallengeAndVerify:0, MaxEnrolledFactors:0, MaxVerifiedFactors:0, Phone:conf.PhoneFactorTypeConfiguration{MFAFactorTypeConfiguration:conf.MFAFactorTypeConfiguration{EnrollEnabled:false, VerifyEnabled:false}, OtpLength:0, SMSTemplate:(*template.Template)(nil), MaxFrequency:0, Template:""}, TOTP:conf.TOTPFactorTypeConfiguration{EnrollEnabled:false, VerifyEnabled:false}, WebAuthn:conf.MFAFactorTypeConfiguration{EnrollEnabled:false, VerifyEnabled:false}, RecoveryCodes:conf.RecoveryCodesFactorTypeConfiguration{EnrollEnabled:false, VerifyEnabled:false, Count:0, CodeLength:0, MaxVerifyAttempts:0, LockoutDuration:0}}, SAML:conf.SAMLConfiguration{Enabled:false, PrivateKey:"", PrivateKeyNext:"", AllowEncryptedAssertions:false, RelayStateValidityPeriod:0, RSAPrivateKey:(*rsa.PrivateKey)(nil), RSAPublicKey:(*rsa.PublicKey)(nil), Certificate:(*x509.Certificate)(nil), RSAPrivateKeyNext:(*rsa.PrivateKey)(nil), RSAPublicKeyNext:(*rsa.PublicKey)(nil), CertificateNext:(*x509.Certificate)(nil), ExternalURL:"", RateLimitAssertion:0}, WebAuthn:conf.WebAuthnConfiguration{RPID:"", RPDisplayName:"", RPOrigins:[]string(nil), ChallengeExpiryDuration:0}, Passkey:conf.PasskeyConfiguration{Enabled:false, MaxPasskeysPerUser:0}, CORS:conf.CORSConfiguration{AllowedHeaders:[]string(nil)}, IndexWorker:conf.IndexWorkerConfiguration{EnsureUserSearchIndexesExist:false, MaxUsersThreshold:0}, Experimental:conf.ExperimentalConfiguration{ProvidersWithOwnLinkingDomain:[]string(nil), ProviderLinkingDomains:conf.ProviderLinkingDomains(nil), CursorPaginationEnabled:false, ScimEnabled:false, CreateEmailIdentityOnPasswordSetEnabled:false}, Reloading:conf.ReloadingConfiguration{NotifyEnabled:false, PollerEnabled:false, PollerInterval:0, SignalEnabled:false, SignalNumber:0, GracePeriodInterval:0}})
+#18 15.52     configuration_test.go:709: test #41 - exp err missing Twilio account SID from *conf.TwilioVerifyProviderConfiguration.Validate() (&conf.TwilioVerifyProviderConfiguration{AccountSid:"", AuthToken:"", MessageServiceSid:""})
+#18 15.52     configuration_test.go:709: test #42 - exp err missing Twilio auth token from *conf.TwilioVerifyProviderConfiguration.Validate() (&conf.TwilioVerifyProviderConfiguration{AccountSid:"a", AuthToken:"", MessageServiceSid:""})
+#18 15.52     configuration_test.go:709: test #43 - exp err missing Twilio message service SID or Twilio phone number from *conf.TwilioVerifyProviderConfiguration.Validate() (&conf.TwilioVerifyProviderConfiguration{AccountSid:"a", AuthToken:"b", MessageServiceSid:""})
+#18 15.52     configuration_test.go:709: test #44 - exp err  from *conf.TwilioVerifyProviderConfiguration.Validate() (&conf.TwilioVerifyProviderConfiguration{AccountSid:"a", AuthToken:"b", MessageServiceSid:"c"})
+#18 15.52     configuration_test.go:709: test #45 - exp err missing Messagebird access key from *conf.MessagebirdProviderConfiguration.Validate() (&conf.MessagebirdProviderConfiguration{AccessKey:"", Originator:""})
+#18 15.52     configuration_test.go:709: test #46 - exp err missing Messagebird originator from *conf.MessagebirdProviderConfiguration.Validate() (&conf.MessagebirdProviderConfiguration{AccessKey:"a", Originator:""})
+#18 15.52     configuration_test.go:709: test #47 - exp err  from *conf.MessagebirdProviderConfiguration.Validate() (&conf.MessagebirdProviderConfiguration{AccessKey:"a", Originator:"b"})
+#18 15.52     configuration_test.go:709: test #48 - exp err missing Textlocal API key from *conf.TextlocalProviderConfiguration.Validate() (&conf.TextlocalProviderConfiguration{ApiKey:"", Sender:""})
+#18 15.52     configuration_test.go:709: test #49 - exp err missing Textlocal sender from *conf.TextlocalProviderConfiguration.Validate() (&conf.TextlocalProviderConfiguration{ApiKey:"a", Sender:""})
+#18 15.52     configuration_test.go:709: test #50 - exp err  from *conf.TextlocalProviderConfiguration.Validate() (&conf.TextlocalProviderConfiguration{ApiKey:"a", Sender:"b"})
+#18 15.52     configuration_test.go:709: test #51 - exp err missing Vonage API key from *conf.VonageProviderConfiguration.Validate() (&conf.VonageProviderConfiguration{ApiKey:"", ApiSecret:"", From:""})
+#18 15.52     configuration_test.go:709: test #52 - exp err missing Vonage API secret from *conf.VonageProviderConfiguration.Validate() (&conf.VonageProviderConfiguration{ApiKey:"a", ApiSecret:"", From:""})
+#18 15.52     configuration_test.go:709: test #53 - exp err missing Vonage 'from' parameter from *conf.VonageProviderConfiguration.Validate() (&conf.VonageProviderConfiguration{ApiKey:"a", ApiSecret:"b", From:""})
+#18 15.52     configuration_test.go:709: test #54 - exp err  from *conf.VonageProviderConfiguration.Validate() (&conf.VonageProviderConfiguration{ApiKey:"a", ApiSecret:"b", From:"c"})
+#18 15.52     configuration_test.go:709: test #55 - exp err only postgres hooks and HTTPS functions are supported at the moment from *conf.HookConfiguration.Validate() (&conf.HookConfiguration{MFAVerificationAttempt:conf.ExtensibilityPointConfiguration{URI:"|", Enabled:false, HookName:"", HTTPHookSecrets:conf.HTTPHookSecrets(nil)}, PasswordVerificationAttempt:conf.ExtensibilityPointConfiguration{URI:"", Enabled:false, HookName:"", HTTPHookSecrets:conf.HTTPHookSecrets(nil)}, CustomAccessToken:conf.ExtensibilityPointConfiguration{URI:"", Enabled:false, HookName:"", HTTPHookSecrets:conf.HTTPHookSecrets(nil)}, SendEmail:conf.ExtensibilityPointConfiguration{URI:"", Enabled:false, HookName:"", HTTPHookSecrets:conf.HTTPHookSecrets(nil)}, SendSMS:conf.ExtensibilityPointConfiguration{URI:"", Enabled:false, HookName:"", HTTPHookSecrets:conf.HTTPHookSecrets(nil)}, BeforeUserCreated:conf.ExtensibilityPointConfiguration{URI:"", Enabled:false, HookName:"", HTTPHookSecrets:conf.HTTPHookSecrets(nil)}, AfterUserCreated:conf.ExtensibilityPointConfiguration{URI:"", Enabled:false, HookName:"", HTTPHookSecrets:conf.HTTPHookSecrets(nil)}})
+#18 15.52     configuration_test.go:709: test #56 - exp err  from *conf.HookConfiguration.Validate() (&conf.HookConfiguration{MFAVerificationAttempt:conf.ExtensibilityPointConfiguration{URI:"http://localhost/foo", Enabled:false, HookName:"", HTTPHookSecrets:conf.HTTPHookSecrets(nil)}, PasswordVerificationAttempt:conf.ExtensibilityPointConfiguration{URI:"", Enabled:false, HookName:"", HTTPHookSecrets:conf.HTTPHookSecrets(nil)}, CustomAccessToken:conf.ExtensibilityPointConfiguration{URI:"", Enabled:false, HookName:"", HTTPHookSecrets:conf.HTTPHookSecrets(nil)}, SendEmail:conf.ExtensibilityPointConfiguration{URI:"", Enabled:false, HookName:"", HTTPHookSecrets:conf.HTTPHookSecrets(nil)}, SendSMS:conf.ExtensibilityPointConfiguration{URI:"", Enabled:false, HookName:"", HTTPHookSecrets:conf.HTTPHookSecrets(nil)}, BeforeUserCreated:conf.ExtensibilityPointConfiguration{URI:"", Enabled:false, HookName:"", HTTPHookSecrets:conf.HTTPHookSecrets(nil)}, AfterUserCreated:conf.ExtensibilityPointConfiguration{URI:"", Enabled:false, HookName:"", HTTPHookSecrets:conf.HTTPHookSecrets(nil)}})
+#18 15.52     configuration_test.go:709: test #57 - exp err net/url: invalid control character in URL from *conf.HookConfiguration.Validate() (&conf.HookConfiguration{MFAVerificationAttempt:conf.ExtensibilityPointConfiguration{URI:"\n", Enabled:false, HookName:"", HTTPHookSecrets:conf.HTTPHookSecrets(nil)}, PasswordVerificationAttempt:conf.ExtensibilityPointConfiguration{URI:"", Enabled:false, HookName:"", HTTPHookSecrets:conf.HTTPHookSecrets(nil)}, CustomAccessToken:conf.ExtensibilityPointConfiguration{URI:"", Enabled:false, HookName:"", HTTPHookSecrets:conf.HTTPHookSecrets(nil)}, SendEmail:conf.ExtensibilityPointConfiguration{URI:"", Enabled:false, HookName:"", HTTPHookSecrets:conf.HTTPHookSecrets(nil)}, SendSMS:conf.ExtensibilityPointConfiguration{URI:"", Enabled:false, HookName:"", HTTPHookSecrets:conf.HTTPHookSecrets(nil)}, BeforeUserCreated:conf.ExtensibilityPointConfiguration{URI:"", Enabled:false, HookName:"", HTTPHookSecrets:conf.HTTPHookSecrets(nil)}, AfterUserCreated:conf.ExtensibilityPointConfiguration{URI:"", Enabled:false, HookName:"", HTTPHookSecrets:conf.HTTPHookSecrets(nil)}})
+#18 15.52     configuration_test.go:709: test #58 - exp err  from *conf.HookConfiguration.Validate() (&conf.HookConfiguration{MFAVerificationAttempt:conf.ExtensibilityPointConfiguration{URI:"http://localhost/foo", Enabled:false, HookName:"", HTTPHookSecrets:conf.HTTPHookSecrets(nil)}, PasswordVerificationAttempt:conf.ExtensibilityPointConfiguration{URI:"", Enabled:false, HookName:"", HTTPHookSecrets:conf.HTTPHookSecrets(nil)}, CustomAccessToken:conf.ExtensibilityPointConfiguration{URI:"", Enabled:false, HookName:"", HTTPHookSecrets:conf.HTTPHookSecrets(nil)}, SendEmail:conf.ExtensibilityPointConfiguration{URI:"", Enabled:false, HookName:"", HTTPHookSecrets:conf.HTTPHookSecrets(nil)}, SendSMS:conf.ExtensibilityPointConfiguration{URI:"", Enabled:false, HookName:"", HTTPHookSecrets:conf.HTTPHookSecrets(nil)}, BeforeUserCreated:conf.ExtensibilityPointConfiguration{URI:"", Enabled:false, HookName:"", HTTPHookSecrets:conf.HTTPHookSecrets(nil)}, AfterUserCreated:conf.ExtensibilityPointConfiguration{URI:"", Enabled:false, HookName:"", HTTPHookSecrets:conf.HTTPHookSecrets(nil)}})
+#18 15.52     configuration_test.go:709: test #59 - exp err  from *conf.HookConfiguration.Validate() (&conf.HookConfiguration{MFAVerificationAttempt:conf.ExtensibilityPointConfiguration{URI:"pg-functions://foo/bar/baz", Enabled:false, HookName:"", HTTPHookSecrets:conf.HTTPHookSecrets(nil)}, PasswordVerificationAttempt:conf.ExtensibilityPointConfiguration{URI:"", Enabled:false, HookName:"", HTTPHookSecrets:conf.HTTPHookSecrets(nil)}, CustomAccessToken:conf.ExtensibilityPointConfiguration{URI:"", Enabled:false, HookName:"", HTTPHookSecrets:conf.HTTPHookSecrets(nil)}, SendEmail:conf.ExtensibilityPointConfiguration{URI:"", Enabled:false, HookName:"", HTTPHookSecrets:conf.HTTPHookSecrets(nil)}, SendSMS:conf.ExtensibilityPointConfiguration{URI:"", Enabled:false, HookName:"", HTTPHookSecrets:conf.HTTPHookSecrets(nil)}, BeforeUserCreated:conf.ExtensibilityPointConfiguration{URI:"", Enabled:false, HookName:"", HTTPHookSecrets:conf.HTTPHookSecrets(nil)}, AfterUserCreated:conf.ExtensibilityPointConfiguration{URI:"", Enabled:false, HookName:"", HTTPHookSecrets:conf.HTTPHookSecrets(nil)}})
+#18 15.52 --- PASS: TestValidate (0.00s)
+#18 15.52 === RUN   TestMethods
+#18 15.52 --- PASS: TestMethods (0.00s)
+#18 15.52 === RUN   TestWebAuthnConfigurationValidate
+#18 15.52 --- PASS: TestWebAuthnConfigurationValidate (0.00s)
+#18 15.52 === RUN   TestRecoveryCodesConfigurationValidate
+#18 15.52 === RUN   TestRecoveryCodesConfigurationValidate/valid_baseline
+#18 15.52 === RUN   TestRecoveryCodesConfigurationValidate/count_at_lower_bound
+#18 15.52 === RUN   TestRecoveryCodesConfigurationValidate/count_at_upper_bound
+#18 15.52 === RUN   TestRecoveryCodesConfigurationValidate/count_below_lower_bound
+#18 15.52 === RUN   TestRecoveryCodesConfigurationValidate/count_above_upper_bound
+#18 15.52 === RUN   TestRecoveryCodesConfigurationValidate/code_length_at_lower_bound
+#18 15.52 === RUN   TestRecoveryCodesConfigurationValidate/code_length_at_upper_bound
+#18 15.52 === RUN   TestRecoveryCodesConfigurationValidate/code_length_below_lower_bound
+#18 15.52 === RUN   TestRecoveryCodesConfigurationValidate/code_length_above_upper_bound
+#18 15.52 === RUN   TestRecoveryCodesConfigurationValidate/max_verify_attempts_at_lower_bound
+#18 15.52 === RUN   TestRecoveryCodesConfigurationValidate/max_verify_attempts_at_upper_bound
+#18 15.52 === RUN   TestRecoveryCodesConfigurationValidate/max_verify_attempts_below_lower_bound
+#18 15.52 === RUN   TestRecoveryCodesConfigurationValidate/max_verify_attempts_above_upper_bound
+#18 15.52 === RUN   TestRecoveryCodesConfigurationValidate/lockout_duration_at_lower_bound
+#18 15.52 === RUN   TestRecoveryCodesConfigurationValidate/lockout_duration_at_upper_bound
+#18 15.52 === RUN   TestRecoveryCodesConfigurationValidate/lockout_duration_below_lower_bound
+#18 15.52 === RUN   TestRecoveryCodesConfigurationValidate/lockout_duration_above_upper_bound
+#18 15.52 === RUN   TestRecoveryCodesConfigurationValidate/multiple_invalid_settings_reported_together
+#18 15.52 === RUN   TestRecoveryCodesConfigurationValidate/enroll_enabled_alone_triggers_validation
+#18 15.52 === RUN   TestRecoveryCodesConfigurationValidate/verify_enabled_alone_triggers_validation
+#18 15.52 === RUN   TestRecoveryCodesConfigurationValidate/validation_skipped_when_both_flags_disabled
+#18 15.52 --- PASS: TestRecoveryCodesConfigurationValidate (0.00s)
+#18 15.52     --- PASS: TestRecoveryCodesConfigurationValidate/valid_baseline (0.00s)
+#18 15.52     --- PASS: TestRecoveryCodesConfigurationValidate/count_at_lower_bound (0.00s)
+#18 15.52     --- PASS: TestRecoveryCodesConfigurationValidate/count_at_upper_bound (0.00s)
+#18 15.52     --- PASS: TestRecoveryCodesConfigurationValidate/count_below_lower_bound (0.00s)
+#18 15.52     --- PASS: TestRecoveryCodesConfigurationValidate/count_above_upper_bound (0.00s)
+#18 15.52     --- PASS: TestRecoveryCodesConfigurationValidate/code_length_at_lower_bound (0.00s)
+#18 15.52     --- PASS: TestRecoveryCodesConfigurationValidate/code_length_at_upper_bound (0.00s)
+#18 15.52     --- PASS: TestRecoveryCodesConfigurationValidate/code_length_below_lower_bound (0.00s)
+#18 15.52     --- PASS: TestRecoveryCodesConfigurationValidate/code_length_above_upper_bound (0.00s)
+#18 15.52     --- PASS: TestRecoveryCodesConfigurationValidate/max_verify_attempts_at_lower_bound (0.00s)
+#18 15.52     --- PASS: TestRecoveryCodesConfigurationValidate/max_verify_attempts_at_upper_bound (0.00s)
+#18 15.52     --- PASS: TestRecoveryCodesConfigurationValidate/max_verify_attempts_below_lower_bound (0.00s)
+#18 15.52     --- PASS: TestRecoveryCodesConfigurationValidate/max_verify_attempts_above_upper_bound (0.00s)
+#18 15.52     --- PASS: TestRecoveryCodesConfigurationValidate/lockout_duration_at_lower_bound (0.00s)
+#18 15.52     --- PASS: TestRecoveryCodesConfigurationValidate/lockout_duration_at_upper_bound (0.00s)
+#18 15.52     --- PASS: TestRecoveryCodesConfigurationValidate/lockout_duration_below_lower_bound (0.00s)
+#18 15.52     --- PASS: TestRecoveryCodesConfigurationValidate/lockout_duration_above_upper_bound (0.00s)
+#18 15.52     --- PASS: TestRecoveryCodesConfigurationValidate/multiple_invalid_settings_reported_together (0.00s)
+#18 15.52     --- PASS: TestRecoveryCodesConfigurationValidate/enroll_enabled_alone_triggers_validation (0.00s)
+#18 15.52     --- PASS: TestRecoveryCodesConfigurationValidate/verify_enabled_alone_triggers_validation (0.00s)
+#18 15.52     --- PASS: TestRecoveryCodesConfigurationValidate/validation_skipped_when_both_flags_disabled (0.00s)
+#18 15.52 === RUN   TestExperimentalProviderLinkingDomainsBackfill
+#18 15.52 --- PASS: TestExperimentalProviderLinkingDomainsBackfill (0.00s)
+#18 15.52 === RUN   TestProviderLinkingDomainsDecode
+#18 15.52 --- PASS: TestProviderLinkingDomainsDecode (0.00s)
+#18 15.52 === RUN   TestJwtKeys
+#18 15.52 --- PASS: TestJwtKeys (0.00s)
+#18 15.52 === RUN   TestDecode
+#18 15.52 --- PASS: TestDecode (0.00s)
+#18 15.52 === RUN   TestJWTConfiguration
+#18 15.52 === RUN   TestJWTConfiguration/GOTRUE_JWT_KEYS_is_nil
+#18 15.52 === RUN   TestJWTConfiguration/GOTRUE_JWT_KEYS_is_an_empty_map
+#18 15.52 === RUN   TestJWTConfiguration/Prefer_GOTRUE_JWT_KEYS_over_GOTRUE_JWT_SECRET
+#18 15.52 --- PASS: TestJWTConfiguration (0.00s)
+#18 15.52     --- PASS: TestJWTConfiguration/GOTRUE_JWT_KEYS_is_nil (0.00s)
+#18 15.52     --- PASS: TestJWTConfiguration/GOTRUE_JWT_KEYS_is_an_empty_map (0.00s)
+#18 15.52     --- PASS: TestJWTConfiguration/Prefer_GOTRUE_JWT_KEYS_over_GOTRUE_JWT_SECRET (0.00s)
+#18 15.52 === RUN   TestRateDecode
+#18 15.52     rate_test.go:48: test #0 - duration str 1800
+#18 15.52     rate_test.go:48: test #1 - duration str 1800.0
+#18 15.52     rate_test.go:48: test #2 - duration str 3600/1h
+#18 15.52     rate_test.go:48: test #3 - duration str 3600/1h0m0s
+#18 15.52     rate_test.go:48: test #4 - duration str 100/24h
+#18 15.52     rate_test.go:48: test #5 - duration str 
+#18 15.52     rate_test.go:48: test #6 - duration str 1h
+#18 15.52     rate_test.go:48: test #7 - duration str /
+#18 15.52     rate_test.go:48: test #8 - duration str /1h
+#18 15.52     rate_test.go:48: test #9 - duration str 3600.0/1h
+#18 15.52     rate_test.go:48: test #10 - duration str 100/
+#18 15.52     rate_test.go:48: test #11 - duration str 100/1
+#18 15.52     rate_test.go:48: test #12 - duration str 0/1h
+#18 15.52     rate_test.go:48: test #13 - duration str 0/24h
+#18 15.52 --- PASS: TestRateDecode (0.00s)
+#18 15.52 === RUN   TestSAMLConfiguration
+#18 15.52 === RUN   TestSAMLConfiguration/String
+#18 15.52 === RUN   TestSAMLConfiguration/PopulateFields
+#18 15.52 === RUN   TestSAMLConfiguration/PopulateFieldsEncryptedAssertions
+#18 15.52 === RUN   TestSAMLConfiguration/PopulateFieldsInvalidExternalURL
+#18 15.52 === RUN   TestSAMLConfiguration/PopulateFieldsInvalidx509
+#18 15.52 === RUN   TestSAMLConfiguration/PopulateFieldsInvalidPKCS1
+#18 15.52 === RUN   TestSAMLConfiguration/PopulateFieldInvalidCreateCertificate
+#18 15.52 === RUN   TestSAMLConfiguration/PopulateFieldInvalidCertificateDer
+#18 15.52 --- PASS: TestSAMLConfiguration (0.00s)
+#18 15.52     --- PASS: TestSAMLConfiguration/String (0.00s)
+#18 15.52     --- PASS: TestSAMLConfiguration/PopulateFields (0.00s)
+#18 15.52     --- PASS: TestSAMLConfiguration/PopulateFieldsEncryptedAssertions (0.00s)
+#18 15.52     --- PASS: TestSAMLConfiguration/PopulateFieldsInvalidExternalURL (0.00s)
+#18 15.52     --- PASS: TestSAMLConfiguration/PopulateFieldsInvalidx509 (0.00s)
+#18 15.52     --- PASS: TestSAMLConfiguration/PopulateFieldsInvalidPKCS1 (0.00s)
+#18 15.52     --- PASS: TestSAMLConfiguration/PopulateFieldInvalidCreateCertificate (0.00s)
+#18 15.52     --- PASS: TestSAMLConfiguration/PopulateFieldInvalidCertificateDer (0.00s)
+#18 15.52 === RUN   TestSAMLConfigurationValidate
+#18 15.52 --- PASS: TestSAMLConfigurationValidate (0.00s)
+#18 15.52 === RUN   TestSAMLConfigurationNextKey
+#18 15.52 === RUN   TestSAMLConfigurationNextKey/Absent
+#18 15.52 === RUN   TestSAMLConfigurationNextKey/Valid
+#18 15.52 === RUN   TestSAMLConfigurationNextKey/SameAsCurrent
+#18 15.52 --- PASS: TestSAMLConfigurationNextKey (0.01s)
+#18 15.52     --- PASS: TestSAMLConfigurationNextKey/Absent (0.00s)
+#18 15.52     --- PASS: TestSAMLConfigurationNextKey/Valid (0.00s)
+#18 15.52     --- PASS: TestSAMLConfigurationNextKey/SameAsCurrent (0.00s)
+#18 15.52 === RUN   TestSAMLConfigurationValidateNextKey
+#18 15.52 --- PASS: TestSAMLConfigurationValidateNextKey (0.00s)
+#18 15.52 === RUN   TestSAMLConfigurationDeterministicCertificate
+#18 15.52 --- PASS: TestSAMLConfigurationDeterministicCertificate (0.00s)
+#18 15.52 PASS
+#18 15.52 ok  	github.com/supabase/auth/internal/conf	0.018s
+#18 15.52 === RUN   TestCandidateRejectsInvalidDataRowLengths
+#18 15.52 --- PASS: TestCandidateRejectsInvalidDataRowLengths (0.00s)
+#18 15.52 === RUN   TestCandidateMapsWrappedPgx5Errors
+#18 15.52 --- PASS: TestCandidateMapsWrappedPgx5Errors (0.00s)
+#18 15.52 === RUN   TestFetchAndValidateOIDCDiscovery_HappyPath
+#18 15.52 --- PASS: TestFetchAndValidateOIDCDiscovery_HappyPath (0.00s)
+#18 15.52 === RUN   TestFetchAndValidateOIDCDiscovery_Non200Status
+#18 15.52 --- PASS: TestFetchAndValidateOIDCDiscovery_Non200Status (0.00s)
+#18 15.52 === RUN   TestFetchAndValidateOIDCDiscovery_BodyExceedsCap
+#18 15.52 --- PASS: TestFetchAndValidateOIDCDiscovery_BodyExceedsCap (0.00s)
+#18 15.52 === RUN   TestFetchAndValidateOIDCDiscovery_InvalidJSON
+#18 15.52 --- PASS: TestFetchAndValidateOIDCDiscovery_InvalidJSON (0.00s)
+#18 15.52 === RUN   TestFetchAndValidateOIDCDiscovery_IssuerMismatch
+#18 15.52 --- PASS: TestFetchAndValidateOIDCDiscovery_IssuerMismatch (0.00s)
+#18 15.52 === RUN   TestFetchAndValidateOIDCDiscovery_FetcherError
+#18 15.52 --- PASS: TestFetchAndValidateOIDCDiscovery_FetcherError (0.00s)
+#18 15.52 === RUN   TestPasskeyFriendlyName
+#18 15.52 === RUN   TestPasskeyFriendlyName/known_AAGUID:_Google_Password_Manager
+#18 15.52 === RUN   TestPasskeyFriendlyName/known_AAGUID:_1Password
+#18 15.52 === RUN   TestPasskeyFriendlyName/known_AAGUID:_iCloud_Keychain
+#18 15.52 === RUN   TestPasskeyFriendlyName/known_AAGUID:_LastPass
+#18 15.52 === RUN   TestPasskeyFriendlyName/known_AAGUID:_YubiKey_(hardware_authenticator)
+#18 15.52 === RUN   TestPasskeyFriendlyName/unknown_AAGUID_returns_Passkey
+#18 15.52 === RUN   TestPasskeyFriendlyName/zero_AAGUID_returns_Passkey
+#18 15.52 === RUN   TestPasskeyFriendlyName/nil_AAGUID_returns_Passkey
+#18 15.52 === RUN   TestPasskeyFriendlyName/empty_AAGUID_returns_Passkey
+#18 15.52 --- PASS: TestPasskeyFriendlyName (0.00s)
+#18 15.52     --- PASS: TestPasskeyFriendlyName/known_AAGUID:_Google_Password_Manager (0.00s)
+#18 15.52     --- PASS: TestPasskeyFriendlyName/known_AAGUID:_1Password (0.00s)
+#18 15.52     --- PASS: TestPasskeyFriendlyName/known_AAGUID:_iCloud_Keychain (0.00s)
+#18 15.52     --- PASS: TestPasskeyFriendlyName/known_AAGUID:_LastPass (0.00s)
+#18 15.52     --- PASS: TestPasskeyFriendlyName/known_AAGUID:_YubiKey_(hardware_authenticator) (0.00s)
+#18 15.52     --- PASS: TestPasskeyFriendlyName/unknown_AAGUID_returns_Passkey (0.00s)
+#18 15.52     --- PASS: TestPasskeyFriendlyName/zero_AAGUID_returns_Passkey (0.00s)
+#18 15.52     --- PASS: TestPasskeyFriendlyName/nil_AAGUID_returns_Passkey (0.00s)
+#18 15.52     --- PASS: TestPasskeyFriendlyName/empty_AAGUID_returns_Passkey (0.00s)
+#18 15.52 === RUN   TestIsRedirectURLValidSameOrigin
+#18 15.52 === RUN   TestIsRedirectURLValidSameOrigin/exact_match
+#18 15.52 === RUN   TestIsRedirectURLValidSameOrigin/scheme_downgrade_https→http_rejected
+#18 15.52 === RUN   TestIsRedirectURLValidSameOrigin/scheme_upgrade_http→https_rejected
+#18 15.52 === RUN   TestIsRedirectURLValidSameOrigin/different_port_rejected
+#18 15.52 === RUN   TestIsRedirectURLValidSameOrigin/explicit_port_matches_SiteURL_explicit_port
+#18 15.52 === RUN   TestIsRedirectURLValidSameOrigin/no_port_vs_explicit_port_rejected
+#18 15.52 === RUN   TestIsRedirectURLValidSameOrigin/different_explicit_ports_rejected
+#18 15.52 === RUN   TestIsRedirectURLValidSameOrigin/localhost_with_different_port_allowed_(RFC_8252_Section_7.3)
+#18 15.52 === RUN   TestIsRedirectURLValidSameOrigin/127.0.0.1_with_different_port_allowed_(RFC_8252_Section_7.3)
+#18 15.52 === RUN   TestIsRedirectURLValidSameOrigin/localhost_without_port_in_redirect_allowed_(RFC_8252_Section_7.3)
+#18 15.52 === RUN   TestIsRedirectURLValidSameOrigin/localhost_scheme_downgrade_still_rejected_despite_RFC_8252
+#18 15.52 === RUN   TestIsRedirectURLValidSameOrigin/non-localhost_variable_port_still_rejected
+#18 15.52 --- PASS: TestIsRedirectURLValidSameOrigin (0.00s)
+#18 15.52     --- PASS: TestIsRedirectURLValidSameOrigin/exact_match (0.00s)
+#18 15.52     --- PASS: TestIsRedirectURLValidSameOrigin/scheme_downgrade_https→http_rejected (0.00s)
+#18 15.52     --- PASS: TestIsRedirectURLValidSameOrigin/scheme_upgrade_http→https_rejected (0.00s)
+#18 15.52     --- PASS: TestIsRedirectURLValidSameOrigin/different_port_rejected (0.00s)
+#18 15.52     --- PASS: TestIsRedirectURLValidSameOrigin/explicit_port_matches_SiteURL_explicit_port (0.00s)
+#18 15.52     --- PASS: TestIsRedirectURLValidSameOrigin/no_port_vs_explicit_port_rejected (0.00s)
+#18 15.52     --- PASS: TestIsRedirectURLValidSameOrigin/different_explicit_ports_rejected (0.00s)
+#18 15.52     --- PASS: TestIsRedirectURLValidSameOrigin/localhost_with_different_port_allowed_(RFC_8252_Section_7.3) (0.00s)
+#18 15.52     --- PASS: TestIsRedirectURLValidSameOrigin/127.0.0.1_with_different_port_allowed_(RFC_8252_Section_7.3) (0.00s)
+#18 15.52     --- PASS: TestIsRedirectURLValidSameOrigin/localhost_without_port_in_redirect_allowed_(RFC_8252_Section_7.3) (0.00s)
+#18 15.52     --- PASS: TestIsRedirectURLValidSameOrigin/localhost_scheme_downgrade_still_rejected_despite_RFC_8252 (0.00s)
+#18 15.52     --- PASS: TestIsRedirectURLValidSameOrigin/non-localhost_variable_port_still_rejected (0.00s)
+#18 15.52 === RUN   TestGetIPAddressWithSBFF
+#18 15.52 === RUN   TestGetIPAddressWithSBFF/ValidSBFF
+#18 15.52 === RUN   TestGetIPAddressWithSBFF/MissingSBFF
+#18 15.52 === RUN   TestGetIPAddressWithSBFF/InvalidSBFF
+#18 15.52 --- PASS: TestGetIPAddressWithSBFF (0.00s)
+#18 15.52     --- PASS: TestGetIPAddressWithSBFF/ValidSBFF (0.00s)
+#18 15.52     --- PASS: TestGetIPAddressWithSBFF/MissingSBFF (0.00s)
+#18 15.52     --- PASS: TestGetIPAddressWithSBFF/InvalidSBFF (0.00s)
+#18 15.52 === RUN   TestGetIPAddressWithXFF
+#18 15.52 --- PASS: TestGetIPAddressWithXFF (0.00s)
+#18 15.52 === RUN   TestGetReferrer
+#18 15.52 === RUN   TestGetReferrer/valid_redirect_url
+#18 15.52 === RUN   TestGetReferrer/invalid_redirect_url
+#18 15.52 === RUN   TestGetReferrer/no_/_separator
+#18 15.52 === RUN   TestGetReferrer/*_respects_separator
+#18 15.52 === RUN   TestGetReferrer/*_respects_parameters
+#18 15.52 === RUN   TestGetReferrer/invalid_redirect_url_due_to_decimal_IP_address
+#18 15.52 === RUN   TestGetReferrer/invalid_redirect_url_due_to_IPv4_address
+#18 15.52 === RUN   TestGetReferrer/invalid_redirect_url_due_to_IPv6_address
+#18 15.52 === RUN   TestGetReferrer/invalid_redirect_url_due_to_bad_URL
+#18 15.52 === RUN   TestGetReferrer/valid_loopback_IPv4_address
+#18 15.52 === RUN   TestGetReferrer/valid_loopback_IPv6_address
+#18 15.52 === RUN   TestGetReferrer/same_origin_allowed
+#18 15.52 === RUN   TestGetReferrer/same_hostname_but_http_scheme_rejected_(scheme_downgrade)
+#18 15.52 === RUN   TestGetReferrer/same_hostname_and_scheme_but_explicit_non-default_port_rejected
+#18 15.52 --- PASS: TestGetReferrer (0.00s)
+#18 15.52     --- PASS: TestGetReferrer/valid_redirect_url (0.00s)
+#18 15.52     --- PASS: TestGetReferrer/invalid_redirect_url (0.00s)
+#18 15.52     --- PASS: TestGetReferrer/no_/_separator (0.00s)
+#18 15.52     --- PASS: TestGetReferrer/*_respects_separator (0.00s)
+#18 15.52     --- PASS: TestGetReferrer/*_respects_parameters (0.00s)
+#18 15.52     --- PASS: TestGetReferrer/invalid_redirect_url_due_to_decimal_IP_address (0.00s)
+#18 15.52     --- PASS: TestGetReferrer/invalid_redirect_url_due_to_IPv4_address (0.00s)
+#18 15.52     --- PASS: TestGetReferrer/invalid_redirect_url_due_to_IPv6_address (0.00s)
+#18 15.52     --- PASS: TestGetReferrer/invalid_redirect_url_due_to_bad_URL (0.00s)
+#18 15.52     --- PASS: TestGetReferrer/valid_loopback_IPv4_address (0.00s)
+#18 15.52     --- PASS: TestGetReferrer/valid_loopback_IPv6_address (0.00s)
+#18 15.52     --- PASS: TestGetReferrer/same_origin_allowed (0.00s)
+#18 15.52     --- PASS: TestGetReferrer/same_hostname_but_http_scheme_rejected_(scheme_downgrade) (0.00s)
+#18 15.52     --- PASS: TestGetReferrer/same_hostname_and_scheme_but_explicit_non-default_port_rejected (0.00s)
+#18 15.52 === RUN   TestValidateOAuthURL
+#18 15.52 === RUN   TestValidateOAuthURL/Valid_HTTPS_URL
+#18 15.52 === RUN   TestValidateOAuthURL/Valid_HTTPS_URL_with_port
+#18 15.52 === RUN   TestValidateOAuthURL/Valid_HTTPS_URL_with_path_and_query
+#18 15.52 === RUN   TestValidateOAuthURL/HTTP_not_allowed
+#18 15.52 === RUN   TestValidateOAuthURL/FTP_not_allowed
+#18 15.52 === RUN   TestValidateOAuthURL/Localhost_blocked
+#18 15.52 === RUN   TestValidateOAuthURL/127.0.0.1_blocked
+#18 15.52 === RUN   TestValidateOAuthURL/::1_(IPv6_loopback)_blocked
+#18 15.52 === RUN   TestValidateOAuthURL/0.0.0.0_blocked
+#18 15.52 === RUN   TestValidateOAuthURL/Subdomain_of_localhost_blocked
+#18 15.52 === RUN   TestValidateOAuthURL/10.0.0.0/8_network_blocked
+#18 15.52 === RUN   TestValidateOAuthURL/172.16.0.0/12_network_blocked
+#18 15.52 === RUN   TestValidateOAuthURL/192.168.0.0/16_network_blocked
+#18 15.52 === RUN   TestValidateOAuthURL/Cloud_metadata_endpoint_blocked
+#18 15.52 === RUN   TestValidateOAuthURL/Malformed_URL
+#18 15.52 === RUN   TestValidateOAuthURL/Empty_URL
+#18 15.52 === RUN   TestValidateOAuthURL/URL_without_hostname
+#18 15.52 --- PASS: TestValidateOAuthURL (0.03s)
+#18 15.52     --- PASS: TestValidateOAuthURL/Valid_HTTPS_URL (0.03s)
+#18 15.52     --- PASS: TestValidateOAuthURL/Valid_HTTPS_URL_with_port (0.00s)
+#18 15.52     --- PASS: TestValidateOAuthURL/Valid_HTTPS_URL_with_path_and_query (0.00s)
+#18 15.52     --- PASS: TestValidateOAuthURL/HTTP_not_allowed (0.00s)
+#18 15.52     --- PASS: TestValidateOAuthURL/FTP_not_allowed (0.00s)
+#18 15.52     --- PASS: TestValidateOAuthURL/Localhost_blocked (0.00s)
+#18 15.52     --- PASS: TestValidateOAuthURL/127.0.0.1_blocked (0.00s)
+#18 15.52     --- PASS: TestValidateOAuthURL/::1_(IPv6_loopback)_blocked (0.00s)
+#18 15.52     --- PASS: TestValidateOAuthURL/0.0.0.0_blocked (0.00s)
+#18 15.52     --- PASS: TestValidateOAuthURL/Subdomain_of_localhost_blocked (0.00s)
+#18 15.52     --- PASS: TestValidateOAuthURL/10.0.0.0/8_network_blocked (0.00s)
+#18 15.52     --- PASS: TestValidateOAuthURL/172.16.0.0/12_network_blocked (0.00s)
+#18 15.52     --- PASS: TestValidateOAuthURL/192.168.0.0/16_network_blocked (0.00s)
+#18 15.52     --- PASS: TestValidateOAuthURL/Cloud_metadata_endpoint_blocked (0.00s)
+#18 15.52     --- PASS: TestValidateOAuthURL/Malformed_URL (0.00s)
+#18 15.52     --- PASS: TestValidateOAuthURL/Empty_URL (0.00s)
+#18 15.52     --- PASS: TestValidateOAuthURL/URL_without_hostname (0.00s)
+#18 15.52 === RUN   TestIsLocalhost
+#18 15.52 === RUN   TestIsLocalhost/localhost
+#18 15.52 === RUN   TestIsLocalhost/Localhost_uppercase
+#18 15.52 === RUN   TestIsLocalhost/LOCALHOST_uppercase
+#18 15.52 === RUN   TestIsLocalhost/127.0.0.1
+#18 15.52 === RUN   TestIsLocalhost/::1_IPv6
+#18 15.52 === RUN   TestIsLocalhost/0.0.0.0
+#18 15.52 === RUN   TestIsLocalhost/::
+#18 15.52 === RUN   TestIsLocalhost/test.localhost_subdomain
+#18 15.52 === RUN   TestIsLocalhost/api.test.localhost_nested_subdomain
+#18 15.52 === RUN   TestIsLocalhost/example.com
+#18 15.52 === RUN   TestIsLocalhost/localhostbutnotreally.com
+#18 15.52 === RUN   TestIsLocalhost/localhost.example.com
+#18 15.52 --- PASS: TestIsLocalhost (0.00s)
+#18 15.52     --- PASS: TestIsLocalhost/localhost (0.00s)
+#18 15.52     --- PASS: TestIsLocalhost/Localhost_uppercase (0.00s)
+#18 15.52     --- PASS: TestIsLocalhost/LOCALHOST_uppercase (0.00s)
+#18 15.52     --- PASS: TestIsLocalhost/127.0.0.1 (0.00s)
+#18 15.52     --- PASS: TestIsLocalhost/::1_IPv6 (0.00s)
+#18 15.52     --- PASS: TestIsLocalhost/0.0.0.0 (0.00s)
+#18 15.52     --- PASS: TestIsLocalhost/:: (0.00s)
+#18 15.52     --- PASS: TestIsLocalhost/test.localhost_subdomain (0.00s)
+#18 15.52     --- PASS: TestIsLocalhost/api.test.localhost_nested_subdomain (0.00s)
+#18 15.52     --- PASS: TestIsLocalhost/example.com (0.00s)
+#18 15.52     --- PASS: TestIsLocalhost/localhostbutnotreally.com (0.00s)
+#18 15.52     --- PASS: TestIsLocalhost/localhost.example.com (0.00s)
+#18 15.52 === RUN   TestFetchURLWithTimeout
+#18 15.52 === RUN   TestFetchURLWithTimeout/Successful_fetch
+#18 15.52 === RUN   TestFetchURLWithTimeout/Invalid_URL_fails_SSRF_check
+#18 15.52 === RUN   TestFetchURLWithTimeout/HTTP_URL_rejected
+#18 15.52 === RUN   TestFetchURLWithTimeout/Context_timeout
+#18 15.52 --- PASS: TestFetchURLWithTimeout (0.00s)
+#18 15.52     --- PASS: TestFetchURLWithTimeout/Successful_fetch (0.00s)
+#18 15.52     --- PASS: TestFetchURLWithTimeout/Invalid_URL_fails_SSRF_check (0.00s)
+#18 15.52     --- PASS: TestFetchURLWithTimeout/HTTP_URL_rejected (0.00s)
+#18 15.52     --- PASS: TestFetchURLWithTimeout/Context_timeout (0.00s)
+#18 15.52 === RUN   TestSSRFProtectedTransport
+#18 15.52 === RUN   TestSSRFProtectedTransport/SSRF_protection_re-validates_on_redirect
+#18 15.52 --- PASS: TestSSRFProtectedTransport (0.00s)
+#18 15.52     --- PASS: TestSSRFProtectedTransport/SSRF_protection_re-validates_on_redirect (0.00s)
+#18 15.52 PASS
+#18 15.52 ok  	github.com/supabase/auth/internal/utilities	0.039s
+#18 DONE 15.8s
+
+#19 [auth-build 12/13] RUN go build -o auth -buildvcs=false -ldflags '-X github.com/supabase/auth/internal/utilities.Version=v2.197.0-be2-pgx5'
+#19 DONE 4.6s
+
+#20 [auth-build 13/13] RUN go version -m /source/auth > /source/auth-binary-modules.txt && ! grep -E 'github.com/jackc/(pgproto3/v2|pgconn|pgx/v4|pgtype)[[:space:]]' /source/auth-binary-modules.txt
+#20 DONE 0.1s
+
+#21 [auth 2/5] RUN apk add --no-cache --upgrade libcrypto3=3.5.9-r0 libssl3=3.5.9-r0
+#21 CACHED
+
+#22 [auth 3/5] COPY --from=auth-build /source/auth /usr/local/bin/auth
+#22 DONE 0.0s
+
+#23 [auth 4/5] COPY --from=auth-build /source/LICENSE /usr/share/licenses/boletinexpress-auth/LICENSE
+#23 DONE 0.0s
+
+#24 [auth 5/5] COPY --from=auth-build /source/go.mod /source/go.sum /source/auth-modules.txt /source/auth-binary-modules.txt /usr/share/boletinexpress-auth/
+#24 DONE 0.0s
+
+#25 exporting to image
+#25 exporting layers
+#25 exporting layers 1.0s done
+#25 exporting manifest sha256:a61bbeb6e5d5072e353dc245e8b32d34cc7d2af9cbad00629ab451c96c5726a7 done
+#25 exporting config sha256:8c743c1e7e66ec128a40dc6ab043dccb828aaa5469f12110825d72c4e54647e1 done
+#25 exporting attestation manifest sha256:ae23032eb86ed15bd6bb49ffc55f883f801102ae1f0c3d07d7691304efb1c9d8 done
+#25 exporting manifest list sha256:f4883ef46d4c153629bb344fada5f883fd0534eebccc1ff99b8f7d0f2d311607 done
+#25 naming to docker.io/library/boletinexpress-auth:phase3 done
+#25 unpacking to docker.io/library/boletinexpress-auth:phase3 0.1s done
+#25 DONE 1.1s
+
+View build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux/uojxybgz2gn06yuqc1gnpc5rv

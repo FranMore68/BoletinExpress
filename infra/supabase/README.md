@@ -36,3 +36,18 @@ La retención, limpieza de reservas incompletas, créditos y formularios complet
 Docker Desktop se recuperó el 17/10/2026 deteniendo sus procesos bloqueados con `docker desktop stop --force --timeout 30` y arrancándolo con `docker desktop start --timeout 45`. No se borraron su disco virtual ni los volúmenes. Los servicios se han reconstruido para arm64 y los doce grupos de integración han pasado también localmente; evidencias en `evidence/phase-3/local-runtime-2026-10-17.json` y `local-isolation-2026-10-17.json`.
 
 Para evitar cuotas inválidas en este Docker, todas son al menos 0,01 CPU. PostgreSQL recibe 0,05 CPU y Storage 0,10 CPU; se mantienen los totales anteriores. Storage usa el wget ya incluido en su imagen para comprobar `/status`, evitando arrancar otro proceso Node en cada sonda. Estos ajustes no sustituyen la prueba de capacidad del VPS.
+
+## Auth migrado a pgx/v5
+
+El target `auth` conserva la fuente verificada de Supabase Auth v2.197.0 y aplica Pop v6.4.1 y pgx/v5 v5.11.0 con los manifiestos fijados de `auth-runtime/`. Dos importaciones se adaptan al tipo de error nuevo. La construcción verifica que no quedan módulos antiguos ni en el árbol ni en el ejecutable y ejecuta 57 pruebas principales de Go. Versión de servicio: `2.197.0-be2-pgx5`.
+
+Auth expone `/health`; Compose espera su disponibilidad antes de arrancar la pasarela. Para actualizar solo Auth conservando base y claves:
+
+```sh
+docker build --target auth -t boletinexpress-auth:phase3 .
+docker compose --env-file .secrets/supabase.env -f infra/supabase/compose.yaml up --detach --no-deps --wait --wait-timeout 180 auth
+```
+
+En el Mac se conserva la imagen previa con la etiqueta `boletinexpress-auth:phase3-before-pgx5-20261017` para reversión local si fuera necesaria. Esta imagen anterior conserva el aviso de seguridad; no constituye una versión aprobada para desplegar.
+
+La prueba de continuidad se reproduce con `node scripts/test-auth-continuity.mjs before`, la actualización anterior y `node scripts/test-auth-continuity.mjs after`. Usa una cuenta ficticia, guarda temporalmente sus cookies en `.secrets` con permisos 0600 y las elimina tras cerrar la sesión de prueba. No regenera claves ni modifica las cuentas existentes.

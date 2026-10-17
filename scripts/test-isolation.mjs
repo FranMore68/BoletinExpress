@@ -2,6 +2,7 @@ import assert from "node:assert/strict";
 import { createHash, createHmac, randomBytes, randomUUID } from "node:crypto";
 import { writeFileSync } from "node:fs";
 import { mkdir, readFile, writeFile } from "node:fs/promises";
+import { join } from "node:path";
 import { createClient } from "@supabase/supabase-js";
 
 const envFile = process.env.AUTH_TEST_ENV || ".secrets/app.env";
@@ -21,10 +22,13 @@ assert.ok(
   "Solo entorno local de evaluación",
 );
 const results = [];
+const reportDir = process.env.AUTH_TEST_REPORT_DIR || "evidence/phase-3";
+await mkdir(reportDir, { recursive: true });
+const reportPath = join(reportDir, "isolation.json");
 function pass(test, evidence) {
   results.push({ test, pass: true, evidence });
   writeFileSync(
-    "evidence/phase-3/isolation.json",
+    reportPath,
     JSON.stringify({ pass: false, complete: false, results }, null, 2),
   );
   console.log("PASS", test);
@@ -74,12 +78,13 @@ async function json(res, status) {
   return res.json();
 }
 const mailbox = process.env.AUTH_TEST_MAILBOX || "http://127.0.0.1:54324";
-async function emailToken(email, type) {
+async function emailToken(email, type, previousMessages = []) {
   for (let i = 0; i < 150; i++) {
     const list = await fetch(
       `${mailbox}/api/v1/search?query=${encodeURIComponent(`to:${email}`)}`,
     ).then((r) => r.json());
     for (const message of list.messages || []) {
+      if (previousMessages.includes(message.ID)) continue;
       const detail = await fetch(
         `${mailbox}/api/v1/message/${message.ID}`,
       ).then((r) => r.json());
@@ -125,7 +130,24 @@ for (const account of accounts) {
     }),
     401,
   );
-  const hash = await emailToken(account.email, "email");
+  let hash = await emailToken(account.email, "email");
+  const beforeResend = await fetch(
+    `${mailbox}/api/v1/search?query=${encodeURIComponent(`to:${account.email}`)}`,
+  ).then((r) => r.json());
+  // Verify a second delivery; Auth may reuse a still-valid confirmation token.
+  await new Promise((resolve) => setTimeout(resolve, 1100));
+  await json(
+    await account.jar.request("/api/auth/resend", {
+      method: "POST",
+      body: { email: account.email },
+    }),
+    200,
+  );
+  hash = await emailToken(
+    account.email,
+    "email",
+    beforeResend.messages.map((message) => message.ID),
+  );
   const page = await empty.request(
     `/auth/confirm?token_hash=${hash}&type=email`,
   );
@@ -153,7 +175,7 @@ for (const account of accounts) {
   );
 }
 pass(
-  "registro, confirmación explícita y enlace de un uso",
+  "registro, reenvío, confirmación explícita y enlace de un uso",
   "sin acceso antes de confirmar; cookies HttpOnly/SameSite",
 );
 const [a, b] = accounts;
@@ -441,7 +463,10 @@ assert.ok(cookie);
 const tampered = new BrowserSession();
 tampered.cookies.set(cookie[0], `${cookie[1].slice(0, -3)}bad`);
 await json(await tampered.request("/api/auth/session"), 401);
-const data = await readFile(".secrets/supabase.env", "utf8");
+const data = await readFile(
+  process.env.AUTH_TEST_DATA_ENV || ".secrets/supabase.env",
+  "utf8",
+);
 const jwtSecret = data
   .split("\n")
   .find((l) => l.startsWith("JWT_SECRET="))
@@ -494,9 +519,8 @@ pass(
   "intentos de acceso limitados en servidor",
   "seis operaciones con clave nueva: cinco 401 y un 429 por cuota persistente",
 );
-await mkdir("evidence/phase-3", { recursive: true });
 await writeFile(
-  "evidence/phase-3/isolation.json",
+  reportPath,
   JSON.stringify(
     {
       pass: true,

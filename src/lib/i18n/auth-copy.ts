@@ -36,6 +36,11 @@ export const authCopy = {
     "Solicita un nuevo enlace si aún no has confirmado tu cuenta.",
     "Demana un enllaç nou si encara no has confirmat el compte.",
   ],
+  localMailHelp: [
+    "En esta prueba local, los enlaces de confirmación y recuperación llegan al buzón de pruebas, no a tu correo personal.",
+    "En aquesta prova local, els enllaços de confirmació i recuperació arriben a la bústia de proves, no al teu correu personal.",
+  ],
+  localMailOpen: ["Abrir buzón de pruebas", "Obre la bústia de proves"],
   sent: [
     "Si procede, recibirás el enlace. Revisa tu correo y vuelve para acceder.",
     "Si escau, rebràs l’enllaç. Revisa el correu i torna per accedir.",

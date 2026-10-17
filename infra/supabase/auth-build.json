@@ -5,7 +5,13 @@
   "sourceSha256": "d21291c281604ccc6272c81c6506c8d521bc38d3141b0d339cb1a5988b1d461d",
   "compilerImage": "golang:1.27.2-alpine3.24@sha256:f92b6ef800e499660581efdabdf25d9d817a9d124eaf900924f0504e7e27e12d",
   "dependencyUpdates": {
+    "github.com/gobuffalo/pop/v6": "v6.4.1",
+    "github.com/jackc/pgx/v5": "v5.11.0",
     "golang.org/x/net": "v0.60.0",
     "google.golang.org/grpc": "v1.83.2"
-  }
+  },
+  "runtimeVersion": "2.197.0-be2-pgx5",
+  "dependencyLocks": "infra/supabase/auth-runtime/go.mod and go.sum",
+  "adaptedImports": ["internal/utilities/postgres.go", "internal/hooks/hookspgfunc/hookspgfunc_test.go"],
+  "removedDependencies": ["github.com/jackc/pgproto3/v2", "github.com/jackc/pgconn", "github.com/jackc/pgx/v4", "github.com/jackc/pgtype"]
 }

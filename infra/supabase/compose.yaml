@@ -30,6 +30,12 @@ services:
     mem_limit: 128m
     cpus: 0.04
     depends_on: {postgres: {condition: service_healthy}, mail: {condition: service_started}}
+    healthcheck:
+      test: [CMD, wget, -q, -O, /dev/null, "http://127.0.0.1:9999/health"]
+      interval: 5s
+      timeout: 5s
+      start_period: 30s
+      retries: 12
     environment:
       GOTRUE_API_HOST: 0.0.0.0
       GOTRUE_API_PORT: 9999
@@ -123,7 +129,7 @@ services:
       ANON_KEY: ${ANON_KEY}
       SERVICE_ROLE_KEY: ${SERVICE_ROLE_KEY}
     ports: ["127.0.0.1:54321:8000"]
-    depends_on: {auth: {condition: service_started}, rest: {condition: service_started}, storage: {condition: service_healthy}}
+    depends_on: {auth: {condition: service_healthy}, rest: {condition: service_started}, storage: {condition: service_healthy}}
   templates:
     <<: *runtime
     image: boletinexpress-templates:phase3

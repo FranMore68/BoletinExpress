@@ -1,0 +1,469 @@
+{
+  "primaryServicesUnchanged": true,
+  "sharedVolumes": false,
+  "sharedNetworks": false,
+  "services": [
+    {
+      "name": "/boletinexpress-evaluation-web-1",
+      "id": "cc5a77e88f2504b8045d85b02b4fe35a2ec0bef9a52873cd51b1d5064653fa6d",
+      "image": "sha256:cfc2dae77ca12b0b472eec71515823a743e74bea6cd1de994f66461562e59ea9",
+      "startedAt": "2026-10-17T16:26:34.16492368Z",
+      "oom": false,
+      "restarts": 0,
+      "mounts": [],
+      "networks": {
+        "boletinexpress-data": {
+          "Aliases": [
+            "boletinexpress-evaluation-web-1",
+            "web"
+          ],
+          "DNSNames": [
+            "boletinexpress-evaluation-web-1",
+            "web",
+            "cc5a77e88f25"
+          ],
+          "DriverOpts": null,
+          "EndpointID": "fbc7d25ea9e5d9ba471ce6a296a749e1da8fc37d7d29f98f06bf0549ab84a2d6",
+          "Gateway": "172.19.0.1",
+          "GlobalIPv6Address": "",
+          "GlobalIPv6PrefixLen": 0,
+          "GwPriority": 0,
+          "IPAMConfig": null,
+          "IPAddress": "172.19.0.9",
+          "IPPrefixLen": 16,
+          "IPv6Gateway": "",
+          "Links": null,
+          "MacAddress": "5a:b2:eb:06:82:eb",
+          "NetworkID": "bc4ec6be47e944663688b37d60755a5ec1b2f0b4f9231ad7680385a6415fa30c"
+        },
+        "boletinexpress-evaluation": {
+          "Aliases": [
+            "boletinexpress-evaluation-web-1",
+            "web"
+          ],
+          "DNSNames": [
+            "boletinexpress-evaluation-web-1",
+            "web",
+            "cc5a77e88f25"
+          ],
+          "DriverOpts": null,
+          "EndpointID": "c3e36c63eb0ecf37dd2bb25edcb6b177eb8fe62dfb9128b2804f8d3e9fc0ec47",
+          "Gateway": "172.18.0.1",
+          "GlobalIPv6Address": "",
+          "GlobalIPv6PrefixLen": 0,
+          "GwPriority": 0,
+          "IPAMConfig": null,
+          "IPAddress": "172.18.0.3",
+          "IPPrefixLen": 16,
+          "IPv6Gateway": "",
+          "Links": null,
+          "MacAddress": "5e:35:31:06:03:27",
+          "NetworkID": "7f92b606baf334013bb59173174f93d584cca8cb7f532c2c936fa215205817bb"
+        }
+      }
+    },
+    {
+      "name": "/boletinexpress-data-auth-1",
+      "id": "4c5cac021244727d5785ec484daa9378da125634c0c81ff05563f931cb298608",
+      "image": "sha256:58f84d97790703ab63111cc2c5a27b02b01d01b43d0c7896d77550dbdd526c70",
+      "startedAt": "2026-10-17T15:41:23.689859884Z",
+      "oom": false,
+      "restarts": 0,
+      "mounts": [],
+      "networks": {
+        "boletinexpress-data": {
+          "Aliases": [
+            "boletinexpress-data-auth-1",
+            "auth"
+          ],
+          "DNSNames": [
+            "boletinexpress-data-auth-1",
+            "auth",
+            "4c5cac021244"
+          ],
+          "DriverOpts": null,
+          "EndpointID": "f5c4d862ff5fdd92b3495a903b8d21a6f668bb324bc3f43f0574a124739438d0",
+          "Gateway": "172.19.0.1",
+          "GlobalIPv6Address": "",
+          "GlobalIPv6PrefixLen": 0,
+          "GwPriority": 0,
+          "IPAMConfig": null,
+          "IPAddress": "172.19.0.5",
+          "IPPrefixLen": 16,
+          "IPv6Gateway": "",
+          "Links": null,
+          "MacAddress": "76:37:c0:df:86:79",
+          "NetworkID": "bc4ec6be47e944663688b37d60755a5ec1b2f0b4f9231ad7680385a6415fa30c"
+        }
+      }
+    },
+    {
+      "name": "/boletinexpress-data-postgres-1",
+      "id": "c0779fd692d52738e359c806db219628e3645645f3d600bde6b2d3e50e7adcc3",
+      "image": "sha256:84ce85eae9937c42553d9eaec2b5b29597aa1325273b7362a8831606ade44d72",
+      "startedAt": "2026-10-17T15:47:06.248115667Z",
+      "oom": false,
+      "restarts": 0,
+      "mounts": [
+        {
+          "Destination": "/var/lib/postgresql/data",
+          "Driver": "local",
+          "Mode": "rw",
+          "Name": "boletinexpress-postgres-data",
+          "Propagation": "",
+          "RW": true,
+          "Source": "/var/lib/docker/volumes/boletinexpress-postgres-data/_data",
+          "Type": "volume"
+        },
+        {
+          "Destination": "/etc/postgresql-custom",
+          "Driver": "local",
+          "Mode": "rw",
+          "Name": "boletinexpress-db-config",
+          "Propagation": "",
+          "RW": true,
+          "Source": "/var/lib/docker/volumes/boletinexpress-db-config/_data",
+          "Type": "volume"
+        }
+      ],
+      "networks": {
+        "boletinexpress-data": {
+          "Aliases": [
+            "boletinexpress-data-postgres-1",
+            "postgres"
+          ],
+          "DNSNames": [
+            "boletinexpress-data-postgres-1",
+            "postgres",
+            "c0779fd692d5"
+          ],
+          "DriverOpts": null,
+          "EndpointID": "97e19d81aea8955e9266e4a17d0804c086a3831cebbc7349a7ebb395f0c73cac",
+          "Gateway": "172.19.0.1",
+          "GlobalIPv6Address": "",
+          "GlobalIPv6PrefixLen": 0,
+          "GwPriority": 0,
+          "IPAMConfig": null,
+          "IPAddress": "172.19.0.2",
+          "IPPrefixLen": 16,
+          "IPv6Gateway": "",
+          "Links": null,
+          "MacAddress": "7a:dd:9b:5e:a6:4b",
+          "NetworkID": "bc4ec6be47e944663688b37d60755a5ec1b2f0b4f9231ad7680385a6415fa30c"
+        }
+      }
+    },
+    {
+      "name": "/boletinexpress-auth-candidate-web-1",
+      "id": "af1d89dd12576484f228fef68cce44f41ceba06bf53c1755599797dbe80fa21a",
+      "image": "sha256:cfc2dae77ca12b0b472eec71515823a743e74bea6cd1de994f66461562e59ea9",
+      "startedAt": "2026-10-17T16:50:33.219289305Z",
+      "oom": false,
+      "restarts": 0,
+      "mounts": [],
+      "networks": {
+        "boletinexpress-auth-candidate": {
+          "Aliases": [
+            "boletinexpress-auth-candidate-web-1",
+            "web"
+          ],
+          "DNSNames": [
+            "boletinexpress-auth-candidate-web-1",
+            "web",
+            "af1d89dd1257"
+          ],
+          "DriverOpts": null,
+          "EndpointID": "29318bdac7c793031f8f861db1b8f0ed54bd05a627d793698799f992e796addd",
+          "Gateway": "172.20.0.1",
+          "GlobalIPv6Address": "",
+          "GlobalIPv6PrefixLen": 0,
+          "GwPriority": 0,
+          "IPAMConfig": null,
+          "IPAddress": "172.20.0.2",
+          "IPPrefixLen": 16,
+          "IPv6Gateway": "",
+          "Links": null,
+          "MacAddress": "36:84:c7:65:d1:ef",
+          "NetworkID": "97793ae2157ab2e14c5f5000e975db07706f52852c88d64232a79f997d85d92f"
+        }
+      }
+    },
+    {
+      "name": "/boletinexpress-auth-candidate-postgres-1",
+      "id": "84c868e3afa214164b6515b3aa08cda60e07131398dd2588b1372c99f8437d55",
+      "image": "sha256:84ce85eae9937c42553d9eaec2b5b29597aa1325273b7362a8831606ade44d72",
+      "startedAt": "2026-10-17T16:50:33.232460305Z",
+      "oom": false,
+      "restarts": 0,
+      "mounts": [
+        {
+          "Destination": "/var/lib/postgresql/data",
+          "Driver": "local",
+          "Mode": "rw",
+          "Name": "boletinexpress-auth-candidate-db",
+          "Propagation": "",
+          "RW": true,
+          "Source": "/var/lib/docker/volumes/boletinexpress-auth-candidate-db/_data",
+          "Type": "volume"
+        },
+        {
+          "Destination": "/etc/postgresql-custom",
+          "Driver": "local",
+          "Mode": "rw",
+          "Name": "boletinexpress-auth-candidate-db-config",
+          "Propagation": "",
+          "RW": true,
+          "Source": "/var/lib/docker/volumes/boletinexpress-auth-candidate-db-config/_data",
+          "Type": "volume"
+        }
+      ],
+      "networks": {
+        "boletinexpress-auth-candidate": {
+          "Aliases": [
+            "boletinexpress-auth-candidate-postgres-1",
+            "postgres"
+          ],
+          "DNSNames": [
+            "boletinexpress-auth-candidate-postgres-1",
+            "postgres",
+            "84c868e3afa2"
+          ],
+          "DriverOpts": null,
+          "EndpointID": "cadd546f89111260f0fe6d7162622007c8e2af071a8d8f83e2d47b388027bad9",
+          "Gateway": "172.20.0.1",
+          "GlobalIPv6Address": "",
+          "GlobalIPv6PrefixLen": 0,
+          "GwPriority": 0,
+          "IPAMConfig": null,
+          "IPAddress": "172.20.0.3",
+          "IPPrefixLen": 16,
+          "IPv6Gateway": "",
+          "Links": null,
+          "MacAddress": "ca:34:fb:89:5a:32",
+          "NetworkID": "97793ae2157ab2e14c5f5000e975db07706f52852c88d64232a79f997d85d92f"
+        }
+      }
+    },
+    {
+      "name": "/boletinexpress-auth-candidate-auth-1",
+      "id": "88080409412ad3d80464b4a118c5b4e9fec9d85559cf34920cdfe67ca725f189",
+      "image": "sha256:1bdc2e6e9b20e74487fef226ca75d8fa6a6e45122d905ca5562d6b1189bd3e4f",
+      "startedAt": "2026-10-17T16:51:58.01648826Z",
+      "oom": false,
+      "restarts": 0,
+      "mounts": [],
+      "networks": {
+        "boletinexpress-auth-candidate": {
+          "Aliases": [
+            "boletinexpress-auth-candidate-auth-1",
+            "auth"
+          ],
+          "DNSNames": [
+            "boletinexpress-auth-candidate-auth-1",
+            "auth",
+            "88080409412a"
+          ],
+          "DriverOpts": null,
+          "EndpointID": "9353de47a402730ab3f4f9098e45f1fb46fb42ff82943fac6191b435dbe4a112",
+          "Gateway": "172.20.0.1",
+          "GlobalIPv6Address": "",
+          "GlobalIPv6PrefixLen": 0,
+          "GwPriority": 0,
+          "IPAMConfig": null,
+          "IPAddress": "172.20.0.6",
+          "IPPrefixLen": 16,
+          "IPv6Gateway": "",
+          "Links": null,
+          "MacAddress": "0e:55:57:a9:4c:dc",
+          "NetworkID": "97793ae2157ab2e14c5f5000e975db07706f52852c88d64232a79f997d85d92f"
+        }
+      }
+    },
+    {
+      "name": "/boletinexpress-auth-candidate-rest-1",
+      "id": "d49176df8252c5f84c3d0b0bb28040c8869294abb09e16ae8ee8f705e0f6041f",
+      "image": "sha256:c9dc201e555f5d8e37e7f39cdd4df0229774996e213bfd7de8d10ac609030f2c",
+      "startedAt": "2026-10-17T16:51:13.853296337Z",
+      "oom": false,
+      "restarts": 0,
+      "mounts": [],
+      "networks": {
+        "boletinexpress-auth-candidate": {
+          "Aliases": [
+            "boletinexpress-auth-candidate-rest-1",
+            "rest"
+          ],
+          "DNSNames": [
+            "boletinexpress-auth-candidate-rest-1",
+            "rest",
+            "d49176df8252"
+          ],
+          "DriverOpts": null,
+          "EndpointID": "b7044632908eb601188e6622bd65cf8fc07c8f29403e5e9cd46f8f4cd9b2321d",
+          "Gateway": "172.20.0.1",
+          "GlobalIPv6Address": "",
+          "GlobalIPv6PrefixLen": 0,
+          "GwPriority": 0,
+          "IPAMConfig": null,
+          "IPAddress": "172.20.0.7",
+          "IPPrefixLen": 16,
+          "IPv6Gateway": "",
+          "Links": null,
+          "MacAddress": "4a:e1:3e:41:ff:27",
+          "NetworkID": "97793ae2157ab2e14c5f5000e975db07706f52852c88d64232a79f997d85d92f"
+        }
+      }
+    },
+    {
+      "name": "/boletinexpress-auth-candidate-storage-1",
+      "id": "e92df02d98187edcbf0e1e0fe7f04b5ead0b5e7ec478fd4eebc740b012a61adf",
+      "image": "sha256:c15766205b3774ed6aee13c7b665c06b40a5d903ea8fa5c557232d0743bf9507",
+      "startedAt": "2026-10-17T16:51:14.671574921Z",
+      "oom": false,
+      "restarts": 0,
+      "mounts": [
+        {
+          "Destination": "/var/lib/storage",
+          "Driver": "local",
+          "Mode": "rw",
+          "Name": "boletinexpress-auth-candidate-files",
+          "Propagation": "",
+          "RW": true,
+          "Source": "/var/lib/docker/volumes/boletinexpress-auth-candidate-files/_data",
+          "Type": "volume"
+        }
+      ],
+      "networks": {
+        "boletinexpress-auth-candidate": {
+          "Aliases": [
+            "boletinexpress-auth-candidate-storage-1",
+            "storage"
+          ],
+          "DNSNames": [
+            "boletinexpress-auth-candidate-storage-1",
+            "storage",
+            "e92df02d9818"
+          ],
+          "DriverOpts": null,
+          "EndpointID": "0c9bcbb67af1b11cc08a2b9d5fa8c0212b334f065b51714df34319dd1075c28c",
+          "Gateway": "172.20.0.1",
+          "GlobalIPv6Address": "",
+          "GlobalIPv6PrefixLen": 0,
+          "GwPriority": 0,
+          "IPAMConfig": null,
+          "IPAddress": "172.20.0.8",
+          "IPPrefixLen": 16,
+          "IPv6Gateway": "",
+          "Links": null,
+          "MacAddress": "02:09:fb:e5:e8:06",
+          "NetworkID": "97793ae2157ab2e14c5f5000e975db07706f52852c88d64232a79f997d85d92f"
+        }
+      }
+    },
+    {
+      "name": "/boletinexpress-auth-candidate-gateway-1",
+      "id": "8bde0f506e7a53a312a2c0bae396b1f27b4436651dabd18e45eb40d7f195ce45",
+      "image": "sha256:b5920bfb2f015ae47d8e41fe86da14a3581f4c7bee068ef751f382f503571bb8",
+      "startedAt": "2026-10-17T16:51:42.329974003Z",
+      "oom": false,
+      "restarts": 0,
+      "mounts": [],
+      "networks": {
+        "boletinexpress-auth-candidate": {
+          "Aliases": [
+            "boletinexpress-auth-candidate-gateway-1",
+            "gateway"
+          ],
+          "DNSNames": [
+            "boletinexpress-auth-candidate-gateway-1",
+            "gateway",
+            "8bde0f506e7a"
+          ],
+          "DriverOpts": null,
+          "EndpointID": "bfa35c2ea8502b0c969ac2a8499e5eaa81b7f46f7c8d3e5760a07baf15b824a9",
+          "Gateway": "172.20.0.1",
+          "GlobalIPv6Address": "",
+          "GlobalIPv6PrefixLen": 0,
+          "GwPriority": 0,
+          "IPAMConfig": null,
+          "IPAddress": "172.20.0.9",
+          "IPPrefixLen": 16,
+          "IPv6Gateway": "",
+          "Links": null,
+          "MacAddress": "66:53:62:38:d7:85",
+          "NetworkID": "97793ae2157ab2e14c5f5000e975db07706f52852c88d64232a79f997d85d92f"
+        }
+      }
+    },
+    {
+      "name": "/boletinexpress-auth-candidate-templates-1",
+      "id": "ba32e7785b29a6c01c5b24dff829e6c2780494e713b7491758e8f6797cab199e",
+      "image": "sha256:99534d4f79b22afe21358fc459013b69e07b8e21d466e486118fae2573c6fea4",
+      "startedAt": "2026-10-17T16:50:33.229589305Z",
+      "oom": false,
+      "restarts": 0,
+      "mounts": [],
+      "networks": {
+        "boletinexpress-auth-candidate": {
+          "Aliases": [
+            "boletinexpress-auth-candidate-templates-1",
+            "templates"
+          ],
+          "DNSNames": [
+            "boletinexpress-auth-candidate-templates-1",
+            "templates",
+            "ba32e7785b29"
+          ],
+          "DriverOpts": null,
+          "EndpointID": "3f7752b4f7d2aeb8a63584fa21addaeb1eb2029c8621772ec4447befd80728e4",
+          "Gateway": "172.20.0.1",
+          "GlobalIPv6Address": "",
+          "GlobalIPv6PrefixLen": 0,
+          "GwPriority": 0,
+          "IPAMConfig": null,
+          "IPAddress": "172.20.0.4",
+          "IPPrefixLen": 16,
+          "IPv6Gateway": "",
+          "Links": null,
+          "MacAddress": "c6:c6:02:e5:62:af",
+          "NetworkID": "97793ae2157ab2e14c5f5000e975db07706f52852c88d64232a79f997d85d92f"
+        }
+      }
+    },
+    {
+      "name": "/boletinexpress-auth-candidate-mail-1",
+      "id": "458132b547b10cfc50f0269f47ed9e775584897a1510a21831317ea81fb335ba",
+      "image": "sha256:23fe39e81bde596a918000b3135c0f85dc8bb4c9ea6be274b051143f3e300387",
+      "startedAt": "2026-10-17T16:50:33.216873721Z",
+      "oom": false,
+      "restarts": 0,
+      "mounts": [],
+      "networks": {
+        "boletinexpress-auth-candidate": {
+          "Aliases": [
+            "boletinexpress-auth-candidate-mail-1",
+            "mail"
+          ],
+          "DNSNames": [
+            "boletinexpress-auth-candidate-mail-1",
+            "mail",
+            "458132b547b1"
+          ],
+          "DriverOpts": null,
+          "EndpointID": "e03d1e84c7e429e67c431d8091bf31d643082ca5f59d96b4aa2c7dcac61130c6",
+          "Gateway": "172.20.0.1",
+          "GlobalIPv6Address": "",
+          "GlobalIPv6PrefixLen": 0,
+          "GwPriority": 0,
+          "IPAMConfig": null,
+          "IPAddress": "172.20.0.5",
+          "IPPrefixLen": 16,
+          "IPv6Gateway": "",
+          "Links": null,
+          "MacAddress": "42:aa:97:c9:1f:8f",
+          "NetworkID": "97793ae2157ab2e14c5f5000e975db07706f52852c88d64232a79f997d85d92f"
+        }
+      }
+    }
+  ]
+}

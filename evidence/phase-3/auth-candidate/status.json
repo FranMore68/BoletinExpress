@@ -1,0 +1,32 @@
+{
+  "date": "2026-10-17",
+  "status": "PASSED_NOT_PROMOTED",
+  "platform": "linux/arm64 (Docker Desktop macOS)",
+  "image": "boletinexpress-auth:pgx5-candidate",
+  "imageIndexDigest": "sha256:1bdc2e6e9b20e74487fef226ca75d8fa6a6e45122d905ca5562d6b1189bd3e4f",
+  "scannerImageConfigDigest": "sha256:9d918f9d3e287c7b596ad23fc1496dc29fc43b72342b512b0f06cf8aae8e79d7",
+  "scannerLayersMatchTestedImage": true,
+  "authVersion": "2.197.0-be-pgx5-candidate",
+  "pop": "v6.4.1",
+  "pgx": "v5.11.0",
+  "goTestsPassed": 57,
+  "integrationGroupsPassed": 12,
+  "high": 0,
+  "critical": 0,
+  "legacyModulesAbsentFromGraphAndBinary": true,
+  "primaryServicesUnchanged": true,
+  "sharedVolumes": false,
+  "sharedNetworks": false,
+  "candidateServicesStopped": 8,
+  "candidateVolumesPreserved": true,
+  "primaryAuthPromoted": false,
+  "phase3Closed": false,
+  "vpsModified": false,
+  "evidence": {
+    "build": "build-locked.log",
+    "scanner": "image-auth-candidate.json",
+    "integration": "isolation.json",
+    "isolation": "runtime-isolation.json",
+    "modules": "binary-modules.txt"
+  }
+}

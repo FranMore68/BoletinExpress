@@ -57,13 +57,19 @@ RUN apk add --no-cache make git
 ADD --checksum=sha256:d21291c281604ccc6272c81c6506c8d521bc38d3141b0d339cb1a5988b1d461d https://codeload.github.com/supabase/auth/tar.gz/refs/tags/v2.197.0 /tmp/auth.tar.gz
 WORKDIR /source
 RUN tar xzf /tmp/auth.tar.gz --strip-components=1 -C /source
-RUN go get golang.org/x/net@v0.60.0 google.golang.org/grpc@v1.83.2
-RUN go test ./internal/crypto ./internal/conf
-RUN RELEASE_VERSION=2.197.0-be1 make build
+RUN sed -i 's|"github.com/jackc/pgconn"|"github.com/jackc/pgx/v5/pgconn"|' internal/utilities/postgres.go internal/hooks/hookspgfunc/hookspgfunc_test.go
+COPY infra/supabase/auth-runtime/go.mod infra/supabase/auth-runtime/go.sum ./
+RUN go mod download && go mod verify
+RUN go list -m all > /source/auth-modules.txt && ! grep -E '^github.com/jackc/(pgproto3/v2|pgconn|pgx/v4|pgtype) ' /source/auth-modules.txt
+COPY infra/supabase/auth-runtime/migration_test.go internal/utilities/boletin_migration_test.go
+RUN go test -v ./internal/crypto ./internal/conf ./internal/utilities
+RUN go build -o auth -buildvcs=false -ldflags '-X github.com/supabase/auth/internal/utilities.Version=v2.197.0-be2-pgx5'
+RUN go version -m /source/auth > /source/auth-binary-modules.txt && ! grep -E 'github.com/jackc/(pgproto3/v2|pgconn|pgx/v4|pgtype)[[:space:]]' /source/auth-binary-modules.txt
 
 FROM supabase/gotrue:v2.197.0 AS auth
 USER root
 RUN apk add --no-cache --upgrade libcrypto3=3.5.9-r0 libssl3=3.5.9-r0
 COPY --from=auth-build /source/auth /usr/local/bin/auth
 COPY --from=auth-build /source/LICENSE /usr/share/licenses/boletinexpress-auth/LICENSE
+COPY --from=auth-build /source/go.mod /source/go.sum /source/auth-modules.txt /source/auth-binary-modules.txt /usr/share/boletinexpress-auth/
 USER supabase

@@ -1,0 +1,13 @@
+time="2026-10-17T19:00:17+02:00" level=warning msg="Found orphan containers (boletinexpress-data-db-1) for this project. If you removed or renamed this service in your compose file, you can run this command with the --remove-orphans flag to clean it up."
+ Container boletinexpress-data-storage-1 Running 
+ Container boletinexpress-data-postgres-1 Running 
+ Container boletinexpress-data-templates-1 Running 
+ Container boletinexpress-data-mail-1 Running 
+ Container boletinexpress-data-gateway-1 Running 
+ Container boletinexpress-data-rest-1 Running 
+ Container boletinexpress-data-auth-1 Recreate 
+ Container boletinexpress-data-auth-1 Recreated 
+ Container boletinexpress-data-auth-1 Starting 
+ Container boletinexpress-data-auth-1 Started 
+ Container boletinexpress-data-auth-1 Waiting 
+ Container boletinexpress-data-auth-1 Healthy 

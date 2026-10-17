@@ -1,6 +1,6 @@
 {
   "phase": 3,
-  "status": "ABIERTA_BLOQUEADA_POR_SEGURIDAD",
+  "status": "ABIERTA_PENDIENTE_CI_TRAS_MIGRACION_AUTH",
   "functionalTests": {
     "pass": true,
     "groups": 12,
@@ -8,11 +8,9 @@
   },
   "unitAndPdfTests": 56,
   "imagesScanned": 9,
-  "high": 1,
+  "high": 0,
   "critical": 0,
-  "blockedBy": [
-    "CVE-2026-32286 en Auth: github.com/jackc/pgproto3/v2 v2.3.3; sin version corregida conocida"
-  ],
+  "blockedBy": [],
   "localLimitation": null,
   "ci": "https://github.com/FranMore68/BoletinExpress/actions/runs/39047620981",
   "testedCommit": "d564b5ef85d9a42f95324ee2f4d03a2cc0b55154",
@@ -28,5 +26,23 @@
     "integrationEvidence": "local-isolation-2026-10-17.json"
   },
   "securityEvidence": "audit-2026-10-17.json",
-  "securityAuditDate": "2026-10-17"
+  "securityAuditDate": "2026-10-17",
+  "candidateTrial": {
+    "status": "PROMOTED_LOCALLY_CI_PENDING",
+    "evidence": "auth-candidate/status.json",
+    "integrationGroupsPassed": 12,
+    "high": 0,
+    "critical": 0,
+    "primaryEnvironmentUnchanged": false,
+    "ciPending": true
+  },
+  "promotion": {
+    "authVersion": "2.197.0-be2-pgx5",
+    "localAuthHigh": 0,
+    "localAuthCritical": 0,
+    "continuityPassed": true,
+    "continuityEvidence": "auth-continuity-2026-10-17.json",
+    "ciPending": true
+  },
+  "securityScope": "Auth local nuevo: cero altos/criticos; auditoria completa del conjunto pendiente en CI"
 }

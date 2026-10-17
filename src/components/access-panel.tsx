@@ -9,7 +9,7 @@ import {
 } from "./account-shell";
 
 type Mode = "login" | "signup" | "recover" | "resend";
-export function AccessPanel() {
+export function AccessPanel({ localMailbox }: { localMailbox?: string }) {
   const heading = useRef<HTMLHeadingElement>(null);
   const language = useAccountLocale();
   const { tr, locale } = language;
@@ -50,6 +50,14 @@ export function AccessPanel() {
           {tr(mode)}
         </h1>
         <p>{tr(`${mode}Help`)}</p>
+        {localMailbox && (
+          <aside>
+            <p>{tr("localMailHelp")}</p>
+            <a href={localMailbox} target="_blank" rel="noopener noreferrer">
+              {tr("localMailOpen")}
+            </a>
+          </aside>
+        )}
         <form onSubmit={submit}>
           <label htmlFor="email">{tr("email")}</label>
           <input
