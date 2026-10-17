@@ -17,7 +17,7 @@
     },
     {
       "service": "postgres",
-      "cpus": "0.11",
+      "cpus": "0.05",
       "memoryBytes": 1342177280
     },
     {
@@ -27,7 +27,7 @@
     },
     {
       "service": "storage",
-      "cpus": "0.04",
+      "cpus": "0.1",
       "memoryBytes": 536870912
     },
     {

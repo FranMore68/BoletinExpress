@@ -9,7 +9,7 @@ services:
     image: boletinexpress-postgres:phase3
     restart: unless-stopped
     mem_limit: 1280m
-    cpus: 0.11
+    cpus: 0.05
     environment:
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?}
       POSTGRES_DB: postgres
@@ -83,7 +83,7 @@ services:
     <<: *runtime
     image: boletinexpress-storage:phase3
     mem_limit: 512m
-    cpus: 0.04
+    cpus: 0.10
     depends_on: {postgres: {condition: service_healthy}, rest: {condition: service_started}}
     environment:
       ANON_KEY: ${ANON_KEY:?}
@@ -101,7 +101,7 @@ services:
       ENABLE_IMAGE_TRANSFORMATION: "false"
       LOG_LEVEL: error
     healthcheck:
-      test: [CMD, node, -e, "fetch('http://127.0.0.1:5000/status').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"]
+      test: [CMD, wget, -q, -O, /dev/null, "http://127.0.0.1:5000/status"]
       interval: 10s
       timeout: 5s
       start_period: 120s
