@@ -9,7 +9,7 @@ services:
     image: boletinexpress-postgres:phase3
     restart: unless-stopped
     mem_limit: 1280m
-    cpus: 0.12
+    cpus: 0.11
     environment:
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?}
       POSTGRES_DB: postgres
@@ -128,13 +128,13 @@ services:
     <<: *runtime
     image: boletinexpress-templates:phase3
     mem_limit: 64m
-    cpus: 0.005
+    cpus: 0.01
     read_only: true
   mail:
     <<: *runtime
     image: axllent/mailpit:v1.31.6
     mem_limit: 64m
-    cpus: 0.005
+    cpus: 0.01
     environment:
       MP_MAX_MESSAGES: 100
       MP_DISABLE_VERSION_CHECK: "true"

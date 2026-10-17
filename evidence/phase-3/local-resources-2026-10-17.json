@@ -1,0 +1,51 @@
+{
+  "services": [
+    {
+      "service": "auth",
+      "cpus": "0.04",
+      "memoryBytes": 134217728
+    },
+    {
+      "service": "gateway",
+      "cpus": "0.01",
+      "memoryBytes": 67108864
+    },
+    {
+      "service": "mail",
+      "cpus": "0.01",
+      "memoryBytes": 67108864
+    },
+    {
+      "service": "postgres",
+      "cpus": "0.11",
+      "memoryBytes": 1342177280
+    },
+    {
+      "service": "rest",
+      "cpus": "0.03",
+      "memoryBytes": 134217728
+    },
+    {
+      "service": "storage",
+      "cpus": "0.04",
+      "memoryBytes": 536870912
+    },
+    {
+      "service": "templates",
+      "cpus": "0.01",
+      "memoryBytes": 67108864
+    },
+    {
+      "service": "web",
+      "cpus": "0.5",
+      "memoryBytes": 536870912
+    },
+    {
+      "service": "worker",
+      "cpus": "0.25",
+      "memoryBytes": 268435456
+    }
+  ],
+  "totalCpu": "1.00",
+  "totalMemoryMiB": 3008
+}
