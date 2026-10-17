@@ -1,0 +1,1341 @@
+{
+  "pass": true,
+  "cases": 267,
+  "results": [
+    {
+      "id": "CBO_TipusVia:0",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "CBO_TipusVia:APA",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "CBO_TipusVia:AVI",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "CBO_TipusVia:BAI",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "CBO_TipusVia:BRC",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "CBO_TipusVia:BAR",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "CBO_TipusVia:BLO",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "CBO_TipusVia:CAM",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "CBO_TipusVia:CAR",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "CBO_TipusVia:CRO",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "CBO_TipusVia:CRT",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "CBO_TipusVia:CAS",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "CBO_TipusVia:COL",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "CBO_TipusVia:COS",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "CBO_TipusVia:DIS",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "CBO_TipusVia:EDI",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "CBO_TipusVia:FAG",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "CBO_TipusVia:GLO",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "CBO_TipusVia:GRV",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "CBO_TipusVia:GRU",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "CBO_TipusVia:LLO",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "CBO_TipusVia:MER",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "CBO_TipusVia:PAR",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "CBO_TipusVia:PTD",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "CBO_TipusVia:PTG",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "CBO_TipusVia:PAS",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "CBO_TipusVia:PLA",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "CBO_TipusVia:PCT",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "CBO_TipusVia:POB",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "CBO_TipusVia:POL",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "CBO_TipusVia:PRO",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "CBO_TipusVia:PUJ",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "CBO_TipusVia:RAM",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "CBO_TipusVia:RON",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "CBO_TipusVia:SEN",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "CBO_TipusVia:TOR",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "CBO_TipusVia:TRA",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "CBO_TipusVia:TVS",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "CBO_TipusVia:URB",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "CBO_TipusVia:VIA",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "CBO_TipusVia:XAL",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "TXT_Categoria:Bàsica",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "TXT_Categoria:Especialista",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "CBO_TipusVia_2:0",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "CBO_TipusVia_2:APA",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "CBO_TipusVia_2:AVI",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "CBO_TipusVia_2:BAI",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "CBO_TipusVia_2:BRC",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "CBO_TipusVia_2:BAR",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "CBO_TipusVia_2:BLO",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "CBO_TipusVia_2:CAM",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "CBO_TipusVia_2:CAR",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "CBO_TipusVia_2:CRO",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "CBO_TipusVia_2:CRT",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "CBO_TipusVia_2:CAS",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "CBO_TipusVia_2:COL",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "CBO_TipusVia_2:COS",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "CBO_TipusVia_2:DIS",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "CBO_TipusVia_2:EDI",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "CBO_TipusVia_2:FAG",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "CBO_TipusVia_2:GLO",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "CBO_TipusVia_2:GRV",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "CBO_TipusVia_2:GRU",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "CBO_TipusVia_2:LLO",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "CBO_TipusVia_2:MER",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "CBO_TipusVia_2:PAR",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "CBO_TipusVia_2:PTD",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "CBO_TipusVia_2:PTG",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "CBO_TipusVia_2:PAS",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "CBO_TipusVia_2:PLA",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "CBO_TipusVia_2:PCT",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "CBO_TipusVia_2:POB",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "CBO_TipusVia_2:POL",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "CBO_TipusVia_2:PRO",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "CBO_TipusVia_2:PUJ",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "CBO_TipusVia_2:RAM",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "CBO_TipusVia_2:RON",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "CBO_TipusVia_2:SEN",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "CBO_TipusVia_2:TOR",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "CBO_TipusVia_2:TRA",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "CBO_TipusVia_2:TVS",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "CBO_TipusVia_2:URB",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "CBO_TipusVia_2:VIA",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "CBO_TipusVia_2:XAL",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "CBO_TipusVia_3:0",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "CBO_TipusVia_3:APA",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "CBO_TipusVia_3:AVI",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "CBO_TipusVia_3:BAI",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "CBO_TipusVia_3:BRC",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "CBO_TipusVia_3:BAR",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "CBO_TipusVia_3:BLO",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "CBO_TipusVia_3:CAM",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "CBO_TipusVia_3:CAR",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "CBO_TipusVia_3:CRO",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "CBO_TipusVia_3:CRT",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "CBO_TipusVia_3:CAS",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "CBO_TipusVia_3:COL",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "CBO_TipusVia_3:COS",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "CBO_TipusVia_3:DIS",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "CBO_TipusVia_3:EDI",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "CBO_TipusVia_3:FAG",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "CBO_TipusVia_3:GLO",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "CBO_TipusVia_3:GRV",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "CBO_TipusVia_3:GRU",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "CBO_TipusVia_3:LLO",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "CBO_TipusVia_3:MER",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "CBO_TipusVia_3:PAR",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "CBO_TipusVia_3:PTD",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "CBO_TipusVia_3:PTG",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "CBO_TipusVia_3:PAS",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "CBO_TipusVia_3:PLA",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "CBO_TipusVia_3:PCT",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "CBO_TipusVia_3:POB",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "CBO_TipusVia_3:POL",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "CBO_TipusVia_3:PRO",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "CBO_TipusVia_3:PUJ",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "CBO_TipusVia_3:RAM",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "CBO_TipusVia_3:RON",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "CBO_TipusVia_3:SEN",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "CBO_TipusVia_3:TOR",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "CBO_TipusVia_3:TRA",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "CBO_TipusVia_3:TVS",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "CBO_TipusVia_3:URB",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "CBO_TipusVia_3:VIA",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "CBO_TipusVia_3:XAL",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "RB_TipusActuacio:NOVA",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "RB_TipusActuacio:AMPLIACIO",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "RB_TipusActuacio:MODIFICACIO",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "RB_Requisits:P1",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "RB_Requisits:P2",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "RB_Requisits:MEMORIA",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "TXT_Us:1",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "TXT_Us:2",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "TXT_Us:3",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "TXT_Us:4",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "TXT_Us:5",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "TXT_Us:8",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "TXT_Us:9",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "TXT_Us:10",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "TXT_Us:11",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "TXT_Us:12",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "TXT_Us:13",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "TXT_Us:14",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "TXT_Us:g",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "TXT_Us:h",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "TXT_Tensio:230 V",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "TXT_Tensio:3x230/400 V",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "TXT_Tensio:Altra",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "TXT_MaterialConductor:Coure",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "TXT_MaterialConductor:Alumini",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "TXT_UbicacioComptadors:Sala",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "TXT_UbicacioComptadors:Armari",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "TXT_UbicacioComptadors:Altra",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "TXT_TipusConnexio:Assistida",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "TXT_TipusConnexio:Interconnectada",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "RB_Subministrament:SI",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "RB_Subministrament:NO",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "DDLAmpliaMod:SI",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "DDLAmpliaMod:NO",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "TXT_P1:a) Instal·lacions industrials amb una potència màxima admissible superior a 100 kW",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "TXT_P1:b) Locals de pública concurrència",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "TXT_P1:c) Locals amb risc d'incendi o explosió, de classe I, excepte aparcaments i estacionaments de menys de 25 places.",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "TXT_P1:d) Locals mullats P > 25 kW",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "TXT_P1:e) Piscines P > 10 kW",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "TXT_P1:f) Sales d'operacions quirúrgiques i sales d'intervenció",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "TXT_P1:g) Instal·lacions d'enllumenat exterior P>5kW",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "TXT_P1:h) Instal·lacions comunes d’edificis destinats a habitatges de 20 subministraments o més i/o més de 100 kW per CGP",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "TXT_P1:i1) Instal·lacions corresponents a les infraestructures per a la recàrrega del vehicle elèctric (P>50 kW)",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "TXT_P1:i2) Instal·lacions de recàrrega de vehicle elèctric ubicades a l'exterior (P>10kW)",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "TXT_P1:i3) Instal·lacions que incloguin estacions de recàrrega previstes pel mode de càrrega 4",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "TXT_P2:a) Instal·lacions corresponents a indústries, en general 20 kW>P<=100 kW",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "TXT_P2:b1) Locals humits, amb pols o amb risc de corrosió (P>10 kW)",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "TXT_P2:b2) Bombes d’extracció o elevació d’aigua, siguin industrials o no (P > 10 kW)",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "TXT_P2:c1) Locals mullats (P > 10 kW)",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "TXT_P2:c2) Generadors i convertidors (P > 10 kW)",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "TXT_P2:c3) Conductors aïllats per caldejament, exclosos els habitatges (P > 10 kW i P<25 kW)",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "TXT_P2:d1) Instal·lacions de caràcter temporal per a alimentació de maquinària d'obres de construcció (P > 50 kW)",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "TXT_P2:d2) Instal·lacions de caràcter temporal en locals o emplaçaments oberts (P > 50 kW)",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "TXT_P2:e) Edificis destinats a oficines, i locals comercials que no tinguin la consideració de pública concurrència amb més de 100 kW de potència per CGP",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "TXT_P2:f ) Les corresponents a habitatges unifamiliars P > 50 kW",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "TXT_P2:g) Aparcaments o estacionaments que requereixen ventilació forçada (Menys de 25 places)",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "TXT_P2:h) Aparcaments o estacionaments amb ventilació natural (Més de 5 places i menys de 25 places)",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "TXT_P2:j1) Línies de baixa tensió amb suports comuns amb les d'alta tensió",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "TXT_P2:j2) Màquines d'elevació i transport",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "TXT_P2:j3) Instal·lacions que utilitzin tensions especials",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "TXT_P2:j4) Instal·lacions destinades a rètols lluminosos, llevat que es considerin instal·lacions de baixa tensió, segons el que estableix la ITC-BT 44",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "TXT_P2:j5) Tanques elèctriques",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "TXT_P2:n) Instal·lacions corresponents a piscines i fonts P > 5 kW, piscines fins a 10 kW",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "TXT_P2:o) locals sense risc específic amb una potència màxima admissible >100 kW",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "TXT_G:g1) Cine",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "TXT_G:g2) Teatre",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "TXT_G:g3) Auditori",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "TXT_G:g4) Estadi",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "TXT_G:g5) Pavelló esportiu",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "TXT_G:g6) Plaça de toros",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "TXT_G:g7) Hipòdrom",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "TXT_G:g8) Parc d'atraccions o fira fixa",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "TXT_G:g9) Sala de festes o discoteca",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "TXT_G:g10) Sala de jocs d'atzar",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "TXT_H:h1) Temple",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "TXT_H:h2) Museu",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "TXT_H:h3) Sales de conferències i congressos",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "TXT_H:h4) Casino",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "TXT_H:h5) Hotel, hostal",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "TXT_H:h6) Bar, cafeteria, restaurant o similar",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "TXT_H:h7) Zones comunes en agrupacions d'establiments comercials",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "TXT_H:h8) Aeroport, estació de viatgers",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "TXT_H:h9) Estacionaments públics tancats i coberts per a més de 5 vehicles",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "TXT_H:h10) Hospital, ambulatori o sanatori",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "TXT_H:h11) Asils i llars d'infants",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "TXT_H:h12) Biblioteca",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "TXT_H:h13) Centre d'ensenyament",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "TXT_H:h14) Consultori mèdics",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "TXT_H:h15) Establiment comercial",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "TXT_H:h16) Oficina amb presència de públic",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "TXT_H:h17) Residència d'estudiants",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "TXT_H:h18) Gimnàs",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "TXT_H:h19) Sala d'exposicions",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "TXT_H:h20) Centre cultural",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "TXT_H:h21) Club social o esportiu",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "TXT_H:h22) Altres locals de pública concurrència",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "class/use:P1/1",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "class/use:P1/2",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "class/use:P1/3",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "class/use:P1/4",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "class/use:P1/5",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "class/use:P1/8",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "class/use:P1/9",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "class/use:P1/10",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "class/use:P1/11",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "class/use:P1/12",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "class/use:P1/13",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "class/use:P1/14",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "class/use:P1/g",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "class/use:P1/h",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "class/use:P2/1",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "class/use:P2/2",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "class/use:P2/3",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "class/use:P2/4",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "class/use:P2/5",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "class/use:P2/8",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "class/use:P2/9",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "class/use:P2/10",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "class/use:P2/11",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "class/use:P2/12",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "class/use:P2/13",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "class/use:P2/14",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "class/use:P2/g",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "class/use:P2/h",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "class/use:MEMORIA/1",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "class/use:MEMORIA/2",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "class/use:MEMORIA/3",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "class/use:MEMORIA/4",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "class/use:MEMORIA/5",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "class/use:MEMORIA/8",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "class/use:MEMORIA/9",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "class/use:MEMORIA/10",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "class/use:MEMORIA/11",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "class/use:MEMORIA/12",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "class/use:MEMORIA/13",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "class/use:MEMORIA/14",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "class/use:MEMORIA/g",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "class/use:MEMORIA/h",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "50:AMPLIACIO/SI",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "50:AMPLIACIO/NO",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "50:MODIFICACIO/SI",
+      "pass": true,
+      "pages": 2
+    },
+    {
+      "id": "50:MODIFICACIO/NO",
+      "pass": true,
+      "pages": 2
+    }
+  ]
+}

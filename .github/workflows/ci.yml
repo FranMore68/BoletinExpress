@@ -32,6 +32,7 @@ jobs:
       - run: npm ci --ignore-scripts --prefix tools/pdf-phase0
       - run: npm audit --audit-level=high --prefix tools/pdf-phase0
       - run: npm test --prefix tools/pdf-phase0
+      - run: node scripts/test-cie-catalog.mjs
       - run: docker build --target web -t boletinexpress-web:phase1 .
       - run: docker build --target worker -t boletinexpress-worker:phase1 .
       - run: |
@@ -56,6 +57,10 @@ jobs:
         run: |
           set -o pipefail
           node scripts/test-phase4.mjs | tee evidence/phase-4/integration.log
+      - id: phase5
+        run: |
+          set -o pipefail
+          node scripts/test-phase5.mjs | tee evidence/phase-5/integration.log
       - if: always() && steps.isolation.outcome != 'skipped'
         run: |
           docker builder prune --all --force
@@ -76,6 +81,7 @@ jobs:
           path: |
             evidence/phase-3
             evidence/phase-4
+            evidence/phase-5
           retention-days: 7
       - if: always()
         run: |

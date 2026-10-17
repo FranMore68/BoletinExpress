@@ -24,3 +24,5 @@ credentials*.json
 
 !evidence/phase-4/*.log
 public/vendor/pdf.worker-*.mjs
+
+!evidence/phase-5/*.log

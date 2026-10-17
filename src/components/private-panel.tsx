@@ -14,7 +14,7 @@ import {
   errorKey,
   useAccountLocale,
 } from "./account-shell";
-import { BrieEditor } from "./brie-editor";
+import { DocumentEditor } from "./document-editor";
 import { ProfilePanel } from "./profile-panel";
 
 type Doc = {
@@ -26,7 +26,6 @@ type Doc = {
   work_data: FieldValues;
   revision: number;
 };
-type PrivateFile = { id: string; created_at: string };
 export function PrivatePanel() {
   const heading = useRef<HTMLHeadingElement>(null);
   const language = useAccountLocale();
@@ -35,7 +34,6 @@ export function PrivatePanel() {
   const [email, setEmail] = useState("");
   const [docs, setDocs] = useState<Doc[]>([]);
   const [active, setActive] = useState<Doc | null>(null);
-  const [files, setFiles] = useState<PrivateFile[]>([]);
   const [loading, setLoading] = useState(true);
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<AuthKey | null>(null);
@@ -69,7 +67,6 @@ export function PrivatePanel() {
     try {
       const result = await accountRequest(`/api/private/documents/${id}`);
       setActive(result.document);
-      setFiles(result.files);
     } catch (e) {
       setError(errorKey(e));
     } finally {
@@ -91,38 +88,6 @@ export function PrivatePanel() {
       form.reset();
       await load();
       setActive(result.document);
-      setFiles([]);
-    } catch (e) {
-      setError(errorKey(e));
-    } finally {
-      setBusy(false);
-    }
-  }
-  async function upload(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault();
-    if (busy || !active) return;
-    const form = event.currentTarget;
-    const file = new FormData(form).get("file");
-    if (!(file instanceof File) || !file.size) return;
-    setBusy(true);
-    setError(null);
-    setNotice(null);
-    try {
-      const response = await fetch(
-        `/api/private/documents/${active.id}/files`,
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/pdf" },
-          body: file,
-          credentials: "same-origin",
-          cache: "no-store",
-        },
-      );
-      const data = await response.json();
-      if (!response.ok) throw new Error(data.error);
-      form.reset();
-      await open(active.id);
-      setNotice("uploaded");
     } catch (e) {
       setError(errorKey(e));
     } finally {
@@ -185,75 +150,17 @@ export function PrivatePanel() {
         ) : loading ? (
           <p role="status">{tr("loading")}</p>
         ) : active ? (
-          active.type === "BRIE" ? (
-            <BrieEditor
-              key={active.id}
-              document={active}
-              language={language}
-              onBack={() => {
-                setActive(null);
-                setError(null);
-                setNotice(null);
-              }}
-            />
-          ) : (
-            <>
-              <button
-                type="button"
-                className="button button-secondary"
-                onClick={() => {
-                  setActive(null);
-                  setError(null);
-                  setNotice(null);
-                }}
-              >
-                {tr("back")}
-              </button>
-              <section className="private-block">
-                <p className="eyebrow">{active.type}</p>
-                <h2>{tr("files")}</h2>
-                <p>{tr("filesHelp")}</p>
-                <form onSubmit={upload}>
-                  <label htmlFor="private-file">{tr("file")}</label>
-                  <input
-                    id="private-file"
-                    name="file"
-                    type="file"
-                    accept="application/pdf,.pdf"
-                    required
-                  />
-                  <button
-                    className="button button-primary"
-                    type="submit"
-                    disabled={busy}
-                  >
-                    {tr(busy ? "working" : "uploadButton")}
-                  </button>
-                </form>
-                {!files.length ? (
-                  <p>{tr("noFiles")}</p>
-                ) : (
-                  <ul className="private-file-list">
-                    {files.map((file, i) => (
-                      <li key={file.id}>
-                        <strong>PDF {i + 1}</strong>
-                        <a
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          href={`/api/private/files/${file.id}?view=1`}
-                        >
-                          {tr("preview")}
-                        </a>
-                        <a href={`/api/private/files/${file.id}`}>
-                          {tr("download")}
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
-                )}
-              </section>
-            </>
-          )
+          <DocumentEditor
+            key={active.id}
+            document={active}
+            model={active.type}
+            language={language}
+            onBack={() => {
+              setActive(null);
+              setError(null);
+              setNotice(null);
+            }}
+          />
         ) : (
           <>
             <form className="private-create" onSubmit={create}>

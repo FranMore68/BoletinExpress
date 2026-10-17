@@ -1,5 +1,5 @@
 import { execFileSync } from "node:child_process";
-import { readFileSync } from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 export function findings(file, text) {
   const result = [];
@@ -24,7 +24,7 @@ if (process.argv[1] === fileURLToPath(import.meta.url)) {
     { encoding: "utf8" },
   )
     .split("\0")
-    .filter(Boolean);
+    .filter((file) => file && existsSync(file));
   let failed = false;
   for (const file of files) {
     const bytes = readFileSync(file);

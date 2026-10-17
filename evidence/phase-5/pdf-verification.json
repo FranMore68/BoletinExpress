@@ -1,0 +1,2637 @@
+{
+  "pass": true,
+  "cases": 11,
+  "pages": 22,
+  "results": [
+    {
+      "id": "base",
+      "pass": true,
+      "pages": [
+        {
+          "page": 1,
+          "changedOutsideFields": 0,
+          "pass": true
+        },
+        {
+          "page": 2,
+          "changedOutsideFields": 0,
+          "pass": true
+        }
+      ],
+      "originalVectorFormsPreserved": true,
+      "textChecks": [
+        {
+          "field": "NomCognoms",
+          "pass": true
+        },
+        {
+          "field": "NIF",
+          "pass": true
+        },
+        {
+          "field": "CBO_TipusVia",
+          "pass": true
+        },
+        {
+          "field": "TXT_NomVia",
+          "pass": true
+        },
+        {
+          "field": "TXT_Num",
+          "pass": true
+        },
+        {
+          "field": "TXT_Bloc",
+          "pass": true
+        },
+        {
+          "field": "TXT_Escala",
+          "pass": true
+        },
+        {
+          "field": "TXT_Pis",
+          "pass": true
+        },
+        {
+          "field": "TXT_Porta",
+          "pass": true
+        },
+        {
+          "field": "TXT_CodiPostal",
+          "pass": true
+        },
+        {
+          "field": "TXT_Poblacio",
+          "pass": true
+        },
+        {
+          "field": "TXT_Tel",
+          "pass": true
+        },
+        {
+          "field": "TXT_Correu",
+          "pass": true
+        },
+        {
+          "field": "NomCognoms_2",
+          "pass": true
+        },
+        {
+          "field": "TXT_Rasic",
+          "pass": true
+        },
+        {
+          "field": "NIF_2",
+          "pass": true
+        },
+        {
+          "field": "NomCognomsInstalador",
+          "pass": true
+        },
+        {
+          "field": "TXT_Categoria",
+          "pass": true
+        },
+        {
+          "field": "DNIInstallador",
+          "pass": true
+        },
+        {
+          "field": "CBO_TipusVia_2",
+          "pass": true
+        },
+        {
+          "field": "TXT_NomVia_2",
+          "pass": true
+        },
+        {
+          "field": "TXT_Num_2",
+          "pass": true
+        },
+        {
+          "field": "TXT_Bloc_2",
+          "pass": true
+        },
+        {
+          "field": "TXT_Escala_2",
+          "pass": true
+        },
+        {
+          "field": "TXT_Pis_2",
+          "pass": true
+        },
+        {
+          "field": "TXT_Porta_2",
+          "pass": true
+        },
+        {
+          "field": "TXT_CodiPostal_2",
+          "pass": true
+        },
+        {
+          "field": "TXT_Poblacio_2",
+          "pass": true
+        },
+        {
+          "field": "TXT_Tel_2",
+          "pass": true
+        },
+        {
+          "field": "TXT_Correu_2",
+          "pass": true
+        },
+        {
+          "field": "CBO_TipusVia_3",
+          "pass": true
+        },
+        {
+          "field": "TXT_NomVia_3",
+          "pass": true
+        },
+        {
+          "field": "TXT_Num_3",
+          "pass": true
+        },
+        {
+          "field": "TXT_Bloc_3",
+          "pass": true
+        },
+        {
+          "field": "TXT_Escala_3",
+          "pass": true
+        },
+        {
+          "field": "TXT_Pis_3",
+          "pass": true
+        },
+        {
+          "field": "TXT_Porta_3",
+          "pass": true
+        },
+        {
+          "field": "TXT_CodiPostal_3",
+          "pass": true
+        },
+        {
+          "field": "TXT_Poblacio_3",
+          "pass": true
+        },
+        {
+          "field": "TXT_Tel_3",
+          "pass": true
+        },
+        {
+          "field": "TXT_Correu_3",
+          "pass": true
+        },
+        {
+          "field": "TXT_Us",
+          "pass": true
+        },
+        {
+          "field": "TXT_PotenciaMax",
+          "pass": true
+        },
+        {
+          "field": "TXT_Calibre",
+          "pass": true
+        },
+        {
+          "field": "TXT_Tensio",
+          "pass": true
+        },
+        {
+          "field": "TXT_IGM",
+          "pass": true
+        },
+        {
+          "field": "TXT_Circuits",
+          "pass": true
+        },
+        {
+          "field": "TXT_SeccioLGA",
+          "pass": true
+        },
+        {
+          "field": "TXT_MaterialConductor",
+          "pass": true
+        },
+        {
+          "field": "TXT_ResistenciaConductors",
+          "pass": true
+        },
+        {
+          "field": "TXT_UbicacioComptadors",
+          "pass": true
+        },
+        {
+          "field": "TXT_AillamentTerra",
+          "pass": true
+        },
+        {
+          "field": "TXT_ResistenciaTerra",
+          "pass": true
+        },
+        {
+          "field": "TXT_Interruptor",
+          "pass": true
+        },
+        {
+          "field": "TXT_Tecnologia",
+          "pass": true
+        },
+        {
+          "field": "TXT_TipusConnexio",
+          "pass": true
+        },
+        {
+          "field": "TXT_Potencia",
+          "pass": true
+        },
+        {
+          "field": "NomCognomsInstalador_2",
+          "pass": true
+        },
+        {
+          "field": "TXT_Observacions",
+          "pass": true
+        }
+      ]
+    },
+    {
+      "id": "ampliacio_50",
+      "pass": true,
+      "pages": [
+        {
+          "page": 1,
+          "changedOutsideFields": 0,
+          "pass": true
+        },
+        {
+          "page": 2,
+          "changedOutsideFields": 0,
+          "pass": true
+        }
+      ],
+      "originalVectorFormsPreserved": true,
+      "textChecks": [
+        {
+          "field": "NomCognoms",
+          "pass": true
+        },
+        {
+          "field": "NIF",
+          "pass": true
+        },
+        {
+          "field": "CBO_TipusVia",
+          "pass": true
+        },
+        {
+          "field": "TXT_NomVia",
+          "pass": true
+        },
+        {
+          "field": "TXT_Num",
+          "pass": true
+        },
+        {
+          "field": "TXT_Bloc",
+          "pass": true
+        },
+        {
+          "field": "TXT_Escala",
+          "pass": true
+        },
+        {
+          "field": "TXT_Pis",
+          "pass": true
+        },
+        {
+          "field": "TXT_Porta",
+          "pass": true
+        },
+        {
+          "field": "TXT_CodiPostal",
+          "pass": true
+        },
+        {
+          "field": "TXT_Poblacio",
+          "pass": true
+        },
+        {
+          "field": "TXT_Tel",
+          "pass": true
+        },
+        {
+          "field": "TXT_Correu",
+          "pass": true
+        },
+        {
+          "field": "NomCognoms_2",
+          "pass": true
+        },
+        {
+          "field": "TXT_Rasic",
+          "pass": true
+        },
+        {
+          "field": "NIF_2",
+          "pass": true
+        },
+        {
+          "field": "NomCognomsInstalador",
+          "pass": true
+        },
+        {
+          "field": "TXT_Categoria",
+          "pass": true
+        },
+        {
+          "field": "DNIInstallador",
+          "pass": true
+        },
+        {
+          "field": "CBO_TipusVia_2",
+          "pass": true
+        },
+        {
+          "field": "TXT_NomVia_2",
+          "pass": true
+        },
+        {
+          "field": "TXT_Num_2",
+          "pass": true
+        },
+        {
+          "field": "TXT_Bloc_2",
+          "pass": true
+        },
+        {
+          "field": "TXT_Escala_2",
+          "pass": true
+        },
+        {
+          "field": "TXT_Pis_2",
+          "pass": true
+        },
+        {
+          "field": "TXT_Porta_2",
+          "pass": true
+        },
+        {
+          "field": "TXT_CodiPostal_2",
+          "pass": true
+        },
+        {
+          "field": "TXT_Poblacio_2",
+          "pass": true
+        },
+        {
+          "field": "TXT_Tel_2",
+          "pass": true
+        },
+        {
+          "field": "TXT_Correu_2",
+          "pass": true
+        },
+        {
+          "field": "CBO_TipusVia_3",
+          "pass": true
+        },
+        {
+          "field": "TXT_NomVia_3",
+          "pass": true
+        },
+        {
+          "field": "TXT_Num_3",
+          "pass": true
+        },
+        {
+          "field": "TXT_Bloc_3",
+          "pass": true
+        },
+        {
+          "field": "TXT_Escala_3",
+          "pass": true
+        },
+        {
+          "field": "TXT_Pis_3",
+          "pass": true
+        },
+        {
+          "field": "TXT_Porta_3",
+          "pass": true
+        },
+        {
+          "field": "TXT_CodiPostal_3",
+          "pass": true
+        },
+        {
+          "field": "TXT_Poblacio_3",
+          "pass": true
+        },
+        {
+          "field": "TXT_Tel_3",
+          "pass": true
+        },
+        {
+          "field": "TXT_Correu_3",
+          "pass": true
+        },
+        {
+          "field": "TXT_Us",
+          "pass": true
+        },
+        {
+          "field": "TXT_PotenciaMax",
+          "pass": true
+        },
+        {
+          "field": "TXT_Calibre",
+          "pass": true
+        },
+        {
+          "field": "TXT_Tensio",
+          "pass": true
+        },
+        {
+          "field": "TXT_IGM",
+          "pass": true
+        },
+        {
+          "field": "TXT_Circuits",
+          "pass": true
+        },
+        {
+          "field": "TXT_SeccioLGA",
+          "pass": true
+        },
+        {
+          "field": "TXT_MaterialConductor",
+          "pass": true
+        },
+        {
+          "field": "TXT_ResistenciaConductors",
+          "pass": true
+        },
+        {
+          "field": "TXT_UbicacioComptadors",
+          "pass": true
+        },
+        {
+          "field": "TXT_AillamentTerra",
+          "pass": true
+        },
+        {
+          "field": "TXT_ResistenciaTerra",
+          "pass": true
+        },
+        {
+          "field": "TXT_Interruptor",
+          "pass": true
+        },
+        {
+          "field": "TXT_Tecnologia",
+          "pass": true
+        },
+        {
+          "field": "TXT_TipusConnexio",
+          "pass": true
+        },
+        {
+          "field": "TXT_Potencia",
+          "pass": true
+        },
+        {
+          "field": "NomCognomsInstalador_2",
+          "pass": true
+        },
+        {
+          "field": "TXT_Observacions",
+          "pass": true
+        },
+        {
+          "field": "TXT_CUPS",
+          "pass": true
+        },
+        {
+          "field": "DDLAmpliaMod",
+          "pass": true
+        }
+      ]
+    },
+    {
+      "id": "modificacio_50",
+      "pass": true,
+      "pages": [
+        {
+          "page": 1,
+          "changedOutsideFields": 0,
+          "pass": true
+        },
+        {
+          "page": 2,
+          "changedOutsideFields": 0,
+          "pass": true
+        }
+      ],
+      "originalVectorFormsPreserved": true,
+      "textChecks": [
+        {
+          "field": "NomCognoms",
+          "pass": true
+        },
+        {
+          "field": "NIF",
+          "pass": true
+        },
+        {
+          "field": "CBO_TipusVia",
+          "pass": true
+        },
+        {
+          "field": "TXT_NomVia",
+          "pass": true
+        },
+        {
+          "field": "TXT_Num",
+          "pass": true
+        },
+        {
+          "field": "TXT_Bloc",
+          "pass": true
+        },
+        {
+          "field": "TXT_Escala",
+          "pass": true
+        },
+        {
+          "field": "TXT_Pis",
+          "pass": true
+        },
+        {
+          "field": "TXT_Porta",
+          "pass": true
+        },
+        {
+          "field": "TXT_CodiPostal",
+          "pass": true
+        },
+        {
+          "field": "TXT_Poblacio",
+          "pass": true
+        },
+        {
+          "field": "TXT_Tel",
+          "pass": true
+        },
+        {
+          "field": "TXT_Correu",
+          "pass": true
+        },
+        {
+          "field": "NomCognoms_2",
+          "pass": true
+        },
+        {
+          "field": "TXT_Rasic",
+          "pass": true
+        },
+        {
+          "field": "NIF_2",
+          "pass": true
+        },
+        {
+          "field": "NomCognomsInstalador",
+          "pass": true
+        },
+        {
+          "field": "TXT_Categoria",
+          "pass": true
+        },
+        {
+          "field": "DNIInstallador",
+          "pass": true
+        },
+        {
+          "field": "CBO_TipusVia_2",
+          "pass": true
+        },
+        {
+          "field": "TXT_NomVia_2",
+          "pass": true
+        },
+        {
+          "field": "TXT_Num_2",
+          "pass": true
+        },
+        {
+          "field": "TXT_Bloc_2",
+          "pass": true
+        },
+        {
+          "field": "TXT_Escala_2",
+          "pass": true
+        },
+        {
+          "field": "TXT_Pis_2",
+          "pass": true
+        },
+        {
+          "field": "TXT_Porta_2",
+          "pass": true
+        },
+        {
+          "field": "TXT_CodiPostal_2",
+          "pass": true
+        },
+        {
+          "field": "TXT_Poblacio_2",
+          "pass": true
+        },
+        {
+          "field": "TXT_Tel_2",
+          "pass": true
+        },
+        {
+          "field": "TXT_Correu_2",
+          "pass": true
+        },
+        {
+          "field": "CBO_TipusVia_3",
+          "pass": true
+        },
+        {
+          "field": "TXT_NomVia_3",
+          "pass": true
+        },
+        {
+          "field": "TXT_Num_3",
+          "pass": true
+        },
+        {
+          "field": "TXT_Bloc_3",
+          "pass": true
+        },
+        {
+          "field": "TXT_Escala_3",
+          "pass": true
+        },
+        {
+          "field": "TXT_Pis_3",
+          "pass": true
+        },
+        {
+          "field": "TXT_Porta_3",
+          "pass": true
+        },
+        {
+          "field": "TXT_CodiPostal_3",
+          "pass": true
+        },
+        {
+          "field": "TXT_Poblacio_3",
+          "pass": true
+        },
+        {
+          "field": "TXT_Tel_3",
+          "pass": true
+        },
+        {
+          "field": "TXT_Correu_3",
+          "pass": true
+        },
+        {
+          "field": "TXT_Us",
+          "pass": true
+        },
+        {
+          "field": "TXT_PotenciaMax",
+          "pass": true
+        },
+        {
+          "field": "TXT_Calibre",
+          "pass": true
+        },
+        {
+          "field": "TXT_Tensio",
+          "pass": true
+        },
+        {
+          "field": "TXT_IGM",
+          "pass": true
+        },
+        {
+          "field": "TXT_Circuits",
+          "pass": true
+        },
+        {
+          "field": "TXT_SeccioLGA",
+          "pass": true
+        },
+        {
+          "field": "TXT_MaterialConductor",
+          "pass": true
+        },
+        {
+          "field": "TXT_ResistenciaConductors",
+          "pass": true
+        },
+        {
+          "field": "TXT_UbicacioComptadors",
+          "pass": true
+        },
+        {
+          "field": "TXT_AillamentTerra",
+          "pass": true
+        },
+        {
+          "field": "TXT_ResistenciaTerra",
+          "pass": true
+        },
+        {
+          "field": "TXT_Interruptor",
+          "pass": true
+        },
+        {
+          "field": "TXT_Tecnologia",
+          "pass": true
+        },
+        {
+          "field": "TXT_TipusConnexio",
+          "pass": true
+        },
+        {
+          "field": "TXT_Potencia",
+          "pass": true
+        },
+        {
+          "field": "NomCognomsInstalador_2",
+          "pass": true
+        },
+        {
+          "field": "TXT_Observacions",
+          "pass": true
+        },
+        {
+          "field": "TXT_CUPS",
+          "pass": true
+        },
+        {
+          "field": "DDLAmpliaMod",
+          "pass": true
+        }
+      ]
+    },
+    {
+      "id": "classe_p1",
+      "pass": true,
+      "pages": [
+        {
+          "page": 1,
+          "changedOutsideFields": 0,
+          "pass": true
+        },
+        {
+          "page": 2,
+          "changedOutsideFields": 0,
+          "pass": true
+        }
+      ],
+      "originalVectorFormsPreserved": true,
+      "textChecks": [
+        {
+          "field": "NomCognoms",
+          "pass": true
+        },
+        {
+          "field": "NIF",
+          "pass": true
+        },
+        {
+          "field": "CBO_TipusVia",
+          "pass": true
+        },
+        {
+          "field": "TXT_NomVia",
+          "pass": true
+        },
+        {
+          "field": "TXT_Num",
+          "pass": true
+        },
+        {
+          "field": "TXT_Bloc",
+          "pass": true
+        },
+        {
+          "field": "TXT_Escala",
+          "pass": true
+        },
+        {
+          "field": "TXT_Pis",
+          "pass": true
+        },
+        {
+          "field": "TXT_Porta",
+          "pass": true
+        },
+        {
+          "field": "TXT_CodiPostal",
+          "pass": true
+        },
+        {
+          "field": "TXT_Poblacio",
+          "pass": true
+        },
+        {
+          "field": "TXT_Tel",
+          "pass": true
+        },
+        {
+          "field": "TXT_Correu",
+          "pass": true
+        },
+        {
+          "field": "NomCognoms_2",
+          "pass": true
+        },
+        {
+          "field": "TXT_Rasic",
+          "pass": true
+        },
+        {
+          "field": "NIF_2",
+          "pass": true
+        },
+        {
+          "field": "NomCognomsInstalador",
+          "pass": true
+        },
+        {
+          "field": "TXT_Categoria",
+          "pass": true
+        },
+        {
+          "field": "DNIInstallador",
+          "pass": true
+        },
+        {
+          "field": "CBO_TipusVia_2",
+          "pass": true
+        },
+        {
+          "field": "TXT_NomVia_2",
+          "pass": true
+        },
+        {
+          "field": "TXT_Num_2",
+          "pass": true
+        },
+        {
+          "field": "TXT_Bloc_2",
+          "pass": true
+        },
+        {
+          "field": "TXT_Escala_2",
+          "pass": true
+        },
+        {
+          "field": "TXT_Pis_2",
+          "pass": true
+        },
+        {
+          "field": "TXT_Porta_2",
+          "pass": true
+        },
+        {
+          "field": "TXT_CodiPostal_2",
+          "pass": true
+        },
+        {
+          "field": "TXT_Poblacio_2",
+          "pass": true
+        },
+        {
+          "field": "TXT_Tel_2",
+          "pass": true
+        },
+        {
+          "field": "TXT_Correu_2",
+          "pass": true
+        },
+        {
+          "field": "CBO_TipusVia_3",
+          "pass": true
+        },
+        {
+          "field": "TXT_NomVia_3",
+          "pass": true
+        },
+        {
+          "field": "TXT_Num_3",
+          "pass": true
+        },
+        {
+          "field": "TXT_Bloc_3",
+          "pass": true
+        },
+        {
+          "field": "TXT_Escala_3",
+          "pass": true
+        },
+        {
+          "field": "TXT_Pis_3",
+          "pass": true
+        },
+        {
+          "field": "TXT_Porta_3",
+          "pass": true
+        },
+        {
+          "field": "TXT_CodiPostal_3",
+          "pass": true
+        },
+        {
+          "field": "TXT_Poblacio_3",
+          "pass": true
+        },
+        {
+          "field": "TXT_Tel_3",
+          "pass": true
+        },
+        {
+          "field": "TXT_Correu_3",
+          "pass": true
+        },
+        {
+          "field": "TXT_Us",
+          "pass": true
+        },
+        {
+          "field": "TXT_PotenciaMax",
+          "pass": true
+        },
+        {
+          "field": "TXT_Calibre",
+          "pass": true
+        },
+        {
+          "field": "TXT_Tensio",
+          "pass": true
+        },
+        {
+          "field": "TXT_IGM",
+          "pass": true
+        },
+        {
+          "field": "TXT_Circuits",
+          "pass": true
+        },
+        {
+          "field": "TXT_SeccioLGA",
+          "pass": true
+        },
+        {
+          "field": "TXT_MaterialConductor",
+          "pass": true
+        },
+        {
+          "field": "TXT_ResistenciaConductors",
+          "pass": true
+        },
+        {
+          "field": "TXT_UbicacioComptadors",
+          "pass": true
+        },
+        {
+          "field": "TXT_AillamentTerra",
+          "pass": true
+        },
+        {
+          "field": "TXT_ResistenciaTerra",
+          "pass": true
+        },
+        {
+          "field": "TXT_Interruptor",
+          "pass": true
+        },
+        {
+          "field": "TXT_Tecnologia",
+          "pass": true
+        },
+        {
+          "field": "TXT_TipusConnexio",
+          "pass": true
+        },
+        {
+          "field": "TXT_Potencia",
+          "pass": true
+        },
+        {
+          "field": "NomCognomsInstalador_2",
+          "pass": true
+        },
+        {
+          "field": "TXT_Observacions",
+          "pass": true
+        },
+        {
+          "field": "TXT_P1",
+          "pass": true
+        }
+      ]
+    },
+    {
+      "id": "classe_p2",
+      "pass": true,
+      "pages": [
+        {
+          "page": 1,
+          "changedOutsideFields": 0,
+          "pass": true
+        },
+        {
+          "page": 2,
+          "changedOutsideFields": 0,
+          "pass": true
+        }
+      ],
+      "originalVectorFormsPreserved": true,
+      "textChecks": [
+        {
+          "field": "NomCognoms",
+          "pass": true
+        },
+        {
+          "field": "NIF",
+          "pass": true
+        },
+        {
+          "field": "CBO_TipusVia",
+          "pass": true
+        },
+        {
+          "field": "TXT_NomVia",
+          "pass": true
+        },
+        {
+          "field": "TXT_Num",
+          "pass": true
+        },
+        {
+          "field": "TXT_Bloc",
+          "pass": true
+        },
+        {
+          "field": "TXT_Escala",
+          "pass": true
+        },
+        {
+          "field": "TXT_Pis",
+          "pass": true
+        },
+        {
+          "field": "TXT_Porta",
+          "pass": true
+        },
+        {
+          "field": "TXT_CodiPostal",
+          "pass": true
+        },
+        {
+          "field": "TXT_Poblacio",
+          "pass": true
+        },
+        {
+          "field": "TXT_Tel",
+          "pass": true
+        },
+        {
+          "field": "TXT_Correu",
+          "pass": true
+        },
+        {
+          "field": "NomCognoms_2",
+          "pass": true
+        },
+        {
+          "field": "TXT_Rasic",
+          "pass": true
+        },
+        {
+          "field": "NIF_2",
+          "pass": true
+        },
+        {
+          "field": "NomCognomsInstalador",
+          "pass": true
+        },
+        {
+          "field": "TXT_Categoria",
+          "pass": true
+        },
+        {
+          "field": "DNIInstallador",
+          "pass": true
+        },
+        {
+          "field": "CBO_TipusVia_2",
+          "pass": true
+        },
+        {
+          "field": "TXT_NomVia_2",
+          "pass": true
+        },
+        {
+          "field": "TXT_Num_2",
+          "pass": true
+        },
+        {
+          "field": "TXT_Bloc_2",
+          "pass": true
+        },
+        {
+          "field": "TXT_Escala_2",
+          "pass": true
+        },
+        {
+          "field": "TXT_Pis_2",
+          "pass": true
+        },
+        {
+          "field": "TXT_Porta_2",
+          "pass": true
+        },
+        {
+          "field": "TXT_CodiPostal_2",
+          "pass": true
+        },
+        {
+          "field": "TXT_Poblacio_2",
+          "pass": true
+        },
+        {
+          "field": "TXT_Tel_2",
+          "pass": true
+        },
+        {
+          "field": "TXT_Correu_2",
+          "pass": true
+        },
+        {
+          "field": "CBO_TipusVia_3",
+          "pass": true
+        },
+        {
+          "field": "TXT_NomVia_3",
+          "pass": true
+        },
+        {
+          "field": "TXT_Num_3",
+          "pass": true
+        },
+        {
+          "field": "TXT_Bloc_3",
+          "pass": true
+        },
+        {
+          "field": "TXT_Escala_3",
+          "pass": true
+        },
+        {
+          "field": "TXT_Pis_3",
+          "pass": true
+        },
+        {
+          "field": "TXT_Porta_3",
+          "pass": true
+        },
+        {
+          "field": "TXT_CodiPostal_3",
+          "pass": true
+        },
+        {
+          "field": "TXT_Poblacio_3",
+          "pass": true
+        },
+        {
+          "field": "TXT_Tel_3",
+          "pass": true
+        },
+        {
+          "field": "TXT_Correu_3",
+          "pass": true
+        },
+        {
+          "field": "TXT_Us",
+          "pass": true
+        },
+        {
+          "field": "TXT_PotenciaMax",
+          "pass": true
+        },
+        {
+          "field": "TXT_Calibre",
+          "pass": true
+        },
+        {
+          "field": "TXT_Tensio",
+          "pass": true
+        },
+        {
+          "field": "TXT_IGM",
+          "pass": true
+        },
+        {
+          "field": "TXT_Circuits",
+          "pass": true
+        },
+        {
+          "field": "TXT_SeccioLGA",
+          "pass": true
+        },
+        {
+          "field": "TXT_MaterialConductor",
+          "pass": true
+        },
+        {
+          "field": "TXT_ResistenciaConductors",
+          "pass": true
+        },
+        {
+          "field": "TXT_UbicacioComptadors",
+          "pass": true
+        },
+        {
+          "field": "TXT_AillamentTerra",
+          "pass": true
+        },
+        {
+          "field": "TXT_ResistenciaTerra",
+          "pass": true
+        },
+        {
+          "field": "TXT_Interruptor",
+          "pass": true
+        },
+        {
+          "field": "TXT_Tecnologia",
+          "pass": true
+        },
+        {
+          "field": "TXT_TipusConnexio",
+          "pass": true
+        },
+        {
+          "field": "TXT_Potencia",
+          "pass": true
+        },
+        {
+          "field": "NomCognomsInstalador_2",
+          "pass": true
+        },
+        {
+          "field": "TXT_Observacions",
+          "pass": true
+        },
+        {
+          "field": "TXT_P2",
+          "pass": true
+        }
+      ]
+    },
+    {
+      "id": "us_g",
+      "pass": true,
+      "pages": [
+        {
+          "page": 1,
+          "changedOutsideFields": 0,
+          "pass": true
+        },
+        {
+          "page": 2,
+          "changedOutsideFields": 0,
+          "pass": true
+        }
+      ],
+      "originalVectorFormsPreserved": true,
+      "textChecks": [
+        {
+          "field": "NomCognoms",
+          "pass": true
+        },
+        {
+          "field": "NIF",
+          "pass": true
+        },
+        {
+          "field": "CBO_TipusVia",
+          "pass": true
+        },
+        {
+          "field": "TXT_NomVia",
+          "pass": true
+        },
+        {
+          "field": "TXT_Num",
+          "pass": true
+        },
+        {
+          "field": "TXT_Bloc",
+          "pass": true
+        },
+        {
+          "field": "TXT_Escala",
+          "pass": true
+        },
+        {
+          "field": "TXT_Pis",
+          "pass": true
+        },
+        {
+          "field": "TXT_Porta",
+          "pass": true
+        },
+        {
+          "field": "TXT_CodiPostal",
+          "pass": true
+        },
+        {
+          "field": "TXT_Poblacio",
+          "pass": true
+        },
+        {
+          "field": "TXT_Tel",
+          "pass": true
+        },
+        {
+          "field": "TXT_Correu",
+          "pass": true
+        },
+        {
+          "field": "NomCognoms_2",
+          "pass": true
+        },
+        {
+          "field": "TXT_Rasic",
+          "pass": true
+        },
+        {
+          "field": "NIF_2",
+          "pass": true
+        },
+        {
+          "field": "NomCognomsInstalador",
+          "pass": true
+        },
+        {
+          "field": "TXT_Categoria",
+          "pass": true
+        },
+        {
+          "field": "DNIInstallador",
+          "pass": true
+        },
+        {
+          "field": "CBO_TipusVia_2",
+          "pass": true
+        },
+        {
+          "field": "TXT_NomVia_2",
+          "pass": true
+        },
+        {
+          "field": "TXT_Num_2",
+          "pass": true
+        },
+        {
+          "field": "TXT_Bloc_2",
+          "pass": true
+        },
+        {
+          "field": "TXT_Escala_2",
+          "pass": true
+        },
+        {
+          "field": "TXT_Pis_2",
+          "pass": true
+        },
+        {
+          "field": "TXT_Porta_2",
+          "pass": true
+        },
+        {
+          "field": "TXT_CodiPostal_2",
+          "pass": true
+        },
+        {
+          "field": "TXT_Poblacio_2",
+          "pass": true
+        },
+        {
+          "field": "TXT_Tel_2",
+          "pass": true
+        },
+        {
+          "field": "TXT_Correu_2",
+          "pass": true
+        },
+        {
+          "field": "CBO_TipusVia_3",
+          "pass": true
+        },
+        {
+          "field": "TXT_NomVia_3",
+          "pass": true
+        },
+        {
+          "field": "TXT_Num_3",
+          "pass": true
+        },
+        {
+          "field": "TXT_Bloc_3",
+          "pass": true
+        },
+        {
+          "field": "TXT_Escala_3",
+          "pass": true
+        },
+        {
+          "field": "TXT_Pis_3",
+          "pass": true
+        },
+        {
+          "field": "TXT_Porta_3",
+          "pass": true
+        },
+        {
+          "field": "TXT_CodiPostal_3",
+          "pass": true
+        },
+        {
+          "field": "TXT_Poblacio_3",
+          "pass": true
+        },
+        {
+          "field": "TXT_Tel_3",
+          "pass": true
+        },
+        {
+          "field": "TXT_Correu_3",
+          "pass": true
+        },
+        {
+          "field": "TXT_Us",
+          "pass": true
+        },
+        {
+          "field": "TXT_PotenciaMax",
+          "pass": true
+        },
+        {
+          "field": "TXT_Calibre",
+          "pass": true
+        },
+        {
+          "field": "TXT_Tensio",
+          "pass": true
+        },
+        {
+          "field": "TXT_IGM",
+          "pass": true
+        },
+        {
+          "field": "TXT_Circuits",
+          "pass": true
+        },
+        {
+          "field": "TXT_SeccioLGA",
+          "pass": true
+        },
+        {
+          "field": "TXT_MaterialConductor",
+          "pass": true
+        },
+        {
+          "field": "TXT_ResistenciaConductors",
+          "pass": true
+        },
+        {
+          "field": "TXT_UbicacioComptadors",
+          "pass": true
+        },
+        {
+          "field": "TXT_AillamentTerra",
+          "pass": true
+        },
+        {
+          "field": "TXT_ResistenciaTerra",
+          "pass": true
+        },
+        {
+          "field": "TXT_Interruptor",
+          "pass": true
+        },
+        {
+          "field": "TXT_Tecnologia",
+          "pass": true
+        },
+        {
+          "field": "TXT_TipusConnexio",
+          "pass": true
+        },
+        {
+          "field": "TXT_Potencia",
+          "pass": true
+        },
+        {
+          "field": "NomCognomsInstalador_2",
+          "pass": true
+        },
+        {
+          "field": "TXT_Observacions",
+          "pass": true
+        },
+        {
+          "field": "TXT_G",
+          "pass": true
+        }
+      ]
+    },
+    {
+      "id": "us_h",
+      "pass": true,
+      "pages": [
+        {
+          "page": 1,
+          "changedOutsideFields": 0,
+          "pass": true
+        },
+        {
+          "page": 2,
+          "changedOutsideFields": 0,
+          "pass": true
+        }
+      ],
+      "originalVectorFormsPreserved": true,
+      "textChecks": [
+        {
+          "field": "NomCognoms",
+          "pass": true
+        },
+        {
+          "field": "NIF",
+          "pass": true
+        },
+        {
+          "field": "CBO_TipusVia",
+          "pass": true
+        },
+        {
+          "field": "TXT_NomVia",
+          "pass": true
+        },
+        {
+          "field": "TXT_Num",
+          "pass": true
+        },
+        {
+          "field": "TXT_Bloc",
+          "pass": true
+        },
+        {
+          "field": "TXT_Escala",
+          "pass": true
+        },
+        {
+          "field": "TXT_Pis",
+          "pass": true
+        },
+        {
+          "field": "TXT_Porta",
+          "pass": true
+        },
+        {
+          "field": "TXT_CodiPostal",
+          "pass": true
+        },
+        {
+          "field": "TXT_Poblacio",
+          "pass": true
+        },
+        {
+          "field": "TXT_Tel",
+          "pass": true
+        },
+        {
+          "field": "TXT_Correu",
+          "pass": true
+        },
+        {
+          "field": "NomCognoms_2",
+          "pass": true
+        },
+        {
+          "field": "TXT_Rasic",
+          "pass": true
+        },
+        {
+          "field": "NIF_2",
+          "pass": true
+        },
+        {
+          "field": "NomCognomsInstalador",
+          "pass": true
+        },
+        {
+          "field": "TXT_Categoria",
+          "pass": true
+        },
+        {
+          "field": "DNIInstallador",
+          "pass": true
+        },
+        {
+          "field": "CBO_TipusVia_2",
+          "pass": true
+        },
+        {
+          "field": "TXT_NomVia_2",
+          "pass": true
+        },
+        {
+          "field": "TXT_Num_2",
+          "pass": true
+        },
+        {
+          "field": "TXT_Bloc_2",
+          "pass": true
+        },
+        {
+          "field": "TXT_Escala_2",
+          "pass": true
+        },
+        {
+          "field": "TXT_Pis_2",
+          "pass": true
+        },
+        {
+          "field": "TXT_Porta_2",
+          "pass": true
+        },
+        {
+          "field": "TXT_CodiPostal_2",
+          "pass": true
+        },
+        {
+          "field": "TXT_Poblacio_2",
+          "pass": true
+        },
+        {
+          "field": "TXT_Tel_2",
+          "pass": true
+        },
+        {
+          "field": "TXT_Correu_2",
+          "pass": true
+        },
+        {
+          "field": "CBO_TipusVia_3",
+          "pass": true
+        },
+        {
+          "field": "TXT_NomVia_3",
+          "pass": true
+        },
+        {
+          "field": "TXT_Num_3",
+          "pass": true
+        },
+        {
+          "field": "TXT_Bloc_3",
+          "pass": true
+        },
+        {
+          "field": "TXT_Escala_3",
+          "pass": true
+        },
+        {
+          "field": "TXT_Pis_3",
+          "pass": true
+        },
+        {
+          "field": "TXT_Porta_3",
+          "pass": true
+        },
+        {
+          "field": "TXT_CodiPostal_3",
+          "pass": true
+        },
+        {
+          "field": "TXT_Poblacio_3",
+          "pass": true
+        },
+        {
+          "field": "TXT_Tel_3",
+          "pass": true
+        },
+        {
+          "field": "TXT_Correu_3",
+          "pass": true
+        },
+        {
+          "field": "TXT_Us",
+          "pass": true
+        },
+        {
+          "field": "TXT_PotenciaMax",
+          "pass": true
+        },
+        {
+          "field": "TXT_Calibre",
+          "pass": true
+        },
+        {
+          "field": "TXT_Tensio",
+          "pass": true
+        },
+        {
+          "field": "TXT_IGM",
+          "pass": true
+        },
+        {
+          "field": "TXT_Circuits",
+          "pass": true
+        },
+        {
+          "field": "TXT_SeccioLGA",
+          "pass": true
+        },
+        {
+          "field": "TXT_MaterialConductor",
+          "pass": true
+        },
+        {
+          "field": "TXT_ResistenciaConductors",
+          "pass": true
+        },
+        {
+          "field": "TXT_UbicacioComptadors",
+          "pass": true
+        },
+        {
+          "field": "TXT_AillamentTerra",
+          "pass": true
+        },
+        {
+          "field": "TXT_ResistenciaTerra",
+          "pass": true
+        },
+        {
+          "field": "TXT_Interruptor",
+          "pass": true
+        },
+        {
+          "field": "TXT_Tecnologia",
+          "pass": true
+        },
+        {
+          "field": "TXT_TipusConnexio",
+          "pass": true
+        },
+        {
+          "field": "TXT_Potencia",
+          "pass": true
+        },
+        {
+          "field": "NomCognomsInstalador_2",
+          "pass": true
+        },
+        {
+          "field": "TXT_Observacions",
+          "pass": true
+        },
+        {
+          "field": "TXT_H",
+          "pass": true
+        }
+      ]
+    },
+    {
+      "id": "altres_usos",
+      "pass": true,
+      "pages": [
+        {
+          "page": 1,
+          "changedOutsideFields": 0,
+          "pass": true
+        },
+        {
+          "page": 2,
+          "changedOutsideFields": 0,
+          "pass": true
+        }
+      ],
+      "originalVectorFormsPreserved": true,
+      "textChecks": [
+        {
+          "field": "NomCognoms",
+          "pass": true
+        },
+        {
+          "field": "NIF",
+          "pass": true
+        },
+        {
+          "field": "CBO_TipusVia",
+          "pass": true
+        },
+        {
+          "field": "TXT_NomVia",
+          "pass": true
+        },
+        {
+          "field": "TXT_Num",
+          "pass": true
+        },
+        {
+          "field": "TXT_Bloc",
+          "pass": true
+        },
+        {
+          "field": "TXT_Escala",
+          "pass": true
+        },
+        {
+          "field": "TXT_Pis",
+          "pass": true
+        },
+        {
+          "field": "TXT_Porta",
+          "pass": true
+        },
+        {
+          "field": "TXT_CodiPostal",
+          "pass": true
+        },
+        {
+          "field": "TXT_Poblacio",
+          "pass": true
+        },
+        {
+          "field": "TXT_Tel",
+          "pass": true
+        },
+        {
+          "field": "TXT_Correu",
+          "pass": true
+        },
+        {
+          "field": "NomCognoms_2",
+          "pass": true
+        },
+        {
+          "field": "TXT_Rasic",
+          "pass": true
+        },
+        {
+          "field": "NIF_2",
+          "pass": true
+        },
+        {
+          "field": "NomCognomsInstalador",
+          "pass": true
+        },
+        {
+          "field": "TXT_Categoria",
+          "pass": true
+        },
+        {
+          "field": "DNIInstallador",
+          "pass": true
+        },
+        {
+          "field": "CBO_TipusVia_2",
+          "pass": true
+        },
+        {
+          "field": "TXT_NomVia_2",
+          "pass": true
+        },
+        {
+          "field": "TXT_Num_2",
+          "pass": true
+        },
+        {
+          "field": "TXT_Bloc_2",
+          "pass": true
+        },
+        {
+          "field": "TXT_Escala_2",
+          "pass": true
+        },
+        {
+          "field": "TXT_Pis_2",
+          "pass": true
+        },
+        {
+          "field": "TXT_Porta_2",
+          "pass": true
+        },
+        {
+          "field": "TXT_CodiPostal_2",
+          "pass": true
+        },
+        {
+          "field": "TXT_Poblacio_2",
+          "pass": true
+        },
+        {
+          "field": "TXT_Tel_2",
+          "pass": true
+        },
+        {
+          "field": "TXT_Correu_2",
+          "pass": true
+        },
+        {
+          "field": "CBO_TipusVia_3",
+          "pass": true
+        },
+        {
+          "field": "TXT_NomVia_3",
+          "pass": true
+        },
+        {
+          "field": "TXT_Num_3",
+          "pass": true
+        },
+        {
+          "field": "TXT_Bloc_3",
+          "pass": true
+        },
+        {
+          "field": "TXT_Escala_3",
+          "pass": true
+        },
+        {
+          "field": "TXT_Pis_3",
+          "pass": true
+        },
+        {
+          "field": "TXT_Porta_3",
+          "pass": true
+        },
+        {
+          "field": "TXT_CodiPostal_3",
+          "pass": true
+        },
+        {
+          "field": "TXT_Poblacio_3",
+          "pass": true
+        },
+        {
+          "field": "TXT_Tel_3",
+          "pass": true
+        },
+        {
+          "field": "TXT_Correu_3",
+          "pass": true
+        },
+        {
+          "field": "TXT_Us",
+          "pass": true
+        },
+        {
+          "field": "TXT_PotenciaMax",
+          "pass": true
+        },
+        {
+          "field": "TXT_Calibre",
+          "pass": true
+        },
+        {
+          "field": "TXT_Tensio",
+          "pass": true
+        },
+        {
+          "field": "TXT_IGM",
+          "pass": true
+        },
+        {
+          "field": "TXT_Circuits",
+          "pass": true
+        },
+        {
+          "field": "TXT_SeccioLGA",
+          "pass": true
+        },
+        {
+          "field": "TXT_MaterialConductor",
+          "pass": true
+        },
+        {
+          "field": "TXT_ResistenciaConductors",
+          "pass": true
+        },
+        {
+          "field": "TXT_UbicacioComptadors",
+          "pass": true
+        },
+        {
+          "field": "TXT_AillamentTerra",
+          "pass": true
+        },
+        {
+          "field": "TXT_ResistenciaTerra",
+          "pass": true
+        },
+        {
+          "field": "TXT_Interruptor",
+          "pass": true
+        },
+        {
+          "field": "TXT_Tecnologia",
+          "pass": true
+        },
+        {
+          "field": "TXT_TipusConnexio",
+          "pass": true
+        },
+        {
+          "field": "TXT_Potencia",
+          "pass": true
+        },
+        {
+          "field": "NomCognomsInstalador_2",
+          "pass": true
+        },
+        {
+          "field": "TXT_Observacions",
+          "pass": true
+        },
+        {
+          "field": "AltresUsos",
+          "pass": true
+        }
+      ]
+    },
+    {
+      "id": "tensio_altra",
+      "pass": true,
+      "pages": [
+        {
+          "page": 1,
+          "changedOutsideFields": 0,
+          "pass": true
+        },
+        {
+          "page": 2,
+          "changedOutsideFields": 0,
+          "pass": true
+        }
+      ],
+      "originalVectorFormsPreserved": true,
+      "textChecks": [
+        {
+          "field": "NomCognoms",
+          "pass": true
+        },
+        {
+          "field": "NIF",
+          "pass": true
+        },
+        {
+          "field": "CBO_TipusVia",
+          "pass": true
+        },
+        {
+          "field": "TXT_NomVia",
+          "pass": true
+        },
+        {
+          "field": "TXT_Num",
+          "pass": true
+        },
+        {
+          "field": "TXT_Bloc",
+          "pass": true
+        },
+        {
+          "field": "TXT_Escala",
+          "pass": true
+        },
+        {
+          "field": "TXT_Pis",
+          "pass": true
+        },
+        {
+          "field": "TXT_Porta",
+          "pass": true
+        },
+        {
+          "field": "TXT_CodiPostal",
+          "pass": true
+        },
+        {
+          "field": "TXT_Poblacio",
+          "pass": true
+        },
+        {
+          "field": "TXT_Tel",
+          "pass": true
+        },
+        {
+          "field": "TXT_Correu",
+          "pass": true
+        },
+        {
+          "field": "NomCognoms_2",
+          "pass": true
+        },
+        {
+          "field": "TXT_Rasic",
+          "pass": true
+        },
+        {
+          "field": "NIF_2",
+          "pass": true
+        },
+        {
+          "field": "NomCognomsInstalador",
+          "pass": true
+        },
+        {
+          "field": "TXT_Categoria",
+          "pass": true
+        },
+        {
+          "field": "DNIInstallador",
+          "pass": true
+        },
+        {
+          "field": "CBO_TipusVia_2",
+          "pass": true
+        },
+        {
+          "field": "TXT_NomVia_2",
+          "pass": true
+        },
+        {
+          "field": "TXT_Num_2",
+          "pass": true
+        },
+        {
+          "field": "TXT_Bloc_2",
+          "pass": true
+        },
+        {
+          "field": "TXT_Escala_2",
+          "pass": true
+        },
+        {
+          "field": "TXT_Pis_2",
+          "pass": true
+        },
+        {
+          "field": "TXT_Porta_2",
+          "pass": true
+        },
+        {
+          "field": "TXT_CodiPostal_2",
+          "pass": true
+        },
+        {
+          "field": "TXT_Poblacio_2",
+          "pass": true
+        },
+        {
+          "field": "TXT_Tel_2",
+          "pass": true
+        },
+        {
+          "field": "TXT_Correu_2",
+          "pass": true
+        },
+        {
+          "field": "CBO_TipusVia_3",
+          "pass": true
+        },
+        {
+          "field": "TXT_NomVia_3",
+          "pass": true
+        },
+        {
+          "field": "TXT_Num_3",
+          "pass": true
+        },
+        {
+          "field": "TXT_Bloc_3",
+          "pass": true
+        },
+        {
+          "field": "TXT_Escala_3",
+          "pass": true
+        },
+        {
+          "field": "TXT_Pis_3",
+          "pass": true
+        },
+        {
+          "field": "TXT_Porta_3",
+          "pass": true
+        },
+        {
+          "field": "TXT_CodiPostal_3",
+          "pass": true
+        },
+        {
+          "field": "TXT_Poblacio_3",
+          "pass": true
+        },
+        {
+          "field": "TXT_Tel_3",
+          "pass": true
+        },
+        {
+          "field": "TXT_Correu_3",
+          "pass": true
+        },
+        {
+          "field": "TXT_Us",
+          "pass": true
+        },
+        {
+          "field": "TXT_PotenciaMax",
+          "pass": true
+        },
+        {
+          "field": "TXT_Calibre",
+          "pass": true
+        },
+        {
+          "field": "TXT_Tensio",
+          "pass": true
+        },
+        {
+          "field": "TXT_IGM",
+          "pass": true
+        },
+        {
+          "field": "TXT_Circuits",
+          "pass": true
+        },
+        {
+          "field": "TXT_SeccioLGA",
+          "pass": true
+        },
+        {
+          "field": "TXT_MaterialConductor",
+          "pass": true
+        },
+        {
+          "field": "TXT_ResistenciaConductors",
+          "pass": true
+        },
+        {
+          "field": "TXT_UbicacioComptadors",
+          "pass": true
+        },
+        {
+          "field": "TXT_AillamentTerra",
+          "pass": true
+        },
+        {
+          "field": "TXT_ResistenciaTerra",
+          "pass": true
+        },
+        {
+          "field": "TXT_Interruptor",
+          "pass": true
+        },
+        {
+          "field": "TXT_Tecnologia",
+          "pass": true
+        },
+        {
+          "field": "TXT_TipusConnexio",
+          "pass": true
+        },
+        {
+          "field": "TXT_Potencia",
+          "pass": true
+        },
+        {
+          "field": "NomCognomsInstalador_2",
+          "pass": true
+        },
+        {
+          "field": "TXT_Observacions",
+          "pass": true
+        },
+        {
+          "field": "InfoTensioAltre",
+          "pass": true
+        }
+      ]
+    },
+    {
+      "id": "auditori_ref",
+      "pass": true,
+      "pages": [
+        {
+          "page": 1,
+          "changedOutsideFields": 0,
+          "pass": true
+        },
+        {
+          "page": 2,
+          "changedOutsideFields": 0,
+          "pass": true
+        }
+      ],
+      "originalVectorFormsPreserved": true,
+      "textChecks": [
+        {
+          "field": "NomCognoms",
+          "pass": true
+        },
+        {
+          "field": "NIF",
+          "pass": true
+        },
+        {
+          "field": "CBO_TipusVia",
+          "pass": true
+        },
+        {
+          "field": "TXT_NomVia",
+          "pass": true
+        },
+        {
+          "field": "TXT_Num",
+          "pass": true
+        },
+        {
+          "field": "TXT_Bloc",
+          "pass": true
+        },
+        {
+          "field": "TXT_Escala",
+          "pass": true
+        },
+        {
+          "field": "TXT_Pis",
+          "pass": true
+        },
+        {
+          "field": "TXT_Porta",
+          "pass": true
+        },
+        {
+          "field": "TXT_CodiPostal",
+          "pass": true
+        },
+        {
+          "field": "TXT_Poblacio",
+          "pass": true
+        },
+        {
+          "field": "TXT_Tel",
+          "pass": true
+        },
+        {
+          "field": "TXT_Correu",
+          "pass": true
+        },
+        {
+          "field": "NomCognoms_2",
+          "pass": true
+        },
+        {
+          "field": "TXT_Rasic",
+          "pass": true
+        },
+        {
+          "field": "NIF_2",
+          "pass": true
+        },
+        {
+          "field": "NomCognomsInstalador",
+          "pass": true
+        },
+        {
+          "field": "TXT_Categoria",
+          "pass": true
+        },
+        {
+          "field": "DNIInstallador",
+          "pass": true
+        },
+        {
+          "field": "CBO_TipusVia_2",
+          "pass": true
+        },
+        {
+          "field": "TXT_NomVia_2",
+          "pass": true
+        },
+        {
+          "field": "TXT_Num_2",
+          "pass": true
+        },
+        {
+          "field": "TXT_Bloc_2",
+          "pass": true
+        },
+        {
+          "field": "TXT_Escala_2",
+          "pass": true
+        },
+        {
+          "field": "TXT_Pis_2",
+          "pass": true
+        },
+        {
+          "field": "TXT_Porta_2",
+          "pass": true
+        },
+        {
+          "field": "TXT_CodiPostal_2",
+          "pass": true
+        },
+        {
+          "field": "TXT_Poblacio_2",
+          "pass": true
+        },
+        {
+          "field": "TXT_Tel_2",
+          "pass": true
+        },
+        {
+          "field": "TXT_Correu_2",
+          "pass": true
+        },
+        {
+          "field": "CBO_TipusVia_3",
+          "pass": true
+        },
+        {
+          "field": "TXT_NomVia_3",
+          "pass": true
+        },
+        {
+          "field": "TXT_Num_3",
+          "pass": true
+        },
+        {
+          "field": "TXT_Bloc_3",
+          "pass": true
+        },
+        {
+          "field": "TXT_Escala_3",
+          "pass": true
+        },
+        {
+          "field": "TXT_Pis_3",
+          "pass": true
+        },
+        {
+          "field": "TXT_Porta_3",
+          "pass": true
+        },
+        {
+          "field": "TXT_CodiPostal_3",
+          "pass": true
+        },
+        {
+          "field": "TXT_Poblacio_3",
+          "pass": true
+        },
+        {
+          "field": "TXT_Tel_3",
+          "pass": true
+        },
+        {
+          "field": "TXT_Correu_3",
+          "pass": true
+        },
+        {
+          "field": "TXT_Us",
+          "pass": true
+        },
+        {
+          "field": "TXT_PotenciaMax",
+          "pass": true
+        },
+        {
+          "field": "TXT_Calibre",
+          "pass": true
+        },
+        {
+          "field": "TXT_Tensio",
+          "pass": true
+        },
+        {
+          "field": "TXT_IGM",
+          "pass": true
+        },
+        {
+          "field": "TXT_Circuits",
+          "pass": true
+        },
+        {
+          "field": "TXT_SeccioLGA",
+          "pass": true
+        },
+        {
+          "field": "TXT_MaterialConductor",
+          "pass": true
+        },
+        {
+          "field": "TXT_ResistenciaConductors",
+          "pass": true
+        },
+        {
+          "field": "TXT_UbicacioComptadors",
+          "pass": true
+        },
+        {
+          "field": "TXT_AillamentTerra",
+          "pass": true
+        },
+        {
+          "field": "TXT_ResistenciaTerra",
+          "pass": true
+        },
+        {
+          "field": "TXT_Interruptor",
+          "pass": true
+        },
+        {
+          "field": "TXT_Tecnologia",
+          "pass": true
+        },
+        {
+          "field": "TXT_TipusConnexio",
+          "pass": true
+        },
+        {
+          "field": "TXT_Potencia",
+          "pass": true
+        },
+        {
+          "field": "NomCognomsInstalador_2",
+          "pass": true
+        },
+        {
+          "field": "TXT_Observacions",
+          "pass": true
+        },
+        {
+          "field": "TXT_P1",
+          "pass": true
+        },
+        {
+          "field": "TXT_G",
+          "pass": true
+        }
+      ]
+    },
+    {
+      "id": "incomplet",
+      "pass": true,
+      "pages": [
+        {
+          "page": 1,
+          "changedOutsideFields": 0,
+          "pass": true
+        },
+        {
+          "page": 2,
+          "changedOutsideFields": 0,
+          "pass": true
+        }
+      ],
+      "originalVectorFormsPreserved": true,
+      "textChecks": [
+        {
+          "field": "NomCognoms",
+          "pass": true
+        },
+        {
+          "field": "TXT_Tensio",
+          "pass": true
+        },
+        {
+          "field": "TXT_Observacions",
+          "pass": true
+        }
+      ]
+    }
+  ],
+  "limitation": "Compara cada relleno con su fondo recompuesto. La fidelidad de los desplazamientos se apoya en las referencias aprobadas de fase 0."
+}

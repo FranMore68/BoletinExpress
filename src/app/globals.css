@@ -2728,3 +2728,9 @@ legend {
   margin-top: 1rem;
   border: 1px solid var(--line, #d9dfe7);
 }
+
+.field-selection {
+  font-size: 0.875rem;
+  overflow-wrap: anywhere;
+  margin: 0.5rem 0 0;
+}

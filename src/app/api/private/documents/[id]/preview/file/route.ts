@@ -35,7 +35,7 @@ export async function GET(
     return new NextResponse(await file.data.arrayBuffer(), {
       headers: {
         "Content-Type": "application/pdf",
-        "Content-Disposition": `inline; filename="BRIE_borrador_revision_${doc.revision}.pdf"`,
+        "Content-Disposition": `inline; filename="${doc.type}_borrador_revision_${doc.revision}.pdf"`,
         "X-Content-Type-Options": "nosniff",
         "Content-Security-Policy": "sandbox",
       },

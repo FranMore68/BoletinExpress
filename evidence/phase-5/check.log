@@ -1,0 +1,54 @@
+
+> boletinexpress@0.1.0 check
+> npm run lint && npm run typecheck && npm test && npm run check:secrets
+
+
+> boletinexpress@0.1.0 lint
+> biome check .
+
+Checked 80 files in 51ms. No fixes applied.
+
+> boletinexpress@0.1.0 typecheck
+> next typegen && tsc --noEmit
+
+Generating route types...
+✓ Types generated successfully
+
+> boletinexpress@0.1.0 test
+> node --test tests/*.test.ts
+
+✔ las mutaciones requieren el origen propio y rechazan peticiones cruzadas (13.167ms)
+✔ validación de credenciales, identificadores y tamaño del cuerpo (1.430875ms)
+✔ el permiso de recuperación se vincula a usuario y sesión (0.380541ms)
+✔ el acceso y almacenamiento tienen mensajes completos en ES y CA (0.102833ms)
+✔ admite el hash PKCE oficial sin aceptar formatos arbitrarios (0.1025ms)
+✔ todos los campos del BRIE coinciden con el inventario PDF aprobado (2.1ms)
+✔ el formulario conserva No, cero y correcciones vaciadas (0.142125ms)
+✔ rechaza campos inventados, tipos incorrectos, opciones desconocidas y contenido excesivo (0.154917ms)
+✔ la plantilla privada es idéntica al original y la fuente al recurso de fase 0 (5.035292ms)
+✔ los 70 campos y las opciones CIE conservan el inventario aprobado y etiquetas ES/CA (2.934333ms)
+✔ las ramas y CUPS se excluyen al cambiar la selección sin borrar los valores locales (0.159625ms)
+✔ CIE admite borradores incompletos y cero; rechaza códigos postales, ramas y opciones incompatibles (0.324958ms)
+✔ el fondo CIE privado es idéntico al estático aprobado y los campos técnicos conservan unidades (5.114125ms)
+✔ el contrato SQL CIE coincide con las restricciones de entrada de los 70 campos (0.669542ms)
+✔ las propuestas de ejemplo conservan cambios manuales, incluidos campos vaciados (1.385083ms)
+✔ el cierre de la demo es idempotente y bloquea cambios del ejemplo (0.271ms)
+✔ la demo impide validar sin datos o con saldo simulado insuficiente (0.423333ms)
+✔ tres borradores activos y sus identificadores se mantienen coherentes al eliminar uno (0.215542ms)
+✔ cada mensaje dispone de ES y CA y conserva sus variables de interpolación (0.880166ms)
+✔ bloquea secretos y entornos privados antes de publicar (3.924625ms)
+✔ permite referencias a secretos pero no contraseñas incrustadas en URI (0.105708ms)
+✔ worker arranca sin credenciales, expone solo liveness y se detiene (68.797792ms)
+ℹ tests 22
+ℹ suites 0
+ℹ pass 22
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 184.488375
+
+> boletinexpress@0.1.0 check:secrets
+> node scripts/check-secrets.mjs
+
+Sin patrones de secretos detectados en 822 archivos versionables.

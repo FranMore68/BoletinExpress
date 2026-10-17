@@ -3,6 +3,12 @@ import { type FormEvent, useEffect, useState } from "react";
 import type { AuthKey } from "@/lib/i18n/auth-copy";
 import { brieFields, type FieldValues } from "@/modules/documents/brie-schema";
 import {
+  activeCieValues,
+  cieFieldActive,
+  cieFields,
+  cieIssues,
+} from "@/modules/documents/cie-schema";
+import {
   type AccountLanguage,
   accountRequest,
   errorKey,
@@ -16,13 +22,19 @@ type Preview = {
   error_fields: string[];
   sha256?: string;
 } | null;
-export type BrieDoc = { id: string; work_data: FieldValues; revision: number };
-export function BrieEditor({
+export type DocumentDraft = {
+  id: string;
+  work_data: FieldValues;
+  revision: number;
+};
+export function DocumentEditor({
   document,
   onBack,
   language,
+  model,
 }: {
-  document: BrieDoc;
+  document: DocumentDraft;
+  model: "BRIE" | "CIE";
   onBack: () => void;
   language: AccountLanguage;
 }) {
@@ -72,7 +84,14 @@ export function BrieEditor({
     setBusy(true);
     setError(null);
     try {
-      const r = await accountRequest(`${base}/fields`, { fields, revision });
+      if (model === "CIE" && cieIssues(activeCieValues(fields)).length) {
+        setError("cieInput");
+        return;
+      }
+      const r = await accountRequest(`${base}/fields`, {
+        fields: model === "CIE" ? activeCieValues(fields) : fields,
+        revision,
+      });
       setFields(r.document.work_data);
       setRevision(r.document.revision);
       setDirty(false);
@@ -85,7 +104,12 @@ export function BrieEditor({
     }
   }
   async function generate() {
-    if (busy || dirty) return;
+    if (
+      busy ||
+      dirty ||
+      (model === "CIE" && cieIssues(activeCieValues(fields)).length > 0)
+    )
+      return;
     setBusy(true);
     setError(null);
     try {
@@ -100,7 +124,19 @@ export function BrieEditor({
       setBusy(false);
     }
   }
-  const empty = brieFields.filter(
+  const schema = model === "CIE" ? cieFields : brieFields;
+  const activeFields =
+    model === "CIE"
+      ? cieFields.filter((f) => cieFieldActive(f, fields))
+      : schema;
+  const working = model === "CIE" ? activeCieValues(fields) : fields;
+  const issues = model === "CIE" ? cieIssues(working) : [];
+  const discardedBranches =
+    model === "CIE" &&
+    Object.keys(fields).some(
+      (k) => fields[k] !== "" && !Object.hasOwn(working, k),
+    );
+  const empty = activeFields.filter(
     (f) => fields[f.key] === undefined || fields[f.key] === "",
   );
   return (
@@ -120,9 +156,9 @@ export function BrieEditor({
           {tr("revision")} {revision}
         </span>
       </div>
-      <h2>{tr("brieManual")}</h2>
-      <p>{tr("brieHelp")}</p>
-      <p>{tr("brieSafety")}</p>
+      <h2>{tr(model === "CIE" ? "cieManual" : "brieManual")}</h2>
+      <p>{tr(model === "CIE" ? "cieHelp" : "brieHelp")}</p>
+      <p>{tr(model === "CIE" ? "cieSafety" : "brieSafety")}</p>
       <details>
         <summary>
           {tr("emptyFields")} ({empty.length})
@@ -134,14 +170,31 @@ export function BrieEditor({
           ))}
         </ul>
       </details>
+      {discardedBranches && <p role="status">{tr("cieBranchChange")}</p>}
+      {issues.length > 0 && (
+        <div role="alert" className="account-error">
+          <p>{tr("cieInput")}</p>
+          <ul>
+            {issues.map((k) => (
+              <li key={k}>
+                {
+                  schema.find((f) => f.key === k)?.label[
+                    locale === "ca" ? 1 : 0
+                  ]
+                }
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
       <form onSubmit={save}>
         <fieldset disabled={busy}>
           <FormFields
-            schema={brieFields}
+            schema={activeFields}
             values={fields}
             locale={locale}
-            prefix="brie"
-            errors={preview?.error_fields || []}
+            prefix={model.toLowerCase()}
+            errors={[...(preview?.error_fields || []), ...issues]}
             onChange={(v) => {
               setFields(v);
               setDirty(true);
@@ -166,7 +219,7 @@ export function BrieEditor({
               type="button"
               className="button button-secondary"
               onClick={generate}
-              disabled={dirty || Boolean(pending)}
+              disabled={dirty || Boolean(pending) || issues.length > 0}
             >
               {tr(pending ? "generating" : "generatePreview")}
             </button>
@@ -180,7 +233,7 @@ export function BrieEditor({
           <ul>
             {preview.error_fields.map((k) => (
               <li key={k}>
-                {brieFields.find((f) => f.key === k)?.label[
+                {schema.find((f) => f.key === k)?.label[
                   locale === "ca" ? 1 : 0
                 ] || tr("preview")}
               </li>
@@ -192,7 +245,7 @@ export function BrieEditor({
         !dirty &&
         preview.revision === revision && (
           <section className="generated-preview">
-            <h2>{tr("reviewBrie")}</h2>
+            <h2>{tr(model === "CIE" ? "reviewCie" : "reviewBrie")}</h2>
             <p>{tr("previewDraftNotice")}</p>
             <a
               href={`${base}/preview/file?revision=${revision}`}
@@ -202,7 +255,7 @@ export function BrieEditor({
               {tr("openPreview")}
             </a>
             <PdfPreview
-              label={tr("reviewBrie")}
+              label={tr(model === "CIE" ? "reviewCie" : "reviewBrie")}
               url={`${base}/preview/file?revision=${revision}`}
               failure={tr("unavailable")}
             />

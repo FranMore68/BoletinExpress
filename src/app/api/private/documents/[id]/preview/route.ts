@@ -37,11 +37,14 @@ export async function POST(
     )
       throw new AccessError(400, "input");
     const { data, error } = await ctx.client
-      .rpc("request_brie_preview", {
-        p_document: doc.id,
-        p_revision: body.revision,
-        p_retry: body.retry === true,
-      })
+      .rpc(
+        doc.type === "CIE" ? "request_cie_preview" : "request_brie_preview",
+        {
+          p_document: doc.id,
+          p_revision: body.revision,
+          p_retry: body.retry === true,
+        },
+      )
       .single();
     if (error) rpcFailure(error);
     return NextResponse.json({ preview: data }, { status: 202 });

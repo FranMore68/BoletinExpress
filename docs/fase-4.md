@@ -1,6 +1,6 @@
 # Fase 4: perfil profesional y BRIE manual
 
-Estado: cierre técnico completado; pendiente de aceptación del usuario. CI y pruebas locales superadas. La fase 5 requiere la aceptación del usuario.
+Estado: aceptada por el usuario el 17/10/2026 mediante «vamos con la fase 5». CI y pruebas locales superadas. Se autoriza comenzar la fase 5.
 
 ## Resultado
 
@@ -55,7 +55,7 @@ Para verificar la fidelidad visual, renderizar originales y resultados con Poppl
 
 ## Fallos pendientes
 
-Sin fallos funcionales o de seguridad pendientes en el alcance de fase 4. Falta la aceptación del usuario. No iniciar la fase 5 hasta aceptar esta fase.
+Sin fallos funcionales o de seguridad pendientes en el alcance de fase 4. Aceptación recibida; la fase 5 está autorizada.
 
 ## Comprobación del usuario
 

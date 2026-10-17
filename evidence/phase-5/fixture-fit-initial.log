@@ -1,0 +1,26 @@
+PASS el perfil copia 18 campos CIE sin confundir NIF y DNI; cambiarlo no altera documentos anteriores
+PASS correcciones propias, revisiones, propiedad, códigos postales y ramas incompatibles protegidos en servidor
+PASS la validación SQL y RLS también bloquean llamadas directas y el acceso a la cola
+PASS cola deduplicada, PDF CIE de dos páginas, hash, descarga privada e invalidación de revisiones anteriores
+PASS las once variantes inventariadas se guardan y generan por el worker: base, 50 %, P1/P2, g/h, otros usos, otra tensión, Auditori e incompleto
+PASS el texto que no cabe falla por campo sin recortarlo; al corregir se genera otra revisión y se conserva cero
+PASS valores antiguos del perfil se conservan y requieren corrección explícita en CIE; no se adivinan opciones
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+
+  assert.ok(mixed.every((x) => x.state.status === "ready"))
+
+    at file:///Volumes/SSD_Ugreen/001.MasterIA/Hackathones/HackathonVibecoding_e7/BoletinExpress/scripts/test-phase5.mjs:367:8
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5) {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v24.19.0

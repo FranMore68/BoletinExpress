@@ -2,9 +2,9 @@
 
 Aplicación prevista para preparar BRIE y CIE ELEC-1 con revisión humana, interfaz ES/CA y datos ficticios durante la evaluación.
 
-**Estado actual: fases 0, 1, 2 y 3 aceptadas; fase 4 completada técnicamente y pendiente de aceptación.** «Mi perfil» reutiliza los datos profesionales al crear un BRIE. El editor ES/CA permite guardar, corregir y revisar sus dos páginas mediante PDF.js privado. Han pasado 17 pruebas de aplicación, 43 pruebas PDF y 20 grupos de integración (12 de acceso y 8 de BRIE), tanto en local como en CI. Las nueve imágenes no presentan avisos altos o críticos. Véase [el cierre de fase 4](docs/fase-4.md).
+**Estado actual: fases 0 a 4 aceptadas; fase 5 en comprobación final.** El formulario CIE ELEC-1 integra sus 70 campos y variantes, reutiliza el perfil profesional y comparte el worker privado con BRIE. La fase 6 no ha comenzado. Véase [el informe de fase 5](docs/fase-5.md).
 
-El entorno local está disponible en `http://127.0.0.1:3000/acceso?lang=es`; los correos de evaluación se capturan en `http://127.0.0.1:54324`. El VPS y Control-Contracts-ATC no se han modificado. La fase 5 (CIE manual) no ha comenzado.
+El entorno local está disponible en `http://127.0.0.1:3000/acceso?lang=es`; los correos de evaluación se capturan en `http://127.0.0.1:54324`. El VPS y Control-Contracts-ATC no se han modificado. El CIE manual se está verificando antes de su aceptación.
 
 El [perfil reutilizable del electricista](docs/perfil-electricista.md) se incorpora al inicio de la fase 4 para autocompletar el BRIE y se reutiliza en el CIE de la fase 5. Los cambios del perfil se aplican a documentos nuevos y no alteran los anteriores.
 

@@ -1,5 +1,26 @@
 import type { Locale } from "./copy";
 export const authCopy = {
+  cieManual: ["Completar CIE ELEC-1", "Completa el CIE ELEC-1"],
+  cieHelp: [
+    "Revisa los datos del perfil y completa titular, emplazamiento y datos técnicos. Elige la actuación, los requisitos y el uso para mostrar sus campos adicionales.",
+    "Revisa les dades del perfil i completa titular, emplaçament i dades tècniques. Tria l’actuació, els requisits i l’ús per mostrar els camps addicionals.",
+  ],
+  cieSafety: [
+    "Tú eliges la clasificación e indicas las mediciones. La aplicación no determina el cumplimiento normativo ni añade firmas. El PDF oficial conserva sus textos en catalán.",
+    "Tu tries la classificació i indiques les mesures. L’aplicació no determina el compliment normatiu ni afegeix signatures. El PDF oficial conserva els textos en català.",
+  ],
+  reviewCie: [
+    "Revisar las dos páginas del CIE",
+    "Revisa les dues pàgines del CIE",
+  ],
+  cieInput: [
+    "Revisa los campos indicados: códigos postales de cinco cifras y opciones válidas del modelo. Los datos del perfil se conservan tal como los guardaste; corrígelos aquí si es necesario.",
+    "Revisa els camps indicats: codis postals de cinc xifres i opcions vàlides del model. Les dades del perfil es conserven tal com les vas desar; corregeix-les aquí si cal.",
+  ],
+  cieBranchChange: [
+    "Hay datos de una selección anterior que ya no se aplican. Al guardar se excluirán del borrador y del PDF. Puedes recuperar la selección anterior antes de guardar.",
+    "Hi ha dades d’una selecció anterior que ja no s’apliquen. En desar s’exclouran de l’esborrany i del PDF. Pots recuperar la selecció anterior abans de desar.",
+  ],
   profile: ["Mi perfil", "El meu perfil"],
   profileHelp: [
     "Guarda los datos de empresa e instalador una vez. Se copiarán a los documentos nuevos; podrás revisarlos en cada borrador.",
@@ -181,8 +202,8 @@ export const authCopy = {
   logout: ["Cerrar sesión", "Tanca la sessió"],
   privateTitle: ["Tus documentos privados", "Els teus documents privats"],
   privateHelp: [
-    "Guarda tu perfil profesional y crea un BRIE con tus datos. El formulario CIE llegará en la siguiente fase.",
-    "Desa el teu perfil professional i crea un BRIE amb les teves dades. El formulari CIE arribarà a la fase següent.",
+    "Guarda tu perfil profesional y prepara un BRIE o un CIE ELEC-1 con tus datos.",
+    "Desa el teu perfil professional i prepara un BRIE o un CIE ELEC-1 amb les teves dades.",
   ],
   create: ["Crear borrador privado", "Crea un esborrany privat"],
   title: ["Nombre de prueba", "Nom de prova"],

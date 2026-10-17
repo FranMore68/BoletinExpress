@@ -42,18 +42,26 @@ async function tick() {
   const job = jobs[0];
   if (!job) return;
   try {
-    const { renderBrie } = await import("../shared/pdf/brie.mjs");
+    const cie = job.document_type === "CIE";
+    const render = cie
+      ? (await import("../shared/pdf/cie.mjs")).renderCie
+      : (await import("../shared/pdf/brie.mjs")).renderBrie;
     const [template, font] = await Promise.all([
-      readFile(new URL("../assets/pdf/brie.pdf", import.meta.url)),
+      readFile(
+        new URL(
+          cie ? "../assets/pdf/cie.pdf" : "../assets/pdf/brie.pdf",
+          import.meta.url,
+        ),
+      ),
       readFile(
         new URL("../assets/pdf/LiberationSans-Regular.ttf", import.meta.url),
       ),
     ]);
     let bytes;
     try {
-      bytes = (await renderBrie(job.payload, template, font)).bytes;
+      bytes = (await render(job.payload, template, font)).bytes;
     } catch (e) {
-      const match = /^([a-z0-9_]+):/.exec(e.message || "");
+      const match = /^([A-Za-z0-9_]+):/.exec(e.message || "");
       await rpc("finish_brie_job", {
         p_job: job.id,
         p_claim: job.claim,

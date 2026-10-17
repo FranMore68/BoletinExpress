@@ -35,4 +35,4 @@ El perfil pertenece a la cuenta y tendrá comprobaciones de sesión, propietario
 | 5 | Crear CIE con el perfil existente | Los datos compartidos se reutilizan y se solicitan únicamente los faltantes |
 | 5 | Revisar PDF de ambos modelos | Empresa e instalador aparecen en sus campos correctos, sin cambiar el diseño |
 
-La fase 3 ya está aceptada. El perfil y su integración con BRIE están implementados en la fase 4; su cierre se documenta en `fase-4.md`.
+La fase 3 ya está aceptada. El perfil y su integración con BRIE están aceptados en la fase 4. La fase 5 incorpora el mapeo CIE y sus pruebas; véase `fase-5.md`.

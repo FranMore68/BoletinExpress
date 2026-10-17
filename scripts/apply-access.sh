@@ -18,3 +18,9 @@ if [ "$(docker compose --env-file .secrets/supabase.env -f infra/supabase/compos
 else
   docker compose --env-file .secrets/supabase.env -f infra/supabase/compose.yaml exec -T postgres psql -v ON_ERROR_STOP=1 -U supabase_admin -d postgres < infra/supabase/002-brie.sql
 fi
+# La fase 5 amplía la misma cola sin recrear tablas ni claves existentes.
+if [ "$(docker compose --env-file .secrets/supabase.env -f infra/supabase/compose.yaml exec -T postgres psql -U supabase_admin -d postgres -tAc "select version from private.schema_migrations where version='003-cie'" 2>/dev/null || true)" = "003-cie" ]; then
+  echo '003-cie ya aplicada'
+else
+  docker compose --env-file .secrets/supabase.env -f infra/supabase/compose.yaml exec -T postgres psql -v ON_ERROR_STOP=1 -U supabase_admin -d postgres < infra/supabase/003-cie.sql
+fi

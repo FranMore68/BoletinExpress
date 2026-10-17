@@ -1,0 +1,14 @@
+{
+  "phase": 5,
+  "status": "local-tests-passed-ci-pending",
+  "accepted": false,
+  "nextPhaseStarted": false,
+  "tests": {
+    "application": 22,
+    "pdf": 43,
+    "catalog": 267,
+    "integrationGroups": 8
+  },
+  "pdfCases": 11,
+  "pdfPages": 22
+}
