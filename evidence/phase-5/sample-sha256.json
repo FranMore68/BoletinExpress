@@ -1,0 +1,12 @@
+{
+  "auditori_ref": {
+    "sha256": "b4c04be73dde19d09a34667190db097d406e748dc1d1eae5155e36321a53c415",
+    "pages": 2,
+    "fictitious": true
+  },
+  "incomplet": {
+    "sha256": "3cb6dbae1f2776d6e0a3faa8f23449f9e1c28f2a4c7688cebd82b5a4dca98218",
+    "pages": 2,
+    "fictitious": true
+  }
+}

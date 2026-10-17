@@ -1,6 +1,6 @@
 {
   "phase": 5,
-  "status": "local-tests-passed-ci-pending",
+  "status": "technical-completion-awaiting-user-acceptance",
   "accepted": false,
   "nextPhaseStarted": false,
   "tests": {
@@ -10,5 +10,57 @@
     "integrationGroups": 8
   },
   "pdfCases": 11,
-  "pdfPages": 22
+  "pdfPages": 22,
+  "completedAt": "2026-10-18",
+  "visual": true,
+  "ci": {
+    "pass": true,
+    "runId": 39059593840,
+    "url": "https://github.com/FranMore68/BoletinExpress/actions/runs/39059593840",
+    "testedCommit": "4d844a0ef914c3b8feec7e1ddfbd2530beb32238",
+    "integrationGroups": {
+      "access": 12,
+      "brie": 8,
+      "cie": 8
+    },
+    "catalogCases": 267,
+    "images": {
+      "web": {
+        "high": 0,
+        "critical": 0
+      },
+      "worker": {
+        "high": 0,
+        "critical": 0
+      },
+      "gateway": {
+        "high": 0,
+        "critical": 0
+      },
+      "templates": {
+        "high": 0,
+        "critical": 0
+      },
+      "postgres": {
+        "high": 0,
+        "critical": 0
+      },
+      "auth": {
+        "high": 0,
+        "critical": 0
+      },
+      "rest": {
+        "high": 0,
+        "critical": 0
+      },
+      "storage": {
+        "high": 0,
+        "critical": 0
+      },
+      "mail": {
+        "high": 0,
+        "critical": 0
+      }
+    }
+  }
 }

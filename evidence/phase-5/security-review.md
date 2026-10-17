@@ -12,9 +12,9 @@ Alcance: diff completo respecto a 5a583a0. Contrato CIE, formulario compartido, 
 
 ## Correcciones y comprobaciones
 
-Se corrigieron las etiquetas de aislamiento, IGA y potencia contra el PDF oficial antes de publicar. Las pruebas detectaron identificadores ficticios demasiado largos para BRIE; la prueba de compatibilidad utiliza ahora identificadores breves y distintos, manteniendo por separado el ensayo de texto que no cabe. Hubo un timeout local de registro durante el primer arranque; se conserva el intento en `registration-timeout.log` y se exige repetir la batería completa.
+Se corrigieron las etiquetas de aislamiento, IGA y potencia contra el PDF oficial antes de publicar. Las pruebas detectaron identificadores ficticios demasiado largos para BRIE; la prueba de compatibilidad utiliza ahora identificadores breves y distintos, manteniendo por separado el ensayo de texto que no cabe. Hubo un timeout local de registro durante el primer arranque; se conserva el intento en `registration-timeout.log` y la batería completa se ha repetido satisfactoriamente.
 
-Sin dependencias nuevas: se reutilizan pdf-lib, fontkit y PDF.js fijados. Han pasado 22 pruebas de aplicación, 43 de regresión PDF, 267 casos de catálogo y los ocho grupos de integración CIE en local. La repetición completa resuelve el intento inicial de registro y la prueba con identificadores excesivos. Las auditorías de nueve imágenes en CI siguen siendo condición para cerrar la fase.
+Sin dependencias nuevas: se reutilizan pdf-lib, fontkit y PDF.js fijados. Han pasado 22 pruebas de aplicación, 43 de regresión PDF, 267 casos de catálogo y los ocho grupos de integración CIE en local. La repetición completa resuelve el intento inicial de registro y la prueba con identificadores excesivos. CI 39059593840 ha superado 28 grupos de integración y las nueve auditorías sin HIGH/CRITICAL. Las listas del perfil están verificadas en pantalla y su selección se reutiliza en un CIE nuevo.
 
 Riesgo: ampliación aditiva del piloto con datos ficticios, verificación de ambas rutas documentales y ausencia de cambios en producción.
 

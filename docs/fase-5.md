@@ -1,6 +1,6 @@
 # Fase 5: CIE ELEC-1 manual
 
-Estado: implementación y pruebas locales en cierre. La fase 4 fue aceptada el 17/10/2026 mediante «vamos con la fase 5». La fase 6 requiere aceptar este cierre.
+Estado: cierre técnico completado el 18/10/2026; pendiente de aceptación del usuario. La fase 4 fue aceptada el 17/10/2026 mediante «vamos con la fase 5». La fase 6 requiere aceptar este cierre.
 
 ## Resultado
 
@@ -31,11 +31,11 @@ BRIE y CIE comparten un worker y un único trabajo pesado simultáneo. Las funci
 | Código, tipos, traducciones, contrato SQL y secretos | 22 pruebas de aplicación | `check.log` |
 | Regresión PDF de fase 0 | 43 pruebas superadas | `pdf-tests.log` |
 | Opciones completas y combinaciones del catálogo | 267 casos sin recortes ni solapamientos | `catalog.json`, `catalog.log` |
-| Perfil, correcciones, ramas, RLS, PDF privado, errores y compatibilidad BRIE | 8 grupos superados en local | `integration.json`, `integration.log` |
+| Perfil, correcciones, ramas, RLS, PDF privado, errores y compatibilidad BRIE | 8 grupos superados en local y CI | `integration.json`, `integration.log` |
 | Once variantes del CIE generadas por el worker | Dos páginas por variante | `variants.json`, `variants/` |
 | Relectura de texto, vectores de origen y píxeles fuera de campos | 11 casos, 22 páginas; cero píxeles fuera de campos | `pdf-verification.json`, `render/` |
-| Interfaz ES/CA, teclado, escritorio, tablet y móvil | En comprobación final | `ui.json`, capturas |
-| Regresión de acceso/BRIE y auditorías desde cero | Pendiente de CI | `ci-summary.json` |
+| Interfaz ES/CA, teclado, escritorio, tablet y móvil | Superada, con selecciones largas completas y reutilización del perfil | `ui.json`, capturas |
+| Regresión de acceso/BRIE y auditorías desde cero | 28 grupos de integración; nueve imágenes sin HIGH/CRITICAL | `ci-summary.json` |
 
 La comparación de píxeles se hace contra el fondo recompuesto de cada variante. La fidelidad de los desplazamientos y saltos de página se apoya en las referencias XFA/Adobe aceptadas en la fase 0; no se afirma igualdad de píxeles entre motores distintos.
 
@@ -63,4 +63,16 @@ Para probar el producto: recargar `http://127.0.0.1:3000/cuenta?lang=es`, revisa
 
 ## Pendientes
 
-Completar las verificaciones finales y solicitar aceptación. No se inicia la fase 6, no se cobra KC y no se despliega en el VPS. Control-Contracts-ATC permanece fuera del alcance de los cambios.
+Sin fallos funcionales o de seguridad abiertos en el alcance verificado. CI y las pruebas locales están superados. Falta la aceptación del usuario. No se inicia la fase 6, no se cobra KC y no se despliega en el VPS. Control-Contracts-ATC permanece fuera del alcance de los cambios.
+
+## Revisión previa a publicación
+
+El alcance se ha revisado mediante `pre-commit-security-review`: sin hallazgos altos o críticos de código, migración aplicada localmente sin recrear datos y permisos efectivos registrados en `function-acl.csv`. El informe completo está en `security-review.md`. La auditoría de nueve imágenes ha terminado sin HIGH/CRITICAL.
+
+## CI y entorno final
+
+La ejecución [39059593840](https://github.com/FranMore68/BoletinExpress/actions/runs/39059593840) ha superado la instalación desde cero, las migraciones, las 22 pruebas de aplicación, 43 pruebas PDF, 267 casos de catálogo y 28 grupos de integración del commit `4d844a0ef914c3b8feec7e1ddfbd2530beb32238`. Los resultados originales y las nueve auditorías están conservados en `evidence/phase-5/ci/`.
+
+El primer pipeline fue sustituido al incorporar las listas del perfil. El resultado válido del cierre es la ejecución anterior, correspondiente al código final. Los avisos de GitHub sobre el runtime de una acción fijada y el cambio anunciado de `ubuntu-latest` no han causado fallos; se mantienen como observaciones de mantenimiento del entorno de CI.
+
+El frontal temporal de comprobación visual está detenido. La aplicación principal permanece en `http://127.0.0.1:3000`. Las pruebas de capacidad del VPS y los cobros pertenecen a sus fases posteriores.

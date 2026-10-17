@@ -1,0 +1,10 @@
+{
+  "pass": true,
+  "runningServices": 9,
+  "memoryLimitMiB": 3008,
+  "cpuLimit": 1,
+  "oomKilled": false,
+  "restarts": 0,
+  "capacityTestOnVps": "pending phase 10",
+  "temporaryVisualFrontend": "stopped"
+}

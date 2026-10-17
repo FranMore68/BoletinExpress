@@ -1,0 +1,40 @@
+{
+  "pass": true,
+  "localOnly": true,
+  "languages": [
+    "es",
+    "ca"
+  ],
+  "viewportTests": [
+    {
+      "width": 320,
+      "clientWidth": 305,
+      "scrollWidth": 305
+    },
+    {
+      "width": 768,
+      "clientWidth": 753,
+      "scrollWidth": 753
+    }
+  ],
+  "keyboard": "Tab desde el campo de titular enfoca cie-NIF; foco visible",
+  "checks": [
+    "CIE guarda y reabre datos y selecciones",
+    "P1/g y ampliación/50 por ciento activan sus campos",
+    "g/h cambia campos y recupera g3 antes de guardar",
+    "otra tensión conserva el texto al volver a elegirla antes de guardar",
+    "guardar MEMORIA retira el dato P1 anterior",
+    "vista previa renderiza dos páginas en canvas",
+    "opciones largas completas y asociadas al selector en móvil",
+    "perfil guarda categoría Bàsica y vía CAR; nuevo CIE las recibe sin reintroducirlas"
+  ],
+  "profileSelections": {
+    "category": "Bàsica",
+    "street": "CAR"
+  },
+  "screenshots": [
+    "cie-preview-es.png",
+    "cie-branches-mobile-ca.png",
+    "cie-tablet-ca.png"
+  ]
+}

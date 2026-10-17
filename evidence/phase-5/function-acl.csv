@@ -1,0 +1,6 @@
+proname,anon,authenticated,worker
+claim_brie_job,f,f,t
+finish_brie_job,f,f,t
+request_cie_preview,f,t,f
+save_cie,f,t,f
+(4 rows)
