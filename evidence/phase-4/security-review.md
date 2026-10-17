@@ -11,7 +11,7 @@ Alcance: diff completo respecto a f6b6b26; perfil, editor BRIE, rutas privadas, 
 
 ## Correcciones rápidas
 
-Las correcciones anteriores están aplicadas y comprobadas. Sin acciones pendientes de esta revisión. Las nuevas dependencias están fijadas; npm no informa vulnerabilidades. Trivy local de web y worker no informa HIGH/CRITICAL. La auditoría de las nueve imágenes se repite en CI antes del cierre.
+Las correcciones anteriores están aplicadas y comprobadas. Sin acciones pendientes de esta revisión. Las nuevas dependencias están fijadas; npm no informa vulnerabilidades. Trivy local de web y worker no informa HIGH/CRITICAL. CI 39056454726 ha auditado las nueve imágenes sin HIGH/CRITICAL. El arranque limpio y los 20 grupos de integración también están superados.
 
 Riesgo: cambio aditivo local, con migración transaccional y datos ficticios; el despliegue en VPS sigue fuera de esta fase. La prueba del worker pausa únicamente el contenedor del proyecto y reanuda en `finally`; no modifica el reloj global.
 

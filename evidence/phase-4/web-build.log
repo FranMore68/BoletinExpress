@@ -38,25 +38,25 @@
 #11 DONE 0.0s
 
 #12 [build 4/4] RUN npm run build
-#12 0.218 
+#12 0.218
 #12 0.218 > boletinexpress@0.1.0 build
 #12 0.218 > next build
-#12 0.218 
+#12 0.218
 #12 0.461 ▲ Next.js 16.4.2 (Turbopack)
 #12 0.503 ✓ Running next.config.ts took 42ms
-#12 0.511 
+#12 0.511
 #12 0.527   Creating an optimized production build ...
 #12 2.635 ✓ Compiled successfully in 2.1s
 #12 2.644   Running TypeScript ...
 #12 3.204   Finished TypeScript in 560ms ...
 #12 3.206   Collecting page data using 9 workers ...
 #12 3.799   Generating static pages using 9 workers (0/8) ...
-#12 3.881   Generating static pages using 9 workers (2/8) 
-#12 3.917   Generating static pages using 9 workers (4/8) 
-#12 3.920   Generating static pages using 9 workers (6/8) 
+#12 3.881   Generating static pages using 9 workers (2/8)
+#12 3.917   Generating static pages using 9 workers (4/8)
+#12 3.920   Generating static pages using 9 workers (6/8)
 #12 3.921 ✓ Generating static pages using 9 workers (8/8) in 121ms
 #12 3.925   Finalizing page optimization ...
-#12 4.092 
+#12 4.092
 #12 4.094 Route (app)
 #12 4.094 ┌ ○ /
 #12 4.094 ├ ○ /_not-found
@@ -75,13 +75,13 @@
 #12 4.094 ├ ○ /auth/reset
 #12 4.094 ├ ○ /cuenta
 #12 4.094 └ ○ /icon.svg
-#12 4.094 
-#12 4.094 
+#12 4.094
+#12 4.094
 #12 4.094 ƒ Proxy (Middleware)
-#12 4.094 
+#12 4.094
 #12 4.094 ○  (Static)   prerendered as static content
 #12 4.094 ƒ  (Dynamic)  server-rendered on demand
-#12 4.094 
+#12 4.094
 #12 DONE 4.2s
 
 #13 [runtime 1/1] RUN rm -rf /usr/local/lib/node_modules/npm /usr/local/bin/npm /usr/local/bin/npx /opt/yarn* /usr/local/bin/yarn*

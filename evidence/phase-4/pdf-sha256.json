@@ -1,0 +1,10 @@
+{
+  "completo": {
+    "pages": 2,
+    "sha256": "04027c0a81879964e0b9930422af3bfc549dbb89ef457aa6d19d66eecc472d7a"
+  },
+  "incompleto": {
+    "pages": 2,
+    "sha256": "a7d90e717e596a285b4cdc9eab6ab6fd5210ff7e464866e235eb6134a52859e0"
+  }
+}

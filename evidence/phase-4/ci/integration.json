@@ -1,0 +1,39 @@
+{
+  "pass": true,
+  "complete": true,
+  "groups": 8,
+  "results": [
+    {
+      "test": "perfil persistente tras cerrar sesión, conflicto controlado y dos cuentas separadas",
+      "pass": true
+    },
+    {
+      "test": "dos BRIE copian el perfil; actualizarlo solo afecta a documentos nuevos",
+      "pass": true
+    },
+    {
+      "test": "correcciones propias y vaciados se conservan; revisiones obsoletas y escrituras ajenas rechazadas",
+      "pass": true
+    },
+    {
+      "test": "RLS y permisos directos impiden alterar perfiles, cola y PDF desde el cliente",
+      "pass": true
+    },
+    {
+      "test": "cola deduplica peticiones concurrentes; PDF completo de dos páginas y hash verificados; descarga privada",
+      "pass": true
+    },
+    {
+      "test": "borrador incompleto guardado y generado sin inventar datos; No y cero conservados",
+      "pass": true
+    },
+    {
+      "test": "editar invalida el PDF anterior; texto que no cabe falla sin recortar y se recupera tras corregirlo",
+      "pass": true
+    },
+    {
+      "test": "el worker recupera una concesión caducada; rechaza el resultado antiguo y reintenta sin duplicar el PDF",
+      "pass": true
+    }
+  ]
+}

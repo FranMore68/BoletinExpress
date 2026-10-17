@@ -1,6 +1,6 @@
 # Fase 4: perfil profesional y BRIE manual
 
-Estado: pruebas locales superadas; comprobación limpia en CI pendiente. La fase 5 requiere la aceptación del usuario.
+Estado: cierre técnico completado; pendiente de aceptación del usuario. CI y pruebas locales superadas. La fase 5 requiere la aceptación del usuario.
 
 ## Resultado
 
@@ -22,13 +22,15 @@ Los PDF de evaluación no validan instalaciones ni consumen KC. CIE manual, cobr
 
 | Prueba | Resultado | Evidencia |
 |---|---|---|
+| Regresión de acceso de fase 3 | 12 grupos superados en local y CI | `access-regression.json`, `access-regression.log` |
 | Lint, tipos, dominio, traducciones y secretos | 17 pruebas superadas | `evidence/phase-4/check.log` |
 | Regresión del generador de fase 0 | 43 pruebas superadas | `evidence/phase-4/pdf-tests.log` |
 | Dos páginas completas e incompletas | Inspección visual realizada; contenido ficticio correcto | `brie-completo.pdf`, `brie-incompleto.pdf`, `pdf-verification.json`, `render/` |
 | Diseño fuera de las zonas de escritura | Cero píxeles cambiados en las cuatro páginas | `pixel-verification.json` |
-| Perfil, aislamiento, concurrencia, datos incompletos, errores de ajuste y recuperación | 8 grupos superados | `integration.json`, `integration.log` |
+| Perfil, aislamiento, concurrencia, datos incompletos, errores de ajuste y recuperación | 8 grupos superados en local y CI | `integration.json`, `integration.log` |
 | Escritorio, tablet, móvil y teclado ES/CA | Superado | Capturas y `ui.json` |
-| Dependencias e imágenes | npm sin vulnerabilidades; web y worker sin HIGH/CRITICAL; nueve imágenes pendientes de CI | Informes de auditoría y CI |
+| Revisión previa a publicación | APTO PARA COMMIT; permisos y conflictos corregidos y verificados | `security-review.md`, `function-acl.csv` |
+| Dependencias e imágenes | npm sin vulnerabilidades; nueve imágenes sin HIGH/CRITICAL en CI | Informes de auditoría y CI |
 
 ## Reproducción
 
@@ -49,8 +51,24 @@ node scripts/test-phase4.mjs
 
 El script de credencial del worker conserva la existente y escribe `.secrets/worker.env` con permisos 0600. No compartir ese archivo. La credencial de evaluación vence al año; su renovación debe conservar el rol restringido y no regenerar las claves base del entorno.
 
-Para verificar la fidelidad visual, renderizar originales y resultados con Poppler a 110 dpi y ejecutar `scripts/verify-phase4-pdf.py`. Las evidencias de ejemplo contienen exclusivamente datos ficticios. El informe de CI registrará el commit de código probado.
+Para verificar la fidelidad visual, renderizar originales y resultados con Poppler a 110 dpi y ejecutar `scripts/verify-phase4-pdf.py`. Las evidencias de ejemplo contienen exclusivamente datos ficticios. CI [39056454726](https://github.com/FranMore68/BoletinExpress/actions/runs/39056454726) ha probado el commit `3bbfdd3c1ce1671d6a4b5adde513e72ced0a7aa4` desde un entorno limpio. Los informes originales de nueve imágenes y las dos baterías de integración están conservados en `evidence/phase-4/ci/`. El resumen está en `ci-summary.json`.
 
 ## Fallos pendientes
 
-Sin fallos locales pendientes. Falta confirmar CI y la aceptación del usuario. No iniciar la fase 5 hasta aceptar esta fase.
+Sin fallos funcionales o de seguridad pendientes en el alcance de fase 4. Falta la aceptación del usuario. No iniciar la fase 5 hasta aceptar esta fase.
+
+## Comprobación del usuario
+
+1. Acceder a `http://127.0.0.1:3000/cuenta?lang=es` con una cuenta de evaluación.
+2. Entrar en «Mi perfil» y guardar datos ficticios de empresa e instalador.
+3. Crear un BRIE, comprobar los datos copiados y completar o corregir sus campos.
+4. Guardar y generar la vista previa. Revisar las dos páginas; corregir obliga a guardar y generar otra revisión.
+5. Cambiar a CA para revisar el mismo recorrido en catalán.
+
+La generación de esta fase es una vista previa de evaluación. La validación y el descuento de KC se incorporarán en la fase 6.
+
+## Observaciones de mantenimiento
+
+GitHub informa de la ejecución de una acción fijada que declara Node 20 usando Node 24 y del próximo cambio de imagen `ubuntu-latest`. No han causado fallos ni alertas altas/críticas. Se conservan como avisos del entorno de CI; no son vulnerabilidades abiertas de la aplicación.
+
+La comprobación local confirma nueve servicios activos, sin OOM ni reinicios, con límites conjuntos de 3008 MiB y 1 CPU. Esto no sustituye la prueba de capacidad del VPS prevista en fase 10. El frontal temporal de pruebas visuales está detenido.

@@ -5,46 +5,31 @@
 #1 DONE 0.0s
 
 #2 [internal] load metadata for docker.io/library/node:24-alpine@sha256:44fce696f38ba8c987c4db89954051000bbd05ffd8d8659ba15ed4a8602e937f
-#2 DONE 0.0s
+#2 DONE 0.1s
 
 #3 [internal] load .dockerignore
 #3 transferring context: 905B done
 #3 DONE 0.0s
 
-#4 [internal] load build context
+#4 [base 1/2] FROM docker.io/library/node:24-alpine@sha256:44fce696f38ba8c987c4db89954051000bbd05ffd8d8659ba15ed4a8602e937f
+#4 resolve docker.io/library/node:24-alpine@sha256:44fce696f38ba8c987c4db89954051000bbd05ffd8d8659ba15ed4a8602e937f done
 #4 DONE 0.0s
 
-#5 [base 1/2] FROM docker.io/library/node:24-alpine@sha256:44fce696f38ba8c987c4db89954051000bbd05ffd8d8659ba15ed4a8602e937f
-#5 resolve docker.io/library/node:24-alpine@sha256:44fce696f38ba8c987c4db89954051000bbd05ffd8d8659ba15ed4a8602e937f 0.0s done
+#5 [internal] load build context
+#5 transferring context: 52.97kB done
 #5 DONE 0.0s
 
-#4 [internal] load build context
-#4 transferring context: 3.28MB 0.1s done
-#4 DONE 0.1s
-
-#6 [base 2/2] WORKDIR /app
+#6 [dependencies 1/2] COPY package.json package-lock.json ./
 #6 CACHED
 
-#7 [dependencies 1/2] COPY package.json package-lock.json ./
-#7 DONE 0.1s
+#7 [dependencies 2/2] RUN npm ci --ignore-scripts
+#7 CACHED
 
-#8 [dependencies 2/2] RUN npm ci --ignore-scripts
-#8 8.553 
-#8 8.553 added 76 packages, and audited 77 packages in 8s
-#8 8.553 
-#8 8.553 19 packages are looking for funding
-#8 8.553   run `npm fund` for details
-#8 8.554 
-#8 8.554 found 0 vulnerabilities
-#8 8.555 npm notice
-#8 8.555 npm notice New major version of npm available! 11.19.1 -> 12.2.0
-#8 8.555 npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.0
-#8 8.555 npm notice To update run: npm install -g npm@12.2.0
-#8 8.555 npm notice
-#8 DONE 9.0s
+#8 [base 2/2] WORKDIR /app
+#8 CACHED
 
 #9 [build 1/5] COPY next.config.ts tsconfig.json next-env.d.ts postcss.config.mjs ./
-#9 DONE 0.1s
+#9 CACHED
 
 #10 [build 2/5] COPY src ./src
 #10 DONE 0.0s
@@ -56,55 +41,55 @@
 #12 DONE 0.0s
 
 #13 [build 5/5] RUN npm run build
-#13 0.164 
-#13 0.164 > boletinexpress@0.1.0 prebuild
-#13 0.164 > node scripts/prepare-pdf-viewer.mjs
-#13 0.164 
-#13 0.186 
-#13 0.186 > boletinexpress@0.1.0 build
-#13 0.186 > next build
-#13 0.186 
-#13 0.395 ▲ Next.js 16.4.2 (Turbopack)
-#13 0.423 ✓ Running next.config.ts took 28ms
-#13 0.430 
-#13 0.446   Creating an optimized production build ...
-#13 3.633 ✓ Compiled successfully in 3.2s
-#13 3.636   Running TypeScript ...
-#13 4.327   Finished TypeScript in 690ms ...
-#13 4.329   Collecting page data using 9 workers ...
-#13 4.907   Generating static pages using 9 workers (0/8) ...
-#13 4.971   Generating static pages using 9 workers (2/8) 
-#13 4.992   Generating static pages using 9 workers (4/8) 
-#13 4.997   Generating static pages using 9 workers (6/8) 
-#13 4.997 ✓ Generating static pages using 9 workers (8/8) in 90ms
-#13 5.000   Finalizing page optimization ...
-#13 5.119 
-#13 5.121 Route (app)
-#13 5.121 ┌ ○ /
-#13 5.121 ├ ○ /_not-found
-#13 5.121 ├ ƒ /acceso
-#13 5.121 ├ ƒ /api/auth/[action]
-#13 5.121 ├ ƒ /api/health
-#13 5.121 ├ ƒ /api/private/documents
-#13 5.121 ├ ƒ /api/private/documents/[id]
-#13 5.121 ├ ƒ /api/private/documents/[id]/fields
-#13 5.121 ├ ƒ /api/private/documents/[id]/files
-#13 5.121 ├ ƒ /api/private/documents/[id]/preview
-#13 5.121 ├ ƒ /api/private/documents/[id]/preview/file
-#13 5.121 ├ ƒ /api/private/files/[id]
-#13 5.121 ├ ƒ /api/private/profile
-#13 5.121 ├ ○ /auth/confirm
-#13 5.121 ├ ○ /auth/reset
-#13 5.121 ├ ○ /cuenta
-#13 5.121 └ ○ /icon.svg
-#13 5.121 
-#13 5.121 
-#13 5.121 ƒ Proxy (Middleware)
-#13 5.121 
-#13 5.121 ○  (Static)   prerendered as static content
-#13 5.121 ƒ  (Dynamic)  server-rendered on demand
-#13 5.121 
-#13 DONE 5.2s
+#13 0.176
+#13 0.176 > boletinexpress@0.1.0 prebuild
+#13 0.176 > node scripts/prepare-pdf-viewer.mjs
+#13 0.176
+#13 0.201
+#13 0.201 > boletinexpress@0.1.0 build
+#13 0.201 > next build
+#13 0.201
+#13 0.451 ▲ Next.js 16.4.2 (Turbopack)
+#13 0.511 ✓ Running next.config.ts took 60ms
+#13 0.517
+#13 0.531   Creating an optimized production build ...
+#13 3.591 ✓ Compiled successfully in 3.1s
+#13 3.596   Running TypeScript ...
+#13 4.322   Finished TypeScript in 726ms ...
+#13 4.324   Collecting page data using 9 workers ...
+#13 4.919   Generating static pages using 9 workers (0/8) ...
+#13 5.015   Generating static pages using 9 workers (2/8)
+#13 5.047   Generating static pages using 9 workers (4/8)
+#13 5.051   Generating static pages using 9 workers (6/8)
+#13 5.051 ✓ Generating static pages using 9 workers (8/8) in 132ms
+#13 5.055   Finalizing page optimization ...
+#13 5.176
+#13 5.178 Route (app)
+#13 5.178 ┌ ○ /
+#13 5.178 ├ ○ /_not-found
+#13 5.178 ├ ƒ /acceso
+#13 5.178 ├ ƒ /api/auth/[action]
+#13 5.178 ├ ƒ /api/health
+#13 5.178 ├ ƒ /api/private/documents
+#13 5.178 ├ ƒ /api/private/documents/[id]
+#13 5.178 ├ ƒ /api/private/documents/[id]/fields
+#13 5.178 ├ ƒ /api/private/documents/[id]/files
+#13 5.178 ├ ƒ /api/private/documents/[id]/preview
+#13 5.178 ├ ƒ /api/private/documents/[id]/preview/file
+#13 5.178 ├ ƒ /api/private/files/[id]
+#13 5.178 ├ ƒ /api/private/profile
+#13 5.178 ├ ○ /auth/confirm
+#13 5.178 ├ ○ /auth/reset
+#13 5.178 ├ ○ /cuenta
+#13 5.178 └ ○ /icon.svg
+#13 5.178
+#13 5.178
+#13 5.178 ƒ Proxy (Middleware)
+#13 5.178
+#13 5.178 ○  (Static)   prerendered as static content
+#13 5.178 ƒ  (Dynamic)  server-rendered on demand
+#13 5.178
+#13 DONE 5.3s
 
 #14 [runtime 1/1] RUN rm -rf /usr/local/lib/node_modules/npm /usr/local/bin/npm /usr/local/bin/npx /opt/yarn* /usr/local/bin/yarn*
 #14 CACHED
@@ -121,13 +106,13 @@
 #18 exporting to image
 #18 exporting layers
 #18 exporting layers 1.0s done
-#18 exporting manifest sha256:1d24f0eaf235974882fe12cfbf54f99cbc659dd2816d4ce52795680ee14aa4e7 done
-#18 exporting config sha256:08d8a1dcf56cbb9296f94f4fc47a63b350b8b026ff5ce34fbdd675cc46b4fa6a done
-#18 exporting attestation manifest sha256:4152279992a4c40af0a00b1414a7bfdcb95448cfb73737ca7d15307d889c6652 done
-#18 exporting manifest list sha256:ef87c326b3cededd505230aa12fbaf93fcf75e135d642f28a236dbd92f61fd92 done
+#18 exporting manifest sha256:de75274fe149220bed76e776a05927865451fa70a316f21fb13a5ce97f472982 done
+#18 exporting config sha256:ba2492f10f2cad2546f3a4ff95a76e83d1b47536683942d0aa378b24bfdcbc1c done
+#18 exporting attestation manifest sha256:e9b2415113ee941641e181dfe2bc66d46b069ca14e0825fa1468b00ed546543d done
+#18 exporting manifest list sha256:d795c8c0891ee37766c3dcb309d0dfdab8f889d5872464d2dc1bb0424cadcec6 done
 #18 naming to docker.io/library/boletinexpress-web:phase1 done
 #18 unpacking to docker.io/library/boletinexpress-web:phase1
 #18 unpacking to docker.io/library/boletinexpress-web:phase1 0.3s done
 #18 DONE 1.3s
 
-View build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux/seqjdh1pwm5jklhdono5bpr3o
+View build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux/wog4hkt7wgka0yyd5h2buzrab

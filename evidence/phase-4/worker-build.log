@@ -29,9 +29,9 @@
 #8 DONE 0.4s
 
 #9 [worker-dependencies 2/2] RUN npm ci --omit=dev --ignore-scripts
-#9 1.187 
+#9 1.187
 #9 1.187 added 6 packages, and audited 7 packages in 1s
-#9 1.188 
+#9 1.188
 #9 1.188 found 0 vulnerabilities
 #9 1.189 npm notice
 #9 1.189 npm notice New major version of npm available! 11.19.1 -> 12.2.0
