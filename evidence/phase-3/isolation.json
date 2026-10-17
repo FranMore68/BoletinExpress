@@ -10,7 +10,7 @@
       "evidence": "401 en API y redirección en cuenta"
     },
     {
-      "test": "registro, confirmación explícita y enlace de un uso",
+      "test": "registro, reenvío, confirmación explícita y enlace de un uso",
       "pass": true,
       "evidence": "sin acceso antes de confirmar; cookies HttpOnly/SameSite"
     },

@@ -1,19 +1,20 @@
 {
   "phase": 3,
-  "status": "ABIERTA_PENDIENTE_CI_TRAS_MIGRACION_AUTH",
+  "status": "PRUEBAS_SUPERADAS_PENDIENTE_ACEPTACION",
   "functionalTests": {
     "pass": true,
     "groups": 12,
     "evidence": "isolation.json"
   },
   "unitAndPdfTests": 56,
+  "authGoTests": 57,
   "imagesScanned": 9,
   "high": 0,
   "critical": 0,
   "blockedBy": [],
   "localLimitation": null,
-  "ci": "https://github.com/FranMore68/BoletinExpress/actions/runs/39047620981",
-  "testedCommit": "d564b5ef85d9a42f95324ee2f4d03a2cc0b55154",
+  "ci": "https://github.com/FranMore68/BoletinExpress/actions/runs/39052031663",
+  "testedCommit": "e09bdd19dbb61084b246a025a3739113f4c0c99b",
   "userAcceptance": false,
   "nextPhaseStarted": false,
   "vpsModified": false,
@@ -22,27 +23,23 @@
     "platform": "macOS / Docker linux-arm64",
     "pass": true,
     "groups": 12,
-    "runtimeEvidence": "local-runtime-2026-10-17.json",
-    "integrationEvidence": "local-isolation-2026-10-17.json"
+    "evidence": "promotion/isolation.json",
+    "runtimeEvidence": "promotion/runtime.json"
   },
-  "securityEvidence": "audit-2026-10-17.json",
+  "securityEvidence": "audit-pgx5-2026-10-17.json",
   "securityAuditDate": "2026-10-17",
   "candidateTrial": {
-    "status": "PROMOTED_LOCALLY_CI_PENDING",
+    "status": "PROMOTED_AFTER_ACCEPTED_TRIAL",
     "evidence": "auth-candidate/status.json",
-    "integrationGroupsPassed": 12,
-    "high": 0,
-    "critical": 0,
-    "primaryEnvironmentUnchanged": false,
-    "ciPending": true
+    "trialPreservedPrimaryEnvironment": true
   },
   "promotion": {
     "authVersion": "2.197.0-be2-pgx5",
-    "localAuthHigh": 0,
-    "localAuthCritical": 0,
+    "pass": true,
     "continuityPassed": true,
     "continuityEvidence": "auth-continuity-2026-10-17.json",
-    "ciPending": true
-  },
-  "securityScope": "Auth local nuevo: cero altos/criticos; auditoria completa del conjunto pendiente en CI"
+    "ciPending": false,
+    "legacyModulesAbsent": true,
+    "rollbackImage": "boletinexpress-auth:phase3-before-pgx5-20261017"
+  }
 }

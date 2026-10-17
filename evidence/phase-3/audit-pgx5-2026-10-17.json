@@ -1,0 +1,106 @@
+{
+  "ci": "https://github.com/FranMore68/BoletinExpress/actions/runs/39052031663",
+  "testedCommit": "e09bdd19dbb61084b246a025a3739113f4c0c99b",
+  "complete": true,
+  "scanner": "aquasec/trivy@sha256:2416d1f74045b57274df1a340eee6b510cacd73c66a6ccb8da092b117eb7d222",
+  "severities": [
+    "HIGH",
+    "CRITICAL"
+  ],
+  "ignoredVulnerabilities": false,
+  "imagesScanned": 9,
+  "high": 0,
+  "critical": 0,
+  "results": [
+    {
+      "service": "auth",
+      "imageConfigDigest": "sha256:54a5745f2340585548f8735765bdd6ef30d772aad1671b409ed0169deef1ea1f",
+      "createdAt": "2026-10-17T17:07:56.448532712Z",
+      "counts": {
+        "HIGH": 0,
+        "CRITICAL": 0
+      },
+      "vulnerabilities": []
+    },
+    {
+      "service": "gateway",
+      "imageConfigDigest": "sha256:efa07b9d6dbabd7d44a55f9de1be42835249cfe8c476b1480142dfe3ddd999b8",
+      "createdAt": "2026-10-17T17:04:17.258215297Z",
+      "counts": {
+        "HIGH": 0,
+        "CRITICAL": 0
+      },
+      "vulnerabilities": []
+    },
+    {
+      "service": "mail",
+      "imageConfigDigest": "sha256:978742ab0aca1fb510b407aa54d3cc9fb1d51ca4988ce0bc6fbdb1fdc6afbc4c",
+      "createdAt": "2026-10-15T05:04:55.675734969Z",
+      "counts": {
+        "HIGH": 0,
+        "CRITICAL": 0
+      },
+      "vulnerabilities": []
+    },
+    {
+      "service": "postgres",
+      "imageConfigDigest": "sha256:4ca17d0964c3d921726edc3508bd585383ac7b361e0d2a775b287c9b2cb3d6aa",
+      "createdAt": "2026-10-17T17:04:40.45452701Z",
+      "counts": {
+        "HIGH": 0,
+        "CRITICAL": 0
+      },
+      "vulnerabilities": []
+    },
+    {
+      "service": "rest",
+      "imageConfigDigest": "sha256:fc3d286fec899d5a5bebbb98eac771ced1ccaa44deac8ce2fc23fe5d262eb3d9",
+      "createdAt": "2025-07-10T07:36:53Z",
+      "counts": {
+        "HIGH": 0,
+        "CRITICAL": 0
+      },
+      "vulnerabilities": []
+    },
+    {
+      "service": "storage",
+      "imageConfigDigest": "sha256:61e6ec8a93930f703f81550c97f84777ad1999dd68f9da50a605635fa66735b6",
+      "createdAt": "2026-10-17T17:05:23.362132894Z",
+      "counts": {
+        "HIGH": 0,
+        "CRITICAL": 0
+      },
+      "vulnerabilities": []
+    },
+    {
+      "service": "templates",
+      "imageConfigDigest": "sha256:eea5ec879dd645b5a0ad1f1740a13538e149144a95f1652623447e9e7a1acf1b",
+      "createdAt": "2026-10-17T17:04:18.200607768Z",
+      "counts": {
+        "HIGH": 0,
+        "CRITICAL": 0
+      },
+      "vulnerabilities": []
+    },
+    {
+      "service": "web",
+      "imageConfigDigest": "sha256:0c9c27f532e566a570fdb3c9513cba16cb062041232efdd7aebb517cdbc6e0da",
+      "createdAt": "2026-10-17T17:04:15.453786369Z",
+      "counts": {
+        "HIGH": 0,
+        "CRITICAL": 0
+      },
+      "vulnerabilities": []
+    },
+    {
+      "service": "worker",
+      "imageConfigDigest": "sha256:647202dced548b206c4686f365b7dc6e8cd2866e644bd62d6c95705220547011",
+      "createdAt": "2026-10-17T17:04:16.336150258Z",
+      "counts": {
+        "HIGH": 0,
+        "CRITICAL": 0
+      },
+      "vulnerabilities": []
+    }
+  ]
+}

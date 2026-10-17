@@ -1,63 +1,60 @@
 # Fase 3 · Acceso y aislamiento
 
-Estado: migración de Auth a pgx/v5 incorporada al entorno local; pendiente de la comprobación final en CI y de aceptación del cierre. La fase 2 está aceptada. No se ha intervenido en el VPS.
+**Estado: todas las comprobaciones superadas; pendiente de aceptación del cierre.** Las fases 0, 1 y 2 están aceptadas. No se ha iniciado la fase 4 ni se ha intervenido en el VPS.
 
 ## Entrega
 
-Acceso ES/CA en `/acceso` y cuenta privada en `/cuenta`: registro, confirmación explícita del correo, acceso, reenvío, recuperación y cierre global de sesiones. Las sesiones se gestionan en servidor con cookies HttpOnly/SameSite. Cada operación privada comprueba el usuario confirmado y la vigencia de su sesión; la recuperación requiere un permiso firmado, con caducidad y vinculado al usuario y su sesión.
+Acceso ES/CA en `/acceso` y cuenta privada en `/cuenta`: registro, confirmación explícita del correo, acceso, reenvío, recuperación y cierre global de sesiones. Sesiones de servidor con cookies HttpOnly/SameSite y Secure cuando se utiliza HTTPS. Cada operación privada comprueba usuario confirmado y sesión activa. El permiso de recuperación está firmado, caduca y se vincula al usuario y su sesión.
 
-Los borradores y sus PDF ficticios se guardan en PostgreSQL y Storage privados, con RLS por propietario. La aplicación utiliza anon y el JWT del usuario, sin service_role ni credenciales administrativas. Las vistas y descargas pasan por rutas autenticadas; no se generan enlaces públicos ni firmados. La pasarela bloquea las rutas de publicación y firma. Las operaciones sensibles de base de datos solo se permiten mediante funciones con permisos limitados y bloqueo para el máximo de tres borradores.
+Borradores y PDF ficticios en PostgreSQL y Storage privados, con RLS por propietario. La aplicación utiliza anon y el JWT del usuario, sin service_role ni credenciales administrativas. Vistas y descargas por rutas autenticadas, sin enlaces públicos ni firmados reutilizables. La pasarela bloquea publicación, firma y transformación. Los usuarios no pueden asignar propietario, estado o saldo. Las funciones de creación y reserva bloquean transacciones para aplicar los límites de borradores y archivos.
 
-El entorno exclusivo incluye PostgreSQL, Auth, PostgREST, Storage, pasarela, plantillas y Mailpit. Los correos de evaluación se capturan en el buzón local y no salen a Internet. Resend SMTP queda para la preparación del despliegue, con remitente verificado y secretos fuera del repositorio. Créditos, campos documentales completos, IA y conservación se incorporarán en sus fases.
+El entorno exclusivo incluye PostgreSQL, Auth, PostgREST, Storage, pasarela, plantillas y Mailpit, además de web y worker. Acceso local: http://127.0.0.1:3000/acceso?lang=es. Los correos llegan al [buzón local](http://127.0.0.1:54324) y no salen a Internet; la interfaz ya lo explica en ES/CA. Resend SMTP queda para la preparación del despliegue. Formularios completos, perfil profesional, créditos, IA y conservación siguen sus fases previstas.
 
 ## Pruebas y evidencias
 
-| Prueba | Resultado | Evidencia |
+Fuente comprobada: commit `e09bdd19dbb61084b246a025a3739113f4c0c99b`. [CI 39052031663, completado correctamente](https://github.com/FranMore68/BoletinExpress/actions/runs/39052031663).
+
+| Prueba | Resultado | Evidencia en `evidence/phase-3/` |
 |---|---|---|
-| Estilo, TypeScript, pruebas unitarias y búsqueda de secretos | Superada; 13 pruebas unitarias | `evidence/phase-3/check.log` y CI |
-| Compilación de Next.js | Superada | `evidence/phase-3/build.log` y CI |
-| Pruebas de PDF ya existentes | Superada; 43 pruebas | CI |
-| Auditorías npm de aplicación y PDF | Sin vulnerabilidades | CI |
-| Auditoría npm de Storage corregido | Sin avisos altos o críticos; quedan moderados | `evidence/phase-3/storage-npm-audit.json` y CI |
-| Interfaz de acceso ES/CA, móvil de 320 px y escritorio | Superada en los estados registrados | `evidence/phase-3/ui-checks.json` y capturas |
-| Registro, recuperación, dos cuentas, rutas y Storage | Superada; 12 grupos de integración | `evidence/phase-3/isolation.json` y CI |
-| Auditoría de las nueve imágenes | Completa: ocho sin altos/críticos; Auth conserva un alto y cero críticos | `evidence/phase-3/audit-2026-10-17.json` |
+| Estilo, TypeScript, pruebas de aplicación y búsqueda de secretos | Superada; 13 pruebas | `promotion-check-2026-10-17.log`, `ci-run.json` |
+| Compilación de Next.js y contenedores en Linux AMD64 | Superada | `ci-run.json` |
+| Generación PDF ya existente | 43 pruebas superadas | `promotion-pdf-2026-10-17.log`, CI |
+| Crypto, configuración, utilidades y regresiones de migración Auth | 57 pruebas principales superadas | `auth-promotion-build-2026-10-17.log`, compilación de CI |
+| Auditorías npm de aplicación, PDF y Storage | Sin avisos altos/críticos; Storage conserva moderados permitidos por el criterio acordado | pasos 5, 6 y 10 de `ci-run.json` |
+| Interfaz de acceso ES/CA, móvil de 320 px y escritorio | Superada en los estados registrados | `ui-checks.json`, capturas previas y `local-resend-screen-2026-10-17.png` |
+| Registro, reenvío, confirmación explícita y enlace de un uso | Superada | `isolation.json`, `isolation.log` |
+| Dos cuentas, acceso directo a RLS/Storage, rutas privadas y manipulación de propietario/estado/saldo | Superada | `isolation.json` |
+| PDF privado, descarga y vista autenticada; tipos/tamaños inválidos | Superada | `isolation.json` |
+| Concurrencia, tres borradores y límite de intentos | Superada | `isolation.json` |
+| Recuperación restringida, sesiones revocadas, JWT caducado y cookies manipuladas | Superada | `isolation.json` |
+| Batería de acceso y aislamiento completa | 12 grupos superados en Linux y Mac | `isolation.json`, `promotion/isolation.json` |
+| Auditoría de las nueve imágenes | **0 altos y 0 críticos, sin exclusiones** | `audit-pgx5-2026-10-17.json`, `image-*.json` |
+| Sesión y borrador creados antes de actualizar Auth | Conservados tras la migración | `auth-continuity-2026-10-17.json` |
+| Nueve servicios locales, cuotas, memoria y reinicios | Activos, sin OOM ni reinicios; 3008 MiB y 1 CPU configurados | `promotion/runtime.json` |
+| Versión de Auth realmente activa | `v2.197.0-be2-pgx5` | `promotion/auth-health.json` |
 
-La [integración final](https://github.com/FranMore68/BoletinExpress/actions/runs/39047620981) se ejecuta en el Linux temporal de GitHub Actions con dos cuentas ficticias distintas, credenciales aleatorias que no se conservan y un PDF de ejemplo. Comprueba propiedad también con llamadas directas a RLS/Storage, vistas y descargas, cookies manipuladas, sesiones revocadas y caducadas, concurrencia y límites de acceso. El archivo `isolation.json` confirma `pass: true`, `complete: true` y doce grupos superados. Se han preservado los registros de fallos anteriores, separados del resultado final.
+Las pruebas utilizan cuentas y documentación ficticias. Los informes de integración confirman `pass: true`, `complete: true` y doce grupos. Las credenciales de prueba no se publican. Las respuestas privadas no se almacenan en caché; cada descarga vuelve a comprobar la autorización.
 
-## Correcciones comprobadas y pendientes
+## Resolución del bloqueo de seguridad
 
-Se han corregido el rol authenticated que Auth todavía usa al crear usuarios, el prefijo pkce_ de los hashes de correo y la selección de un solo registro en las funciones de creación y reserva. La migración se ejecuta por consola con supabase_admin; la aplicación no utiliza ese administrador. Se han añadido comprobaciones de disponibilidad de Storage y pasarela para no iniciar las pruebas mientras los procesos aún arrancan. La auditoría elimina cada archivo temporal tras analizar su imagen.
+La auditoría inicial registró 218 avisos altos/críticos. Las actualizaciones oficiales y las correcciones de dependencias, Storage y el helper de PostgreSQL redujeron el resultado a un alto: CVE-2026-32286 en `pgproto3/v2`, una rama sin mantenimiento. Se conserva el resultado anterior en `audit-2026-10-17.json`.
 
-La auditoría inicial registró 218 avisos altos/críticos. La actualización de servicios oficiales redujo el resultado a 59 altos. Se han actualizado dependencias compatibles de Storage, reconstruido Auth desde su fuente oficial verificada mediante SHA-256 con compilador y dependencias fijados, y sustituido el helper Go heredado de PostgreSQL por su-exec. El borrado del ejecutable se realiza en una capa independiente. La auditoría anterior a la migración pgx/v5 registró **un alto y cero críticos**, ambos totales del conjunto: el aviso alto está en Auth. Las otras ocho imágenes, incluido PostgreSQL, no presentan avisos altos/críticos. No se han ignorado avisos ni relajado el criterio de cierre. Evidencia: `evidence/phase-3/audit-2026-10-17.json`; conserva identificadores de imágenes, fechas e identificación de vulnerabilidades.
+Tras un [ensayo independiente](prueba-auth-pgx5.md) aceptado por el usuario, el Auth habitual conserva la fuente oficial v2.197.0 verificada por SHA-256, actualiza Pop a v6.4.1 y utiliza pgx/v5 v5.11.0. Se adaptan dos importaciones del tipo de error PostgreSQL; no se modifica el código del protocolo. Los manifiestos de `infra/supabase/auth-runtime` fijan las dependencias. La construcción rechaza la presencia de las bibliotecas antiguas tanto en el árbol de módulos como en el ejecutable. Las pruebas adicionales verifican longitudes inválidas de DataRow y errores PostgreSQL envueltos.
 
-El aviso que bloqueaba Auth era CVE-2026-32286, en `github.com/jackc/pgproto3/v2 v2.3.3`. El [registro oficial de Go](https://pkg.go.dev/vuln/GO-2026-4518) indica que no hay una versión corregida conocida. Su explotación requiere que un servidor PostgreSQL malicioso o comprometido envíe una respuesta inválida. La red privada limita ese escenario, pero no elimina el aviso ni cambia el criterio de cierre. El [mantenedor](https://github.com/jackc/pgx/issues/2507) confirma que esa rama está fuera de mantenimiento. No se ha creado una bifurcación del protocolo ni una excepción en el escáner.
+El ensayo independiente superó las mismas doce comprobaciones y quedó detenido conservando sus volúmenes. Tras promover el cambio se repitieron las comprobaciones locales, la continuidad de una sesión/borrador existentes y CI en Linux AMD64. La auditoría final completa da cero altos y cero críticos sin ignorar vulnerabilidades. El bloqueo técnico de seguridad queda resuelto.
 
-El 17/10/2026 se ha recuperado Docker Desktop del Mac. El motor no respondía pese a que la aplicación estaba abierta; la parada forzada mediante su CLI y un nuevo arranque recuperaron la máquina virtual. Se han conservado disco, volúmenes y secretos. El arranque real detectó cuotas de 0,005 CPU incompatibles con este Docker y sondas Node de Storage que competían con su proceso principal. Se han corregido las cuotas mínimas y redistribuido CPU entre PostgreSQL y Storage, manteniendo el total; la sonda usa el wget existente y conserva la misma comprobación HTTP.
+## Incidencias resueltas y fallos pendientes
 
-Los nueve servicios están activos en el Mac, sin reinicios ni OOM al terminar la batería. Los doce grupos de integración local están superados, además de las comprobaciones de rutas, salud y recursos ficticios. Se mantiene separada la evidencia de CI (`isolation.json`) de la local (`local-isolation-2026-10-17.json`). Los diagnósticos de los fallos anteriores se conservan como historial, no como bloqueos actuales.
+Se corrigieron el rol authenticated que Auth todavía utiliza al registrar usuarios, el prefijo PKCE de los hashes, la selección de un solo registro en las funciones de creación/reserva, las cuotas mínimas de Docker y las sondas de arranque. La prueba de límite de intentos utiliza una clave nueva y una ráfaga para no depender de una ventana anterior.
 
-| Comprobación local del 17/10/2026 | Resultado | Evidencia |
-|---|---|---|
-| Motor Docker y arranque de datos/aplicación | Superada; nueve servicios activos | `local-runtime-2026-10-17.json`, `local-services-2026-10-17.log`, `local-app-2026-10-17.log` |
-| Migración | Aplicada y confirmada | `local-migration-2026-10-17.log` |
-| Dos cuentas, recuperación, RLS, archivos y concurrencia | Doce grupos superados | `local-isolation-2026-10-17.json` y `.log` |
-| Rutas y PDF ficticios | Superada | `local-smoke-2026-10-17.log`, `local-assets-2026-10-17.log` |
-| Presupuesto aplicado a contenedores | 3008 MiB y 1 CPU | `local-resources-2026-10-17.json`, `local-runtime-2026-10-17.json` |
-| Interfaz servida por Docker | Comprobada visualmente | `local-access-2026-10-17.png` |
+La primera comprobación de continuidad se adelantó al arranque de Auth. Se añadió una sonda `/health`, la pasarela espera su estado saludable y la repetición pasó. El fallo inicial se conserva en `auth-continuity-startup-race-2026-10-17.log`. El reenvío de confirmación recibe ahora una prueba explícita de segundo mensaje y la interfaz indica el destino local del correo.
 
-La repetición de Linux del 17/10 detectó una condición temporal en la última prueba de límite: reutilizaba una clave de acceso previa y podía cruzar su ventana de un minuto. La fixture se ha aislado con una dirección ficticia nueva y una ráfaga concurrente; exige exactamente cinco respuestas 401 y una 429, sin cambiar las reglas de Auth. La batería corregida vuelve a superar los doce grupos tanto en el Mac como en Linux (CI 39047620981).
+**Sin fallos técnicos bloqueantes pendientes para esta fase.** Falta la aceptación del cierre por el usuario. La capacidad del VPS y Control-Contracts-ATC se comprobarán en fase 10; los límites configurados del Mac no sustituyen esa medición.
 
-Las evidencias de esta tabla están en `evidence/phase-3/`. Acceso local: `http://127.0.0.1:3000/acceso?lang=es`. Buzón de evaluación: `http://127.0.0.1:54324`; los correos no salen a Internet.
+## Reproducción y siguiente fase
 
-Los límites configurados suman 3008 MiB y 1 CPU para el conjunto. No son una medición de capacidad del VPS. La prueba de recursos y la comprobación de Control-Contracts-ATC corresponden a la fase 10.
+El arranque, migración y actualización de Auth se describen en `infra/supabase/README.md`. Los secretos están excluidos de Git. La actualización conserva claves, base y volúmenes. La imagen anterior queda disponible para reversión local como `boletinexpress-auth:phase3-before-pgx5-20261017`; contiene el aviso anterior y no es una imagen aprobada para desplegar.
 
-## Reproducción y aceptación
+La revisión actual está en `pre-commit-review.md` y el estado legible por herramientas en `status.json`. Los fallos e informes anteriores se conservan como historial.
 
-El arranque, la migración y la batería de aislamiento se describen en `infra/supabase/README.md`. Los secretos se generan en `.secrets`, excluido de Git. No se deben regenerar contra una base existente ni ejecutar `down -v` para resolver un fallo de arranque.
-
-La batería funcional está superada: 13 pruebas unitarias, 43 de PDF y 12 grupos de integración. La ejecución anterior de CI terminó en fallo exclusivamente por la auditoría de seguridad. La migración actual elimina localmente ese aviso; falta confirmar el conjunto en CI y obtener aceptación del usuario. El estado está registrado en `evidence/phase-3/status.json`. No se avanza a la fase 4.
-
-## Prueba independiente de migración a pgx/v5 · 17/10/2026
-
-La [imagen candidata](prueba-auth-pgx5.md) elimina la rama vulnerable y supera 57 pruebas Go y los 12 grupos de integración, con cero avisos altos o críticos en su auditoría final. Se han detenido sus ocho servicios conservando los volúmenes. El entorno habitual mantiene sus imágenes y fechas de arranque. Tras la aceptación del ensayo se ha incorporado la misma migración al target Auth habitual, con versión 2.197.0-be2-pgx5. La imagen local supera la auditoría sin altos/críticos. Una sesión y un borrador anteriores al cambio siguen siendo accesibles. Auth tiene ahora una sonda HTTP de salud y la pasarela espera su disponibilidad. La comprobación final del conjunto en CI AMD64 sigue pendiente; no se cierra todavía la fase 3.
+Cuando se acepte el cierre, la fase 4 empezará por [Mi perfil](perfil-electricista.md), para guardar los datos de empresa e instalador y reutilizarlos en el BRIE y, en fase 5, en el CIE. No se ha adelantado su implementación.

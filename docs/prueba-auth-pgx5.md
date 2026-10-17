@@ -79,3 +79,7 @@ Las evidencias están en `evidence/phase-3/auth-candidate/`. El informe resumido
 | Recursos de la prueba | Ocho servicios detenidos; volúmenes conservados | `stop.log`, `status.json` |
 
 **Resultado: prueba superada; candidata todavía no incorporada al entorno habitual.** No se han ejecutado todavía las comprobaciones de CI de esta candidata en Linux AMD64. El aviso del Auth habitual y el cierre de la fase 3 permanecen pendientes hasta incorporar y verificar el cambio.
+
+## Incorporación posterior al ensayo
+
+El usuario aceptó incorporar la candidata. La migración está activa en el Auth habitual como `2.197.0-be2-pgx5`, conserva una sesión y un borrador anteriores, y ha superado CI 39052031663: doce grupos de integración y nueve imágenes sin altos/críticos. El [informe vigente de fase 3](fase-3.md) recoge el resultado. Los estados y la afirmación de no promoción anteriores describen el momento de cierre del ensayo independiente.

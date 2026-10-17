@@ -1,0 +1,327 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 1.90kB done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/supabase/gotrue:v2.197.0
+#2 ...
+
+#3 [internal] load metadata for docker.io/library/golang:1.27.2-alpine3.24@sha256:f92b6ef800e499660581efdabdf25d9d817a9d124eaf900924f0504e7e27e12d
+#3 DONE 0.9s
+
+#2 [internal] load metadata for docker.io/supabase/gotrue:v2.197.0
+#2 DONE 0.9s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 580B done
+#4 DONE 0.0s
+
+#5 [build  3/12] ADD --checksum=sha256:d21291c281604ccc6272c81c6506c8d521bc38d3141b0d339cb1a5988b1d461d https://codeload.github.com/supabase/auth/tar.gz/refs/tags/v2.197.0 /tmp/auth.tar.gz
+#5 DONE 0.0s
+
+#6 [candidate 1/5] FROM docker.io/supabase/gotrue:v2.197.0@sha256:1736a63078f5922b198c4cbe50f80ab9a2d3b54fe8b7b6cfb2e9dc5dbbc12c6b
+#6 resolve docker.io/supabase/gotrue:v2.197.0@sha256:1736a63078f5922b198c4cbe50f80ab9a2d3b54fe8b7b6cfb2e9dc5dbbc12c6b 0.0s done
+#6 DONE 0.0s
+
+#7 [build  1/12] FROM docker.io/library/golang:1.27.2-alpine3.24@sha256:f92b6ef800e499660581efdabdf25d9d817a9d124eaf900924f0504e7e27e12d
+#7 resolve docker.io/library/golang:1.27.2-alpine3.24@sha256:f92b6ef800e499660581efdabdf25d9d817a9d124eaf900924f0504e7e27e12d 0.0s done
+#7 DONE 0.0s
+
+#8 [build  2/12] RUN apk add --no-cache make git
+#8 CACHED
+
+#9 [build  3/12] ADD --checksum=sha256:d21291c281604ccc6272c81c6506c8d521bc38d3141b0d339cb1a5988b1d461d https://codeload.github.com/supabase/auth/tar.gz/refs/tags/v2.197.0 /tmp/auth.tar.gz
+#9 CACHED
+
+#10 [build  4/12] WORKDIR /source
+#10 CACHED
+
+#11 [build  5/12] RUN tar xzf /tmp/auth.tar.gz --strip-components=1 -C /source
+#11 CACHED
+
+#12 [internal] load build context
+#12 transferring context: 1.23kB done
+#12 DONE 0.0s
+
+#13 [build  6/12] RUN sed -i 's|"github.com/jackc/pgconn"|"github.com/jackc/pgx/v5/pgconn"|' internal/utilities/postgres.go internal/hooks/hookspgfunc/hookspgfunc_test.go
+#13 DONE 0.1s
+
+#14 [build  7/12] RUN go get github.com/gobuffalo/pop/v6@v6.4.1 github.com/jackc/pgx/v5@v5.11.0 golang.org/x/net@v0.60.0 google.golang.org/grpc@v1.83.2 && go mod tidy
+#14 1.565 go: downloading golang.org/x/net v0.60.0
+#14 1.565 go: downloading google.golang.org/grpc v1.83.2
+#14 1.567 go: downloading github.com/jackc/pgx/v5 v5.11.0
+#14 1.656 go: downloading github.com/gobuffalo/pop/v6 v6.4.1
+#14 6.914 go: downloading google.golang.org/protobuf v1.36.11
+#14 6.915 go: downloading golang.org/x/sys v0.48.0
+#14 6.921 go: downloading google.golang.org/genproto/googleapis/rpc v0.0.0-20260526163538-3dc84a4a5aaa
+#14 6.933 go: downloading github.com/fatih/color v1.19.0
+#14 6.953 go: downloading github.com/go-sql-driver/mysql v1.10.1
+#14 6.965 go: downloading github.com/gobuffalo/envy v1.10.2
+#14 6.995 go: downloading github.com/gobuffalo/fizz v1.14.4
+#14 7.015 go: downloading github.com/gobuffalo/flect v1.0.3
+#14 7.044 go: downloading github.com/gobuffalo/validate/v3 v3.3.3
+#14 7.044 go: downloading github.com/gofrs/uuid v4.4.0+incompatible
+#14 7.071 go: downloading github.com/jmoiron/sqlx v1.4.0
+#14 7.083 go: downloading github.com/luna-duclos/instrumentedsql v1.1.3
+#14 7.084 go: downloading github.com/mattn/go-sqlite3 v2.0.3+incompatible
+#14 7.101 go: downloading golang.org/x/sync v0.23.0
+#14 7.105 go: downloading gopkg.in/yaml.v2 v2.4.0
+#14 7.112 go: downloading github.com/jackc/pgpassfile v1.0.0
+#14 7.112 go: downloading github.com/jackc/pgservicefile v0.0.0-20240606120523-5a60cdf6a761
+#14 7.112 go: downloading golang.org/x/text v0.42.0
+#14 7.123 go: downloading github.com/mattn/go-colorable v0.1.14
+#14 7.124 go: downloading github.com/mattn/go-isatty v0.0.20
+#14 7.125 go: downloading github.com/rogpeppe/go-internal v1.14.1
+#14 7.130 go: downloading github.com/gobuffalo/plush/v4 v4.1.22
+#14 7.130 go: downloading github.com/kballard/go-shellquote v0.0.0-20180428030007-95032a82bc51
+#14 7.133 go: downloading github.com/Masterminds/semver/v3 v3.4.0
+#14 7.133 go: downloading filippo.io/edwards25519 v1.2.0
+#14 7.149 go: downloading github.com/gobuffalo/nulls v0.4.2
+#14 7.172 go: downloading github.com/jackc/puddle/v2 v2.2.2
+#14 7.176 go: downloading golang.org/x/mod v0.41.0
+#14 7.227 go: downloading github.com/jackc/puddle v1.3.0
+#14 7.276 go: downloading github.com/gobuffalo/helpers v0.6.10
+#14 7.276 go: downloading github.com/gobuffalo/github_flavored_markdown v1.1.4
+#14 7.363 go: downloading github.com/microcosm-cc/bluemonday v1.0.27
+#14 7.377 go: downloading github.com/sourcegraph/annotate v0.0.0-20160123013949-f4cad6c6324d
+#14 7.377 go: downloading github.com/sourcegraph/syntaxhighlight v0.0.0-20170531221838-bd320f5d308e
+#14 7.377 go: downloading github.com/sergi/go-diff v1.4.0
+#14 7.377 go: downloading github.com/gobuffalo/plush/v5 v5.0.4
+#14 7.387 go: downloading github.com/gobuffalo/tags/v3 v3.1.4
+#14 7.404 go: downloading github.com/aymerick/douceur v0.2.0
+#14 7.418 go: downloading github.com/fatih/structs v1.1.0
+#14 7.431 go: downloading github.com/gorilla/css v1.0.1
+#14 8.271 go: downloading github.com/lib/pq v1.12.3
+#14 8.271 go: downloading github.com/sirupsen/logrus v1.9.4
+#14 8.273 go: downloading github.com/spf13/cobra v1.10.2
+#14 8.273 go: downloading github.com/spf13/pflag v1.0.10
+#14 8.291 go: downloading github.com/stretchr/objx v0.5.3
+#14 8.308 go: downloading github.com/stretchr/testify v1.12.1
+#14 8.309 go: downloading golang.org/x/crypto v0.57.0
+#14 8.390 go: added filippo.io/edwards25519 v1.2.0
+#14 8.390 go: upgraded github.com/Masterminds/semver/v3 v3.1.1 => v3.4.0
+#14 8.390 go: upgraded github.com/fatih/color v1.16.0 => v1.19.0
+#14 8.390 go: upgraded github.com/go-sql-driver/mysql v1.7.0 => v1.10.1
+#14 8.390 go: upgraded github.com/gobuffalo/flect v1.0.2 => v1.0.3
+#14 8.390 go: upgraded github.com/gobuffalo/github_flavored_markdown v1.1.3 => v1.1.4
+#14 8.390 go: upgraded github.com/gobuffalo/helpers v0.6.7 => v0.6.10
+#14 8.390 go: upgraded github.com/gobuffalo/plush/v4 v4.1.18 => v4.1.22
+#14 8.390 go: added github.com/gobuffalo/plush/v5 v5.0.4
+#14 8.390 go: upgraded github.com/gobuffalo/pop/v6 v6.1.1 => v6.4.1
+#14 8.390 go: upgraded github.com/gofrs/uuid v4.3.1+incompatible => v4.4.0+incompatible
+#14 8.390 go: upgraded github.com/gorilla/css v1.0.0 => v1.0.1
+#14 8.390 go: upgraded github.com/jackc/pgservicefile v0.0.0-20221227161230-091c0ba34f0a => v0.0.0-20240606120523-5a60cdf6a761
+#14 8.390 go: added github.com/jackc/pgx/v5 v5.11.0
+#14 8.390 go: added github.com/jackc/puddle/v2 v2.2.2
+#14 8.390 go: upgraded github.com/jmoiron/sqlx v1.3.5 => v1.4.0
+#14 8.390 go: upgraded github.com/lib/pq v1.10.7 => v1.12.3
+#14 8.390 go: upgraded github.com/mattn/go-colorable v0.1.13 => v0.1.14
+#14 8.390 go: upgraded github.com/microcosm-cc/bluemonday v1.0.26 => v1.0.27
+#14 8.390 go: upgraded github.com/sergi/go-diff v1.2.0 => v1.4.0
+#14 8.390 go: upgraded github.com/sirupsen/logrus v1.9.3 => v1.9.4
+#14 8.390 go: upgraded github.com/spf13/cobra v1.8.1 => v1.10.2
+#14 8.390 go: upgraded github.com/spf13/pflag v1.0.6 => v1.0.10
+#14 8.390 go: upgraded github.com/stretchr/objx v0.5.2 => v0.5.3
+#14 8.390 go: upgraded github.com/stretchr/testify v1.11.1 => v1.12.1
+#14 8.390 go: upgraded golang.org/x/crypto v0.55.0 => v0.57.0
+#14 8.390 go: upgraded golang.org/x/mod v0.40.0 => v0.41.0
+#14 8.390 go: upgraded golang.org/x/net v0.57.0 => v0.60.0
+#14 8.390 go: upgraded golang.org/x/sync v0.22.0 => v0.23.0
+#14 8.390 go: upgraded golang.org/x/sys v0.47.0 => v0.48.0
+#14 8.390 go: upgraded golang.org/x/text v0.41.0 => v0.42.0
+#14 8.390 go: upgraded google.golang.org/grpc v1.82.1 => v1.83.2
+#14 8.406 go: downloading github.com/go-chi/chi/v5 v5.3.2
+#14 8.406 go: downloading github.com/pkg/errors v0.9.1
+#14 8.407 go: downloading github.com/gobwas/glob v0.2.3
+#14 8.408 go: downloading github.com/coreos/go-oidc/v3 v3.20.0
+#14 8.409 go: downloading github.com/golang-jwt/jwt/v5 v5.3.1
+#14 8.411 go: downloading github.com/mitchellh/mapstructure v1.5.0
+#14 8.411 go: downloading github.com/mrjones/oauth v0.0.0-20190623134757-126b35219450
+#14 8.415 go: downloading golang.org/x/oauth2 v0.36.0
+#14 8.416 go: downloading github.com/didip/tollbooth/v5 v5.1.1
+#14 8.516 go: downloading golang.org/x/exp v0.0.0-20230811145659-89c5cff77bcb
+#14 8.545 go: downloading github.com/aws/aws-sdk-go-v2/service/kms v1.52.0
+#14 8.546 go: downloading gopkg.in/h2non/gock.v1 v1.1.2
+#14 8.551 go: downloading github.com/kelseyhightower/envconfig v1.4.0
+#14 8.552 go: downloading github.com/aws/aws-sdk-go-v2/config v1.32.18
+#14 8.553 go: downloading github.com/oapi-codegen/runtime v1.1.1
+#14 8.564 go: downloading github.com/lestrrat-go/jwx/v2 v2.1.0
+#14 8.580 go: downloading gopkg.in/gomail.v2 v2.0.0-20160411212932-81ebce5c23df
+#14 8.582 go: downloading github.com/aaronarduino/goqrsvg v0.0.0-20220419053939-17e843f1dd40
+#14 8.582 go: downloading github.com/standard-webhooks/standard-webhooks/libraries v0.0.0-20240303152453-e0e82adf1721
+#14 8.592 go: downloading github.com/aws/aws-sdk-go-v2 v1.41.7
+#14 8.600 go: downloading github.com/jackc/pgerrcode v0.0.0-20201024163028-a0d42d470451
+#14 8.601 go: downloading github.com/ajstarks/svgo v0.0.0-20211024235047-1546f124cd8b
+#14 8.603 go: downloading go.opentelemetry.io/otel v1.44.0
+#14 8.619 go: downloading github.com/badoux/checkmail v0.0.0-20170203135005-d0a759655d62
+#14 8.630 go: downloading go.opentelemetry.io/otel/metric v1.44.0
+#14 8.631 go: downloading github.com/boombuler/barcode v1.0.1-0.20190219062509-6c824513bacc
+#14 8.638 go: downloading github.com/bombsimon/logrusr/v3 v3.0.0
+#14 8.647 go: downloading golang.org/x/time v0.9.0
+#14 8.647 go: downloading github.com/fsnotify/fsnotify v1.7.0
+#14 8.663 go: downloading github.com/crewjam/saml v0.4.14
+#14 8.676 go: downloading github.com/xeipuuv/gojsonschema v1.2.0
+#14 8.692 go: downloading github.com/XSAM/otelsql v0.26.0
+#14 8.692 go: downloading github.com/prometheus/client_golang v1.19.0
+#14 8.713 go: downloading github.com/bits-and-blooms/bloom/v3 v3.6.0
+#14 8.719 go: downloading github.com/ethereum/go-ethereum v1.17.0
+#14 8.724 go: downloading github.com/go-webauthn/webauthn v0.16.5
+#14 8.724 go: downloading go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp v0.64.0
+#14 8.733 go: downloading github.com/btcsuite/btcutil v1.0.2
+#14 8.735 go: downloading go.opentelemetry.io/contrib/instrumentation/runtime v0.45.0
+#14 8.759 go: downloading go.opentelemetry.io/otel/exporters/otlp/otlpmetric/otlpmetricgrpc v1.44.0
+#14 8.764 go: downloading github.com/pquerna/otp v1.4.0
+#14 8.783 go: downloading go.opentelemetry.io/otel/exporters/otlp/otlpmetric/otlpmetrichttp v1.44.0
+#14 8.854 go: downloading go.opentelemetry.io/otel/exporters/otlp/otlptrace v1.44.0
+#14 8.854 go: downloading github.com/rs/cors v1.11.0
+#14 8.854 go: downloading go.opentelemetry.io/otel/exporters/otlp/otlptrace/otlptracegrpc v1.44.0
+#14 8.855 go: downloading github.com/sebest/xff v0.0.0-20160910043805-6c115e0ffa35
+#14 8.855 go: downloading go.opentelemetry.io/otel/exporters/otlp/otlptrace/otlptracehttp v1.44.0
+#14 8.877 go: downloading github.com/sethvargo/go-password v0.2.0
+#14 8.878 go: downloading go.opentelemetry.io/otel/exporters/prometheus v0.48.0
+#14 8.879 go: downloading github.com/supabase/hibp v0.0.0-20231124125943-d225752ae869
+#14 8.879 go: downloading go.opentelemetry.io/otel/sdk/metric v1.44.0
+#14 8.882 go: downloading go.opentelemetry.io/otel/sdk v1.44.0
+#14 8.882 go: downloading github.com/fxamacker/cbor/v2 v2.9.1
+#14 8.902 go: downloading go.opentelemetry.io/otel/trace v1.44.0
+#14 8.922 go: downloading github.com/patrickmn/go-cache v2.1.0+incompatible
+#14 8.922 go: downloading github.com/go-jose/go-jose/v4 v4.1.4
+#14 8.924 go: downloading github.com/inconshreveable/mousetrap v1.1.0
+#14 8.925 go: downloading github.com/h2non/parth v0.0.0-20190131123155-b4df798d6542
+#14 8.930 go: downloading github.com/nbio/st v0.0.0-20140626010706-e9e8d9816f32
+#14 8.933 go: downloading gopkg.in/alexcesaro/quotedprintable.v3 v3.0.0-20150716171945-2caba252f4dc
+#14 8.938 go: downloading github.com/decred/dcrd/dcrec/secp256k1/v4 v4.3.0
+#14 8.940 go: downloading github.com/lestrrat-go/blackmagic v1.0.2
+#14 8.943 go: downloading github.com/lestrrat-go/httprc v1.0.5
+#14 8.953 go: downloading github.com/lestrrat-go/iter v1.0.2
+#14 8.959 go: downloading github.com/lestrrat-go/option v1.0.1
+#14 8.965 go: downloading github.com/aws/aws-sdk-go-v2/credentials v1.19.17
+#14 8.993 go: downloading github.com/aws/aws-sdk-go-v2/feature/ec2/imds v1.18.23
+#14 8.993 go: downloading github.com/aws/aws-sdk-go-v2/service/signin v1.0.11
+#14 8.993 go: downloading github.com/aws/aws-sdk-go-v2/service/ssooidc v1.36.0
+#14 8.993 go: downloading github.com/aws/aws-sdk-go-v2/service/sso v1.30.17
+#14 8.997 go: downloading github.com/aws/aws-sdk-go-v2/service/sts v1.42.1
+#14 9.022 go: downloading github.com/aws/smithy-go v1.25.1
+#14 9.054 go: downloading github.com/aws/aws-sdk-go-v2/internal/configsources v1.4.23
+#14 9.055 go: downloading github.com/go-logr/logr v1.4.3
+#14 9.055 go: downloading github.com/xeipuuv/gojsonreference v0.0.0-20180127040603-bd5ef7bd5415
+#14 9.055 go: downloading github.com/beevik/etree v1.6.0
+#14 9.055 go: downloading github.com/mattermost/xml-roundtrip-validator v0.1.0
+#14 9.055 go: downloading github.com/russellhaering/goxmldsig v1.6.0
+#14 9.077 go: downloading github.com/golang-jwt/jwt/v4 v4.5.2
+#14 9.077 go: downloading github.com/google/go-cmp v0.7.0
+#14 9.079 go: downloading gotest.tools v2.2.0+incompatible
+#14 9.083 go: downloading github.com/crewjam/httperr v0.2.0
+#14 9.099 go: downloading github.com/bits-and-blooms/bitset v1.20.0
+#14 9.103 go: downloading github.com/twmb/murmur3 v1.1.6
+#14 9.126 go: downloading github.com/apapsch/go-jsonmerge/v2 v2.0.0
+#14 9.129 go: downloading github.com/google/uuid v1.6.0
+#14 9.131 go: downloading github.com/prometheus/client_model v0.6.1
+#14 9.131 go: downloading github.com/prometheus/common v0.48.0
+#14 9.142 go: downloading github.com/tinylib/msgp v1.6.4
+#14 9.143 go: downloading go.uber.org/mock v0.6.0
+#14 9.146 go: downloading github.com/go-viper/mapstructure/v2 v2.5.0
+#14 9.147 go: downloading github.com/google/go-tpm v0.9.8
+#14 9.149 go: downloading github.com/go-logr/stdr v1.2.2
+#14 9.167 go: downloading go.opentelemetry.io/proto/otlp v1.10.0
+#14 9.191 go: downloading github.com/felixge/httpsnoop v1.0.4
+#14 9.191 go: downloading go.uber.org/goleak v1.3.0
+#14 9.191 go: downloading github.com/x448/float16 v0.8.4
+#14 9.192 go: downloading go.opentelemetry.io/otel/metric/x v0.66.0
+#14 9.208 go: downloading go.yaml.in/yaml/v3 v3.0.5
+#14 9.211 go: downloading gopkg.in/check.v1 v1.0.0-20201130134442-10cb98267c6c
+#14 9.214 go: downloading github.com/segmentio/asm v1.2.0
+#14 9.223 go: downloading github.com/goccy/go-json v0.10.4
+#14 9.233 go: downloading github.com/lestrrat-go/httpcc v1.0.1
+#14 9.241 go: downloading github.com/aws/aws-sdk-go-v2/internal/v4a v1.4.24
+#14 9.253 go: downloading github.com/aws/aws-sdk-go-v2/service/internal/accept-encoding v1.13.9
+#14 9.268 go: downloading github.com/aws/aws-sdk-go-v2/service/internal/presigned-url v1.13.23
+#14 9.268 go: downloading github.com/aws/aws-sdk-go-v2/internal/endpoints/v2 v2.7.23
+#14 9.274 go: downloading github.com/xeipuuv/gojsonpointer v0.0.0-20180127040702-4e3ac2762d5f
+#14 9.278 go: downloading github.com/jonboulle/clockwork v0.5.0
+#14 9.284 go: downloading github.com/beorn7/perks v1.0.1
+#14 9.286 go: downloading github.com/cespare/xxhash/v2 v2.3.0
+#14 9.286 go: downloading github.com/prometheus/procfs v0.12.0
+#14 9.295 go: downloading github.com/davecgh/go-spew v1.1.1
+#14 9.303 go: downloading github.com/go-webauthn/x v0.2.3
+#14 9.315 go: downloading go.opentelemetry.io/auto/sdk v1.2.1
+#14 9.327 go: downloading github.com/cenkalti/backoff/v5 v5.0.3
+#14 9.327 go: downloading github.com/grpc-ecosystem/grpc-gateway/v2 v2.29.0
+#14 9.340 go: downloading github.com/philhofer/fwd v1.2.0
+#14 9.350 go: downloading github.com/kr/pretty v0.3.1
+#14 9.362 go: downloading github.com/google/go-tpm-tools v0.3.13-0.20230620182252-4639ecce2aba
+#14 9.375 go: downloading github.com/golang/protobuf v1.5.4
+#14 9.387 go: downloading github.com/kr/text v0.2.0
+#14 9.392 go: downloading gonum.org/v1/gonum v0.17.0
+#14 9.436 go: downloading google.golang.org/genproto/googleapis/api v0.0.0-20260526163538-3dc84a4a5aaa
+#14 10.75 go: downloading github.com/holiman/uint256 v1.3.2
+#14 10.75 go: downloading github.com/kylelemons/godebug v1.1.0
+#14 10.75 go: downloading github.com/gofrs/flock v0.12.1
+#14 10.75 go: downloading github.com/golang/snappy v1.0.0
+#14 10.75 go: downloading github.com/crate-crypto/go-eth-kzg v1.4.0
+#14 10.75 go: downloading github.com/shirou/gopsutil v3.21.4-0.20210419000835-c7a38de76ee5+incompatible
+#14 10.75 go: downloading github.com/ethereum/c-kzg-4844/v2 v2.1.5
+#14 10.75 go: downloading github.com/consensys/gnark-crypto v0.18.1
+#14 10.75 go: downloading github.com/ProjectZKM/Ziren/crates/go-runtime/zkvm_runtime v0.0.0-20251001021608-1fe7b43fc4d6
+#14 10.75 go: downloading github.com/ferranbt/fastssz v0.1.4
+#14 10.79 go: downloading github.com/decred/dcrd/crypto/blake256 v1.0.1
+#14 10.90 go: downloading github.com/tklauser/go-sysconf v0.3.12
+#14 10.90 go: downloading github.com/StackExchange/wmi v1.2.1
+#14 10.94 go: downloading github.com/tklauser/numcpus v0.6.1
+#14 11.02 go: downloading github.com/go-ole/go-ole v1.3.0
+#14 12.63 go: downloading github.com/leanovate/gopter v0.2.11
+#14 13.19 go: downloading gopkg.in/yaml.v3 v3.0.1
+#14 13.19 go: downloading github.com/supranational/blst v0.3.16-0.20250831170142-f48500c1fdbe
+#14 13.50 go: downloading github.com/minio/sha256-simd v1.0.0
+#14 13.50 go: downloading github.com/emicklei/dot v1.6.2
+#14 13.53 go: downloading github.com/klauspost/cpuid/v2 v2.2.5
+#14 DONE 14.0s
+
+#15 [build  8/12] RUN go list -m all > /source/candidate-modules.txt && ! grep -E '^github.com/jackc/(pgproto3/v2|pgconn|pgx/v4|pgtype) ' /source/candidate-modules.txt
+#15 DONE 2.7s
+
+#16 [build  9/12] COPY infra/supabase/auth-candidate/migration_test.go internal/utilities/boletin_migration_test.go
+#16 DONE 0.0s
+
+#17 [build 10/12] RUN go test ./internal/crypto ./internal/conf ./internal/utilities
+#17 11.16 ok  	github.com/supabase/auth/internal/crypto	0.256s
+#17 11.16 ok  	github.com/supabase/auth/internal/conf	0.016s
+#17 11.16 ok  	github.com/supabase/auth/internal/utilities	0.078s
+#17 DONE 11.5s
+
+#18 [build 11/12] RUN RELEASE_VERSION=2.197.0-be-pgx5-candidate make build
+#18 1.046 all modules verified
+#18 1.046 CGO_ENABLED=0 go build -o auth -buildvcs=false -ldflags "-X github.com/supabase/auth/internal/utilities.Version=v2.197.0-be-pgx5-candidate"
+#18 4.277 CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o auth-amd64 -buildvcs=false -ldflags "-X github.com/supabase/auth/internal/utilities.Version=v2.197.0-be-pgx5-candidate"
+#18 16.07 CGO_ENABLED=0 GOOS=linux GOARCH=arm64 go build -o auth-arm64 -buildvcs=false -ldflags "-X github.com/supabase/auth/internal/utilities.Version=v2.197.0-be-pgx5-candidate"
+#18 17.61 CGO_ENABLED=0 GOOS=darwin GOARCH=arm64 go build -o auth-darwin-arm64 -buildvcs=false -ldflags "-X github.com/supabase/auth/internal/utilities.Version=v2.197.0-be-pgx5-candidate"
+#18 DONE 29.9s
+
+#19 [build 12/12] RUN go version -m /source/auth > /source/candidate-binary-modules.txt && ! grep -E 'github.com/jackc/(pgproto3/v2|pgconn|pgx/v4|pgtype)[[:space:]]' /source/candidate-binary-modules.txt
+#19 DONE 0.1s
+
+#20 [candidate 2/5] RUN apk add --no-cache --upgrade libcrypto3=3.5.9-r0 libssl3=3.5.9-r0
+#20 CACHED
+
+#21 [candidate 3/5] COPY --from=build /source/auth /usr/local/bin/auth
+#21 DONE 0.1s
+
+#22 [candidate 4/5] COPY --from=build /source/LICENSE /usr/share/licenses/boletinexpress-auth/LICENSE
+#22 DONE 0.0s
+
+#23 [candidate 5/5] COPY --from=build /source/go.mod /source/go.sum /source/candidate-modules.txt /source/candidate-binary-modules.txt /usr/share/boletinexpress-candidate/
+#23 DONE 0.0s
+
+#24 exporting to image
+#24 exporting layers
+#24 exporting layers 0.9s done
+#24 exporting manifest sha256:fb2d3f1160e633939cb1559d464d48cbcd93127a535b53ef0d8ff5b26aeb6b51 done
+#24 exporting config sha256:9d918f9d3e287c7b596ad23fc1496dc29fc43b72342b512b0f06cf8aae8e79d7 done
+#24 exporting attestation manifest sha256:bca7af63c7e02cac680af0ce3719105312a6345ae94e344d41ea7e3cd4778d3a done
+#24 exporting manifest list sha256:0956e895aa827c6bef01aa66e19a936225c0a84cf26ecab45e8bf473979e970e done
+#24 naming to docker.io/library/boletinexpress-auth:pgx5-candidate done
+#24 unpacking to docker.io/library/boletinexpress-auth:pgx5-candidate 0.1s done
+#24 DONE 1.1s
+
+View build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux/iwn78onslpiszel8i4f6lqvdb

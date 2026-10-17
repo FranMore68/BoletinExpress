@@ -1,0 +1,10 @@
+docker.io/aquasec/trivy@sha256:2416d1f74045b57274df1a340eee6b510cacd73c66a6ccb8da092b117eb7d222: Pulling from aquasec/trivy
+Digest: sha256:2416d1f74045b57274df1a340eee6b510cacd73c66a6ccb8da092b117eb7d222
+Status: Image is up to date for aquasec/trivy@sha256:2416d1f74045b57274df1a340eee6b510cacd73c66a6ccb8da092b117eb7d222
+docker.io/aquasec/trivy@sha256:2416d1f74045b57274df1a340eee6b510cacd73c66a6ccb8da092b117eb7d222
+2026-10-17T16:52:57Z	INFO	[vuln] Vulnerability scanning is enabled
+2026-10-17T16:52:57Z	INFO	Detected OS	family="alpine" version="3.24.1"
+2026-10-17T16:52:57Z	INFO	[alpine] Detecting vulnerabilities...	os_version="3.24" repository="3.24" pkg_num=17
+2026-10-17T16:52:57Z	INFO	Number of language-specific files	num=1
+2026-10-17T16:52:57Z	INFO	[gobinary] Detecting vulnerabilities...
+2026-10-17T16:52:57Z	WARN	Using severities from other vendors for some vulnerabilities. Read https://trivy.dev/docs/v0.76/guide/scanner/vulnerability#severity-selection for details.

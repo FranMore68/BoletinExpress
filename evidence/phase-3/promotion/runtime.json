@@ -1,0 +1,99 @@
+{
+  "services": [
+    {
+      "name": "/boletinexpress-data-postgres-1",
+      "image": "sha256:84ce85eae9937c42553d9eaec2b5b29597aa1325273b7362a8831606ade44d72",
+      "state": "running",
+      "health": "healthy",
+      "oom": false,
+      "restarts": 0,
+      "cpu": 50000000,
+      "memory": 1342177280
+    },
+    {
+      "name": "/boletinexpress-data-auth-1",
+      "image": "sha256:f4883ef46d4c153629bb344fada5f883fd0534eebccc1ff99b8f7d0f2d311607",
+      "state": "running",
+      "health": "healthy",
+      "oom": false,
+      "restarts": 0,
+      "cpu": 40000000,
+      "memory": 134217728
+    },
+    {
+      "name": "/boletinexpress-data-rest-1",
+      "image": "sha256:c9dc201e555f5d8e37e7f39cdd4df0229774996e213bfd7de8d10ac609030f2c",
+      "state": "running",
+      "health": null,
+      "oom": false,
+      "restarts": 0,
+      "cpu": 30000000,
+      "memory": 134217728
+    },
+    {
+      "name": "/boletinexpress-data-storage-1",
+      "image": "sha256:c15766205b3774ed6aee13c7b665c06b40a5d903ea8fa5c557232d0743bf9507",
+      "state": "running",
+      "health": "healthy",
+      "oom": false,
+      "restarts": 0,
+      "cpu": 100000000,
+      "memory": 536870912
+    },
+    {
+      "name": "/boletinexpress-data-gateway-1",
+      "image": "sha256:b5920bfb2f015ae47d8e41fe86da14a3581f4c7bee068ef751f382f503571bb8",
+      "state": "running",
+      "health": "healthy",
+      "oom": false,
+      "restarts": 0,
+      "cpu": 10000000,
+      "memory": 67108864
+    },
+    {
+      "name": "/boletinexpress-data-templates-1",
+      "image": "sha256:99534d4f79b22afe21358fc459013b69e07b8e21d466e486118fae2573c6fea4",
+      "state": "running",
+      "health": null,
+      "oom": false,
+      "restarts": 0,
+      "cpu": 10000000,
+      "memory": 67108864
+    },
+    {
+      "name": "/boletinexpress-data-mail-1",
+      "image": "sha256:23fe39e81bde596a918000b3135c0f85dc8bb4c9ea6be274b051143f3e300387",
+      "state": "running",
+      "health": "healthy",
+      "oom": false,
+      "restarts": 0,
+      "cpu": 10000000,
+      "memory": 67108864
+    },
+    {
+      "name": "/boletinexpress-evaluation-web-1",
+      "image": "sha256:cfc2dae77ca12b0b472eec71515823a743e74bea6cd1de994f66461562e59ea9",
+      "state": "running",
+      "health": "healthy",
+      "oom": false,
+      "restarts": 0,
+      "cpu": 500000000,
+      "memory": 536870912
+    },
+    {
+      "name": "/boletinexpress-evaluation-worker-1",
+      "image": "sha256:e4a0b7106033be86be8fe5b2bdace373462b7f67def8cf1e300629481ad8f83d",
+      "state": "running",
+      "health": "healthy",
+      "oom": false,
+      "restarts": 0,
+      "cpu": 250000000,
+      "memory": 268435456
+    }
+  ],
+  "memoryMiB": 3008,
+  "cpus": 1,
+  "oom": false,
+  "restarts": 0,
+  "rollbackImage": "boletinexpress-auth:phase3-before-pgx5-20261017"
+}
