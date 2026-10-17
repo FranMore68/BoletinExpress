@@ -5,12 +5,29 @@ import {
   type FieldValues,
   profileFields,
 } from "@/modules/documents/brie-schema";
+import { cieFields } from "@/modules/documents/cie-schema";
 import {
   type AccountLanguage,
   accountRequest,
   errorKey,
 } from "./account-shell";
 import { FormFields } from "./form-fields";
+
+const profileSchema = profileFields.map((f) => {
+  const source =
+    f.key === "empresa_via_tipo"
+      ? "CBO_TipusVia_2"
+      : f.key === "installador_categoria"
+        ? "TXT_Categoria"
+        : null;
+  return source
+    ? {
+        ...f,
+        type: "enum" as const,
+        choices: cieFields.find((c) => c.key === source)?.choices,
+      }
+    : f;
+});
 export function ProfilePanel({
   language,
   onBack,
@@ -79,7 +96,7 @@ export function ProfilePanel({
         <form onSubmit={submit}>
           <fieldset disabled={busy}>
             <FormFields
-              schema={profileFields}
+              schema={profileSchema}
               values={fields}
               locale={locale}
               prefix="profile"

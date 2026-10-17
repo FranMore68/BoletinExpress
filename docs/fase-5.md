@@ -12,6 +12,8 @@ El formulario muestra las ramas de ampliación/modificación y 50 %, P1/P2, deta
 
 Los datos técnicos distinguen los comunes, instalaciones de enlace, generación y suministro complementario. Se conservan las unidades del modelo: aislamiento en MΩ, tierra en Ω e intensidad del IGA en A. No se reinterpretan las fórmulas ni los criterios escritos en las opciones oficiales.
 
+«Mi perfil» ofrece listas oficiales para el tipo de vía y la categoría, con sus etiquetas ES/CA. Las entradas anteriores se conservan y pueden corregirse expresamente.
+
 El perfil copia 18 campos aplicables al nuevo CIE, incluida la repetición del nombre en la declaración. El NIF de empresa y el DNI del instalador se mapean a sus campos respectivos; el NIF adicional del BRIE no se confunde con el DNI. No se modifica el perfil al corregir un documento. Cambiarlo solo afecta a documentos nuevos. Si un perfil antiguo contiene un código postal o una opción incompatible con el CIE, se conserva su valor y se pide corregirlo expresamente.
 
 ## PDF y seguridad
