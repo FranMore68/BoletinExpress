@@ -129,6 +129,20 @@ test("potencia sin unidad queda pendiente y Todo OK no se transforma en medicion
     }).fields.length,
     0,
   );
+  assert.equal(
+    sanitizeResult("BRIE", {
+      fields: [
+        {
+          ...proposal,
+          key: "resistencia_terra",
+          value: "10",
+          evidence: "«Todo OK»",
+        },
+      ],
+      issues: [],
+    }).fields.length,
+    0,
+  );
   assert.match(
     extractionRequest("BRIE", "nota", null, "ca").instructions,
     /catalán/,

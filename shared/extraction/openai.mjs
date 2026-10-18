@@ -14,7 +14,7 @@ export function sanitizeResult(type, result) {
     if(!f||seen.has(p.key)||typeof p.value!=='string'||!p.value.trim()||p.value.length>(f.max||180)||typeof p.evidence!=='string'||!p.evidence.trim()||p.evidence.length>500||typeof p.uncertain!=='boolean')throw Error('ai_output');
     if(f.type==='enum'&&!f.choices.some(c=>c.value===p.value))throw Error('ai_output');
     if(f.type==='boolean'&&!['true','false'].includes(p.value))throw Error('ai_output');
-    if (/^(todo\s*(ok|bien)|tot\s*(ok|bé))[\s.!]*$/i.test(p.evidence.trim()) && p.key !== 'comentaris') continue;
+    if (/^(todo\s*(ok|bien)|tot\s*(ok|bé))[\s.!]*$/i.test(p.evidence.replace(/[“”«»"']/g, '').trim()) && p.key !== 'comentaris') continue;
     const unitMissing = /potencia|potència|pot[eè]ncia|power/i.test(f.key+' '+f.label[0]) && !/\b(?:kw|w|kilovatios?|kilowatts?|watts?|vatios?)\b/i.test(p.evidence);
     seen.add(p.key);fields.push({...p,uncertain:p.uncertain||unitMissing,value:f.type==='boolean'?p.value==='true':p.value});
   }
