@@ -1,0 +1,17 @@
+PASS acceso confirmado, protección de origen y catálogo cerrado de packs
+PASS seis creaciones concurrentes reutilizan una sesión; precio y propietario se fijan en servidor
+PASS RLS aísla compras y oculta identificadores Stripe; clientes no modifican pagos ni saldo
+PASS retornos manipulados, cancelación y pago pendiente nunca conceden KC
+PASS firma inválida, reloj fuera de tolerancia, eventos reales y cuerpos excesivos rechazados
+PASS caída de Stripe se recupera al reintentar; datos del webhook se contrastan con la API
+PASS avisos concurrentes, eventos distintos del mismo pago y avisos atrasados no duplican ni revierten el abono
+PASS pack de 25 KC abona exactamente 25 y conserva el historial
+PASS sesiones caducadas y pagos fallidos dejan el saldo intacto
+PASS importes y propietarios contradictorios y PaymentIntent reutilizado se rechazan sin abonos parciales
+PASS pago anterior al guardado de Checkout se recupera y se vincula de forma transaccional
+PASS respuesta perdida en creación reutiliza los parámetros originales y la clave de idempotencia
+PASS una solicitud no cambia de pack y el servidor rechaza sesiones que pertenecen a otra cuenta
+PASS avanzar el reloj documental 45 días no altera el reloj de pagos ni de firmas
+PASS el límite de nuevas sesiones no impide reintentar una operación existente ni modifica el saldo
+PASS saldo y suma de movimientos coinciden después de errores y concurrencia
+16 grupos de fase 9 superados (Stripe simulado, servidor y base de datos reales).

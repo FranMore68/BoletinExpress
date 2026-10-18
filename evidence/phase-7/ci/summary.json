@@ -1,0 +1,101 @@
+{
+  "run": 39153558098,
+  "codeCommit": "fe685375f39cf1cca6187d9fa308f45794eddd07",
+  "phases": {
+    "3": {
+      "pass": true,
+      "groups": 12
+    },
+    "4": {
+      "pass": true,
+      "groups": 8
+    },
+    "5": {
+      "pass": true,
+      "groups": 8
+    },
+    "6": {
+      "pass": true,
+      "groups": 11
+    },
+    "8": {
+      "pass": true,
+      "groups": 12
+    },
+    "9": {
+      "pass": true,
+      "groups": 16
+    },
+    "7": {
+      "pass": true,
+      "groups": 12
+    }
+  },
+  "images": [
+    {
+      "image": "auth",
+      "highDetected": 0,
+      "criticalDetected": 0,
+      "inventoryReported": true
+    },
+    {
+      "image": "gateway",
+      "highDetected": 0,
+      "criticalDetected": 0,
+      "inventoryReported": true
+    },
+    {
+      "image": "mail",
+      "highDetected": 0,
+      "criticalDetected": 0,
+      "inventoryReported": true
+    },
+    {
+      "image": "postgres",
+      "highDetected": 0,
+      "criticalDetected": 0,
+      "inventoryReported": true
+    },
+    {
+      "image": "rest",
+      "highDetected": 0,
+      "criticalDetected": 0,
+      "inventoryReported": false
+    },
+    {
+      "image": "storage",
+      "highDetected": 0,
+      "criticalDetected": 0,
+      "inventoryReported": true
+    },
+    {
+      "image": "stripe-cli",
+      "highDetected": 0,
+      "criticalDetected": 0,
+      "inventoryReported": true
+    },
+    {
+      "image": "templates",
+      "highDetected": 0,
+      "criticalDetected": 0,
+      "inventoryReported": true
+    },
+    {
+      "image": "web",
+      "highDetected": 0,
+      "criticalDetected": 0,
+      "inventoryReported": true
+    },
+    {
+      "image": "worker",
+      "highDetected": 0,
+      "criticalDetected": 0,
+      "inventoryReported": true
+    }
+  ],
+  "totalIntegrationGroups": 79,
+  "applicationTests": 37,
+  "pdfTests": 43,
+  "catalogueCases": 267,
+  "postgrestInventoryCovered": false
+}

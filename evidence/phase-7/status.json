@@ -2,12 +2,11 @@
   "phase": 7,
   "implemented": true,
   "acceptedByUser": false,
-  "technicalClosure": false,
+  "technicalClosure": true,
   "date": "2026-10-18",
-  "codeCommit": "a71f0ace7866e2aa4947b373e813c706d4371c93",
-  "ciRun": 39152654668,
-  "ciStatus": "in_progress",
-  "appTests": 37,
+  "codeCommit": "fe685375f39cf1cca6187d9fa308f45794eddd07",
+  "ciRun": 39153558098,
+  "ciStatus": "success",
   "realPhoto": {
     "pass": true,
     "uploadBytes": 412020,
@@ -18,11 +17,31 @@
     "selectiveAcceptance": "Only local_municipi accepted in UI"
   },
   "pending": [
-    "Clean CI and image scans",
-    "Microphone denial confirmation / physical capture on evaluation device"
+    "Aceptación del usuario para iniciar la fase 10"
   ],
-  "knownIssue": "One local integration attempt returned HTTP 503; retained in local-retry-failure.log; cause unconfirmed.",
+  "knownIssue": "Un intento local anterior devolvió HTTP 503. No se reprodujo en la batería local completa ni en la CI final. La causa no está confirmada; se conserva el registro.",
   "localIntegrationGroups": 12,
   "localIntegrationPass": true,
-  "realTextAndAudioPass": true
+  "realTextAndAudioPass": true,
+  "microphoneDenialVerified": true,
+  "realCieVerified": true,
+  "limitations": [
+    "Physical camera and microphone capture should be checked on the device used for evaluation; permission rejection and file uploads passed.",
+    "One earlier local HTTP 503 retained; root cause unconfirmed. Subsequent complete local battery passed."
+  ],
+  "applicationTests": 37,
+  "pdfTests": 43,
+  "catalogueCases": 267,
+  "localIntegrationPassed": true,
+  "ciPassed": true,
+  "technicalClosureComplete": true,
+  "userAcceptancePending": true,
+  "phase10Started": false,
+  "totalCIIntegrationGroups": 79,
+  "scannedImages": 10,
+  "imageScanPassed": true,
+  "highDetected": 0,
+  "criticalDetected": 0,
+  "postgrestInventoryCovered": false,
+  "closedAt": "2026-10-18T18:42:23.178040+00:00"
 }

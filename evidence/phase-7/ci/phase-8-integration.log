@@ -1,0 +1,13 @@
+PASS cancelar una reserva tras subir encola el objeto para borrarlo y bloquea cargas tardías, sin dejar fuentes huérfanas
+PASS 24 horas desde el primer dato; creación vacía y lecturas automáticas no habilitan renovación; vencido bloqueado incluso con worker detenido y borrado sin cargo
+PASS regreso explícito: dos renovaciones sucesivas únicas de 1 KC con vencimientos anclados; el siguiente ciclo sin regreso elimina sin cobrar
+PASS worker retrasado más de un ciclo: elimina sin encadenar renovaciones ni cargos retroactivos
+PASS coincidencia de validación y vencimiento: bloqueos sin duplicados, renovación única y cierre de la revisión exacta
+PASS saldo insuficiente al vencer elimina el borrador sin cargo ni saldo negativo
+PASS el primer archivo también inicia las 24 horas, sin marcar la creación como regreso
+PASS aislamiento entre cuentas y reloj privado; clientes no ejecutan worker ni alteran plazos, y Auth conserva su reloj real
+PASS solicitud deduplicada, destino fijado al correo verificado, lease exclusivo y fallo recuperable; worker envía adjunto íntegro en catalán al buzón local
+PASS día 30 corta descarga BFF y Storage sin worker; archivo conserva recuperación y encola un correo automático único; caída del worker recupera el lease
+PASS ventana de reintento limitada: una respuesta incierta no se reenvía automáticamente fuera de la idempotencia del proveedor
+PASS día 59 permite solicitar reenvío sin descarga; día 60 elimina filas, trabajos de correo fallidos y PDF físico, sin ampliar la conservación
+12 grupos de fase 8 superados.

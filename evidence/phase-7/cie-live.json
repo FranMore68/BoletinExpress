@@ -1,0 +1,54 @@
+{
+  "at": "2026-10-18T18:19:19.962Z",
+  "document": "e5b55ec5-9a3b-4ee8-960b-b37157ba8db0",
+  "job": {
+    "id": "2ce1c879-4d37-4a0e-a36a-76e6e4e1b403",
+    "kind": "text",
+    "state": "ready",
+    "result": {
+      "fields": [
+        {
+          "key": "NomCognoms",
+          "value": "Ana Prueba",
+          "evidence": "Titular: Ana Prueba.",
+          "uncertain": false
+        },
+        {
+          "key": "TXT_Poblacio",
+          "value": "Barcelona",
+          "evidence": "Domicilio del titular: Barcelona.",
+          "uncertain": false
+        },
+        {
+          "key": "TXT_Poblacio_3",
+          "value": "Reus",
+          "evidence": "La instalación está en Reus.",
+          "uncertain": false
+        },
+        {
+          "key": "TXT_Tensio",
+          "value": "Altra",
+          "evidence": "su tensión nominal es 400 V.",
+          "uncertain": true
+        },
+        {
+          "key": "InfoTensioAltre",
+          "value": "400 V",
+          "evidence": "su tensión nominal es 400 V.",
+          "uncertain": false
+        }
+      ],
+      "issues": [
+        "El NIF es contradictorio: aparece como «00000000T» en una nota y «11111111H» en otra; no se propone ninguno hasta confirmar cuál es correcto.",
+        "La tensión indicada es «400 V», pero no coincide literalmente con las opciones disponibles «230 V» o «3x230/400 V». Se propone «Altra» con el valor literal en el campo de especificación; confirme el formato de tensión.",
+        "No se aportan mediciones; no se proponen valores de resistencias ni verificaciones."
+      ]
+    },
+    "transcription": null,
+    "error": null,
+    "attempts": 1,
+    "created_at": "2026-10-18T18:19:14.259878+00:00"
+  },
+  "sectionAssignment": true,
+  "contradictoryIdBlocked": true
+}

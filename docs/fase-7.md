@@ -1,6 +1,6 @@
 # Fase 7 — extracción asistida de texto, fotografía y voz
 
-Implementación local del 18/10/2026. Datos ficticios. Pendiente de aceptación del usuario y de completar las comprobaciones finales indicadas en `evidence/phase-7/status.json`. La fase 10 no se inicia automáticamente.
+Cierre técnico del 18/10/2026 con datos ficticios. Pendiente de aceptación del usuario. La fase 10 no se inicia automáticamente. Estado verificable en `evidence/phase-7/status.json`.
 
 ## Comportamiento
 
@@ -36,13 +36,25 @@ Responses usa salida estructurada estricta y `store:false`. Esta opción no elim
 | Foto manuscrita aportada | Superado: propuestas pendientes y dudas señaladas | `evidence/phase-7/real-note/results.json` |
 | Aplicación selectiva en interfaz | Reus aceptado; los demás campos permanecen vacíos | `evidence/phase-7/real-note/revision-es.png` y `ui.json` |
 | Aislamiento, cuotas, concurrencia, reintentos y limpieza | Superado: 12 grupos locales | `evidence/phase-7/integration.json` |
+| CIE real: titular/local y NIF contradictorios | Superado: poblaciones separadas y NIF pendiente | `evidence/phase-7/cie-live.json` |
 | Texto CA y audio a través del worker | Superado: valores parciales sin inventar mediciones | `evidence/phase-7/live-inputs.json` |
-| Instalación limpia, regresiones y análisis de imágenes | Consultar CI final | `evidence/phase-7/status.json` |
+| Borrado físico tras retirar las cuentas de prueba | Superado: cero fuentes huérfanas y cero tareas pendientes | `evidence/phase-7/physical-cleanup.json` |
+| Instalación limpia, regresiones y análisis de imágenes | Superado: 37 pruebas de aplicación, 43 PDF, 267 casos de catálogo, 79 grupos de integración y diez imágenes sin avisos altos/críticos detectados | `evidence/phase-7/ci/summary.json` y `ci-run.json` |
 
 La foto ha producido: calle incierta «C/ Pru[e]ba», número 7, piso/puerta inciertos «6-1º», Reus, tensión 400 y potencia «6'928» sin unidad. No ha completado resistencias, defectos ni firmas. No demuestra exactitud universal del reconocimiento; el electricista debe revisar cada dato.
 
 Se han revisado móvil (390 px), tablet (820 px), escritorio, ES/CA y navegación por teclado. No se observa desbordamiento horizontal. El usuario denegó el micrófono y se verificó el aviso y las alternativas por texto/archivo (`ui.json`, `microfono-denegado-ca.png`).
 
-La cámara y el micrófono dependen de los permisos y del hardware del dispositivo. Una prueba con archivo no acredita por sí sola la captura física de cámara/micrófono. El coste final debe consultarse en el panel del proveedor: el desfase observado entre Usage y las respuestas de API sigue sin causa confirmada.
+La cámara y el micrófono dependen de los permisos y del hardware del dispositivo. Una prueba con archivo no acredita por sí sola la captura física de cámara/micrófono. El permiso de micrófono permanece denegado en el navegador de pruebas tras esta comprobación; para grabar habrá que autorizarlo manualmente. El coste final debe consultarse en el panel del proveedor: el desfase observado entre Usage y las respuestas de API sigue sin causa confirmada.
 
 La revisión automática rechazó ampliar el límite global de Storage y reiniciar ese servicio. Se resolvió optimizando las fotos y manteniendo el límite de 2 MiB; no se realizó la ampliación global.
+
+## Cierre y observaciones
+
+CI [39153558098](https://github.com/FranMore68/BoletinExpress/actions/runs/39153558098) superada sobre `fe685375f39cf1cca6187d9fa308f45794eddd07`. La instalación desde cero aplica las siete migraciones y prueba todas las fases. Las credenciales externas de OpenAI/Resend/Stripe no se entregan a CI; sus integraciones reales se comprueban localmente con datos ficticios y Stripe en pruebas. Los informes descargados están en `evidence/phase-7/ci`.
+
+No hay fallos funcionales reproducibles pendientes. Un intento local previo devolvió HTTP 503; el registro se conserva en `local-retry-failure.log`. La ejecución local posterior y la CI final pasan completas. Se ha cambiado el sondeo a consultas secuenciales para evitar acumulaciones, sin atribuirle la causa del 503.
+
+El análisis de imágenes no detecta avisos altos/críticos. Conserva la limitación conocida de inventario de PostgREST/Haskell; no equivale a una garantía de ausencia universal de vulnerabilidades. La revisión previa concluye **APTO CON OBSERVACIONES** (`security-review.md`).
+
+La foto original queda intacta y fuera del repositorio. La fase 7 no valida ni cobra un documento automáticamente: se ha aceptado únicamente Reus para comprobar el flujo, con saldo de 10 KC. La comprobación física de cámara y micrófono en el dispositivo de evaluación queda como verificación del dispositivo; sus archivos, transcripción y denegación de permisos están comprobados.

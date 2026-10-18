@@ -32,5 +32,10 @@
     "visibleFallback": "No s’ha pogut accedir al micròfon. Pots pujar un àudio o escriure les notes.",
     "pass": true
   },
-  "physicalCapture": "Not tested: camera or microphone permission granted. Audio file and photo upload tested instead."
+  "physicalCapture": "Not tested: camera or microphone permission granted. Audio file and photo upload tested instead.",
+  "privateSourceVisualReview": true,
+  "creditsAfterExtraction": 10,
+  "finalWebReloaded": true,
+  "finalTextSubmissionAndPolling": true,
+  "originalPhotoJobReviewed": "e457641e-921f-4e27-aabe-e4b02db866e6"
 }

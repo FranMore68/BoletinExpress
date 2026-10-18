@@ -1,0 +1,13 @@
+PASS rutas privadas y cuenta sin sesión bloqueadas
+PASS registro, reenvío, confirmación explícita y enlace de un uso
+PASS listas y documento ajeno aislados en BFF
+PASS origen, propietario, estado y saldo manipulados bloqueados
+PASS PDF privado, vista y descarga autenticadas
+PASS RLS directa y Storage rechazan acceso y cambios cruzados
+PASS límite de tres borradores concurrentes
+PASS recuperación restringida y cierre de sesiones anteriores
+PASS JWT revocado bloqueado por RLS durante su vigencia
+PASS cookies manipuladas y JWT caducado rechazados
+PASS cierre de sesión y acceso posterior bloqueado
+PASS intentos de acceso limitados en servidor
+12 comprobaciones de integración superadas.

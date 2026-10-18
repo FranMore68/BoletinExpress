@@ -1,0 +1,9 @@
+PASS perfil persistente tras cerrar sesión, conflicto controlado y dos cuentas separadas
+PASS dos BRIE copian el perfil; actualizarlo solo afecta a documentos nuevos
+PASS correcciones propias y vaciados se conservan; revisiones obsoletas y escrituras ajenas rechazadas
+PASS RLS y permisos directos impiden alterar perfiles, cola y PDF desde el cliente
+PASS cola deduplica peticiones concurrentes; PDF completo de dos páginas y hash verificados; descarga privada
+PASS borrador incompleto guardado y generado sin inventar datos; No y cero conservados
+PASS editar invalida el PDF anterior; texto que no cabe falla sin recortar y se recupera tras corregirlo
+PASS el worker recupera una concesión caducada; rechaza el resultado antiguo y reintenta sin duplicar el PDF
+8 grupos de fase 4 superados.
