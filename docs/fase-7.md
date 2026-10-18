@@ -16,7 +16,7 @@ Máximos por documento: diez extracciones, cinco fotos y cinco audios. Por cuent
 
 La reserva usa una función con rol específico, sesión confirmada, bloqueo por cuenta y documento. Authenticated solo puede leer sus trabajos vivos y ejecutar operaciones limitadas. No puede crear cuotas ni cambiar resultados, propietarios o estados. Fuentes en bucket privado, sin reemplazo ni enlaces firmados. Su consulta pasa por una ruta autenticada con comprobación de propietario y vigencia.
 
-El primer texto o archivo guardado inicia las 24 horas. Los sondeos automáticos no cuentan como regreso. PDF e IA comparten exclusión persistente: un único trabajo pesado simultáneo. Validar elimina trabajos, texto, transcripciones y propuestas, y encola el borrado físico de las fuentes. El vencimiento también las elimina. La reserva mínima sin contenido se conserva para impedir reinicios de cuota; se limpia cuando ya no existe el documento y han pasado dos días. El PDF final mantiene la conservación de la fase 8.
+El primer texto o archivo guardado inicia las 24 horas. Los sondeos automáticos no cuentan como regreso. Se realizan de uno en uno, con cinco segundos de espera después de cada respuesta, para evitar acumular consultas lentas. PDF e IA comparten exclusión persistente: un único trabajo pesado simultáneo. Validar elimina trabajos, texto, transcripciones y propuestas, y encola el borrado físico de las fuentes. El vencimiento también las elimina. La reserva mínima sin contenido se conserva para impedir reinicios de cuota; se limpia cuando ya no existe el documento y han pasado dos días. El PDF final mantiene la conservación de la fase 8.
 
 ## Configuración y reproducción
 
@@ -34,12 +34,14 @@ Responses usa salida estructurada estricta y `store:false`. Esta opción no elim
 |---|---|---|
 | Acceso real a texto, imagen y Whisper | Superado | `evidence/phase-7/preflight/openai.json` |
 | Foto manuscrita aportada | Superado: propuestas pendientes y dudas señaladas | `evidence/phase-7/real-note/results.json` |
-| Aplicación selectiva en interfaz | Reus aceptado; los demás campos permanecen vacíos | `evidence/phase-7/real-note/propuestas-es.png` y registro UI |
-| Aislamiento, cuotas, concurrencia, reintentos y limpieza | Consultar informe final | `evidence/phase-7/integration.json` |
-| Texto CA y audio a través del worker | Consultar informe final | `evidence/phase-7/live-inputs.json` |
+| Aplicación selectiva en interfaz | Reus aceptado; los demás campos permanecen vacíos | `evidence/phase-7/real-note/revision-es.png` y `ui.json` |
+| Aislamiento, cuotas, concurrencia, reintentos y limpieza | Superado: 12 grupos locales | `evidence/phase-7/integration.json` |
+| Texto CA y audio a través del worker | Superado: valores parciales sin inventar mediciones | `evidence/phase-7/live-inputs.json` |
 | Instalación limpia, regresiones y análisis de imágenes | Consultar CI final | `evidence/phase-7/status.json` |
 
 La foto ha producido: calle incierta «C/ Pru[e]ba», número 7, piso/puerta inciertos «6-1º», Reus, tensión 400 y potencia «6'928» sin unidad. No ha completado resistencias, defectos ni firmas. No demuestra exactitud universal del reconocimiento; el electricista debe revisar cada dato.
+
+Se han revisado móvil (390 px), tablet (820 px), escritorio, ES/CA y navegación por teclado. No se observa desbordamiento horizontal. El usuario denegó el micrófono y se verificó el aviso y las alternativas por texto/archivo (`ui.json`, `microfono-denegado-ca.png`).
 
 La cámara y el micrófono dependen de los permisos y del hardware del dispositivo. Una prueba con archivo no acredita por sí sola la captura física de cámara/micrófono. El coste final debe consultarse en el panel del proveedor: el desfase observado entre Usage y las respuestas de API sigue sin causa confirmada.
 

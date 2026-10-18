@@ -1,0 +1,36 @@
+{
+  "at": "2026-10-18",
+  "browser": "IAB real local application",
+  "desktop": true,
+  "mobile": {
+    "requestedWidth": 390,
+    "clientWidth": 375,
+    "scrollWidth": 375,
+    "pass": true
+  },
+  "tablet": {
+    "requestedWidth": 820,
+    "clientWidth": 805,
+    "scrollWidth": 805,
+    "pass": true
+  },
+  "languages": [
+    "es",
+    "ca"
+  ],
+  "keyboard": "Tab from notes to photo input verified via accessibility focus",
+  "photoChooser": true,
+  "selectiveAcceptance": {
+    "field": "local_municipi",
+    "value": "REUS",
+    "revisionBefore": 0,
+    "revisionAfter": 1,
+    "othersUnchanged": true
+  },
+  "microphoneDenied": {
+    "userConfirmed": true,
+    "visibleFallback": "No s’ha pogut accedir al micròfon. Pots pujar un àudio o escriure les notes.",
+    "pass": true
+  },
+  "physicalCapture": "Not tested: camera or microphone permission granted. Audio file and photo upload tested instead."
+}

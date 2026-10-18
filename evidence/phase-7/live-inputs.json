@@ -1,23 +1,28 @@
 {
-  "at": "2026-10-18T18:05:32.357Z",
+  "at": "2026-10-18T18:10:29.188Z",
   "textAndAudio": [
     {
-      "id": "6f1d535a-ed20-42b1-b98c-801dd0a196ca",
+      "id": "b0d6b23e-136b-4fcd-ad51-5d1d001faf9b",
       "kind": "audio",
       "state": "ready",
       "result": {
-        "fields": [],
-        "issues": [
-          "Solo se indica que el titular es ficticio y que la instalación está en Barcelona; no se aportan datos suficientes para completar ningún campo del catálogo."
-        ]
+        "fields": [
+          {
+            "key": "local_municipi",
+            "value": "Barcelona",
+            "evidence": "«La instalación está en Barcelona.»",
+            "uncertain": false
+          }
+        ],
+        "issues": []
       },
       "transcription": "Prueba ficticia de Boletín Express. El titular es cliente ficticio. La instalación está en Barcelona.",
       "error": null,
       "attempts": 1,
-      "created_at": "2026-10-18T18:05:22.642034+00:00"
+      "created_at": "2026-10-18T18:10:14.661701+00:00"
     },
     {
-      "id": "d8b6f735-ff40-42db-b3c6-c57c64478276",
+      "id": "7b635352-cc6a-416e-9dee-78a7483c31db",
       "kind": "text",
       "state": "ready",
       "result": {
@@ -25,31 +30,31 @@
           {
             "key": "local_municipi",
             "value": "Reus",
-            "evidence": "Municipi: Reus.",
+            "evidence": "«Municipi: Reus»",
             "uncertain": false
           },
           {
             "key": "tensio_actual",
-            "value": "400 V",
-            "evidence": "Tensió actual 400 V.",
+            "value": "400",
+            "evidence": "«Tensió actual 400 V»",
             "uncertain": false
           },
           {
             "key": "potencia_maxima",
-            "value": "6,928 kW",
-            "evidence": "Potència màxima 6,928 kW.",
+            "value": "6,928",
+            "evidence": "«Potència màxima 6,928 kW»",
             "uncertain": false
           }
         ],
         "issues": [
-          "No es proposa cap valor per a la resistència de terra: «No tinc cap mesura de terra».",
-          "«La nota diu tot OK» no aporta mesures ni permet inferir verificacions, resistències o absència de defectes."
+          "No s’aporta cap mesura de resistència de terra: no es pot proposar aquest valor.",
+          "«Tot OK» no acredita mesures, verificacions ni absència de defectes."
         ]
       },
       "transcription": null,
       "error": null,
       "attempts": 1,
-      "created_at": "2026-10-18T18:05:17.545178+00:00"
+      "created_at": "2026-10-18T18:10:13.879459+00:00"
     }
   ]
 }

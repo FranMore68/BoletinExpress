@@ -1,0 +1,28 @@
+{
+  "phase": 7,
+  "implemented": true,
+  "acceptedByUser": false,
+  "technicalClosure": false,
+  "date": "2026-10-18",
+  "codeCommit": "a71f0ace7866e2aa4947b373e813c706d4371c93",
+  "ciRun": 39152654668,
+  "ciStatus": "in_progress",
+  "appTests": 37,
+  "realPhoto": {
+    "pass": true,
+    "uploadBytes": 412020,
+    "inputTokens": 4262,
+    "outputTokens": 284,
+    "originalPreserved": true,
+    "automaticFormChanges": false,
+    "selectiveAcceptance": "Only local_municipi accepted in UI"
+  },
+  "pending": [
+    "Clean CI and image scans",
+    "Microphone denial confirmation / physical capture on evaluation device"
+  ],
+  "knownIssue": "One local integration attempt returned HTTP 503; retained in local-retry-failure.log; cause unconfirmed.",
+  "localIntegrationGroups": 12,
+  "localIntegrationPass": true,
+  "realTextAndAudioPass": true
+}

@@ -1,0 +1,13 @@
+PASS sesión, origen, formato y duración real se comprueban antes de consumir cuota
+PASS seis solicitudes concurrentes crean un único trabajo y una única cuota; el primer dato inicia el plazo
+PASS RLS aísla resultados y clientes no crean cuotas, alteran trabajos ni suplantan al worker
+PASS revisión explícita y versión exacta: no sobrescribe valores manuales, vaciados, propuestas dudosas ni campos ya aceptados
+PASS cinco fotos por documento, origen privado y autenticado; otra cuenta, reemplazos y enlaces firmados bloqueados
+PASS fallo de proveedor e imagen ilegible recuperables; reintento del mismo trabajo no vuelve a consumir cuota
+PASS el adaptador y la aceptación de propuestas funcionan también con el CIE y su esquema propio
+PASS los trabajos PDF y de IA comparten exclusión: solo se reclama un trabajo pesado simultáneo
+PASS cinco minutos diarios de audio se aplican entre documentos y no dependen de datos declarados por el navegador
+PASS cinco audios y diez extracciones por documento se conservan aunque cambie el día
+PASS diez extracciones diarias entre documentos; el reloj documental no reinicia la cuota real ni permite operar sobre borradores vencidos
+PASS cerrar el documento retira resultados, texto y transcripciones, encola las fotos para borrado y conserva solo los contadores mínimos
+12 grupos de fase 7 superados.

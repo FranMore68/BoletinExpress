@@ -153,11 +153,22 @@ export function ExtractionPanel({
   );
   useEffect(() => {
     if (!pending) return;
-    const id = setInterval(
-      () => refresh().catch((e) => setError(errorKey(e))),
-      2500,
-    );
-    return () => clearInterval(id);
+    let active = true;
+    let timer: ReturnType<typeof setTimeout>;
+    const poll = async () => {
+      try {
+        await refresh();
+      } catch (e) {
+        if (active) setError(errorKey(e));
+      } finally {
+        if (active) timer = setTimeout(poll, 5000);
+      }
+    };
+    timer = setTimeout(poll, 5000);
+    return () => {
+      active = false;
+      clearTimeout(timer);
+    };
   }, [pending, refresh]);
   const blocked = (p: Proposal) =>
     manual.includes(p.key) ||

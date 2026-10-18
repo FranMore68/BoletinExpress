@@ -6,7 +6,7 @@ Hallazgos: no se han detectado problemas altos o críticos en la revisión del c
 
 Comprobaciones: identidad y estado en cada operación; rol exclusivo de reserva; bloqueo por cuenta/documento; límites calculados en servidor; UUID y hash estables; protección de campos editados/vaciados; aplicación vinculada a revisión; ruta privada sin firma reutilizable; borrado de trabajos y fuentes al cerrar; cuotas conservadas sin contenido. Los logs no imprimen claves, documentos ni respuestas. La foto original queda fuera del repositorio.
 
-Correcciones realizadas: optimización local de fotografías para respetar los 2 MiB de Storage, protección adicional de potencia sin unidad y de «Todo OK», impedir edición durante la aplicación de propuestas y cuotas ancladas al día UTC real.
+Correcciones realizadas: optimización local de fotografías para respetar los 2 MiB de Storage, protección adicional de potencia sin unidad y de «Todo OK», impedir edición durante la aplicación de propuestas y cuotas ancladas al día UTC real y sondeo secuencial sin acumulación de peticiones.
 
 Riesgo: piloto local con información ficticia y revisión obligatoria; pendiente de resultados finales de instalación limpia y análisis de imágenes antes del cierre.
 

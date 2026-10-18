@@ -1,1 +1,22 @@
-{"job": "e457641e-921f-4e27-aabe-e4b02db866e6", "mime": "image/jpeg", "bytes": "412020", "usage": {"requestId": "req_b47020e7117e4a81a3472f564f72b73e", "audioRequest": null, "input_tokens": 4262, "total_tokens": 4546, "output_tokens": 284, "input_tokens_details": {"cached_tokens": 0, "cache_write_tokens": 4259}, "output_tokens_details": {"reasoning_tokens": 0}}}
+{
+  "job": "e457641e-921f-4e27-aabe-e4b02db866e6",
+  "mime": "image/jpeg",
+  "bytes": "412020",
+  "usage": {
+    "requestId": "req_b47020e7117e4a81a3472f564f72b73e",
+    "audioRequest": null,
+    "input_tokens": 4262,
+    "total_tokens": 4546,
+    "output_tokens": 284,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 4259
+    },
+    "output_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  },
+  "originalBytes": 2632363,
+  "originalSha256": "cab3914f5cf3546e780ad8663674a7a5b01621a5e708aee4a2484fa99bc14c5b",
+  "originalModified": false
+}

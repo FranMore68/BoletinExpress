@@ -1,6 +1,8 @@
 {
-  "pass": false,
-  "complete": false,
+  "pass": true,
+  "complete": true,
+  "groups": 12,
+  "transport": "SQL worker fixtures; real Auth/PostgreSQL/Storage and web API; no external model calls",
   "results": [
     {
       "test": "sesión, origen, formato y duración real se comprueban antes de consumir cuota",
@@ -12,6 +14,42 @@
     },
     {
       "test": "RLS aísla resultados y clientes no crean cuotas, alteran trabajos ni suplantan al worker",
+      "pass": true
+    },
+    {
+      "test": "revisión explícita y versión exacta: no sobrescribe valores manuales, vaciados, propuestas dudosas ni campos ya aceptados",
+      "pass": true
+    },
+    {
+      "test": "cinco fotos por documento, origen privado y autenticado; otra cuenta, reemplazos y enlaces firmados bloqueados",
+      "pass": true
+    },
+    {
+      "test": "fallo de proveedor e imagen ilegible recuperables; reintento del mismo trabajo no vuelve a consumir cuota",
+      "pass": true
+    },
+    {
+      "test": "el adaptador y la aceptación de propuestas funcionan también con el CIE y su esquema propio",
+      "pass": true
+    },
+    {
+      "test": "los trabajos PDF y de IA comparten exclusión: solo se reclama un trabajo pesado simultáneo",
+      "pass": true
+    },
+    {
+      "test": "cinco minutos diarios de audio se aplican entre documentos y no dependen de datos declarados por el navegador",
+      "pass": true
+    },
+    {
+      "test": "cinco audios y diez extracciones por documento se conservan aunque cambie el día",
+      "pass": true
+    },
+    {
+      "test": "diez extracciones diarias entre documentos; el reloj documental no reinicia la cuota real ni permite operar sobre borradores vencidos",
+      "pass": true
+    },
+    {
+      "test": "cerrar el documento retira resultados, texto y transcripciones, encola las fotos para borrado y conserva solo los contadores mínimos",
       "pass": true
     }
   ]
