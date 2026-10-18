@@ -45,10 +45,17 @@ actualización de estado. No cambia la lógica de negocio ni los SQL existentes.
 
 Conservar las anulaciones de claves al guardar el Compose final. Revisar el archivo
 generado por Coolify y comprobar variables efectivas sin imprimir valores. Confirmar
-privacidad de paquetes, acceso de lectura y secreto propio del webhook Stripe de pruebas.
+privacidad de paquetes, descarga con configuración Docker temporal y secreto
+propio del webhook Stripe de pruebas. No añadir un login global a Coolify.
 Completar CI, análisis de imágenes y recorrido remoto antes de aceptar la fase.
 
 Riesgo: el código y la configuración pueden versionarse; el despliegue permanece
 bloqueado por condiciones operativas aún no verificadas.
+
+
+El cargador valida el ámbito de las nueve imágenes antes de pedir credenciales,
+rechaza repositorios ajenos y exige Linux x86_64. Pruebas con manifiesto ficticio
+válido y repositorio ajeno: superadas, sin red ni credenciales. Las diez entradas
+Compose tienen pull_policy never. Descarga real y arranque remoto pendientes.
 
 APTO CON OBSERVACIONES

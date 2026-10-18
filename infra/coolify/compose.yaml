@@ -2,6 +2,7 @@
 services:
   web:
     image: "${BE_IMAGE_WEB:?}"
+    pull_policy: never
     restart: unless-stopped
     mem_limit: 512m
     cpus: 0.28
@@ -54,6 +55,7 @@ services:
         condition: service_healthy
   worker:
     image: "${BE_IMAGE_WORKER:?}"
+    pull_policy: never
     restart: unless-stopped
     mem_limit: 256m
     cpus: 0.25
@@ -178,6 +180,7 @@ services:
       - http://127.0.0.1:9999/health
       timeout: 5s
     image: "${BE_IMAGE_AUTH:?}"
+    pull_policy: never
     logging:
       driver: json-file
       options:
@@ -230,6 +233,7 @@ services:
       - http://127.0.0.1:8000/health
       timeout: 3s
     image: "${BE_IMAGE_GATEWAY:?}"
+    pull_policy: never
     logging:
       driver: json-file
       options:
@@ -274,7 +278,8 @@ services:
       OPENAI_API_KEY: disabled
       STRIPE_SECRET_KEY: disabled
       STRIPE_WEBHOOK_SECRET: disabled
-    image: axllent/mailpit:v1.31.6
+    image: "${BE_IMAGE_MAIL:?}"
+    pull_policy: never
     logging:
       driver: json-file
       options:
@@ -329,6 +334,7 @@ services:
       - localhost
       timeout: 5s
     image: "${BE_IMAGE_POSTGRES:?}"
+    pull_policy: never
     logging:
       driver: json-file
       options:
@@ -373,7 +379,8 @@ services:
       OPENAI_API_KEY: disabled
       STRIPE_SECRET_KEY: disabled
       STRIPE_WEBHOOK_SECRET: disabled
-    image: postgrest/postgrest:v14.17
+    image: "${BE_IMAGE_REST:?}"
+    pull_policy: never
     logging:
       driver: json-file
       options:
@@ -433,6 +440,7 @@ services:
       - http://127.0.0.1:5000/status
       timeout: 5s
     image: "${BE_IMAGE_STORAGE:?}"
+    pull_policy: never
     logging:
       driver: json-file
       options:
@@ -454,6 +462,7 @@ services:
     - ALL
     cpus: 0.01
     image: "${BE_IMAGE_TEMPLATES:?}"
+    pull_policy: never
     logging:
       driver: json-file
       options:
@@ -482,6 +491,7 @@ services:
       STRIPE_WEBHOOK_SECRET: disabled
   migrate:
     image: "${BE_IMAGE_POSTGRES:?}"
+    pull_policy: never
     restart: 'no'
     mem_limit: 64m
     cpus: 0.02

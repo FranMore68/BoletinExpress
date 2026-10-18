@@ -37,6 +37,11 @@ assert.equal(services.length, 10);
 let memory = 0;
 let cpu = 0;
 for (const [name, service] of services) {
+  assert.equal(
+    service.pull_policy,
+    "never",
+    `${name}: imágenes precargadas sin login global`,
+  );
   assert(
     !service.build && !service.ports && !service.container_name,
     `${name}: sin compilación, puertos del host ni nombres globales`,

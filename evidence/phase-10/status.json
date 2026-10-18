@@ -18,11 +18,13 @@
   },
   "pending": [
     "Publicar imágenes verificadas fuera del VPS",
-    "Configurar lectura privada del registro",
+    "Precargar imágenes con acceso temporal exclusivo",
     "Cargar variables y verificar el entorno efectivo remoto",
     "Dominio HTTPS y webhook Stripe test",
     "Comprobación del entorno efectivo remoto",
     "Recorrido remoto y prueba de carga 600 segundos"
   ],
-  "persistedCredentialMasks": 107
+  "persistedCredentialMasks": 107,
+  "privateRegistryAccess": "Temporal Docker configuration, no global login",
+  "autoPullDisabled": true
 }

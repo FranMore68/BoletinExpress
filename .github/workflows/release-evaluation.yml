@@ -52,6 +52,12 @@ jobs:
             key=$(printf '%s' "$service" | tr '[:lower:]' '[:upper:]')
             printf 'BE_IMAGE_%s=%s\n' "$key" "$digest" >> evidence/phase-10/release/images.env.example
           done
+          for service in rest mail; do
+            if [ "$service" = rest ]; then image=postgrest/postgrest:v14.17; else image=axllent/mailpit:v1.31.6; fi
+            digest=$(docker image inspect "$image" --format '{{index .RepoDigests 0}}')
+            key=$(printf '%s' "$service" | tr '[:lower:]' '[:upper:]')
+            printf 'BE_IMAGE_%s=%s\n' "$key" "$digest" >> evidence/phase-10/release/images.env.example
+          done
       - if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:

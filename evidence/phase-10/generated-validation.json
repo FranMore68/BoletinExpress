@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-19",
+  "services": 10,
+  "credentialMasks": 107,
+  "hostPorts": 0,
+  "publicProxyRoutes": 0,
+  "memoryMiB": 3072,
+  "cpus": 1,
+  "onlyExtraNetwork": "hepqrz8hrz58omwradhcvzgj (red exclusiva del recurso)",
+  "pass": true,
+  "remoteRuntimeVerified": false,
+  "autoPullDisabledForAllServices": true
+}

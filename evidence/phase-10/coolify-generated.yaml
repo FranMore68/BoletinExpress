@@ -1,6 +1,7 @@
 services:
   web:
     image: '${BE_IMAGE_WEB:?}'
+    pull_policy: never
     restart: unless-stopped
     mem_limit: 512m
     cpus: 0.28
@@ -84,6 +85,7 @@ services:
       - .env
   worker:
     image: '${BE_IMAGE_WORKER:?}'
+    pull_policy: never
     restart: unless-stopped
     mem_limit: 256m
     cpus: 0.25
@@ -253,6 +255,7 @@ services:
         - 'http://127.0.0.1:9999/health'
       timeout: 5s
     image: '${BE_IMAGE_AUTH:?}'
+    pull_policy: never
     logging:
       driver: json-file
       options:
@@ -335,6 +338,7 @@ services:
         - 'http://127.0.0.1:8000/health'
       timeout: 3s
     image: '${BE_IMAGE_GATEWAY:?}'
+    pull_policy: never
     logging:
       driver: json-file
       options:
@@ -410,7 +414,8 @@ services:
       SERVICE_NAME_STORAGE: storage
       SERVICE_NAME_TEMPLATES: templates
       SERVICE_NAME_MIGRATE: migrate
-    image: 'axllent/mailpit:v1.31.6'
+    image: '${BE_IMAGE_MAIL:?}'
+    pull_policy: never
     logging:
       driver: json-file
       options:
@@ -495,6 +500,7 @@ services:
         - localhost
       timeout: 5s
     image: '${BE_IMAGE_POSTGRES:?}'
+    pull_policy: never
     logging:
       driver: json-file
       options:
@@ -572,7 +578,8 @@ services:
       SERVICE_NAME_STORAGE: storage
       SERVICE_NAME_TEMPLATES: templates
       SERVICE_NAME_MIGRATE: migrate
-    image: 'postgrest/postgrest:v14.17'
+    image: '${BE_IMAGE_REST:?}'
+    pull_policy: never
     logging:
       driver: json-file
       options:
@@ -664,6 +671,7 @@ services:
         - 'http://127.0.0.1:5000/status'
       timeout: 5s
     image: '${BE_IMAGE_STORAGE:?}'
+    pull_policy: never
     logging:
       driver: json-file
       options:
@@ -704,6 +712,7 @@ services:
       - ALL
     cpus: 0.01
     image: '${BE_IMAGE_TEMPLATES:?}'
+    pull_policy: never
     logging:
       driver: json-file
       options:
@@ -762,6 +771,7 @@ services:
       - .env
   migrate:
     image: '${BE_IMAGE_POSTGRES:?}'
+    pull_policy: never
     restart: 'no'
     mem_limit: 64m
     cpus: 0.02

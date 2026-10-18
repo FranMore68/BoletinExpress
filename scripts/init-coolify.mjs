@@ -73,6 +73,8 @@ const values = {
       "STORAGE",
       "GATEWAY",
       "TEMPLATES",
+      "REST",
+      "MAIL",
     ].map((n) => [`BE_IMAGE_${n}`, ""]),
   ),
 };

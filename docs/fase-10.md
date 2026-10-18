@@ -16,7 +16,9 @@ Un servicio Docker Compose vacío: `boletinexpress-evaluacion`, UUID
 `hepqrz8hrz58omwradhcvzgj`. Creado dentro del proyecto autorizado, sin arrancarlo.
 Fuente: `infra/coolify/compose.yaml`. No usa archivos locales del Mac ni compilación
 en el VPS. Las siete imágenes propias se indicarán por digest tras su publicación.
-PostgREST y Mailpit conservan las versiones ya evaluadas.
+PostgREST y Mailpit conservan las versiones ya evaluadas, también fijadas por digest.
+Los diez componentes tienen `pull_policy: never`: arrancan con las imágenes
+precargadas y no requieren credenciales de registro en el arranque de Coolify.
 
 Nueve servicios permanentes y un auxiliar `migrate` de una sola ejecución.
 Este último reutiliza la imagen PostgreSQL, espera a Auth y Storage y aplica las
@@ -75,7 +77,7 @@ No muestra valores en terminal. No pegar el contenido en el chat.
 
 Quedan vacíos hasta configurarlos:
 
-- `BE_IMAGE_*`: digests de las siete imágenes publicadas.
+- `BE_IMAGE_*`: digests de las siete imágenes publicadas y las dos imágenes upstream.
 - `STRIPE_WEBHOOK_SECRET`: secreto del nuevo endpoint HTTPS; **no reutilizar** el
   de Stripe CLI local. Endpoint `/api/payments/stripe`, evento
   `checkout.session.completed` en modo de pruebas.
@@ -90,23 +92,36 @@ presente en el worker.
 Workflow manual `.github/workflows/release-evaluation.yml`: requiere CI correcta
 para el mismo commit de main, construye linux/amd64 en GitHub, analiza nueve
 imágenes con Trivy y solo publica las siete propias si no detecta avisos HIGH o
-CRITICAL. Produce `images.env.example` con referencias por digest y los informes.
+CRITICAL. Produce `images.env.example` con nueve referencias por digest y los informes.
 No se ha ejecutado todavía. El análisis conserva las limitaciones de inventario
 ya documentadas en la fase 7; no garantiza ausencia de toda vulnerabilidad.
 
 GHCR crea paquetes privados por defecto; comprobar su visibilidad y asociación
-con el repositorio privado BoletinExpress. Coolify necesitará acceso de lectura a
-esos paquetes. No introducir un token de escritura ni modificar credenciales de
-registro utilizadas por otros proyectos. Si se añade acceso, será exclusivo para
-BoletinExpress y debe revisarse en el punto de configuración.
+con el repositorio privado BoletinExpress. No registrar el token en los registros generales de Coolify: la implementación
+oficial usa `$HOME/.docker/config.json`, compartido por los despliegues del servidor.
+
+`scripts/pull-evaluation-images.py` recibe el manifiesto verificado, valida las
+nueve referencias exactas permitidas y exige digests SHA-256. En el VPS pide el
+token clásico `read:packages` por entrada oculta, inicia sesión con un directorio
+Docker temporal exclusivo y descarga las imágenes para linux/amd64. No lee ni
+escribe la configuración Docker global. El directorio de credenciales se retira
+al terminar, también ante fallos. Las imágenes upstream se descargan por digest,
+sin retaggear ni sustituir tags usados por otras aplicaciones.
+
+Uso en el VPS: `python3 pull-evaluation-images.py images.env.example`. En el Mac
+solo comprobar manifiesto con `--check-only`. No ejecutar la descarga antes de
+verificar CI y los análisis de esa entrega. En Coolify usar el arranque normal;
+no **Pull Latest Images & Restart**. Las imágenes faltantes deben causar un error,
+sin recurrir a un login global. La descarga real está pendiente.
 
 ## Secuencia pendiente
 
 1. Prueba local de arranque y migraciones superada; revisión de publicación.
 2. Publicar código y superar CI del commit concreto; ejecutar release y verificar
    informes, arquitectura y privacidad de los paquetes.
-3. Configurar lectura del registro, crear el recurso con el Compose y cargar sus
-   variables privadas sin mostrarlas. No reutilizar datos ni claves internas locales.
+3. Precargar las nueve imágenes con credenciales temporales exclusivas. El recurso
+   está creado; cargar sus variables privadas sin mostrarlas. No reutilizar datos
+   ni claves internas locales.
 4. Configurar dominio web `https://boletinexpress.moremaker3d.cloud` al puerto 3000,
    DNS y endpoint Stripe de pruebas. Revisar Deployable Compose antes del arranque.
 5. Arrancar exclusivamente este recurso y comprobar migraciones y HTTPS.
