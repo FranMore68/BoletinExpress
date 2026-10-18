@@ -1,6 +1,6 @@
 # Fase 9 — recargas de KC con Stripe en pruebas
 
-La fase 8 ha sido aceptada por el usuario. Se ha implementado la fase 9 para evaluación con datos ficticios. El cierre técnico está completado, incluidas las pruebas contra Stripe en sandbox. Queda pendiente la aceptación del usuario. La fase 7 sigue aplazada; no se ha iniciado el despliegue.
+La fase 8 ha sido aceptada por el usuario. Se ha implementado la fase 9 para evaluación con datos ficticios. El cierre técnico está completado, incluidas las pruebas contra Stripe en sandbox. Aceptada por el usuario el 18/10/2026; autoriza pasar a la fase 7. La fase 7 sigue aplazada; no se ha iniciado el despliegue.
 
 ## Comportamiento
 
@@ -90,7 +90,7 @@ El conjunto mantiene 3072 MiB y 1 CPU de límites configurados, incluido el list
 
 Para repetir el recorrido, entrar en una cuenta de evaluación, abrir cada pack y usar las tarjetas oficiales de pruebas, fecha futura y CVC ficticio. Comprobar saldo e historial después de cada caso. La página de retorno nunca es la prueba de pago: comprobar el abono persistido tras el webhook. No ejecutar `stripe trigger` como sustituto del recorrido, porque sus compras genéricas carecen de las referencias de BoletinExpress.
 
-La CI final ha superado también la construcción y el análisis del CLI aislado. Fallos funcionales pendientes detectados: ninguno. La revisión previa concluye **APTO CON OBSERVACIONES**; el detalle está en `evidence/phase-9/stripe-live/security-review.md`. La aceptación de esta fase queda pendiente del usuario, según el plan acordado. La fase 7 sigue sin iniciarse.
+La CI final ha superado también la construcción y el análisis del CLI aislado. Fallos funcionales pendientes detectados: ninguno. La revisión previa concluye **APTO CON OBSERVACIONES**; el detalle está en `evidence/phase-9/stripe-live/security-review.md`. El usuario acepta esta fase el 18/10/2026 y autoriza comenzar la fase 7. Se está preparando la configuración de acceso a OpenAI.
 
 ## Fuentes de la integración
 

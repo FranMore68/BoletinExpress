@@ -21,6 +21,7 @@ export function formPayload(
 }
 export function rpcFailure(error: { code?: string; message?: string }) {
   const key = error.message;
+  if (error.code === "PT400") throw new AccessError(400, "input");
   if (error.code === "PT410") throw new AccessError(410, "expired");
   if (error.code === "PT409") throw new AccessError(409, "conflict");
   if (key === "not_found") throw new AccessError(404, "not_found");

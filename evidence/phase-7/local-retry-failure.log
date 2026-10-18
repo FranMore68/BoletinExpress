@@ -1,0 +1,24 @@
+PASS sesión, origen, formato y duración real se comprueban antes de consumir cuota
+PASS seis solicitudes concurrentes crean un único trabajo y una única cuota; el primer dato inicia el plazo
+PASS RLS aísla resultados y clientes no crean cuotas, alteran trabajos ni suplantan al worker
+PASS revisión explícita y versión exacta: no sobrescribe valores manuales, vaciados, propuestas dudosas ni campos ya aceptados
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: /api/private/documents/b5893c82-f270-42e5-9ad3-f2a77ce02d2d/extractions: unavailable
+
+503 !== 202
+
+    at json (file:///Volumes/SSD_Ugreen/001.MasterIA/Hackathones/HackathonVibecoding_e7/BoletinExpress/scripts/auth-test-client.mjs:57:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async file:///Volumes/SSD_Ugreen/001.MasterIA/Hackathones/HackathonVibecoding_e7/BoletinExpress/scripts/test-phase7.mjs:308:20 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: 503,
+  expected: 202,
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v24.19.0

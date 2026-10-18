@@ -82,6 +82,15 @@ export async function accountRequest(path: string, body?: unknown) {
 export function errorKey(error: unknown): AuthKey {
   const key = error instanceof Error ? error.message : "unavailable";
   return [
+    "extraction_limit",
+    "audio_limit",
+    "ai_configuration",
+    "ai_permission",
+    "ai_quota",
+    "ai_transport",
+    "ai_input",
+    "ai_output",
+    "integrity",
     "payments_unavailable",
     "insufficient_credits",
     "review_invalid",

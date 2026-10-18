@@ -1,6 +1,8 @@
 import { createHash } from "node:crypto";
 import { readFile } from "node:fs/promises";
 import { createServer } from "node:http";
+import { sourceMedia } from "../shared/extraction/media.mjs";
+import { extractSource } from "../shared/extraction/openai.mjs";
 import { deliverDocument } from "./mail.mjs";
 
 const enabled = Boolean(
@@ -81,6 +83,66 @@ async function tick() {
     });
     if (deleted.ok || deleted.status === 404)
       await rpc("remove_obsolete_preview", { p_job: old.id });
+  }
+  const extraction = await rpc("claim_extraction");
+  if (extraction) {
+    let result = null,
+      error = null;
+    try {
+      let bytes;
+      if (extraction.object_path) {
+        const file = await storage(
+          `/object/authenticated/sources/${extraction.object_path}`,
+        );
+        if (!file.ok) throw Error("integrity");
+        bytes = Buffer.from(await file.arrayBuffer());
+        const media = sourceMedia(bytes, extraction.mime);
+        if (media.seconds !== extraction.seconds) throw Error("integrity");
+      } else bytes = Buffer.from(extraction.source_text);
+      if (
+        createHash("sha256").update(bytes).digest("hex") !== extraction.sha256
+      )
+        throw Error("integrity");
+      if (
+        !(await rpc("authorize_extraction", {
+          p_job: extraction.id,
+          p_claim: extraction.claim,
+        }))
+      )
+        return;
+      result = await extractSource(extraction.document_type, extraction, bytes);
+    } catch (e) {
+      error = [
+        "ai_configuration",
+        "ai_permission",
+        "ai_quota",
+        "ai_transport",
+        "ai_input",
+        "ai_output",
+      ].includes(e.message)
+        ? e.message
+        : "integrity";
+      console.error(
+        JSON.stringify({ event: "extraction_failed", reason: error }),
+      );
+    }
+    await rpc("finish_extraction", {
+      p_job: extraction.id,
+      p_claim: extraction.claim,
+      p_result: result
+        ? { fields: result.fields, issues: result.issues }
+        : null,
+      p_transcription: result?.transcription || null,
+      p_usage: result
+        ? {
+            ...result.usage,
+            requestId: result.requestId,
+            audioRequest: result.audioRequest,
+          }
+        : null,
+      p_error: error,
+    });
+    return;
   }
   const jobs = await rpc("claim_brie_job");
   const job = jobs[0];

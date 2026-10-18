@@ -1,5 +1,41 @@
 import type { Locale } from "./copy";
 export const authCopy = {
+  extraction_limit: [
+    "Has alcanzado el límite de fotos, audios o extracciones. Reintentar la misma operación no consume otra cuota.",
+    "Has arribat al límit de fotos, àudios o extraccions. Reintentar la mateixa operació no consumeix més quota.",
+  ],
+  audio_limit: [
+    "El audio debe durar como máximo 60 segundos.",
+    "L’àudio ha de durar com a màxim 60 segons.",
+  ],
+  ai_configuration: [
+    "La conexión de IA no está configurada.",
+    "La connexió d’IA no està configurada.",
+  ],
+  ai_permission: [
+    "La clave de IA no tiene acceso. Conservamos los datos para reintentar.",
+    "La clau d’IA no té accés. Conservem les dades per reintentar.",
+  ],
+  ai_quota: [
+    "El proveedor de IA ha limitado el uso o el saldo. Puedes reintentar más tarde.",
+    "El proveïdor d’IA ha limitat l’ús o el saldo. Pots reintentar més tard.",
+  ],
+  ai_transport: [
+    "No se ha podido completar la extracción. Puedes reintentar sin perder tus cambios.",
+    "No s’ha pogut completar l’extracció. Pots reintentar sense perdre els canvis.",
+  ],
+  ai_input: [
+    "El proveedor no ha podido leer esta fuente. Comprueba su formato o introduce los datos manualmente.",
+    "El proveïdor no ha pogut llegir aquesta font. Comprova el format o introdueix les dades manualment.",
+  ],
+  ai_output: [
+    "La extracción no es utilizable. Revisa la fuente o completa el formulario manualmente.",
+    "L’extracció no es pot utilitzar. Revisa la font o completa el formulari manualment.",
+  ],
+  integrity: [
+    "No se ha podido comprobar la integridad del archivo.",
+    "No s’ha pogut comprovar la integritat del fitxer.",
+  ],
   recharge: ["Recargar KC de prueba", "Recarrega KC de prova"],
   topupCredit: [
     "Recarga con Stripe en pruebas",

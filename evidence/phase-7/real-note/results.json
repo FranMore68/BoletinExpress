@@ -1,0 +1,79 @@
+{
+  "at": "2026-10-18T18:00:05.644Z",
+  "originalPreserved": true,
+  "document": "95667839-59e4-4e8f-aeb5-6188770343e1",
+  "noAutomaticFormChanges": true,
+  "extractions": [
+    {
+      "id": "e457641e-921f-4e27-aabe-e4b02db866e6",
+      "kind": "photo",
+      "state": "ready",
+      "result": {
+        "fields": [
+          {
+            "key": "local_carrer",
+            "value": "C/ Pru[e]ba",
+            "evidence": "«C/Pru[e]ba»",
+            "uncertain": true
+          },
+          {
+            "key": "local_numero",
+            "value": "7",
+            "evidence": "«7»",
+            "uncertain": false
+          },
+          {
+            "key": "local_pis",
+            "value": "6",
+            "evidence": "«6-1º»",
+            "uncertain": true
+          },
+          {
+            "key": "local_porta",
+            "value": "1º",
+            "evidence": "«6-1º»",
+            "uncertain": true
+          },
+          {
+            "key": "local_municipi",
+            "value": "REUS",
+            "evidence": "«REUS»",
+            "uncertain": false
+          },
+          {
+            "key": "tensio_actual",
+            "value": "400",
+            "evidence": "«Tensión 400»",
+            "uncertain": false
+          },
+          {
+            "key": "potencia_maxima",
+            "value": "6'928",
+            "evidence": "«MAX. 6'928»",
+            "uncertain": true
+          }
+        ],
+        "issues": [
+          "«C/Pru[e]ba» parece indicar una calle, pero la lectura del nombre no es completamente segura.",
+          "El identificador «6-1º» podría corresponder a piso y puerta; interpretación incierta.",
+          "«MAX. 6'928» aparece sin unidad; no se presupone kW.",
+          "«Todo OK» no aporta mediciones ni permite completar campos de verificación."
+        ]
+      },
+      "transcription": null,
+      "error": null,
+      "attempts": 1,
+      "created_at": "2026-10-18T17:59:35.144133+00:00"
+    },
+    {
+      "id": "25a4d3c6-8067-4163-ae24-d6a201d1d6fe",
+      "kind": "photo",
+      "state": "upload",
+      "result": null,
+      "transcription": null,
+      "error": null,
+      "attempts": 0,
+      "created_at": "2026-10-18T17:51:17.211873+00:00"
+    }
+  ]
+}

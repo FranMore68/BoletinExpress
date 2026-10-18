@@ -1,0 +1,25 @@
+{
+  "observedOn": "2026-10-18",
+  "projectName": "BoletinExpress-evaluacion",
+  "configuredKeyMatchesVisibleSuffix": true,
+  "allApiSourcesSelected": true,
+  "allApiKeysSelected": true,
+  "periodsChecked": [
+    "last_7_days",
+    "month_to_date"
+  ],
+  "dashboardRequests": 0,
+  "dashboardTokens": 0,
+  "dashboardSpend": "No data / $0.00",
+  "successfulGenerationRequestsInApiResponses": 2,
+  "apiInputTokens": 1141,
+  "apiOutputTokens": 64,
+  "causeConfirmed": false,
+  "possibleExplanation": "Retraso de agregacion, sin confirmar",
+  "audioPermissionSavedInUi": {
+    "Text-to-speech": "Request",
+    "Model capabilities": "Mixed"
+  },
+  "providerStillRejectsAudioScope": "api.model.audio.request",
+  "providerPermissionsModifiedByAssistant": false
+}

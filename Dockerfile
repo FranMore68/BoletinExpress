@@ -9,6 +9,7 @@ RUN npm ci --ignore-scripts
 FROM dependencies AS build
 COPY next.config.ts tsconfig.json next-env.d.ts postcss.config.mjs ./
 COPY src ./src
+COPY shared ./shared
 COPY public ./public
 COPY scripts/prepare-pdf-viewer.mjs ./scripts/prepare-pdf-viewer.mjs
 RUN npm run build

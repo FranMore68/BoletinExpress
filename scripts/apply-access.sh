@@ -42,3 +42,9 @@ if [ "$(docker compose --env-file .secrets/supabase.env -f infra/supabase/compos
 else
   docker compose --env-file .secrets/supabase.env -f infra/supabase/compose.yaml exec -T postgres psql -v ON_ERROR_STOP=1 -U supabase_admin -d postgres < infra/supabase/006-payments.sql
 fi
+
+if [ "$(docker compose --env-file .secrets/supabase.env -f infra/supabase/compose.yaml exec -T postgres psql -U supabase_admin -d postgres -tAc "select version from private.schema_migrations where version='007-extraction'" 2>/dev/null || true)" = "007-extraction" ]; then
+  echo '007-extraction ya aplicada'
+else
+  docker compose --env-file .secrets/supabase.env -f infra/supabase/compose.yaml exec -T postgres psql -v ON_ERROR_STOP=1 -U supabase_admin -d postgres < infra/supabase/007-extraction.sql
+fi

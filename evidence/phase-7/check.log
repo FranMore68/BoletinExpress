@@ -1,0 +1,69 @@
+
+> boletinexpress@0.1.0 check
+> npm run lint && npm run typecheck && npm test && npm run check:secrets
+
+
+> boletinexpress@0.1.0 lint
+> biome check .
+
+Checked 119 files in 177ms. No fixes applied.
+
+> boletinexpress@0.1.0 typecheck
+> next typegen && tsc --noEmit
+
+Generating route types...
+✓ Types generated successfully
+
+> boletinexpress@0.1.0 test
+> node --test tests/*.test.ts
+
+✔ las mutaciones requieren el origen propio y rechazan peticiones cruzadas (19.151916ms)
+✔ validación de credenciales, identificadores y tamaño del cuerpo (2.562584ms)
+✔ el permiso de recuperación se vincula a usuario y sesión (0.452083ms)
+✔ el acceso y almacenamiento tienen mensajes completos en ES y CA (0.122667ms)
+✔ admite el hash PKCE oficial sin aceptar formatos arbitrarios (1.950792ms)
+✔ todos los campos del BRIE coinciden con el inventario PDF aprobado (2.800542ms)
+✔ el formulario conserva No, cero y correcciones vaciadas (0.401417ms)
+✔ rechaza campos inventados, tipos incorrectos, opciones desconocidas y contenido excesivo (0.390041ms)
+✔ la plantilla privada es idéntica al original y la fuente al recurso de fase 0 (5.437417ms)
+✔ los 70 campos y las opciones CIE conservan el inventario aprobado y etiquetas ES/CA (3.893334ms)
+✔ las ramas y CUPS se excluyen al cambiar la selección sin borrar los valores locales (0.175375ms)
+✔ CIE admite borradores incompletos y cero; rechaza códigos postales, ramas y opciones incompatibles (0.312417ms)
+✔ el fondo CIE privado es idéntico al estático aprobado y los campos técnicos conservan unidades (5.638417ms)
+✔ el contrato SQL CIE coincide con las restricciones de entrada de los 70 campos (0.913084ms)
+✔ el comprobante vincula usuario, sesión, documento, revisión y PDF por 30 minutos (0.978917ms)
+✔ modificar cualquier contenido o firma del comprobante invalida la revisión (0.323625ms)
+✔ el cobro exige bytes íntegros, dos páginas y ausencia de formulario interactivo (10.925667ms)
+✔ las propuestas de ejemplo conservan cambios manuales, incluidos campos vaciados (0.963584ms)
+✔ el cierre de la demo es idempotente y bloquea cambios del ejemplo (0.1135ms)
+✔ la demo impide validar sin datos o con saldo simulado insuficiente (0.304083ms)
+✔ tres borradores activos y sus identificadores se mantienen coherentes al eliminar uno (0.391375ms)
+✔ cada mensaje dispone de ES y CA y conserva sus variables de interpolación (1.237417ms)
+✔ duración de audio comprobada por bytes: rechaza 61 s, cabecera falsa, estéreo y archivo vacío (15.020042ms)
+✔ propuestas: rechaza campos inventados, duplicados, tipos inválidos y conclusiones normativas (0.946958ms)
+✔ catálogos de IA derivados de los formularios aprobados y petición sin persistencia ni herramientas (1.748042ms)
+✔ potencia sin unidad queda pendiente y Todo OK no se transforma en mediciones (0.409625ms)
+✔ activación de Resend reversible, secretos privados, TLS y bloqueo de cuentas ficticias (135.778166ms)
+✔ Resend usa adjunto íntegro, destinatario fijado y la misma clave en reintentos (18.599417ms)
+✔ cuentas .invalid permanecen en Mailpit con Resend activo y sin credenciales externas en la petición (4.090208ms)
+✔ un hash incorrecto o configuración incompleta impiden el envío (7.242459ms)
+✔ Stripe signature: raw bytes, real clock, rotation and invalid signatures (1.386542ms)
+✔ Checkout: immutable server prices, fixed return origin and approved Stripe host (0.329708ms)
+✔ Payment retrieval: reject live sessions, wrong totals, products, quantities and missing payment (0.198709ms)
+✔ API transport: only test keys, pinned version, no redirect and idempotency (11.170583ms)
+✔ bloquea secretos y entornos privados antes de publicar (0.840291ms)
+✔ permite referencias a secretos pero no contraseñas incrustadas en URI (0.070834ms)
+✔ worker arranca sin credenciales, expone solo liveness y se detiene (58.246583ms)
+ℹ tests 37
+ℹ suites 0
+ℹ pass 37
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 297.77075
+
+> boletinexpress@0.1.0 check:secrets
+> node scripts/check-secrets.mjs
+
+Sin patrones de secretos detectados en 1075 archivos versionables.

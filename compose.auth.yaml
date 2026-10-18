@@ -2,6 +2,8 @@
 services:
   web:
     env_file:
+      - path: .secrets/extraction.env
+        required: false
       - .secrets/app.env
       - .secrets/credits.env
       - path: .secrets/payments.env
@@ -15,6 +17,8 @@ services:
   worker:
     env_file:
       - .secrets/worker.env
+      - path: .secrets/openai.env
+        required: false
       - path: .secrets/mail.env
         required: false
     environment:

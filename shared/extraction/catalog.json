@@ -1,0 +1,2119 @@
+{
+  "BRIE": [
+    {
+      "key": "activitat_anterior",
+      "label": [
+        "Actividad anterior",
+        "Activitat anterior"
+      ],
+      "section": "premises"
+    },
+    {
+      "key": "activitat_actual",
+      "label": [
+        "Actividad actual",
+        "Activitat actual"
+      ],
+      "section": "premises"
+    },
+    {
+      "key": "superficie",
+      "label": [
+        "Superficie (m²)",
+        "Superfície (m²)"
+      ],
+      "section": "premises"
+    },
+    {
+      "key": "local_carrer",
+      "label": [
+        "Calle o lugar",
+        "Carrer o indret"
+      ],
+      "section": "premises"
+    },
+    {
+      "key": "local_numero",
+      "label": [
+        "Número",
+        "Número"
+      ],
+      "section": "premises"
+    },
+    {
+      "key": "local_pis",
+      "label": [
+        "Piso",
+        "Pis"
+      ],
+      "section": "premises"
+    },
+    {
+      "key": "local_porta",
+      "label": [
+        "Puerta",
+        "Porta"
+      ],
+      "section": "premises"
+    },
+    {
+      "key": "local_municipi",
+      "label": [
+        "Municipio",
+        "Municipi"
+      ],
+      "section": "premises"
+    },
+    {
+      "key": "local_cp",
+      "label": [
+        "Código postal",
+        "Codi postal"
+      ],
+      "section": "premises"
+    },
+    {
+      "key": "titular_nom",
+      "label": [
+        "Nombre y apellidos del titular",
+        "Nom i cognoms del titular"
+      ],
+      "section": "holder"
+    },
+    {
+      "key": "titular_nif",
+      "label": [
+        "NIF del titular",
+        "NIF del titular"
+      ],
+      "section": "holder"
+    },
+    {
+      "key": "titular_domicili",
+      "label": [
+        "Domicilio del titular",
+        "Domicili del titular"
+      ],
+      "section": "holder"
+    },
+    {
+      "key": "titular_municipi",
+      "label": [
+        "Municipio del titular",
+        "Municipi del titular"
+      ],
+      "section": "holder"
+    },
+    {
+      "key": "titular_telefon",
+      "label": [
+        "Teléfono del titular",
+        "Telèfon del titular"
+      ],
+      "section": "holder"
+    },
+    {
+      "key": "titular_cp",
+      "label": [
+        "Código postal del titular",
+        "Codi postal del titular"
+      ],
+      "section": "holder"
+    },
+    {
+      "key": "treball",
+      "label": [
+        "Trabajo realizado",
+        "Treball realitzat"
+      ],
+      "section": "technical",
+      "type": "multiline",
+      "max": 600
+    },
+    {
+      "key": "diferencial_1_nombre",
+      "label": [
+        "Diferencial 1: número",
+        "Diferencial 1: nombre"
+      ],
+      "section": "technical"
+    },
+    {
+      "key": "diferencial_1_in",
+      "label": [
+        "Diferencial 1: In (A)",
+        "Diferencial 1: In (A)"
+      ],
+      "section": "technical"
+    },
+    {
+      "key": "diferencial_1_sensibilitat",
+      "label": [
+        "Diferencial 1: sensibilidad (mA)",
+        "Diferencial 1: sensibilitat (mA)"
+      ],
+      "section": "technical"
+    },
+    {
+      "key": "diferencial_2_nombre",
+      "label": [
+        "Diferencial 2: número",
+        "Diferencial 2: nombre"
+      ],
+      "section": "technical"
+    },
+    {
+      "key": "diferencial_2_in",
+      "label": [
+        "Diferencial 2: In (A)",
+        "Diferencial 2: In (A)"
+      ],
+      "section": "technical"
+    },
+    {
+      "key": "diferencial_2_sensibilitat",
+      "label": [
+        "Diferencial 2: sensibilidad (mA)",
+        "Diferencial 2: sensibilitat (mA)"
+      ],
+      "section": "technical"
+    },
+    {
+      "key": "seccio_derivacio",
+      "label": [
+        "Sección derivación individual (mm²)",
+        "Secció derivació individual (mm²)"
+      ],
+      "section": "technical"
+    },
+    {
+      "key": "resistencia_terra",
+      "label": [
+        "Resistencia de tierra (Ω)",
+        "Resistència de terra (Ω)"
+      ],
+      "section": "technical"
+    },
+    {
+      "key": "resistencia_aillament",
+      "label": [
+        "Resistencia de aislamiento (Ω)",
+        "Resistència d’aïllament (Ω)"
+      ],
+      "section": "technical"
+    },
+    {
+      "key": "potencia_maxima",
+      "label": [
+        "Potencia máxima admisible (kW)",
+        "Potència màxima admissible (kW)"
+      ],
+      "section": "technical"
+    },
+    {
+      "key": "potencia_inicial",
+      "label": [
+        "Potencia inicial (kW)",
+        "Potència inicial (kW)"
+      ],
+      "section": "technical"
+    },
+    {
+      "key": "potencia_contractar",
+      "label": [
+        "Potencia a contratar (kW)",
+        "Potència a contractar (kW)"
+      ],
+      "section": "technical"
+    },
+    {
+      "key": "tensio_anterior",
+      "label": [
+        "Tensión anterior (V)",
+        "Tensió anterior (V)"
+      ],
+      "section": "technical"
+    },
+    {
+      "key": "tensio_actual",
+      "label": [
+        "Tensión actual (V)",
+        "Tensió actual (V)"
+      ],
+      "section": "technical"
+    },
+    {
+      "key": "intensitat_iga",
+      "label": [
+        "Intensidad IGA (A)",
+        "Intensitat IGA (A)"
+      ],
+      "section": "technical"
+    },
+    {
+      "key": "intensitat_icpm",
+      "label": [
+        "Intensidad ICPM (A)",
+        "Intensitat ICPM (A)"
+      ],
+      "section": "technical"
+    },
+    {
+      "key": "terra_existeix",
+      "label": [
+        "¿Existe tierra de protección?",
+        "Existeix terra de protecció?"
+      ],
+      "section": "technical",
+      "type": "boolean"
+    },
+    {
+      "key": "ascensor",
+      "label": [
+        "¿Alimenta un ascensor?",
+        "Alimenta un ascensor?"
+      ],
+      "section": "technical",
+      "type": "boolean"
+    },
+    {
+      "key": "potencia_ascensor",
+      "label": [
+        "Potencia del ascensor",
+        "Potència de l’ascensor"
+      ],
+      "section": "technical"
+    },
+    {
+      "key": "lloc_data",
+      "label": [
+        "Lugar y fecha (escritos por ti)",
+        "Lloc i data (escrits per tu)"
+      ],
+      "section": "declaration",
+      "max": 180
+    }
+  ],
+  "CIE": [
+    {
+      "key": "NomCognoms",
+      "label": [
+        "Nombre del titular",
+        "Nom del titular"
+      ],
+      "section": "holder",
+      "max": 180
+    },
+    {
+      "key": "NIF",
+      "label": [
+        "NIF/DNI del titular",
+        "NIF/DNI del titular"
+      ],
+      "section": "holder",
+      "max": 180
+    },
+    {
+      "key": "CBO_TipusVia",
+      "label": [
+        "Tipo de vía",
+        "Tipus de via"
+      ],
+      "section": "holder",
+      "max": 180,
+      "type": "enum",
+      "choices": [
+        {
+          "value": "0",
+          "label": [
+            "Sin indicar",
+            "Sense indicar"
+          ]
+        },
+        {
+          "value": "APA",
+          "label": [
+            "Apartamento",
+            "Apartament"
+          ]
+        },
+        {
+          "value": "AVI",
+          "label": [
+            "Avenida",
+            "Avinguda"
+          ]
+        },
+        {
+          "value": "BAI",
+          "label": [
+            "Bajada",
+            "Baixada"
+          ]
+        },
+        {
+          "value": "BRC",
+          "label": [
+            "Barranco",
+            "Barranc"
+          ]
+        },
+        {
+          "value": "BAR",
+          "label": [
+            "Barrio",
+            "Barri"
+          ]
+        },
+        {
+          "value": "BLO",
+          "label": [
+            "Bloque",
+            "Bloc"
+          ]
+        },
+        {
+          "value": "CAM",
+          "label": [
+            "Camino",
+            "Camí"
+          ]
+        },
+        {
+          "value": "CAR",
+          "label": [
+            "Calle",
+            "Carrer"
+          ]
+        },
+        {
+          "value": "CRO",
+          "label": [
+            "Callejón",
+            "Carreró"
+          ]
+        },
+        {
+          "value": "CRT",
+          "label": [
+            "Carretera",
+            "Carretera"
+          ]
+        },
+        {
+          "value": "CAS",
+          "label": [
+            "Casas",
+            "Cases"
+          ]
+        },
+        {
+          "value": "COL",
+          "label": [
+            "Colonia",
+            "Colònia"
+          ]
+        },
+        {
+          "value": "COS",
+          "label": [
+            "Cuesta",
+            "Costa"
+          ]
+        },
+        {
+          "value": "DIS",
+          "label": [
+            "Diseminado",
+            "Disseminat"
+          ]
+        },
+        {
+          "value": "EDI",
+          "label": [
+            "Edificio",
+            "Edifici"
+          ]
+        },
+        {
+          "value": "FAG",
+          "label": [
+            "Hayedo",
+            "Fageda"
+          ]
+        },
+        {
+          "value": "GLO",
+          "label": [
+            "Glorieta",
+            "Glorieta"
+          ]
+        },
+        {
+          "value": "GRV",
+          "label": [
+            "Gran Vía",
+            "Gran Via"
+          ]
+        },
+        {
+          "value": "GRU",
+          "label": [
+            "Grupo",
+            "Grup"
+          ]
+        },
+        {
+          "value": "LLO",
+          "label": [
+            "Lugar",
+            "Lloc"
+          ]
+        },
+        {
+          "value": "MER",
+          "label": [
+            "Mercado",
+            "Mercat"
+          ]
+        },
+        {
+          "value": "PAR",
+          "label": [
+            "Parque",
+            "Parc"
+          ]
+        },
+        {
+          "value": "PTD",
+          "label": [
+            "Partida",
+            "Partida"
+          ]
+        },
+        {
+          "value": "PTG",
+          "label": [
+            "Pasaje",
+            "Passatge"
+          ]
+        },
+        {
+          "value": "PAS",
+          "label": [
+            "Paseo",
+            "Passeig"
+          ]
+        },
+        {
+          "value": "PLA",
+          "label": [
+            "Plaza",
+            "Plaça"
+          ]
+        },
+        {
+          "value": "PCT",
+          "label": [
+            "Plazoleta",
+            "Placeta"
+          ]
+        },
+        {
+          "value": "POB",
+          "label": [
+            "Poblado",
+            "Poblat"
+          ]
+        },
+        {
+          "value": "POL",
+          "label": [
+            "Polígono",
+            "Polígon"
+          ]
+        },
+        {
+          "value": "PRO",
+          "label": [
+            "Prolongación",
+            "Prolongació"
+          ]
+        },
+        {
+          "value": "PUJ",
+          "label": [
+            "Subida",
+            "Pujada"
+          ]
+        },
+        {
+          "value": "RAM",
+          "label": [
+            "Rambla",
+            "Rambla"
+          ]
+        },
+        {
+          "value": "RON",
+          "label": [
+            "Ronda",
+            "Ronda"
+          ]
+        },
+        {
+          "value": "SEN",
+          "label": [
+            "Senda",
+            "Senda"
+          ]
+        },
+        {
+          "value": "TOR",
+          "label": [
+            "Torrente",
+            "Torrent"
+          ]
+        },
+        {
+          "value": "TRA",
+          "label": [
+            "Travesera",
+            "Travessera"
+          ]
+        },
+        {
+          "value": "TVS",
+          "label": [
+            "Travesía",
+            "Travessia"
+          ]
+        },
+        {
+          "value": "URB",
+          "label": [
+            "Urbanización",
+            "Urbanització"
+          ]
+        },
+        {
+          "value": "VIA",
+          "label": [
+            "Vía",
+            "Via"
+          ]
+        },
+        {
+          "value": "XAL",
+          "label": [
+            "Chalet",
+            "Xalet"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "TXT_NomVia",
+      "label": [
+        "Nombre de la vía",
+        "Nom de la via"
+      ],
+      "section": "holder",
+      "max": 180
+    },
+    {
+      "key": "TXT_Num",
+      "label": [
+        "Número",
+        "Número"
+      ],
+      "section": "holder",
+      "max": 180
+    },
+    {
+      "key": "TXT_Bloc",
+      "label": [
+        "Bloque",
+        "Bloc"
+      ],
+      "section": "holder",
+      "max": 180
+    },
+    {
+      "key": "TXT_Escala",
+      "label": [
+        "Escalera",
+        "Escala"
+      ],
+      "section": "holder",
+      "max": 180
+    },
+    {
+      "key": "TXT_Pis",
+      "label": [
+        "Piso",
+        "Pis"
+      ],
+      "section": "holder",
+      "max": 180
+    },
+    {
+      "key": "TXT_Porta",
+      "label": [
+        "Puerta",
+        "Porta"
+      ],
+      "section": "holder",
+      "max": 180
+    },
+    {
+      "key": "TXT_CodiPostal",
+      "label": [
+        "Código postal (cinco cifras)",
+        "Codi postal (cinc xifres)"
+      ],
+      "section": "holder",
+      "max": 5,
+      "postal": true
+    },
+    {
+      "key": "TXT_Poblacio",
+      "label": [
+        "Población",
+        "Població"
+      ],
+      "section": "holder",
+      "max": 180
+    },
+    {
+      "key": "TXT_Tel",
+      "label": [
+        "Teléfono",
+        "Telèfon"
+      ],
+      "section": "holder",
+      "max": 180
+    },
+    {
+      "key": "TXT_Correu",
+      "label": [
+        "Correo electrónico",
+        "Correu electrònic"
+      ],
+      "section": "holder",
+      "max": 180
+    },
+    {
+      "key": "CBO_TipusVia_3",
+      "label": [
+        "Tipo de vía",
+        "Tipus de via"
+      ],
+      "section": "premises",
+      "max": 180,
+      "type": "enum",
+      "choices": [
+        {
+          "value": "0",
+          "label": [
+            "Sin indicar",
+            "Sense indicar"
+          ]
+        },
+        {
+          "value": "APA",
+          "label": [
+            "Apartamento",
+            "Apartament"
+          ]
+        },
+        {
+          "value": "AVI",
+          "label": [
+            "Avenida",
+            "Avinguda"
+          ]
+        },
+        {
+          "value": "BAI",
+          "label": [
+            "Bajada",
+            "Baixada"
+          ]
+        },
+        {
+          "value": "BRC",
+          "label": [
+            "Barranco",
+            "Barranc"
+          ]
+        },
+        {
+          "value": "BAR",
+          "label": [
+            "Barrio",
+            "Barri"
+          ]
+        },
+        {
+          "value": "BLO",
+          "label": [
+            "Bloque",
+            "Bloc"
+          ]
+        },
+        {
+          "value": "CAM",
+          "label": [
+            "Camino",
+            "Camí"
+          ]
+        },
+        {
+          "value": "CAR",
+          "label": [
+            "Calle",
+            "Carrer"
+          ]
+        },
+        {
+          "value": "CRO",
+          "label": [
+            "Callejón",
+            "Carreró"
+          ]
+        },
+        {
+          "value": "CRT",
+          "label": [
+            "Carretera",
+            "Carretera"
+          ]
+        },
+        {
+          "value": "CAS",
+          "label": [
+            "Casas",
+            "Cases"
+          ]
+        },
+        {
+          "value": "COL",
+          "label": [
+            "Colonia",
+            "Colònia"
+          ]
+        },
+        {
+          "value": "COS",
+          "label": [
+            "Cuesta",
+            "Costa"
+          ]
+        },
+        {
+          "value": "DIS",
+          "label": [
+            "Diseminado",
+            "Disseminat"
+          ]
+        },
+        {
+          "value": "EDI",
+          "label": [
+            "Edificio",
+            "Edifici"
+          ]
+        },
+        {
+          "value": "FAG",
+          "label": [
+            "Hayedo",
+            "Fageda"
+          ]
+        },
+        {
+          "value": "GLO",
+          "label": [
+            "Glorieta",
+            "Glorieta"
+          ]
+        },
+        {
+          "value": "GRV",
+          "label": [
+            "Gran Vía",
+            "Gran Via"
+          ]
+        },
+        {
+          "value": "GRU",
+          "label": [
+            "Grupo",
+            "Grup"
+          ]
+        },
+        {
+          "value": "LLO",
+          "label": [
+            "Lugar",
+            "Lloc"
+          ]
+        },
+        {
+          "value": "MER",
+          "label": [
+            "Mercado",
+            "Mercat"
+          ]
+        },
+        {
+          "value": "PAR",
+          "label": [
+            "Parque",
+            "Parc"
+          ]
+        },
+        {
+          "value": "PTD",
+          "label": [
+            "Partida",
+            "Partida"
+          ]
+        },
+        {
+          "value": "PTG",
+          "label": [
+            "Pasaje",
+            "Passatge"
+          ]
+        },
+        {
+          "value": "PAS",
+          "label": [
+            "Paseo",
+            "Passeig"
+          ]
+        },
+        {
+          "value": "PLA",
+          "label": [
+            "Plaza",
+            "Plaça"
+          ]
+        },
+        {
+          "value": "PCT",
+          "label": [
+            "Plazoleta",
+            "Placeta"
+          ]
+        },
+        {
+          "value": "POB",
+          "label": [
+            "Poblado",
+            "Poblat"
+          ]
+        },
+        {
+          "value": "POL",
+          "label": [
+            "Polígono",
+            "Polígon"
+          ]
+        },
+        {
+          "value": "PRO",
+          "label": [
+            "Prolongación",
+            "Prolongació"
+          ]
+        },
+        {
+          "value": "PUJ",
+          "label": [
+            "Subida",
+            "Pujada"
+          ]
+        },
+        {
+          "value": "RAM",
+          "label": [
+            "Rambla",
+            "Rambla"
+          ]
+        },
+        {
+          "value": "RON",
+          "label": [
+            "Ronda",
+            "Ronda"
+          ]
+        },
+        {
+          "value": "SEN",
+          "label": [
+            "Senda",
+            "Senda"
+          ]
+        },
+        {
+          "value": "TOR",
+          "label": [
+            "Torrente",
+            "Torrent"
+          ]
+        },
+        {
+          "value": "TRA",
+          "label": [
+            "Travesera",
+            "Travessera"
+          ]
+        },
+        {
+          "value": "TVS",
+          "label": [
+            "Travesía",
+            "Travessia"
+          ]
+        },
+        {
+          "value": "URB",
+          "label": [
+            "Urbanización",
+            "Urbanització"
+          ]
+        },
+        {
+          "value": "VIA",
+          "label": [
+            "Vía",
+            "Via"
+          ]
+        },
+        {
+          "value": "XAL",
+          "label": [
+            "Chalet",
+            "Xalet"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "TXT_NomVia_3",
+      "label": [
+        "Nombre de la vía",
+        "Nom de la via"
+      ],
+      "section": "premises",
+      "max": 180
+    },
+    {
+      "key": "TXT_Num_3",
+      "label": [
+        "Número",
+        "Número"
+      ],
+      "section": "premises",
+      "max": 180
+    },
+    {
+      "key": "TXT_Bloc_3",
+      "label": [
+        "Bloque",
+        "Bloc"
+      ],
+      "section": "premises",
+      "max": 180
+    },
+    {
+      "key": "TXT_Escala_3",
+      "label": [
+        "Escalera",
+        "Escala"
+      ],
+      "section": "premises",
+      "max": 180
+    },
+    {
+      "key": "TXT_Pis_3",
+      "label": [
+        "Piso",
+        "Pis"
+      ],
+      "section": "premises",
+      "max": 180
+    },
+    {
+      "key": "TXT_Porta_3",
+      "label": [
+        "Puerta",
+        "Porta"
+      ],
+      "section": "premises",
+      "max": 180
+    },
+    {
+      "key": "TXT_CodiPostal_3",
+      "label": [
+        "Código postal (cinco cifras)",
+        "Codi postal (cinc xifres)"
+      ],
+      "section": "premises",
+      "max": 5,
+      "postal": true
+    },
+    {
+      "key": "TXT_Poblacio_3",
+      "label": [
+        "Población",
+        "Població"
+      ],
+      "section": "premises",
+      "max": 180
+    },
+    {
+      "key": "TXT_Tel_3",
+      "label": [
+        "Teléfono",
+        "Telèfon"
+      ],
+      "section": "premises",
+      "max": 180
+    },
+    {
+      "key": "TXT_Correu_3",
+      "label": [
+        "Correo electrónico",
+        "Correu electrònic"
+      ],
+      "section": "premises",
+      "max": 180
+    },
+    {
+      "key": "RB_TipusActuacio",
+      "label": [
+        "Tipo de actuación",
+        "Tipus d’actuació"
+      ],
+      "section": "classification",
+      "max": 180,
+      "type": "enum",
+      "choices": [
+        {
+          "value": "NOVA",
+          "label": [
+            "Nueva instalación",
+            "Nova instal·lació"
+          ]
+        },
+        {
+          "value": "AMPLIACIO",
+          "label": [
+            "Ampliación",
+            "Ampliació"
+          ]
+        },
+        {
+          "value": "MODIFICACIO",
+          "label": [
+            "Modificación",
+            "Modificació"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "TXT_CUPS",
+      "label": [
+        "CUPS (no se rellena en instalación nueva)",
+        "CUPS (no s’emplena en instal·lació nova)"
+      ],
+      "section": "classification",
+      "max": 180,
+      "condition": {
+        "key": "RB_TipusActuacio",
+        "not": [
+          "NOVA"
+        ]
+      }
+    },
+    {
+      "key": "DDLAmpliaMod",
+      "label": [
+        "¿La ampliación/modificación supera el 50 % de la potencia de la instalación?",
+        "L’ampliació/modificació supera el 50 % de la potència de la instal·lació?"
+      ],
+      "section": "classification",
+      "max": 180,
+      "type": "enum",
+      "choices": [
+        {
+          "value": "SI",
+          "label": [
+            "Sí",
+            "Sí"
+          ]
+        },
+        {
+          "value": "NO",
+          "label": [
+            "No",
+            "No"
+          ]
+        }
+      ],
+      "condition": {
+        "key": "RB_TipusActuacio",
+        "values": [
+          "AMPLIACIO",
+          "MODIFICACIO"
+        ]
+      }
+    },
+    {
+      "key": "RB_Requisits",
+      "label": [
+        "Requisitos administrativos",
+        "Requisits administratius"
+      ],
+      "section": "classification",
+      "max": 180,
+      "type": "enum",
+      "choices": [
+        {
+          "value": "P1",
+          "label": [
+            "Clase P1",
+            "Classe P1"
+          ]
+        },
+        {
+          "value": "P2",
+          "label": [
+            "Clase P2",
+            "Classe P2"
+          ]
+        },
+        {
+          "value": "MEMORIA",
+          "label": [
+            "Memoria técnica de diseño",
+            "Memòria tècnica de disseny"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "TXT_P1",
+      "label": [
+        "Supuesto de clase P1",
+        "Supòsit de classe P1"
+      ],
+      "section": "classification",
+      "max": 180,
+      "type": "enum",
+      "choices": [
+        {
+          "value": "a) Instal·lacions industrials amb una potència màxima admissible superior a 100 kW",
+          "label": [
+            "a) Instalaciones industriales con una potencia máxima admisible superior a 100 kW",
+            "a) Instal·lacions industrials amb una potència màxima admissible superior a 100 kW"
+          ]
+        },
+        {
+          "value": "b) Locals de pública concurrència",
+          "label": [
+            "b) Locales de pública concurrencia",
+            "b) Locals de pública concurrència"
+          ]
+        },
+        {
+          "value": "c) Locals amb risc d'incendi o explosió, de classe I, excepte aparcaments i estacionaments de menys de 25 places.",
+          "label": [
+            "c) Locales con riesgo de incendio o explosión, de clase I, excepto aparcamientos y estacionamientos de menos de 25 plazas.",
+            "c) Locals amb risc d'incendi o explosió, de classe I, excepte aparcaments i estacionaments de menys de 25 places."
+          ]
+        },
+        {
+          "value": "d) Locals mullats P > 25 kW",
+          "label": [
+            "d) Locales mojados P > 25 kW",
+            "d) Locals mullats P > 25 kW"
+          ]
+        },
+        {
+          "value": "e) Piscines P > 10 kW",
+          "label": [
+            "e) Piscinas P > 10 kW",
+            "e) Piscines P > 10 kW"
+          ]
+        },
+        {
+          "value": "f) Sales d'operacions quirúrgiques i sales d'intervenció",
+          "label": [
+            "f) Salas de operaciones quirúrgicas y salas de intervención",
+            "f) Sales d'operacions quirúrgiques i sales d'intervenció"
+          ]
+        },
+        {
+          "value": "g) Instal·lacions d'enllumenat exterior P>5kW",
+          "label": [
+            "g) Instalaciones de alumbrado exterior P>5kW",
+            "g) Instal·lacions d'enllumenat exterior P>5kW"
+          ]
+        },
+        {
+          "value": "h) Instal·lacions comunes d’edificis destinats a habitatges de 20 subministraments o més i/o més de 100 kW per CGP",
+          "label": [
+            "h) Instalaciones comunes de edificios destinados a viviendas de 20 suministros o más y/o más de 100 kW por CGP",
+            "h) Instal·lacions comunes d’edificis destinats a habitatges de 20 subministraments o més i/o més de 100 kW per CGP"
+          ]
+        },
+        {
+          "value": "i1) Instal·lacions corresponents a les infraestructures per a la recàrrega del vehicle elèctric (P>50 kW)",
+          "label": [
+            "i1) Instalaciones correspondientes a las infraestructuras para la recarga del vehículo eléctrico (P>50 kW)",
+            "i1) Instal·lacions corresponents a les infraestructures per a la recàrrega del vehicle elèctric (P>50 kW)"
+          ]
+        },
+        {
+          "value": "i2) Instal·lacions de recàrrega de vehicle elèctric ubicades a l'exterior (P>10kW)",
+          "label": [
+            "i2) Instalaciones de recarga de vehículo eléctrico ubicadas en el exterior (P>10kW)",
+            "i2) Instal·lacions de recàrrega de vehicle elèctric ubicades a l'exterior (P>10kW)"
+          ]
+        },
+        {
+          "value": "i3) Instal·lacions que incloguin estacions de recàrrega previstes pel mode de càrrega 4",
+          "label": [
+            "i3) Instalaciones que incluyan estaciones de recarga previstas para el modo de carga 4",
+            "i3) Instal·lacions que incloguin estacions de recàrrega previstes pel mode de càrrega 4"
+          ]
+        }
+      ],
+      "condition": {
+        "key": "RB_Requisits",
+        "values": [
+          "P1"
+        ]
+      }
+    },
+    {
+      "key": "TXT_P2",
+      "label": [
+        "Supuesto de clase P2",
+        "Supòsit de classe P2"
+      ],
+      "section": "classification",
+      "max": 180,
+      "type": "enum",
+      "choices": [
+        {
+          "value": "a) Instal·lacions corresponents a indústries, en general 20 kW>P<=100 kW",
+          "label": [
+            "a) Instalaciones correspondientes a industrias, en general 20 kW>P<=100 kW",
+            "a) Instal·lacions corresponents a indústries, en general 20 kW>P<=100 kW"
+          ]
+        },
+        {
+          "value": "b1) Locals humits, amb pols o amb risc de corrosió (P>10 kW)",
+          "label": [
+            "b1) Locales húmedos, con polvo o con riesgo de corrosión (P>10 kW)",
+            "b1) Locals humits, amb pols o amb risc de corrosió (P>10 kW)"
+          ]
+        },
+        {
+          "value": "b2) Bombes d’extracció o elevació d’aigua, siguin industrials o no (P > 10 kW)",
+          "label": [
+            "b2) Bombas de extracción o elevación de agua, sean industriales o no (P > 10 kW)",
+            "b2) Bombes d’extracció o elevació d’aigua, siguin industrials o no (P > 10 kW)"
+          ]
+        },
+        {
+          "value": "c1) Locals mullats (P > 10 kW)",
+          "label": [
+            "c1) Locales mojados (P > 10 kW)",
+            "c1) Locals mullats (P > 10 kW)"
+          ]
+        },
+        {
+          "value": "c2) Generadors i convertidors (P > 10 kW)",
+          "label": [
+            "c2) Generadores y convertidores (P > 10 kW)",
+            "c2) Generadors i convertidors (P > 10 kW)"
+          ]
+        },
+        {
+          "value": "c3) Conductors aïllats per caldejament, exclosos els habitatges (P > 10 kW i P<25 kW)",
+          "label": [
+            "c3) Conductores aislados para caldeo, excluidas las viviendas (P > 10 kW y P<25 kW)",
+            "c3) Conductors aïllats per caldejament, exclosos els habitatges (P > 10 kW i P<25 kW)"
+          ]
+        },
+        {
+          "value": "d1) Instal·lacions de caràcter temporal per a alimentació de maquinària d'obres de construcció (P > 50 kW)",
+          "label": [
+            "d1) Instalaciones de carácter temporal para alimentación de maquinaria de obras de construcción (P > 50 kW)",
+            "d1) Instal·lacions de caràcter temporal per a alimentació de maquinària d'obres de construcció (P > 50 kW)"
+          ]
+        },
+        {
+          "value": "d2) Instal·lacions de caràcter temporal en locals o emplaçaments oberts (P > 50 kW)",
+          "label": [
+            "d2) Instalaciones de carácter temporal en locales o emplazamientos abiertos (P > 50 kW)",
+            "d2) Instal·lacions de caràcter temporal en locals o emplaçaments oberts (P > 50 kW)"
+          ]
+        },
+        {
+          "value": "e) Edificis destinats a oficines, i locals comercials que no tinguin la consideració de pública concurrència amb més de 100 kW de potència per CGP",
+          "label": [
+            "e) Edificios destinados a oficinas, y locales comerciales que no tengan la consideración de pública concurrencia con más de 100 kW de potencia por CGP",
+            "e) Edificis destinats a oficines, i locals comercials que no tinguin la consideració de pública concurrència amb més de 100 kW de potència per CGP"
+          ]
+        },
+        {
+          "value": "f ) Les corresponents a habitatges unifamiliars P > 50 kW",
+          "label": [
+            "f ) Las correspondientes a viviendas unifamiliares P > 50 kW",
+            "f ) Les corresponents a habitatges unifamiliars P > 50 kW"
+          ]
+        },
+        {
+          "value": "g) Aparcaments o estacionaments que requereixen ventilació forçada (Menys de 25 places)",
+          "label": [
+            "g) Aparcamientos o estacionamientos que requieren ventilación forzada (Menos de 25 plazas)",
+            "g) Aparcaments o estacionaments que requereixen ventilació forçada (Menys de 25 places)"
+          ]
+        },
+        {
+          "value": "h) Aparcaments o estacionaments amb ventilació natural (Més de 5 places i menys de 25 places)",
+          "label": [
+            "h) Aparcamientos o estacionamientos con ventilación natural (Más de 5 plazas y menos de 25 plazas)",
+            "h) Aparcaments o estacionaments amb ventilació natural (Més de 5 places i menys de 25 places)"
+          ]
+        },
+        {
+          "value": "j1) Línies de baixa tensió amb suports comuns amb les d'alta tensió",
+          "label": [
+            "j1) Líneas de baja tensión con apoyos comunes con las de alta tensión",
+            "j1) Línies de baixa tensió amb suports comuns amb les d'alta tensió"
+          ]
+        },
+        {
+          "value": "j2) Màquines d'elevació i transport",
+          "label": [
+            "j2) Máquinas de elevación y transporte",
+            "j2) Màquines d'elevació i transport"
+          ]
+        },
+        {
+          "value": "j3) Instal·lacions que utilitzin tensions especials",
+          "label": [
+            "j3) Instalaciones que utilicen tensiones especiales",
+            "j3) Instal·lacions que utilitzin tensions especials"
+          ]
+        },
+        {
+          "value": "j4) Instal·lacions destinades a rètols lluminosos, llevat que es considerin instal·lacions de baixa tensió, segons el que estableix la ITC-BT 44",
+          "label": [
+            "j4) Instalaciones destinadas a rótulos luminosos, salvo que se consideren instalaciones de baja tensión, según lo establecido en la ITC-BT 44",
+            "j4) Instal·lacions destinades a rètols lluminosos, llevat que es considerin instal·lacions de baixa tensió, segons el que estableix la ITC-BT 44"
+          ]
+        },
+        {
+          "value": "j5) Tanques elèctriques",
+          "label": [
+            "j5) Vallas eléctricas",
+            "j5) Tanques elèctriques"
+          ]
+        },
+        {
+          "value": "n) Instal·lacions corresponents a piscines i fonts P > 5 kW, piscines fins a 10 kW",
+          "label": [
+            "n) Instalaciones correspondientes a piscinas y fuentes P > 5 kW, piscinas hasta 10 kW",
+            "n) Instal·lacions corresponents a piscines i fonts P > 5 kW, piscines fins a 10 kW"
+          ]
+        },
+        {
+          "value": "o) locals sense risc específic amb una potència màxima admissible >100 kW",
+          "label": [
+            "o) locales sin riesgo específico con una potencia máxima admisible >100 kW",
+            "o) locals sense risc específic amb una potència màxima admissible >100 kW"
+          ]
+        }
+      ],
+      "condition": {
+        "key": "RB_Requisits",
+        "values": [
+          "P2"
+        ]
+      }
+    },
+    {
+      "key": "TXT_Us",
+      "label": [
+        "Uso de la instalación",
+        "Ús de la instal·lació"
+      ],
+      "section": "classification",
+      "max": 180,
+      "type": "enum",
+      "choices": [
+        {
+          "value": "1",
+          "label": [
+            "a) Instalaciones industriales",
+            "a) Instal·lacions industrials"
+          ]
+        },
+        {
+          "value": "2",
+          "label": [
+            "b) Instalaciones temporales para obras según la ITC-BT-33 del REBT",
+            "b) Instal·lacions temporals per a obres segons l'ITC-BT-33 del REBT"
+          ]
+        },
+        {
+          "value": "3",
+          "label": [
+            "d) Instalaciones de enlace",
+            "d) Instal·lacions d'enllaç"
+          ]
+        },
+        {
+          "value": "4",
+          "label": [
+            "e) Instalaciones de servicios comunes de edificios",
+            "e) Instal·lacions de serveis comuns d'edificis"
+          ]
+        },
+        {
+          "value": "5",
+          "label": [
+            "f) Instalaciones de viviendas",
+            "f) Instal·lacions d'habitatges"
+          ]
+        },
+        {
+          "value": "8",
+          "label": [
+            "i) Instalaciones de recarga de vehículos eléctricos",
+            "i) Instal·lacions de recàrrega de vehicles elèctrics"
+          ]
+        },
+        {
+          "value": "9",
+          "label": [
+            "j) Instalaciones en aparcamientos y estacionamientos",
+            "j) Instal·lacions en aparcaments i estacionaments"
+          ]
+        },
+        {
+          "value": "10",
+          "label": [
+            "k) Instalaciones de alumbrado exterior",
+            "k) Instal·lacions d'enllumenat exterior"
+          ]
+        },
+        {
+          "value": "11",
+          "label": [
+            "l) Instalaciones generadoras para autoconsumo",
+            "l) Instal·lacions generadores per autoconsum"
+          ]
+        },
+        {
+          "value": "12",
+          "label": [
+            "m) Instalaciones de oficinas sin presencia de público",
+            "m) Instal·lacions d'oficines sense presència de públic"
+          ]
+        },
+        {
+          "value": "13",
+          "label": [
+            "n) Instalaciones generadoras",
+            "n) Instal·lacions generadores"
+          ]
+        },
+        {
+          "value": "14",
+          "label": [
+            "o) Otros usos",
+            "o) Altres usos"
+          ]
+        },
+        {
+          "value": "g",
+          "label": [
+            "g) Instalaciones en locales de espectáculos y actividades recreativas con subclasificación de acuerdo con la ITC-BT-28",
+            "g) Instal·lacions en locals d'espectacles i activitats recreatives amb subclassificació d'acord amb l'ITC-BT-28"
+          ]
+        },
+        {
+          "value": "h",
+          "label": [
+            "h) Instalaciones en locales de reunión, trabajo y usos sanitarios con subclasificación de acuerdo con la ITC-BT-28",
+            "h) Instal·lacions en locals de reunió, treball i usos sanitaris amb subclassificació d'acord amb l'ITC-BT-28"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "TXT_G",
+      "label": [
+        "Detalle del uso g: espectáculos y actividades recreativas",
+        "Detall de l’ús g: espectacles i activitats recreatives"
+      ],
+      "section": "classification",
+      "max": 180,
+      "type": "enum",
+      "choices": [
+        {
+          "value": "g1) Cine",
+          "label": [
+            "g1) Cine",
+            "g1) Cine"
+          ]
+        },
+        {
+          "value": "g2) Teatre",
+          "label": [
+            "g2) Teatro",
+            "g2) Teatre"
+          ]
+        },
+        {
+          "value": "g3) Auditori",
+          "label": [
+            "g3) Auditorio",
+            "g3) Auditori"
+          ]
+        },
+        {
+          "value": "g4) Estadi",
+          "label": [
+            "g4) Estadio",
+            "g4) Estadi"
+          ]
+        },
+        {
+          "value": "g5) Pavelló esportiu",
+          "label": [
+            "g5) Pabellón deportivo",
+            "g5) Pavelló esportiu"
+          ]
+        },
+        {
+          "value": "g6) Plaça de toros",
+          "label": [
+            "g6) Plaza de toros",
+            "g6) Plaça de toros"
+          ]
+        },
+        {
+          "value": "g7) Hipòdrom",
+          "label": [
+            "g7) Hipódromo",
+            "g7) Hipòdrom"
+          ]
+        },
+        {
+          "value": "g8) Parc d'atraccions o fira fixa",
+          "label": [
+            "g8) Parque de atracciones o feria fija",
+            "g8) Parc d'atraccions o fira fixa"
+          ]
+        },
+        {
+          "value": "g9) Sala de festes o discoteca",
+          "label": [
+            "g9) Sala de fiestas o discoteca",
+            "g9) Sala de festes o discoteca"
+          ]
+        },
+        {
+          "value": "g10) Sala de jocs d'atzar",
+          "label": [
+            "g10) Sala de juegos de azar",
+            "g10) Sala de jocs d'atzar"
+          ]
+        }
+      ],
+      "condition": {
+        "key": "TXT_Us",
+        "values": [
+          "g"
+        ]
+      }
+    },
+    {
+      "key": "TXT_H",
+      "label": [
+        "Detalle del uso h: reunión, trabajo y usos sanitarios",
+        "Detall de l’ús h: reunió, treball i usos sanitaris"
+      ],
+      "section": "classification",
+      "max": 180,
+      "type": "enum",
+      "choices": [
+        {
+          "value": "h1) Temple",
+          "label": [
+            "h1) Templo",
+            "h1) Temple"
+          ]
+        },
+        {
+          "value": "h2) Museu",
+          "label": [
+            "h2) Museo",
+            "h2) Museu"
+          ]
+        },
+        {
+          "value": "h3) Sales de conferències i congressos",
+          "label": [
+            "h3) Salas de conferencias y congresos",
+            "h3) Sales de conferències i congressos"
+          ]
+        },
+        {
+          "value": "h4) Casino",
+          "label": [
+            "h4) Casino",
+            "h4) Casino"
+          ]
+        },
+        {
+          "value": "h5) Hotel, hostal",
+          "label": [
+            "h5) Hotel, hostal",
+            "h5) Hotel, hostal"
+          ]
+        },
+        {
+          "value": "h6) Bar, cafeteria, restaurant o similar",
+          "label": [
+            "h6) Bar, cafetería, restaurante o similar",
+            "h6) Bar, cafeteria, restaurant o similar"
+          ]
+        },
+        {
+          "value": "h7) Zones comunes en agrupacions d'establiments comercials",
+          "label": [
+            "h7) Zonas comunes en agrupaciones de establecimientos comerciales",
+            "h7) Zones comunes en agrupacions d'establiments comercials"
+          ]
+        },
+        {
+          "value": "h8) Aeroport, estació de viatgers",
+          "label": [
+            "h8) Aeropuerto, estación de viajeros",
+            "h8) Aeroport, estació de viatgers"
+          ]
+        },
+        {
+          "value": "h9) Estacionaments públics tancats i coberts per a més de 5 vehicles",
+          "label": [
+            "h9) Estacionamientos públicos cerrados y cubiertos para más de 5 vehículos",
+            "h9) Estacionaments públics tancats i coberts per a més de 5 vehicles"
+          ]
+        },
+        {
+          "value": "h10) Hospital, ambulatori o sanatori",
+          "label": [
+            "h10) Hospital, ambulatorio o sanatorio",
+            "h10) Hospital, ambulatori o sanatori"
+          ]
+        },
+        {
+          "value": "h11) Asils i llars d'infants",
+          "label": [
+            "h11) Asilos y guarderías",
+            "h11) Asils i llars d'infants"
+          ]
+        },
+        {
+          "value": "h12) Biblioteca",
+          "label": [
+            "h12) Biblioteca",
+            "h12) Biblioteca"
+          ]
+        },
+        {
+          "value": "h13) Centre d'ensenyament",
+          "label": [
+            "h13) Centro de enseñanza",
+            "h13) Centre d'ensenyament"
+          ]
+        },
+        {
+          "value": "h14) Consultori mèdics",
+          "label": [
+            "h14) Consultorios médicos",
+            "h14) Consultori mèdics"
+          ]
+        },
+        {
+          "value": "h15) Establiment comercial",
+          "label": [
+            "h15) Establecimiento comercial",
+            "h15) Establiment comercial"
+          ]
+        },
+        {
+          "value": "h16) Oficina amb presència de públic",
+          "label": [
+            "h16) Oficina con presencia de público",
+            "h16) Oficina amb presència de públic"
+          ]
+        },
+        {
+          "value": "h17) Residència d'estudiants",
+          "label": [
+            "h17) Residencia de estudiantes",
+            "h17) Residència d'estudiants"
+          ]
+        },
+        {
+          "value": "h18) Gimnàs",
+          "label": [
+            "h18) Gimnasio",
+            "h18) Gimnàs"
+          ]
+        },
+        {
+          "value": "h19) Sala d'exposicions",
+          "label": [
+            "h19) Sala de exposiciones",
+            "h19) Sala d'exposicions"
+          ]
+        },
+        {
+          "value": "h20) Centre cultural",
+          "label": [
+            "h20) Centro cultural",
+            "h20) Centre cultural"
+          ]
+        },
+        {
+          "value": "h21) Club social o esportiu",
+          "label": [
+            "h21) Club social o deportivo",
+            "h21) Club social o esportiu"
+          ]
+        },
+        {
+          "value": "h22) Altres locals de pública concurrència",
+          "label": [
+            "h22) Otros locales de pública concurrencia",
+            "h22) Altres locals de pública concurrència"
+          ]
+        }
+      ],
+      "condition": {
+        "key": "TXT_Us",
+        "values": [
+          "h"
+        ]
+      }
+    },
+    {
+      "key": "AltresUsos",
+      "label": [
+        "Especifica el otro uso",
+        "Especifica l’altre ús"
+      ],
+      "section": "classification",
+      "max": 180,
+      "condition": {
+        "key": "TXT_Us",
+        "values": [
+          "14"
+        ]
+      }
+    },
+    {
+      "key": "TXT_PotenciaMax",
+      "label": [
+        "Potencia máxima admisible (kW)",
+        "Potència màxima admissible (kW)"
+      ],
+      "section": "technical",
+      "max": 180
+    },
+    {
+      "key": "TXT_Tensio",
+      "label": [
+        "Tensión nominal (V)",
+        "Tensió nominal (V)"
+      ],
+      "section": "technical",
+      "max": 180,
+      "type": "enum",
+      "choices": [
+        {
+          "value": "230 V",
+          "label": [
+            "230 V",
+            "230 V"
+          ]
+        },
+        {
+          "value": "3x230/400 V",
+          "label": [
+            "3x230/400 V",
+            "3x230/400 V"
+          ]
+        },
+        {
+          "value": "Altra",
+          "label": [
+            "Otra",
+            "Altra"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "InfoTensioAltre",
+      "label": [
+        "Especifica la otra tensión",
+        "Especifica l’altra tensió"
+      ],
+      "section": "technical",
+      "max": 180,
+      "condition": {
+        "key": "TXT_Tensio",
+        "values": [
+          "Altra"
+        ]
+      }
+    },
+    {
+      "key": "TXT_Circuits",
+      "label": [
+        "Número de circuitos del cuadro principal",
+        "Nombre de circuits al quadre principal"
+      ],
+      "section": "technical",
+      "max": 180
+    },
+    {
+      "key": "TXT_ResistenciaConductors",
+      "label": [
+        "Resistencia de aislamiento entre conductores (MΩ)",
+        "Resistència d’aïllament entre conductors (MΩ)"
+      ],
+      "section": "technical",
+      "max": 180
+    },
+    {
+      "key": "TXT_AillamentTerra",
+      "label": [
+        "Resistencia de aislamiento respecto a tierra (MΩ)",
+        "Resistència d’aïllament respecte a terra (MΩ)"
+      ],
+      "section": "technical",
+      "max": 180
+    },
+    {
+      "key": "TXT_ResistenciaTerra",
+      "label": [
+        "Resistencia de tierra de protección (Ω)",
+        "Resistència de terra de protecció (Ω)"
+      ],
+      "section": "technical",
+      "max": 180
+    },
+    {
+      "key": "TXT_Interruptor",
+      "label": [
+        "Intensidad del interruptor general automático (IGA) (A)",
+        "Intensitat de l’interruptor general automàtic (IGA) (A)"
+      ],
+      "section": "technical",
+      "max": 180
+    },
+    {
+      "key": "TXT_Calibre",
+      "label": [
+        "Calibre de fusibles de la CGP (A)",
+        "Calibre de fusibles de la CGP (A)"
+      ],
+      "section": "linkTechnical",
+      "max": 180
+    },
+    {
+      "key": "TXT_IGM",
+      "label": [
+        "Intensidad nominal del interruptor general de maniobra (A)",
+        "Intensitat nominal de l’interruptor general de maniobra (A)"
+      ],
+      "section": "linkTechnical",
+      "max": 180
+    },
+    {
+      "key": "TXT_SeccioLGA",
+      "label": [
+        "Sección de la línea general de alimentación (mm²)",
+        "Secció de la línia general d’alimentació (mm²)"
+      ],
+      "section": "linkTechnical",
+      "max": 180
+    },
+    {
+      "key": "TXT_MaterialConductor",
+      "label": [
+        "Material de los conductores",
+        "Material dels conductors"
+      ],
+      "section": "linkTechnical",
+      "max": 180,
+      "type": "enum",
+      "choices": [
+        {
+          "value": "Coure",
+          "label": [
+            "Cobre",
+            "Coure"
+          ]
+        },
+        {
+          "value": "Alumini",
+          "label": [
+            "Aluminio",
+            "Alumini"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "TXT_UbicacioComptadors",
+      "label": [
+        "Ubicación de los contadores",
+        "Ubicació dels comptadors"
+      ],
+      "section": "linkTechnical",
+      "max": 180,
+      "type": "enum",
+      "choices": [
+        {
+          "value": "Sala",
+          "label": [
+            "Sala",
+            "Sala"
+          ]
+        },
+        {
+          "value": "Armari",
+          "label": [
+            "Armario",
+            "Armari"
+          ]
+        },
+        {
+          "value": "Altra",
+          "label": [
+            "Otra",
+            "Altra"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "TXT_Tecnologia",
+      "label": [
+        "Tecnología de generación",
+        "Tecnologia de generació"
+      ],
+      "section": "generation",
+      "max": 180
+    },
+    {
+      "key": "TXT_TipusConnexio",
+      "label": [
+        "Tipo de conexión de generación",
+        "Tipus de connexió de generació"
+      ],
+      "section": "generation",
+      "max": 180,
+      "type": "enum",
+      "choices": [
+        {
+          "value": "Assistida",
+          "label": [
+            "Asistida",
+            "Assistida"
+          ]
+        },
+        {
+          "value": "Interconnectada",
+          "label": [
+            "Interconectada",
+            "Interconnectada"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "RB_Subministrament",
+      "label": [
+        "¿Dispone de suministro complementario?",
+        "Disposa de subministrament complementari?"
+      ],
+      "section": "supply",
+      "max": 180,
+      "type": "enum",
+      "choices": [
+        {
+          "value": "SI",
+          "label": [
+            "Sí",
+            "Sí"
+          ]
+        },
+        {
+          "value": "NO",
+          "label": [
+            "No",
+            "No"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "TXT_Potencia",
+      "label": [
+        "Potencia (kW)",
+        "Potència (kW)"
+      ],
+      "section": "generation",
+      "max": 180
+    },
+    {
+      "key": "NomCognomsInstalador_2",
+      "label": [
+        "Nombre del instalador en la declaración",
+        "Nom de l’instal·lador a la declaració"
+      ],
+      "section": "declaration",
+      "max": 180
+    },
+    {
+      "key": "TXT_Observacions",
+      "label": [
+        "Observaciones",
+        "Observacions"
+      ],
+      "section": "declaration",
+      "max": 1200,
+      "type": "multiline"
+    }
+  ]
+}

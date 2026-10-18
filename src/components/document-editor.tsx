@@ -14,6 +14,7 @@ import {
   accountRequest,
   errorKey,
 } from "./account-shell";
+import { ExtractionPanel } from "./extraction-panel";
 import { FormFields } from "./form-fields";
 import { PdfPreview } from "./pdf-preview";
 
@@ -226,6 +227,25 @@ export function DocumentEditor({
           . {document.renewal_active ? tr("renewalEnabled") : ""}
         </p>
       )}
+      <ExtractionPanel
+        documentId={document.id}
+        revision={revision}
+        fields={fields}
+        schema={schema}
+        dirty={dirty}
+        disabled={busy}
+        language={language}
+        onApplying={setBusy}
+        onApplied={(doc) => {
+          setFields(doc.work_data);
+          setRevision(doc.revision);
+          setExpiresAt(doc.draft_expires_at);
+          setDirty(false);
+          setPreview(null);
+          rendered(null);
+          setSaved(true);
+        }}
+      />
       <form onSubmit={save}>
         <fieldset disabled={busy}>
           <FormFields

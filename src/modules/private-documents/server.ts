@@ -5,7 +5,7 @@ export async function ownedDocument(ctx: AuthContext, id: string) {
   const { data, error } = await ctx.client
     .from("documents")
     .select(
-      "id,type,title,status,created_at,validated_at,work_data,revision,draft_expires_at,renewal_active",
+      "id,type,title,status,created_at,validated_at,work_data,revision,draft_expires_at,renewal_active,manual_keys",
     )
     .eq("id", id)
     .maybeSingle();
@@ -22,6 +22,7 @@ export async function ownedDocument(ctx: AuthContext, id: string) {
     revision: number;
     draft_expires_at: string | null;
     renewal_active: boolean;
+    manual_keys: string[];
   };
 }
 export async function pdfBody(request: Request) {

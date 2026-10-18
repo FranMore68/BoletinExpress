@@ -1,0 +1,18 @@
+{
+  "pass": false,
+  "complete": false,
+  "results": [
+    {
+      "test": "sesión, origen, formato y duración real se comprueban antes de consumir cuota",
+      "pass": true
+    },
+    {
+      "test": "seis solicitudes concurrentes crean un único trabajo y una única cuota; el primer dato inicia el plazo",
+      "pass": true
+    },
+    {
+      "test": "RLS aísla resultados y clientes no crean cuotas, alteran trabajos ni suplantan al worker",
+      "pass": true
+    }
+  ]
+}

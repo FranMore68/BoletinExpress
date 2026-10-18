@@ -1,7 +1,7 @@
 {
   "phase": 9,
   "implemented": true,
-  "acceptedByUser": false,
+  "acceptedByUser": true,
   "phase8AcceptedByUser": true,
   "stripeExternalTested": true,
   "stripeExternalPendingReason": null,
@@ -42,7 +42,9 @@
   "localToolHighDetected": 0,
   "localToolCriticalDetected": 0,
   "closedAt": "2026-10-18T16:44:30Z",
-  "userAcceptancePending": true,
+  "userAcceptancePending": false,
   "finalEvidence": "ci-final-summary.json",
-  "resourceBudgetPassed": true
+  "resourceBudgetPassed": true,
+  "acceptedOn": "2026-10-18",
+  "phase7Authorized": true
 }

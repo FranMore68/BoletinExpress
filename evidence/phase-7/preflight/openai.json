@@ -1,0 +1,67 @@
+{
+  "at": "2026-10-18T17:21:34.968Z",
+  "scope": "Comprobacion externa de clave y permisos; no integracion funcional de fase 7",
+  "fictionalInputsOnly": true,
+  "storedResponses": false,
+  "models": {
+    "extraction": "gpt-6-luna",
+    "transcription": "whisper-1"
+  },
+  "allPassed": true,
+  "results": [
+    {
+      "test": "text_structured_extraction",
+      "httpStatus": 200,
+      "requestId": "req_1003fef7104147258c68be95f61a813c",
+      "pass": true,
+      "elapsedMs": 3116,
+      "usage": {
+        "input_tokens": 99,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 32,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 131
+      },
+      "model": "gpt-6-luna",
+      "schemaValid": true,
+      "expectedFieldsMatched": true
+    },
+    {
+      "test": "image_structured_extraction",
+      "httpStatus": 200,
+      "requestId": "req_42744121cc9d4e3a9309a60d2e0e6c9b",
+      "pass": true,
+      "elapsedMs": 1729,
+      "usage": {
+        "input_tokens": 1042,
+        "input_tokens_details": {
+          "cache_write_tokens": 1039,
+          "cached_tokens": 0
+        },
+        "output_tokens": 32,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 1074
+      },
+      "model": "gpt-6-luna",
+      "schemaValid": true,
+      "expectedFieldsMatched": true
+    },
+    {
+      "test": "audio_transcription",
+      "httpStatus": 200,
+      "requestId": "req_9c18fc89509347238ecffd1bf6ef00f7",
+      "pass": true,
+      "syntheticAudioSeconds": 6.2,
+      "nonemptyTranscript": true,
+      "expectedContentMatched": true
+    }
+  ],
+  "note": "Texto e imagen correctos con Responses Write. Tras activar Model capabilities Request, transcripcion correcta con audio sintetico de 6,2 segundos. Text-to-speech Request por si solo no basto."
+}
