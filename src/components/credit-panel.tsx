@@ -6,7 +6,7 @@ export type Wallet = {
     id: string;
     amount: number;
     balance_after: number;
-    kind: "welcome" | "validation";
+    kind: "welcome" | "validation" | "renewal";
     document_id: string | null;
     created_at: string;
   }[];
@@ -38,8 +38,14 @@ export function CreditPanel({
                 )}
               </time>
               {" · "}
-              {tr(m.kind === "welcome" ? "welcomeCredit" : "validationCredit")}:{" "}
-              {m.amount > 0 ? "+" : ""}
+              {tr(
+                m.kind === "welcome"
+                  ? "welcomeCredit"
+                  : m.kind === "renewal"
+                    ? "renewalCredit"
+                    : "validationCredit",
+              )}
+              : {m.amount > 0 ? "+" : ""}
               {m.amount} KC ({m.balance_after} KC)
             </li>
           ))}

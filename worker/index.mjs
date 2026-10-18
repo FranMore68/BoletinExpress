@@ -1,6 +1,7 @@
 import { createHash } from "node:crypto";
 import { readFile } from "node:fs/promises";
 import { createServer } from "node:http";
+import { deliverDocument } from "./mail.mjs";
 
 const enabled = Boolean(
   process.env.WORKER_KEY &&
@@ -30,6 +31,41 @@ async function storage(path, options = {}) {
   });
 }
 async function tick() {
+  await rpc("process_retention");
+  const task = await rpc("claim_document_mail");
+  if (task) {
+    let provider = null,
+      error = null;
+    try {
+      const file = await storage(
+        `/object/authenticated/previews/${task.object_path}`,
+      );
+      if (!file.ok) throw Error("pdf_integrity");
+      const bytes = Buffer.from(await file.arrayBuffer());
+      // Recheck the claim and lifetime through Storage immediately before delivery.
+      if (
+        !(await rpc("authorize_document_mail", {
+          p_id: task.id,
+          p_claim: task.claim,
+        }))
+      )
+        throw Error("configuration");
+      provider = await deliverDocument(task, bytes);
+    } catch (e) {
+      error = ["pdf_integrity", "configuration"].includes(e.message)
+        ? e.message
+        : "transport";
+      console.error(
+        JSON.stringify({ event: "document_mail_retry", reason: error }),
+      );
+    }
+    await rpc("finish_document_mail", {
+      p_id: task.id,
+      p_claim: task.claim,
+      p_provider: provider,
+      p_error: error,
+    });
+  }
   for (const old of await rpc("validation_cleanup_tasks")) {
     const deleted = await storage(`/object/${old.bucket}`, {
       method: "DELETE",

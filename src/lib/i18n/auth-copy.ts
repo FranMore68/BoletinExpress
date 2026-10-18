@@ -1,5 +1,35 @@
 import type { Locale } from "./copy";
 export const authCopy = {
+  renewalCredit: [
+    "Renovación de borrador (24 horas)",
+    "Renovació d’esborrany (24 hores)",
+  ],
+  retentionHelp: [
+    "El plazo de 24 horas comienza al guardar el primer dato o archivo. Si vuelves a abrir el borrador durante ese ciclo, al vencer se renovará por 1 KC durante otras 24 horas. Cada ciclo necesita un nuevo regreso y saldo; de lo contrario se elimina. Una consulta automática no cuenta como regreso.",
+    "El termini de 24 hores comença en desar la primera dada o fitxer. Si tornes a obrir l’esborrany durant aquest cicle, en vèncer es renovarà per 1 KC durant 24 hores més. Cada cicle necessita un nou retorn i saldo; si no, s’elimina. Una consulta automàtica no compta com a retorn.",
+  ],
+  expiresAt: ["Vencimiento del borrador", "Venciment de l’esborrany"],
+  renewalEnabled: [
+    "Has vuelto a este borrador: al vencer, se renovará por 1 KC si tienes saldo.",
+    "Has tornat a aquest esborrany: en vèncer, es renovarà per 1 KC si tens saldo.",
+  ],
+  expired: [
+    "El borrador ha vencido. Vuelve a la lista para comprobar si se ha renovado.",
+    "L’esborrany ha vençut. Torna a la llista per comprovar si s’ha renovat.",
+  ],
+  emailDocument: [
+    "Enviar a mi correo verificado",
+    "Envia al meu correu verificat",
+  ],
+  emailQueued: [
+    "Envío solicitado. Se procesará en segundo plano. Los errores tendrán reintentos sin ampliar el plazo de conservación.",
+    "Enviament sol·licitat. Es processarà en segon pla. Els errors tindran reintents sense ampliar el termini de conservació.",
+  ],
+  archiveHelp: [
+    "Han terminado los 30 días de acceso directo. Se solicita automáticamente una copia por correo; hasta el día 60 puedes pedir su reenvío. Al día 60 se elimina de BoletinExpress, aunque falle el correo.",
+    "Han finalitzat els 30 dies d’accés directe. Se sol·licita automàticament una còpia per correu; fins al dia 60 pots demanar-ne el reenviament. Al dia 60 s’elimina de BoletinExpress, encara que falli el correu.",
+  ],
+  deletionAt: ["Eliminación definitiva", "Eliminació definitiva"],
   creditBalance: ["Saldo de prueba", "Saldo de prova"],
   creditHistory: ["Movimientos de KC", "Moviments de KC"],
   welcomeCredit: [

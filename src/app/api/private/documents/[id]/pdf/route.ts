@@ -18,7 +18,12 @@ export async function GET(
       .eq("document_id", doc.id)
       .maybeSingle();
     if (error) throw new AccessError(503, "unavailable");
-    if (!data || Date.parse(data.validated_at) <= Date.now() - 30 * 86400000)
+    const time = await ctx.client.rpc("document_time");
+    if (time.error) throw new AccessError(503, "unavailable");
+    if (
+      !data ||
+      Date.parse(data.validated_at) <= Date.parse(time.data) - 30 * 86400000
+    )
       throw new AccessError(404, "not_found");
     const bytes = await verifiedPdf(ctx, data.object_path, data.sha256);
     return new NextResponse(bytes, {

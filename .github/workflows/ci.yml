@@ -66,6 +66,10 @@ jobs:
         run: |
           set -o pipefail
           node scripts/test-phase6.mjs | tee evidence/phase-6/integration.log
+      - id: phase8
+        run: |
+          set -o pipefail
+          node scripts/test-phase8.mjs | tee evidence/phase-8/integration.log
       - if: always() && steps.isolation.outcome != 'skipped'
         run: |
           docker builder prune --all --force
@@ -88,6 +92,7 @@ jobs:
             evidence/phase-4
             evidence/phase-5
             evidence/phase-6
+            evidence/phase-8
           retention-days: 7
       - if: always()
         run: |

@@ -12,7 +12,9 @@ export async function GET(request: NextRequest) {
     await requireUser(ctx);
     const { data, error } = await ctx.client
       .from("documents")
-      .select("id,type,title,status,created_at")
+      .select(
+        "id,type,title,status,created_at,validated_at,draft_expires_at,renewal_active",
+      )
       .order("created_at", { ascending: false });
     if (error) throw new AccessError(503, "unavailable");
     return NextResponse.json({ documents: data });

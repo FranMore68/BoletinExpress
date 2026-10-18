@@ -17,6 +17,12 @@ export async function GET(
       .eq("ready", true)
       .order("created_at");
     if (error) throw new AccessError(503, "unavailable");
-    return NextResponse.json({ document: doc, files: data });
+    const time = await ctx.client.rpc("document_time");
+    if (time.error) throw new AccessError(503, "unavailable");
+    return NextResponse.json({
+      document: doc,
+      files: data,
+      documentTime: time.data,
+    });
   });
 }

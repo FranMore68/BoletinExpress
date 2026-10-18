@@ -27,6 +27,8 @@ export type DocumentDraft = {
   id: string;
   work_data: FieldValues;
   revision: number;
+  draft_expires_at?: string | null;
+  renewal_active?: boolean;
 };
 export function DocumentEditor({
   document,
@@ -43,6 +45,7 @@ export function DocumentEditor({
 }) {
   const { tr, locale } = language;
   const [fields, setFields] = useState(document.work_data || {});
+  const [expiresAt, setExpiresAt] = useState(document.draft_expires_at);
   const [revision, setRevision] = useState(document.revision || 0);
   const [dirty, setDirty] = useState(false);
   const [busy, setBusy] = useState(false);
@@ -117,6 +120,7 @@ export function DocumentEditor({
       });
       setFields(r.document.work_data);
       setRevision(r.document.revision);
+      setExpiresAt(r.document.draft_expires_at);
       setDirty(false);
       setPreview(null);
       rendered(null);
@@ -212,6 +216,15 @@ export function DocumentEditor({
             ))}
           </ul>
         </div>
+      )}
+      {expiresAt && (
+        <p>
+          {tr("expiresAt")}:{" "}
+          {new Date(expiresAt).toLocaleString(
+            locale === "ca" ? "ca-ES" : "es-ES",
+          )}
+          . {document.renewal_active ? tr("renewalEnabled") : ""}
+        </p>
       )}
       <form onSubmit={save}>
         <fieldset disabled={busy}>

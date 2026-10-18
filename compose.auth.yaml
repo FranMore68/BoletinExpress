@@ -7,7 +7,12 @@ services:
       LOCAL_MAILBOX_URL: http://127.0.0.1:54324
     networks: [default, data]
   worker:
-    env_file: [.secrets/worker.env]
+    env_file:
+      - .secrets/worker.env
+      - path: .secrets/mail.env
+        required: false
+    environment:
+      MAILPIT_URL: http://mail:8025
     networks: [default, data]
 networks:
   data:

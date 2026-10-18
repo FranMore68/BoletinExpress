@@ -27,6 +27,9 @@ type Doc = {
   created_at: string;
   work_data: FieldValues;
   revision: number;
+  validated_at: string | null;
+  draft_expires_at: string | null;
+  renewal_active: boolean;
 };
 export function PrivatePanel() {
   const heading = useRef<HTMLHeadingElement>(null);
@@ -37,6 +40,9 @@ export function PrivatePanel() {
   const [wallet, setWallet] = useState<Wallet | null>(null);
   const [docs, setDocs] = useState<Doc[]>([]);
   const [active, setActive] = useState<Doc | null>(null);
+  const [documentTime, setDocumentTime] = useState<string>(
+    new Date().toISOString(),
+  );
   const [loading, setLoading] = useState(true);
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<AuthKey | null>(null);
@@ -70,7 +76,9 @@ export function PrivatePanel() {
     setError(null);
     setNotice(null);
     try {
+      await accountRequest(`/api/private/documents/${id}/activity`, {});
       const result = await accountRequest(`/api/private/documents/${id}`);
+      setDocumentTime(result.documentTime);
       setActive(result.document);
     } catch (e) {
       setError(errorKey(e));
@@ -142,6 +150,7 @@ export function PrivatePanel() {
           {active ? active.title : tr("privateTitle")}
         </h1>
         <p>{tr("privateHelp")}</p>
+        <p>{tr("retentionHelp")}</p>
         {error && (
           <p className="account-error" role="alert">
             {tr(error)}
@@ -158,6 +167,8 @@ export function PrivatePanel() {
         ) : active?.status === "validated" ? (
           <ValidatedDocument
             id={active.id}
+            validatedAt={active.validated_at || new Date().toISOString()}
+            documentTime={documentTime}
             language={language}
             onBack={() => setActive(null)}
           />
@@ -168,10 +179,20 @@ export function PrivatePanel() {
             model={active.type}
             onValidated={async () => {
               // Closing is already committed; never restore an editable document if refreshing the list fails.
-              setActive({ ...active, status: "validated", work_data: {} });
+              setActive({
+                ...active,
+                status: "validated",
+                work_data: {},
+                validated_at: new Date().toISOString(),
+              });
               setWallet(null);
               try {
                 await load();
+                const closed = await accountRequest(
+                  `/api/private/documents/${active.id}`,
+                );
+                setActive(closed.document);
+                setDocumentTime(closed.documentTime);
               } catch (e) {
                 setError(errorKey(e));
               }
@@ -179,6 +200,7 @@ export function PrivatePanel() {
             language={language}
             onBack={() => {
               setActive(null);
+              void load().catch((e) => setError(errorKey(e)));
               setError(null);
               setNotice(null);
             }}

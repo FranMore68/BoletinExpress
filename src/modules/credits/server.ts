@@ -55,6 +55,7 @@ export async function validateRpc(body: Record<string, unknown>) {
   if (!response.ok) {
     const known: Record<string, number> = {
       session: 401,
+      expired: 410,
       not_found: 404,
       conflict: 409,
       pdf_not_ready: 409,

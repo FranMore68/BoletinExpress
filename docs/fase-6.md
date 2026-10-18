@@ -1,6 +1,6 @@
 # Fase 6: créditos y validación documental
 
-Estado: cierre técnico completado el 18/10/2026, pendiente de aceptación del usuario. La fase 5 fue aceptada el 18/10/2026 mediante «ok vamos con la fase 6». La fase 7 requiere aceptar este cierre.
+Estado: cierre técnico completado el 18/10/2026, aceptado por el usuario el 18/10/2026. La fase 5 fue aceptada el 18/10/2026 mediante «ok vamos con la fase 6». El usuario ha autorizado continuar por las fases 8, 9 y 7, en ese orden.
 
 ## Resultado
 
@@ -77,4 +77,4 @@ La ejecución [39077607312](https://github.com/FranMore68/BoletinExpress/actions
 
 Se han descargado y comprobado los informes originales: cuatro baterías de integración, el catálogo y nueve auditorías de imágenes, conservados en `evidence/phase-6/ci/`. El resumen está en `ci-summary.json` y el estado completo de la ejecución en `ci-run.json`. Los avisos de GitHub sobre el runtime de upload-artifact y la próxima migración de ubuntu-latest son observaciones de mantenimiento; no han causado fallos.
 
-Fallos funcionales pendientes detectados en esta fase: ninguno. Quedan registradas las observaciones sobre 30 avisos moderados de Storage, la cobertura limitada de la imagen estática de PostgREST y la prueba de capacidad del VPS de fase 10. La fase 7 no se ha iniciado y requiere aceptar este cierre.
+Fallos funcionales pendientes detectados en esta fase: ninguno. Quedan registradas las observaciones sobre 30 avisos moderados de Storage, la cobertura limitada de la imagen estática de PostgREST y la prueba de capacidad del VPS de fase 10. La fase 7 queda aplazada hasta después de la fase 9 por decisión del usuario.

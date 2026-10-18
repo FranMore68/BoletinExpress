@@ -2,7 +2,7 @@
   "phase": 6,
   "implemented": true,
   "localTestsPassed": true,
-  "acceptedByUser": false,
+  "acceptedByUser": true,
   "phase7Started": false,
   "codeCommit": "54718ed66e2f56d541e20b7c86464c4b2a4cab0f",
   "ciRun": 39077607312,
@@ -19,5 +19,12 @@
   "totalIntegrationGroups": 39,
   "scannedImages": 9,
   "highDetected": 0,
-  "criticalDetected": 0
+  "criticalDetected": 0,
+  "acceptedOn": "2026-10-18",
+  "phaseOrder": [
+    8,
+    9,
+    7,
+    10
+  ]
 }
