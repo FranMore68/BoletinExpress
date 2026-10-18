@@ -1,0 +1,10 @@
+{
+  "SchemaVersion": 2,
+  "Trivy": {
+    "Version": "0.76.0"
+  },
+  "ReportID": "01a14fbb-91e2-76d6-9a76-fb0f68d268c2",
+  "CreatedAt": "2026-10-18T15:57:35.074448922Z",
+  "ArtifactName": "/tmp/stripe",
+  "ArtifactType": "filesystem"
+}

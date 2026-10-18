@@ -1,0 +1,17 @@
+# Solo evaluación local. El listener no se despliega en el VPS.
+services:
+  web:
+    cpus: 0.20
+  stripe-listener:
+    image: boletinexpress-stripe-cli:1.54.0-be1
+    user: "1000:1000"
+    env_file: [.secrets/stripe-cli.env]
+    command: ["--config", "/tmp/stripe.toml", "listen", "--events", "checkout.session.completed,checkout.session.async_payment_succeeded,checkout.session.async_payment_failed,checkout.session.expired", "--forward-to", "http://web:3000/api/payments/stripe"]
+    mem_limit: 64m
+    cpus: 0.10
+    pids_limit: 64
+    read_only: true
+    tmpfs: ["/tmp:rw,noexec,nosuid,size=8m,uid=1000,gid=1000"]
+    cap_drop: [ALL]
+    security_opt: ["no-new-privileges:true"]
+    logging: {driver: none}

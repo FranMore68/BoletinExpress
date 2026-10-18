@@ -35,6 +35,7 @@ jobs:
       - run: node scripts/test-cie-catalog.mjs
       - run: docker build --target web -t boletinexpress-web:phase1 .
       - run: docker build --target worker -t boletinexpress-worker:phase1 .
+      - run: docker build -f tools/stripe-cli/Dockerfile -t boletinexpress-stripe-cli:phase1 tools/stripe-cli
       - run: |
           node scripts/init-local-auth.mjs
           docker build --target gateway -t boletinexpress-gateway:phase3 .
@@ -87,7 +88,7 @@ jobs:
           docker tag postgrest/postgrest:v14.17 boletinexpress-rest:phase1
           docker tag boletinexpress-storage:phase3 boletinexpress-storage:phase1
           docker tag axllent/mailpit:v1.31.6 boletinexpress-mail:phase1
-          BE_SCAN_REPORT_DIR=evidence/phase-3 BE_SCAN_SERVICES="web worker gateway templates postgres auth rest storage mail" sh scripts/scan-images.sh
+          BE_SCAN_REPORT_DIR=evidence/phase-3 BE_SCAN_SERVICES="web worker gateway templates postgres auth rest storage mail stripe-cli" sh scripts/scan-images.sh
       - if: failure()
         run: node scripts/diagnose-services.mjs
       - if: always()

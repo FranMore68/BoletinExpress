@@ -118,7 +118,7 @@ const proxy = http.createServer(async (req, res) => {
         );
         assert.ok([1000, 2000].includes(amount));
         assert.equal(params.get("line_items[0][quantity]"), "1");
-        assert.equal(params.get("payment_method_types[0]"), "card");
+        assert.equal(params.has("payment_method_types[0]"), false);
         assert.equal(new URL(params.get("success_url")).origin, appOrigin);
         sessions.set(id, {
           id,

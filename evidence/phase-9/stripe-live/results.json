@@ -1,0 +1,60 @@
+{
+  "time": "2026-10-18T16:22:48.693Z",
+  "mode": "Stripe sandbox real, tarjetas ficticias",
+  "beforeBalance": 8,
+  "afterBasic": 18,
+  "afterPro": 43,
+  "sessions": {
+    "basicSession": {
+      "id": "cs_test_a1bqjhAbEWhLJO79KHbAwt4VSeCFg1KANsIqQQFrNL69MMITtJxKrFFK35",
+      "status": "complete",
+      "paymentStatus": "paid",
+      "amount": 1000,
+      "currency": "eur"
+    },
+    "plusSession": {
+      "id": "cs_test_a1FZl2HdpfGttLGhpMOXWNKIXytg2tXqcSmV0HYrK9gVhsH8dyKZ6j3ajF",
+      "status": "complete",
+      "paymentStatus": "paid",
+      "amount": 2000,
+      "currency": "eur"
+    },
+    "declineSession": {
+      "id": "cs_test_a1YejhK77rgosNV2F8NP82PLOysZPPQlVmoPBtEG6WVAtRugZDycBxgnci",
+      "status": "open",
+      "paymentStatus": "unpaid",
+      "amount": 1000,
+      "currency": "eur"
+    },
+    "cancelSession": {
+      "id": "cs_test_a1SP07JurKPge5ySs70MxsKLjcMauTNTJ2SniD44E4GoyUY9OvRATXokPX",
+      "status": "open",
+      "paymentStatus": "unpaid",
+      "amount": 2000,
+      "currency": "eur"
+    }
+  },
+  "replays": [
+    {
+      "event": "evt_1URwp5BOYpfv3qqpb627fcJK",
+      "type": "checkout.session.completed",
+      "httpStatus": 200
+    },
+    {
+      "event": "evt_1URwoKBOYpfv3qqp0xrGrGuW",
+      "type": "checkout.session.completed",
+      "httpStatus": 200
+    }
+  ],
+  "replayMethod": "Cuerpo de eventos reales recuperado de Stripe y reentregado localmente con firma nueva; no reenvío desde Dashboard",
+  "declineVisible": true,
+  "cancelReturned": true,
+  "expiryWebhooksReceived": true,
+  "afterBalance": 43,
+  "topupCount": 2,
+  "topupAmounts": [
+    10,
+    25
+  ],
+  "pendingUnboundDiagnosticOrders": 1
+}

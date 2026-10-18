@@ -65,6 +65,7 @@ test("Checkout: immutable server prices, fixed return origin and approved Stripe
   const params = checkoutParameters(order, "http://127.0.0.1:3000", "ca");
   assert.equal(params.get("line_items[0][price_data][unit_amount]"), "2000");
   assert.equal(params.get("line_items[0][quantity]"), "1");
+  assert.equal(params.has("payment_method_types[0]"), false);
   assert.equal(
     params.get("success_url"),
     "http://127.0.0.1:3000/cuenta?lang=ca&payment=returned",

@@ -32,7 +32,6 @@ export function checkoutParameters(
 ) {
   const params = new URLSearchParams({
     mode: "payment",
-    "payment_method_types[0]": "card",
     client_reference_id: order.id,
     "metadata[order_id]": order.id,
     "metadata[owner_id]": order.owner_id,
