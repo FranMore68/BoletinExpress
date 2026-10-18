@@ -221,8 +221,8 @@ export const authCopy = {
     "Demana un enllaç nou si encara no has confirmat el compte.",
   ],
   localMailHelp: [
-    "En esta prueba local, los enlaces de confirmación y recuperación llegan al buzón de pruebas, no a tu correo personal.",
-    "En aquesta prova local, els enllaços de confirmació i recuperació arriben a la bústia de proves, no al teu correu personal.",
+    "Las cuentas ficticias .invalid usan el buzón de pruebas. Con el correo externo activado, las direcciones reales reciben allí sus enlaces. Abre los enlaces en el Mac donde funciona esta aplicación local.",
+    "Els comptes ficticis .invalid fan servir la bústia de proves. Amb el correu extern activat, les adreces reals hi reben els enllaços. Obre els enllaços al Mac on funciona aquesta aplicació local.",
   ],
   localMailOpen: ["Abrir buzón de pruebas", "Obre la bústia de proves"],
   sent: [

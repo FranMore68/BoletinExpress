@@ -18,6 +18,7 @@ services:
       - path: .secrets/mail.env
         required: false
     environment:
+      APP_ENV: evaluation
       MAILPIT_URL: http://mail:8025
     networks: [default, data]
 networks:

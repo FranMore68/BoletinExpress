@@ -5,7 +5,7 @@ services:
     ports: ["127.0.0.1:3000:3000"]
     restart: unless-stopped
     mem_limit: 512m
-    cpus: 0.34
+    cpus: 0.30
     pids_limit: 128
     read_only: true
     tmpfs: ["/tmp:rw,noexec,nosuid,size=64m,uid=1000,gid=1000"]

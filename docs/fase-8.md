@@ -113,3 +113,45 @@ Resend ha respondido HTTP 200 y ha devuelto un identificador de mensaje. Esto de
 | Recepción y apertura del adjunto | Confirmadas por el usuario: «Recibido y PDF correcto» | `evidence/phase-8/resend-external.json` |
 
 El worker normal continúa con Mailpit. No se activan envíos externos de los trabajos ficticios acumulados ni se modifica el SMTP de Auth. La activación general deberá separar primero esas pruebas de los envíos a cuentas con correo real verificado. La fase 9 está implementada y verificada en CI, pendiente de configurar Stripe; esta comprobación de correo no altera el orden acordado ni inicia la fase 7.
+
+## Activación general de Resend — 18/10/2026
+
+El usuario ha autorizado terminar las integraciones. Resend queda activo tanto para documentos reales de evaluación como para los correos de acceso. El usuario confirma la recepción de los nuevos correos y que el BRIE adjunto es correcto.
+
+- Documentos: el worker utiliza la API de Resend. Si el destinatario termina en `.invalid`, solo utiliza Mailpit en el entorno de evaluación; fuera de ese entorno o sin un buzón local permitido, rechaza el envío sin llamar a Resend.
+- Acceso: Auth entrega por SMTP a Mailpit; este relay local reenvía las direcciones reales a Resend por TLS en el puerto 465. Su bloqueo de `.invalid` mantiene las cuentas ficticias en local. Los errores SMTP se devuelven a Auth; no se confunde la captura local con la aceptación externa.
+- El relay solo procesa mensajes nuevos. Antes de activarlo se ha comprobado que no había trabajos documentales pendientes con destinatarios reales. El buzón continúa publicado solo en loopback. Esta configuración corresponde al piloto local, con copias de prueba retenidas en Mailpit; la configuración remota se revisará en fase 10.
+- Secretos exclusivamente en `.secrets/mail.env` y `.secrets/auth-mail.env`. Auth recibe únicamente el remitente en `.secrets/supabase.env`; no se han cambiado claves de Auth ni credenciales de otras aplicaciones.
+
+La autenticación SMTP respondió 235. El primer intento de registro agotó el plazo de Auth: Mailpit tenía una cuota de 0,01 CPU. Se redistribuyen 0,04 CPU desde web (0,34→0,30) a Mailpit (0,01→0,05), sin aumentar el total de 1 CPU ni los 3008 MiB. Tras el ajuste se completan registro, reenvío, confirmación y solicitud de recuperación. La contraseña de la cuenta de evaluación no se cambia durante la prueba de recuperación. El BRIE ficticio se genera y valida en la aplicación una sola vez (10→8 KC); el worker confirma su envío en el primer intento. Se ha revisado el PDF y el usuario confirma su recepción correcta.
+
+| Prueba | Resultado | Evidencia |
+|---|---|---|
+| Pruebas de aplicación, configuración reversible y selección de transporte | 33 superadas | `tests/mail.test.ts`, `tests/mail-configuration.test.ts` |
+| Registro, confirmación, reenvío, recuperación e aislamiento con relay activo | 12 comprobaciones superadas | Regresión local `scripts/test-isolation.mjs` |
+| Renovación, archivo, correo ficticio y eliminación con Resend activo | 12 grupos superados | `evidence/phase-8/resend-activation/retention/integration.json` |
+| SMTP autenticado, recorrido real y abono de bienvenida único | Superado | `evidence/phase-8/resend-activation/status.json` |
+| Envío de documento por el worker y recepción del usuario | Un intento, sin error; usuario confirma correos y PDF | `evidence/phase-8/resend-activation/status.json` |
+| Imágenes web y worker modificadas | Sin avisos altos ni críticos detectados | `evidence/phase-8/resend-activation/image-*.json` |
+
+### Reproducir o volver al buzón local
+
+Con la clave de envío y el remitente verificado ya guardados en el archivo privado:
+
+```sh
+node scripts/configure-resend.mjs enable
+docker compose --env-file .secrets/supabase.env -f infra/supabase/compose.yaml up --detach --wait --no-deps mail auth
+docker compose -f compose.yaml -f compose.auth.yaml up --detach --wait web worker
+```
+
+Para desactivar el envío externo y recuperar el remitente anterior:
+
+```sh
+node scripts/configure-resend.mjs disable
+docker compose --env-file .secrets/supabase.env -f infra/supabase/compose.yaml up --detach --wait --no-deps mail auth
+docker compose -f compose.yaml -f compose.auth.yaml up --detach --wait web worker
+```
+
+El script no recrea datos. Conserva una copia privada del remitente anterior, usa permisos 0600 y rechaza sobrescribir una configuración SMTP ajena. Los contenedores deben recrearse para cargar los cambios.
+
+Fuentes: [SMTP de Resend](https://resend.com/docs/send-with-smtp), [relay selectivo y bloqueo de destinatarios de Mailpit](https://mailpit.axllent.org/docs/configuration/smtp-relay/).

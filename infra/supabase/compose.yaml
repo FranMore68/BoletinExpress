@@ -139,8 +139,11 @@ services:
   mail:
     <<: *runtime
     image: axllent/mailpit:v1.31.6
+    env_file:
+      - path: ../../.secrets/auth-mail.env
+        required: false
     mem_limit: 64m
-    cpus: 0.01
+    cpus: 0.05
     environment:
       MP_MAX_MESSAGES: 100
       MP_DISABLE_VERSION_CHECK: "true"

@@ -3,10 +3,10 @@
   "implemented": true,
   "acceptedByUser": true,
   "localTestsPassed": true,
-  "applicationTests": 27,
+  "applicationTests": 33,
   "retentionIntegrationGroups": 12,
   "uiPassed": true,
-  "mailTransport": "local Mailpit",
+  "mailTransport": "Resend API + Auth SMTP relay; fictional .invalid retained locally",
   "resendExternalDeliveryTested": true,
   "ciRun": 39108937933,
   "ciStatus": "success",
@@ -41,5 +41,10 @@
   "resendExternalApiTested": true,
   "resendExternalApiAccepted": true,
   "resendInboxConfirmationPending": false,
-  "resendAttachmentOpenedConfirmed": true
+  "resendAttachmentOpenedConfirmed": true,
+  "resendGeneralActivation": true,
+  "resendAuthSmtpTested": true,
+  "resendWorkerFlowTested": true,
+  "activationInboxConfirmationPending": false,
+  "resendGeneralActivationConfirmed": true
 }

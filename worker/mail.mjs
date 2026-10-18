@@ -27,8 +27,14 @@ export async function deliverDocument(
 ) {
   if (createHash("sha256").update(bytes).digest("hex") !== task.sha256)
     throw Error("pdf_integrity");
-  const transport =
+  let transport =
     config.MAIL_TRANSPORT || (config.MAILPIT_URL ? "mailpit" : "");
+  // Reserved evaluation addresses must never be sent to the external provider.
+  if (transport === "resend" && /@(?:[^@]*\.)?invalid$/i.test(task.recipient)) {
+    if (config.APP_ENV !== "evaluation" || !config.MAILPIT_URL)
+      throw Error("configuration");
+    transport = "mailpit";
+  }
   const from = config.MAIL_FROM || "no-reply@boletinexpress.invalid";
   const payload = mailPayload(task, bytes, from);
   let response;
@@ -47,13 +53,22 @@ export async function deliverDocument(
     });
   } else if (transport === "mailpit") {
     const url = new URL(config.MAILPIT_URL);
-    if (!["mail", "127.0.0.1", "localhost"].includes(url.hostname))
+    if (
+      !["mail", "127.0.0.1", "localhost"].includes(url.hostname) ||
+      !["http:", "https:"].includes(url.protocol) ||
+      url.username ||
+      url.password
+    )
       throw Error("configuration");
+    const named = /^([^<>]*)<([^<>]+)>$/.exec(from);
     response = await send(new URL("/api/v1/send", url), {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        From: { Email: from },
+        From: {
+          Email: named ? named[2].trim() : from,
+          Name: named ? named[1].trim() : "",
+        },
         To: [{ Email: task.recipient }],
         Subject: payload.subject,
         Text: payload.text,

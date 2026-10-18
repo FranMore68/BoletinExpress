@@ -20,7 +20,7 @@ test("Resend usa adjunto íntegro, destinatario fijado y la misma clave en reint
   };
   for (let i = 0; i < 2; i++)
     await deliverDocument(
-      task,
+      { ...task, recipient: "recipient@unit.example" },
       bytes,
       {
         MAIL_TRANSPORT: "resend",
@@ -32,7 +32,7 @@ test("Resend usa adjunto íntegro, destinatario fijado y la misma clave en reint
   assert.equal(requests[0].url, "https://api.resend.com/emails");
   assert.deepEqual(requests[0], requests[1]);
   const payload = JSON.parse(String(requests[0].init.body));
-  assert.deepEqual(payload.to, [task.recipient]);
+  assert.deepEqual(payload.to, ["recipient@unit.example"]);
   assert.match(payload.subject, /còpia/);
   assert.ok(
     Buffer.from(payload.attachments[0].content, "base64").equals(bytes),
@@ -41,6 +41,41 @@ test("Resend usa adjunto íntegro, destinatario fijado y la misma clave en reint
     (requests[0].init.headers as Record<string, string>)["Idempotency-Key"],
     "document/job-ficticio",
   );
+});
+test("cuentas .invalid permanecen en Mailpit con Resend activo y sin credenciales externas en la petición", async () => {
+  let calls = 0;
+  const send = async (url: URL, init: RequestInit) => {
+    calls++;
+    assert.equal(String(url), "http://mail:8025/api/v1/send");
+    assert.deepEqual(init.headers, { "Content-Type": "application/json" });
+    const body = JSON.parse(String(init.body));
+    assert.equal(body.To[0].Email, task.recipient);
+    assert.deepEqual(body.From, {
+      Email: "boletinexpress@unit.example",
+      Name: "BoletinExpress",
+    });
+    return Response.json({ ID: "local-only" });
+  };
+  const config = {
+    APP_ENV: "evaluation",
+    MAIL_TRANSPORT: "resend",
+    MAILPIT_URL: "http://mail:8025",
+    MAIL_FROM: "BoletinExpress <boletinexpress@unit.example>",
+    RESEND_API_KEY: "fixture-only",
+  };
+  assert.equal(await deliverDocument(task, bytes, config, send), "local-only");
+  assert.equal(calls, 1);
+  for (const change of [
+    { APP_ENV: "production" },
+    { MAILPIT_URL: "" },
+    { MAILPIT_URL: "http://outside.invalid" },
+    { MAILPIT_URL: "http://user:pass@mail:8025" },
+  ])
+    await assert.rejects(
+      deliverDocument(task, bytes, { ...config, ...change }, send),
+      /configuration/,
+    );
+  assert.equal(calls, 1);
 });
 test("un hash incorrecto o configuración incompleta impiden el envío", async () => {
   let called = false;
