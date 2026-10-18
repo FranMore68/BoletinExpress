@@ -58,4 +58,12 @@ rechaza repositorios ajenos y exige Linux x86_64. Pruebas con manifiesto fictici
 válido y repositorio ajeno: superadas, sin red ni credenciales. Las diez entradas
 Compose tienen pull_policy never. Descarga real y arranque remoto pendientes.
 
+
+El primer intento de CI detectó CVE-2026-77214 (HIGH) en libexpat de Storage.
+Se impidió publicar imágenes. Corrección mínima verificada en candidato local:
+apk actualiza solo libexpat de 2.8.5-r0 a 2.9.0-r0, versión fijada y publicada por
+Alpine. Salud de Storage y análisis del candidato superados (0 HIGH/CRITICAL).
+Se requiere nueva CI amd64 antes de publicar o desplegar. No cambia npm, SQL,
+configuración del VPS ni otros proyectos. Fuente oficial en el informe de fase 10.
+
 APTO CON OBSERVACIONES

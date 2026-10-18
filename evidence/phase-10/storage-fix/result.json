@@ -1,0 +1,15 @@
+{
+  "date": "2026-10-19",
+  "baseImage": "supabase/storage-api:v1.83.5",
+  "package": "libexpat",
+  "before": "2.8.5-r0",
+  "after": "2.9.0-r0",
+  "vulnerability": "CVE-2026-77214",
+  "candidateArchitecture": "aarch64",
+  "installedVersionVerified": true,
+  "storageHealthy": true,
+  "highDetected": 0,
+  "criticalDetected": 0,
+  "ciAmd64Pending": true,
+  "vpsChanged": false
+}

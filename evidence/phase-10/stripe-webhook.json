@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-19",
+  "id": "we_1US33kBOYpfv3qqp1G3eRDzC",
+  "url": "https://boletinexpress.moremaker3d.cloud/api/payments/stripe",
+  "livemode": false,
+  "status": "disabled",
+  "apiVersion": "2026-09-30.endive",
+  "enabledEvents": [
+    "checkout.session.completed"
+  ],
+  "secretStoredPrivately": true,
+  "otherEndpointsModified": false
+}

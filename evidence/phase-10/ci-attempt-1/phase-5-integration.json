@@ -1,0 +1,39 @@
+{
+  "pass": true,
+  "complete": true,
+  "groups": 8,
+  "results": [
+    {
+      "test": "el perfil copia 18 campos CIE sin confundir NIF y DNI; cambiarlo no altera documentos anteriores",
+      "pass": true
+    },
+    {
+      "test": "correcciones propias, revisiones, propiedad, códigos postales y ramas incompatibles protegidos en servidor",
+      "pass": true
+    },
+    {
+      "test": "la validación SQL y RLS también bloquean llamadas directas y el acceso a la cola",
+      "pass": true
+    },
+    {
+      "test": "cola deduplicada, PDF CIE de dos páginas, hash, descarga privada e invalidación de revisiones anteriores",
+      "pass": true
+    },
+    {
+      "test": "las once variantes inventariadas se guardan y generan por el worker: base, 50 %, P1/P2, g/h, otros usos, otra tensión, Auditori e incompleto",
+      "pass": true
+    },
+    {
+      "test": "el texto que no cabe falla por campo sin recortarlo; al corregir se genera otra revisión y se conserva cero",
+      "pass": true
+    },
+    {
+      "test": "valores antiguos del perfil se conservan y requieren corrección explícita en CIE; no se adivinan opciones",
+      "pass": true
+    },
+    {
+      "test": "BRIE y CIE comparten el worker limitado; las funciones CIE rechazan un documento BRIE",
+      "pass": true
+    }
+  ]
+}

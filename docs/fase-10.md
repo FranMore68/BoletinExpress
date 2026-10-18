@@ -78,9 +78,11 @@ No muestra valores en terminal. No pegar el contenido en el chat.
 Quedan vacíos hasta configurarlos:
 
 - `BE_IMAGE_*`: digests de las siete imágenes publicadas y las dos imágenes upstream.
-- `STRIPE_WEBHOOK_SECRET`: secreto del nuevo endpoint HTTPS; **no reutilizar** el
-  de Stripe CLI local. Endpoint `/api/payments/stripe`, evento
-  `checkout.session.completed` en modo de pruebas.
+- `STRIPE_WEBHOOK_SECRET`: preparado en el archivo privado para el nuevo endpoint
+  HTTPS; **no reutiliza** el de Stripe CLI local. Endpoint `/api/payments/stripe`,
+  evento `checkout.session.completed`, API `2026-09-30.endive`, modo de pruebas.
+  Creado y dejado desactivado hasta disponer de HTTPS; evidencia sin secreto en
+  `evidence/phase-10/stripe-webhook.json`. No se modificaron otros endpoints.
 
 El relay Auth envía a Resend con TLS verificado y mantiene las direcciones
 `.invalid` en el buzón interno. Mailpit no dispone de dominio ni puerto del host.
@@ -153,3 +155,18 @@ Fuentes técnicas:
 [Compose en Coolify](https://coolify.io/docs/services/configuration/docker-compose),
 [redes en Coolify](https://coolify.io/docs/core/networking-in-coolify),
 [GHCR](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-container-registry).
+
+## Primer intento de CI y corrección de Storage
+
+La CI [39173210229](https://github.com/FranMore68/BoletinExpress/actions/runs/39173210229)
+superó las siete baterías de integración, pero detectó un aviso HIGH en Storage:
+CVE-2026-77214, libexpat 2.8.5-r0. No se publicó ninguna imagen. Se conserva el
+informe actual en `evidence/phase-10/ci-attempt-1`; la descarga completa original,
+con evidencias históricas ya versionadas, está en `tmp/phase10-ci-attempt1-download`.
+
+El Dockerfile actualiza únicamente libexpat a 2.9.0-r0 en Storage. La imagen
+candidata local confirma la versión instalada, tiene salud correcta y no presenta
+avisos HIGH/CRITICAL detectados. Falta repetir la CI amd64 completa y la entrega.
+Evidencia: `evidence/phase-10/storage-fix`.
+[Corrección Alpine](https://security.alpinelinux.org/vuln/CVE-2026-77214),
+[paquete oficial](https://pkgs.alpinelinux.org/package/v3.23/main/x86_64/libexpat).

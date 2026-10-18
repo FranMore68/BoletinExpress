@@ -58,6 +58,7 @@ COPY infra/coolify/migrate.sh /opt/boletinexpress/migrate.sh
 
 FROM supabase/storage-api:v1.83.5 AS storage
 USER root
+RUN apk add --no-cache --upgrade libexpat=2.9.0-r0
 COPY infra/supabase/storage-runtime/package.json infra/supabase/storage-runtime/package-lock.json /app/
 RUN npm install --omit=dev --ignore-scripts --no-audit --no-fund
 RUN rm -rf /usr/local/lib/node_modules/npm /usr/local/bin/npm /usr/local/bin/npx /opt/yarn* /usr/local/bin/yarn*

@@ -44,7 +44,7 @@ def main():
         return
     if platform.system() != 'Linux' or platform.machine() != 'x86_64':
         raise SystemExit('Ejecutar únicamente en el VPS Linux x86_64 de BoletinExpress.')
-    token = getpass.getpass('Token GitHub read:packages (oculto; no se guarda): ')
+    token = getpass.getpass('Token GitHub read:packages (oculto; uso temporal): ')
     if not re.fullmatch(r'ghp_[A-Za-z0-9]+', token):
         raise SystemExit('Se necesita un token clásico; no se ha enviado nada.')
     with tempfile.TemporaryDirectory(prefix='boletinexpress-registry-') as config:

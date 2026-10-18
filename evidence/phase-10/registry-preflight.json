@@ -1,0 +1,42 @@
+{
+  "date": "2026-10-19",
+  "repository": "FranMore68/BoletinExpress",
+  "checks": [
+    {
+      "image": "web",
+      "apiResult": 404,
+      "existingPackageVisible": false
+    },
+    {
+      "image": "worker",
+      "apiResult": 404,
+      "existingPackageVisible": false
+    },
+    {
+      "image": "postgres",
+      "apiResult": 404,
+      "existingPackageVisible": false
+    },
+    {
+      "image": "auth",
+      "apiResult": 404,
+      "existingPackageVisible": false
+    },
+    {
+      "image": "storage",
+      "apiResult": 404,
+      "existingPackageVisible": false
+    },
+    {
+      "image": "gateway",
+      "apiResult": 404,
+      "existingPackageVisible": false
+    },
+    {
+      "image": "templates",
+      "apiResult": 404,
+      "existingPackageVisible": false
+    }
+  ],
+  "postPublicationPrivacyCheckPending": true
+}

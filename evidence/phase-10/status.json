@@ -26,5 +26,19 @@
   ],
   "persistedCredentialMasks": 107,
   "privateRegistryAccess": "Temporal Docker configuration, no global login",
-  "autoPullDisabled": true
+  "autoPullDisabled": true,
+  "firstCi": {
+    "runId": 39173210229,
+    "passed": false,
+    "functionalIntegrationsPassed": true,
+    "blockedBy": "CVE-2026-77214 in Storage libexpat 2.8.5-r0"
+  },
+  "storageFix": {
+    "version": "2.9.0-r0",
+    "candidateHealthPassed": true,
+    "candidateHighCritical": 0,
+    "ciPending": true
+  },
+  "stripeWebhookCreated": true,
+  "stripeWebhookStatus": "disabled"
 }

@@ -1,0 +1,15 @@
+{
+  "runId": 39173210229,
+  "commit": "c585cff4012208a212ebb8a60f823ec71e06e57f",
+  "conclusion": "failure",
+  "functionalIntegrationSteps": "All seven integration steps succeeded",
+  "blocker": {
+    "image": "storage",
+    "package": "libexpat",
+    "installed": "2.8.5-r0",
+    "fixed": "2.9.0-r0",
+    "id": "CVE-2026-77214",
+    "severity": "HIGH"
+  },
+  "imagesPublished": false
+}

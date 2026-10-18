@@ -1,0 +1,56 @@
+{
+  "pass": true,
+  "complete": true,
+  "groups": 11,
+  "concurrentResponses": {
+    "200": 2,
+    "409": 0,
+    "503": 0
+  },
+  "results": [
+    {
+      "test": "10 KC solo tras confirmar correo; confirmación repetida y nuevo acceso no duplican la concesión",
+      "pass": true
+    },
+    {
+      "test": "RLS separa saldos y movimientos; clientes y worker no pueden cobrar ni modificar saldo; credencial de créditos con permisos mínimos",
+      "pass": true
+    },
+    {
+      "test": "sin revisión, firma alterada, origen ajeno, coste inventado, otra cuenta, otra sesión y revisión caducada se rechazan sin cobro",
+      "pass": true
+    },
+    {
+      "test": "editar invalida la revisión anterior; un PDF cuyo hash no coincide no genera cargo",
+      "pass": true
+    },
+    {
+      "test": "ocho transacciones simultáneas con el rol restringido: exactamente un cierre y un cargo de 2 KC",
+      "pass": true
+    },
+    {
+      "test": "doble clic HTTP y reintentos conservan un solo cargo BRIE: 10→8 KC; documento cerrado y perfil conservado",
+      "pass": true
+    },
+    {
+      "test": "descarga e impresión conservan exactamente los bytes revisados; acceso ajeno, anónimo y sustitución del PDF bloqueados",
+      "pass": true
+    },
+    {
+      "test": "worker elimina fuentes y cola con datos de trabajo; el PDF final queda excluido de la limpieza",
+      "pass": true
+    },
+    {
+      "test": "CIE descuenta 5 KC: 8→3; saldo insuficiente conserva borrador y saldo, sin movimiento de cargo",
+      "pass": true
+    },
+    {
+      "test": "tres CIE concurrentes con 10 KC: dos cargos y un rechazo; saldo final 0 sin valores negativos",
+      "pass": true
+    },
+    {
+      "test": "fallo de generación y ausencia de PDF listo nunca descuentan créditos",
+      "pass": true
+    }
+  ]
+}
