@@ -1,0 +1,18 @@
+{
+  "test": "resend_single_external_document",
+  "status": "accepted_by_provider",
+  "testedAt": "2026-10-18T15:38:30.321Z",
+  "httpStatus": 200,
+  "providerId": "01a14faa-1909-79d0-a9be-df0cdec90ade",
+  "attachment": "BRIE ficticio de dos paginas, sin firma ni validez documental",
+  "attachmentSha256": "de7272f5de3c4f994cdc10dec144f177ce82f87d82c5fdd3f387b1394f15fbe6",
+  "externalRequestsAccepted": 1,
+  "deliveryConfirmed": true,
+  "recipientRecorded": false,
+  "normalWorkerTransport": "mailpit",
+  "authSmtpChanged": false,
+  "secretsCommitted": false,
+  "attachmentOpenedConfirmed": true,
+  "confirmationSource": "usuario: Recibido y PDF correcto",
+  "confirmedAt": "2026-10-18T15:39:50.626041+00:00"
+}

@@ -7,7 +7,7 @@
   "retentionIntegrationGroups": 12,
   "uiPassed": true,
   "mailTransport": "local Mailpit",
-  "resendExternalDeliveryTested": false,
+  "resendExternalDeliveryTested": true,
   "ciRun": 39108937933,
   "ciStatus": "success",
   "codeCommit": "31507551b4c9c9d8a9f5d74e3f82cca6da257553",
@@ -37,5 +37,9 @@
   "storageModerateAdvisories": 30,
   "postgrestInventoryCovered": false,
   "resourceBudgetPassed": true,
-  "closedAt": "2026-10-18T08:02:30.943713+00:00"
+  "closedAt": "2026-10-18T08:02:30.943713+00:00",
+  "resendExternalApiTested": true,
+  "resendExternalApiAccepted": true,
+  "resendInboxConfirmationPending": false,
+  "resendAttachmentOpenedConfirmed": true
 }

@@ -97,3 +97,19 @@ Han pasado 27 pruebas de aplicación, 43 pruebas PDF, 267 casos de catálogo y 5
 La comprobación local final encuentra cero objetos sin registro y cero borrados pendientes (`cleanup-closure.json`). Los servicios locales permanecen disponibles; la sesión ficticia utilizada en el navegador se ha cerrado y su pestaña temporal se ha retirado. El tamaño del navegador vuelve al valor habitual.
 
 Fallos funcionales pendientes detectados: ninguno. Quedan por verificar el correo externo con Resend y la capacidad/despliegue del VPS. La revisión de seguridad concluye **APTO CON OBSERVACIONES**, según `evidence/phase-8/security-review.md`. La fase 9 no se ha iniciado y requiere aceptar este cierre. La fase 7 permanece aplazada hasta después de la 9.
+
+
+## Prueba externa de Resend — 18/10/2026
+
+Se ha cargado la clave de envío desde `.secrets/mail.env`, sin mostrarla ni versionarla. Se ha enviado una única prueba al correo indicado expresamente por el usuario, usando el transporte documental existente y el remitente `BoletinExpress <boletinexpress@moremaker3d.cloud>`. El adjunto es el BRIE ficticio de fase 0: dos páginas con datos de prueba y aviso de que no acredita ninguna instalación, revisadas antes del envío. No se modifican originales ni se crean datos profesionales reales.
+
+Resend ha respondido HTTP 200 y ha devuelto un identificador de mensaje. Esto demuestra aceptación por la API; el usuario ha confirmado su recepción y que el PDF se abre correctamente. La prueba conserva una clave de idempotencia privada para evitar repetir el envío si se ejecuta otra vez. No se consulta el panel ni la API de administración con la clave restringida de envío.
+
+| Prueba | Resultado | Evidencia |
+|---|---|---|
+| Formato y permisos del secreto local | Clave con prefijo previsto, sin espacios internos; archivo privado excluido de Git | Comprobación local sin imprimir valores |
+| Transporte, adjunto íntegro e idempotencia | 2 pruebas unitarias superadas | `tests/mail.test.ts` |
+| Envío externo de un PDF ficticio al destino autorizado | Aceptado por Resend, HTTP 200 | `evidence/phase-8/resend-external.json` |
+| Recepción y apertura del adjunto | Confirmadas por el usuario: «Recibido y PDF correcto» | `evidence/phase-8/resend-external.json` |
+
+El worker normal continúa con Mailpit. No se activan envíos externos de los trabajos ficticios acumulados ni se modifica el SMTP de Auth. La activación general deberá separar primero esas pruebas de los envíos a cuentas con correo real verificado. La fase 9 está implementada y verificada en CI, pendiente de configurar Stripe; esta comprobación de correo no altera el orden acordado ni inicia la fase 7.
