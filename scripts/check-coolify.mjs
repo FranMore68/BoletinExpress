@@ -63,7 +63,7 @@ for (const [name, service] of services) {
   if (name !== "worker")
     assert.equal(
       service.environment?.OPENAI_API_KEY,
-      `\${BE_EMPTY:+}`,
+      "disabled",
       `${name}: clave IA anulada aunque Coolify inyecte .env`,
     );
   for (const key of [
@@ -87,7 +87,7 @@ for (const [name, service] of services) {
     if (!used)
       assert.equal(
         service.environment[key],
-        `\${BE_EMPTY:+}`,
+        "disabled",
         `${name}: ${key} anulada`,
       );
   }

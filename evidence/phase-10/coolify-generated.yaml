@@ -1,0 +1,857 @@
+services:
+  web:
+    image: '${BE_IMAGE_WEB:?}'
+    restart: unless-stopped
+    mem_limit: 512m
+    cpus: 0.28
+    pids_limit: 128
+    read_only: true
+    tmpfs:
+      - '/tmp:rw,noexec,nosuid,size=64m,uid=1000,gid=1000'
+    cap_drop:
+      - ALL
+    security_opt:
+      - 'no-new-privileges:true'
+    healthcheck:
+      test:
+        - CMD
+        - node
+        - '-e'
+        - "fetch('http://127.0.0.1:3000/api/health').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"
+      interval: 10s
+      timeout: 3s
+      start_period: 20s
+      retries: 3
+    logging:
+      driver: json-file
+      options:
+        max-size: 5m
+        max-file: '2'
+    networks:
+      default: null
+      data: null
+      hepqrz8hrz58omwradhcvzgj: null
+    environment:
+      APP_URL: ''
+      SUPABASE_URL: 'http://gateway:8000'
+      SUPABASE_ANON_KEY: '${ANON_KEY:?}'
+      AUTH_PROOF_SECRET: ''
+      CREDITS_API_KEY: ''
+      PAYMENTS_API_KEY: ''
+      EXTRACTION_API_KEY: ''
+      STRIPE_SECRET_KEY: ''
+      STRIPE_WEBHOOK_SECRET: ''
+      POSTGRES_PASSWORD: disabled
+      JWT_SECRET: disabled
+      SERVICE_ROLE_KEY: disabled
+      WORKER_KEY: disabled
+      RESEND_API_KEY: disabled
+      OPENAI_API_KEY: disabled
+      ANON_KEY: ''
+      COOLIFY_RESOURCE_UUID: hepqrz8hrz58omwradhcvzgj
+      COOLIFY_CONTAINER_NAME: web-hepqrz8hrz58omwradhcvzgj
+      SERVICE_NAME_WEB: web
+      SERVICE_NAME_WORKER: worker
+      SERVICE_NAME_AUTH: auth
+      SERVICE_NAME_GATEWAY: gateway
+      SERVICE_NAME_MAIL: mail
+      SERVICE_NAME_POSTGRES: postgres
+      SERVICE_NAME_REST: rest
+      SERVICE_NAME_STORAGE: storage
+      SERVICE_NAME_TEMPLATES: templates
+      SERVICE_NAME_MIGRATE: migrate
+    depends_on:
+      migrate:
+        condition: service_completed_successfully
+      gateway:
+        condition: service_healthy
+    container_name: web-hepqrz8hrz58omwradhcvzgj
+    labels:
+      - coolify.managed=true
+      - coolify.version=4.4.6
+      - coolify.serviceUuid=hepqrz8hrz58omwradhcvzgj
+      - coolify.type=service
+      - coolify.name=web-hepqrz8hrz58omwradhcvzgj
+      - coolify.resourceName=boletinexpress-evaluacion
+      - coolify.projectName=boletinexpress
+      - coolify.serviceName=web
+      - coolify.environmentName=production
+      - coolify.pullRequestId=0
+      - coolify.service.subUuid=cpmjgcjeyjpsluau6odeo4f7
+      - coolify.service.subType=application
+      - coolify.service.subName=web
+    env_file:
+      - .env
+  worker:
+    image: '${BE_IMAGE_WORKER:?}'
+    restart: unless-stopped
+    mem_limit: 256m
+    cpus: 0.25
+    pids_limit: 64
+    read_only: true
+    tmpfs:
+      - '/tmp:rw,noexec,nosuid,size=32m,uid=1000,gid=1000'
+    cap_drop:
+      - ALL
+    security_opt:
+      - 'no-new-privileges:true'
+    healthcheck:
+      test:
+        - CMD
+        - node
+        - '-e'
+        - "fetch('http://127.0.0.1:3001/health').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"
+      interval: 10s
+      timeout: 3s
+      start_period: 5s
+      retries: 3
+    logging:
+      driver: json-file
+      options:
+        max-size: 5m
+        max-file: '2'
+    networks:
+      data: null
+      egress: null
+      hepqrz8hrz58omwradhcvzgj: null
+    environment:
+      APP_ENV: evaluation
+      WORKER_REST_URL: 'http://rest:3000'
+      WORKER_STORAGE_URL: 'http://storage:5000'
+      WORKER_KEY: ''
+      MAIL_TRANSPORT: resend
+      MAILPIT_URL: 'http://mail:8025'
+      MAIL_FROM: ''
+      RESEND_API_KEY: ''
+      OPENAI_API_KEY: ''
+      OPENAI_EXTRACTION_MODEL: gpt-6-luna
+      OPENAI_TRANSCRIPTION_MODEL: whisper-1
+      POSTGRES_PASSWORD: disabled
+      JWT_SECRET: disabled
+      ANON_KEY: disabled
+      SERVICE_ROLE_KEY: disabled
+      CREDITS_API_KEY: disabled
+      PAYMENTS_API_KEY: disabled
+      EXTRACTION_API_KEY: disabled
+      AUTH_PROOF_SECRET: disabled
+      STRIPE_SECRET_KEY: disabled
+      STRIPE_WEBHOOK_SECRET: disabled
+      COOLIFY_RESOURCE_UUID: hepqrz8hrz58omwradhcvzgj
+      COOLIFY_CONTAINER_NAME: worker-hepqrz8hrz58omwradhcvzgj
+      SERVICE_NAME_WEB: web
+      SERVICE_NAME_WORKER: worker
+      SERVICE_NAME_AUTH: auth
+      SERVICE_NAME_GATEWAY: gateway
+      SERVICE_NAME_MAIL: mail
+      SERVICE_NAME_POSTGRES: postgres
+      SERVICE_NAME_REST: rest
+      SERVICE_NAME_STORAGE: storage
+      SERVICE_NAME_TEMPLATES: templates
+      SERVICE_NAME_MIGRATE: migrate
+    depends_on:
+      migrate:
+        condition: service_completed_successfully
+    container_name: worker-hepqrz8hrz58omwradhcvzgj
+    labels:
+      - coolify.managed=true
+      - coolify.version=4.4.6
+      - coolify.serviceUuid=hepqrz8hrz58omwradhcvzgj
+      - coolify.type=service
+      - coolify.name=worker-hepqrz8hrz58omwradhcvzgj
+      - coolify.resourceName=boletinexpress-evaluacion
+      - coolify.projectName=boletinexpress
+      - coolify.serviceName=worker
+      - coolify.environmentName=production
+      - coolify.pullRequestId=0
+      - coolify.service.subUuid=gtizdxdfcqe7kelqgpcnk28k
+      - coolify.service.subType=application
+      - coolify.service.subName=worker
+    env_file:
+      - .env
+  auth:
+    cap_drop:
+      - ALL
+    cpus: 0.15
+    depends_on:
+      mail:
+        condition: service_started
+        required: true
+      postgres:
+        condition: service_healthy
+        required: true
+    environment:
+      API_EXTERNAL_URL: '${APP_URL:?}'
+      GOTRUE_API_HOST: 0.0.0.0
+      GOTRUE_API_PORT: 9999
+      GOTRUE_DB_DATABASE_URL: 'postgres://supabase_auth_admin:${POSTGRES_PASSWORD}@postgres:5432/postgres'
+      GOTRUE_DB_DRIVER: postgres
+      GOTRUE_DB_MAX_POOL_SIZE: 10
+      GOTRUE_DISABLE_SIGNUP: 'false'
+      GOTRUE_EXTERNAL_ANONYMOUS_USERS_ENABLED: 'false'
+      GOTRUE_EXTERNAL_EMAIL_ENABLED: 'true'
+      GOTRUE_EXTERNAL_PHONE_ENABLED: 'false'
+      GOTRUE_JWT_ADMIN_ROLES: service_role
+      GOTRUE_JWT_AUD: authenticated
+      GOTRUE_JWT_DEFAULT_GROUP_NAME: authenticated
+      GOTRUE_JWT_EXP: 900
+      GOTRUE_JWT_SECRET: '${JWT_SECRET:?}'
+      GOTRUE_LOG_LEVEL: error
+      GOTRUE_MAILER_AUTOCONFIRM: 'false'
+      GOTRUE_MAILER_TEMPLATES_CONFIRMATION: 'http://templates:8080/confirmation.html'
+      GOTRUE_MAILER_TEMPLATES_RECOVERY: 'http://templates:8080/recovery.html'
+      GOTRUE_PASSWORD_MIN_LENGTH: 12
+      GOTRUE_RATE_LIMIT_EMAIL_SENT: 100
+      GOTRUE_SECURITY_REFRESH_TOKEN_REUSE_INTERVAL: 10
+      GOTRUE_SECURITY_REFRESH_TOKEN_ROTATION_ENABLED: 'true'
+      GOTRUE_SESSIONS_TIMEBOX: 168h
+      GOTRUE_SITE_URL: '${APP_URL}'
+      GOTRUE_SMTP_ADMIN_EMAIL: '${SMTP_FROM:?}'
+      GOTRUE_SMTP_HOST: mail
+      GOTRUE_SMTP_MAX_FREQUENCY: 1s
+      GOTRUE_SMTP_PASS: ''
+      GOTRUE_SMTP_PORT: '1025'
+      GOTRUE_SMTP_SENDER_NAME: BoletinExpress
+      GOTRUE_SMTP_USER: ''
+      GOTRUE_URI_ALLOW_LIST: '${APP_URL}/auth/confirm'
+      LOG_LEVEL: error
+      ANON_KEY: disabled
+      SERVICE_ROLE_KEY: disabled
+      WORKER_KEY: disabled
+      CREDITS_API_KEY: disabled
+      PAYMENTS_API_KEY: disabled
+      EXTRACTION_API_KEY: disabled
+      AUTH_PROOF_SECRET: disabled
+      RESEND_API_KEY: disabled
+      OPENAI_API_KEY: disabled
+      STRIPE_SECRET_KEY: disabled
+      STRIPE_WEBHOOK_SECRET: disabled
+      APP_URL: ''
+      JWT_SECRET: ''
+      SMTP_FROM: ''
+      COOLIFY_RESOURCE_UUID: hepqrz8hrz58omwradhcvzgj
+      COOLIFY_CONTAINER_NAME: auth-hepqrz8hrz58omwradhcvzgj
+      SERVICE_NAME_WEB: web
+      SERVICE_NAME_WORKER: worker
+      SERVICE_NAME_AUTH: auth
+      SERVICE_NAME_GATEWAY: gateway
+      SERVICE_NAME_MAIL: mail
+      SERVICE_NAME_POSTGRES: postgres
+      SERVICE_NAME_REST: rest
+      SERVICE_NAME_STORAGE: storage
+      SERVICE_NAME_TEMPLATES: templates
+      SERVICE_NAME_MIGRATE: migrate
+    healthcheck:
+      interval: 5s
+      retries: 12
+      start_period: 30s
+      test:
+        - CMD
+        - wget
+        - '-q'
+        - '-O'
+        - /dev/null
+        - 'http://127.0.0.1:9999/health'
+      timeout: 5s
+    image: '${BE_IMAGE_AUTH:?}'
+    logging:
+      driver: json-file
+      options:
+        max-file: '2'
+        max-size: 5m
+    mem_limit: 128m
+    networks:
+      data: null
+      hepqrz8hrz58omwradhcvzgj: null
+    restart: unless-stopped
+    security_opt:
+      - 'no-new-privileges:true'
+    container_name: auth-hepqrz8hrz58omwradhcvzgj
+    labels:
+      - coolify.managed=true
+      - coolify.version=4.4.6
+      - coolify.serviceUuid=hepqrz8hrz58omwradhcvzgj
+      - coolify.type=service
+      - coolify.name=auth-hepqrz8hrz58omwradhcvzgj
+      - coolify.resourceName=boletinexpress-evaluacion
+      - coolify.projectName=boletinexpress
+      - coolify.serviceName=auth
+      - coolify.environmentName=production
+      - coolify.pullRequestId=0
+      - coolify.service.subUuid=p2bhk65drqayqumjmlwbohzr
+      - coolify.service.subType=application
+      - coolify.service.subName=auth
+    env_file:
+      - .env
+  gateway:
+    cap_drop:
+      - ALL
+    cpus: 0.01
+    depends_on:
+      auth:
+        condition: service_healthy
+        required: true
+      rest:
+        condition: service_started
+        required: true
+      storage:
+        condition: service_healthy
+        required: true
+    environment:
+      ANON_KEY: '${ANON_KEY}'
+      SERVICE_ROLE_KEY: '${SERVICE_ROLE_KEY}'
+      POSTGRES_PASSWORD: disabled
+      JWT_SECRET: disabled
+      WORKER_KEY: disabled
+      CREDITS_API_KEY: disabled
+      PAYMENTS_API_KEY: disabled
+      EXTRACTION_API_KEY: disabled
+      AUTH_PROOF_SECRET: disabled
+      RESEND_API_KEY: disabled
+      OPENAI_API_KEY: disabled
+      STRIPE_SECRET_KEY: disabled
+      STRIPE_WEBHOOK_SECRET: disabled
+      COOLIFY_RESOURCE_UUID: hepqrz8hrz58omwradhcvzgj
+      COOLIFY_CONTAINER_NAME: gateway-hepqrz8hrz58omwradhcvzgj
+      SERVICE_NAME_WEB: web
+      SERVICE_NAME_WORKER: worker
+      SERVICE_NAME_AUTH: auth
+      SERVICE_NAME_GATEWAY: gateway
+      SERVICE_NAME_MAIL: mail
+      SERVICE_NAME_POSTGRES: postgres
+      SERVICE_NAME_REST: rest
+      SERVICE_NAME_STORAGE: storage
+      SERVICE_NAME_TEMPLATES: templates
+      SERVICE_NAME_MIGRATE: migrate
+    healthcheck:
+      interval: 5s
+      retries: 30
+      start_period: 60s
+      test:
+        - CMD
+        - wget
+        - '-q'
+        - '-O'
+        - /dev/null
+        - 'http://127.0.0.1:8000/health'
+      timeout: 3s
+    image: '${BE_IMAGE_GATEWAY:?}'
+    logging:
+      driver: json-file
+      options:
+        max-file: '2'
+        max-size: 5m
+    mem_limit: 64m
+    networks:
+      data: null
+      hepqrz8hrz58omwradhcvzgj: null
+    read_only: true
+    restart: unless-stopped
+    security_opt:
+      - 'no-new-privileges:true'
+    container_name: gateway-hepqrz8hrz58omwradhcvzgj
+    labels:
+      - coolify.managed=true
+      - coolify.version=4.4.6
+      - coolify.serviceUuid=hepqrz8hrz58omwradhcvzgj
+      - coolify.type=service
+      - coolify.name=gateway-hepqrz8hrz58omwradhcvzgj
+      - coolify.resourceName=boletinexpress-evaluacion
+      - coolify.projectName=boletinexpress
+      - coolify.serviceName=gateway
+      - coolify.environmentName=production
+      - coolify.pullRequestId=0
+      - coolify.service.subUuid=mp8utwu7hqxkiufkve1gp7vo
+      - coolify.service.subType=application
+      - coolify.service.subName=gateway
+    env_file:
+      - .env
+  mail:
+    cap_drop:
+      - ALL
+    cpus: 0.05
+    environment:
+      MP_DISABLE_VERSION_CHECK: 'true'
+      MP_MAX_MESSAGES: 100
+      MP_SMTP_AUTH_ACCEPT_ANY: 'true'
+      MP_SMTP_AUTH_ALLOW_INSECURE: 'true'
+      MP_SMTP_RELAY_HOST: smtp.resend.com
+      MP_SMTP_RELAY_PORT: '465'
+      MP_SMTP_RELAY_TLS: 'true'
+      MP_SMTP_RELAY_ALLOW_INSECURE: 'false'
+      MP_SMTP_RELAY_AUTH: plain
+      MP_SMTP_RELAY_USERNAME: resend
+      MP_SMTP_RELAY_PASSWORD: '${RESEND_API_KEY:?}'
+      MP_SMTP_RELAY_ALL: 'true'
+      MP_SMTP_RELAY_BLOCKED_RECIPIENTS: '(?i)@([^@]*\.)?invalid$$'
+      MP_SMTP_RELAY_FWD_SMTP_ERRORS: 'true'
+      MP_SMTP_RELAY_PRESERVE_MESSAGE_IDS: 'true'
+      POSTGRES_PASSWORD: disabled
+      JWT_SECRET: disabled
+      ANON_KEY: disabled
+      SERVICE_ROLE_KEY: disabled
+      WORKER_KEY: disabled
+      CREDITS_API_KEY: disabled
+      PAYMENTS_API_KEY: disabled
+      EXTRACTION_API_KEY: disabled
+      AUTH_PROOF_SECRET: disabled
+      OPENAI_API_KEY: disabled
+      STRIPE_SECRET_KEY: disabled
+      STRIPE_WEBHOOK_SECRET: disabled
+      RESEND_API_KEY: ''
+      COOLIFY_RESOURCE_UUID: hepqrz8hrz58omwradhcvzgj
+      COOLIFY_CONTAINER_NAME: mail-hepqrz8hrz58omwradhcvzgj
+      SERVICE_NAME_WEB: web
+      SERVICE_NAME_WORKER: worker
+      SERVICE_NAME_AUTH: auth
+      SERVICE_NAME_GATEWAY: gateway
+      SERVICE_NAME_MAIL: mail
+      SERVICE_NAME_POSTGRES: postgres
+      SERVICE_NAME_REST: rest
+      SERVICE_NAME_STORAGE: storage
+      SERVICE_NAME_TEMPLATES: templates
+      SERVICE_NAME_MIGRATE: migrate
+    image: 'axllent/mailpit:v1.31.6'
+    logging:
+      driver: json-file
+      options:
+        max-file: '2'
+        max-size: 5m
+    mem_limit: 64m
+    networks:
+      data: null
+      egress: null
+      hepqrz8hrz58omwradhcvzgj: null
+    restart: unless-stopped
+    security_opt:
+      - 'no-new-privileges:true'
+    container_name: mail-hepqrz8hrz58omwradhcvzgj
+    labels:
+      - coolify.managed=true
+      - coolify.version=4.4.6
+      - coolify.serviceUuid=hepqrz8hrz58omwradhcvzgj
+      - coolify.type=service
+      - coolify.name=mail-hepqrz8hrz58omwradhcvzgj
+      - coolify.resourceName=boletinexpress-evaluacion
+      - coolify.projectName=boletinexpress
+      - coolify.serviceName=mail
+      - coolify.environmentName=production
+      - coolify.pullRequestId=0
+      - coolify.service.subUuid=huo89ezopmtwhoz0vfkeap0f
+      - coolify.service.subType=application
+      - coolify.service.subName=mail
+    env_file:
+      - .env
+  postgres:
+    command:
+      - postgres
+      - '-c'
+      - config_file=/etc/postgresql/postgresql.conf
+      - '-c'
+      - shared_buffers=128MB
+      - '-c'
+      - max_connections=60
+      - '-c'
+      - log_min_messages=fatal
+      - '-c'
+      - log_statement=none
+    cpus: 0.1
+    environment:
+      POSTGRES_DB: postgres
+      POSTGRES_HOST: /var/run/postgresql
+      POSTGRES_PASSWORD: ''
+      JWT_SECRET: disabled
+      ANON_KEY: disabled
+      SERVICE_ROLE_KEY: disabled
+      WORKER_KEY: disabled
+      CREDITS_API_KEY: disabled
+      PAYMENTS_API_KEY: disabled
+      EXTRACTION_API_KEY: disabled
+      AUTH_PROOF_SECRET: disabled
+      RESEND_API_KEY: disabled
+      OPENAI_API_KEY: disabled
+      STRIPE_SECRET_KEY: disabled
+      STRIPE_WEBHOOK_SECRET: disabled
+      COOLIFY_RESOURCE_UUID: hepqrz8hrz58omwradhcvzgj
+      COOLIFY_CONTAINER_NAME: postgres-hepqrz8hrz58omwradhcvzgj
+      SERVICE_NAME_WEB: web
+      SERVICE_NAME_WORKER: worker
+      SERVICE_NAME_AUTH: auth
+      SERVICE_NAME_GATEWAY: gateway
+      SERVICE_NAME_MAIL: mail
+      SERVICE_NAME_POSTGRES: postgres
+      SERVICE_NAME_REST: rest
+      SERVICE_NAME_STORAGE: storage
+      SERVICE_NAME_TEMPLATES: templates
+      SERVICE_NAME_MIGRATE: migrate
+    healthcheck:
+      interval: 5s
+      retries: 30
+      test:
+        - CMD
+        - pg_isready
+        - '-U'
+        - postgres
+        - '-h'
+        - localhost
+      timeout: 5s
+    image: '${BE_IMAGE_POSTGRES:?}'
+    logging:
+      driver: json-file
+      options:
+        max-file: '2'
+        max-size: 5m
+    mem_limit: 1280m
+    networks:
+      data: null
+      hepqrz8hrz58omwradhcvzgj: null
+    restart: unless-stopped
+    volumes:
+      -
+        source: hepqrz8hrz58omwradhcvzgj_db
+        target: /var/lib/postgresql/data
+        type: volume
+        volume: {  }
+      -
+        source: hepqrz8hrz58omwradhcvzgj_db-config
+        target: /etc/postgresql-custom
+        type: volume
+        volume: {  }
+    container_name: postgres-hepqrz8hrz58omwradhcvzgj
+    labels:
+      - coolify.managed=true
+      - coolify.version=4.4.6
+      - coolify.serviceUuid=hepqrz8hrz58omwradhcvzgj
+      - coolify.type=service
+      - coolify.name=postgres-hepqrz8hrz58omwradhcvzgj
+      - coolify.resourceName=boletinexpress-evaluacion
+      - coolify.projectName=boletinexpress
+      - coolify.serviceName=postgres
+      - coolify.environmentName=production
+      - coolify.pullRequestId=0
+      - coolify.service.subUuid=zkxgsrgng6qvq3ke4q67inhg
+      - coolify.service.subType=application
+      - coolify.service.subName=postgres
+    env_file:
+      - .env
+  rest:
+    cap_drop:
+      - ALL
+    cpus: 0.03
+    depends_on:
+      postgres:
+        condition: service_healthy
+        required: true
+    environment:
+      PGRST_DB_ANON_ROLE: anon
+      PGRST_DB_POOL: 5
+      PGRST_DB_SCHEMAS: 'public,storage'
+      PGRST_DB_URI: 'postgres://authenticator:${POSTGRES_PASSWORD}@postgres:5432/postgres'
+      PGRST_JWT_SECRET: '${JWT_SECRET}'
+      PGRST_LOG_LEVEL: crit
+      ANON_KEY: disabled
+      SERVICE_ROLE_KEY: disabled
+      WORKER_KEY: disabled
+      CREDITS_API_KEY: disabled
+      PAYMENTS_API_KEY: disabled
+      EXTRACTION_API_KEY: disabled
+      AUTH_PROOF_SECRET: disabled
+      RESEND_API_KEY: disabled
+      OPENAI_API_KEY: disabled
+      STRIPE_SECRET_KEY: disabled
+      STRIPE_WEBHOOK_SECRET: disabled
+      JWT_SECRET: ''
+      COOLIFY_RESOURCE_UUID: hepqrz8hrz58omwradhcvzgj
+      COOLIFY_CONTAINER_NAME: rest-hepqrz8hrz58omwradhcvzgj
+      SERVICE_NAME_WEB: web
+      SERVICE_NAME_WORKER: worker
+      SERVICE_NAME_AUTH: auth
+      SERVICE_NAME_GATEWAY: gateway
+      SERVICE_NAME_MAIL: mail
+      SERVICE_NAME_POSTGRES: postgres
+      SERVICE_NAME_REST: rest
+      SERVICE_NAME_STORAGE: storage
+      SERVICE_NAME_TEMPLATES: templates
+      SERVICE_NAME_MIGRATE: migrate
+    image: 'postgrest/postgrest:v14.17'
+    logging:
+      driver: json-file
+      options:
+        max-file: '2'
+        max-size: 5m
+    mem_limit: 128m
+    networks:
+      data: null
+      hepqrz8hrz58omwradhcvzgj: null
+    restart: unless-stopped
+    security_opt:
+      - 'no-new-privileges:true'
+    container_name: rest-hepqrz8hrz58omwradhcvzgj
+    labels:
+      - coolify.managed=true
+      - coolify.version=4.4.6
+      - coolify.serviceUuid=hepqrz8hrz58omwradhcvzgj
+      - coolify.type=service
+      - coolify.name=rest-hepqrz8hrz58omwradhcvzgj
+      - coolify.resourceName=boletinexpress-evaluacion
+      - coolify.projectName=boletinexpress
+      - coolify.serviceName=rest
+      - coolify.environmentName=production
+      - coolify.pullRequestId=0
+      - coolify.service.subUuid=zpmind19jddjakc4c76mqxgv
+      - coolify.service.subType=application
+      - coolify.service.subName=rest
+    env_file:
+      - .env
+  storage:
+    cap_drop:
+      - ALL
+    cpus: 0.1
+    depends_on:
+      postgres:
+        condition: service_healthy
+        required: true
+      rest:
+        condition: service_started
+        required: true
+    environment:
+      ANON_KEY: ''
+      AUTH_JWT_SECRET: '${JWT_SECRET}'
+      DATABASE_URL: 'postgres://supabase_storage_admin:${POSTGRES_PASSWORD}@postgres:5432/postgres'
+      ENABLE_IMAGE_TRANSFORMATION: 'false'
+      FILE_SIZE_LIMIT: 2097152
+      FILE_STORAGE_BACKEND_PATH: /var/lib/storage
+      GLOBAL_S3_BUCKET: boletinexpress
+      LOG_LEVEL: error
+      POSTGREST_URL: 'http://rest:3000'
+      REGION: local
+      SERVICE_KEY: '${SERVICE_ROLE_KEY:?}'
+      STORAGE_BACKEND: file
+      STORAGE_PUBLIC_URL: '${APP_URL}'
+      TENANT_ID: boletinexpress
+      WORKER_KEY: disabled
+      CREDITS_API_KEY: disabled
+      PAYMENTS_API_KEY: disabled
+      EXTRACTION_API_KEY: disabled
+      AUTH_PROOF_SECRET: disabled
+      RESEND_API_KEY: disabled
+      OPENAI_API_KEY: disabled
+      STRIPE_SECRET_KEY: disabled
+      STRIPE_WEBHOOK_SECRET: disabled
+      JWT_SECRET: ''
+      APP_URL: ''
+      COOLIFY_RESOURCE_UUID: hepqrz8hrz58omwradhcvzgj
+      COOLIFY_CONTAINER_NAME: storage-hepqrz8hrz58omwradhcvzgj
+      SERVICE_NAME_WEB: web
+      SERVICE_NAME_WORKER: worker
+      SERVICE_NAME_AUTH: auth
+      SERVICE_NAME_GATEWAY: gateway
+      SERVICE_NAME_MAIL: mail
+      SERVICE_NAME_POSTGRES: postgres
+      SERVICE_NAME_REST: rest
+      SERVICE_NAME_STORAGE: storage
+      SERVICE_NAME_TEMPLATES: templates
+      SERVICE_NAME_MIGRATE: migrate
+    healthcheck:
+      interval: 10s
+      retries: 12
+      start_period: 120s
+      test:
+        - CMD
+        - wget
+        - '-q'
+        - '-O'
+        - /dev/null
+        - 'http://127.0.0.1:5000/status'
+      timeout: 5s
+    image: '${BE_IMAGE_STORAGE:?}'
+    logging:
+      driver: json-file
+      options:
+        max-file: '2'
+        max-size: 5m
+    mem_limit: 512m
+    networks:
+      data: null
+      hepqrz8hrz58omwradhcvzgj: null
+    restart: unless-stopped
+    security_opt:
+      - 'no-new-privileges:true'
+    volumes:
+      -
+        source: hepqrz8hrz58omwradhcvzgj_files
+        target: /var/lib/storage
+        type: volume
+        volume: {  }
+    container_name: storage-hepqrz8hrz58omwradhcvzgj
+    labels:
+      - coolify.managed=true
+      - coolify.version=4.4.6
+      - coolify.serviceUuid=hepqrz8hrz58omwradhcvzgj
+      - coolify.type=service
+      - coolify.name=storage-hepqrz8hrz58omwradhcvzgj
+      - coolify.resourceName=boletinexpress-evaluacion
+      - coolify.projectName=boletinexpress
+      - coolify.serviceName=storage
+      - coolify.environmentName=production
+      - coolify.pullRequestId=0
+      - coolify.service.subUuid=ywpc6tzivyz9grvtig1uxufe
+      - coolify.service.subType=application
+      - coolify.service.subName=storage
+    env_file:
+      - .env
+  templates:
+    cap_drop:
+      - ALL
+    cpus: 0.01
+    image: '${BE_IMAGE_TEMPLATES:?}'
+    logging:
+      driver: json-file
+      options:
+        max-file: '2'
+        max-size: 5m
+    mem_limit: 64m
+    networks:
+      data: null
+      hepqrz8hrz58omwradhcvzgj: null
+    read_only: true
+    restart: unless-stopped
+    security_opt:
+      - 'no-new-privileges:true'
+    environment:
+      POSTGRES_PASSWORD: disabled
+      JWT_SECRET: disabled
+      ANON_KEY: disabled
+      SERVICE_ROLE_KEY: disabled
+      WORKER_KEY: disabled
+      CREDITS_API_KEY: disabled
+      PAYMENTS_API_KEY: disabled
+      EXTRACTION_API_KEY: disabled
+      AUTH_PROOF_SECRET: disabled
+      RESEND_API_KEY: disabled
+      OPENAI_API_KEY: disabled
+      STRIPE_SECRET_KEY: disabled
+      STRIPE_WEBHOOK_SECRET: disabled
+      COOLIFY_RESOURCE_UUID: hepqrz8hrz58omwradhcvzgj
+      COOLIFY_CONTAINER_NAME: templates-hepqrz8hrz58omwradhcvzgj
+      SERVICE_NAME_WEB: web
+      SERVICE_NAME_WORKER: worker
+      SERVICE_NAME_AUTH: auth
+      SERVICE_NAME_GATEWAY: gateway
+      SERVICE_NAME_MAIL: mail
+      SERVICE_NAME_POSTGRES: postgres
+      SERVICE_NAME_REST: rest
+      SERVICE_NAME_STORAGE: storage
+      SERVICE_NAME_TEMPLATES: templates
+      SERVICE_NAME_MIGRATE: migrate
+    container_name: templates-hepqrz8hrz58omwradhcvzgj
+    labels:
+      - coolify.managed=true
+      - coolify.version=4.4.6
+      - coolify.serviceUuid=hepqrz8hrz58omwradhcvzgj
+      - coolify.type=service
+      - coolify.name=templates-hepqrz8hrz58omwradhcvzgj
+      - coolify.resourceName=boletinexpress-evaluacion
+      - coolify.projectName=boletinexpress
+      - coolify.serviceName=templates
+      - coolify.environmentName=production
+      - coolify.pullRequestId=0
+      - coolify.service.subUuid=rdncyi5jnsolmpll3wy55fsv
+      - coolify.service.subType=application
+      - coolify.service.subName=templates
+    env_file:
+      - .env
+  migrate:
+    image: '${BE_IMAGE_POSTGRES:?}'
+    restart: 'no'
+    mem_limit: 64m
+    cpus: 0.02
+    pids_limit: 32
+    cap_drop:
+      - ALL
+    security_opt:
+      - 'no-new-privileges:true'
+    read_only: true
+    tmpfs:
+      - '/tmp:rw,noexec,nosuid,size=8m'
+    entrypoint:
+      - /bin/sh
+      - /opt/boletinexpress/migrate.sh
+    environment:
+      PGHOST: postgres
+      PGPORT: '5432'
+      PGUSER: supabase_admin
+      PGDATABASE: postgres
+      PGPASSWORD: '${POSTGRES_PASSWORD:?}'
+      JWT_SECRET: disabled
+      ANON_KEY: disabled
+      SERVICE_ROLE_KEY: disabled
+      WORKER_KEY: disabled
+      CREDITS_API_KEY: disabled
+      PAYMENTS_API_KEY: disabled
+      EXTRACTION_API_KEY: disabled
+      AUTH_PROOF_SECRET: disabled
+      RESEND_API_KEY: disabled
+      OPENAI_API_KEY: disabled
+      STRIPE_SECRET_KEY: disabled
+      STRIPE_WEBHOOK_SECRET: disabled
+      POSTGRES_PASSWORD: ''
+      COOLIFY_RESOURCE_UUID: hepqrz8hrz58omwradhcvzgj
+      COOLIFY_CONTAINER_NAME: migrate-hepqrz8hrz58omwradhcvzgj
+      SERVICE_NAME_WEB: web
+      SERVICE_NAME_WORKER: worker
+      SERVICE_NAME_AUTH: auth
+      SERVICE_NAME_GATEWAY: gateway
+      SERVICE_NAME_MAIL: mail
+      SERVICE_NAME_POSTGRES: postgres
+      SERVICE_NAME_REST: rest
+      SERVICE_NAME_STORAGE: storage
+      SERVICE_NAME_TEMPLATES: templates
+      SERVICE_NAME_MIGRATE: migrate
+    depends_on:
+      auth:
+        condition: service_healthy
+      storage:
+        condition: service_healthy
+    networks:
+      data: null
+      hepqrz8hrz58omwradhcvzgj: null
+    logging:
+      driver: json-file
+      options:
+        max-size: 5m
+        max-file: '2'
+    container_name: migrate-hepqrz8hrz58omwradhcvzgj
+    labels:
+      - coolify.managed=true
+      - coolify.version=4.4.6
+      - coolify.serviceUuid=hepqrz8hrz58omwradhcvzgj
+      - coolify.type=service
+      - coolify.name=migrate-hepqrz8hrz58omwradhcvzgj
+      - coolify.resourceName=boletinexpress-evaluacion
+      - coolify.projectName=boletinexpress
+      - coolify.serviceName=migrate
+      - coolify.environmentName=production
+      - coolify.pullRequestId=0
+      - coolify.service.subUuid=vavydqulpjnb1cp8vql9qyzj
+      - coolify.service.subType=application
+      - coolify.service.subName=migrate
+    env_file:
+      - .env
+volumes:
+  db: {  }
+  db-config: {  }
+  files: {  }
+  hepqrz8hrz58omwradhcvzgj_db:
+    name: hepqrz8hrz58omwradhcvzgj_db
+  hepqrz8hrz58omwradhcvzgj_db-config:
+    name: hepqrz8hrz58omwradhcvzgj_db-config
+  hepqrz8hrz58omwradhcvzgj_files:
+    name: hepqrz8hrz58omwradhcvzgj_files
+networks:
+  default: {  }
+  data:
+    internal: true
+  egress: {  }
+  hepqrz8hrz58omwradhcvzgj:
+    name: hepqrz8hrz58omwradhcvzgj
+    external: true

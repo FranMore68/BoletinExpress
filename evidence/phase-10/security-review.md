@@ -7,10 +7,11 @@ actualización de estado. No cambia la lógica de negocio ni los SQL existentes.
 ## Hallazgos
 
 - Medio, despliegue pendiente: Coolify 4.4.6 inyecta `.env` en cada contenedor.
-  Corregido en el Compose local con anulaciones explícitas de claves innecesarias.
+  Corregido en el Compose local con anulaciones explícitas de claves innecesarias con el marcador fijo `disabled`.
   Diez contenedores locales con inyección simulada comprobados. El recurso remoto
-  sigue con la definición inicial, detenido y sin secretos; la configuración final
-  debe guardarse y comprobarse antes de arrancar. No apto aún para activar el piloto.
+  conserva los 107 marcadores tras recargar, está detenido y sin secretos. Antes
+  de arrancar falta cargar variables y comprobar el entorno efectivo remoto.
+  No apto aún para activar el piloto.
 - Medio, despliegue pendiente: el parser añade la red exclusiva del UUID a todos
   los componentes. No conecta otros proyectos, pero la separación frontal/interna
   del archivo fuente no es la topología completa. Verificar aislamiento remoto y

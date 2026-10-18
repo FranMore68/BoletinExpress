@@ -40,9 +40,9 @@ Network**. La topología remota no se da por verificada hasta comprobarla allí.
 `migrate.exclude_from_hc` es una propiedad específica de Coolify. El comprobador
 local retira únicamente esa línea antes de validar con Docker Compose estándar.
 El parser de Coolify ha aceptado la definición inicial y ha creado los diez componentes.
-El guardado posterior de la versión con aislamiento de variables queda pendiente:
-Coolify lo bloquea mientras existan variables obligatorias vacías. No desplegar la
-definición inicial ni introducir credenciales hasta completar ese ajuste.
+La versión final con 107 anulaciones de credenciales innecesarias está guardada;
+se ha verificado su persistencia tras recargar la página y su presencia en el
+Compose generado. Las variables obligatorias vacías siguen bloqueando el despliegue.
 
 ## Adaptación a Coolify 4.4.6
 
@@ -52,17 +52,18 @@ recurso (externa para Compose, exclusiva de este UUID). No es la red compartida
 entre componentes del propio recurso y exige comprobar el aislamiento final allí.
 
 El archivo local anula explícitamente las trece variables de credenciales que cada
-componente no utiliza, mediante `${BE_EMPTY:+}`: produce una cadena vacía incluso
-si BE_EMPTY tuviera valor. Esto evita que la inyección de `.env` coloque claves
-innecesarias en el entorno efectivo. Un vacío literal no basta: el parser de Coolify
+componente no utiliza, mediante el marcador fijo `disabled`. Esto evita que la inyección de `.env`
+coloque claves innecesarias en el entorno efectivo. Un vacío literal no basta: el parser de Coolify
 puede reemplazarlo por el valor guardado. Cualquier variable secreta nueva exige
 ampliar la lista y su comprobación.
 
 La prueba local simula la inyección del archivo común y comprueba el entorno
-efectivo de los diez contenedores: todas las credenciales innecesarias están vacías.
-Pendiente verificar la transformación de esta versión final por Coolify y el
-entorno efectivo remoto antes de habilitar acceso público. La vista previa de la
-definición inicial conserva la inyección común y no constituye esa aceptación.
+efectivo de los diez contenedores: todas las credenciales innecesarias tienen el marcador `disabled`, sin su valor real.
+La transformación final conserva los 107 marcadores `disabled`, los límites y
+las dependencias. Evidencia: `evidence/phase-10/coolify-generated.yaml`, obtenida
+antes de cargar secretos. La persistencia del fuente se comprobó tras recargar.
+Pendiente comprobar el entorno efectivo remoto al arrancar, antes de habilitar
+acceso público.
 
 ## Configuración privada
 
@@ -130,7 +131,7 @@ evidencia permitida por el límite actual de alcance, sin darla por cumplida.
 | Aplicación | Superada: lint, tipos, 37 pruebas y revisión de secretos | `npm run check` con Node 24.19.0 |
 | Publicación de imágenes y acceso desde Coolify | Pendiente | Workflow manual |
 | Parser inicial de Coolify | Aceptado; recurso detenido | `evidence/phase-10/coolify-created.png` |
-| Guardado final y topología generada | Pendiente de variables obligatorias | Sin claves cargadas |
+| Guardado final y topología generada | Persistencia y 107 marcadores verificados; sin claves cargadas | `evidence/phase-10/coolify-generated.yaml` |
 | Recorrido HTTPS y carga de diez minutos | Pendiente | No desplegado |
 
 Fuentes técnicas:

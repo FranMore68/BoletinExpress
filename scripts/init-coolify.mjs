@@ -39,7 +39,6 @@ const token = (role) => {
 };
 const sender = /^(?:[^<>]*<)?([^<>\s]+@[^<>\s]+)>?$/.exec(mail.MAIL_FROM || "");
 const values = {
-  BE_EMPTY: "",
   APP_URL: "https://boletinexpress.moremaker3d.cloud",
   POSTGRES_PASSWORD: randomBytes(24).toString("hex"),
   JWT_SECRET: secret,
@@ -94,7 +93,7 @@ console.log(
 );
 console.log(
   `Pendientes: ${Object.entries(values)
-    .filter(([k, v]) => !v && k !== "BE_EMPTY")
+    .filter(([, v]) => !v)
     .map(([k]) => k)
     .join(", ")}`,
 );

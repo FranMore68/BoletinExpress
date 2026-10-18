@@ -8,7 +8,7 @@
   "resourceUuid": "hepqrz8hrz58omwradhcvzgj",
   "resourceCreated": true,
   "remoteSecretsLoaded": false,
-  "finalComposeSaved": false,
+  "finalComposeSaved": true,
   "localStartupPassed": true,
   "localSecretIsolationPassed": true,
   "localApplicationTests": 37,
@@ -19,9 +19,10 @@
   "pending": [
     "Publicar imágenes verificadas fuera del VPS",
     "Configurar lectura privada del registro",
-    "Cargar variables y guardar el Compose final con aislamiento",
+    "Cargar variables y verificar el entorno efectivo remoto",
     "Dominio HTTPS y webhook Stripe test",
     "Comprobación del entorno efectivo remoto",
     "Recorrido remoto y prueba de carga 600 segundos"
-  ]
+  ],
+  "persistedCredentialMasks": 107
 }

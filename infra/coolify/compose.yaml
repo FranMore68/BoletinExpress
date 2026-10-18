@@ -41,12 +41,12 @@ services:
       EXTRACTION_API_KEY: "${EXTRACTION_API_KEY:?}"
       STRIPE_SECRET_KEY: "${STRIPE_SECRET_KEY:?}"
       STRIPE_WEBHOOK_SECRET: "${STRIPE_WEBHOOK_SECRET:?}"
-      POSTGRES_PASSWORD: "${BE_EMPTY:+}"
-      JWT_SECRET: "${BE_EMPTY:+}"
-      SERVICE_ROLE_KEY: "${BE_EMPTY:+}"
-      WORKER_KEY: "${BE_EMPTY:+}"
-      RESEND_API_KEY: "${BE_EMPTY:+}"
-      OPENAI_API_KEY: "${BE_EMPTY:+}"
+      POSTGRES_PASSWORD: disabled
+      JWT_SECRET: disabled
+      SERVICE_ROLE_KEY: disabled
+      WORKER_KEY: disabled
+      RESEND_API_KEY: disabled
+      OPENAI_API_KEY: disabled
     depends_on:
       migrate:
         condition: service_completed_successfully
@@ -95,16 +95,16 @@ services:
       OPENAI_API_KEY: "${OPENAI_API_KEY:?}"
       OPENAI_EXTRACTION_MODEL: gpt-6-luna
       OPENAI_TRANSCRIPTION_MODEL: whisper-1
-      POSTGRES_PASSWORD: "${BE_EMPTY:+}"
-      JWT_SECRET: "${BE_EMPTY:+}"
-      ANON_KEY: "${BE_EMPTY:+}"
-      SERVICE_ROLE_KEY: "${BE_EMPTY:+}"
-      CREDITS_API_KEY: "${BE_EMPTY:+}"
-      PAYMENTS_API_KEY: "${BE_EMPTY:+}"
-      EXTRACTION_API_KEY: "${BE_EMPTY:+}"
-      AUTH_PROOF_SECRET: "${BE_EMPTY:+}"
-      STRIPE_SECRET_KEY: "${BE_EMPTY:+}"
-      STRIPE_WEBHOOK_SECRET: "${BE_EMPTY:+}"
+      POSTGRES_PASSWORD: disabled
+      JWT_SECRET: disabled
+      ANON_KEY: disabled
+      SERVICE_ROLE_KEY: disabled
+      CREDITS_API_KEY: disabled
+      PAYMENTS_API_KEY: disabled
+      EXTRACTION_API_KEY: disabled
+      AUTH_PROOF_SECRET: disabled
+      STRIPE_SECRET_KEY: disabled
+      STRIPE_WEBHOOK_SECRET: disabled
     depends_on:
       migrate:
         condition: service_completed_successfully
@@ -154,17 +154,17 @@ services:
       GOTRUE_SMTP_USER: ''
       GOTRUE_URI_ALLOW_LIST: "${APP_URL}/auth/confirm"
       LOG_LEVEL: error
-      ANON_KEY: "${BE_EMPTY:+}"
-      SERVICE_ROLE_KEY: "${BE_EMPTY:+}"
-      WORKER_KEY: "${BE_EMPTY:+}"
-      CREDITS_API_KEY: "${BE_EMPTY:+}"
-      PAYMENTS_API_KEY: "${BE_EMPTY:+}"
-      EXTRACTION_API_KEY: "${BE_EMPTY:+}"
-      AUTH_PROOF_SECRET: "${BE_EMPTY:+}"
-      RESEND_API_KEY: "${BE_EMPTY:+}"
-      OPENAI_API_KEY: "${BE_EMPTY:+}"
-      STRIPE_SECRET_KEY: "${BE_EMPTY:+}"
-      STRIPE_WEBHOOK_SECRET: "${BE_EMPTY:+}"
+      ANON_KEY: disabled
+      SERVICE_ROLE_KEY: disabled
+      WORKER_KEY: disabled
+      CREDITS_API_KEY: disabled
+      PAYMENTS_API_KEY: disabled
+      EXTRACTION_API_KEY: disabled
+      AUTH_PROOF_SECRET: disabled
+      RESEND_API_KEY: disabled
+      OPENAI_API_KEY: disabled
+      STRIPE_SECRET_KEY: disabled
+      STRIPE_WEBHOOK_SECRET: disabled
     healthcheck:
       interval: 5s
       retries: 12
@@ -206,17 +206,17 @@ services:
     environment:
       ANON_KEY: "${ANON_KEY}"
       SERVICE_ROLE_KEY: "${SERVICE_ROLE_KEY}"
-      POSTGRES_PASSWORD: "${BE_EMPTY:+}"
-      JWT_SECRET: "${BE_EMPTY:+}"
-      WORKER_KEY: "${BE_EMPTY:+}"
-      CREDITS_API_KEY: "${BE_EMPTY:+}"
-      PAYMENTS_API_KEY: "${BE_EMPTY:+}"
-      EXTRACTION_API_KEY: "${BE_EMPTY:+}"
-      AUTH_PROOF_SECRET: "${BE_EMPTY:+}"
-      RESEND_API_KEY: "${BE_EMPTY:+}"
-      OPENAI_API_KEY: "${BE_EMPTY:+}"
-      STRIPE_SECRET_KEY: "${BE_EMPTY:+}"
-      STRIPE_WEBHOOK_SECRET: "${BE_EMPTY:+}"
+      POSTGRES_PASSWORD: disabled
+      JWT_SECRET: disabled
+      WORKER_KEY: disabled
+      CREDITS_API_KEY: disabled
+      PAYMENTS_API_KEY: disabled
+      EXTRACTION_API_KEY: disabled
+      AUTH_PROOF_SECRET: disabled
+      RESEND_API_KEY: disabled
+      OPENAI_API_KEY: disabled
+      STRIPE_SECRET_KEY: disabled
+      STRIPE_WEBHOOK_SECRET: disabled
     healthcheck:
       interval: 5s
       retries: 30
@@ -262,18 +262,18 @@ services:
       MP_SMTP_RELAY_BLOCKED_RECIPIENTS: "(?i)@([^@]*\\.)?invalid$$"
       MP_SMTP_RELAY_FWD_SMTP_ERRORS: 'true'
       MP_SMTP_RELAY_PRESERVE_MESSAGE_IDS: 'true'
-      POSTGRES_PASSWORD: "${BE_EMPTY:+}"
-      JWT_SECRET: "${BE_EMPTY:+}"
-      ANON_KEY: "${BE_EMPTY:+}"
-      SERVICE_ROLE_KEY: "${BE_EMPTY:+}"
-      WORKER_KEY: "${BE_EMPTY:+}"
-      CREDITS_API_KEY: "${BE_EMPTY:+}"
-      PAYMENTS_API_KEY: "${BE_EMPTY:+}"
-      EXTRACTION_API_KEY: "${BE_EMPTY:+}"
-      AUTH_PROOF_SECRET: "${BE_EMPTY:+}"
-      OPENAI_API_KEY: "${BE_EMPTY:+}"
-      STRIPE_SECRET_KEY: "${BE_EMPTY:+}"
-      STRIPE_WEBHOOK_SECRET: "${BE_EMPTY:+}"
+      POSTGRES_PASSWORD: disabled
+      JWT_SECRET: disabled
+      ANON_KEY: disabled
+      SERVICE_ROLE_KEY: disabled
+      WORKER_KEY: disabled
+      CREDITS_API_KEY: disabled
+      PAYMENTS_API_KEY: disabled
+      EXTRACTION_API_KEY: disabled
+      AUTH_PROOF_SECRET: disabled
+      OPENAI_API_KEY: disabled
+      STRIPE_SECRET_KEY: disabled
+      STRIPE_WEBHOOK_SECRET: disabled
     image: axllent/mailpit:v1.31.6
     logging:
       driver: json-file
@@ -305,18 +305,18 @@ services:
       POSTGRES_DB: postgres
       POSTGRES_HOST: "/var/run/postgresql"
       POSTGRES_PASSWORD: "${POSTGRES_PASSWORD:?}"
-      JWT_SECRET: "${BE_EMPTY:+}"
-      ANON_KEY: "${BE_EMPTY:+}"
-      SERVICE_ROLE_KEY: "${BE_EMPTY:+}"
-      WORKER_KEY: "${BE_EMPTY:+}"
-      CREDITS_API_KEY: "${BE_EMPTY:+}"
-      PAYMENTS_API_KEY: "${BE_EMPTY:+}"
-      EXTRACTION_API_KEY: "${BE_EMPTY:+}"
-      AUTH_PROOF_SECRET: "${BE_EMPTY:+}"
-      RESEND_API_KEY: "${BE_EMPTY:+}"
-      OPENAI_API_KEY: "${BE_EMPTY:+}"
-      STRIPE_SECRET_KEY: "${BE_EMPTY:+}"
-      STRIPE_WEBHOOK_SECRET: "${BE_EMPTY:+}"
+      JWT_SECRET: disabled
+      ANON_KEY: disabled
+      SERVICE_ROLE_KEY: disabled
+      WORKER_KEY: disabled
+      CREDITS_API_KEY: disabled
+      PAYMENTS_API_KEY: disabled
+      EXTRACTION_API_KEY: disabled
+      AUTH_PROOF_SECRET: disabled
+      RESEND_API_KEY: disabled
+      OPENAI_API_KEY: disabled
+      STRIPE_SECRET_KEY: disabled
+      STRIPE_WEBHOOK_SECRET: disabled
     healthcheck:
       interval: 5s
       retries: 30
@@ -362,17 +362,17 @@ services:
       PGRST_DB_URI: postgres://authenticator:${POSTGRES_PASSWORD}@postgres:5432/postgres
       PGRST_JWT_SECRET: "${JWT_SECRET}"
       PGRST_LOG_LEVEL: crit
-      ANON_KEY: "${BE_EMPTY:+}"
-      SERVICE_ROLE_KEY: "${BE_EMPTY:+}"
-      WORKER_KEY: "${BE_EMPTY:+}"
-      CREDITS_API_KEY: "${BE_EMPTY:+}"
-      PAYMENTS_API_KEY: "${BE_EMPTY:+}"
-      EXTRACTION_API_KEY: "${BE_EMPTY:+}"
-      AUTH_PROOF_SECRET: "${BE_EMPTY:+}"
-      RESEND_API_KEY: "${BE_EMPTY:+}"
-      OPENAI_API_KEY: "${BE_EMPTY:+}"
-      STRIPE_SECRET_KEY: "${BE_EMPTY:+}"
-      STRIPE_WEBHOOK_SECRET: "${BE_EMPTY:+}"
+      ANON_KEY: disabled
+      SERVICE_ROLE_KEY: disabled
+      WORKER_KEY: disabled
+      CREDITS_API_KEY: disabled
+      PAYMENTS_API_KEY: disabled
+      EXTRACTION_API_KEY: disabled
+      AUTH_PROOF_SECRET: disabled
+      RESEND_API_KEY: disabled
+      OPENAI_API_KEY: disabled
+      STRIPE_SECRET_KEY: disabled
+      STRIPE_WEBHOOK_SECRET: disabled
     image: postgrest/postgrest:v14.17
     logging:
       driver: json-file
@@ -411,15 +411,15 @@ services:
       STORAGE_BACKEND: file
       STORAGE_PUBLIC_URL: "${APP_URL}"
       TENANT_ID: boletinexpress
-      WORKER_KEY: "${BE_EMPTY:+}"
-      CREDITS_API_KEY: "${BE_EMPTY:+}"
-      PAYMENTS_API_KEY: "${BE_EMPTY:+}"
-      EXTRACTION_API_KEY: "${BE_EMPTY:+}"
-      AUTH_PROOF_SECRET: "${BE_EMPTY:+}"
-      RESEND_API_KEY: "${BE_EMPTY:+}"
-      OPENAI_API_KEY: "${BE_EMPTY:+}"
-      STRIPE_SECRET_KEY: "${BE_EMPTY:+}"
-      STRIPE_WEBHOOK_SECRET: "${BE_EMPTY:+}"
+      WORKER_KEY: disabled
+      CREDITS_API_KEY: disabled
+      PAYMENTS_API_KEY: disabled
+      EXTRACTION_API_KEY: disabled
+      AUTH_PROOF_SECRET: disabled
+      RESEND_API_KEY: disabled
+      OPENAI_API_KEY: disabled
+      STRIPE_SECRET_KEY: disabled
+      STRIPE_WEBHOOK_SECRET: disabled
     healthcheck:
       interval: 10s
       retries: 12
@@ -467,19 +467,19 @@ services:
     security_opt:
     - no-new-privileges:true
     environment:
-      POSTGRES_PASSWORD: "${BE_EMPTY:+}"
-      JWT_SECRET: "${BE_EMPTY:+}"
-      ANON_KEY: "${BE_EMPTY:+}"
-      SERVICE_ROLE_KEY: "${BE_EMPTY:+}"
-      WORKER_KEY: "${BE_EMPTY:+}"
-      CREDITS_API_KEY: "${BE_EMPTY:+}"
-      PAYMENTS_API_KEY: "${BE_EMPTY:+}"
-      EXTRACTION_API_KEY: "${BE_EMPTY:+}"
-      AUTH_PROOF_SECRET: "${BE_EMPTY:+}"
-      RESEND_API_KEY: "${BE_EMPTY:+}"
-      OPENAI_API_KEY: "${BE_EMPTY:+}"
-      STRIPE_SECRET_KEY: "${BE_EMPTY:+}"
-      STRIPE_WEBHOOK_SECRET: "${BE_EMPTY:+}"
+      POSTGRES_PASSWORD: disabled
+      JWT_SECRET: disabled
+      ANON_KEY: disabled
+      SERVICE_ROLE_KEY: disabled
+      WORKER_KEY: disabled
+      CREDITS_API_KEY: disabled
+      PAYMENTS_API_KEY: disabled
+      EXTRACTION_API_KEY: disabled
+      AUTH_PROOF_SECRET: disabled
+      RESEND_API_KEY: disabled
+      OPENAI_API_KEY: disabled
+      STRIPE_SECRET_KEY: disabled
+      STRIPE_WEBHOOK_SECRET: disabled
   migrate:
     image: "${BE_IMAGE_POSTGRES:?}"
     restart: 'no'
@@ -502,18 +502,18 @@ services:
       PGUSER: supabase_admin
       PGDATABASE: postgres
       PGPASSWORD: "${POSTGRES_PASSWORD:?}"
-      JWT_SECRET: "${BE_EMPTY:+}"
-      ANON_KEY: "${BE_EMPTY:+}"
-      SERVICE_ROLE_KEY: "${BE_EMPTY:+}"
-      WORKER_KEY: "${BE_EMPTY:+}"
-      CREDITS_API_KEY: "${BE_EMPTY:+}"
-      PAYMENTS_API_KEY: "${BE_EMPTY:+}"
-      EXTRACTION_API_KEY: "${BE_EMPTY:+}"
-      AUTH_PROOF_SECRET: "${BE_EMPTY:+}"
-      RESEND_API_KEY: "${BE_EMPTY:+}"
-      OPENAI_API_KEY: "${BE_EMPTY:+}"
-      STRIPE_SECRET_KEY: "${BE_EMPTY:+}"
-      STRIPE_WEBHOOK_SECRET: "${BE_EMPTY:+}"
+      JWT_SECRET: disabled
+      ANON_KEY: disabled
+      SERVICE_ROLE_KEY: disabled
+      WORKER_KEY: disabled
+      CREDITS_API_KEY: disabled
+      PAYMENTS_API_KEY: disabled
+      EXTRACTION_API_KEY: disabled
+      AUTH_PROOF_SECRET: disabled
+      RESEND_API_KEY: disabled
+      OPENAI_API_KEY: disabled
+      STRIPE_SECRET_KEY: disabled
+      STRIPE_WEBHOOK_SECRET: disabled
     depends_on:
       auth:
         condition: service_healthy
