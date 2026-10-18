@@ -276,6 +276,37 @@ $$;
 revoke all on function public.authorize_document_mail(uuid,uuid) from public,anon,authenticated,service_role,boletin_credits_api;
 grant execute on function public.authorize_document_mail(uuid,uuid) to boletin_worker;
 
+-- Cancelar una carga también elimina su objeto, incluso si la respuesta de subida se perdió.
+create or replace function public.cancel_file(p_file uuid) returns boolean
+language plpgsql security definer set search_path='' as $$
+declare item public.document_files;
+begin
+ if not private.session_active() then raise exception 'not_authenticated' using errcode='42501'; end if;
+ select * into item from public.document_files where id=p_file and owner_id=auth.uid();
+ if not found then return false; end if;
+ -- El alta de objetos toma este mismo bloqueo; no puede aparecer un objeto tras cancelar.
+ perform 1 from public.documents where id=item.document_id and owner_id=auth.uid() for update;
+ select * into item from public.document_files where id=p_file and owner_id=auth.uid() and not ready for update;
+ if not found then return false; end if;
+ insert into private.validation_cleanup(bucket,object_path) values('documents',item.object_path) on conflict do nothing;
+ delete from public.document_files where id=item.id;
+ return true;
+end;$$;
+-- Finalizar respeta el mismo orden: documento y después reserva.
+create or replace function public.finish_file(p_file uuid) returns boolean
+language plpgsql security definer set search_path='' as $$
+declare item public.document_files;
+begin
+ if not private.session_active() then raise exception 'not_authenticated' using errcode='42501'; end if;
+ select * into item from public.document_files where id=p_file and owner_id=auth.uid();
+ if not found then return false; end if;
+ perform 1 from public.documents where id=item.document_id and owner_id=auth.uid() and status='draft' for update;
+ if not found or not private.document_alive(item.document_id) then return false; end if;
+ update public.document_files f set ready=true where f.id=p_file and f.owner_id=auth.uid()
+ and exists(select 1 from storage.objects o where o.bucket_id='documents' and o.name=f.object_path);
+ return found;
+end;$$;
+
 insert into private.schema_migrations(version) values('005-retention');
 notify pgrst,'reload schema';
 commit;

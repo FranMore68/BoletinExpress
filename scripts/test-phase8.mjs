@@ -190,6 +190,55 @@ try {
   );
   const noReturn = await save(a, empty);
   const initialExpiry = noReturn.draft_expires_at;
+  const reserved = await a.client.rpc("reserve_file", { p_document: empty.id });
+  assert.equal(reserved.error, null);
+  const canceledPath = reserved.data.object_path;
+  assert.equal(
+    (
+      await a.client.storage
+        .from("documents")
+        .upload(canceledPath, final.bytes, { contentType: "application/pdf" })
+    ).error,
+    null,
+  );
+  assert.equal(
+    (await a.client.rpc("cancel_file", { p_file: reserved.data.id })).data,
+    true,
+  );
+  assert.equal(
+    await sql(
+      `select count(*) from private.validation_cleanup where bucket='documents' and object_path='${canceledPath}';`,
+    ),
+    "1",
+  );
+  assert.ok(
+    (
+      await a.client.storage
+        .from("documents")
+        .upload(canceledPath, final.bytes, { contentType: "application/pdf" })
+    ).error,
+  );
+  const racy = await a.client.rpc("reserve_file", { p_document: empty.id });
+  assert.equal(racy.error, null);
+  assert.equal(
+    (
+      await a.client.storage
+        .from("documents")
+        .upload(racy.data.object_path, final.bytes, {
+          contentType: "application/pdf",
+        })
+    ).error,
+    null,
+  );
+  const competed = await Promise.all([
+    a.client.rpc("finish_file", { p_file: racy.data.id }),
+    a.client.rpc("cancel_file", { p_file: racy.data.id }),
+  ]);
+  assert.ok(competed.every((result) => !result.error));
+  assert.equal(competed.filter((result) => result.data === true).length, 1);
+  await pass(
+    "cancelar una reserva tras subir encola el objeto para borrarlo y bloquea cargas tardías, sin dejar fuentes huérfanas",
+  );
   await json(
     await a.jar.request(`/api/private/documents/${empty.id}/files`, {
       method: "POST",
@@ -199,7 +248,7 @@ try {
     201,
   );
   const expiredSource = await sql(
-    `select object_path from public.document_files where document_id='${empty.id}';`,
+    `select object_path from public.document_files where document_id='${empty.id}' limit 1;`,
   );
   await post(
     a.jar,
@@ -451,6 +500,12 @@ try {
   assert.equal(
     await sql(
       `select count(*) from storage.objects where bucket_id='documents' and name='${expiredSource}';`,
+    ),
+    "0",
+  );
+  assert.equal(
+    await sql(
+      `select count(*) from storage.objects where bucket_id='documents' and name='${canceledPath}';`,
     ),
     "0",
   );
