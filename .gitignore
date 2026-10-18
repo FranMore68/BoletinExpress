@@ -30,3 +30,5 @@ public/vendor/pdf.worker-*.mjs
 !evidence/phase-6/*.log
 
 !evidence/phase-8/*.log
+
+!evidence/phase-9/*.log

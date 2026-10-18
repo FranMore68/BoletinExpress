@@ -1,6 +1,6 @@
 # Fase 8: conservación y correo
 
-Estado: cierre técnico completado el 18/10/2026, pendiente de aceptación del usuario. La fase 6 está aceptada. Orden autorizado: 8 → 9 → 7 → 10. La IA queda aplazada.
+Estado: cierre técnico completado el 18/10/2026, aceptado por el usuario el 18/10/2026. La fase 6 está aceptada. Orden autorizado: 8 → 9 → 7 → 10. La IA queda aplazada.
 
 ## Comportamiento
 

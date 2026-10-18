@@ -46,6 +46,7 @@ jobs:
           sh scripts/apply-access.sh
           node scripts/init-worker-key.mjs
           node scripts/init-credit-key.mjs
+          node scripts/init-payment-key.mjs
 
       - run: docker compose -f compose.yaml -f compose.auth.yaml up --detach --wait
       - run: node scripts/smoke.mjs
@@ -71,6 +72,11 @@ jobs:
           set -o pipefail
           mkdir -p evidence/phase-8
           node scripts/test-phase8.mjs | tee evidence/phase-8/integration.log
+      - id: phase9
+        run: |
+          set -o pipefail
+          mkdir -p evidence/phase-9
+          node scripts/test-phase9.mjs | tee evidence/phase-9/integration.log
       - if: always() && steps.isolation.outcome != 'skipped'
         run: |
           docker builder prune --all --force
@@ -94,6 +100,7 @@ jobs:
             evidence/phase-5
             evidence/phase-6
             evidence/phase-8
+            evidence/phase-9
           retention-days: 7
       - if: always()
         run: |

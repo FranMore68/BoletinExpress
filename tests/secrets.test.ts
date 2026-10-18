@@ -7,6 +7,7 @@ test("bloquea secretos y entornos privados antes de publicar", () => {
     `sk_${"live"}_${"x".repeat(30)}`,
     `sk-${"proj"}-${"x".repeat(40)}`,
     `ghp_${"x".repeat(40)}`,
+    `whsec_${"x".repeat(32)}`,
     "postgresql://user:" + "password@db/app",
   ])
     assert.ok(findings("src/config.ts", value).length);

@@ -1,5 +1,34 @@
 import type { Locale } from "./copy";
 export const authCopy = {
+  recharge: ["Recargar KC de prueba", "Recarrega KC de prova"],
+  topupCredit: [
+    "Recarga con Stripe en pruebas",
+    "Recàrrega amb Stripe en proves",
+  ],
+  paymentHelp: [
+    "Stripe en modo pruebas: no utilices tarjetas reales. Elige un pack para abrir el pago seguro de Stripe.",
+    "Stripe en mode proves: no utilitzis targetes reals. Tria un paquet per obrir el pagament segur de Stripe.",
+  ],
+  paymentReturned: [
+    "Al volver de Stripe, actualiza el saldo. Los KC solo se abonan cuando el servidor recibe la confirmación del pago.",
+    "En tornar de Stripe, actualitza el saldo. Els KC només s’abonen quan el servidor rep la confirmació del pagament.",
+  ],
+  paymentUpdated: [
+    "Saldo y pagos actualizados.",
+    "Saldo i pagaments actualitzats.",
+  ],
+  refreshPayments: ["Actualizar saldo y pagos", "Actualitza saldo i pagaments"],
+  paymentPaid: ["Abonado", "Abonat"],
+  paymentPending: [
+    "Pendiente de pago o confirmación",
+    "Pendent de pagament o confirmació",
+  ],
+  paymentExpired: ["Sesión caducada", "Sessió caducada"],
+  paymentFailed: ["Pago fallido", "Pagament fallit"],
+  payments_unavailable: [
+    "Las recargas de prueba no están disponibles ahora. Inténtalo más tarde.",
+    "Les recàrregues de prova no estan disponibles ara. Torna-ho a provar més tard.",
+  ],
   renewalCredit: [
     "Renovación de borrador (24 horas)",
     "Renovació d’esborrany (24 hores)",
@@ -38,8 +67,8 @@ export const authCopy = {
   ],
   validationCredit: ["Validación de documento", "Validació de document"],
   creditHelp: [
-    "10 KC de bienvenida una sola vez. BRIE: 2 KC; CIE: 5 KC. Las recargas de prueba todavía no están disponibles.",
-    "10 KC de benvinguda una sola vegada. BRIE: 2 KC; CIE: 5 KC. Les recàrregues de prova encara no estan disponibles.",
+    "10 KC de bienvenida una sola vez. BRIE: 2 KC; CIE: 5 KC. Recargas con Stripe en modo pruebas.",
+    "10 KC de benvinguda una sola vegada. BRIE: 2 KC; CIE: 5 KC. Recàrregues amb Stripe en mode proves.",
   ],
   validationHelp: [
     "Validar descuenta el coste indicado y cierra esta versión. Se eliminan los datos de trabajo y las fuentes; se conserva el PDF revisado. Revisa ambas páginas antes de confirmar. Validar aquí no certifica el cumplimiento normativo ni añade una firma.",

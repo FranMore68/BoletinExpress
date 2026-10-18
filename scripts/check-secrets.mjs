@@ -8,6 +8,7 @@ export function findings(file, text) {
   const patterns = [
     /-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----/,
     /\b(?:sk|rk)_(?:live|test)_[A-Za-z0-9]{16,}/,
+    /\bwhsec_[A-Za-z0-9]{24,}/,
     /\bsk-(?:proj-)?[A-Za-z0-9_-]{32,}/,
     /\b(?:ghp|gho|github_pat)_[A-Za-z0-9_]{30,}/,
     /\b(?:sb_secret_|re_)[A-Za-z0-9_]{24,}/,

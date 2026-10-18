@@ -135,7 +135,9 @@ export function PrivatePanel() {
             {tr("logout")}
           </button>
         </div>
-        {wallet && <CreditPanel wallet={wallet} language={language} />}
+        {wallet && (
+          <CreditPanel wallet={wallet} language={language} refresh={load} />
+        )}
         {!active && (
           <button
             type="button"

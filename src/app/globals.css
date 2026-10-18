@@ -2745,6 +2745,12 @@ legend {
 .credit-panel li {
   margin: 0.75rem 0;
 }
+.topup-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-block: 1rem;
+}
 .account-page .review-confirm {
   display: flex;
   align-items: center;

@@ -1,0 +1,12 @@
+{
+  "pass": true,
+  "desktop": "1280x900 ES",
+  "mobile": "320x740 CA",
+  "dimensions": {
+    "width": 320,
+    "content": 320
+  },
+  "buttonsDisabledWithoutKeys": true,
+  "refreshPassed": true,
+  "browserErrors": []
+}
