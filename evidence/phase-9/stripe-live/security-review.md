@@ -12,7 +12,7 @@ Alcance: retirada del parámetro obsoleto de Checkout, comprobaciones de paráme
 
 Versiones y checksums fijados, usuario sin privilegios, filesystem de solo lectura, sin capacidades, límites de recursos y logs desactivados. La clave solo se entrega por archivo privado. El helper limita la retirada al proyecto/servicio previstos y restaura la configuración normal. No se registran tarjetas ni eventos completos. El detector de secretos pasa.
 
-Pruebas locales: 33 de aplicación y 16 grupos de pagos; ambos packs aprobados con Stripe real en sandbox, rechazo, cancelación y caducidad; dos eventos reales repetidos localmente sin nuevos abonos. Saldo final 43 KC con dos recargas de 10 y 25. CI final pendiente de ejecución sobre este cambio.
+Pruebas locales: 33 de aplicación y 16 grupos de pagos; ambos packs aprobados con Stripe real en sandbox, rechazo, cancelación y caducidad; dos eventos reales repetidos localmente sin nuevos abonos. Saldo final 43 KC con dos recargas de 10 y 25. CI final 39144803728 superada sobre ee398af94ab1d7dbcc44178429c3acd245787f01: instalación desde cero, 33 pruebas de aplicación, 43 PDF, 267 casos de catálogo, 67 grupos de integración y diez imágenes sin avisos altos ni críticos detectados. El ciclo de parada y arranque del listener también se ha comprobado en navegador.
 
 Riesgo: evaluación local en modo de pruebas; el VPS y otros proyectos no cambian.
 

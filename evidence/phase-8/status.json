@@ -46,5 +46,10 @@
   "resendAuthSmtpTested": true,
   "resendWorkerFlowTested": true,
   "activationInboxConfirmationPending": false,
-  "resendGeneralActivationConfirmed": true
+  "resendGeneralActivationConfirmed": true,
+  "activationCiRun": 39142850662,
+  "activationCodeCommit": "123b05ac6cebbeda2aae1516a5d1212fba96f4bb",
+  "activationCiPassed": true,
+  "finalRegressionCiRun": 39144803728,
+  "finalRegressionCiPassed": true
 }

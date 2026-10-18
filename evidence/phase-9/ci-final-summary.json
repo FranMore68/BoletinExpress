@@ -1,0 +1,84 @@
+{
+  "pass": true,
+  "run": 39144803728,
+  "commit": "ee398af94ab1d7dbcc44178429c3acd245787f01",
+  "groups": {
+    "access": 12,
+    "brie": 8,
+    "cie": 8,
+    "credits": 11,
+    "retention": 12,
+    "payments": 16
+  },
+  "totalIntegrationGroups": 67,
+  "applicationTests": 33,
+  "pdfTests": 43,
+  "catalogCases": 267,
+  "scannedImages": 10,
+  "images": [
+    {
+      "image": "image-auth",
+      "results": 2,
+      "high": 0,
+      "critical": 0
+    },
+    {
+      "image": "image-gateway",
+      "results": 2,
+      "high": 0,
+      "critical": 0
+    },
+    {
+      "image": "image-mail",
+      "results": 2,
+      "high": 0,
+      "critical": 0
+    },
+    {
+      "image": "image-postgres",
+      "results": 3,
+      "high": 0,
+      "critical": 0
+    },
+    {
+      "image": "image-rest",
+      "results": 0,
+      "high": 0,
+      "critical": 0
+    },
+    {
+      "image": "image-storage",
+      "results": 2,
+      "high": 0,
+      "critical": 0
+    },
+    {
+      "image": "image-stripe-cli",
+      "results": 1,
+      "high": 0,
+      "critical": 0
+    },
+    {
+      "image": "image-templates",
+      "results": 2,
+      "high": 0,
+      "critical": 0
+    },
+    {
+      "image": "image-web",
+      "results": 2,
+      "high": 0,
+      "critical": 0
+    },
+    {
+      "image": "image-worker",
+      "results": 2,
+      "high": 0,
+      "critical": 0
+    }
+  ],
+  "postgrestInventoryCovered": false,
+  "stripeExternalTested": true,
+  "externalEvidence": "stripe-live/results.json",
+  "uiSource": "local Chrome, not a CI browser job"
+}

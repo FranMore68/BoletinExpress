@@ -1,0 +1,57 @@
+{
+  "memoryMiB": 3072.0,
+  "cpu": 1.0,
+  "quotas": [
+    {
+      "service": "stripe-listener",
+      "bytes": "67108864",
+      "cpus": "0.1"
+    },
+    {
+      "service": "web",
+      "bytes": "536870912",
+      "cpus": "0.2"
+    },
+    {
+      "service": "worker",
+      "bytes": "268435456",
+      "cpus": "0.25"
+    },
+    {
+      "service": "auth",
+      "bytes": "134217728",
+      "cpus": "0.15"
+    },
+    {
+      "service": "gateway",
+      "bytes": "67108864",
+      "cpus": "0.01"
+    },
+    {
+      "service": "mail",
+      "bytes": "67108864",
+      "cpus": "0.05"
+    },
+    {
+      "service": "postgres",
+      "bytes": "1342177280",
+      "cpus": "0.1"
+    },
+    {
+      "service": "rest",
+      "bytes": "134217728",
+      "cpus": "0.03"
+    },
+    {
+      "service": "storage",
+      "bytes": "536870912",
+      "cpus": "0.1"
+    },
+    {
+      "service": "templates",
+      "bytes": "67108864",
+      "cpus": "0.01"
+    }
+  ],
+  "listenerRestartPassed": true
+}

@@ -1,6 +1,6 @@
 # Fase 8: conservación y correo
 
-Estado: cierre técnico completado el 18/10/2026, aceptado por el usuario el 18/10/2026. La fase 6 está aceptada. Orden autorizado: 8 → 9 → 7 → 10. La IA queda aplazada.
+Estado: cierre técnico completado el 18/10/2026, aceptado por el usuario el 18/10/2026. La fase 6 está aceptada. Orden autorizado: 8 → 9 → 7 → 10. La IA queda aplazada. Resend está activo para acceso y documentos; el usuario ha confirmado los correos y el PDF. La CI de activación [39142850662](https://github.com/FranMore68/BoletinExpress/actions/runs/39142850662) ha terminado correctamente con 33 pruebas de aplicación y las regresiones completas. Los apartados posteriores conservan el historial de comprobaciones.
 
 ## Comportamiento
 
