@@ -1,0 +1,53 @@
+{
+  "SchemaVersion": 2,
+  "Trivy": {
+    "Version": "0.76.0"
+  },
+  "ReportID": "01a14e99-3f45-774a-9fb0-855515d92fa9",
+  "CreatedAt": "2026-10-18T10:40:28.485479667Z",
+  "ArtifactID": "sha256:6c81065f30614387881f1bb14ac967e3f7712edeb60613b37cfd31e6fe3b29b6",
+  "ArtifactName": "/tmp/image.tar",
+  "ArtifactType": "container_image",
+  "Metadata": {
+    "Size": 21555200,
+    "ImageID": "sha256:fc3d286fec899d5a5bebbb98eac771ced1ccaa44deac8ce2fc23fe5d262eb3d9",
+    "DiffIDs": [
+      "sha256:b529625cae36309e4a5aa85e5b3f170c7e118e756eb31c4c12c4f2f175ae449b"
+    ],
+    "RepoTags": [
+      "boletinexpress-rest:phase1"
+    ],
+    "Reference": "boletinexpress-rest:phase1",
+    "ImageConfig": {
+      "architecture": "amd64",
+      "created": "2025-07-10T07:36:53Z",
+      "history": [
+        {
+          "created": "2025-07-10T07:36:53Z"
+        }
+      ],
+      "os": "linux",
+      "rootfs": {
+        "type": "layers",
+        "diff_ids": [
+          "sha256:b529625cae36309e4a5aa85e5b3f170c7e118e756eb31c4c12c4f2f175ae449b"
+        ]
+      },
+      "config": {
+        "Cmd": [
+          "/bin/postgrest"
+        ],
+        "User": "1000",
+        "ExposedPorts": {
+          "3000/tcp": {}
+        }
+      }
+    },
+    "Layers": [
+      {
+        "Size": 21555200,
+        "DiffID": "sha256:b529625cae36309e4a5aa85e5b3f170c7e118e756eb31c4c12c4f2f175ae449b"
+      }
+    ]
+  }
+}

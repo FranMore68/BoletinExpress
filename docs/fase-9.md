@@ -26,11 +26,11 @@ La integración utiliza `fetch` y la criptografía de Node, sin dependencias nue
 
 ## Pruebas y evidencias
 
-El resultado exacto se registra en `evidence/phase-9/status.json`. El servidor de integración escucha solo en `127.0.0.1:3002`; usa Auth y PostgreSQL locales reales y un transporte Stripe simulado en un proceso aislado. Ese transporte no se copia a la imagen y ninguna variable o ruta de la aplicación puede activarlo.
+La [CI 39118962718](https://github.com/FranMore68/BoletinExpress/actions/runs/39118962718) ha terminado correctamente sobre el commit `5e1988677c6ad3cd5b06d67e91e5be87c4a9fe6b`: 31 pruebas de aplicación, 43 PDF, 267 casos de catálogo y 67 grupos de integración. Se han analizado nueve imágenes sin avisos altos ni críticos detectados. PostgREST conserva la limitación de inventario documentada en fase 8; la auditoría de Storage conserva 30 avisos moderados. El resultado exacto se registra en `evidence/phase-9/status.json`. El servidor de integración escucha solo en `127.0.0.1:3002`; usa Auth y PostgreSQL locales reales y un transporte Stripe simulado en un proceso aislado. Ese transporte no se copia a la imagen y ninguna variable o ruta de la aplicación puede activarlo.
 
 | Prueba | Resultado | Evidencia |
 |---|---|---|
-| Formato, tipos y 31 pruebas de aplicación | Superado | Comprobaciones locales; CI incluye `npm run check` |
+| Formato, tipos y 31 pruebas de aplicación | Superado localmente y en CI | `evidence/phase-9/ci-run.json` |
 | Compilación Next.js e imagen web | Superado | Construcción local con Node 24 y Docker |
 | Packs, firmas, propietario, doble clic, avisos concurrentes, errores y recuperación | 16 grupos superados con Stripe simulado | `evidence/phase-9/integration.json` |
 | RLS de compras y permisos de la credencial restringida | Incluido en la batería de pagos | `evidence/phase-9/integration.json` |
@@ -38,6 +38,7 @@ El resultado exacto se registra en `evidence/phase-9/status.json`. El servidor d
 | Regresión de renovación, correo y conservación | 12 grupos superados | `evidence/phase-9/retention-regression/integration.json` |
 | Interfaz ES/CA, móvil de 320 px y actualización del saldo | Comprobación de escritorio y móvil ES/CA | `evidence/phase-9/ui.json` y capturas |
 | Auditoría npm de aplicación | 0 vulnerabilidades | Consulta actual a npm; no cambia el lockfile |
+| Instalación desde cero, migraciones, regresiones y pagos en CI | 67 grupos superados (12 acceso, 8 BRIE, 8 CIE, 11 créditos, 12 conservación, 16 pagos) | `evidence/phase-9/ci-summary.json` y `ci/` |
 | Imagen web final: Trivy con base actualizada | 0 avisos altos o críticos detectados | `evidence/phase-9/image-web.json` |
 | Stripe real en modo pruebas: pago aprobado, tarjeta rechazada, cancelación, webhook repetido y retorno | Pendiente | Requiere claves y listener o endpoint configurado |
 

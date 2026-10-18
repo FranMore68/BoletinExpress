@@ -18,7 +18,7 @@ Alcance: cambios respecto de `acab81e`, migración 006, credencial RPC de pagos,
 - Sesión creada con clave de idempotencia estable y parámetros persistentes. Se admite pago anterior al guardado de la sesión. La recuperación de respuestas perdidas no crea compras ni cobros adicionales. Las firmas y las cuotas no utilizan el reloj ficticio de documentos.
 - La disponibilidad de Checkout exige también un secreto de webhook con la misma validación mínima que el receptor, evitando activarlo con un prefijo vacío.
 - Secretos en `.secrets`, fuera de Git y del contexto Docker. Transporte simulado solo mediante un preload explícito en un proceso de pruebas; no se incluye en la imagen ni se activa desde rutas o variables de la aplicación.
-- Migración transaccional aplicada sin recrear datos. Regresiones de créditos y conservación superadas. El VPS y las otras aplicaciones no se modifican.
+- Migración transaccional aplicada sin recrear datos. Regresiones de créditos y conservación superadas. La instalación desde cero y los 67 grupos de integración pasan en CI 39118962718 sobre el commit 5e1988677c6ad3cd5b06d67e91e5be87c4a9fe6b. Las nueve imágenes analizadas no presentan avisos altos o críticos detectados, con la limitación de inventario de PostgREST ya documentada. El VPS y las otras aplicaciones no se modifican.
 
 Corrección rápida pendiente para completar la evaluación: configurar Stripe en modo pruebas desde el Mac y ejecutar el recorrido externo descrito en `docs/fase-9.md`. Las claves no se solicitan por el chat.
 

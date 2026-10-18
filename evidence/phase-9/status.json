@@ -12,7 +12,7 @@
   "phase10Started": false,
   "newDependencies": 0,
   "livePaymentsEnabled": false,
-  "ciStatus": "pending_publication",
+  "ciStatus": "success",
   "paymentIntegrationGroups": 16,
   "creditRegressionGroups": 11,
   "retentionRegressionGroups": 12,
@@ -22,5 +22,12 @@
   "npmAuditVulnerabilities": 0,
   "imageScanPassed": true,
   "highDetected": 0,
-  "criticalDetected": 0
+  "criticalDetected": 0,
+  "ciRun": 39118962718,
+  "codeCommit": "5e1988677c6ad3cd5b06d67e91e5be87c4a9fe6b",
+  "smokePassed": true,
+  "ciPassed": true,
+  "totalCIIntegrationGroups": 67,
+  "scannedImages": 9,
+  "postgrestInventoryCovered": false
 }

@@ -1,0 +1,77 @@
+{
+  "pass": true,
+  "run": 39118962718,
+  "commit": "5e1988677c6ad3cd5b06d67e91e5be87c4a9fe6b",
+  "groups": {
+    "access": 12,
+    "brie": 8,
+    "cie": 8,
+    "credits": 11,
+    "retention": 12,
+    "payments": 16
+  },
+  "totalIntegrationGroups": 67,
+  "applicationTests": 31,
+  "pdfTests": 43,
+  "catalogCases": 267,
+  "scannedImages": 9,
+  "images": [
+    {
+      "image": "image-gateway",
+      "results": 2,
+      "high": 0,
+      "critical": 0
+    },
+    {
+      "image": "image-templates",
+      "results": 2,
+      "high": 0,
+      "critical": 0
+    },
+    {
+      "image": "image-storage",
+      "results": 2,
+      "high": 0,
+      "critical": 0
+    },
+    {
+      "image": "image-mail",
+      "results": 2,
+      "high": 0,
+      "critical": 0
+    },
+    {
+      "image": "image-web",
+      "results": 2,
+      "high": 0,
+      "critical": 0
+    },
+    {
+      "image": "image-postgres",
+      "results": 3,
+      "high": 0,
+      "critical": 0
+    },
+    {
+      "image": "image-worker",
+      "results": 2,
+      "high": 0,
+      "critical": 0
+    },
+    {
+      "image": "image-rest",
+      "results": 0,
+      "high": 0,
+      "critical": 0
+    },
+    {
+      "image": "image-auth",
+      "results": 2,
+      "high": 0,
+      "critical": 0
+    }
+  ],
+  "postgrestInventoryCovered": false,
+  "stripeExternalTested": false,
+  "uiSource": "local Chrome, not a CI browser job"
+}

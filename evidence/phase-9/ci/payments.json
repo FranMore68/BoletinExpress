@@ -1,0 +1,72 @@
+{
+  "pass": true,
+  "complete": true,
+  "groups": 16,
+  "transport": "isolated Stripe API fixture; no external payments",
+  "results": [
+    {
+      "test": "acceso confirmado, protección de origen y catálogo cerrado de packs",
+      "pass": true
+    },
+    {
+      "test": "seis creaciones concurrentes reutilizan una sesión; precio y propietario se fijan en servidor",
+      "pass": true
+    },
+    {
+      "test": "RLS aísla compras y oculta identificadores Stripe; clientes no modifican pagos ni saldo",
+      "pass": true
+    },
+    {
+      "test": "retornos manipulados, cancelación y pago pendiente nunca conceden KC",
+      "pass": true
+    },
+    {
+      "test": "firma inválida, reloj fuera de tolerancia, eventos reales y cuerpos excesivos rechazados",
+      "pass": true
+    },
+    {
+      "test": "caída de Stripe se recupera al reintentar; datos del webhook se contrastan con la API",
+      "pass": true
+    },
+    {
+      "test": "avisos concurrentes, eventos distintos del mismo pago y avisos atrasados no duplican ni revierten el abono",
+      "pass": true
+    },
+    {
+      "test": "pack de 25 KC abona exactamente 25 y conserva el historial",
+      "pass": true
+    },
+    {
+      "test": "sesiones caducadas y pagos fallidos dejan el saldo intacto",
+      "pass": true
+    },
+    {
+      "test": "importes y propietarios contradictorios y PaymentIntent reutilizado se rechazan sin abonos parciales",
+      "pass": true
+    },
+    {
+      "test": "pago anterior al guardado de Checkout se recupera y se vincula de forma transaccional",
+      "pass": true
+    },
+    {
+      "test": "respuesta perdida en creación reutiliza los parámetros originales y la clave de idempotencia",
+      "pass": true
+    },
+    {
+      "test": "una solicitud no cambia de pack y el servidor rechaza sesiones que pertenecen a otra cuenta",
+      "pass": true
+    },
+    {
+      "test": "avanzar el reloj documental 45 días no altera el reloj de pagos ni de firmas",
+      "pass": true
+    },
+    {
+      "test": "el límite de nuevas sesiones no impide reintentar una operación existente ni modifica el saldo",
+      "pass": true
+    },
+    {
+      "test": "saldo y suma de movimientos coinciden después de errores y concurrencia",
+      "pass": true
+    }
+  ]
+}
