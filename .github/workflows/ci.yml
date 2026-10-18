@@ -69,6 +69,7 @@ jobs:
       - id: phase8
         run: |
           set -o pipefail
+          mkdir -p evidence/phase-8
           node scripts/test-phase8.mjs | tee evidence/phase-8/integration.log
       - if: always() && steps.isolation.outcome != 'skipped'
         run: |
