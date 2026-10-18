@@ -1,0 +1,59 @@
+
+> boletinexpress@0.1.0 check
+> npm run lint && npm run typecheck && npm test && npm run check:secrets
+
+
+> boletinexpress@0.1.0 lint
+> biome check .
+
+Checked 96 files in 61ms. No fixes applied.
+
+> boletinexpress@0.1.0 typecheck
+> next typegen && tsc --noEmit
+
+Generating route types...
+✓ Types generated successfully
+
+> boletinexpress@0.1.0 test
+> node --test tests/*.test.ts
+
+✔ las mutaciones requieren el origen propio y rechazan peticiones cruzadas (11.634375ms)
+✔ validación de credenciales, identificadores y tamaño del cuerpo (1.56275ms)
+✔ el permiso de recuperación se vincula a usuario y sesión (0.425792ms)
+✔ el acceso y almacenamiento tienen mensajes completos en ES y CA (0.108875ms)
+✔ admite el hash PKCE oficial sin aceptar formatos arbitrarios (0.12025ms)
+✔ todos los campos del BRIE coinciden con el inventario PDF aprobado (1.678917ms)
+✔ el formulario conserva No, cero y correcciones vaciadas (0.136041ms)
+✔ rechaza campos inventados, tipos incorrectos, opciones desconocidas y contenido excesivo (0.150708ms)
+✔ la plantilla privada es idéntica al original y la fuente al recurso de fase 0 (5.691667ms)
+✔ los 70 campos y las opciones CIE conservan el inventario aprobado y etiquetas ES/CA (3.26075ms)
+✔ las ramas y CUPS se excluyen al cambiar la selección sin borrar los valores locales (0.333666ms)
+✔ CIE admite borradores incompletos y cero; rechaza códigos postales, ramas y opciones incompatibles (0.677959ms)
+✔ el fondo CIE privado es idéntico al estático aprobado y los campos técnicos conservan unidades (6.130875ms)
+✔ el contrato SQL CIE coincide con las restricciones de entrada de los 70 campos (1.823458ms)
+✔ el comprobante vincula usuario, sesión, documento, revisión y PDF por 30 minutos (0.956292ms)
+✔ modificar cualquier contenido o firma del comprobante invalida la revisión (0.321209ms)
+✔ el cobro exige bytes íntegros, dos páginas y ausencia de formulario interactivo (11.483375ms)
+✔ las propuestas de ejemplo conservan cambios manuales, incluidos campos vaciados (2.931125ms)
+✔ el cierre de la demo es idempotente y bloquea cambios del ejemplo (0.126375ms)
+✔ la demo impide validar sin datos o con saldo simulado insuficiente (0.558875ms)
+✔ tres borradores activos y sus identificadores se mantienen coherentes al eliminar uno (0.274875ms)
+✔ cada mensaje dispone de ES y CA y conserva sus variables de interpolación (1.659458ms)
+✔ Resend usa adjunto íntegro, destinatario fijado y la misma clave en reintentos (21.986375ms)
+✔ un hash incorrecto o configuración incompleta impiden el envío (0.627708ms)
+✔ bloquea secretos y entornos privados antes de publicar (1.761875ms)
+✔ permite referencias a secretos pero no contraseñas incrustadas en URI (0.083375ms)
+✔ worker arranca sin credenciales, expone solo liveness y se detiene (71.649333ms)
+ℹ tests 27
+ℹ suites 0
+ℹ pass 27
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 214.068833
+
+> boletinexpress@0.1.0 check:secrets
+> node scripts/check-secrets.mjs
+
+Sin patrones de secretos detectados en 929 archivos versionables.

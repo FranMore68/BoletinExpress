@@ -1,0 +1,89 @@
+{
+  "scope": "local Docker evaluation; not VPS capacity test",
+  "services": [
+    {
+      "name": "boletinexpress-evaluation-web-1",
+      "memoryLimitBytes": 536870912,
+      "cpuLimit": 0.34,
+      "oomKilled": false,
+      "restarts": 0,
+      "status": "running",
+      "health": "healthy"
+    },
+    {
+      "name": "boletinexpress-evaluation-worker-1",
+      "memoryLimitBytes": 268435456,
+      "cpuLimit": 0.25,
+      "oomKilled": false,
+      "restarts": 0,
+      "status": "running",
+      "health": "healthy"
+    },
+    {
+      "name": "boletinexpress-data-auth-1",
+      "memoryLimitBytes": 134217728,
+      "cpuLimit": 0.15,
+      "oomKilled": false,
+      "restarts": 0,
+      "status": "running",
+      "health": "healthy"
+    },
+    {
+      "name": "boletinexpress-data-gateway-1",
+      "memoryLimitBytes": 67108864,
+      "cpuLimit": 0.01,
+      "oomKilled": false,
+      "restarts": 0,
+      "status": "running",
+      "health": "healthy"
+    },
+    {
+      "name": "boletinexpress-data-mail-1",
+      "memoryLimitBytes": 67108864,
+      "cpuLimit": 0.01,
+      "oomKilled": false,
+      "restarts": 0,
+      "status": "running",
+      "health": "healthy"
+    },
+    {
+      "name": "boletinexpress-data-postgres-1",
+      "memoryLimitBytes": 1342177280,
+      "cpuLimit": 0.1,
+      "oomKilled": false,
+      "restarts": 0,
+      "status": "running",
+      "health": "healthy"
+    },
+    {
+      "name": "boletinexpress-data-rest-1",
+      "memoryLimitBytes": 134217728,
+      "cpuLimit": 0.03,
+      "oomKilled": false,
+      "restarts": 0,
+      "status": "running",
+      "health": null
+    },
+    {
+      "name": "boletinexpress-data-storage-1",
+      "memoryLimitBytes": 536870912,
+      "cpuLimit": 0.1,
+      "oomKilled": false,
+      "restarts": 0,
+      "status": "running",
+      "health": "healthy"
+    },
+    {
+      "name": "boletinexpress-data-templates-1",
+      "memoryLimitBytes": 67108864,
+      "cpuLimit": 0.01,
+      "oomKilled": false,
+      "restarts": 0,
+      "status": "running",
+      "health": null
+    }
+  ],
+  "totalMemoryMiB": 3008.0,
+  "totalCpu": 1.0,
+  "pass": true
+}

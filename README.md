@@ -2,9 +2,9 @@
 
 Aplicación prevista para preparar BRIE y CIE ELEC-1 con revisión humana, interfaz ES/CA y datos ficticios durante la evaluación.
 
-**Estado actual: fases 0 a 5 aceptadas; fase 6 completada técnicamente y pendiente de aceptación.** Se incorporan saldo real de prueba, movimientos y validación transaccional de BRIE y CIE vinculada al PDF revisado. Véase [el informe de fase 6](docs/fase-6.md).
+**Estado actual: fases 0 a 6 aceptadas; fase 8 completada técnicamente y pendiente de aceptación.** Se incorporan renovación transaccional de borradores, vencimientos de 24 horas, archivo al día 30, reenvío al propio correo y eliminación al día 60, con reloj protegido para cuentas ficticias. Véase [el informe de fase 8](docs/fase-8.md). El orden autorizado continúa por las fases 9, 7 y 10.
 
-El entorno local está disponible en `http://127.0.0.1:3000/acceso?lang=es`; los correos de evaluación se capturan en `http://127.0.0.1:54324`. El VPS y Control-Contracts-ATC no se han modificado. CI ha superado 25 pruebas de aplicación, 43 pruebas PDF, 267 casos de catálogo y 39 grupos de integración. Nueve imágenes analizadas sin avisos altos ni críticos detectados; las limitaciones de cobertura y los avisos moderados están en el informe de fase 6.
+El entorno local está disponible en `http://127.0.0.1:3000/acceso?lang=es`; los correos de evaluación se capturan en `http://127.0.0.1:54324`. La entrega externa con Resend queda pendiente de configuración. El VPS y Control-Contracts-ATC no se han modificado. La [CI final](https://github.com/FranMore68/BoletinExpress/actions/runs/39108937933) supera 27 pruebas de aplicación, 43 pruebas PDF, 267 casos de catálogo y 51 grupos de integración. Nueve imágenes analizadas sin avisos altos ni críticos detectados; las limitaciones de cobertura y los 30 avisos moderados de Storage están documentados en el informe.
 
 El [perfil reutilizable del electricista](docs/perfil-electricista.md) permite copiar los datos profesionales a un nuevo BRIE o CIE. Los cambios del perfil se aplican a documentos nuevos y no alteran los anteriores.
 

@@ -1,0 +1,168 @@
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	﻿2026-10-18T07:47:08.6124703Z ##[group]Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:08.6125249Z ^[[36;1mnpm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime^[[0m
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:08.6177458Z shell: /usr/bin/bash -e {0}
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:08.6177687Z env:
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:08.6177808Z   NEXT_TELEMETRY_DISABLED: 1
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:08.6177946Z ##[endgroup]
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0430893Z # npm audit report
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0431451Z 
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0432130Z @fastify/busboy  <3.2.2
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0432573Z Severity: moderate
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0433498Z @fastify/busboy vulnerable to CRLF injection via multipart Content-Disposition filename and name - https://github.com/advisories/GHSA-gxm5-99cw-xjw9
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0434352Z fix available via `npm audit fix`
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0434753Z node_modules/@fastify/busboy
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0436493Z   @fastify/multipart  <=8.3.0
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0437133Z   Depends on vulnerable versions of @fastify/busboy
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0437912Z   node_modules/@fastify/multipart
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0438231Z 
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0438594Z @opentelemetry/instrumentation-cassandra-driver  <0.66.0
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0439091Z Severity: moderate
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0439983Z Multiple @opentelemetry/instrumentation-* packages expose database username via unconditional db.user span attribute - https://github.com/advisories/GHSA-qqmp-wf37-98f9
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0440777Z fix available via `npm audit fix --force`
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0441376Z Will install @opentelemetry/auto-instrumentations-node@0.81.2, which is a breaking change
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0442031Z node_modules/@opentelemetry/instrumentation-cassandra-driver
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0442549Z   @opentelemetry/auto-instrumentations-node  <=0.78.0
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0443123Z   Depends on vulnerable versions of @opentelemetry/instrumentation-cassandra-driver
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0444377Z   Depends on vulnerable versions of @opentelemetry/instrumentation-knex
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0445387Z   Depends on vulnerable versions of @opentelemetry/instrumentation-mongoose
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0445979Z   Depends on vulnerable versions of @opentelemetry/instrumentation-mysql
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0446559Z   Depends on vulnerable versions of @opentelemetry/instrumentation-mysql2
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0447186Z   Depends on vulnerable versions of @opentelemetry/instrumentation-oracledb
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0447976Z   Depends on vulnerable versions of @opentelemetry/instrumentation-pg
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0448662Z   Depends on vulnerable versions of @opentelemetry/instrumentation-tedious
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0449242Z   node_modules/@opentelemetry/auto-instrumentations-node
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0449594Z 
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0449888Z @opentelemetry/instrumentation-knex  <0.65.0
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0450288Z Severity: moderate
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0451153Z Multiple @opentelemetry/instrumentation-* packages expose database username via unconditional db.user span attribute - https://github.com/advisories/GHSA-qqmp-wf37-98f9
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0452089Z fix available via `npm audit fix --force`
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0452738Z Will install @opentelemetry/auto-instrumentations-node@0.81.2, which is a breaking change
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0453394Z node_modules/@opentelemetry/instrumentation-knex
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0453734Z 
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0454044Z @opentelemetry/instrumentation-mongoose  <0.67.0
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0454463Z Severity: moderate
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0455357Z Multiple @opentelemetry/instrumentation-* packages expose database username via unconditional db.user span attribute - https://github.com/advisories/GHSA-qqmp-wf37-98f9
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0456224Z fix available via `npm audit fix --force`
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0456868Z Will install @opentelemetry/auto-instrumentations-node@0.81.2, which is a breaking change
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0457505Z node_modules/@opentelemetry/instrumentation-mongoose
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0460193Z 
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0460557Z @opentelemetry/instrumentation-mysql  <0.67.0
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0461375Z Severity: moderate
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0462231Z Multiple @opentelemetry/instrumentation-* packages expose database username via unconditional db.user span attribute - https://github.com/advisories/GHSA-qqmp-wf37-98f9
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0463187Z fix available via `npm audit fix --force`
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0463794Z Will install @opentelemetry/auto-instrumentations-node@0.81.2, which is a breaking change
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0464394Z node_modules/@opentelemetry/instrumentation-mysql
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0464716Z 
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0465004Z @opentelemetry/instrumentation-mysql2  <0.67.0
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0465416Z Severity: moderate
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0466264Z Multiple @opentelemetry/instrumentation-* packages expose database username via unconditional db.user span attribute - https://github.com/advisories/GHSA-qqmp-wf37-98f9
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0467044Z fix available via `npm audit fix --force`
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0467836Z Will install @opentelemetry/auto-instrumentations-node@0.81.2, which is a breaking change
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0468474Z node_modules/@opentelemetry/instrumentation-mysql2
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0468817Z 
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0469137Z @opentelemetry/instrumentation-oracledb  <0.46.0
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0469567Z Severity: moderate
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0470455Z Multiple @opentelemetry/instrumentation-* packages expose database username via unconditional db.user span attribute - https://github.com/advisories/GHSA-qqmp-wf37-98f9
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0471299Z fix available via `npm audit fix --force`
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0471931Z Will install @opentelemetry/auto-instrumentations-node@0.81.2, which is a breaking change
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0472763Z node_modules/@opentelemetry/instrumentation-oracledb
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0495048Z 
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0495791Z @opentelemetry/instrumentation-pg  <0.73.0
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0496211Z Severity: moderate
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0497071Z Multiple @opentelemetry/instrumentation-* packages expose database username via unconditional db.user span attribute - https://github.com/advisories/GHSA-qqmp-wf37-98f9
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0498301Z fix available via `npm audit fix --force`
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0498922Z Will install @opentelemetry/auto-instrumentations-node@0.81.2, which is a breaking change
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0499766Z node_modules/@opentelemetry/auto-instrumentations-node/node_modules/@opentelemetry/instrumentation-pg
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0500246Z 
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0500544Z @opentelemetry/instrumentation-tedious  <0.40.0
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0500957Z Severity: moderate
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0501810Z Multiple @opentelemetry/instrumentation-* packages expose database username via unconditional db.user span attribute - https://github.com/advisories/GHSA-qqmp-wf37-98f9
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0502636Z fix available via `npm audit fix --force`
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0503346Z Will install @opentelemetry/auto-instrumentations-node@0.81.2, which is a breaking change
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0504019Z node_modules/@opentelemetry/instrumentation-tedious
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0504371Z 
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0504624Z fast-copy  4.0.0 - 4.0.4
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0504992Z Severity: moderate
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0505746Z fast-copy: Stack exhaustion in fast-copy when copying deeply-nested values - https://github.com/advisories/GHSA-jggr-w7fw-pc2j
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0506466Z fix available via `npm audit fix`
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0506867Z node_modules/fast-copy
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0507130Z 
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0507369Z fast-uri  3.0.0 - 3.1.7
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0507978Z Severity: moderate
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0508767Z fast-uri vulnerable to inconsistent host case normalization via percent-encoded octets - https://github.com/advisories/GHSA-hrr3-gc8f-f4qj
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0509486Z fix available via `npm audit fix --force`
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0509984Z Will install @fastify/swagger@9.4.1, which is a breaking change
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0510414Z node_modules/fast-uri
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0510755Z   @fastify/ajv-compiler  
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0511133Z   Depends on vulnerable versions of fast-uri
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0511869Z   node_modules/@fastify/ajv-compiler
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0512226Z   ajv  
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0512579Z   Depends on vulnerable versions of fast-uri
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0513070Z   node_modules/ajv
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0513392Z   fast-json-stringify  
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0513766Z   Depends on vulnerable versions of fast-uri
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0514305Z   node_modules/@fastify/fast-json-stringify-compiler/node_modules/fast-json-stringify
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0514871Z   json-schema-resolver  
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0515264Z   Depends on vulnerable versions of fast-uri
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0515672Z   node_modules/json-schema-resolver
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0516048Z     @fastify/swagger  >=9.4.2
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0516479Z     Depends on vulnerable versions of json-schema-resolver
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0516930Z     node_modules/@fastify/swagger
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0517378Z       @platformatic/telemetry  3.0.0-alpha.1 - 3.4.0 || >=3.5.0
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0518006Z       Depends on vulnerable versions of @fastify/swagger
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0518452Z       node_modules/@platformatic/telemetry
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0518955Z         @platformatic/basic  3.0.0-alpha.1 - 3.4.0 || 3.5.0 - 4.0.0-new-config.2
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0519520Z         Depends on vulnerable versions of @platformatic/telemetry
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0520006Z         node_modules/@platformatic/basic
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0520509Z           @platformatic/node  3.0.0-alpha.1 - 3.4.0 || 3.5.0 - 4.0.0-new-config.2
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0521039Z           Depends on vulnerable versions of @platformatic/basic
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0521548Z           Depends on vulnerable versions of @platformatic/generators
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0522010Z           node_modules/@platformatic/node
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0522571Z           @platformatic/runtime  <=2.0.0-alpha.26 || 3.0.0-alpha.1 - 3.4.0 || 3.5.0 - 4.0.0-new-config.2
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0523163Z           Depends on vulnerable versions of @platformatic/basic
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0523671Z           Depends on vulnerable versions of @platformatic/generators
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0524225Z           Depends on vulnerable versions of @platformatic/telemetry
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0524719Z           Depends on vulnerable versions of fastify
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0525142Z           node_modules/@platformatic/runtime
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0525587Z             wattpm  2.0.0-alpha.16 - 2.0.0-alpha.26 || 3.69.0
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0526154Z             Depends on vulnerable versions of @platformatic/runtime
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0526803Z             node_modules/wattpm
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0527180Z               platformatic  3.69.0
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0527591Z               Depends on vulnerable versions of wattpm
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0528115Z               node_modules/platformatic
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0528409Z 
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0528627Z fastify  <5.12.5
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0528966Z Severity: moderate
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0529705Z fastify vulnerable to Denial of Service via unhandled exception on HTTP/2 trailer responses - https://github.com/advisories/GHSA-4mh8-r7rc-xpvc
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0530413Z fix available via `npm audit fix --force`
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0530938Z Will install fastify@5.12.7, which is outside the stated dependency range
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0531403Z node_modules/fastify
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0531735Z   @platformatic/flame  
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0532107Z   Depends on vulnerable versions of fastify
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0532512Z   node_modules/@platformatic/flame
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0532904Z   @platformatic/generators  <=2.0.0-alpha.26
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0533311Z   Depends on vulnerable versions of fastify
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0533728Z   node_modules/@platformatic/generators
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0534011Z 
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0534233Z ip-address  <=10.7.0
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0534563Z Severity: moderate
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0535477Z ip-address: Address6.isLinkLocal() recognizes fe80::/64 rather than fe80::/10, allowing SSRF and trust-boundary bypass to on-link hosts - https://github.com/advisories/GHSA-rpw4-54j3-4h4q
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0536860Z ip-address: no classifier recognizes the NAT64 local-use range 64:ff9b:1::/48, allowing SSRF and trust-boundary bypass - https://github.com/advisories/GHSA-2vr4-cq9g-pvrc
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0538513Z ip-address: isInSubnet() and isHostInSubnet() compare addresses of different families as if they shared an address space, allowing an allowlist check to admit an address outside its range - https://github.com/advisories/GHSA-j6r3-76f7-8jcv
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0540091Z ip-address: Address6 builds a parse diagnostic proportional to the input with no length bound, allowing a single long string to stall or crash the process - https://github.com/advisories/GHSA-h3mg-xc3c-68pw
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0540917Z fix available via `npm audit fix`
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0541285Z node_modules/ip-address
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0541613Z   @fastify/rate-limit  
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0541988Z   Depends on vulnerable versions of ip-address
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0542398Z   node_modules/@fastify/rate-limit
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0542751Z   socks  2.7.2 - 2.8.6
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0543125Z   Depends on vulnerable versions of ip-address
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0543502Z   node_modules/socks
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0543754Z 
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0544008Z 30 moderate severity vulnerabilities
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0544287Z 
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0544581Z To address issues that do not require attention, run:
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0544970Z   npm audit fix
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0545201Z 
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0545505Z To address all issues (including breaking changes), run:
+check	Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime	2026-10-18T07:47:14.0545908Z   npm audit fix --force

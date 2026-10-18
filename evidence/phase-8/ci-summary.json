@@ -1,0 +1,59 @@
+{
+  "pass": true,
+  "run": 39108937933,
+  "url": "https://github.com/FranMore68/BoletinExpress/actions/runs/39108937933",
+  "codeCommit": "31507551b4c9c9d8a9f5d74e3f82cca6da257553",
+  "applicationCodeCommit": "f7cb32e2a18d5b1e4de13444b81744904a882160",
+  "durationSeconds": 860,
+  "applicationTests": 27,
+  "pdfTests": 43,
+  "catalogCases": 267,
+  "integrationGroups": {
+    "access.json": 12,
+    "brie.json": 8,
+    "cie.json": 8,
+    "credits.json": 11,
+    "retention.json": 12
+  },
+  "totalIntegrationGroups": 51,
+  "scannedImages": {
+    "image-gateway.json": {
+      "highCriticalDetected": 0,
+      "resultSections": 2
+    },
+    "image-templates.json": {
+      "highCriticalDetected": 0,
+      "resultSections": 2
+    },
+    "image-storage.json": {
+      "highCriticalDetected": 0,
+      "resultSections": 2
+    },
+    "image-mail.json": {
+      "highCriticalDetected": 0,
+      "resultSections": 2
+    },
+    "image-web.json": {
+      "highCriticalDetected": 0,
+      "resultSections": 2
+    },
+    "image-postgres.json": {
+      "highCriticalDetected": 0,
+      "resultSections": 3
+    },
+    "image-worker.json": {
+      "highCriticalDetected": 0,
+      "resultSections": 2
+    },
+    "image-rest.json": {
+      "highCriticalDetected": 0,
+      "resultSections": 0
+    },
+    "image-auth.json": {
+      "highCriticalDetected": 0,
+      "resultSections": 2
+    }
+  },
+  "storageModerateAdvisories": 30,
+  "postgrestInventoryCovered": false
+}

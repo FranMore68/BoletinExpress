@@ -1,0 +1,19 @@
+{
+  "pass": true,
+  "draftReopenWarning": true,
+  "draftExpiryVisible": true,
+  "archivedHasNoDownloadLinks": true,
+  "archiveLocales": [
+    "es",
+    "ca"
+  ],
+  "mobileWidth": 320,
+  "mobileContentWidth": 305,
+  "screenshots": [
+    "draft-renewal-es.png",
+    "archive-es.png",
+    "archive-mobile-ca.png",
+    "email-request-mobile-ca.png"
+  ],
+  "emailButtonKeyboardTest": "passed: Space; local transport accepted ES archive and CA requested messages"
+}

@@ -1,0 +1,6 @@
+{
+  "pass": true,
+  "productionEnvironmentRejected": true,
+  "noDockerCallOnRejection": true,
+  "documentClockIsSeparate": true
+}

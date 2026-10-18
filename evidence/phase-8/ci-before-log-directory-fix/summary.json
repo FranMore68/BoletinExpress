@@ -1,0 +1,45 @@
+{
+  "run": 39107487872,
+  "applicationChecksPassed": true,
+  "integrationGroups": 51,
+  "jobConclusion": "failure",
+  "reason": "tee opened missing directory before test created it",
+  "images": {
+    "image-gateway.json": {
+      "highCriticalDetected": 0,
+      "resultSections": 2
+    },
+    "image-templates.json": {
+      "highCriticalDetected": 0,
+      "resultSections": 2
+    },
+    "image-storage.json": {
+      "highCriticalDetected": 0,
+      "resultSections": 2
+    },
+    "image-mail.json": {
+      "highCriticalDetected": 0,
+      "resultSections": 2
+    },
+    "image-web.json": {
+      "highCriticalDetected": 0,
+      "resultSections": 2
+    },
+    "image-postgres.json": {
+      "highCriticalDetected": 0,
+      "resultSections": 3
+    },
+    "image-worker.json": {
+      "highCriticalDetected": 0,
+      "resultSections": 2
+    },
+    "image-rest.json": {
+      "highCriticalDetected": 0,
+      "resultSections": 0
+    },
+    "image-auth.json": {
+      "highCriticalDetected": 0,
+      "resultSections": 2
+    }
+  }
+}

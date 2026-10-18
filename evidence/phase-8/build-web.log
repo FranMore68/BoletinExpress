@@ -1,0 +1,123 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 4.10kB done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/node:24-alpine@sha256:44fce696f38ba8c987c4db89954051000bbd05ffd8d8659ba15ed4a8602e937f
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 905B done
+#3 DONE 0.0s
+
+#4 [base 1/2] FROM docker.io/library/node:24-alpine@sha256:44fce696f38ba8c987c4db89954051000bbd05ffd8d8659ba15ed4a8602e937f
+#4 resolve docker.io/library/node:24-alpine@sha256:44fce696f38ba8c987c4db89954051000bbd05ffd8d8659ba15ed4a8602e937f done
+#4 DONE 0.0s
+
+#5 [internal] load build context
+#5 transferring context: 3.35MB 0.0s done
+#5 DONE 0.0s
+
+#6 [dependencies 1/2] COPY package.json package-lock.json ./
+#6 CACHED
+
+#7 [dependencies 2/2] RUN npm ci --ignore-scripts
+#7 CACHED
+
+#8 [base 2/2] WORKDIR /app
+#8 CACHED
+
+#9 [build 1/5] COPY next.config.ts tsconfig.json next-env.d.ts postcss.config.mjs ./
+#9 CACHED
+
+#10 [build 2/5] COPY src ./src
+#10 DONE 0.0s
+
+#11 [build 3/5] COPY public ./public
+#11 DONE 0.0s
+
+#12 [build 4/5] COPY scripts/prepare-pdf-viewer.mjs ./scripts/prepare-pdf-viewer.mjs
+#12 DONE 0.0s
+
+#13 [build 5/5] RUN npm run build
+#13 0.164 
+#13 0.164 > boletinexpress@0.1.0 prebuild
+#13 0.164 > node scripts/prepare-pdf-viewer.mjs
+#13 0.164 
+#13 0.184 
+#13 0.184 > boletinexpress@0.1.0 build
+#13 0.184 > next build
+#13 0.184 
+#13 0.380 ▲ Next.js 16.4.2 (Turbopack)
+#13 0.422 ✓ Running next.config.ts took 41ms
+#13 0.427 
+#13 0.441   Creating an optimized production build ...
+#13 2.730 ✓ Compiled successfully in 2.3s
+#13 2.736   Running TypeScript ...
+#13 3.201   Finished TypeScript in 468ms ...
+#13 3.203   Collecting page data using 9 workers ...
+#13 3.674   Generating static pages using 9 workers (0/8) ...
+#13 3.739   Generating static pages using 9 workers (2/8) 
+#13 3.764   Generating static pages using 9 workers (4/8) 
+#13 3.767   Generating static pages using 9 workers (6/8) 
+#13 3.767 ✓ Generating static pages using 9 workers (8/8) in 93ms
+#13 3.769   Finalizing page optimization ...
+#13 3.883 
+#13 3.884 Route (app)
+#13 3.884 ┌ ○ /
+#13 3.884 ├ ○ /_not-found
+#13 3.884 ├ ƒ /acceso
+#13 3.884 ├ ƒ /api/auth/[action]
+#13 3.884 ├ ƒ /api/health
+#13 3.884 ├ ƒ /api/private/credits
+#13 3.884 ├ ƒ /api/private/documents
+#13 3.884 ├ ƒ /api/private/documents/[id]
+#13 3.884 ├ ƒ /api/private/documents/[id]/activity
+#13 3.884 ├ ƒ /api/private/documents/[id]/email
+#13 3.884 ├ ƒ /api/private/documents/[id]/fields
+#13 3.884 ├ ƒ /api/private/documents/[id]/files
+#13 3.884 ├ ƒ /api/private/documents/[id]/pdf
+#13 3.884 ├ ƒ /api/private/documents/[id]/preview
+#13 3.884 ├ ƒ /api/private/documents/[id]/preview/file
+#13 3.884 ├ ƒ /api/private/documents/[id]/validate
+#13 3.884 ├ ƒ /api/private/files/[id]
+#13 3.884 ├ ƒ /api/private/profile
+#13 3.884 ├ ○ /auth/confirm
+#13 3.884 ├ ○ /auth/reset
+#13 3.884 ├ ○ /cuenta
+#13 3.884 └ ○ /icon.svg
+#13 3.884 
+#13 3.884 
+#13 3.884 ƒ Proxy (Middleware)
+#13 3.884 
+#13 3.884 ○  (Static)   prerendered as static content
+#13 3.884 ƒ  (Dynamic)  server-rendered on demand
+#13 3.884 
+#13 DONE 4.0s
+
+#14 [runtime 1/1] RUN rm -rf /usr/local/lib/node_modules/npm /usr/local/bin/npm /usr/local/bin/npx /opt/yarn* /usr/local/bin/yarn*
+#14 CACHED
+
+#15 [web 1/3] COPY --from=build --chown=node:node /app/.next/standalone ./
+#15 DONE 0.2s
+
+#16 [web 2/3] COPY --from=build --chown=node:node /app/.next/static ./.next/static
+#16 DONE 0.0s
+
+#17 [web 3/3] COPY --from=build --chown=node:node /app/public ./public
+#17 DONE 0.0s
+
+#18 exporting to image
+#18 exporting layers
+#18 exporting layers 0.9s done
+#18 exporting manifest sha256:93d4ea2b5bdeb6d47c8589f959bc51112c5350314da045c313c0c9e3f3fe4ee4 done
+#18 exporting config sha256:8510b37de1b222d418d08d91c24d64345d915e47fd44b2fd176c3bcf732b1ca9 done
+#18 exporting attestation manifest sha256:06d54b7fc3a7a810107369161b87e818c628eccb00a8f8e4ef160368eaefcc75 done
+#18 exporting manifest list sha256:b79d84062f437e6a870762c63e861d26779644fa1653aa646fd6f4a6b5b08d0f done
+#18 naming to docker.io/library/boletinexpress-web:phase1 done
+#18 unpacking to docker.io/library/boletinexpress-web:phase1
+#18 unpacking to docker.io/library/boletinexpress-web:phase1 0.2s done
+#18 DONE 1.2s
+
+View build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux/e3b4jplss8niil5vpqlznvq92
