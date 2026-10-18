@@ -11,7 +11,14 @@ if (
     "Uso: node scripts/evaluation-clock.mjs enroll|advance|show UUID [horas]",
   );
 const env = await readFile(".secrets/app.env", "utf8");
-if (!/^APP_ENV=evaluation$/m.test(env)) throw Error("Solo evaluación local");
+const configured = process.env.APP_ENV || env.match(/^APP_ENV=(.*)$/m)?.[1];
+const appUrl = env.match(/^APP_URL=(.*)$/m)?.[1];
+if (
+  configured !== "evaluation" ||
+  !appUrl ||
+  !["localhost", "127.0.0.1"].includes(new URL(appUrl).hostname)
+)
+  throw Error("Solo evaluación local; ejecuta con APP_ENV=evaluation");
 const increment = Number(hours);
 if (!Number.isSafeInteger(increment) || increment < 0 || increment > 2160)
   throw Error("Horas enteras: 0 a 2160");

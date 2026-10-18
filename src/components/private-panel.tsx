@@ -150,7 +150,7 @@ export function PrivatePanel() {
           {active ? active.title : tr("privateTitle")}
         </h1>
         <p>{tr("privateHelp")}</p>
-        <p>{tr("retentionHelp")}</p>
+        {active?.status !== "validated" && <p>{tr("retentionHelp")}</p>}
         {error && (
           <p className="account-error" role="alert">
             {tr(error)}
