@@ -1,0 +1,27 @@
+{
+  "phase": 10,
+  "date": "2026-10-19",
+  "acceptedByUser": false,
+  "deployed": false,
+  "coolifyProject": "BoletinExpress",
+  "resource": "boletinexpress-evaluacion",
+  "resourceUuid": "hepqrz8hrz58omwradhcvzgj",
+  "resourceCreated": true,
+  "remoteSecretsLoaded": false,
+  "finalComposeSaved": false,
+  "localStartupPassed": true,
+  "localSecretIsolationPassed": true,
+  "localApplicationTests": 37,
+  "limits": {
+    "memoryMiB": 3072,
+    "cpus": 1
+  },
+  "pending": [
+    "Publicar imágenes verificadas fuera del VPS",
+    "Configurar lectura privada del registro",
+    "Cargar variables y guardar el Compose final con aislamiento",
+    "Dominio HTTPS y webhook Stripe test",
+    "Comprobación del entorno efectivo remoto",
+    "Recorrido remoto y prueba de carga 600 segundos"
+  ]
+}

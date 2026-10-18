@@ -1,0 +1,538 @@
+---
+services:
+  web:
+    image: "${BE_IMAGE_WEB:?}"
+    restart: unless-stopped
+    mem_limit: 512m
+    cpus: 0.28
+    pids_limit: 128
+    read_only: true
+    tmpfs:
+    - "/tmp:rw,noexec,nosuid,size=64m,uid=1000,gid=1000"
+    cap_drop:
+    - ALL
+    security_opt:
+    - no-new-privileges:true
+    healthcheck:
+      test:
+      - CMD
+      - node
+      - "-e"
+      - fetch('http://127.0.0.1:3000/api/health').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))
+      interval: 10s
+      timeout: 3s
+      start_period: 20s
+      retries: 3
+    logging:
+      driver: json-file
+      options:
+        max-size: 5m
+        max-file: '2'
+    networks:
+    - default
+    - data
+    environment:
+      APP_URL: "${APP_URL:?}"
+      SUPABASE_URL: http://gateway:8000
+      SUPABASE_ANON_KEY: "${ANON_KEY:?}"
+      AUTH_PROOF_SECRET: "${AUTH_PROOF_SECRET:?}"
+      CREDITS_API_KEY: "${CREDITS_API_KEY:?}"
+      PAYMENTS_API_KEY: "${PAYMENTS_API_KEY:?}"
+      EXTRACTION_API_KEY: "${EXTRACTION_API_KEY:?}"
+      STRIPE_SECRET_KEY: "${STRIPE_SECRET_KEY:?}"
+      STRIPE_WEBHOOK_SECRET: "${STRIPE_WEBHOOK_SECRET:?}"
+      POSTGRES_PASSWORD: "${BE_EMPTY:+}"
+      JWT_SECRET: "${BE_EMPTY:+}"
+      SERVICE_ROLE_KEY: "${BE_EMPTY:+}"
+      WORKER_KEY: "${BE_EMPTY:+}"
+      RESEND_API_KEY: "${BE_EMPTY:+}"
+      OPENAI_API_KEY: "${BE_EMPTY:+}"
+    depends_on:
+      migrate:
+        condition: service_completed_successfully
+      gateway:
+        condition: service_healthy
+  worker:
+    image: "${BE_IMAGE_WORKER:?}"
+    restart: unless-stopped
+    mem_limit: 256m
+    cpus: 0.25
+    pids_limit: 64
+    read_only: true
+    tmpfs:
+    - "/tmp:rw,noexec,nosuid,size=32m,uid=1000,gid=1000"
+    cap_drop:
+    - ALL
+    security_opt:
+    - no-new-privileges:true
+    healthcheck:
+      test:
+      - CMD
+      - node
+      - "-e"
+      - fetch('http://127.0.0.1:3001/health').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))
+      interval: 10s
+      timeout: 3s
+      start_period: 5s
+      retries: 3
+    logging:
+      driver: json-file
+      options:
+        max-size: 5m
+        max-file: '2'
+    networks:
+    - data
+    - egress
+    environment:
+      APP_ENV: evaluation
+      WORKER_REST_URL: http://rest:3000
+      WORKER_STORAGE_URL: http://storage:5000
+      WORKER_KEY: "${WORKER_KEY:?}"
+      MAIL_TRANSPORT: resend
+      MAILPIT_URL: http://mail:8025
+      MAIL_FROM: "${MAIL_FROM:?}"
+      RESEND_API_KEY: "${RESEND_API_KEY:?}"
+      OPENAI_API_KEY: "${OPENAI_API_KEY:?}"
+      OPENAI_EXTRACTION_MODEL: gpt-6-luna
+      OPENAI_TRANSCRIPTION_MODEL: whisper-1
+      POSTGRES_PASSWORD: "${BE_EMPTY:+}"
+      JWT_SECRET: "${BE_EMPTY:+}"
+      ANON_KEY: "${BE_EMPTY:+}"
+      SERVICE_ROLE_KEY: "${BE_EMPTY:+}"
+      CREDITS_API_KEY: "${BE_EMPTY:+}"
+      PAYMENTS_API_KEY: "${BE_EMPTY:+}"
+      EXTRACTION_API_KEY: "${BE_EMPTY:+}"
+      AUTH_PROOF_SECRET: "${BE_EMPTY:+}"
+      STRIPE_SECRET_KEY: "${BE_EMPTY:+}"
+      STRIPE_WEBHOOK_SECRET: "${BE_EMPTY:+}"
+    depends_on:
+      migrate:
+        condition: service_completed_successfully
+  auth:
+    cap_drop:
+    - ALL
+    cpus: 0.15
+    depends_on:
+      mail:
+        condition: service_started
+        required: true
+      postgres:
+        condition: service_healthy
+        required: true
+    environment:
+      API_EXTERNAL_URL: "${APP_URL:?}"
+      GOTRUE_API_HOST: 0.0.0.0
+      GOTRUE_API_PORT: 9999
+      GOTRUE_DB_DATABASE_URL: postgres://supabase_auth_admin:${POSTGRES_PASSWORD}@postgres:5432/postgres
+      GOTRUE_DB_DRIVER: postgres
+      GOTRUE_DB_MAX_POOL_SIZE: 10
+      GOTRUE_DISABLE_SIGNUP: 'false'
+      GOTRUE_EXTERNAL_ANONYMOUS_USERS_ENABLED: 'false'
+      GOTRUE_EXTERNAL_EMAIL_ENABLED: 'true'
+      GOTRUE_EXTERNAL_PHONE_ENABLED: 'false'
+      GOTRUE_JWT_ADMIN_ROLES: service_role
+      GOTRUE_JWT_AUD: authenticated
+      GOTRUE_JWT_DEFAULT_GROUP_NAME: authenticated
+      GOTRUE_JWT_EXP: 900
+      GOTRUE_JWT_SECRET: "${JWT_SECRET:?}"
+      GOTRUE_LOG_LEVEL: error
+      GOTRUE_MAILER_AUTOCONFIRM: 'false'
+      GOTRUE_MAILER_TEMPLATES_CONFIRMATION: http://templates:8080/confirmation.html
+      GOTRUE_MAILER_TEMPLATES_RECOVERY: http://templates:8080/recovery.html
+      GOTRUE_PASSWORD_MIN_LENGTH: 12
+      GOTRUE_RATE_LIMIT_EMAIL_SENT: 100
+      GOTRUE_SECURITY_REFRESH_TOKEN_REUSE_INTERVAL: 10
+      GOTRUE_SECURITY_REFRESH_TOKEN_ROTATION_ENABLED: 'true'
+      GOTRUE_SESSIONS_TIMEBOX: 168h
+      GOTRUE_SITE_URL: "${APP_URL}"
+      GOTRUE_SMTP_ADMIN_EMAIL: "${SMTP_FROM:?}"
+      GOTRUE_SMTP_HOST: mail
+      GOTRUE_SMTP_MAX_FREQUENCY: 1s
+      GOTRUE_SMTP_PASS: ''
+      GOTRUE_SMTP_PORT: '1025'
+      GOTRUE_SMTP_SENDER_NAME: BoletinExpress
+      GOTRUE_SMTP_USER: ''
+      GOTRUE_URI_ALLOW_LIST: "${APP_URL}/auth/confirm"
+      LOG_LEVEL: error
+      ANON_KEY: "${BE_EMPTY:+}"
+      SERVICE_ROLE_KEY: "${BE_EMPTY:+}"
+      WORKER_KEY: "${BE_EMPTY:+}"
+      CREDITS_API_KEY: "${BE_EMPTY:+}"
+      PAYMENTS_API_KEY: "${BE_EMPTY:+}"
+      EXTRACTION_API_KEY: "${BE_EMPTY:+}"
+      AUTH_PROOF_SECRET: "${BE_EMPTY:+}"
+      RESEND_API_KEY: "${BE_EMPTY:+}"
+      OPENAI_API_KEY: "${BE_EMPTY:+}"
+      STRIPE_SECRET_KEY: "${BE_EMPTY:+}"
+      STRIPE_WEBHOOK_SECRET: "${BE_EMPTY:+}"
+    healthcheck:
+      interval: 5s
+      retries: 12
+      start_period: 30s
+      test:
+      - CMD
+      - wget
+      - "-q"
+      - "-O"
+      - "/dev/null"
+      - http://127.0.0.1:9999/health
+      timeout: 5s
+    image: "${BE_IMAGE_AUTH:?}"
+    logging:
+      driver: json-file
+      options:
+        max-file: '2'
+        max-size: 5m
+    mem_limit: 128m
+    networks:
+    - data
+    restart: unless-stopped
+    security_opt:
+    - no-new-privileges:true
+  gateway:
+    cap_drop:
+    - ALL
+    cpus: 0.01
+    depends_on:
+      auth:
+        condition: service_healthy
+        required: true
+      rest:
+        condition: service_started
+        required: true
+      storage:
+        condition: service_healthy
+        required: true
+    environment:
+      ANON_KEY: "${ANON_KEY}"
+      SERVICE_ROLE_KEY: "${SERVICE_ROLE_KEY}"
+      POSTGRES_PASSWORD: "${BE_EMPTY:+}"
+      JWT_SECRET: "${BE_EMPTY:+}"
+      WORKER_KEY: "${BE_EMPTY:+}"
+      CREDITS_API_KEY: "${BE_EMPTY:+}"
+      PAYMENTS_API_KEY: "${BE_EMPTY:+}"
+      EXTRACTION_API_KEY: "${BE_EMPTY:+}"
+      AUTH_PROOF_SECRET: "${BE_EMPTY:+}"
+      RESEND_API_KEY: "${BE_EMPTY:+}"
+      OPENAI_API_KEY: "${BE_EMPTY:+}"
+      STRIPE_SECRET_KEY: "${BE_EMPTY:+}"
+      STRIPE_WEBHOOK_SECRET: "${BE_EMPTY:+}"
+    healthcheck:
+      interval: 5s
+      retries: 30
+      start_period: 60s
+      test:
+      - CMD
+      - wget
+      - "-q"
+      - "-O"
+      - "/dev/null"
+      - http://127.0.0.1:8000/health
+      timeout: 3s
+    image: "${BE_IMAGE_GATEWAY:?}"
+    logging:
+      driver: json-file
+      options:
+        max-file: '2'
+        max-size: 5m
+    mem_limit: 64m
+    networks:
+    - data
+    read_only: true
+    restart: unless-stopped
+    security_opt:
+    - no-new-privileges:true
+  mail:
+    cap_drop:
+    - ALL
+    cpus: 0.05
+    environment:
+      MP_DISABLE_VERSION_CHECK: 'true'
+      MP_MAX_MESSAGES: 100
+      MP_SMTP_AUTH_ACCEPT_ANY: 'true'
+      MP_SMTP_AUTH_ALLOW_INSECURE: 'true'
+      MP_SMTP_RELAY_HOST: smtp.resend.com
+      MP_SMTP_RELAY_PORT: '465'
+      MP_SMTP_RELAY_TLS: 'true'
+      MP_SMTP_RELAY_ALLOW_INSECURE: 'false'
+      MP_SMTP_RELAY_AUTH: plain
+      MP_SMTP_RELAY_USERNAME: resend
+      MP_SMTP_RELAY_PASSWORD: "${RESEND_API_KEY:?}"
+      MP_SMTP_RELAY_ALL: 'true'
+      MP_SMTP_RELAY_BLOCKED_RECIPIENTS: "(?i)@([^@]*\\.)?invalid$$"
+      MP_SMTP_RELAY_FWD_SMTP_ERRORS: 'true'
+      MP_SMTP_RELAY_PRESERVE_MESSAGE_IDS: 'true'
+      POSTGRES_PASSWORD: "${BE_EMPTY:+}"
+      JWT_SECRET: "${BE_EMPTY:+}"
+      ANON_KEY: "${BE_EMPTY:+}"
+      SERVICE_ROLE_KEY: "${BE_EMPTY:+}"
+      WORKER_KEY: "${BE_EMPTY:+}"
+      CREDITS_API_KEY: "${BE_EMPTY:+}"
+      PAYMENTS_API_KEY: "${BE_EMPTY:+}"
+      EXTRACTION_API_KEY: "${BE_EMPTY:+}"
+      AUTH_PROOF_SECRET: "${BE_EMPTY:+}"
+      OPENAI_API_KEY: "${BE_EMPTY:+}"
+      STRIPE_SECRET_KEY: "${BE_EMPTY:+}"
+      STRIPE_WEBHOOK_SECRET: "${BE_EMPTY:+}"
+    image: axllent/mailpit:v1.31.6
+    logging:
+      driver: json-file
+      options:
+        max-file: '2'
+        max-size: 5m
+    mem_limit: 64m
+    networks:
+    - data
+    - egress
+    restart: unless-stopped
+    security_opt:
+    - no-new-privileges:true
+  postgres:
+    command:
+    - postgres
+    - "-c"
+    - config_file=/etc/postgresql/postgresql.conf
+    - "-c"
+    - shared_buffers=128MB
+    - "-c"
+    - max_connections=60
+    - "-c"
+    - log_min_messages=fatal
+    - "-c"
+    - log_statement=none
+    cpus: 0.1
+    environment:
+      POSTGRES_DB: postgres
+      POSTGRES_HOST: "/var/run/postgresql"
+      POSTGRES_PASSWORD: "${POSTGRES_PASSWORD:?}"
+      JWT_SECRET: "${BE_EMPTY:+}"
+      ANON_KEY: "${BE_EMPTY:+}"
+      SERVICE_ROLE_KEY: "${BE_EMPTY:+}"
+      WORKER_KEY: "${BE_EMPTY:+}"
+      CREDITS_API_KEY: "${BE_EMPTY:+}"
+      PAYMENTS_API_KEY: "${BE_EMPTY:+}"
+      EXTRACTION_API_KEY: "${BE_EMPTY:+}"
+      AUTH_PROOF_SECRET: "${BE_EMPTY:+}"
+      RESEND_API_KEY: "${BE_EMPTY:+}"
+      OPENAI_API_KEY: "${BE_EMPTY:+}"
+      STRIPE_SECRET_KEY: "${BE_EMPTY:+}"
+      STRIPE_WEBHOOK_SECRET: "${BE_EMPTY:+}"
+    healthcheck:
+      interval: 5s
+      retries: 30
+      test:
+      - CMD
+      - pg_isready
+      - "-U"
+      - postgres
+      - "-h"
+      - localhost
+      timeout: 5s
+    image: "${BE_IMAGE_POSTGRES:?}"
+    logging:
+      driver: json-file
+      options:
+        max-file: '2'
+        max-size: 5m
+    mem_limit: 1280m
+    networks:
+    - data
+    restart: unless-stopped
+    volumes:
+    - source: db
+      target: "/var/lib/postgresql/data"
+      type: volume
+      volume: {}
+    - source: db-config
+      target: "/etc/postgresql-custom"
+      type: volume
+      volume: {}
+  rest:
+    cap_drop:
+    - ALL
+    cpus: 0.03
+    depends_on:
+      postgres:
+        condition: service_healthy
+        required: true
+    environment:
+      PGRST_DB_ANON_ROLE: anon
+      PGRST_DB_POOL: 5
+      PGRST_DB_SCHEMAS: public,storage
+      PGRST_DB_URI: postgres://authenticator:${POSTGRES_PASSWORD}@postgres:5432/postgres
+      PGRST_JWT_SECRET: "${JWT_SECRET}"
+      PGRST_LOG_LEVEL: crit
+      ANON_KEY: "${BE_EMPTY:+}"
+      SERVICE_ROLE_KEY: "${BE_EMPTY:+}"
+      WORKER_KEY: "${BE_EMPTY:+}"
+      CREDITS_API_KEY: "${BE_EMPTY:+}"
+      PAYMENTS_API_KEY: "${BE_EMPTY:+}"
+      EXTRACTION_API_KEY: "${BE_EMPTY:+}"
+      AUTH_PROOF_SECRET: "${BE_EMPTY:+}"
+      RESEND_API_KEY: "${BE_EMPTY:+}"
+      OPENAI_API_KEY: "${BE_EMPTY:+}"
+      STRIPE_SECRET_KEY: "${BE_EMPTY:+}"
+      STRIPE_WEBHOOK_SECRET: "${BE_EMPTY:+}"
+    image: postgrest/postgrest:v14.17
+    logging:
+      driver: json-file
+      options:
+        max-file: '2'
+        max-size: 5m
+    mem_limit: 128m
+    networks:
+    - data
+    restart: unless-stopped
+    security_opt:
+    - no-new-privileges:true
+  storage:
+    cap_drop:
+    - ALL
+    cpus: 0.1
+    depends_on:
+      postgres:
+        condition: service_healthy
+        required: true
+      rest:
+        condition: service_started
+        required: true
+    environment:
+      ANON_KEY: "${ANON_KEY:?}"
+      AUTH_JWT_SECRET: "${JWT_SECRET}"
+      DATABASE_URL: postgres://supabase_storage_admin:${POSTGRES_PASSWORD}@postgres:5432/postgres
+      ENABLE_IMAGE_TRANSFORMATION: 'false'
+      FILE_SIZE_LIMIT: 2097152
+      FILE_STORAGE_BACKEND_PATH: "/var/lib/storage"
+      GLOBAL_S3_BUCKET: boletinexpress
+      LOG_LEVEL: error
+      POSTGREST_URL: http://rest:3000
+      REGION: local
+      SERVICE_KEY: "${SERVICE_ROLE_KEY:?}"
+      STORAGE_BACKEND: file
+      STORAGE_PUBLIC_URL: "${APP_URL}"
+      TENANT_ID: boletinexpress
+      WORKER_KEY: "${BE_EMPTY:+}"
+      CREDITS_API_KEY: "${BE_EMPTY:+}"
+      PAYMENTS_API_KEY: "${BE_EMPTY:+}"
+      EXTRACTION_API_KEY: "${BE_EMPTY:+}"
+      AUTH_PROOF_SECRET: "${BE_EMPTY:+}"
+      RESEND_API_KEY: "${BE_EMPTY:+}"
+      OPENAI_API_KEY: "${BE_EMPTY:+}"
+      STRIPE_SECRET_KEY: "${BE_EMPTY:+}"
+      STRIPE_WEBHOOK_SECRET: "${BE_EMPTY:+}"
+    healthcheck:
+      interval: 10s
+      retries: 12
+      start_period: 120s
+      test:
+      - CMD
+      - wget
+      - "-q"
+      - "-O"
+      - "/dev/null"
+      - http://127.0.0.1:5000/status
+      timeout: 5s
+    image: "${BE_IMAGE_STORAGE:?}"
+    logging:
+      driver: json-file
+      options:
+        max-file: '2'
+        max-size: 5m
+    mem_limit: 512m
+    networks:
+    - data
+    restart: unless-stopped
+    security_opt:
+    - no-new-privileges:true
+    volumes:
+    - source: files
+      target: "/var/lib/storage"
+      type: volume
+      volume: {}
+  templates:
+    cap_drop:
+    - ALL
+    cpus: 0.01
+    image: "${BE_IMAGE_TEMPLATES:?}"
+    logging:
+      driver: json-file
+      options:
+        max-file: '2'
+        max-size: 5m
+    mem_limit: 64m
+    networks:
+    - data
+    read_only: true
+    restart: unless-stopped
+    security_opt:
+    - no-new-privileges:true
+    environment:
+      POSTGRES_PASSWORD: "${BE_EMPTY:+}"
+      JWT_SECRET: "${BE_EMPTY:+}"
+      ANON_KEY: "${BE_EMPTY:+}"
+      SERVICE_ROLE_KEY: "${BE_EMPTY:+}"
+      WORKER_KEY: "${BE_EMPTY:+}"
+      CREDITS_API_KEY: "${BE_EMPTY:+}"
+      PAYMENTS_API_KEY: "${BE_EMPTY:+}"
+      EXTRACTION_API_KEY: "${BE_EMPTY:+}"
+      AUTH_PROOF_SECRET: "${BE_EMPTY:+}"
+      RESEND_API_KEY: "${BE_EMPTY:+}"
+      OPENAI_API_KEY: "${BE_EMPTY:+}"
+      STRIPE_SECRET_KEY: "${BE_EMPTY:+}"
+      STRIPE_WEBHOOK_SECRET: "${BE_EMPTY:+}"
+  migrate:
+    image: "${BE_IMAGE_POSTGRES:?}"
+    restart: 'no'
+    mem_limit: 64m
+    cpus: 0.02
+    pids_limit: 32
+    cap_drop:
+    - ALL
+    security_opt:
+    - no-new-privileges:true
+    read_only: true
+    tmpfs:
+    - "/tmp:rw,noexec,nosuid,size=8m"
+    entrypoint:
+    - "/bin/sh"
+    - "/opt/boletinexpress/migrate.sh"
+    environment:
+      PGHOST: postgres
+      PGPORT: '5432'
+      PGUSER: supabase_admin
+      PGDATABASE: postgres
+      PGPASSWORD: "${POSTGRES_PASSWORD:?}"
+      JWT_SECRET: "${BE_EMPTY:+}"
+      ANON_KEY: "${BE_EMPTY:+}"
+      SERVICE_ROLE_KEY: "${BE_EMPTY:+}"
+      WORKER_KEY: "${BE_EMPTY:+}"
+      CREDITS_API_KEY: "${BE_EMPTY:+}"
+      PAYMENTS_API_KEY: "${BE_EMPTY:+}"
+      EXTRACTION_API_KEY: "${BE_EMPTY:+}"
+      AUTH_PROOF_SECRET: "${BE_EMPTY:+}"
+      RESEND_API_KEY: "${BE_EMPTY:+}"
+      OPENAI_API_KEY: "${BE_EMPTY:+}"
+      STRIPE_SECRET_KEY: "${BE_EMPTY:+}"
+      STRIPE_WEBHOOK_SECRET: "${BE_EMPTY:+}"
+    depends_on:
+      auth:
+        condition: service_healthy
+      storage:
+        condition: service_healthy
+    networks:
+    - data
+    exclude_from_hc: true
+    logging:
+      driver: json-file
+      options:
+        max-size: 5m
+        max-file: '2'
+volumes:
+  db: {}
+  db-config: {}
+  files: {}
+networks:
+  default: {}
+  data:
+    internal: true
+  egress: {}

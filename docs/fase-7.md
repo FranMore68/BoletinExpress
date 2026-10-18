@@ -1,6 +1,6 @@
 # Fase 7 — extracción asistida de texto, fotografía y voz
 
-Cierre técnico del 18/10/2026 con datos ficticios. Pendiente de aceptación del usuario. La fase 10 no se inicia automáticamente. Estado verificable en `evidence/phase-7/status.json`.
+Cierre técnico del 18/10/2026 con datos ficticios. Aceptada por el usuario el 19/10/2026; autoriza iniciar la fase 10. Estado verificable en `evidence/phase-7/status.json`.
 
 ## Comportamiento
 

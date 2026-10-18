@@ -1,0 +1,123 @@
+{
+  "date": "2026-10-19",
+  "environment": "Mac local, instalación nueva, proveedores externos ficticios",
+  "project": "boletinexpress-phase10-check",
+  "versions": [
+    "001-access",
+    "002-brie",
+    "003-cie",
+    "004-credits",
+    "005-retention",
+    "006-payments",
+    "007-extraction"
+  ],
+  "migrationsSecondRun": "Las siete devolvieron ya aplicada; salida 0",
+  "states": [
+    {
+      "name": "/boletinexpress-phase10-check-auth-1",
+      "status": "running",
+      "exitCode": 0,
+      "oom": false,
+      "memoryBytes": 134217728,
+      "nanoCpus": 150000000,
+      "restarts": 0
+    },
+    {
+      "name": "/boletinexpress-phase10-check-gateway-1",
+      "status": "running",
+      "exitCode": 0,
+      "oom": false,
+      "memoryBytes": 67108864,
+      "nanoCpus": 10000000,
+      "restarts": 0
+    },
+    {
+      "name": "/boletinexpress-phase10-check-mail-1",
+      "status": "running",
+      "exitCode": 0,
+      "oom": false,
+      "memoryBytes": 67108864,
+      "nanoCpus": 50000000,
+      "restarts": 0
+    },
+    {
+      "name": "/boletinexpress-phase10-check-migrate-1",
+      "status": "exited",
+      "exitCode": 0,
+      "oom": false,
+      "memoryBytes": 67108864,
+      "nanoCpus": 20000000,
+      "restarts": 0
+    },
+    {
+      "name": "/boletinexpress-phase10-check-postgres-1",
+      "status": "running",
+      "exitCode": 0,
+      "oom": false,
+      "memoryBytes": 1342177280,
+      "nanoCpus": 100000000,
+      "restarts": 0
+    },
+    {
+      "name": "/boletinexpress-phase10-check-rest-1",
+      "status": "running",
+      "exitCode": 0,
+      "oom": false,
+      "memoryBytes": 134217728,
+      "nanoCpus": 30000000,
+      "restarts": 0
+    },
+    {
+      "name": "/boletinexpress-phase10-check-storage-1",
+      "status": "running",
+      "exitCode": 0,
+      "oom": false,
+      "memoryBytes": 536870912,
+      "nanoCpus": 100000000,
+      "restarts": 0
+    },
+    {
+      "name": "/boletinexpress-phase10-check-templates-1",
+      "status": "running",
+      "exitCode": 0,
+      "oom": false,
+      "memoryBytes": 67108864,
+      "nanoCpus": 10000000,
+      "restarts": 0
+    },
+    {
+      "name": "/boletinexpress-phase10-check-web-1",
+      "status": "running",
+      "exitCode": 0,
+      "oom": false,
+      "memoryBytes": 536870912,
+      "nanoCpus": 280000000,
+      "restarts": 0
+    },
+    {
+      "name": "/boletinexpress-phase10-check-worker-1",
+      "status": "running",
+      "exitCode": 0,
+      "oom": false,
+      "memoryBytes": 268435456,
+      "nanoCpus": 250000000,
+      "restarts": 0
+    }
+  ],
+  "probe": [
+    {
+      "service": "127.0.0.1",
+      "status": 200
+    },
+    {
+      "service": "gateway",
+      "status": 200
+    },
+    {
+      "service": "worker",
+      "status": 200
+    }
+  ],
+  "pass": true,
+  "remoteTest": false
+}

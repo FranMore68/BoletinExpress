@@ -28,6 +28,7 @@ jobs:
       - run: npm ci --ignore-scripts --prefix worker
       - run: npm audit --omit=dev --audit-level=high --prefix worker
       - run: npm run check
+      - run: node scripts/check-coolify.mjs
       - run: npm run build
       - run: npm ci --ignore-scripts --prefix tools/pdf-phase0
       - run: npm audit --audit-level=high --prefix tools/pdf-phase0

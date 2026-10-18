@@ -1,0 +1,60 @@
+name: Preparar imágenes de evaluación
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+  packages: write
+concurrency:
+  group: boletinexpress-release
+  cancel-in-progress: false
+jobs:
+  release:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      GH_TOKEN: ${{ github.token }}
+      RELEASE_SHA: ${{ github.sha }}
+      REPOSITORY: ${{ github.repository }}
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09
+      - name: Exigir CI superada para este commit
+        run: |
+          gh api "repos/$REPOSITORY/actions/workflows/ci.yml/runs?head_sha=$RELEASE_SHA&status=success&per_page=20" --jq '.workflow_runs[] | select(.event == "push") | .head_sha' | grep -Fx "$RELEASE_SHA"
+      - name: Construir fuera del VPS (linux/amd64)
+        run: |
+          for target in web worker gateway templates database storage auth; do
+            service="$target"
+            if [ "$target" = database ]; then service=postgres; fi
+            docker build --platform linux/amd64 --target "$target" --label "org.opencontainers.image.source=https://github.com/$REPOSITORY" --label "org.opencontainers.image.revision=$RELEASE_SHA" -t "boletinexpress-$service:phase1" .
+          done
+          docker pull --platform linux/amd64 postgrest/postgrest:v14.17
+          docker tag postgrest/postgrest:v14.17 boletinexpress-rest:phase1
+          docker pull --platform linux/amd64 axllent/mailpit:v1.31.6
+          docker tag axllent/mailpit:v1.31.6 boletinexpress-mail:phase1
+      - name: Bloquear publicación con vulnerabilidades altas o críticas
+        env:
+          BE_SCAN_REPORT_DIR: evidence/phase-10/release
+          BE_SCAN_SERVICES: web worker gateway templates postgres auth rest storage mail
+        run: sh scripts/scan-images.sh
+      - name: Publicar imágenes en GHCR
+        run: |
+          registry="ghcr.io/$(printf '%s' "$GITHUB_REPOSITORY_OWNER" | tr '[:upper:]' '[:lower:]')"
+          printf '%s' "$GH_TOKEN" | docker login ghcr.io -u "$GITHUB_ACTOR" --password-stdin
+          trap 'docker logout ghcr.io >/dev/null 2>&1' EXIT
+          : > evidence/phase-10/release/images.env.example
+          for service in web worker postgres auth storage gateway templates; do
+            image="$registry/boletinexpress-$service:sha-$RELEASE_SHA"
+            docker tag "boletinexpress-$service:phase1" "$image"
+            docker push "$image"
+            digest=$(docker image inspect "$image" --format '{{index .RepoDigests 0}}')
+            key=$(printf '%s' "$service" | tr '[:lower:]' '[:upper:]')
+            printf 'BE_IMAGE_%s=%s\n' "$key" "$digest" >> evidence/phase-10/release/images.env.example
+          done
+      - if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: boletinexpress-release
+          path: evidence/phase-10/release
+          retention-days: 7

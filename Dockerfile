@@ -53,6 +53,8 @@ RUN apk add --no-cache su-exec=0.3-r0 && rm /usr/local/bin/gosu
 # Capa de borrado independiente: el escáner debe retirar también el binario Go heredado.
 RUN printf '#!/bin/sh\nexec /sbin/su-exec "$@"\n' > /usr/local/bin/gosu && chmod 755 /usr/local/bin/gosu
 COPY infra/supabase/roles.sql /docker-entrypoint-initdb.d/init-scripts/99-roles.sql
+COPY infra/supabase/00*.sql /opt/boletinexpress/migrations/
+COPY infra/coolify/migrate.sh /opt/boletinexpress/migrate.sh
 
 FROM supabase/storage-api:v1.83.5 AS storage
 USER root

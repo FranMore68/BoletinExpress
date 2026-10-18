@@ -1,0 +1,20 @@
+{
+  "services": [
+    "auth",
+    "gateway",
+    "mail",
+    "migrate",
+    "postgres",
+    "rest",
+    "storage",
+    "templates",
+    "web",
+    "worker"
+  ],
+  "memoryMiB": 3072,
+  "cpus": 1,
+  "hostPorts": 0,
+  "sharedExternalNetworks": 0,
+  "composeValid": true,
+  "coolifySpecificField": "migrate.exclude_from_hc"
+}

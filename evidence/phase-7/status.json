@@ -1,7 +1,7 @@
 {
   "phase": 7,
   "implemented": true,
-  "acceptedByUser": false,
+  "acceptedByUser": true,
   "technicalClosure": true,
   "date": "2026-10-18",
   "codeCommit": "fe685375f39cf1cca6187d9fa308f45794eddd07",
@@ -16,9 +16,7 @@
     "automaticFormChanges": false,
     "selectiveAcceptance": "Only local_municipi accepted in UI"
   },
-  "pending": [
-    "Aceptación del usuario para iniciar la fase 10"
-  ],
+  "pending": [],
   "knownIssue": "Un intento local anterior devolvió HTTP 503. No se reprodujo en la batería local completa ni en la CI final. La causa no está confirmada; se conserva el registro.",
   "localIntegrationGroups": 12,
   "localIntegrationPass": true,
@@ -35,13 +33,14 @@
   "localIntegrationPassed": true,
   "ciPassed": true,
   "technicalClosureComplete": true,
-  "userAcceptancePending": true,
-  "phase10Started": false,
+  "userAcceptancePending": false,
+  "phase10Started": true,
   "totalCIIntegrationGroups": 79,
   "scannedImages": 10,
   "imageScanPassed": true,
   "highDetected": 0,
   "criticalDetected": 0,
   "postgrestInventoryCovered": false,
-  "closedAt": "2026-10-18T18:42:23.178040+00:00"
+  "closedAt": "2026-10-18T18:42:23.178040+00:00",
+  "acceptedAt": "2026-10-19"
 }

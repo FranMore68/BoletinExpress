@@ -18,6 +18,9 @@
 !infra/supabase/confirmation.html
 !infra/supabase/recovery.html
 !infra/supabase/roles.sql
+!infra/supabase/00*.sql
+!infra/coolify/
+!infra/coolify/migrate.sh
 !infra/supabase/storage-runtime/
 !infra/supabase/storage-runtime/package.json
 !infra/supabase/storage-runtime/package-lock.json
