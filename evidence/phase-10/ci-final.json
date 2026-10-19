@@ -1,0 +1,315 @@
+{
+  "conclusion": "success",
+  "headSha": "2c6e30eedf339a216049b6a815120a979fb250b7",
+  "jobs": [
+    {
+      "completedAt": "2026-10-19T05:08:19Z",
+      "conclusion": "success",
+      "databaseId": 117894303881,
+      "name": "check",
+      "startedAt": "2026-10-19T04:46:50Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-19T04:46:52Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-19T04:46:51Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-19T04:46:55Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09",
+          "number": 2,
+          "startedAt": "2026-10-19T04:46:52Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-19T04:47:07Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444",
+          "number": 3,
+          "startedAt": "2026-10-19T04:46:55Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-19T04:47:17Z",
+          "conclusion": "success",
+          "name": "Run npm ci --ignore-scripts",
+          "number": 4,
+          "startedAt": "2026-10-19T04:47:07Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-19T04:47:18Z",
+          "conclusion": "success",
+          "name": "Run npm audit --audit-level=high",
+          "number": 5,
+          "startedAt": "2026-10-19T04:47:17Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-19T04:47:22Z",
+          "conclusion": "success",
+          "name": "Run npm audit --omit=dev --audit-level=high --prefix infra/supabase/storage-runtime",
+          "number": 6,
+          "startedAt": "2026-10-19T04:47:18Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-19T04:47:23Z",
+          "conclusion": "success",
+          "name": "Run npm ci --ignore-scripts --prefix worker",
+          "number": 7,
+          "startedAt": "2026-10-19T04:47:22Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-19T04:47:24Z",
+          "conclusion": "success",
+          "name": "Run npm audit --omit=dev --audit-level=high --prefix worker",
+          "number": 8,
+          "startedAt": "2026-10-19T04:47:23Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-19T04:47:28Z",
+          "conclusion": "success",
+          "name": "Run npm run check",
+          "number": 9,
+          "startedAt": "2026-10-19T04:47:24Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-19T04:47:30Z",
+          "conclusion": "success",
+          "name": "Run node scripts/check-coolify.mjs",
+          "number": 10,
+          "startedAt": "2026-10-19T04:47:28Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-19T04:47:30Z",
+          "conclusion": "success",
+          "name": "Run python3 scripts/test-coolify-alias.py",
+          "number": 11,
+          "startedAt": "2026-10-19T04:47:30Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-19T04:47:43Z",
+          "conclusion": "success",
+          "name": "Run npm run build",
+          "number": 12,
+          "startedAt": "2026-10-19T04:47:30Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-19T04:47:44Z",
+          "conclusion": "success",
+          "name": "Run npm ci --ignore-scripts --prefix tools/pdf-phase0",
+          "number": 13,
+          "startedAt": "2026-10-19T04:47:43Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-19T04:47:45Z",
+          "conclusion": "success",
+          "name": "Run npm audit --audit-level=high --prefix tools/pdf-phase0",
+          "number": 14,
+          "startedAt": "2026-10-19T04:47:44Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-19T04:47:49Z",
+          "conclusion": "success",
+          "name": "Run npm test --prefix tools/pdf-phase0",
+          "number": 15,
+          "startedAt": "2026-10-19T04:47:45Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-19T04:47:56Z",
+          "conclusion": "success",
+          "name": "Run node scripts/test-cie-catalog.mjs",
+          "number": 16,
+          "startedAt": "2026-10-19T04:47:49Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-19T04:48:38Z",
+          "conclusion": "success",
+          "name": "Run docker build --target web -t boletinexpress-web:phase1 .",
+          "number": 17,
+          "startedAt": "2026-10-19T04:47:56Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-19T04:48:44Z",
+          "conclusion": "success",
+          "name": "Run docker build --target worker -t boletinexpress-worker:phase1 .",
+          "number": 18,
+          "startedAt": "2026-10-19T04:48:38Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-19T04:50:33Z",
+          "conclusion": "success",
+          "name": "Run docker build -f tools/stripe-cli/Dockerfile -t boletinexpress-stripe-cli:phase1 tools/stripe-cli",
+          "number": 19,
+          "startedAt": "2026-10-19T04:48:44Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-19T04:55:22Z",
+          "conclusion": "success",
+          "name": "Run node scripts/init-local-auth.mjs",
+          "number": 20,
+          "startedAt": "2026-10-19T04:50:33Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-19T04:55:30Z",
+          "conclusion": "success",
+          "name": "Run docker compose -f compose.yaml -f compose.auth.yaml up --detach --wait",
+          "number": 21,
+          "startedAt": "2026-10-19T04:55:22Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-19T04:55:30Z",
+          "conclusion": "success",
+          "name": "Run node scripts/smoke.mjs",
+          "number": 22,
+          "startedAt": "2026-10-19T04:55:30Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-19T04:55:30Z",
+          "conclusion": "success",
+          "name": "Run node scripts/check-demo-assets.mjs",
+          "number": 23,
+          "startedAt": "2026-10-19T04:55:30Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-19T04:56:20Z",
+          "conclusion": "success",
+          "name": "Run set -o pipefail",
+          "number": 24,
+          "startedAt": "2026-10-19T04:55:30Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-19T04:57:20Z",
+          "conclusion": "success",
+          "name": "Run set -o pipefail",
+          "number": 25,
+          "startedAt": "2026-10-19T04:56:20Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-19T04:59:18Z",
+          "conclusion": "success",
+          "name": "Run set -o pipefail",
+          "number": 26,
+          "startedAt": "2026-10-19T04:57:20Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-19T05:00:45Z",
+          "conclusion": "success",
+          "name": "Run set -o pipefail",
+          "number": 27,
+          "startedAt": "2026-10-19T04:59:18Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-19T05:02:02Z",
+          "conclusion": "success",
+          "name": "Run set -o pipefail",
+          "number": 28,
+          "startedAt": "2026-10-19T05:00:45Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-19T05:02:44Z",
+          "conclusion": "success",
+          "name": "Run set -o pipefail",
+          "number": 29,
+          "startedAt": "2026-10-19T05:02:02Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-19T05:03:59Z",
+          "conclusion": "success",
+          "name": "Run set -o pipefail",
+          "number": 30,
+          "startedAt": "2026-10-19T05:02:44Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-19T05:07:55Z",
+          "conclusion": "success",
+          "name": "Run docker builder prune --all --force",
+          "number": 31,
+          "startedAt": "2026-10-19T05:03:59Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-19T05:07:55Z",
+          "conclusion": "skipped",
+          "name": "Run node scripts/diagnose-services.mjs",
+          "number": 32,
+          "startedAt": "2026-10-19T05:07:55Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-19T05:08:01Z",
+          "conclusion": "success",
+          "name": "Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02",
+          "number": 33,
+          "startedAt": "2026-10-19T05:07:55Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-19T05:08:15Z",
+          "conclusion": "success",
+          "name": "Run docker compose -f compose.yaml -f compose.auth.yaml down",
+          "number": 34,
+          "startedAt": "2026-10-19T05:08:01Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-19T05:08:15Z",
+          "conclusion": "success",
+          "name": "Post Run actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444",
+          "number": 67,
+          "startedAt": "2026-10-19T05:08:15Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-19T05:08:15Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09",
+          "number": 68,
+          "startedAt": "2026-10-19T05:08:15Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-19T05:08:16Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 69,
+          "startedAt": "2026-10-19T05:08:15Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/FranMore68/BoletinExpress/actions/runs/39201187498/job/117894303881"
+    }
+  ],
+  "status": "completed",
+  "url": "https://github.com/FranMore68/BoletinExpress/actions/runs/39201187498"
+}

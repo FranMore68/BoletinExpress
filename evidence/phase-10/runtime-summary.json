@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "source": "Coolify terminal, assertions in /tmp/boletinexpress-evaluation-c585cff/phase10-verify-runtime.py",
+  "memoryMiB": 3072,
+  "cpus": 1,
+  "hostPorts": 0,
+  "exclusiveNetworksAndVolumes": true,
+  "credentialMasksPassedForContainers": 10,
+  "storageServiceKeyMatchesRoleKey": true,
+  "permanentServicesRunning": 9,
+  "migrationExitCode": 0,
+  "restarts": 0,
+  "oom": false,
+  "note": "One-shot migration inherits PostgreSQL health probe; exited 0, excluded from service health. Templates and REST have no configured probe."
+}

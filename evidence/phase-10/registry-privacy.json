@@ -1,0 +1,51 @@
+{
+  "verifiedBy": "scripts/pull-evaluation-images.py before login and pull",
+  "proof": "Successful completion of loader after all seven metadata assertions",
+  "packages": [
+    {
+      "name": "boletinexpress-web",
+      "visibility": "private",
+      "repository": "FranMore68/BoletinExpress",
+      "repositoryPrivate": true
+    },
+    {
+      "name": "boletinexpress-worker",
+      "visibility": "private",
+      "repository": "FranMore68/BoletinExpress",
+      "repositoryPrivate": true
+    },
+    {
+      "name": "boletinexpress-postgres",
+      "visibility": "private",
+      "repository": "FranMore68/BoletinExpress",
+      "repositoryPrivate": true
+    },
+    {
+      "name": "boletinexpress-auth",
+      "visibility": "private",
+      "repository": "FranMore68/BoletinExpress",
+      "repositoryPrivate": true
+    },
+    {
+      "name": "boletinexpress-storage",
+      "visibility": "private",
+      "repository": "FranMore68/BoletinExpress",
+      "repositoryPrivate": true
+    },
+    {
+      "name": "boletinexpress-gateway",
+      "visibility": "private",
+      "repository": "FranMore68/BoletinExpress",
+      "repositoryPrivate": true
+    },
+    {
+      "name": "boletinexpress-templates",
+      "visibility": "private",
+      "repository": "FranMore68/BoletinExpress",
+      "repositoryPrivate": true
+    }
+  ],
+  "anonymousPullTokenHttpStatus": 401,
+  "githubTokenRetained": false,
+  "globalDockerLoginModified": false
+}

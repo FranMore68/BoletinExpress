@@ -1,0 +1,47 @@
+{
+  "runId": 39175211828,
+  "headSha": "fe0dfabcae234925dfdd0f0bf7998194667d473c",
+  "conclusion": "success",
+  "images": [
+    {
+      "image": "image-gateway.json",
+      "highCritical": 0
+    },
+    {
+      "image": "image-stripe-cli.json",
+      "highCritical": 0
+    },
+    {
+      "image": "image-templates.json",
+      "highCritical": 0
+    },
+    {
+      "image": "image-storage.json",
+      "highCritical": 0
+    },
+    {
+      "image": "image-mail.json",
+      "highCritical": 0
+    },
+    {
+      "image": "image-web.json",
+      "highCritical": 0
+    },
+    {
+      "image": "image-postgres.json",
+      "highCritical": 0
+    },
+    {
+      "image": "image-worker.json",
+      "highCritical": 0
+    },
+    {
+      "image": "image-rest.json",
+      "highCritical": 0
+    },
+    {
+      "image": "image-auth.json",
+      "highCritical": 0
+    }
+  ]
+}

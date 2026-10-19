@@ -1,0 +1,20 @@
+{
+  "url": "https://boletinexpress.moremaker3d.cloud",
+  "httpsStatus": 200,
+  "httpRedirectStatus": 302,
+  "httpRedirectLocation": "https://boletinexpress.moremaker3d.cloud/",
+  "tls": {
+    "authorized": true,
+    "subject": {
+      "CN": "boletinexpress.moremaker3d.cloud"
+    },
+    "issuer": {
+      "C": "US",
+      "O": "Let's Encrypt",
+      "CN": "YR2"
+    },
+    "validFrom": "Oct 19 03:29:14 2026 GMT",
+    "validTo": "Jan 17 03:29:13 2027 GMT",
+    "fingerprint256": "69:4C:71:2E:2C:EE:32:0C:33:4F:87:EF:F3:B7:AD:E7:C3:E2:96:C3:76:E5:45:DF:E4:70:67:F7:C3:C6:18:7B"
+  }
+}

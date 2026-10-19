@@ -2,11 +2,11 @@
 
 Aplicación prevista para preparar BRIE y CIE ELEC-1 con revisión humana, interfaz ES/CA y datos ficticios durante la evaluación.
 
-**Estado actual: fases 0 a 9 aceptadas; fase 10 en preparación.** Se incorporan renovación transaccional de borradores, vencimientos de 24 horas, archivo al día 30, reenvío al propio correo y eliminación al día 60, con reloj protegido para cuentas ficticias. Véase [el informe de fase 8](docs/fase-8.md). La fase 7 incorpora propuestas revisables desde texto, foto y voz; véase [el informe](docs/fase-7.md). El recurso de BoletinExpress está creado y detenido en Coolify; configuración, pruebas y pendientes en [fase 10](docs/fase-10.md).
+**Estado actual: fases 0 a 9 aceptadas; fase 10 desplegada y con pruebas técnicas superadas, pendiente de comprobación personal y aceptación.** La web está disponible en [boletinexpress.moremaker3d.cloud](https://boletinexpress.moremaker3d.cloud), con datos ficticios y Stripe en pruebas. El registro remoto es independiente del local. Resultados, límites y pendientes en [fase 10](docs/fase-10.md); [reproducción y retirada](docs/reproduccion-y-retirada.md).
 
-El entorno local está disponible en `http://127.0.0.1:3000/acceso?lang=es`; las cuentas ficticias `.invalid` usan el buzón local en `http://127.0.0.1:54324`. Resend está activo y comprobado para los correos de acceso y los documentos destinados a direcciones reales de evaluación. El VPS y Control-Contracts-ATC no se han modificado. La [CI final de fase 9](https://github.com/FranMore68/BoletinExpress/actions/runs/39144803728) supera 33 pruebas de aplicación, 43 pruebas PDF, 267 casos de catálogo y 67 grupos de integración. Diez imágenes analizadas, incluido el CLI local de Stripe, sin avisos altos ni críticos detectados; las limitaciones de cobertura y los 30 avisos moderados de Storage están documentados en el informe.
+La [fase 8](docs/fase-8.md) incorpora los vencimientos de 24 horas, archivo al día 30, reenvío al propio correo y eliminación al día 60. La [fase 7](docs/fase-7.md) añade propuestas revisables desde texto, foto y voz. La [fase 9](docs/fase-9.md) incorpora recargas de prueba con abono transaccional por webhook. Las claves de cobro real se rechazan.
 
-La [fase 9](docs/fase-9.md) añade recargas de prueba y abono transaccional por webhook. Sus botones permanecen desactivados hasta configurar los secretos de Stripe; no admite claves de cobros reales.
+El entorno local usa `http://127.0.0.1:3000/acceso?lang=es` y un buzón de evaluación en `http://127.0.0.1:54324`. En el VPS solo se ha modificado el recurso exclusivo de BoletinExpress. El usuario confirmó que Control-Contracts-ATC respondía como antes durante la carga; no se midió su latencia ni se accedió a otros proyectos.
 
 El [perfil reutilizable del electricista](docs/perfil-electricista.md) permite copiar los datos profesionales a un nuevo BRIE o CIE. Los cambios del perfil se aplican a documentos nuevos y no alteran los anteriores.
 

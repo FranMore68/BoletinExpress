@@ -2,12 +2,12 @@
   "phase": 10,
   "date": "2026-10-19",
   "acceptedByUser": false,
-  "deployed": false,
+  "deployed": true,
   "coolifyProject": "BoletinExpress",
   "resource": "boletinexpress-evaluacion",
   "resourceUuid": "hepqrz8hrz58omwradhcvzgj",
   "resourceCreated": true,
-  "remoteSecretsLoaded": false,
+  "remoteSecretsLoaded": true,
   "finalComposeSaved": true,
   "localStartupPassed": true,
   "localSecretIsolationPassed": true,
@@ -17,14 +17,10 @@
     "cpus": 1
   },
   "pending": [
-    "Publicar imágenes verificadas fuera del VPS",
-    "Precargar imágenes con acceso temporal exclusivo",
-    "Cargar variables y verificar el entorno efectivo remoto",
-    "Dominio HTTPS y webhook Stripe test",
-    "Comprobación del entorno efectivo remoto",
-    "Recorrido remoto y prueba de carga 600 segundos"
+    "Registro, confirmación de correo y acceso del usuario en la web pública",
+    "Aceptación del cierre de la fase 10"
   ],
-  "persistedCredentialMasks": 107,
+  "persistedCredentialMasks": 116,
   "privateRegistryAccess": "Temporal Docker configuration, no global login",
   "autoPullDisabled": true,
   "firstCi": {
@@ -37,8 +33,114 @@
     "version": "2.9.0-r0",
     "candidateHealthPassed": true,
     "candidateHighCritical": 0,
-    "ciPending": true
+    "ciPending": false
   },
   "stripeWebhookCreated": true,
-  "stripeWebhookStatus": "disabled"
+  "stripeWebhookStatus": "enabled",
+  "remoteSecretsEvidence": {
+    "userConfirmedSaved": true,
+    "expectedVariableNamesVerified": true,
+    "githubTokenInApplicationEnvironment": false,
+    "effectiveContainerEnvironmentVerified": true
+  },
+  "hostBaselineBeforeDeployment": {
+    "durationSeconds": 60,
+    "meanCpuPercent": 57.514,
+    "minAvailableMemoryGiB": 4.636,
+    "minFreeDiskGiB": 58.692,
+    "source": "Coolify terminal /tmp/boletinexpress-evaluation-c585cff/baseline-before-deploy.json",
+    "acceptanceTest": false
+  },
+  "ciPassed": {
+    "runId": 39175211828,
+    "headSha": "fe0dfabcae234925dfdd0f0bf7998194667d473c",
+    "highCritical": 0,
+    "imagesScanned": 10
+  },
+  "releaseRunId": 39194683308,
+  "coolifyAuxiliaryServiceKey": {
+    "generatedByParser": true,
+    "storedValue": "Parser-generated reference; effective values overridden in Compose",
+    "persistedAfterReload": true,
+    "effectiveContainerEnvironmentVerified": true
+  },
+  "release": {
+    "runId": 39194683308,
+    "passed": true,
+    "highCritical": 0,
+    "imagesScanned": 9,
+    "imagesPublished": 7,
+    "digestsVerified": 9
+  },
+  "publicAccess": true,
+  "imagesPreloaded": 9,
+  "registryPrivacyVerifiedByLoader": true,
+  "remoteEffectiveEnvironmentPassed": true,
+  "coolifyAliasFix": {
+    "firstStartBlockedBeforeContainers": true,
+    "cause": "Coolify emits SERVICE_KEY reference before SERVICE_ROLE_KEY in .env",
+    "storageReference": "${SERVICE_ROLE_KEY}",
+    "otherServicesAliasDisabled": 9,
+    "fictitiousOrderRegressionPassed": true,
+    "effectiveStorageKeyAssignmentPassed": true
+  },
+  "runtime": {
+    "permanentServicesRunning": 9,
+    "migrationExitCode": 0,
+    "memoryMiB": 3072,
+    "cpus": 1,
+    "hostPorts": 0,
+    "exclusiveNetworksAndVolumesPassed": true,
+    "restarts": 0,
+    "oom": false,
+    "fullReportOnVps": "/tmp/boletinexpress-evaluation-c585cff/runtime.json"
+  },
+  "loadTest": {
+    "passed": true,
+    "users": 2,
+    "maxConcurrentPdfJobs": 1,
+    "loadSeconds": 603.7,
+    "pdfJobs": 20,
+    "uniquePdfHashes": 20,
+    "reads": 216,
+    "observerSeconds": 660.284,
+    "observerCoversFullLoad": true,
+    "meanCpuDuringLoadPercent": 77.157,
+    "meanCpuObserverPercent": 77.011,
+    "minAvailableMemoryGiB": 3.971,
+    "minFreeDiskGiB": 55.742,
+    "checks": {
+      "memoryAtLeast1GiB": true,
+      "diskAtLeast15GiB": true,
+      "meanCpuBelow80Percent": true,
+      "noOomOrRestartsObserved": true,
+      "observedAtLeast600Seconds": true
+    },
+    "phase10Accepted": false,
+    "source": "Coolify terminal: /tmp/boletinexpress-evaluation-c585cff/capacity-final.json",
+    "fullRawReportsOnVps": [
+      "capacity.json",
+      "load-result.json",
+      "runtime.json"
+    ],
+    "evidence": "capacity-passed.png",
+    "transport": "Internal HTTP during load; separate public HTTPS journey passed",
+    "otherApplicationObservation": "User: Control-Contracts-ATC responds as before without errors; no quantitative latency baseline"
+  },
+  "otherApplicationObservation": {
+    "source": "User confirmation during load test",
+    "application": "Control-Contracts-ATC",
+    "respondsAsBefore": true,
+    "errorsObserved": false,
+    "agentAccessedProject": false,
+    "quantitativeLatencyBaselineAvailable": false
+  },
+  "publicUrl": "https://boletinexpress.moremaker3d.cloud",
+  "httpsPassed": true,
+  "publicJourneyPassed": true,
+  "finalCi": {
+    "runId": 39201187498,
+    "headSha": "2c6e30eedf339a216049b6a815120a979fb250b7",
+    "passed": true
+  }
 }

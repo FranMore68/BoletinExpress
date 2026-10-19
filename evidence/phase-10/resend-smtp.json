@@ -1,0 +1,8 @@
+{
+  "smtpTlsValid": true,
+  "smtpAuthenticationPassed": true,
+  "emailsSent": 0,
+  "probeContainer": "BoletinExpress worker",
+  "source": "Observed SMTP TLS/EHLO/AUTH/QUIT probe from own VPS worker; no MAIL/RCPT/DATA",
+  "realUserRegistrationConfirmation": "pending"
+}

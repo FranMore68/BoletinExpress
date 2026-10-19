@@ -1,0 +1,32 @@
+{
+  "passed": true,
+  "users": 2,
+  "maxConcurrentPdfJobs": 1,
+  "loadSeconds": 603.7,
+  "pdfJobs": 20,
+  "uniquePdfHashes": 20,
+  "reads": 216,
+  "observerSeconds": 660.284,
+  "observerCoversFullLoad": true,
+  "meanCpuDuringLoadPercent": 77.157,
+  "meanCpuObserverPercent": 77.011,
+  "minAvailableMemoryGiB": 3.971,
+  "minFreeDiskGiB": 55.742,
+  "checks": {
+    "memoryAtLeast1GiB": true,
+    "diskAtLeast15GiB": true,
+    "meanCpuBelow80Percent": true,
+    "noOomOrRestartsObserved": true,
+    "observedAtLeast600Seconds": true
+  },
+  "phase10Accepted": false,
+  "source": "Coolify terminal: /tmp/boletinexpress-evaluation-c585cff/capacity-final.json",
+  "fullRawReportsOnVps": [
+    "capacity.json",
+    "load-result.json",
+    "runtime.json"
+  ],
+  "evidence": "capacity-passed.png",
+  "transport": "Internal HTTP during load; separate public HTTPS journey passed",
+  "otherApplicationObservation": "User: Control-Contracts-ATC responds as before without errors; no quantitative latency baseline"
+}

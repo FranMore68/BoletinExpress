@@ -1,69 +1,29 @@
-# Revisión previa a publicación · 19/10/2026
+# Revisión previa a publicación · fase 10
 
-Alcance: configuración Coolify, empaquetado de migraciones existentes, generador
-de secretos separado, workflow manual de imágenes, observador de capacidad y
-actualización de estado. No cambia la lógica de negocio ni los SQL existentes.
+Alcance: adaptación Compose/cargador del commit `2c6e30e` y documentación/evidencias de despliegue. La entrega de imágenes corresponde a `fe0dfab`. No hay cambios adicionales de aplicación, dependencias, autenticación, SQL o migraciones en esta publicación documental.
 
-## Hallazgos
+## Hallazgos por severidad
 
-- Medio, despliegue pendiente: Coolify 4.4.6 inyecta `.env` en cada contenedor.
-  Corregido en el Compose local con anulaciones explícitas de claves innecesarias con el marcador fijo `disabled`.
-  Diez contenedores locales con inyección simulada comprobados. El recurso remoto
-  conserva los 107 marcadores tras recargar, está detenido y sin secretos. Antes
-  de arrancar falta cargar variables y comprobar el entorno efectivo remoto.
-  No apto aún para activar el piloto.
-- Medio, despliegue pendiente: el parser añade la red exclusiva del UUID a todos
-  los componentes. No conecta otros proyectos, pero la separación frontal/interna
-  del archivo fuente no es la topología completa. Verificar aislamiento remoto y
-  que solo web tenga ruta pública antes de habilitarla.
-- Bajo: GHCR y la descarga privada desde Coolify no están configurados todavía.
-  El workflow es manual y exige CI correcta del mismo commit antes de construir;
-  bloquea la publicación de imágenes si el análisis detecta HIGH/CRITICAL.
-- Bajo: los resultados de Trivy de las imágenes de esta revisión llegarán con CI
-  y release. No se reutiliza el resultado de fase 7 como análisis de imágenes nuevas.
+- Bajo, cobertura: Trivy no inventaría todas las dependencias Haskell de PostgREST. Se conserva la limitación documentada en fase 7. CI y release no detectaron HIGH/CRITICAL en las imágenes analizadas; no se afirma ausencia de toda vulnerabilidad.
+- Bajo, capacidad: CPU media 77,157 % con la carga acordada y límite de aceptación del 80 %. El VPS supera la prueba para esa concurrencia; no se extrapola a una carga mayor.
+- Pendiente de aceptación: el usuario debe comprobar su registro y correo en la web remota y aceptar la fase. No impide conservar las evidencias, pero no autoriza declarar la fase aceptada ni iniciar el borrado de datos.
+- Corregido: el alias `SERVICE_KEY` generado antes de `SERVICE_ROLE_KEY` bloqueaba el arranque. Storage usa referencia sin guard en el alias, otros nueve servicios lo anulan y gateway mantiene el guard obligatorio. La regresión de orden y clave ausente pasa; el entorno remoto confirma la asignación correcta sin imprimir claves.
+- Corregido antes de publicar imágenes: libexpat HIGH en Storage actualizado a 2.9.0-r0; CI y release posteriores correctas.
 
-## Comprobaciones
+## Correcciones y validación
 
-- Sin cambios en dependencias, autenticación de aplicación ni esquema SQL.
-- Instalación nueva local: siete migraciones aplicadas, repetición sin reaplicarlas,
-  nueve servicios activos, auxiliar finalizado con salida 0 y endpoints HTTP 200.
-- Los límites efectivos de contenedores se conservan en `local-startup.json`.
-- Credenciales remotas nuevas en `.secrets/coolify.env`, permisos 0600, creación
-  exclusiva sin sobrescritura. El generador no modifica archivos locales existentes.
-- Proveedores desactivados con valores ficticios en las pruebas auxiliares.
-- `.dockerignore` incorpora únicamente SQL existentes y el script de migración.
-  No incorpora `.secrets`, fuentes documentales de usuario ni evidencias.
-- El workflow usa acciones fijadas por commit, ref main, token limitado al repositorio,
-  login por stdin y logout; no permite interpolar entradas libres en comandos.
-- El migrador se conecta únicamente a postgres del recurso, sin socket Docker ni
-  acceso al host; SQL transaccionales y registro de versiones existentes.
-- Entornos auxiliares locales detenidos, sin modificar servicios preexistentes.
-- Publicación de código autorizada; activación pública y carga de secretos remotos
-  pendientes. No se ha modificado ningún otro proyecto del VPS.
+- CI final `39201187498` del commit `2c6e30e`: correcta, sin pasos fallidos; incluye regresión del alias, compilación, pruebas e integraciones. Evidencia `ci-final.json`.
+- CI de imágenes `39175211828`: diez imágenes sin HIGH/CRITICAL. Release `39194683308`: nueve imágenes analizadas y siete paquetes propios privados publicados, construidos fuera del VPS.
+- Descarga real por digest: nueve imágenes amd64; privacidad y repositorio verificados. PAT introducido por el usuario en entrada oculta y configuración Docker temporal retirada. Sin login global ni modificación de otro proyecto.
+- Entornos de diez contenedores comprobados; 116 anulaciones, límites 3072 MiB / 1 CPU, redes/volúmenes exclusivos y cero puertos host. Nueve servicios permanentes y migrador salida 0. Solo web recibe la ruta pública al puerto 3000.
+- HTTPS, aislamiento de dos cuentas, PDF revisados/validados, borrado de datos de trabajo, IA con propuestas pendientes y Stripe test con dos repeticiones sin doble abono: superados.
+- Correo documental en buzón privado y autenticación SMTP Resend/TLS desde VPS correctos. La sonda no envió correo externo; el registro personal remoto sigue pendiente de confirmación.
+- Carga de 603,7 segundos: 20 PDF, CPU 77,157 %, mínimos 3,971 GiB de memoria y 55,742 GiB de disco; sin OOM/reinicios. El usuario observa Control-Contracts-ATC como antes, sin errores; no se accedió a ese proyecto.
 
-## Correcciones y condiciones siguientes
+## Riesgo y acciones
 
-Conservar las anulaciones de claves al guardar el Compose final. Revisar el archivo
-generado por Coolify y comprobar variables efectivas sin imprimir valores. Confirmar
-privacidad de paquetes, descarga con configuración Docker temporal y secreto
-propio del webhook Stripe de pruebas. No añadir un login global a Coolify.
-Completar CI, análisis de imágenes y recorrido remoto antes de aceptar la fase.
+Mantener las anulaciones y el guard obligatorio al recrear el recurso. Revisar la vigencia de las claves si se prolonga la evaluación. Los secretos y contenido personal siguen excluidos de Git. Las capturas entregadas muestran datos ficticios o formularios vacíos. La guía de retirada exige confirmar el fin de la evaluación y verificar pertenencia antes de borrar los volúmenes exclusivos.
 
-Riesgo: el código y la configuración pueden versionarse; el despliegue permanece
-bloqueado por condiciones operativas aún no verificadas.
-
-
-El cargador valida el ámbito de las nueve imágenes antes de pedir credenciales,
-rechaza repositorios ajenos y exige Linux x86_64. Pruebas con manifiesto ficticio
-válido y repositorio ajeno: superadas, sin red ni credenciales. Las diez entradas
-Compose tienen pull_policy never. Descarga real y arranque remoto pendientes.
-
-
-El primer intento de CI detectó CVE-2026-77214 (HIGH) en libexpat de Storage.
-Se impidió publicar imágenes. Corrección mínima verificada en candidato local:
-apk actualiza solo libexpat de 2.8.5-r0 a 2.9.0-r0, versión fijada y publicada por
-Alpine. Salud de Storage y análisis del candidato superados (0 HIGH/CRITICAL).
-Se requiere nueva CI amd64 antes de publicar o desplegar. No cambia npm, SQL,
-configuración del VPS ni otros proyectos. Fuente oficial en el informe de fase 10.
+Riesgo: limitado al piloto y a la concurrencia comprobada; quedan la comprobación personal del usuario y su aceptación, con la limitación de inventario de seguridad indicada.
 
 APTO CON OBSERVACIONES

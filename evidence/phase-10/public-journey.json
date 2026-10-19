@@ -1,0 +1,68 @@
+{
+  "passed": true,
+  "url": "https://boletinexpress.moremaker3d.cloud",
+  "confirmedFictitiousAccounts": 2,
+  "secureHttpOnlySameSiteCookies": true,
+  "anonymousDenied": true,
+  "documents": [
+    {
+      "type": "BRIE",
+      "validated": true,
+      "sha256": "53d1ad5309ecd808f46a37354c4af48bf6133c2663d9de7c68c572349a7fec28",
+      "bytes": 259622,
+      "workDataRemoved": true,
+      "crossAccountPdfDenied": true
+    },
+    {
+      "type": "CIE",
+      "validated": true,
+      "sha256": "1f34ea9e4630245b8d28aa8e015820b57d381986d9fda88714b11493ff9100d5",
+      "bytes": 244450,
+      "workDataRemoved": true,
+      "crossAccountPdfDenied": true
+    }
+  ],
+  "balance": 13,
+  "movements": [
+    {
+      "amount": 10,
+      "balanceAfter": 13,
+      "kind": "topup"
+    },
+    {
+      "amount": -5,
+      "balanceAfter": 3,
+      "kind": "validation"
+    },
+    {
+      "amount": -2,
+      "balanceAfter": 8,
+      "kind": "validation"
+    },
+    {
+      "amount": 10,
+      "balanceAfter": 10,
+      "kind": "welcome"
+    }
+  ],
+  "stripe": {
+    "livemode": false,
+    "paidPurchases": 1,
+    "creditsGranted": 10,
+    "duplicateReplays": 2,
+    "duplicateTopupAbsent": true
+  },
+  "ai": {
+    "textExtractionReady": true,
+    "proposalsNotAutomaticallyApplied": true,
+    "source": "fictitious text",
+    "unsupportedMeasurementsAbsent": true
+  },
+  "mail": {
+    "delivered": true,
+    "locale": "ca",
+    "transport": "private evaluation mailbox",
+    "attachmentHashMatchesValidatedPdf": true
+  },
+  "phase10Accepted": false
+}
