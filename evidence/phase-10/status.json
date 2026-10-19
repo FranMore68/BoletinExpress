@@ -17,7 +17,6 @@
     "cpus": 1
   },
   "pending": [
-    "Registro, confirmación de correo y acceso del usuario en la web pública",
     "Aceptación del cierre de la fase 10"
   ],
   "persistedCredentialMasks": 116,
@@ -142,5 +141,7 @@
     "runId": 39201187498,
     "headSha": "2c6e30eedf339a216049b6a815120a979fb250b7",
     "passed": true
-  }
+  },
+  "realUserAccessConfirmed": true,
+  "realUserAccessEvidence": "user-access-confirmation.json"
 }

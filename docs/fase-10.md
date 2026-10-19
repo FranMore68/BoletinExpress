@@ -1,6 +1,6 @@
 # Fase 10 · Despliegue y evaluación
 
-Estado a 19 de octubre de 2026: **desplegada, pruebas técnicas superadas; pendiente de comprobación personal del acceso y aceptación del usuario**.
+Estado a 19 de octubre de 2026: **desplegada, pruebas técnicas superadas; acceso personal confirmado; pendiente de aceptación del usuario**.
 
 Web: **https://boletinexpress.moremaker3d.cloud**. Piloto temporal con datos ficticios y Stripe en pruebas. Las cuentas del entorno local no se han copiado al VPS. La fase 11 no ha comenzado.
 
@@ -40,7 +40,7 @@ Rutas relativas a `evidence/phase-10/`.
 | Resend desde VPS | TLS y autenticación SMTP correctos; sonda sin envío de mensaje | `resend-smtp.json` |
 | Stripe de prueba | Checkout de 10 € simulado; webhook remoto habilitado; dos repeticiones del evento no duplican el abono | `stripe-webhook.json`, `public-journey.json`, `stripe-test-checkout.png` |
 | Capacidad | Superada con dos usuarios y un único PDF simultáneo | `capacity-summary.json`, `capacity-passed.png` |
-| Comprobación personal de registro/correo/acceso | Pendiente de respuesta del usuario | `registration-handoff.png` muestra el formulario vacío entregado al usuario |
+| Comprobación personal de registro/correo/acceso | Superada: el usuario confirma que ha creado la cuenta, validado el correo y accedido | `user-access-confirmation.json` |
 
 El ensayo de carga duró **603,7 segundos**, generó **20 PDF diferentes** y realizó **216 lecturas**. La observación de 660,284 segundos cubre toda la carga. CPU media durante la carga: **77,157 %**; memoria disponible mínima: **3,971 GiB**; disco libre mínimo: **55,742 GiB**. No se observaron OOM ni reinicios. Supera los umbrales acordados, con margen de CPU reducido para aumentar concurrencia. La carga se ejecutó por HTTP interno y el recorrido público HTTPS se comprobó después por separado.
 
@@ -48,7 +48,7 @@ El usuario confirmó durante la carga: «Responde como antes, sin errores», ref
 
 ## Correo, pagos y límites de la comprobación
 
-Las direcciones ficticias `.invalid` permanecen en Mailpit privado, incluso con Resend configurado. El envío documental probado aquí verifica el worker, el idioma y el PDF adjunto. La sonda SMTP verifica conectividad y credencial de Resend desde el VPS, sin enviar correo externo. La entrega real de correos de acceso y PDF ya fue confirmada por el usuario en fases anteriores; queda confirmar el registro personal remoto. No se atribuye a esa sonda un envío que no realizó.
+Las direcciones ficticias `.invalid` permanecen en Mailpit privado, incluso con Resend configurado. El envío documental probado aquí verifica el worker, el idioma y el PDF adjunto. La sonda SMTP verifica conectividad y credencial de Resend desde el VPS, sin enviar correo externo. La entrega real de correos de acceso y PDF ya fue confirmada por el usuario en fases anteriores; el usuario ha confirmado también el registro, la validación del correo y el acceso remoto. No se atribuye a esa sonda un envío que no realizó.
 
 El endpoint Stripe exclusivo `we_1US33kBOYpfv3qqp1G3eRDzC` escucha `checkout.session.completed` en `/api/payments/stripe`, con secreto distinto del CLI local. Se comprobó `livemode: false` antes del pago simulado. No se modificaron otros endpoints.
 
@@ -58,7 +58,6 @@ Los informes completos del host quedan en el directorio exclusivo `/tmp/boletine
 
 ## Pendientes para el cierre
 
-1. Confirmación del usuario de que puede registrarse, recibir el correo y entrar en la web pública.
-2. Aceptación expresa del cierre de la fase 10.
+El usuario ha confirmado el registro, la validación del correo y el acceso. Queda únicamente su aceptación expresa del cierre de la fase 10.
 
 No hay fallos técnicos conocidos pendientes en las pruebas ejecutadas. La [guía de reproducción y retirada](reproduccion-y-retirada.md) conserva los pasos operativos. La retirada y el borrado de volúmenes requieren confirmar el fin de la evaluación.
