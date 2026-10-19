@@ -8,6 +8,8 @@ import platform
 import re
 import subprocess
 import tempfile
+import urllib.request
+import urllib.error
 
 
 def manifest(path):
@@ -47,6 +49,29 @@ def main():
     token = getpass.getpass('Token GitHub read:packages (oculto; uso temporal): ')
     if not re.fullmatch(r'ghp_[A-Za-z0-9]+', token):
         raise SystemExit('Se necesita un token clásico; no se ha enviado nada.')
+    packages = []
+    for image in images.values():
+        if not image.startswith('ghcr.io/franmore68/'):
+            continue
+        name = image.split('/')[2].split('@')[0]
+        request = urllib.request.Request(
+            'https://api.github.com/users/FranMore68/packages/container/' + name,
+            headers={'Authorization': 'Bearer ' + token,
+                     'Accept': 'application/vnd.github+json',
+                     'User-Agent': 'BoletinExpress-evaluation'})
+        try:
+            with urllib.request.urlopen(request, timeout=30) as response:
+                package = json.load(response)
+        except (urllib.error.URLError, ValueError):
+            raise SystemExit('No se pudo verificar la privacidad del paquete; descarga detenida.') from None
+        repository = package.get('repository') or {}
+        if (package.get('visibility') != 'private'
+                or repository.get('full_name') != 'FranMore68/BoletinExpress'
+                or repository.get('private') is not True):
+            raise SystemExit('Paquete sin privacidad o asociación esperadas; descarga detenida.')
+        packages.append({'name': name, 'visibility': 'private',
+                         'repository': 'FranMore68/BoletinExpress'})
+    print('PRIVATE_PACKAGES ' + json.dumps(packages), flush=True)
     with tempfile.TemporaryDirectory(prefix='boletinexpress-registry-') as config:
         # No lee ni modifica $HOME/.docker/config.json o credenciales de otros proyectos.
         docker = ['docker', '--config', config]

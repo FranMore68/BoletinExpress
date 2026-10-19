@@ -71,6 +71,11 @@ for (const [name, service] of services) {
       "disabled",
       `${name}: clave IA anulada aunque Coolify inyecte .env`,
     );
+  assert.equal(
+    service.environment.SERVICE_KEY,
+    name === "storage" ? `\${SERVICE_ROLE_KEY}` : "disabled",
+    `${name}: alias SERVICE_KEY compatible con el orden de escritura de Coolify`,
+  );
   for (const key of [
     "POSTGRES_PASSWORD",
     "JWT_SECRET",
@@ -111,6 +116,10 @@ assert.equal(
   "service_completed_successfully",
 );
 assert.equal(config.services.migrate.restart, "no");
+assert.equal(
+  config.services.gateway.environment.SERVICE_ROLE_KEY,
+  `\${SERVICE_ROLE_KEY:?}`,
+);
 assert.equal(
   config.services.mail.environment.MP_SMTP_RELAY_BLOCKED_RECIPIENTS,
   "(?i)@([^@]*\\.)?invalid$$",

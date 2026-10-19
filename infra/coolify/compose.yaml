@@ -33,6 +33,7 @@ services:
     - default
     - data
     environment:
+      SERVICE_KEY: disabled
       APP_URL: "${APP_URL:?}"
       SUPABASE_URL: http://gateway:8000
       SUPABASE_ANON_KEY: "${ANON_KEY:?}"
@@ -86,6 +87,7 @@ services:
     - data
     - egress
     environment:
+      SERVICE_KEY: disabled
       APP_ENV: evaluation
       WORKER_REST_URL: http://rest:3000
       WORKER_STORAGE_URL: http://storage:5000
@@ -122,6 +124,7 @@ services:
         condition: service_healthy
         required: true
     environment:
+      SERVICE_KEY: disabled
       API_EXTERNAL_URL: "${APP_URL:?}"
       GOTRUE_API_HOST: 0.0.0.0
       GOTRUE_API_PORT: 9999
@@ -207,8 +210,9 @@ services:
         condition: service_healthy
         required: true
     environment:
+      SERVICE_KEY: disabled
       ANON_KEY: "${ANON_KEY}"
-      SERVICE_ROLE_KEY: "${SERVICE_ROLE_KEY}"
+      SERVICE_ROLE_KEY: "${SERVICE_ROLE_KEY:?}"
       POSTGRES_PASSWORD: disabled
       JWT_SECRET: disabled
       WORKER_KEY: disabled
@@ -251,6 +255,7 @@ services:
     - ALL
     cpus: 0.05
     environment:
+      SERVICE_KEY: disabled
       MP_DISABLE_VERSION_CHECK: 'true'
       MP_MAX_MESSAGES: 100
       MP_SMTP_AUTH_ACCEPT_ANY: 'true'
@@ -307,6 +312,7 @@ services:
     - log_statement=none
     cpus: 0.1
     environment:
+      SERVICE_KEY: disabled
       POSTGRES_DB: postgres
       POSTGRES_HOST: "/var/run/postgresql"
       POSTGRES_PASSWORD: "${POSTGRES_PASSWORD:?}"
@@ -362,6 +368,7 @@ services:
         condition: service_healthy
         required: true
     environment:
+      SERVICE_KEY: disabled
       PGRST_DB_ANON_ROLE: anon
       PGRST_DB_POOL: 5
       PGRST_DB_SCHEMAS: public,storage
@@ -414,7 +421,7 @@ services:
       LOG_LEVEL: error
       POSTGREST_URL: http://rest:3000
       REGION: local
-      SERVICE_KEY: "${SERVICE_ROLE_KEY:?}"
+      SERVICE_KEY: "${SERVICE_ROLE_KEY}"
       STORAGE_BACKEND: file
       STORAGE_PUBLIC_URL: "${APP_URL}"
       TENANT_ID: boletinexpress
@@ -476,6 +483,7 @@ services:
     security_opt:
     - no-new-privileges:true
     environment:
+      SERVICE_KEY: disabled
       POSTGRES_PASSWORD: disabled
       JWT_SECRET: disabled
       ANON_KEY: disabled
@@ -507,6 +515,7 @@ services:
     - "/bin/sh"
     - "/opt/boletinexpress/migrate.sh"
     environment:
+      SERVICE_KEY: disabled
       PGHOST: postgres
       PGPORT: '5432'
       PGUSER: supabase_admin
