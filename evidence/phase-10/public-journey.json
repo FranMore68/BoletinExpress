@@ -64,5 +64,6 @@
     "transport": "private evaluation mailbox",
     "attachmentHashMatchesValidatedPdf": true
   },
-  "phase10Accepted": false
+  "phase10Accepted": true,
+  "acceptanceEvidence": "phase-acceptance.json"
 }

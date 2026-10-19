@@ -19,7 +19,7 @@
     "noOomOrRestartsObserved": true,
     "observedAtLeast600Seconds": true
   },
-  "phase10Accepted": false,
+  "phase10Accepted": true,
   "source": "Coolify terminal: /tmp/boletinexpress-evaluation-c585cff/capacity-final.json",
   "fullRawReportsOnVps": [
     "capacity.json",
@@ -28,5 +28,6 @@
   ],
   "evidence": "capacity-passed.png",
   "transport": "Internal HTTP during load; separate public HTTPS journey passed",
-  "otherApplicationObservation": "User: Control-Contracts-ATC responds as before without errors; no quantitative latency baseline"
+  "otherApplicationObservation": "User: Control-Contracts-ATC responds as before without errors; no quantitative latency baseline",
+  "acceptanceEvidence": "phase-acceptance.json"
 }

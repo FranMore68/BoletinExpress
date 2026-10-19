@@ -6,7 +6,7 @@ Alcance: adaptación Compose/cargador del commit `2c6e30e` y documentación/evid
 
 - Bajo, cobertura: Trivy no inventaría todas las dependencias Haskell de PostgREST. Se conserva la limitación documentada en fase 7. CI y release no detectaron HIGH/CRITICAL en las imágenes analizadas; no se afirma ausencia de toda vulnerabilidad.
 - Bajo, capacidad: CPU media 77,157 % con la carga acordada y límite de aceptación del 80 %. El VPS supera la prueba para esa concurrencia; no se extrapola a una carga mayor.
-- Pendiente de aceptación: el usuario ha confirmado su registro, validación del correo y acceso remoto; queda aceptar la fase. No impide conservar las evidencias, pero no autoriza declarar la fase aceptada ni iniciar el borrado de datos.
+- Cierre confirmado: el usuario ha validado su registro, correo y acceso remoto, y ha aceptado expresamente la fase 10 el 19 de octubre de 2026. Esta aceptación no autoriza iniciar la retirada ni el borrado de datos.
 - Corregido: el alias `SERVICE_KEY` generado antes de `SERVICE_ROLE_KEY` bloqueaba el arranque. Storage usa referencia sin guard en el alias, otros nueve servicios lo anulan y gateway mantiene el guard obligatorio. La regresión de orden y clave ausente pasa; el entorno remoto confirma la asignación correcta sin imprimir claves.
 - Corregido antes de publicar imágenes: libexpat HIGH en Storage actualizado a 2.9.0-r0; CI y release posteriores correctas.
 
@@ -24,6 +24,6 @@ Alcance: adaptación Compose/cargador del commit `2c6e30e` y documentación/evid
 
 Mantener las anulaciones y el guard obligatorio al recrear el recurso. Revisar la vigencia de las claves si se prolonga la evaluación. Los secretos y contenido personal siguen excluidos de Git. Las capturas entregadas muestran datos ficticios o formularios vacíos. La guía de retirada exige confirmar el fin de la evaluación y verificar pertenencia antes de borrar los volúmenes exclusivos.
 
-Riesgo: limitado al piloto y a la concurrencia comprobada; queda la aceptación del usuario, con la limitación de inventario de seguridad indicada.
+Riesgo: limitado al piloto y a la concurrencia comprobada; se mantiene la limitación de inventario de seguridad indicada.
 
 APTO CON OBSERVACIONES

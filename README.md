@@ -2,7 +2,7 @@
 
 Aplicación prevista para preparar BRIE y CIE ELEC-1 con revisión humana, interfaz ES/CA y datos ficticios durante la evaluación.
 
-**Estado actual: fases 0 a 9 aceptadas; fase 10 desplegada y con pruebas técnicas superadas, acceso personal confirmado y pendiente de aceptación.** La web está disponible en [boletinexpress.moremaker3d.cloud](https://boletinexpress.moremaker3d.cloud), con datos ficticios y Stripe en pruebas. El registro remoto es independiente del local. Resultados, límites y pendientes en [fase 10](docs/fase-10.md); [reproducción y retirada](docs/reproduccion-y-retirada.md).
+**Estado actual: fases 0 a 10 cerradas y aceptadas. La fase 10 fue aceptada el 19 de octubre de 2026; la aplicación sigue activa durante la evaluación.** La web está disponible en [boletinexpress.moremaker3d.cloud](https://boletinexpress.moremaker3d.cloud), con datos ficticios y Stripe en pruebas. El registro remoto es independiente del local. Resultados y límites en [fase 10](docs/fase-10.md); [reproducción y retirada](docs/reproduccion-y-retirada.md).
 
 La [fase 8](docs/fase-8.md) incorpora los vencimientos de 24 horas, archivo al día 30, reenvío al propio correo y eliminación al día 60. La [fase 7](docs/fase-7.md) añade propuestas revisables desde texto, foto y voz. La [fase 9](docs/fase-9.md) incorpora recargas de prueba con abono transaccional por webhook. Las claves de cobro real se rechazan.
 

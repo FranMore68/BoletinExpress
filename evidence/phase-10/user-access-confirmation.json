@@ -5,5 +5,6 @@
   "registrationPassed": true,
   "emailConfirmationPassed": true,
   "loginPassed": true,
-  "phaseAcceptanceExplicit": false
+  "phaseAcceptanceExplicit": true,
+  "phaseAcceptanceEvidence": "phase-acceptance.json"
 }

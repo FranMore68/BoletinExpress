@@ -1,6 +1,6 @@
 # Fase 10 · Despliegue y evaluación
 
-Estado a 19 de octubre de 2026: **desplegada, pruebas técnicas superadas; acceso personal confirmado; pendiente de aceptación del usuario**.
+Estado a 19 de octubre de 2026: **cerrada y aceptada expresamente por el usuario**.
 
 Web: **https://boletinexpress.moremaker3d.cloud**. Piloto temporal con datos ficticios y Stripe en pruebas. Las cuentas del entorno local no se han copiado al VPS. La fase 11 no ha comenzado.
 
@@ -56,8 +56,10 @@ La foto, audio y permisos de cámara/micrófono se probaron en fase 7. En el VPS
 
 Los informes completos del host quedan en el directorio exclusivo `/tmp/boletinexpress-evaluation-c585cff` del VPS. Los resúmenes y capturas sin secretos están versionados. No se conserva en Git contenido documental de cuentas personales ni copias de datos del piloto.
 
-## Pendientes para el cierre
+## Cierre aceptado
 
-El usuario ha confirmado el registro, la validación del correo y el acceso. Queda únicamente su aceptación expresa del cierre de la fase 10.
+El usuario ha confirmado el registro, la validación del correo y el acceso, y ha aceptado expresamente el cierre el 19 de octubre de 2026: «Ok, todo ha funcionado a las mil maravillas. podemos cerrar la fase 10.». Evidencia: `evidence/phase-10/phase-acceptance.json`.
+
+La aplicación continúa activa durante la evaluación. La fase 11 no ha comenzado.
 
 No hay fallos técnicos conocidos pendientes en las pruebas ejecutadas. La [guía de reproducción y retirada](reproduccion-y-retirada.md) conserva los pasos operativos. La retirada y el borrado de volúmenes requieren confirmar el fin de la evaluación.
